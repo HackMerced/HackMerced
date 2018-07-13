@@ -10,5 +10,9 @@ router.post('/users/volunteers', ((req, res) => {
     console.log(req.body);
     res.send(req.body);
 }));
+router.get('/users/volunteers', ((req, res) => {
+    console.log('volunteers');
+    res.send('volunteers');
+}));
 
 module.exports = router;
