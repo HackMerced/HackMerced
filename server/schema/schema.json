@@ -35,6 +35,7 @@
 		"shirt_size": "{{util.sample(['X-Small', 'Small', 'Medium', 'Large', 'X-Large', 'XX-Large', 'XXX-Large'])}}",
 		"occupation": "{{util.sample(['Faculty', 'Professional', 'Other'])}}",
 		"position": "{{chance.sentence({ words: 3 })}}",
+		"organization": "{{chance.sentence({ words: 3 })}}",
 		"linkedin": "http://linkedin.com/in/{{chance.word({ length: 7 })}}",
 		"site_other": "{{chance.domain()}}",
 		"photo": "{{chance.domain()}}/{{chance.word({ length: 7 })}}/{{util.sample(['.png', '.jpg', '.gif'])}}",
