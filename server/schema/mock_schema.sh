@@ -2,9 +2,8 @@
 
 # Check for the command line argument
 if [ "$1" == "" ]; then
-	echo "Please enter the number of dummy documents you would like to produce."
-		echo "Usage: mock_data.sh <number_of_documents>"
-		exit 1
+	echo "Usage: mock_data.sh <number_of_documents>"
+	exit 1
 fi
 
 # If Commandline Utils Aren't Installed, Exit
@@ -31,11 +30,6 @@ sed -i 's/__SIZE__/'$1'/g' schema.json
 
 # Generate Dummy Data
 mongodb-dataset-generator schema.json -n 1 -o mock_data.json > /dev/null
-
-#mongodb-dataset-generator hackers.json -n 50 -o hackers_mock_data.json 2> /dev/null
-#mongodb-dataset-generator judges.json -n 50 -o judges_mock_data.json 2> /dev/null
-#mongodb-dataset-generator volunteers.json -n 50 -o volunteers_mock_data.json 2> /dev/null
-#mongodb-dataset-generator sponsors.json -n 50 -o sponsors_mock_data.json 2> /dev/null
 
 jq '.[0].hackers' mock_data.json > hackers_mock_data.json
 jq '.[0].judges' mock_data.json > judges_mock_data.json
