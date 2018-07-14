@@ -4,15 +4,15 @@ import Footer from './components/footer';
 import Titlescreen from './components/titlescreen';
 
 
-import './assets/scss/default.css'
+import './assets/scss/default.scss';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <Header/>
-       <Titlescreen/>
-       <Footer/>
+        <Header/>
+        <Titlescreen/>
+        <Footer/>
       </div>
     );
   }
