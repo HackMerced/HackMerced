@@ -1,0 +1,7 @@
+{
+	"full_name": "{{chance.first()}} {{chance.last()}}",
+	"phone": "{{chance.phone()}}",
+	"email": "{{chance.email()}}",
+	"shirt_size": "{{util.sample(['X-Small', 'Small', 'Medium', 'Large', 'X-Large'])}}",
+	"availability": ""
+}

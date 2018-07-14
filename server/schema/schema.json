@@ -1,0 +1,69 @@
+"users": 
+{
+	"hackers": 
+	{ 
+		"full_name": "{{chance.first()}} {{chance.last()}}",
+		"email": "{{chance.email()}}",
+		"phone": "{{chance.phone()}}",
+		"school": "{{chance.sentence({ words: 5 })}}",
+		"age": "{{chance.age()}}",
+		"gender": "{{util.sample(['Male', 'Female', 'Non-Binary/Other', 'Prefer Not To Say'])}}",
+		"skills": "{{chance.pick(['Developement', 'Design', 'Data Science', 'Project Management'], chance.integer({ min: 0, max: 4}))}}",
+		"interests": "{{chance.pick(['Front-End Web', 'Back-End Web', 'Mobile Apps', 'Embedded Devices', 'IOT', 'VR', 'Distributed Systems', 'Hardware', 'Data Science', 'Data Visualization'], chance.integer({ min: 0, max: 9}))}}",
+		"programming_languages": "{{chance.pick(['Python', 'Java', 'C/C++', 'Javascript', 'Ruby', 'R'], chance.integer({ min: 0, max: 6}))}}",
+		"dietary_restrictions": "{{chance.sentence({ words: 5 })}}",
+		"allergies": "{{chance.sentence({ words: 5 })}}",
+		"special_needs": "{{chance.sentence({ words: 5 })}}",
+		"shirt_size": "{{util.sample(['X-Small', 'Small', 'Medium', 'Large', 'X-Large', 'XX-Large', 'XXX-Large'])}}",
+		"previous_hackathons": "{{util.sample(['0', '1-2', '3-4', '4+'])}}",
+		"have_team": "{{util.sample(['yes', 'no'])}}",
+		"team_emails": [ 4, "{{chance.email()}}"],
+		"require_reimbursement": "{{util.sample(['yes', 'no'])}}",
+		"linkedin": "http://linkedin.com/in/{{chance.word({ length: 7 })}}",
+		"github": "http://github.com/{{chance.word({ length: 7 })}}",
+		"site_other": "{{chance.domain()}}",
+		"resume": "{{chance.domain()}}/{{chance.word({ length: 5 })}}.pdf",
+		"application_status": "{{util.sample(['received', 'under review', 'accepted'])}}"
+	},
+	"judges":
+	{
+		"full_name": "{{chance.first()}} {{chance.last()}}",
+		"title": "{{util.sample(['Prof.', 'Software Engineer'])}}",
+		"email": "{{chance.email()}}",
+		"phone": "{{chance.phone()}}",
+		"shirt_size": "{{util.sample(['X-Small', 'Small', 'Medium', 'Large', 'X-Large', 'XX-Large', 'XXX-Large'])}}",
+		"occupation": "{{util.sample(['Faculty', 'Professional', 'Other'])}}",
+		"position": "{{chance.sentence({ words: 3 })}}",
+		"organization": "{{chance.pick([chance.city()+' University','University of '+chance.city(), chance.sentence({ words: 1 })+' Co.', chance.sentence({ words: 1 })+' Ltd'])}}",
+		"linkedin": "http://linkedin.com/in/{{chance.word({ length: 7 })}}",
+		"site_other": "{{chance.domain()}}",
+		"photo": "person-icon.png"
+	},
+	"volunteers":
+	{
+		"full_name": "{{chance.first()}} {{chance.last()}}",
+		"phone": "{{chance.phone()}}",
+		"email": "{{chance.email()}}",
+		"shirt_size": "{{util.sample(['X-Small', 'Small', 'Medium', 'Large', 'X-Large'])}}",
+		"availability": ""
+	},
+	"sponsors":
+	{
+		"organization": "{{chance.pick([chance.city()+' University','University of '+chance.city(), chance.sentence({ words: 1 })+' Co.', chance.sentence({ words: 1 })+' Ltd'])}}",
+		"email": "{{chance.email()}}",
+		"phone": "{{chance.phone()}}",
+		"rep_name": "{{chance.first()}} {{chance.last()}}",
+		"rep_position": "{{chance.sentence({ words: 3 })}}",
+		"linkedin": "http://linkedin.com/in/{{chance.word({ length: 7 })}}",
+		"site_other": "{{chance.domain()}}",
+		"photo": "orange-triangle-banner.jpg"
+	},
+	"teams":
+	{
+
+	},
+	"travel_reimbursement":
+	{
+
+	}
+}
