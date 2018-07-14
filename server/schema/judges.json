@@ -1,0 +1,13 @@
+{
+	"full_name": "{{chance.first()}} {{chance.last()}}",
+	"title": "{{util.sample(['Prof.', 'Software Engineer'])}}",
+	"email": "{{chance.email()}}",
+	"phone": "{{chance.phone()}}",
+	"shirt_size": "{{util.sample(['X-Small', 'Small', 'Medium', 'Large', 'X-Large', 'XX-Large', 'XXX-Large'])}}",
+	"occupation": "{{util.sample(['Faculty', 'Professional', 'Other'])}}",
+	"position": "{{chance.sentence({ words: 3 })}}",
+	"organization": "{{chance.pick([chance.city()+' University','University of '+chance.city(), chance.sentence({ words: 1 })+' Co.', chance.sentence({ words: 1 })+' Ltd'])}}",
+	"linkedin": "http://linkedin.com/in/{{chance.word({ length: 7 })}}",
+	"site_other": "{{chance.domain()}}",
+	"photo": "person-icon.png"
+}
