@@ -1,4 +1,8 @@
-const hackersSchema = mongoose.schema({
+'use strict';
+
+const mongoose = require('mongoose');
+
+const hackersSchema = mongoose.Schema({
 	"full_name": {
 		type: String,
 		validate: {
@@ -18,6 +22,10 @@ const hackersSchema = mongoose.schema({
 			message: '{VALUE} is not a valid email!'
 		},
 		required: [true, 'User email required']
+	},
+	"password": {
+		type: String,
+		required: [true, 'User password required']
 	},
 	"phone": {
 		type: String,
@@ -74,7 +82,7 @@ const hackersSchema = mongoose.schema({
 	}
 });
 
-const judgesSchema = mongoose.schema({
+const judgesSchema = mongoose.Schema({
 	"full_name": {
 		type: String,
 		validate: {
@@ -95,6 +103,10 @@ const judgesSchema = mongoose.schema({
 			message: '{VALUE} is not a valid email!'
 		},
 		required: [true, 'User email required']
+	},
+	"password": {
+		type: String,
+		required: [true, 'User password required']
 	},
 	"phone": {
 		type: String,
@@ -118,7 +130,7 @@ const judgesSchema = mongoose.schema({
 	"photo": String
 });
 
-const volunteersSchema = mongoose.schema({
+const volunteersSchema = mongoose.Schema({
 	"full_name": {
 		type: String,
 		validate: {
@@ -140,6 +152,10 @@ const volunteersSchema = mongoose.schema({
 		},
 		required: [true, 'User email required']
 	},
+	"password": {
+		type: String,
+		required: [true, 'User password required']
+	},
 	"phone": {
 		type: String,
 		validate: {
@@ -150,6 +166,12 @@ const volunteersSchema = mongoose.schema({
 		},
 		required: [true, 'User phone number required']
 	},
+	"age": {
+		type: Number,
+		required: [true, 'Age required']
+	},
+	"occupation": String,
+	"previous_experience": String,
 	"shirt_size": {
 		type: String,
 		required: [true, 'Shirt size required']
@@ -160,7 +182,7 @@ const volunteersSchema = mongoose.schema({
 	},
 });
 
-const sponsorsSchema = mongoose.schema({
+const sponsorsSchema = mongoose.Schema({
 	"organization": {
 		type: String,
 		required: [true, 'Organization required']
@@ -174,6 +196,10 @@ const sponsorsSchema = mongoose.schema({
 			message: '{VALUE} is not a valid email!'
 		},
 		required: [true, 'User email required']
+	},
+	"password": {
+		type: String,
+		required: [true, 'User password required']
 	},
 	"phone": {
 		type: String,
@@ -200,4 +226,3 @@ const models = {
 }
 
 module.exports = models
-
