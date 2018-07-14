@@ -1,0 +1,89 @@
+$red: #FF0000;
+$black: #000000;
+$white: #D0D3D4;
+$gray: #808B96;
+$green: #008000;
+$yellow:#CA6F1E;
+body{
+  background-image: url("background.jpg");
+  height:100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  margin-top: 0%;
+  margin:0;
+  padding:0;
+}
+
+header{
+  ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 50px;
+    padding-top: 3%
+  }
+  .menu{
+    margin-top: -20px;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 80px;
+    background: $black;
+  }
+  .list{
+    bottom: 10%;
+    text-align: right;
+    font-size: 19px;
+    a{
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+footer{
+  width: 100%;
+  height: 90px;
+  background: $black;
+  ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 50px;
+    padding-top: 3%
+  }
+  .listfoot{
+    text-align: right;
+    font-size: 19px;
+    a{
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+.App{
+  font-family: 'Lato', sans-serif;
+
+  h1{
+    text-align: center;
+    padding-top: 15%;
+    font-size: 100px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p{
+    color: $gray;
+  }
+  .subtitle{
+    padding-top: 0%;
+    text-align: center;
+    color: $white;
+  }
+  h2{
+    text-align: center;
+    padding-top: 15%;
+    font-size: 50px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
