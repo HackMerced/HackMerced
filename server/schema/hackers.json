@@ -1,6 +1,7 @@
 { 
 	"full_name": "{{chance.first()}} {{chance.last()}}",
 	"email": "{{chance.email()}}",
+	"password": "{{chance.word({ length: 10 })}}",
 	"phone": "{{chance.phone()}}",
 	"school": "{{chance.sentence({ words: 5 })}}",
 	"age": "{{chance.age()}}",

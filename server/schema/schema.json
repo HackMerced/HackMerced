@@ -4,6 +4,7 @@
 	{ 
 		"full_name": "{{chance.first()}} {{chance.last()}}",
 		"email": "{{chance.email()}}",
+        	"password": "{{chance.word({ length: 10 })}}",
 		"phone": "{{chance.phone()}}",
 		"school": "{{chance.sentence({ words: 5 })}}",
 		"age": "{{chance.age()}}",
@@ -30,6 +31,7 @@
 		"full_name": "{{chance.first()}} {{chance.last()}}",
 		"title": "{{util.sample(['Prof.', 'Software Engineer'])}}",
 		"email": "{{chance.email()}}",
+                "password": "{{chance.word({ length: 10 })}}",
 		"phone": "{{chance.phone()}}",
 		"shirt_size": "{{util.sample(['X-Small', 'Small', 'Medium', 'Large', 'X-Large', 'XX-Large', 'XXX-Large'])}}",
 		"occupation": "{{util.sample(['Faculty', 'Professional', 'Other'])}}",
@@ -44,6 +46,7 @@
 		"full_name": "{{chance.first()}} {{chance.last()}}",
 		"phone": "{{chance.phone()}}",
 		"email": "{{chance.email()}}",
+                "password": "{{chance.word({ length: 10 })}}",
 		"shirt_size": "{{util.sample(['X-Small', 'Small', 'Medium', 'Large', 'X-Large'])}}",
 		"availability": ""
 	},
@@ -51,6 +54,7 @@
 	{
 		"organization": "{{chance.pick([chance.city()+' University','University of '+chance.city(), chance.sentence({ words: 1 })+' Co.', chance.sentence({ words: 1 })+' Ltd'])}}",
 		"email": "{{chance.email()}}",
+                "password": "{{chance.word({ length: 10 })}}",
 		"phone": "{{chance.phone()}}",
 		"rep_name": "{{chance.first()}} {{chance.last()}}",
 		"rep_position": "{{chance.sentence({ words: 3 })}}",
