@@ -2,6 +2,7 @@
 	"full_name": "{{chance.first()}} {{chance.last()}}",
 	"title": "{{util.sample(['Prof.', 'Software Engineer'])}}",
 	"email": "{{chance.email()}}",
+        "password": "{{chance.word({ length: 10 })}}",
 	"phone": "{{chance.phone()}}",
 	"shirt_size": "{{util.sample(['X-Small', 'Small', 'Medium', 'Large', 'X-Large', 'XX-Large', 'XXX-Large'])}}",
 	"occupation": "{{util.sample(['Faculty', 'Professional', 'Other'])}}",
