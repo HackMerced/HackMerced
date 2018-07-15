@@ -15,6 +15,8 @@ const hackersSchema = mongoose.Schema({
 	},
 	"email": {
 		type: String,
+		index: true,
+		unique: true,
 		validate: {
 			validator: function(v) {
 				return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
@@ -96,6 +98,8 @@ const judgesSchema = mongoose.Schema({
 	"title": String,
 	"email": {
 		type: String,
+		index: true,
+		unique: true,
 		validate: {
 			validator: function(v) {
 				return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
@@ -144,6 +148,8 @@ const volunteersSchema = mongoose.Schema({
 	"title": String,
 	"email": {
 		type: String,
+		index: true,
+		unique: true,
 		validate: {
 			validator: function(v) {
 				return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
@@ -189,6 +195,8 @@ const sponsorsSchema = mongoose.Schema({
 	},
 	"email": {
 		type: String,
+		index: true,
+		unique: true,
 		validate: {
 			validator: function(v) {
 				return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
