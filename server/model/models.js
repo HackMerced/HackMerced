@@ -185,7 +185,7 @@ const volunteersSchema = mongoose.Schema({
 	"availability": {
 		type: [[Date]],
 		required: [true, 'Availability required']
-	},
+	}
 });
 
 const sponsorsSchema = mongoose.Schema({
