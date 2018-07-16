@@ -7,14 +7,14 @@ class Footer extends Component {
       <nav>
         <ul className="listfoot">
           <li>
-            <a href="#">Contact Us</a>
+            <a href="/#">Contact Us</a>
 
           </li>
           <li>
-            <a href="#">About Us</a>
+            <a href="/#">About Us</a>
           </li>
           <li>
-            <a href="#">FAQs</a>
+            <a href="/#">FAQs</a>
           </li>
         </ul>
       </nav>

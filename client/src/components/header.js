@@ -10,13 +10,13 @@ class Header extends Component {
           <nav className="menu">
             <ul className="list">
               <li>
-                <a href="#">Home</a>
+                <a href="/#">Home</a>
               </li>
               <li>
-                <a href="#">Register</a>
+                <a href="/#">Register</a>
               </li>
               <li>
-                <a href="#">Timeline</a>
+                <a href="/#">Timeline</a>
               </li>
             </ul>
           </nav>
