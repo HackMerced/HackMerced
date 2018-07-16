@@ -2,23 +2,7 @@
 
 const mongoose = require('mongoose');
 
-const usersSchema = mongoose.Schema({
-	"email": String,
-	"password": String,
-	"type": String
-});
-
-const hackersSchema = mongoose.Schema({
-	"full_name": {
-		type: String,
-		validate: {
-			validator: function(v) {
-				return v.length > 2;
-		},
-			message: '{VALUE} is not valid. Please enter your full name.'
-		},
-		required: [true, 'Full name required']
-	},
+const usersSchema = new mongoose.Schema({
 	"email": {
 		type: String,
 		index: true,
@@ -44,6 +28,25 @@ const hackersSchema = mongoose.Schema({
 			message: '{VALUE} is not a valid phone number!'
 		},
 		required: [true, 'User phone number required']
+	}
+    "privileges": {
+		type: [String],
+		required: [true, "User privileges required"]
+	}
+}, { descriminatorKey: 'type', collection: 'main' });
+
+const Users = mongoose.model('Users', usersSchema, 'main');
+
+const Hackers = Users.descriminator('hacker', new mongoose.Schema({
+	"full_name": {
+		type: String,
+		validate: {
+			validator: function(v) {
+				return v.length > 2;
+		},
+			message: '{VALUE} is not valid. Please enter your full name.'
+		},
+		required: [true, 'Full name required']
 	},
 	"school": {
 		type: String,
@@ -87,18 +90,10 @@ const hackersSchema = mongoose.Schema({
 	"application_status": {
 		type: String,
 		required: [true, 'Application status required']
-	},
-        "privileges": {
-		type: [String],
-		required: [true, "User privileges required"]
-	},	
-	"type": {
-		type: String,
-		required: [true, "User type required"]
 	}
-});
+}, { collection: 'main' }));
 
-const judgesSchema = mongoose.Schema({
+const Judges = Users.descriminator('judge', new mongoose.Schema({
 	"full_name": {
 		type: String,
 		validate: {
@@ -145,18 +140,10 @@ const judgesSchema = mongoose.Schema({
 	"organization": String,
 	"linkedin": String,
 	"site_other": String,
-	"photo": String,
-        "privileges": {
-	        type: [String],
-		required: [true, "User privileges required"]
-	},
-	"type": {
-	        type: String,
-		required: [true, "User type required"]
-	}
-}});
+	"photo": String
+}, { collection: 'main' }));
 
-const volunteersSchema = mongoose.Schema({
+const Volunteers = Users.descriminator('volunteer', new mongoose.Schema({
 	"full_name": {
 		type: String,
 		validate: {
@@ -168,32 +155,6 @@ const volunteersSchema = mongoose.Schema({
 		required: [true, 'Full name required']
 	},
 	"title": String,
-	"email": {
-		type: String,
-		index: true,
-		unique: true,
-		validate: {
-			validator: function(v) {
-				return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-		},
-			message: '{VALUE} is not a valid email!'
-		},
-		required: [true, 'User email required']
-	},
-	"password": {
-		type: String,
-		required: [true, 'User password required']
-	},
-	"phone": {
-		type: String,
-		validate: {
-			validator: function(v) {
-				return /\d{3}-\d{3}-\d{4}/.test(v);
-		},
-			message: '{VALUE} is not a valid phone number!'
-		},
-		required: [true, 'User phone number required']
-	},
 	"age": {
 		type: Number,
 		required: [true, 'Age required']
@@ -207,69 +168,27 @@ const volunteersSchema = mongoose.Schema({
 	"availability": {
 		type: [[Date]],
 		required: [true, 'Availability required']
-	},
-        "privileges": {
-		type: [String],
-		required: [true, "User privileges required"]
-	},
-        "type": {
-	        type: String,
-	        required: [true, "User type required"]
 	}
-}});
+}, { collection: 'main' }));
 
-const sponsorsSchema = mongoose.Schema({
+const Sponsors = Users.descriminator('sponsor', mongoose.Schema({
 	"organization": {
 		type: String,
 		required: [true, 'Organization required']
-	},
-	"email": {
-		type: String,
-		index: true,
-		unique: true,
-		validate: {
-			validator: function(v) {
-				return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-		},
-			message: '{VALUE} is not a valid email!'
-		},
-		required: [true, 'User email required']
-	},
-	"password": {
-		type: String,
-		required: [true, 'User password required']
-	},
-	"phone": {
-		type: String,
-		validate: {
-			validator: function(v) {
-				return /\d{3}-\d{3}-\d{4}/.test(v);
-		},
-			message: '{VALUE} is not a valid phone number!'
-		},
-		required: [true, 'User phone number required']
 	},
 	"rep_name": String,
 	"rep_position": String,
 	"linkedin": String,
 	"site_other": String,
-	"photo": String,
-	"privileges": {
-		type: [String],
-		required: [true, "User privileges required"]
-	},
-        "type": {
-		type: String,
-		required: [true, "User type required"]							        }
-	}
-});
+	"photo": String
+}, { collection: 'main' }));
 
 const models = {
-	Users : mongoose.model('Users', usersSchema, 'main'),
-	Hackers : mongoose.model('Hackers', hackersSchema, 'main'),
-	Judges : mongoose.model('Judges', judgesSchema, 'main'),
-	Volunteers : mongoose.model('Volunteers', volunteersSchema, 'main'),
-	Sponsors : mongoose.model('Sponsors', sponsorsSchema, 'main')
+	Users : Users,
+	Hackers : Hackers,
+	Judges : Judges,
+	Volunteers : Volunteers,
+	Sponsors : Sponsors
 }
 
-module.exports = models
+module.exports = models;
