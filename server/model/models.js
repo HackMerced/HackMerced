@@ -81,6 +81,14 @@ const hackersSchema = mongoose.Schema({
 	"application_status": {
 		type: String,
 		required: [true, 'Application status required']
+	},
+        "privileges": {
+		type: [String],
+		required: [true, "User privileges required"]
+	},	
+	"type": {
+		type: String,
+		required: [true, "User type required"]
 	}
 });
 
@@ -131,8 +139,16 @@ const judgesSchema = mongoose.Schema({
 	"organization": String,
 	"linkedin": String,
 	"site_other": String,
-	"photo": String
-});
+	"photo": String,
+        "privileges": {
+	        type: [String],
+		required: [true, "User privileges required"]
+	},
+	"type": {
+	        type: String,
+		required: [true, "User type required"]
+	}
+}});
 
 const volunteersSchema = mongoose.Schema({
 	"full_name": {
@@ -185,8 +201,16 @@ const volunteersSchema = mongoose.Schema({
 	"availability": {
 		type: [[Date]],
 		required: [true, 'Availability required']
+	},
+        "privileges": {
+		type: [String],
+		required: [true, "User privileges required"]
+	},
+        "type": {
+	        type: String,
+	        required: [true, "User type required"]
 	}
-});
+}});
 
 const sponsorsSchema = mongoose.Schema({
 	"organization": {
@@ -223,14 +247,22 @@ const sponsorsSchema = mongoose.Schema({
 	"rep_position": String,
 	"linkedin": String,
 	"site_other": String,
-	"photo": String
+	"photo": String,
+	"privileges": {
+		type: [String],
+		required: [true, "User privileges required"]
+	},
+        "type": {
+		type: String,
+		required: [true, "User type required"]							        }
+	}
 });
 
 const models = {
-	hackers : hackersSchema,
-	judges : judgesSchema,
-	volunteers : volunteersSchema,
-	sponsors : sponsorsSchema	
+	hackers : mongoose.model('Hackers', hackersSchema, 'main'),
+	judges : mongoose.model('Judges', judgesSchema, 'main'),
+	volunteers : mongoose.model('Volunteers', volunteersSchema, 'main'),
+	sponsors : mongoose.model('Sponsors', sponsorsSchema, 'main')
 }
 
 module.exports = models
