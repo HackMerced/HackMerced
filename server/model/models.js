@@ -29,7 +29,7 @@ const usersSchema = new mongoose.Schema({
 		},
 		required: [true, 'User phone number required']
 	}
-    "privileges": {
+	"privileges": {
 		type: [String],
 		required: [true, "User privileges required"]
 	}
