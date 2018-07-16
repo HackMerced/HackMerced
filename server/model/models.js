@@ -7,7 +7,7 @@ const hackersSchema = mongoose.Schema({
 		type: String,
 		validate: {
 			validator: function(v) {
-				return v.length() > 2;
+				return v.length > 2;
 		},
 			message: '{VALUE} is not valid. Please enter your full name.'
 		},
@@ -97,7 +97,7 @@ const judgesSchema = mongoose.Schema({
 		type: String,
 		validate: {
 			validator: function(v) {
-				return v.length() > 2;
+				return v.length > 2;
 		},
 			message: '{VALUE} is not valid. Please enter your full name.'
 		},
@@ -155,7 +155,7 @@ const volunteersSchema = mongoose.Schema({
 		type: String,
 		validate: {
 			validator: function(v) {
-				return v.length() > 2;
+				return v.length > 2;
 		},
 			message: '{VALUE} is not valid. Please enter your full name.'
 		},
