@@ -45,10 +45,10 @@ echo "Password: "
 read -s PASSWORD
 
 # Upload & import dummy data into the appropriate collections
-mongoimport --host $MONGO_HOST --ssl --username $USERNAME --password $PASSWORD --authenticationDatabase admin --db users --collection hackers --file ./hackers_mock_data.json --jsonArray --drop
-mongoimport --host $MONGO_HOST --ssl --username $USERNAME --password $PASSWORD --authenticationDatabase admin --db users --collection judges --file ./judges_mock_data.json --jsonArray  --drop
-mongoimport --host $MONGO_HOST --ssl --username $USERNAME --password $PASSWORD --authenticationDatabase admin --db users --collection volunteers --file ./volunteers_mock_data.json --jsonArray --drop
-mongoimport --host $MONGO_HOST --ssl --username $USERNAME --password $PASSWORD --authenticationDatabase admin --db users --collection sponsors --file ./sponsors_mock_data.json --jsonArray --drop
+mongoimport --host $MONGO_HOST --ssl --username $USERNAME --password $PASSWORD --authenticationDatabase admin --db users --collection main --file ./hackers_mock_data.json --jsonArray
+mongoimport --host $MONGO_HOST --ssl --username $USERNAME --password $PASSWORD --authenticationDatabase admin --db users --collection main --file ./judges_mock_data.json --jsonArray
+mongoimport --host $MONGO_HOST --ssl --username $USERNAME --password $PASSWORD --authenticationDatabase admin --db users --collection main --file ./volunteers_mock_data.json --jsonArray
+mongoimport --host $MONGO_HOST --ssl --username $USERNAME --password $PASSWORD --authenticationDatabase admin --db users --collection main --file ./sponsors_mock_data.json --jsonArray
 mongofiles --host $MONGO_HOST --ssl --username $USERNAME --password $PASSWORD --authenticationDatabase admin --db resources put person-icon.png --replace
 mongofiles --host $MONGO_HOST --ssl --username $USERNAME --password $PASSWORD --authenticationDatabase admin --db resources put orange-triangle-banner.jpg --replace
 

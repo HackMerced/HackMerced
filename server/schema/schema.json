@@ -23,7 +23,8 @@
 		"github": "http://github.com/{{chance.word({ length: 7 })}}",
 		"site_other": "{{chance.domain()}}",
 		"resume": "{{chance.domain()}}/{{chance.word({ length: 5 })}}.pdf",
-		"application_status": "{{util.sample(['received', 'under review', 'accepted'])}}"
+		"application_status": "{{util.sample(['received', 'under review', 'accepted'])}}",
+		"role": "hacker"
 	}],
 	"judges":
 	[ "{{_$config}}", {"size": __SIZE__}, {
@@ -38,7 +39,8 @@
 		"organization": "{{chance.pick([chance.city()+' University','University of '+chance.city(), chance.sentence({ words: 1 })+' Co.', chance.sentence({ words: 1 })+' Ltd'])}}",
 		"linkedin": "http://linkedin.com/in/{{chance.word({ length: 7 })}}",
 		"site_other": "{{chance.domain()}}",
-		"photo": "person-icon.png"
+		"photo": "person-icon.png",
+                "role": "judge"		
 	}],
 	"volunteers":
 	[ "{{_$config}}", {"size": __SIZE__}, {
@@ -47,7 +49,8 @@
 		"email": "{{chance.email()}}",
                 "password": "{{chance.word({ length: 10 })}}",
 		"shirt_size": "{{util.sample(['X-Small', 'Small', 'Medium', 'Large', 'X-Large'])}}",
-		"availability": ""
+		"availability": "",
+                "role": "volunteer"		
 	}],
 	"sponsors":
 	[ "{{_$config}}", {"size": __SIZE__}, {
@@ -59,7 +62,8 @@
 		"rep_position": "{{chance.sentence({ words: 3 })}}",
 		"linkedin": "http://linkedin.com/in/{{chance.word({ length: 7 })}}",
 		"site_other": "{{chance.domain()}}",
-		"photo": "orange-triangle-banner.jpg"
+		"photo": "orange-triangle-banner.jpg",
+                "role": "sponsor"
 	}],
 	"teams":
 	{
