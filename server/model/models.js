@@ -259,10 +259,10 @@ const sponsorsSchema = mongoose.Schema({
 });
 
 const models = {
-	hackers : mongoose.model('Hackers', hackersSchema, 'main'),
-	judges : mongoose.model('Judges', judgesSchema, 'main'),
-	volunteers : mongoose.model('Volunteers', volunteersSchema, 'main'),
-	sponsors : mongoose.model('Sponsors', sponsorsSchema, 'main')
+	Hackers : mongoose.model('Hackers', hackersSchema, 'main'),
+	Judges : mongoose.model('Judges', judgesSchema, 'main'),
+	Volunteers : mongoose.model('Volunteers', volunteersSchema, 'main'),
+	Sponsors : mongoose.model('Sponsors', sponsorsSchema, 'main')
 }
 
 module.exports = models
