@@ -2,6 +2,11 @@
 
 const mongoose = require('mongoose');
 
+const usersSchema = mongoose.Schema({
+	"email": String,
+	"password": String
+});
+
 const hackersSchema = mongoose.Schema({
 	"full_name": {
 		type: String,
@@ -259,6 +264,7 @@ const sponsorsSchema = mongoose.Schema({
 });
 
 const models = {
+	Users : mongoose.model('Users', usersSchema, 'main'),
 	Hackers : mongoose.model('Hackers', hackersSchema, 'main'),
 	Judges : mongoose.model('Judges', judgesSchema, 'main'),
 	Volunteers : mongoose.model('Volunteers', volunteersSchema, 'main'),
