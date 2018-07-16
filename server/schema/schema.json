@@ -24,7 +24,8 @@
 		"site_other": "{{chance.domain()}}",
 		"resume": "{{chance.domain()}}/{{chance.word({ length: 5 })}}.pdf",
 		"application_status": "{{util.sample(['received', 'under review', 'accepted'])}}",
-		"role": "hacker"
+		"privileges": ["user"],
+		"type": "hacker"
 	}],
 	"judges":
 	[ "{{_$config}}", {"size": __SIZE__}, {
@@ -40,7 +41,8 @@
 		"linkedin": "http://linkedin.com/in/{{chance.word({ length: 7 })}}",
 		"site_other": "{{chance.domain()}}",
 		"photo": "person-icon.png",
-                "role": "judge"		
+                "privileges": ["user"],
+		"type": "judge"		
 	}],
 	"volunteers":
 	[ "{{_$config}}", {"size": __SIZE__}, {
@@ -50,7 +52,8 @@
                 "password": "{{chance.word({ length: 10 })}}",
 		"shirt_size": "{{util.sample(['X-Small', 'Small', 'Medium', 'Large', 'X-Large'])}}",
 		"availability": "",
-                "role": "volunteer"		
+                "privileges": ["user"],
+		"type": "volunteer"		
 	}],
 	"sponsors":
 	[ "{{_$config}}", {"size": __SIZE__}, {
@@ -63,7 +66,8 @@
 		"linkedin": "http://linkedin.com/in/{{chance.word({ length: 7 })}}",
 		"site_other": "{{chance.domain()}}",
 		"photo": "orange-triangle-banner.jpg",
-                "role": "sponsor"
+                "privileges": ["user"],
+		"type": "sponsor"
 	}],
 	"teams":
 	{
