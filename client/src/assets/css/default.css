@@ -1,5 +1,5 @@
 body {
-  background-image: url("background.jpg");
+  background-image: url("../img/background.jpg");
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -15,6 +15,7 @@ header ul li {
   margin-right: 50px;
   padding-top: 3%;
 }
+
 header .menu {
   margin-top: -20px;
   padding: 0;
@@ -23,11 +24,13 @@ header .menu {
   height: 80px;
   background: #000000;
 }
+
 header .list {
   bottom: 10%;
   text-align: right;
   font-size: 19px;
 }
+
 header .list a {
   color: #D0D3D4;
   text-decoration: none;
@@ -38,16 +41,19 @@ footer {
   height: 90px;
   background: #000000;
 }
+
 footer ul li {
   list-style-type: none;
   display: inline-block;
   margin-right: 50px;
   padding-top: 3%;
 }
+
 footer .listfoot {
   text-align: right;
   font-size: 19px;
 }
+
 footer .listfoot a {
   color: #D0D3D4;
   text-decoration: none;
@@ -56,6 +62,7 @@ footer .listfoot a {
 .App {
   font-family: "Lato", sans-serif;
 }
+
 .App h1 {
   text-align: center;
   padding-top: 15%;
@@ -64,14 +71,17 @@ footer .listfoot a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .App p {
   color: #808B96;
 }
+
 .App .subtitle {
   padding-top: 0%;
   text-align: center;
   color: #D0D3D4;
 }
+
 .App h2 {
   text-align: center;
   padding-top: 15%;
