@@ -4,7 +4,9 @@ import Footer from './components/footer';
 import Titlescreen from './components/titlescreen';
 
 
-import './assets/scss/default.scss';
+import './assets/css/default.css';
+import './assets/css/body.css';
+import './assets/css/basic.css';
 
 class App extends Component {
   render() {
