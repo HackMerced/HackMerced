@@ -80,6 +80,9 @@
 	},
 	"travel_reimbursement":
 	{
-
+		"email": "{{chance.email()}}",
+		"reimbursement_amount_requested": "{{chance.integer({min:10,max:200})}}",
+		"reimbursement_amount_approved": "{{chance.integer({min:10,max:200})}}",
+		"reimbursement_status": "{{util.sample(['Under review', 'Approved', 'Denied'])}}"
 	}
 }
