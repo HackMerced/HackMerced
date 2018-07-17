@@ -1,6 +1,7 @@
 'use strict';
 
 const mongoose = require('mongoose');
+const db = require('../api/db');
 
 const usersSchema = new mongoose.Schema({
     "email": {
@@ -35,7 +36,7 @@ const usersSchema = new mongoose.Schema({
     }
 }, {discriminatorKey: 'type', collection: 'main'});
 
-const Users = mongoose.model('Users', usersSchema, 'main');
+const Users = db.users.model('Users', usersSchema, 'main');
 
 const Hackers = Users.discriminator('hacker', new mongoose.Schema({
     "full_name": {
@@ -183,12 +184,13 @@ const Sponsors = Users.discriminator('sponsor', mongoose.Schema({
     "photo": String
 }, {collection: 'main'}));
 
+
 const models = {
     Users: Users,
     Hackers: Hackers,
     Judges: Judges,
     Volunteers: Volunteers,
-    Sponsors: Sponsors
+    Sponsors: Sponsors,
 };
 
 module.exports = models;
