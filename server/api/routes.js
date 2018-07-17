@@ -1,107 +1,125 @@
 const express = require('express');
 const router = express.Router();
-const mongo = require('./db');
 const mongoDB = require('mongodb');
+const auth = require('./authentication');
+const models = require('../model/models');
+const resourcesDb = require('./db').resources;
 
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
     console.log('api accessed');
-    res.send(JSON.stringify({success: true, page: 'api'}))
+    res.send(JSON.stringify({success: true, page: 'api'}));
+});
+//AdminStuff
+/**
+ * Registers user returns JWT token
+ */
+router.post('/auth/register', async (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    const user = req.body.user;
+    if (!user) {
+        res.send(JSON.stringify({success: false, error: 'User not provided'}));
+        return;
+    }
+    user.password = await auth.hashPassword(user.password);
+    try {
+        const createdUser = await models.Users.create(user);
+        const token = auth.signJWT(createdUser._id);
+        res.send(JSON.stringify({success: true, token: token}));
+    } catch (e) {
+        console.log(e);
+        res.send(JSON.stringify({success: false}));
+    }
+});
+/**
+ * "logs in a user -> basically gives back JWT based on username/password"
+ */
+router.post('/auth/login', async (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    const authBody = req.body.auth;
+    if (!authBody) {
+        res.send(JSON.stringify({success: false, error: 'Auth not provided'}));
+        return;
+    }
+    const user = await models.Users.findOne({email: authBody.email});
+    if (!user) {
+        res.send(JSON.stringify({success: false, error: 'Username or password was incorrect'}));
+        return;
+    }
+    if (await auth.comparePassword(authBody.password, user.password)) {
+        res.send(JSON.stringify({token: auth.signJWT(user._id)}));
+    } else {
+        res.send(JSON.stringify({success: false, error: 'Username or password was incorrect'}))
+    }
+});
+/**
+ * Returns info for current user
+ * Authorization headers must contain a valid token
+ */
+router.get('/users/info', async (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    try {
+        const user = auth.verifyJWT(req.headers.authorization);
+        if (user.success && 'id' in user) {
+            const user_data = await models.Users.findOne({_id: mongoDB.ObjectId(user.id)}).select("-password -_id");
+            if (!user_data) {
+                res.send(JSON.stringify({error: 'User DNE'}))
+            } else {
+                res.send(JSON.stringify({success: true, user: user_data}));
+            }
+        } else {
+            res.send(JSON.stringify({success: false}));
+        }
+    } catch (e) {
+        res.send(JSON.stringify({success: false}));
+    }
+});
+/**
+ * Only accessible to admins. Gives user info for any user when passing in email in url params or all users.
+ * Authorization headers must contain a valid token
+ */
+router.get('/users', async (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    if (!req.headers.authorization) {
+        res.send(JSON.stringify({error: 'No auth in header'}));
+        return;
+    }
 
-});
-//Volunteers
-router.get('/users/volunteers', async (req, res) => {
-    const users = await mongo.users();
-    if ('email' in req.query) {
-        const volunteer_data = await users.collection('volunteers').find({email: req.query.email}).toArray();
-        res.setHeader('Content-Type', 'application/json');
-        res.send(JSON.stringify(volunteer_data));
-        res.end();
-    } else {
-        const volunteer_data = await users.collection('volunteers').find().toArray();
-        res.setHeader('Content-Type', 'application/json');
-        res.send(JSON.stringify(volunteer_data));
-        res.end();
+    let user = auth.verifyJWT(req.headers.authorization);
+    if (!(user.success && 'id' in user)) {
+        res.send(JSON.stringify({error: 'Bad Auth'}));
+        return;
     }
-});
-router.post('/users/volunteers', (req, res) => {
-    console.log(req.body);
-    res.send(req.body);
-});
-//Hackers
-router.get('/users/hackers', async (req, res) => {
-    const users = await mongo.users();
-    if ('email' in req.query) {
-        const hacker_data = await users.collection('hackers').find({email: req.query.email}).toArray();
-        res.setHeader('Content-Type', 'application/json');
-        res.send(JSON.stringify(hacker_data));
-        res.end();
-    } else {
-        const hacker_data = await users.collection('hackers').find().toArray();
-        res.setHeader('Content-Type', 'application/json');
-        res.send(JSON.stringify(hacker_data));
-        res.end();
-    }
-});
-router.post('/users/hackers', (req, res) => {
-    console.log(req.body);
-    res.send(req.body);
-});
-//Sponsors
-router.get('/users/sponsors', async (req, res) => {
-    const users = await mongo.users();
-    if ('email' in req.query) {
-        let sponsor_data = await users.collection('sponsors').find({email: req.query.email}).toArray();
-        sponsor_data = sponsor_data[0];
-        if (!sponsor_data) {
-            res.send(JSON.stringify({'error': 'Could not find email'}));
-        } else if ('image' in req.query) {
-            res.contentType('image/png');
-            const resource = await mongo.resources();
-            const bucket = new mongoDB.GridFSBucket(resource);
-            await bucket.openDownloadStreamByName(sponsor_data.photo).pipe(res);
+    user = await models.Users.findOne({_id: mongoDB.ObjectId(user.id)});
+    if (user.privileges.includes('admin')) {
+        if ('email' in req.query) {
+            const user_data = await models.Users.findOne({email: req.query.email}).select("-password -_id");
+            if (!user_data) {
+                res.send(JSON.stringify({'error': 'Could not find email'}));
+            } else if ('image' in req.query && user_data.photo) {
+                res.contentType('image/' + user_data.photo.split('.')[1]);
+                await getFiles(res, user_data.photo);
+            } else {
+                res.send(JSON.stringify(user_data));
+            }
         } else {
-            res.setHeader('Content-Type', 'application/json');
-            res.send(JSON.stringify(sponsor_data));
+            const user_data = await models.Users.find().select("-password -_id");
+            res.send(JSON.stringify(user_data));
         }
     } else {
-        const sponsor_data = await users.collection('sponsors').find().toArray();
-        res.setHeader('Content-Type', 'application/json');
-        res.send(JSON.stringify(sponsor_data));
+        res.send(JSON.stringify({error: 'You are not admin go away'}));
     }
 });
-router.post('/users/sponsors', (req, res) => {
-    console.log(req.body);
-    res.send(req.body);
-});
-//Judges
-router.get('/users/judges', async (req, res) => {
-    const users = await mongo.users();
-    if ('email' in req.query) {
-        let judge_data = await users.collection('judges').find({email: req.query.email}).toArray();
-        judge_data = judge_data[0];
-        if (!judge_data) {
-            res.send(JSON.stringify({'error': 'Could not find email'}));
-        } else if ('image' in req.query) {
-            res.contentType('image/png');
-            const resource = await mongo.resources();
-            const bucket = new mongoDB.GridFSBucket(resource);
-            await bucket.openDownloadStreamByName(judge_data.photo).pipe(res);
-        } else {
-            res.setHeader('Content-Type', 'application/json');
-            res.send(JSON.stringify(judge_data));
-            res.end();
-        }
-    } else {
-        const judge_data = await users.collection('judges').find().toArray();
-        res.setHeader('Content-Type', 'application/json');
-        res.send(JSON.stringify(judge_data));
-        res.end();
-    }
-});
-router.post('/users/judges', (req, res) => {
-    console.log(req.body);
-    res.send(req.body);
-});
+/**
+ * takes in response and fileName and streams the file into response -> need not do res.Send in route :)
+ * @param res
+ * @param fileName
+ * @returns {Promise<void>}
+ */
+const getFiles = async (res, fileName) => {
+    const bucket = new mongoDB.GridFSBucket(await resourcesDb.db);
+    bucket.openDownloadStreamByName(fileName).pipe(res);
+};
 
 module.exports = router;
