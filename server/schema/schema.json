@@ -71,7 +71,12 @@
 	}],
 	"teams":
 	{
-
+		"project_name": "{{chance.sentence({words:1})}}",
+		"project_description": "{{chance.sentence({words:20})}}",
+		"leader": "{{chance.email()}}",
+		"members": [ "{{_$config}}", {"size": [0,4]}, "{{chance.email()}}"],
+		"github": "http://github.com/{{chance.word({ length: 7 })}}",
+		"devpost": "http://devpost.com/software/{{chance.word({ length: 9 })}}"
 	},
 	"travel_reimbursement":
 	{
