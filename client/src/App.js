@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
-import Titlescreen from './components/titlescreen';
+import Titlescreen from './layouts/titlescreen';
 
 
 import './assets/css/default.css';
