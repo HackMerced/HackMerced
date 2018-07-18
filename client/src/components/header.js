@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 
+import {
+  Link
+} from 'react-router-dom';
+
 class Header extends Component {
-  handleClick(){
-    alert('this button has been clicked');
-  }
   render() {
     return (
       <header>
           <nav className="menu">
             <ul className="list">
               <li>
-                <a href="/#">Home</a>
+                <Link to="/home">Home</Link>
               </li>
               <li>
-                <a href="/#">Register</a>
+                <Link to="/register">Register</Link>
               </li>
               <li>
-                <a href="/#">Timeline</a>
+                <Link to="/timeline">Timeline</Link>
               </li>
             </ul>
           </nav>
