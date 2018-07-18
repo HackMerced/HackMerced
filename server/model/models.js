@@ -34,7 +34,7 @@ const usersSchema = new mongoose.Schema({
         type: [String],
         required: [true, "User privileges required"]
     }
-}, {discriminatorKey: 'type', collection: 'main'});
+}, {discriminatorKey: 'type', collection: 'main', 'timestamps': {createdAt:'create_at',updatedAt:'updated_at'}});
 
 const Users = db.users.model('Users', usersSchema, 'main');
 
