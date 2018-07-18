@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import './Bulma.css';
-import "./aboutUS.css"
+import "../assets/css/aboutUS.css";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 class aboutUS extends Component {
     render() {
       return (
+          <Header/>
           <div className = "aboutUS">
             <section class = "hero">
                 <div class = "hero-head">
@@ -74,6 +76,7 @@ class aboutUS extends Component {
                 hello world
             </div>
         </div>
+        <Footer/>
       );
     }
   }
