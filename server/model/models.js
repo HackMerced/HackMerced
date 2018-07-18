@@ -21,20 +21,14 @@ const usersSchema = new mongoose.Schema({
         required: [true, 'User password required']
     },
     "phone": {
-        type: String,
-        validate: {
-            validator: function (v) {
-                return /\d{3}-\d{3}-\d{4}/.test(v);
-            },
-            message: '{VALUE} is not a valid phone number!'
-        },
+	type: String,
         required: [true, 'User phone number required']
     },
     "privileges": {
         type: [String],
         required: [true, "User privileges required"]
     }
-}, {discriminatorKey: 'type', collection: 'main', 'timestamps': {createdAt:'create_at',updatedAt:'updated_at'}});
+}, {discriminatorKey: 'type', collection: 'main', 'timestamps': {createdAt:'created_at', updatedAt:'updated_at'}});
 
 const Users = db.users.model('Users', usersSchema, 'main');
 
@@ -90,6 +84,7 @@ const Hackers = Users.discriminator('hacker', new mongoose.Schema({
     "resume": String,
     "application_status": {
         type: String,
+        default: "submitted",
         required: [true, 'Application status required']
     }
 }, {collection: 'main'}));
@@ -106,32 +101,6 @@ const Judges = Users.discriminator('judge', new mongoose.Schema({
         required: [true, 'Full name required']
     },
     "title": String,
-    "email": {
-        type: String,
-        index: true,
-        unique: true,
-        validate: {
-            validator: function (v) {
-                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-            },
-            message: '{VALUE} is not a valid email!'
-        },
-        required: [true, 'User email required']
-    },
-    "password": {
-        type: String,
-        required: [true, 'User password required']
-    },
-    "phone": {
-        type: String,
-        validate: {
-            validator: function (v) {
-                return /\d{3}-\d{3}-\d{4}/.test(v);
-            },
-            message: '{VALUE} is not a valid phone number!'
-        },
-        required: [true, 'User phone number required']
-    },
     "shirt_size": {
         type: String,
         required: [true, 'Shirt size required']
@@ -169,6 +138,12 @@ const Volunteers = Users.discriminator('volunteer', new mongoose.Schema({
     "availability": {
         type: [[Date]],
         required: [true, 'Availability required']
+    },
+    "hours": [[Date]],
+    "application_status": {
+        type: String,
+        default: "submitted",
+        required: [true, 'Application status required']
     }
 }, {collection: 'main'}));
 
