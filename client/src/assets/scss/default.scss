@@ -5,19 +5,20 @@ $gray: #808B96;
 $green: #008000;
 $yellow:#CA6F1E;
 header {
-  ul li {
-    list-style-type: none;
-    display: inline-block;
-    margin-right: 50px;
-    padding-top: 3%
-  }
   .menu {
     margin-top: -20px;
     padding: 0;
     border: 0;
     width: 100%;
-    height: 80px;
+    height: 8vh;
+    position: fixed;
     background: $black;
+    padding-top: 2%;
+    ul li{
+      list-style-type: none;
+      display: inline-block;
+      margin-right: 50px;
+    }
   }
   .list {
     bottom: 10%;
@@ -31,6 +32,10 @@ header {
 }
 
 footer {
+  .menu2{
+    margin: 0;
+    padding: 0;
+  }
   width: 100%;
   height: 90px;
   background: $black;
@@ -60,6 +65,10 @@ footer {
     background-attachment: fixed;
     height: 100vh;
     width: 100%;
+    p {
+      text-align: center;
+      color: $white;
+    }
   }
   .screen2 {
     background-image: url("../img/background2.jpg");
@@ -67,8 +76,55 @@ footer {
     background-size: cover;
     display: table;
     background-attachment: fixed;
+    height: 105vh;
+    width: 100%;
+    p {
+      text-align: center;
+      color: $white;
+    }
+  }
+  .screen3 {
+    background-image: url("../img/background3.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
     height: 100vh;
     width: 100%;
+    p {
+      text-align: center;
+      color: $white;
+    }
+  }
+  .contact_screen {
+    background-image: url("../img/contact.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    h2{
+      text-align: center;
+      padding-top: 15%;
+      font-size: 50px;
+      background: $white;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    ul li{
+      margin-right: 40vh;
+      list-style-type: none;
+      display: inline-block;
+    }
+    .listcontact{
+      text-align: center;
+      font-size: 10vh;
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
   }
   h1 {
     text-align: center;
@@ -79,7 +135,7 @@ footer {
     -webkit-text-fill-color: transparent;
   }
   p {
-    color: $gray;
+    color: $white;
   }
   .subtitle {
     padding-top: 0%;
@@ -94,4 +150,5 @@ footer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
 }

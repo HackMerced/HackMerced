@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 
+import {
+  Link
+} from 'react-router-dom';
+
 class Footer extends Component {
   render() {
     return (
       <footer>
-      <nav>
+      <nav className="menu2">
         <ul className="listfoot">
           <li>
-            <a href="/#">Contact Us</a>
+            <Link to="/contactus">Contact Us</Link>
 
           </li>
           <li>
-            <a href="/#">About Us</a>
+            <Link to="/aboutus">About Us</Link>
           </li>
           <li>
-            <a href="/#">FAQs</a>
+            <Link to="/faqs">FAQs</Link>
           </li>
         </ul>
       </nav>
