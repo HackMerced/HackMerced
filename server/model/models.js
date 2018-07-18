@@ -147,7 +147,7 @@ const Volunteers = Users.discriminator('volunteer', new mongoose.Schema({
     }
 }, {collection: 'main'}));
 
-const Sponsors = Users.discriminator('sponsor', mongoose.Schema({
+const Sponsors = Users.discriminator('sponsor', new mongoose.Schema({
     "organization": {
         type: String,
         required: [true, 'Organization required']
