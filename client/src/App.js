@@ -10,6 +10,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Titlescreen from './layouts/titlescreen';
 import Contactus from './layouts/contactus';
+import FAQ from './layouts/faq';
 
 
 import './assets/css/default.css';
@@ -26,6 +27,7 @@ class App extends Component {
           <Route exact path ='/home' component={Titlescreen}/>
           <Route exact path ='/Contactus' component={Contactus}/>
           <Footer/>
+          <Route exact path ='/faqs' component={FAQ}/>
         </div>
       </Router>
     );
