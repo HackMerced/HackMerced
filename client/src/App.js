@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
 import Titlescreen from './layouts/titlescreen';
+import FAQ from './layouts/faq';
 
 
 import './assets/css/default.css';
@@ -14,7 +15,9 @@ class App extends Component {
       <div className="App">
         <Header/>
         <Titlescreen/>
+        <FAQ/>
         <Footer/>
+        
       </div>
     );
   }
