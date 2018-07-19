@@ -9,10 +9,10 @@ class Contactus extends Component {
         <h1>Contact Us!</h1>
         <ul className="listcontact">
           <li>
-            <a href="https://www.facebook.com/hackmerced"><img src={facebook} width="200" height="200"/></a>
+            <a href="https://www.facebook.com/hackmerced"><img src={facebook} width="200" height="200" alt="Facebook"/></a>
           </li>
           <li>
-            <a href="mailto:general@hackmerced.com%20?subject=Hackmerced%20Questions&body=Dear%20Hackmerced,"><img src={mail} width="200" height="200" /></a>
+            <a href="mailto:general@hackmerced.com%20?subject=Hackmerced%20Questions&body=Dear%20Hackmerced,"><img src={mail} width="200" height="200" alt="Email"/></a>
           </li>
           <li>
             <a href="https://www.facebook.com/hackmerced">Facebook</a>
