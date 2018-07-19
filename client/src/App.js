@@ -9,10 +9,7 @@ import {
 import Header from './components/header';
 import Footer from './components/footer';
 import Titlescreen from './layouts/titlescreen';
-<<<<<<< HEAD
 import Contactus from './layouts/contactus';
-=======
->>>>>>> 5f5db3521fd1b87e87b82435d0f52e4713005a9f
 import FAQ from './layouts/faq';
 
 
@@ -23,7 +20,6 @@ import './assets/css/basic.css';
 class App extends Component {
   render() {
     return (
-<<<<<<< HEAD
       <Router>
         <div className="App">
           <Header/>
@@ -34,15 +30,6 @@ class App extends Component {
           <Route exact path ='/faqs' component={FAQ}/>
         </div>
       </Router>
-=======
-      <div className="App">
-        <Header/>
-        <Titlescreen/>
-        <FAQ/>
-        <Footer/>
-        
-      </div>
->>>>>>> 5f5db3521fd1b87e87b82435d0f52e4713005a9f
     );
   }
 }

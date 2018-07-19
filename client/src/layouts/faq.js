@@ -15,13 +15,10 @@ class FAQ extends Component {
                         <p>You're still able to attend and compete! Work with a team or ask any one of our volunteers for help!</p>
                     </div>
                     <div className="Question">
-<<<<<<< HEAD
                     <h4>How do teams work?</h4>
                         <p>Teams can be up to 4 people and we highly encourage you to find one participate with!</p>
                     </div>
                     <div className="Question">
-=======
->>>>>>> 5f5db3521fd1b87e87b82435d0f52e4713005a9f
                     <h4>What are the prizes?</h4>
                         <p>We will annouonce them as soon as possible!</p>
                     </div>
@@ -33,14 +30,10 @@ class FAQ extends Component {
                     <h4>Where can I sleep on campus?</h4>
                         <p>Anywhere that's comfy in the designated area =)</p>
                     </div>
-<<<<<<< HEAD
                     <div className="Question">
                     <h4>Is there anything I should bring?</h4>
                         <p>Yourself and a good mindset to hack!</p>
                     </div>
-=======
-
->>>>>>> 5f5db3521fd1b87e87b82435d0f52e4713005a9f
                 </div>
             </faq>
         );
