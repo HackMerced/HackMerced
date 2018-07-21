@@ -21,14 +21,14 @@ const usersSchema = new mongoose.Schema({
         required: [true, 'User password required']
     },
     "phone": {
-	type: String,
+        type: String,
         required: [true, 'User phone number required']
     },
     "privileges": {
         type: [String],
         required: [true, "User privileges required"]
     }
-}, {discriminatorKey: 'type', collection: 'main', 'timestamps': {createdAt:'created_at', updatedAt:'updated_at'}});
+}, {discriminatorKey: 'type', collection: 'main', 'timestamps': {createdAt: 'created_at', updatedAt: 'updated_at'}});
 
 const Users = db.users.model('Users', usersSchema, 'main');
 
