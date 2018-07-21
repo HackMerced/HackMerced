@@ -3,8 +3,7 @@ const router = express.Router();
 const mongoDB = require('mongodb');
 const auth = require('./authentication');
 const models = require('../model/models');
-const resourcesDb = require('./db').resources;
-
+const {streamFile} = require('./fileStreaming');
 
 router.get('/', async (req, res) => {
     res.setHeader('Content-Type', 'application/json');
@@ -99,7 +98,7 @@ router.get('/users', async (req, res) => {
                 res.send(JSON.stringify({'error': 'Could not find email'}));
             } else if ('image' in req.query && user_data.photo) {
                 res.contentType('image/' + user_data.photo.split('.')[1]);
-                await getFiles(res, user_data.photo);
+                await streamFile(res, user_data.photo);
             } else {
                 res.send(JSON.stringify(user_data));
             }
@@ -111,15 +110,5 @@ router.get('/users', async (req, res) => {
         res.send(JSON.stringify({error: 'You are not admin go away'}));
     }
 });
-/**
- * takes in response and fileName and streams the file into response -> need not do res.Send in route :)
- * @param res
- * @param fileName
- * @returns {Promise<void>}
- */
-const getFiles = async (res, fileName) => {
-    const bucket = new mongoDB.GridFSBucket(await resourcesDb.db);
-    bucket.openDownloadStreamByName(fileName).pipe(res);
-};
 
 module.exports = router;
