@@ -1,0 +1,15 @@
+
+00:33:52.478 INFO  Got POST request 
+00:33:52.478 INFO  Checking event 
+00:33:52.478 INFO  Valid github pull request, but not master, dev, and/or merged 
+00:33:52.478 INFO  Event handled 
+Mon Jul 23 00:41:07 UTC 2018: Running hackmerced deployment script on branch: dev
+Mon Jul 23 00:41:07 UTC 2018: Acquiring lock file..
+Mon Jul 23 00:41:07 UTC 2018: Stopping pm2 hackmerced_dev process
+Mon Jul 23 00:41:07 UTC 2018: Clearing old repo files
+Mon Jul 23 00:41:07 UTC 2018: Creating new repo folder
+Mon Jul 23 00:41:08 UTC 2018: Cloning new repo to /opt/hackmerced_dev
+Mon Jul 23 00:41:19 UTC 2018: Installing node server dependencies
+Mon Jul 23 00:41:20 UTC 2018: Restarting pm2 hackmerced_dev processs
+Mon Jul 23 00:41:20 UTC 2018: Freeing lock file..
+Mon Jul 23 00:41:20 UTC 2018: Repo update complete
