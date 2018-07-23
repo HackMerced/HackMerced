@@ -27,7 +27,6 @@ const checkEvent = (req) => {
     const payload = req.body;
     if(payload.action == 'closed' && payload.pull_request.merged && (payload.pull_request.base.ref == 'master' || payload.pull_request.base.ref == 'dev')) {
         cloneAndRestartServer(payload.pull_request.base.ref);
-    } else {
     }
 };
 
@@ -35,12 +34,12 @@ app.use(bodyParser.json());
 
 app.post('/', (req, res) => {
     if (verifyGitHub(req)) {
-	checkEvent(req);
-	res.writeHead(200, { 'Content-Type': 'text/plain' });
+        checkEvent(req);
+        res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end('Ok');
     } else {
         res.redirect(301, '/');
-	res.end('Access denied');
+        res.end('Access denied');
     }
 });
 
