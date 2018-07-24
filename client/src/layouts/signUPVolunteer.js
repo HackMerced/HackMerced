@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-
-class Signup extends Component {
+class Volunteer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,8 +11,6 @@ class Signup extends Component {
             myAge: '',
             myGender: '',
             myShirt: '',
-            myDiet: '',
-            myAllergies: '',
 
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -31,7 +28,7 @@ class Signup extends Component {
     render() {
         return (
         <signup>
-            <h2>Hacker Sign-Up Form</h2>
+            <h2>Volunteer Sign-Up Form</h2>
             <form onSubmit={this.handleSubmit}>
             <label>
                 Name:
@@ -68,21 +65,6 @@ class Signup extends Component {
                 <input name="myShirt" type="text" onChange={this.handleInputChange} />
             </label>
             <br />
-            <label>
-                Dietary Restrictions:
-                <input name="myDiet" type="text" onChange={this.handleInputChange} />
-            </label>
-            <br />
-            <label>
-                Allergies?
-                <input name="myAllergies" type="text" onChange={this.handleInputChange} />
-            </label>
-            <br />
-            <label>
-                Show me yo Resume 
-                <input type="file" />
-            </label>
-            <br />
             <input type="submit" value = "Submit" />
             </form>
         </signup>
@@ -90,4 +72,4 @@ class Signup extends Component {
     }
 }
 
-export default Signup ;
+export default Volunteer ;

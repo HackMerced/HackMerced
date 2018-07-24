@@ -11,6 +11,7 @@ import Titlescreen from './layouts/titlescreen';
 import Contactus from './layouts/contactus';
 import FAQ from './layouts/faq';
 import Signup from './layouts/signUP';
+import Volunteer from './layouts/signUPVolunteer';
 
 
 
@@ -29,8 +30,10 @@ class App extends Component {
           <Route exact path ='/home' component={Titlescreen}/>
           <Route exact path ='/Contactus' component={Contactus}/>
           <Route exact path ='/register' component={Signup}/>
-          <Footer/>
           <Route exact path ='/faqs' component={FAQ}/>
+          <Route exact path ='/Volunteer' component={Volunteer} />
+          <Footer/>
+          
         </div>
       </Router>
     );
