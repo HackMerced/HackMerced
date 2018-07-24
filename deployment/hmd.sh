@@ -35,7 +35,7 @@ PROC="hackmerced_$BRANCH"
 REPO_LOC="/opt/$PROC"
 REPO_LOC_SERVER="$REPO_LOC/server/"
 REPO_LOC_CLIENT="$REPO_LOC/client/"
-HMD_LOCK="$REPO_LOC/$BRANCH.lock"
+HMD_LOCK="$HMD_LOC/$BRANCH.lock"
 
 # While lock is not held
 START_TIME=$(get_unix_timestamp)
@@ -55,7 +55,7 @@ touch $HMD_LOCK && log i "Acquiring lock file.."
 env HOME=$PM2_ENV pm2 stop $PROC && log i "Stopping pm2 $PROC process"
 
 # Remove old repo files
-rm -rf "$REPO_LOC/{*,.*}" && log i "Clearing old repo files"
+find "$REPO_LOC/" -name "*" -exec rm -rf "{}" \;
 
 # Clone new repo files
 git clone -b $BRANCH git@github.com:HackMerced/HackMercedf18.git $REPO_LOC && log i "Cloning new repo to $REPO_LOC"
