@@ -20,6 +20,9 @@ class Footer extends Component {
           <li>
             <Link to="/faqs">FAQs</Link>
           </li>
+          <li>
+            <Link to="/Volunteer">Volunteers</Link>
+          </li>
         </ul>
       </nav>
       </footer>
