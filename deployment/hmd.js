@@ -39,13 +39,13 @@ app.post('/', (req, res) => {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end('Ok');
     } else {
-        res.redirect(301, '/');
+        res.writeHead(301, { 'Content-Type': 'text/plain' });
         res.end('Access denied');
     }
 });
 
 app.all('*', (req, res) => {
-    res.redirect(301, '/');
+    res.writeHead(301, { 'Content-Type': 'text/plain' });
     res.end('Access denied');
 });
 
