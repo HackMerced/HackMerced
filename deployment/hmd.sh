@@ -28,6 +28,7 @@ if [[ ! $BRANCH ]]; then
 	log e "Branch not specified in env vars" && die
 fi
 
+# Logging
 log i "START -----------------------------------------------" 
 log i "Running hackmerced deployment script on branch: $BRANCH"
 
@@ -71,5 +72,6 @@ env HOME=$PM2_ENV pm2 start $PROC --update-env && log i "Restarting pm2 $PROC pr
 # Free lock file
 rm $HMD_LOCK && log i "Freeing lock file.."
 
+# Logging
 log i "Repo update complete"
 log i "END -----------------------------------------------
