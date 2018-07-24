@@ -18,8 +18,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
 app.use('/api', api);
-app.get('*', async (req, res) => {
+
+
+
+app.use(express.static(path.resolve(__dirname, '../client/build')));
+app.get('*', (req, res) => {
+
     console.log('index accessed');
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  
 });
 
