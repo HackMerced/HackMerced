@@ -57,14 +57,17 @@ touch $HMD_LOCK && log i "Acquiring lock file.."
 env HOME=$PM2_ENV pm2 stop $PROC && log i "Stopping pm2 $PROC process"
 
 # Remove old repo files
-find "$REPO_LOC/" -name "*" -exec rm -rf "{}" \;
+find "$REPO_LOC/" -name "*" -exec rm -rf "{}" \; && log i "Removing old repo files"
 
 # Clone new repo files
 git clone -b $BRANCH git@github.com:HackMerced/HackMercedf18.git $REPO_LOC && log i "Cloning new repo to $REPO_LOC"
 
 # Install node dependencies
 npm --prefix $REPO_LOC_SERVER install $REPO_LOC_SERVER && log i "Installing server node dependencies"
-npm --prefix $REPO_LOC_CLIENT run build $REPO_LOC_CLIENT && log i "Installing client node dependencies"
+npm --prefix $REPO_LOC_CLIENT install $REPO_LOC_CLIENT && log i "Installing client node dependencies"
+
+# Build react
+npm --prefix $REPO_LOC_CLIENT run build $REPO_LOC_CLIENT && log i "Running client react build"
 
 # Start pm2
 env HOME=$PM2_ENV pm2 start $PROC --update-env && log i "Restarting pm2 $PROC processs"
