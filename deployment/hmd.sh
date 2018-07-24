@@ -25,7 +25,7 @@ die() {
 
 # Check for branch name in argunment
 if [[ ! $BRANCH ]]; then
-	log i "Branch not specified in env vars" && die
+	log e "Branch not specified in env vars" && die
 fi
 
 log i "START -- Running hackmerced deployment script on branch: $BRANCH"
@@ -35,7 +35,7 @@ PROC="hackmerced_$BRANCH"
 REPO_LOC="/opt/$PROC"
 REPO_LOC_SERVER="$REPO_LOC/server/"
 REPO_LOC_CLIENT="$REPO_LOC/client/"
-HMD_LOCK="$REPO_LOC/hmd.lock"
+HMD_LOCK="$REPO_LOC/$BRANCH.lock"
 
 # While lock is not held
 START_TIME=$(get_unix_timestamp)
