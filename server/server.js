@@ -16,9 +16,9 @@ app.use((req, res, next) => {
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use('/api', api);
-app.use(express.static(path.resolve(__dirname, 'test_public')));
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 app.get('*', (req, res) => {
     console.log('index accessed');
-    res.sendFile(path.join(__dirname, 'test_public/test_index.html'));
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
