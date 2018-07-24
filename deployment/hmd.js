@@ -6,7 +6,7 @@ const log = require('simple-node-logger').createSimpleLogger(process.env.HMD_LOG
 
 const port = process.env.HMD_PORT || 9999;
 const app = express();
-const deploymentScript = process.env.HMD_LOC + process.env.HMD_SCRIPT;
+const deploymentScript = process.env.HMD_LOC + '/' +  process.env.HMD_SCRIPT;
 
 const cloneAndRestartServer = (branch) => {
     shell.env['BRANCH'] = branch;
