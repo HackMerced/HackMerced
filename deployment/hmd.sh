@@ -23,7 +23,7 @@ die() {
 	exit 0
 }
 
-# Check for branch name in argunment
+# Check for branch name in env
 if [[ ! $BRANCH ]]; then
 	log e "Branch not specified in env vars" && die
 fi
