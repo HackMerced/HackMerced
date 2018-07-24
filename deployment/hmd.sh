@@ -29,7 +29,7 @@ if [[ ! $BRANCH ]]; then
 fi
 
 # Logging
-log i "START -----------------------------------------------" 
+log i "START -----------------------------------------------------------" 
 log i "Running hackmerced deployment script on branch: $BRANCH"
 
 # Set up some vars
@@ -74,4 +74,4 @@ rm $HMD_LOCK && log i "Freeing lock file.."
 
 # Logging
 log i "Repo update complete"
-log i "END -----------------------------------------------
+log i "END -----------------------------------------------------------"
