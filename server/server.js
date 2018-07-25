@@ -1,24 +1,31 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
+
 
 const app = express();
-const port = process.env.port || process.env.dev_port || 3000;
+const port = process.env.port || 3000;
 
 const api = require('./api/routes');
 
-app.listen(port, () => console.log('server has started!'));
-
-app.use((req, res, next) => {
-    console.log('time: ', new Date());
-    next()
+app.listen(port, async () => {
+    console.log('server has started!')
 });
+app.use(express.static(path.resolve(__dirname, '../client/build')));
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(morgan('tiny'));
 app.use('/api', api);
+
+
+
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 app.get('*', (req, res) => {
+
     console.log('index accessed');
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  
 });
 
