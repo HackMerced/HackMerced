@@ -20,7 +20,7 @@ log() {
 }
 die() {
 	log e "Script failed"
-	exit 0
+	exit 1
 }
 
 # Check for branch name in env
