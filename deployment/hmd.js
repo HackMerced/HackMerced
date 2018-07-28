@@ -11,7 +11,7 @@ const deploymentScript = process.env.HMD_LOC + '/' +  process.env.HMD_SCRIPT;
 const cloneAndRestartServer = (branch) => {
     shell.env['BRANCH'] = branch;
     shell.exec(deploymentScript);
-}
+};
 
 const verifyGitHub = (req) => {
     if (!req.headers['user-agent'].includes('GitHub-Hookshot')) {
