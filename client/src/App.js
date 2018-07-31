@@ -4,7 +4,6 @@ import {
   Route
 } from 'react-router-dom';
 
-
 import Header from './components/header';
 import Footer from './components/footer';
 import Titlescreen from './layouts/titlescreen';
@@ -12,9 +11,6 @@ import Contactus from './layouts/contactus';
 import FAQ from './layouts/faq';
 import Signup from './layouts/signUP';
 import Volunteer from './layouts/signUPVolunteer';
-
-
-
 
 import './assets/css/default.css';
 import './assets/css/body.css';
@@ -24,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div>
           <Header/>
           <Route exact path ='/' component={Titlescreen}/>
           <Route exact path ='/home' component={Titlescreen}/>
