@@ -33,7 +33,6 @@ class App extends Component {
           <Route exact path ='/faqs' component={FAQ}/>
           <Route exact path ='/Volunteer' component={Volunteer} />
           <Footer/>
-          
         </div>
       </Router>
     );
