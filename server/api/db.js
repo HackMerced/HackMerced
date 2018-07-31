@@ -1,5 +1,6 @@
 const mongoDB = require('mongodb').MongoClient;
-const url = 'mongodb+srv://' + (process.env.db_username || 'username') + ':' + (process.env.db_password || 'password') + '@hackmerced-1za3e.mongodb.net';
+const {dbUser,dbPassword}= require('../secret/secrets');
+const url = 'mongodb+srv://' + dbUser + ':' + dbPassword + '@hackmerced-1za3e.mongodb.net';
 const connection = mongoDB.connect(url, {useNewUrlParser: true}).catch((e) => {
     console.log(e.message, "MONGODB");
 });
@@ -13,3 +14,4 @@ const resources = async () => {
 };
 module.exports.users = users;
 module.exports.resources = resources;
+

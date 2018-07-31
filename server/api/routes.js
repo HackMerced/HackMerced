@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const mongo = require('./db');
 const mongoDB = require('mongodb');
-
+const {secret} = require('../secret/secrets');
+const auth = require('../auth/auth_controller');
 
 router.get('/', (req, res) => {
     console.log('api accessed');
@@ -103,5 +104,30 @@ router.post('/users/judges', (req, res) => {
     console.log(req.body);
     res.send(req.body);
 });
+
+router.post('/register', async (req, res) =>{
+    req.body.user.password = auth.hashPassword(req.body.user.password);
+    const users = await mongo.users();
+    users.create({user : req.body.user},
+        (err, user) => {
+            if (err) return res.status(500).send("There was a problem registering the user.");
+            const token = auth.signJwt(req.body.user.email, secret);
+
+            res.status(200).send({ auth: true, token: token });
+        });
+});
+
+router.get('/me', (req,res) => {
+    const token = req.headers['x-access-token'];
+    if (!token){
+        return res.status(401).send({auth: false, message: 'No token provided'});
+    }
+
+    const verify = auth.verifyJwt(token, secret);
+    //add if statement function that checks if token is authenticated (change functions to await and async)
+    res.status(200).send(verify);
+
+});
+
 
 module.exports = router;
