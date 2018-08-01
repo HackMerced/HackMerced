@@ -4,17 +4,15 @@ import {
   Route
 } from 'react-router-dom';
 
-import Header from './components/header';
-import Footer from './components/footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Main from './layouts/main';
 import Contactus from './layouts/contactus';
 import FAQ from './layouts/faq';
 import Signup from './layouts/signUP';
 import Volunteer from './layouts/signUPVolunteer';
 
-import './assets/css/default.css';
-import './assets/css/body.css';
-import './assets/css/basic.css';
+import './assets/css/main.css';
 
 class App extends Component {
   render() {

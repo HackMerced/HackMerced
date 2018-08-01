@@ -7,7 +7,6 @@ import {
 class Footer extends Component {
   render() {
     return (
-      <footer>
       <nav className="menu2">
         <ul className="listfoot">
           <li>
@@ -25,7 +24,6 @@ class Footer extends Component {
           </li>
         </ul>
       </nav>
-      </footer>
     );
   }
 }
