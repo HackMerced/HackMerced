@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import "../assets/css/signUp.css";
+var FontAwesome = require('react-fontawesome');
 
 class Signup extends Component {
     constructor(props) {
@@ -28,63 +29,68 @@ class Signup extends Component {
         alert('Your application was submitted!');
         EventTarget.preventDefault();
     }
+
     render() {
         return (
         <signup>
             <h2>Hacker Sign-Up Form</h2>
-            <form onSubmit={this.handleSubmit}>
-            <label>
-                Name:
-                <input name="myName" type="text" onChange={this.handleInputChange} />
-            </label>
-            <br />
-            <label>
-                Email:
-                <input name="myEmail" type="text" onChange={this.handleInputChange} />
-            </label>
-            <br />
-            <label>
-                Phone Number:
-                <input name="myPhone" type="text" onChange={this.handleInputChange} />
-            </label>
-            <br />
-            <label>
-                School:
-                <input name="mySchool" type="text" onChange={this.handleInputChange} />
-            </label>
-            <br />
-            <label> 
-                Age:
-                <input name="myAge" type="number" onChange={this.handleInputChange} />
-            </label>
-            <br />
-            <label>
-                Gender:
-                <input name="myGender" type="text" onChange={this.handleInputChange} />
-            </label>
-            <br />
-            <label>
-                Shirt Size:
-                <input name="myShirt" type="text" onChange={this.handleInputChange} />
-            </label>
-            <br />
-            <label>
-                Dietary Restrictions:
-                <input name="myDiet" type="text" onChange={this.handleInputChange} />
-            </label>
-            <br />
-            <label>
-                Allergies?
-                <input name="myAllergies" type="text" onChange={this.handleInputChange} />
-            </label>
-            <br />
-            <label>
-                Show me yo Resume 
-                <input type="file" />
-            </label>
-            <br />
-            <input type="submit" value = "Submit" />
-            </form>
+                <div className = "columns is-centered">
+                    <div className = "column is-4-desktop">
+
+                            <form class = "box"  onSubmit={this.handleSubmit}>
+                                
+                                <div className = "field">
+                                    <label className = "label" >Name: </label>
+                                    <input  className = "inputh" name="myName" type="text" onChange={this.handleInputChange} />
+                                </div>
+
+                                <div className = "field">
+                                    <label className = "label">Email: </label>
+                                    <input className = "inputh" name="myEmail" type="text" onChange={this.handleInputChange} />
+                                </div>
+                               
+                                <div className = "field">
+                                    <label className = "label">Phone Number: </label>
+                                    <input className = "inputh" name="myPhone" type="text" onChange={this.handleInputChange} />
+                                </div>
+                                
+                                <div className = "field">
+                                    <label className = "label">School: </label>
+                                    <input className = "inputh" name="mySchool" type="text" onChange={this.handleInputChange} />
+                                </div>
+                                
+                                <div className = "field">
+                                    <label className = "label">Age: </label>
+                                    <input className = "inputh" name="myAge" type="number" onChange={this.handleInputChange} />
+                                </div>
+                                
+                                <div className = "field">
+                                    <label className = "label">Gender: </label>
+                                    <input className = "inputh" name="myGender" type="text" onChange={this.handleInputChange} />
+                                </div>
+
+                                
+                                    <label className = "label">Shirt Size: </label>
+                                    <input className = "inputh" name="myShirt" type="text" onChange={this.handleInputChange} />
+                             
+                                
+                                    <label className = "label">Dietary Restrictions: </label>
+                                    <input className = "inputh" name="myDiet" type="text" onChange={this.handleInputChange} />
+                              
+                                
+                                <label className = "label">Allergies </label>
+                                    <input className = "inputh" name="myAllergies" type="text" onChange={this.handleInputChange} />
+                               
+                                <label>
+                                    Show me yo Resume
+                                    <input type="file" />
+                                </label>
+                                <br />
+                                <input  className = "button is-success" type="submit" value="Submit" />
+                            </form>
+            </div>
+                </div>
+                    
         </signup>
         );
     }
