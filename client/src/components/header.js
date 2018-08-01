@@ -4,7 +4,12 @@ import { Columns } from 'react-bulma-components';
 
 var FontAwesome = require('react-fontawesome');
 
+
 class Header extends Component {
+  /*state = {
+    super = props;
+  }*/
+
   render() {
     return (
       <div className="navbar">
