@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import "../assets/css/team.css";
-import Header from "../components/header";
-import Footer from "../components/footer";
-import 'bulma/css/bulma.css';
-import 'font-awesome/css/font-awesome.min.css';
-var FontAwesome = require('react-fontawesome');
 
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+const FontAwesome = require('react-fontawesome');
 
 class aboutUS extends Component {
     render() {
