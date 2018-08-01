@@ -47,11 +47,10 @@ footer .listfoot a {
   text-decoration: none;
 }
 
-.App {
+#root {
   font-family: "Lato", sans-serif;
 }
-.App .screen1 {
-  background-image: url("../img/background.jpg");
+#root .screen1 {
   -webkit-background-size: cover;
   background-size: cover;
   display: table;
@@ -59,12 +58,11 @@ footer .listfoot a {
   height: 100vh;
   width: 100%;
 }
-.App .screen1 p {
+#root .screen1 p {
   text-align: center;
   color: #D0D3D4;
 }
-.App .screen2 {
-  background-image: url("../img/background2.jpg");
+#root .screen2 {
   -webkit-background-size: cover;
   background-size: cover;
   display: table;
@@ -72,12 +70,11 @@ footer .listfoot a {
   height: 105vh;
   width: 100%;
 }
-.App .screen2 p {
+#root .screen2 p {
   text-align: center;
   color: #D0D3D4;
 }
-.App .screen3 {
-  background-image: url("../img/background3.jpg");
+#root .screen3 {
   -webkit-background-size: cover;
   background-size: cover;
   display: table;
@@ -85,11 +82,11 @@ footer .listfoot a {
   height: 100vh;
   width: 100%;
 }
-.App .screen3 p {
+#root .screen3 p {
   text-align: center;
   color: #D0D3D4;
 }
-.App .contact_screen {
+#root .contact_screen {
   background-image: url("../img/contact.jpg");
   -webkit-background-size: cover;
   background-size: cover;
@@ -98,7 +95,7 @@ footer .listfoot a {
   height: 100vh;
   width: 100%;
 }
-.App .contact_screen h2 {
+#root .contact_screen h2 {
   text-align: center;
   padding-top: 15%;
   font-size: 50px;
@@ -106,20 +103,20 @@ footer .listfoot a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.App .contact_screen ul li {
+#root .contact_screen ul li {
   margin-right: 40vh;
   list-style-type: none;
   display: inline-block;
 }
-.App .contact_screen .listcontact {
+#root .contact_screen .listcontact {
   text-align: center;
   font-size: 10vh;
 }
-.App .contact_screen .listcontact a {
+#root .contact_screen .listcontact a {
   color: #D0D3D4;
   text-decoration: none;
 }
-.App h1 {
+#root h1 {
   text-align: center;
   padding-top: 15%;
   font-size: 100px;
@@ -127,15 +124,15 @@ footer .listfoot a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.App p {
+#root p {
   color: #D0D3D4;
 }
-.App .subtitle {
+#root .subtitle {
   padding-top: 0%;
   text-align: center;
   color: #D0D3D4;
 }
-.App h2 {
+#root h2 {
   text-align: center;
   padding-top: 15%;
   font-size: 50px;
