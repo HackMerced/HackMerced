@@ -1,31 +1,25 @@
 import React, { Component } from 'react';
-
-import {
-  Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Columns } from 'react-bulma-components';
 
 var FontAwesome = require('react-fontawesome');
 
 class Header extends Component {
   render() {
     return (
-      <header>
-          <nav className="menu">
-            <ul className="list">
-              <li>
-                <Link to="/home"> <FontAwesome  className = "fa-home"/>Home</Link>
-              </li>
-              <li>
-                <Link to="/register"><FontAwesome  className = "fa-pencil"/>Register</Link>
-              </li>
-              <li>
-                <Link to="/timeline"><FontAwesome  className = "fa-clock-o"/>Timeline</Link>
-              </li>
-            </ul>
-          </nav>
-          
-      </header>
-    
+      <div className="navbar">
+        <Columns className="navbar-container">
+          <Columns.Column className="navbar-contents">
+            <Link to="/" className="Home"><FontAwesome className="fa-home"/>Home</Link>
+          </Columns.Column>
+          <Columns.Column className="navbar-contents">
+            <Link to="/register" className="Register"><FontAwesome className="fa-pencil"/>Register</Link>
+          </Columns.Column>
+          <Columns.Column className="navbar-contents">
+            <Link to="/timeline" className="Timeline"><FontAwesome className="fa-clock-o"/>Timeline</Link>
+          </Columns.Column>
+        </Columns>
+      </div>
     );
   }
 }
