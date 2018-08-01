@@ -16,7 +16,7 @@ import aboutUS from './layouts/aboutUS';
 import './assets/css/main.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bulma/css/bulma.css';
-import "../assets/css/team.css";
+import "./assets/css/team.css";
 
 class App extends Component {
   render() {
