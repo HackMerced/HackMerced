@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import "../assets/css/team.css";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import 'bulma/css/bulma.css'
+
+const FontAwesome = require('react-fontawesome');
 
 class aboutUS extends Component {
     render() {
@@ -10,7 +11,7 @@ class aboutUS extends Component {
           <div className = "aboutUS">
             <Header/>
             
-            
+            <i className = "fas fa-home"></i>
             <div class = "columns">
                 <div class = "column is-2">
                     
@@ -19,7 +20,7 @@ class aboutUS extends Component {
                     <h1 class = "title">About Us</h1>  
                     <hr/>               
                     <div class = "box">
-                           ANY CONTENT WILL GO HERE
+                           ANY CONTENT WIL GO HERE
                            <br/>
                            <br/>
                            <br/>
@@ -28,6 +29,16 @@ class aboutUS extends Component {
                            <br/>
                            <br/>
                            <br/>
+                            <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                        
+
                            <br/>
                            <br/>
                     </div>  
