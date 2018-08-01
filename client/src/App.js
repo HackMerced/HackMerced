@@ -4,17 +4,15 @@ import {
   Route
 } from 'react-router-dom';
 
-import Header from './components/header';
-import Footer from './components/footer';
-import Titlescreen from './layouts/titlescreen';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Main from './layouts/main';
 import Contactus from './layouts/contactus';
 import FAQ from './layouts/faq';
 import Signup from './layouts/signUP';
 import Volunteer from './layouts/signUPVolunteer';
 
-import './assets/css/default.css';
-import './assets/css/body.css';
-import './assets/css/basic.css';
+import './assets/css/main.css';
 
 class App extends Component {
   render() {
@@ -22,12 +20,11 @@ class App extends Component {
       <Router>
         <div>
           <Header/>
-          <Route exact path ='/' component={Titlescreen}/>
-          <Route exact path ='/home' component={Titlescreen}/>
-          <Route exact path ='/Contactus' component={Contactus}/>
-          <Route exact path ='/register' component={Signup}/>
-          <Route exact path ='/faqs' component={FAQ}/>
-          <Route exact path ='/Volunteer' component={Volunteer} />
+          <Route exact path ='/' component={Main}/>
+          <Route path ='/Contactus' component={Contactus}/>
+          <Route path ='/register' component={Signup}/>
+          <Route path ='/faqs' component={FAQ}/>
+          <Route path ='/Volunteer' component={Volunteer} />
           <Footer/>
         </div>
       </Router>
