@@ -4,6 +4,12 @@ $white: #D0D3D4;
 $gray: #808B96;
 $green: #008000;
 $yellow:#CA6F1E;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
 header {
   .menu {
     margin-top: -20px;
@@ -55,10 +61,12 @@ footer {
   }
 }
 
-.App {
+#root {
   font-family: 'Lato', sans-serif;
+  img.screen1 {
+    width: 100%;
+  }
   .screen1 {
-    background-image: url("../img/background.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     display: table;
@@ -71,7 +79,6 @@ footer {
     }
   }
   .screen2 {
-    background-image: url("../img/background2.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     display: table;
@@ -84,7 +91,6 @@ footer {
     }
   }
   .screen3 {
-    background-image: url("../img/background3.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     display: table;
