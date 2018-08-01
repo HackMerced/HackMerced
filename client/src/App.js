@@ -7,11 +7,11 @@ import {
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Main from './layouts/main';
-import Contactus from './layouts/contactus';
-import FAQ from './layouts/faq';
-import Signup from './layouts/signUP';
-import Volunteer from './layouts/signUPVolunteer';
-import aboutUS from './layouts/aboutUS';
+import Contactus from './components/contactus';
+import FAQ from './components/faq';
+import Signup from './components/signUP';
+import Volunteer from './components/signUPVolunteer';
+import aboutUS from './components/aboutUS';
 
 import './assets/css/main.css';
 import 'bulma/css/bulma.css';
