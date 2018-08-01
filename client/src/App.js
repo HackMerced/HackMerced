@@ -19,6 +19,7 @@ import Volunteer from './layouts/signUPVolunteer';
 import './assets/css/default.css';
 import './assets/css/body.css';
 import './assets/css/basic.css';
+import aboutUS from './layouts/aboutUS';
 
 class App extends Component {
   render() {
@@ -32,6 +33,7 @@ class App extends Component {
           <Route exact path ='/register' component={Signup}/>
           <Route exact path ='/faqs' component={FAQ}/>
           <Route exact path ='/Volunteer' component={Volunteer} />
+          <Route exact path ='/aboutus' component={aboutUS} />
           <Footer/>
         </div>
       </Router>

@@ -4,6 +4,8 @@ import {
   Link
 } from 'react-router-dom';
 
+var FontAwesome = require('react-fontawesome');
+
 class Footer extends Component {
   render() {
     return (
@@ -11,17 +13,17 @@ class Footer extends Component {
       <nav className="menu2">
         <ul className="listfoot">
           <li>
-            <Link to="/contactus">Contact Us</Link>
+            <Link to="/contactus"><FontAwesome  className = "fa-mail-forward"/>Contact Us</Link>
 
           </li>
           <li>
-            <Link to="/aboutus">About Us</Link>
+            <Link to="/aboutus"><FontAwesome  className = "fa-group"/>About Us</Link>
           </li>
           <li>
-            <Link to="/faqs">FAQs</Link>
+            <Link to="/faqs"><FontAwesome  className = "fa-question"/>FAQs</Link>
           </li>
           <li>
-            <Link to="/Volunteer">Volunteers</Link>
+            <Link to="/Volunteer"><FontAwesome  className = "fa-hand-stop-o"/>Volunteers</Link>
           </li>
         </ul>
       </nav>
