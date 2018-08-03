@@ -1,6 +1,3 @@
-@import 'bulma/bulma';
-@import 'bulma-extensions/extensions';
-
 // 1. Import the initial variables
 @import "bulma/sass/utilities/initial-variables";
 @import "bulma/sass/utilities/functions";
@@ -16,4 +13,4 @@ $addColors: (
 );
 $colors: map-merge($colors, $addColors);
 @import 'bulma/bulma';
-@import 'bulma-extensions/extensions';
+//@import '~bulma-extensions/dist/extensions.min.css';
