@@ -9,7 +9,15 @@ const styles = {
   fontFamily: 'sans-serif',
   textAlign: 'center',
 };
-const insideStyles = {background: 'rgba(0,0,0,0)', fontSize: '4rem', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
+const insideStyles = {
+  background: 'rgba(0,0,0,0)', 
+  fontSize: '4rem', 
+  padding: 20, 
+  position: 'absolute', 
+  top: '50%', 
+  left: '50%', 
+  transform: 'translate(-50%,-50%)'
+};
 
 const TitleScreen = () => (
   <div style={styles}>
