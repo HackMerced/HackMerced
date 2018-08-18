@@ -6,23 +6,26 @@ var FontAwesome = require('react-fontawesome');
 class Footer extends Component {
   render() {
     return (
-      <nav className="menu2">
-        <ul className="listfoot">
-          <li>
-            <Link to="/contactus"><FontAwesome  className = "fa-mail-forward"/>Contact Us</Link>
 
-          </li>
-          <li>
-            <Link to="/aboutus"><FontAwesome  className = "fa-group"/>About Us</Link>
-          </li>
-          <li>
-            <Link to="/faqs"><FontAwesome  className = "fa-question"/>FAQs</Link>
-          </li>
-          <li>
-            <Link to="/Volunteer"><FontAwesome  className = "fa-hand-stop-o"/>Volunteers</Link>
-          </li>
-        </ul>
-      </nav>
+
+          <nav className="navbar is-primary is-bold">
+            <div className = "navbar-end">
+              <div className = "navbar-item">
+                <Link id = "underline" to="/contactus">Contact Us</Link>
+              </div>
+              <div className = "navbar-item">
+                <Link id = "underline" to="/aboutus">About Us</Link>
+              </div>
+
+              <div className = "navbar-item">
+                <Link id = "underline" to="/faqs">FAQs</Link>
+              </div>
+
+              <div className = "navbar-item">
+                <Link id = "underline" to="/Volunteer">Volunteers</Link>
+              </div>
+            </div>
+          </nav>
     );
   }
 }
