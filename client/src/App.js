@@ -16,6 +16,8 @@ import aboutUS from './components/aboutUS';
 import './assets/css/main.css';
 import 'bulma/css/bulma.css';
 import "./assets/css/team.css";
+import "./assets/css/underlineLink.css";
+
 
 class App extends Component {
   render() {
