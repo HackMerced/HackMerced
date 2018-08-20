@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import background1 from '../assets/img/background.jpg';
 import background2 from '../assets/img/background2.jpg';
 import background3 from '../assets/img/background3.jpg';
+import { Link } from 'react-router-dom';
 
 const styles = {
   fontFamily: 'sans-serif',
@@ -33,7 +34,7 @@ const TitleScreen = () => (
         <div style={insideStyles}>HackMerced |\/</div>
         <center>
           <div style = {buttons} className = "buttons">
-            <button className = "button is-success is-large">APPLY</button>
+            <button className = "button is-success is-large"><Link to="/register">APPLY</Link></button>
             <button className = "button is-warning is-large">VOLUNTEER</button>
           </div>
 
