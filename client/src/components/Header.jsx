@@ -6,24 +6,35 @@ import background1 from '../assets/img/background.jpg';
 var FontAwesome = require('react-fontawesome');
 
 
+
 class Header extends Component {
+
   render() {
     return (
+      <div className = "position">
       <section className="hero is-primary is-bold">
         <div className = "hero-head">
           <nav className="navbar">
             <div className = "navbar-end">
               <div className = "navbar-item">
-                <Link id = "underline"  to="/" className="Home">Home</Link>
+                <FontAwesome className="fa-home fas fa-2x"/><Link id = "underline" style = {this.styles} to="/" className="Home">Home</Link>
               </div>
 
               <div className = "navbar-item">
-                <Link id = "underline"  to="/register" className="Register">Register</Link>
+                <FontAwesome className="fa-user fas fa-2x"/><Link id = "underline" style = {this.styles} to="/logIn" className="Home">Log In</Link>
+              </div>
+
+              <div className = "navbar-item">
+                <FontAwesome className="fa-group fas fa-2x"/><Link id = "underline" to="/aboutus">About Us</Link>
+              </div>
+
+              <div className = "navbar-item">
+                <FontAwesome className="fa-pencil fas fa-2x"/> <Link id = "underline" style = {this.styles} to="/register" className="Register">Register</Link>
               </div>
 
 
               <div className = "navbar-item">
-                <Link id = "underline"  to="/timeline" className="Timeline">Timeline</Link>
+                <FontAwesome className="fa-clock-o fas fa-2x"/> <Link id = "underline" style = {this.styles} to="/timeline" className="Timeline">Timeline</Link>
               </div>
             </div>
           
@@ -31,6 +42,7 @@ class Header extends Component {
           </nav>
         </div>
     </section>
+    </div>
     );
   }
 }

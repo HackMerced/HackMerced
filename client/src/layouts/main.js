@@ -33,8 +33,8 @@ const TitleScreen = () => (
         <div style={insideStyles}>HackMerced |\/</div>
         <center>
           <div style = {buttons} className = "buttons">
-            <button className = "button is-success">HELLO</button>
-            <button className = "button is-success">HELLO</button>
+            <button className = "button is-success is-large">APPLY</button>
+            <button className = "button is-warning is-large">VOLUNTEER</button>
           </div>
 
         </center>
