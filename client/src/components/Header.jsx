@@ -28,9 +28,6 @@ class Header extends Component {
                 <FontAwesome className="fa-group fas fa-2x"/><Link id = "underline" to="/aboutus">About Us</Link>
               </div>
 
-              <div className = "navbar-item">
-                <FontAwesome className="fa-pencil fas fa-2x"/> <Link id = "underline" style = {this.styles} to="/register" className="Register">Register</Link>
-              </div>
 
 
               <div className = "navbar-item">
