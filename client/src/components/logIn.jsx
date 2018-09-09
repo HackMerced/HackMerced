@@ -30,7 +30,7 @@ class logIn extends Component {
                             <div className = "column is-4">
                                 <form className = "box" onSubmit={this.handleSubmit}>
                                     <div className = "field has-text-centered">
-                                        <img src = {logo} style ={{height: 200, width: 200}}/>
+                                        <img src = {logo} alt ="" style ={{height: 200, width: 200}}/>
                                         
                                     </div>
 
