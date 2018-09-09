@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import "../assets/css/aboutUS.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import 'bulma/css/bulma.css'
 
 class team extends Component{
     render(){
         return(
             <div className = "team">
-                <Header/>
                 <div class = "columns">
                 <div class = "column is-2">
                     
@@ -36,9 +33,6 @@ class team extends Component{
       
             </div>
     
-      
-
-                <Footer/>
              </div>
 
         );

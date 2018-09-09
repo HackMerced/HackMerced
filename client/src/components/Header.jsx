@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Columns } from 'react-bulma-components';
+//import { Columns } from 'react-bulma-components';
 
 var FontAwesome = require('react-fontawesome');
 class Header extends Component {
