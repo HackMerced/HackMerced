@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Columns } from 'react-bulma-components';
-import background1 from '../assets/img/background.jpg';
 
 var FontAwesome = require('react-fontawesome');
-
-
-
 class Header extends Component {
 
   render() {
@@ -27,8 +23,6 @@ class Header extends Component {
               <div className = "navbar-item">
                 <FontAwesome className="fa-group fas fa-2x"/><Link id = "underline" to="/aboutus">About Us</Link>
               </div>
-
-
 
               <div className = "navbar-item">
                 <FontAwesome className="fa-clock-o fas fa-2x"/> <Link id = "underline" style = {this.styles} to="/timeline" className="Timeline">Timeline</Link>

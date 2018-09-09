@@ -20,7 +20,7 @@ class logIn extends Component {
                                     <div className = "field">
                                         <label>Email</label>
                                             <div className = "control has-icons-left">
-                                                <input className = "input" type = "email" placeholder = "Enter Email"/>
+                                                <input name = "myemail" className = "input" type = "email" placeholder = "Enter Email"/>
                                                     <span className = "icon is-small is-left">
                                                         <FontAwesome className = "fa-envelope"/>
                                                     </span>
@@ -30,7 +30,7 @@ class logIn extends Component {
                                     <div className = "field">
                                         <label>Password</label>
                                             <div className = "control has-icons-left">
-                                                <input className = "input" type = "password" placeholder = "Enter Password"/>
+                                                <input name = "mypassword" className = "input" type = "password" placeholder = "Enter Password"/>
                                                     <span className = "icon is-small is-left">
                                                         <FontAwesome className = "fa-lock"/>
                                                     </span>
