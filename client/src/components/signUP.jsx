@@ -34,7 +34,7 @@ class Signup extends Component {
     render() {
         return (
         <signup>
-            <h2>Hacker Sign-Up Form</h2>
+            <center><h2>Hacker Sign-Up Form</h2></center>
                 <div className = "columns is-centered">
                     <div className = "column is-4-desktop">
 
