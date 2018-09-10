@@ -12,15 +12,10 @@ import FAQ from './components/faq';
 import Signup from './components/signUP';
 import Volunteer from './components/signUPVolunteer';
 import aboutUS from './components/aboutUS';
-import logIn from './components/logIn';
 
 import './assets/css/main.css';
 import 'bulma/css/bulma.css';
 import "./assets/css/team.css";
-import "./assets/css/underlineLink.css";
-
-import "font-awesome/css/font-awesome.css";
-
 
 class App extends Component {
   render() {
@@ -34,7 +29,6 @@ class App extends Component {
           <Route path ='/faqs' component={FAQ}/>
           <Route path ='/Volunteer' component={Volunteer} />
           <Route path ='/aboutus' component={aboutUS} />
-          <Route path = "/login" component = {logIn}/>
           <Footer/>
         </div>
       </Router>
