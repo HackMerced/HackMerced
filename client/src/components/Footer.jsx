@@ -2,27 +2,29 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 var FontAwesome = require('react-fontawesome');
-
 class Footer extends Component {
   render() {
     return (
-      <nav className="menu2">
-        <ul className="listfoot">
-          <li>
-            <Link to="/contactus"><FontAwesome  className = "fa-mail-forward"/>Contact Us</Link>
 
-          </li>
-          <li>
-            <Link to="/aboutus"><FontAwesome  className = "fa-group"/>About Us</Link>
-          </li>
-          <li>
-            <Link to="/faqs"><FontAwesome  className = "fa-question"/>FAQs</Link>
-          </li>
-          <li>
-            <Link to="/Volunteer"><FontAwesome  className = "fa-hand-stop-o"/>Volunteers</Link>
-          </li>
-        </ul>
-      </nav>
+<section className="hero is-primary is-bold">
+        <div className = "hero-head">
+          <nav className="navbar is-bold">
+            <div className = "navbar-end">
+              <div className = "navbar-item">
+              <FontAwesome className="fa-mail-forward fas fa-2x"/><Link id = "underline" to="/contactus">Contact Us</Link>
+              </div>
+
+              <div className = "navbar-item">
+              <FontAwesome className="fa-question fas fa-2x"/><Link id = "underline" to="/faqs">FAQs</Link>
+              </div>
+
+              <div className = "navbar-item">
+              <FontAwesome className="fa-hand-stop-o fas fa-2x"/><Link id = "underline" to="/Volunteer">Volunteers</Link>
+              </div>
+            </div>
+          </nav>
+    </div>
+  </section>
     );
   }
 }
