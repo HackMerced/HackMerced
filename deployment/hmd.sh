@@ -63,11 +63,11 @@ find "$REPO_LOC/" -name "*" -exec rm -rf "{}" \; && log i "Removing old repo fil
 git clone -b $BRANCH git@github.com:HackMerced/HackMercedf18.git $REPO_LOC && log i "Cloning new repo to $REPO_LOC"
 
 # Install node dependencies
-yarn --cwd $REPO_LOC_SERVER install $REPO_LOC_SERVER && log i "Installing server node dependencies"
-yarn --cwd $REPO_LOC_CLIENT install $REPO_LOC_CLIENT && log i "Installing client node dependencies"
+yarn --cwd $REPO_LOC_SERVER install && log i "Installing server node dependencies"
+yarn --cwd $REPO_LOC_CLIENT install && log i "Installing client node dependencies"
 
 # Build react
-yarn --cwd $REPO_LOC_CLIENT build $REPO_LOC_CLIENT && log i "Running client react build"
+yarn --cwd $REPO_LOC_CLIENT build && log i "Running client react build"
 
 # Start pm2
 env HOME=$PM2_ENV pm2 start $PROC --update-env && log i "Restarting pm2 $PROC processs"
