@@ -4,15 +4,15 @@ import {
   Route
 } from 'react-router-dom';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Main from './layouts/main';
-import Contactus from './components/contactus';
-import FAQ from './components/faq';
-import Signup from './components/signUP';
-import Volunteer from './components/signUPVolunteer';
-import aboutUS from './components/aboutUS';
-import logIn from './components/logIn';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import Main from './main';
+import ContactUs from './Components/ContactUs';
+import Faqs from './Components/Faqs';
+import Hacker from './Components/SignUpHacker';
+import Volunteer from './Components/SignUpVolunteer';
+import AboutUs from './Components/AboutUs';
+import LogIn from './Components/LogIn';
 
 import './assets/css/main.css';
 import 'bulma/css/bulma.css';
@@ -29,12 +29,12 @@ class App extends Component {
         <div>
           <Header/>
           <Route exact path ='/' component={Main}/>
-          <Route path ='/Contactus' component={Contactus}/>
-          <Route path ='/register' component={Signup}/>
-          <Route path ='/faqs' component={FAQ}/>
+          <Route path ='/Contactus' component={ContactUs}/>
+          <Route path ='/register' component={Hacker}/>
+          <Route path ='/faqs' component={Faqs}/>
           <Route path ='/Volunteer' component={Volunteer} />
-          <Route path ='/aboutus' component={aboutUS} />
-          <Route path = "/login" component = {logIn}/>
+          <Route path ='/aboutus' component={AboutUs} />
+          <Route path = "/login" component = {LogIn}/>
           <Footer/>
         </div>
       </Router>

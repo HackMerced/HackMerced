@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import "../assets/css/aboutUS.css";
-import 'bulma/css/bulma.css'
+// import 'bulma/css/bulma.css'
 
-class team extends Component{
+class Team extends Component{
     render(){
         return(
             <div className = "team">
                 <div class = "columns">
                 <div class = "column is-2">
-                    
+
                 </div>
                 <div class = "column is-8">
                     <h1 class = "title">Meet The Team </h1>
-                    <hr/>                 
+                    <hr/>
                     <div class = "box">
                            ANY CONTENT WILL GO HERE
                            <br/>
@@ -25,14 +25,14 @@ class team extends Component{
                            <br/>
                            <br/>
                            <br/>
-                    </div>  
+                    </div>
                 </div>
                 <div class = "column is-2">
-    
+
                 </div>
-      
+
             </div>
-    
+
              </div>
 
         );
@@ -41,4 +41,4 @@ class team extends Component{
 
 }
 
-export default team;
+export default Team;
