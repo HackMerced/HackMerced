@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "../assets/css/signUp.css";
 
-class Volunteer extends Component {
+class SignUpVolunteer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -47,7 +47,7 @@ class Volunteer extends Component {
                         </div>
 
                         <div className = "field">
-                            <label className = "label">Phone Number: </label> 
+                            <label className = "label">Phone Number: </label>
                             <input className = "input" name="myPhone" type="text" onChange={this.handleInputChange} />
                         </div>
 
@@ -55,11 +55,11 @@ class Volunteer extends Component {
                             <label className = "label">School:</label>
                             <input className = "input" name="mySchool" type="text" onChange={this.handleInputChange} />
                         </div>
-             
+
                         <div className = "columns">
                             <div className = "column -6">
                                 <div className = "field">
-                                    <label className = "label">Age:</label> 
+                                    <label className = "label">Age:</label>
                                     <input className = "input" name="myAge" type="number" onChange={this.handleInputChange} />
                                 </div>
                             </div>
@@ -85,4 +85,4 @@ class Volunteer extends Component {
     }
 }
 
-export default Volunteer ;
+export default SignUpVolunteer ;

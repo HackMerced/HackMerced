@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from "../assets/img/logo.png";
 var FontAwesome = require('react-fontawesome');
 
-class logIn extends Component {
+class LogIn extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,8 +21,8 @@ class logIn extends Component {
         alert('LOGGED IN!!!');
         EventTarget.preventDefault();
     }
-    render() { 
-        return ( 
+    render() {
+        return (
             <section className = "hero is-primary is-fullheight">
                 <div className = "hero-body">
                     <div className = "container">
@@ -31,7 +31,7 @@ class logIn extends Component {
                                 <form className = "box" onSubmit={this.handleSubmit}>
                                     <div className = "field has-text-centered">
                                         <img src = {logo} alt ="" style ={{height: 200, width: 200}}/>
-                                        
+
                                     </div>
 
                                     <div className = "field">
@@ -58,10 +58,10 @@ class logIn extends Component {
                                         <button className = "button is-info is-outlined" type="submit" value = "Submit">
                                             Login
                                         </button>
-                                    
+
                                     </div>
-                                
-                                </form> 
+
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -69,9 +69,9 @@ class logIn extends Component {
 
 
             </section>
-    
+
          );
     }
 }
- 
-export default logIn;
+
+export default LogIn;
