@@ -4,15 +4,15 @@ import {
   Route
 } from 'react-router-dom';
 
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Header from './Components/Design/Header';
+import Footer from './Components/Design/Footer';
 import Main from './main';
-import ContactUs from './Components/ContactUs';
-import Faqs from './Components/Faqs';
-import Hacker from './Components/SignUpHacker';
-import Volunteer from './Components/SignUpVolunteer';
-import AboutUs from './Components/AboutUs';
-import LogIn from './Components/LogIn';
+import ContactUs from './Components/Design/ContactUs';
+import Faqs from './Components/Design/Faqs';
+import Hacker from './Components/Design/SignUpHacker';
+import Volunteer from './Components/Design/SignUpVolunteer';
+import AboutUs from './Components/Design/AboutUs';
+import LogIn from './Components/Design/LogIn';
 
 import './assets/css/main.css';
 import 'bulma/css/bulma.css';
