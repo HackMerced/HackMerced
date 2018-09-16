@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-//const FontAwesome = require('react-fontawesome');
+// const FontAwesome = require('react-fontawesome');
 
 class AboutUs extends Component {
     render() {

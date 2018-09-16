@@ -54,7 +54,7 @@ const TitleScreen = () => (
     <Parallax bgImage={background1}>
       <div style={{height: 600}}>
         <div style={insideStyles}>HackMerced |\/</div>
-        <div style={dashboard}>
+        <div className="dashboard" style={dashboard}>
           <Dashboard />
         </div>
         <center>

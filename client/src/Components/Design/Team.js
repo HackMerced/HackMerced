@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "../assets/css/aboutUS.css";
+import "../../assets/css/aboutUS.css";
 // import 'bulma/css/bulma.css'
 
 class Team extends Component{
