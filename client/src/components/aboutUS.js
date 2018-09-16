@@ -8,14 +8,14 @@ class aboutUS extends Component {
           <div className = "aboutUS">
             
             <i className = "fas fa-home"></i>
-            <div class = "columns">
-                <div class = "column is-2">
+            <div className = "columns">
+                <div className = "column is-2">
                     
                 </div>
-                <div class = "column is-8">
-                    <h1 class = "title">About Us</h1>  
+                <div className = "column is-8">
+                    <h1 className = "title">About Us</h1>  
                     <hr/>               
-                    <div class = "box">
+                    <div className = "box">
                            ANY CONTENT WIL GO HERE
                            <br/>
                            <br/>
@@ -39,7 +39,7 @@ class aboutUS extends Component {
                            <br/>
                     </div>  
                 </div>
-                <div class = "column is-2">
+                <div className = "column is-2">
     
                 </div>
       

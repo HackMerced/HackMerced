@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-var FontAwesome = require('react-fontawesome');
+//IMPORT OF REACT COMPONENT FONTAWESOME
+import {library} from "@fortawesome/fontawesome-svg-core";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faEnvelope, faQuestion, faStop} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faEnvelope, faQuestion, faStop);
+
 class Footer extends Component {
   render() {
     return (
@@ -11,15 +17,15 @@ class Footer extends Component {
           <nav className="navbar is-bold">
             <div className = "navbar-end">
               <div className = "navbar-item">
-              <FontAwesome className="fa-mail-forward fas fa-2x"/><Link id = "underline" to="/contactus">Contact Us</Link>
+              <FontAwesomeIcon icon = "envelope" size = "2x"/><Link id = "underline" to="/contactus">Contact Us</Link>
               </div>
 
               <div className = "navbar-item">
-              <FontAwesome className="fa-question fas fa-2x"/><Link id = "underline" to="/faqs">FAQs</Link>
+              <FontAwesomeIcon icon = "question" size = "2x"/><Link id = "underline" to="/faqs">FAQs</Link>
               </div>
 
               <div className = "navbar-item">
-              <FontAwesome className="fa-hand-stop-o fas fa-2x"/><Link id = "underline" to="/Volunteer">Volunteers</Link>
+              <FontAwesomeIcon icon = "stop" size = "2x"/><Link id = "underline" to="/Volunteer">Volunteers</Link>
               </div>
             </div>
           </nav>
