@@ -14,7 +14,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       #- image: circleci/mongo: 4.0
 
-    working_directory: ~/HackMercedf18
+    working_directory: ~/HackMercedf18/client
 
     steps:
       - checkout
