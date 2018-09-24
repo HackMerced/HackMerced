@@ -8,7 +8,7 @@ let mockSize = process.env.MOCK_SIZE || 50;
 let numOfAttendees = 10;
 
 if(dropCollections) {
-    console.log('Dropping database.. ' + process.env.DROP_COLLECTIONS); 
+    console.info('Dropping database \'main\'..'); 
     db.main.dropDatabase();
 }
 
