@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 //IMPORT OF REACT COMPONENT FONTAWESOME
@@ -8,8 +8,7 @@ import {faEnvelope, faQuestion, faStop} from "@fortawesome/free-solid-svg-icons"
 
 library.add(faEnvelope, faQuestion, faStop);
 
-class Footer extends Component {
-  render() {
+const Footer = () => {
     return (
 
 <section className="hero is-primary is-bold">
@@ -32,7 +31,6 @@ class Footer extends Component {
     </div>
   </section>
     );
-  }
 }
 
 export default Footer ;
