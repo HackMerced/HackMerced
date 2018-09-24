@@ -14,7 +14,6 @@ import Volunteer from './components/signUPVolunteer';
 import aboutUS from './components/aboutUS';
 
 import './assets/css/main.css';
-import 'bulma/css/bulma.css';
 import "./assets/css/team.css";
 
 class App extends Component {
