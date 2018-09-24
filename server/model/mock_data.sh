@@ -31,4 +31,4 @@ if [[ $CUSTOM_MOCK_SIZE =~ ^([yY](es|ES){0,2})$ ]]; then
 fi
 
 # Start mock_data node script
-node ./model/mock_data.js
+node --no-deprecation ./model/mock_data.js
