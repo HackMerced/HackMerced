@@ -240,7 +240,10 @@ const attendeesSchema = new mongoose.Schema({
     },
     "qr": {
         type: String,
-        index: {unique: true},
+        index: {
+            unique: true,
+            sparse: true
+        },
     },
     "status": {
         type: String,
