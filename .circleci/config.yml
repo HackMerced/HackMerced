@@ -1,7 +1,7 @@
 version: 2 # use CircleCI 2.0
 jobs: # a collection of steps
   build: # runs not using Workflows must have a `build` job as entry point
-    working_directory: ~/client # directory where steps will run
+    working_directory: ~/HackMercedf18/client # directory where steps will run
     docker: # run the steps with Docker
       - image: circleci/node:10.10 # ...with this image as the primary container; this is where all `steps` will run
       - image: mongo:4.0 # and this image as the secondary service container
