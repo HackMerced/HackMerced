@@ -1,36 +1,36 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
-.navbar { 
-    position: relative;
-    z-index: 1000001;
-    background-color: black;
-    text-align: right;
-    top: 0;
-    left: 0;
+.navbar {
+  position: relative;
+  z-index: 1000001;
+  background-color: black;
+  text-align: right;
+  top: 0;
+  left: 0;
 }
 
-.navbar-contents > a {
-    text-decoration: none;
-    color: white;
+.navbar-contents>a {
+  text-decoration: none;
+  color: white;
 }
 
 nav.menu2 {
-    position: relative;
-    bottom: 0;
-    z-index: 1000001;
-    background-color: black;
-    text-align: left;
-    list-style: none;
+  position: relative;
+  bottom: 0;
+  z-index: 1000001;
+  background-color: black;
+  text-align: left;
+  list-style: none;
 }
 
-ul.listfoot > li > a {
-    text-decoration: none;
-    color: white;
+ul.listfoot>li>a {
+  text-decoration: none;
+  color: white;
 }
-        
+
 h4 {
-    color: grey;
+  color: grey;
 }

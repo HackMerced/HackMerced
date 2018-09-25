@@ -20,16 +20,19 @@ header {
     position: fixed;
     background: $black;
     padding-top: 2%;
-    ul li{
+
+    ul li {
       list-style-type: none;
       display: inline-block;
       margin-right: 50px;
     }
   }
+
   .list {
     bottom: 10%;
     text-align: right;
     font-size: 19px;
+
     a {
       color: $white;
       text-decoration: none;
@@ -38,22 +41,26 @@ header {
 }
 
 footer {
-  .menu2{
+  .menu2 {
     margin: 0;
     padding: 0;
   }
+
   width: 100%;
   height: 90px;
   background: $black;
+
   ul li {
     list-style-type: none;
     display: inline-block;
     margin-right: 50px;
     padding-top: 3%
   }
+
   .listfoot {
     text-align: right;
     font-size: 19px;
+
     a {
       color: $white;
       text-decoration: none;
@@ -63,9 +70,11 @@ footer {
 
 #root {
   font-family: 'Lato', sans-serif;
+
   img.screen1 {
     width: 100%;
   }
+
   .screen1 {
     -webkit-background-size: cover;
     background-size: cover;
@@ -73,11 +82,13 @@ footer {
     background-attachment: fixed;
     height: 100vh;
     width: 100%;
+
     p {
       text-align: center;
       color: $white;
     }
   }
+
   .screen2 {
     -webkit-background-size: cover;
     background-size: cover;
@@ -85,11 +96,13 @@ footer {
     background-attachment: fixed;
     height: 105vh;
     width: 100%;
+
     p {
       text-align: center;
       color: $white;
     }
   }
+
   .screen3 {
     -webkit-background-size: cover;
     background-size: cover;
@@ -97,11 +110,13 @@ footer {
     background-attachment: fixed;
     height: 100vh;
     width: 100%;
+
     p {
       text-align: center;
       color: $white;
     }
   }
+
   .contact_screen {
     background-image: url("../img/contact.jpg");
     -webkit-background-size: cover;
@@ -110,7 +125,8 @@ footer {
     background-attachment: fixed;
     height: 100vh;
     width: 100%;
-    h2{
+
+    h2 {
       text-align: center;
       padding-top: 15%;
       font-size: 50px;
@@ -118,20 +134,24 @@ footer {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    ul li{
+
+    ul li {
       margin-right: 40vh;
       list-style-type: none;
       display: inline-block;
     }
-    .listcontact{
+
+    .listcontact {
       text-align: center;
       font-size: 10vh;
+
       a {
         color: $white;
         text-decoration: none;
       }
     }
   }
+
   h1 {
     text-align: center;
     padding-top: 15%;
@@ -140,14 +160,17 @@ footer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   p {
     color: $white;
   }
+
   .subtitle {
     padding-top: 0%;
     text-align: center;
     color: $white;
   }
+
   h2 {
     text-align: center;
     padding-top: 15%;
@@ -156,5 +179,4 @@ footer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
 }

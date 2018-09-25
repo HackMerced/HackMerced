@@ -1,27 +1,27 @@
 /*-------------------------------------------------------------------------------------------------------------*/
 /*CUSTOM CSS */
 
-.hero{
-    background-color:  #092f44;
-   color: white;
-   border-bottom: 10px black solid;
+.hero {
+  background-color: #092f44;
+  color: white;
+  border-bottom: 10px black solid;
 }
 
 
-.navbar-item{
-   color:  #a29061;
+.navbar-item {
+  color: #a29061;
 }
 
-.footer{
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: #092f44;
-   color: white;
-   border-top: 10px black solid;       
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #092f44;
+  color: white;
+  border-top: 10px black solid;
 }
 
-.activo{
-   color: #007CBA;
+.activo {
+  color: #007CBA;
 }

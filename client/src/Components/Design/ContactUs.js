@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import facebook from '../../assets/img/fb.png';
-import mail from '../../assets/img/mail.png'
+import mail from '../../assets/img/mail.png';
+
 class ContactUs extends Component {
   render() {
     return (

@@ -1,1 +1,8 @@
-{"version":3,"sourceRoot":"","sources":["basic.scss"],"names":[],"mappings":"AAMA;EACE;EACA;EACA,OARM;EASN","file":"basic.css"}
+{
+  "version": 3,
+  "sourceRoot": "",
+  "sources": ["basic.scss"],
+  "names": [],
+  "mappings": "AAMA;EACE;EACA;EACA,OARM;EASN",
+  "file": "basic.css"
+}
