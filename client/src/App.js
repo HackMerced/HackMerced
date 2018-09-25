@@ -9,8 +9,8 @@ import Footer from './components/Design/Footer';
 import Main from './main';
 import ContactUs from './components/Design/ContactUs';
 import FAQ from './components/Design/Faqs';
-import Hacker from './components/Design/signUp';
-import Volunteer from './components/Design/signUpVolunteer';
+import Hacker from './components/Design/SignUpHacker';
+import Volunteer from './components/Design/SignUpVolunteer';
 import AboutUs from './components/Design/AboutUs';
 
 import './assets/css/main.css';
