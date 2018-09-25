@@ -3,27 +3,24 @@ jobs: # a collection of steps
   build: # runs not using Workflows must have a `build` job as entry point
     working_directory: ~/HackMercedf18/client # directory where steps will run
     docker: # run the steps with Docker
-      # specify the version you desir here
-      - image: circleci/node: 10.10 # ...with this image as the primary container; this is where all `steps` will run
-      - image: circleci/mongo: 4.0 # and this image as the secondary service container
-
+      - image: circleci/node:10.10 # ...with this image as the primary container; this is where all `steps` will run
+      - image: mongo:4.0 # and this image as the secondary service container
     steps: # a collection of executable commands 
       - checkout # special step to check out source code to working directory
       - restore_cache: # special step to restore the dependency cache 
-        name: Restore Yarn Package Cache
-        keys:
-          - yarn-packages-{{ checksum "yarn.lock" }}
+          name: Restore Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
       - run:
-        name: Install Dependencies
-        command: yarn install
+          name: Install Dependencies
+          command: yarn install
       - save_cache: # special step to save the dependency cache
-        name: Save Yarn Package Cache
-        key: yarn-packages-{{ checksum "yarn.lock" }}
-        paths:
-          - ~/.cache/yarn
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
       - run: # run tests
-        name: test
-        command: yarn test
+          name: test
+          command: yarn test
       - run: # run coverage report
           name: code-coverage
           command: './node_modules/.bin/nyc report --reporter=text-lcov'
