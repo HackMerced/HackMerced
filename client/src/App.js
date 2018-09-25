@@ -6,7 +6,7 @@ import {
 
 import Header from './components/Design/Header';
 import Footer from './components/Design/Footer';
-import Main from './layouts/main';
+import Main from './main';
 import ContactUs from './components/Design/ContactUs';
 import FAQ from './components/Design/Faqs';
 import Hacker from './components/Design/signUp';
