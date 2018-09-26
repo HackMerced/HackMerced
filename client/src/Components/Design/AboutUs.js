@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
-import Header from "./Header";
-import Footer from "./Footer";
 
-const FontAwesome = require('react-fontawesome');
+// const FontAwesome = require('react-fontawesome');
 
-class AboutUs extends Component {
+class aboutUS extends Component {
   render() {
     return (
-      <div className="aboutUS">
-        <Header/>
+      <div className="aboutUS">    
         <i className="fas fa-home"></i>
         <div className="columns">
-          <div className="column is-2">
-          </div>
+          <div className="column is-2"></div>
           <div className="column is-8">
-            <h1 className="title">About Us</h1>
-            <hr/>
+            <h1 className="title">About Us</h1>  
+            <hr/>               
             <div className="box">
               ANY CONTENT WIL GO HERE
               <br/>
@@ -36,15 +32,13 @@ class AboutUs extends Component {
               <br/>
               <br/>
               <br/>
-            </div>
+            </div>  
           </div>
-          <div className="column is-2">
-          </div>
-        </div>
-        <Footer/>
+          <div className="column is-2"></div>
+        </div>   
       </div>
     );
   }
 }
 
-export default AboutUs;
+export default aboutUS;
