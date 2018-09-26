@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Columns } from 'react-bulma-components';
+import { Columns } from 'react-bulma-components'; // TODO: Replace Bluma with Semantic UI
 
 var FontAwesome = require('react-fontawesome');
 
 class Header extends Component {
   render() {
-    return (
+    return ( // Rewrite with Semantic UI
       <div className="navbar">
         <Columns className="navbar-container">
           <Columns.Column className="navbar-contents">

@@ -9,17 +9,16 @@ class Footer extends Component {
       <nav className="menu2">
         <ul className="listfoot">
           <li>
-            <Link to="/contactus"><FontAwesome  className = "fa-mail-forward"/>Contact Us</Link>
-
+            <Link to="/contactus"><FontAwesome className="fa-mail-forward"/>Contact Us</Link>
           </li>
           <li>
-            <Link to="/aboutus"><FontAwesome  className = "fa-group"/>About Us</Link>
+            <Link to="/aboutus"><FontAwesome className="fa-group"/>About Us</Link>
           </li>
           <li>
-            <Link to="/faqs"><FontAwesome  className = "fa-question"/>FAQs</Link>
+            <Link to="/faqs"><FontAwesome className="fa-question"/>FAQs</Link>
           </li>
           <li>
-            <Link to="/Volunteer"><FontAwesome  className = "fa-hand-stop-o"/>Volunteers</Link>
+            <Link to="/volunteer"><FontAwesome className="fa-hand-stop-o"/>Volunteers</Link>
           </li>
         </ul>
       </nav>
@@ -27,4 +26,4 @@ class Footer extends Component {
   }
 }
 
-export default Footer ;
+export default Footer;

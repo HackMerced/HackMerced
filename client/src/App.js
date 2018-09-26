@@ -4,14 +4,14 @@ import {
   Route
 } from 'react-router-dom';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Main from './layouts/main';
-import Contactus from './components/contactus';
-import FAQ from './components/faq';
-import Signup from './components/signUP';
-import Volunteer from './components/signUPVolunteer';
-import aboutUS from './components/aboutUS';
+import Header from './components/Design/Header';
+import Footer from './components/Design/Footer';
+import Main from './main';
+import ContactUs from './components/Design/ContactUs';
+import FAQ from './components/Design/Faqs';
+import Hacker from './components/Design/SignUpHacker';
+import Volunteer from './components/Design/SignUpVolunteer';
+import AboutUs from './components/Design/AboutUs';
 
 import './assets/css/main.css';
 import "./assets/css/team.css";
@@ -22,12 +22,12 @@ class App extends Component {
       <Router>
         <div>
           <Header/>
-          <Route exact path ='/' component={Main}/>
-          <Route path ='/Contactus' component={Contactus}/>
-          <Route path ='/register' component={Signup}/>
-          <Route path ='/faqs' component={FAQ}/>
-          <Route path ='/Volunteer' component={Volunteer} />
-          <Route path ='/aboutus' component={aboutUS} />
+          <Route exact path='/' component={Main}/>
+          <Route path='/contactus' component={ContactUs}/>
+          <Route path='/register' component={Hacker}/>
+          <Route path='/faqs' component={FAQ}/>
+          <Route path='/volunteer' component={Volunteer} />
+          <Route path='/aboutus' component={AboutUs} />
           <Footer/>
         </div>
       </Router>
