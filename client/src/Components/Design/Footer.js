@@ -1,27 +1,33 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-var FontAwesome = require('react-fontawesome');
+//IMPORT OF REACT COMPONENT FONTAWESOME
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faQuestion, faStop } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faEnvelope, faQuestion, faStop);
 
 class Footer extends Component {
   render() {
     return (
-      <nav className="menu2">
-        <ul className="listfoot">
-          <li>
-            <Link to="/contactus"><FontAwesome className="fa-mail-forward"/>Contact Us</Link>
-          </li>
-          <li>
-            <Link to="/aboutus"><FontAwesome className="fa-group"/>About Us</Link>
-          </li>
-          <li>
-            <Link to="/faqs"><FontAwesome className="fa-question"/>FAQs</Link>
-          </li>
-          <li>
-            <Link to="/volunteer"><FontAwesome className="fa-hand-stop-o"/>Volunteers</Link>
-          </li>
-        </ul>
-      </nav>
+      <section className="hero is-primary is-bold">
+        <div className="hero-head">
+          <nav className="navbar is-bold">
+            <div className="navbar-end">
+              <div className="navbar-item">
+                <FontAwesomeIcon icon="envelope" size="2x"/><Link id="underline" to="/contactus">Contact Us</Link>
+              </div>
+              <div className="navbar-item">
+                <FontAwesomeIcon icon="question" size="2x"/><Link id="underline" to="/faqs">FAQs</Link>
+              </div>
+              <div className="navbar-item">
+                <FontAwesomeIcon icon="stop" size="2x"/><Link id="underline" to="/Volunteer">Volunteers</Link>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </section>
     );
   }
 }

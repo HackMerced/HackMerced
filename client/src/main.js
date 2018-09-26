@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Parallax } from 'react-parallax';
-import Dashboard from "./Components/Dashboard/Dashboard";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 //IMPORT IMAGES
 import background1 from './assets/img/ucmerced.png';

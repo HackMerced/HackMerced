@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "../../assets/css/signUp.css";
 
-var FontAwesome = require('react-fontawesome');
+// var FontAwesome = require('react-fontawesome');
 
 class SignUpHacker extends Component {
   constructor(props) {
