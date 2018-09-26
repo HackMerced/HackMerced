@@ -1,8 +1,8 @@
 {
-    "version": 3,
-    "sourceRoot": "",
-    "sources": ["../scss/body.scss"],
-    "names": [],
-    "mappings": "AAOA;EACE;;;AAEF;EACE",
-    "file": "body.css"
+  "version": 3,
+  "sourceRoot": "",
+  "sources": ["../scss/body.scss"],
+  "names": [],
+  "mappings": "AAOA;EACE;;;AAEF;EACE",
+  "file": "body.css"
 }

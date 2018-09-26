@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import facebook from '../assets/img/fb.png';
-import mail from '../assets/img/mail.png'
-class Contactus extends Component {
+import facebook from '../../assets/img/fb.png';
+import mail from '../../assets/img/mail.png';
+
+class ContactUs extends Component {
   render() {
     return (
       <contactus>
@@ -27,4 +28,4 @@ class Contactus extends Component {
   }
 }
 
-export default Contactus;
+export default ContactUs;
