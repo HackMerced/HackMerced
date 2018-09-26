@@ -18,9 +18,9 @@ jobs: # a collection of steps
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - run: # run tests
-          name: test
-          command: yarn test
+      #- run: # run tests
+      #    name: test
+      #    command: yarn test
       - run: # run coverage report
           name: code-coverage
           command: './node_modules/.bin/nyc report --reporter=text-lcov'
