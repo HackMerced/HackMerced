@@ -13,7 +13,7 @@ import Hacker from './Components/Design/SignUpHacker';
 import Volunteer from './Components/Design/SignUpVolunteer';
 import AboutUs from './Components/Design/AboutUs';
 
-import './assets/css/main.css';
+import './assets/css/home.css';
 import "./assets/css/team.css";
 
 class App extends Component {
