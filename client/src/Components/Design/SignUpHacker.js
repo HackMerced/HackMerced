@@ -105,6 +105,7 @@ class SignUpHacker extends Component {
                 <br />
                 <input className="button is-success" type="submit" value="Submit" />
           </Form>
+          <br/>
           </Container>
     );
   }

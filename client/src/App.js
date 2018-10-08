@@ -12,6 +12,7 @@ import FAQ from './Components/Design/Faqs';
 import Hacker from './Components/Design/SignUpHacker';
 import Volunteer from './Components/Design/SignUpVolunteer';
 import AboutUs from './Components/Design/AboutUs';
+import LogIn from './Components/Design/LogIn';
 
 import './assets/css/home.css';
 import "./assets/css/team.css";
@@ -28,6 +29,7 @@ class App extends Component {
           <Route path='/faqs' component={FAQ}/>
           <Route path='/volunteer' component={Volunteer} />
           <Route path='/aboutus' component={AboutUs} />
+          <Route path='/logIn' component={LogIn} />
           <Footer/>
         </div>
       </Router>
