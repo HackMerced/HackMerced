@@ -16,7 +16,7 @@ library.add(faHome, faUser, faUsers, faClock);
 class Header extends Component {
   render() {
     return (
-        <Menu fixed = "top" inverted> 
+        <Menu inverted> 
           <Menu.Menu position = "right"> 
             <Link id="underline" to="/">
               <Menu.Item name = "home">
