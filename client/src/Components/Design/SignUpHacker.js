@@ -5,7 +5,7 @@ import "../../assets/css/signUp.css";
 import axios from "axios";
 
 //IMPORT SEMANTIC-UI
-import {Container, Button, Form, Select} from "semantic-ui-react";
+import {Container, Form, Select} from "semantic-ui-react";
 
 //VALUES FOR SHIRTS
 const options = [
