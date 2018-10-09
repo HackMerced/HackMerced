@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 
 //IMPORT SEMANTIC-UI
-import {Container, Button, Form, Select} from "semantic-ui-react";
+import {Container, Form} from "semantic-ui-react";
 
 var FontAwesome = require('react-fontawesome');
 

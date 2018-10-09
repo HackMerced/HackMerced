@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 //IMPORT SEMANTIC UI
-import {Divider, Container, Grid, Icon, Header} from "semantic-ui-react";
+import { Container, Grid} from "semantic-ui-react";
 
 //IMPORT OF REACT COMPONENT FONTAWESOME
 import { library } from "@fortawesome/fontawesome-svg-core";
