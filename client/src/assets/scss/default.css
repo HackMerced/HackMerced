@@ -1,7 +1,6 @@
 * {
   padding: 0;
-  margin: 0;
-}
+  margin: 0; }
 
 header .menu {
   margin-top: -20px;
@@ -11,163 +10,115 @@ header .menu {
   height: 8vh;
   position: fixed;
   background: #000000;
-  padding-top: 2%;
-}
-
-header .menu ul li {
-  list-style-type: none;
-  display: inline-block;
-  margin-right: 50px;
-}
+  padding-top: 2%; }
+  header .menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 50px; }
 
 header .list {
   bottom: 10%;
   text-align: right;
-  font-size: 19px;
-}
-
-header .list a {
-  color: #D0D3D4;
-  text-decoration: none;
-}
+  font-size: 19px; }
+  header .list a {
+    color: #D0D3D4;
+    text-decoration: none; }
 
 footer {
   width: 100%;
   height: 90px;
-  background: #000000;
-}
-
-footer .menu2 {
-  margin: 0;
-  padding: 0;
-}
-
-footer ul li {
-  list-style-type: none;
-  display: inline-block;
-  margin-right: 50px;
-  padding-top: 3%;
-}
-
-footer .listfoot {
-  text-align: right;
-  font-size: 19px;
-}
-
-footer .listfoot a {
-  color: #D0D3D4;
-  text-decoration: none;
-}
+  background: #000000; }
+  footer .menu2 {
+    margin: 0;
+    padding: 0; }
+  footer ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 50px;
+    padding-top: 3%; }
+  footer .listfoot {
+    text-align: right;
+    font-size: 19px; }
+    footer .listfoot a {
+      color: #D0D3D4;
+      text-decoration: none; }
 
 #root {
-  font-family: 'Lato', sans-serif;
-}
-
-#root img.screen1 {
-  width: 100%;
-}
-
-#root .screen1 {
-  -webkit-background-size: cover;
-  background-size: cover;
-  display: table;
-  background-attachment: fixed;
-  height: 100vh;
-  width: 100%;
-}
-
-#root .screen1 p {
-  text-align: center;
-  color: #D0D3D4;
-}
-
-#root .screen2 {
-  -webkit-background-size: cover;
-  background-size: cover;
-  display: table;
-  background-attachment: fixed;
-  height: 105vh;
-  width: 100%;
-}
-
-#root .screen2 p {
-  text-align: center;
-  color: #D0D3D4;
-}
-
-#root .screen3 {
-  -webkit-background-size: cover;
-  background-size: cover;
-  display: table;
-  background-attachment: fixed;
-  height: 100vh;
-  width: 100%;
-}
-
-#root .screen3 p {
-  text-align: center;
-  color: #D0D3D4;
-}
-
-#root .contact_screen {
-  background-image: url("../img/contact.jpg");
-  -webkit-background-size: cover;
-  background-size: cover;
-  display: table;
-  background-attachment: fixed;
-  height: 100vh;
-  width: 100%;
-}
-
-#root .contact_screen h2 {
-  text-align: center;
-  padding-top: 15%;
-  font-size: 50px;
-  background: #D0D3D4;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-#root .contact_screen ul li {
-  margin-right: 40vh;
-  list-style-type: none;
-  display: inline-block;
-}
-
-#root .contact_screen .listcontact {
-  text-align: center;
-  font-size: 10vh;
-}
-
-#root .contact_screen .listcontact a {
-  color: #D0D3D4;
-  text-decoration: none;
-}
-
-#root h1 {
-  text-align: center;
-  padding-top: 15%;
-  font-size: 100px;
-  background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-#root p {
-  color: #D0D3D4;
-}
-
-#root .subtitle {
-  padding-top: 0%;
-  text-align: center;
-  color: #D0D3D4;
-}
-
-#root h2 {
-  text-align: center;
-  padding-top: 15%;
-  font-size: 50px;
-  background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  font-family: 'Lato', sans-serif; }
+  #root img.screen1 {
+    width: 100%; }
+  #root .screen1 {
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%; }
+    #root .screen1 p {
+      text-align: center;
+      color: #D0D3D4; }
+  #root .screen2 {
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    height: 105vh;
+    width: 100%; }
+    #root .screen2 p {
+      text-align: center;
+      color: #D0D3D4; }
+  #root .screen3 {
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%; }
+    #root .screen3 p {
+      text-align: center;
+      color: #D0D3D4; }
+  #root .contact_screen {
+    background-image: url("../img/contact.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%; }
+    #root .contact_screen h2 {
+      text-align: center;
+      padding-top: 15%;
+      font-size: 50px;
+      background: #D0D3D4;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+    #root .contact_screen ul li {
+      margin-right: 40vh;
+      list-style-type: none;
+      display: inline-block; }
+    #root .contact_screen .listcontact {
+      text-align: center;
+      font-size: 10vh; }
+      #root .contact_screen .listcontact a {
+        color: #D0D3D4;
+        text-decoration: none; }
+  #root h1 {
+    text-align: center;
+    padding-top: 15%;
+    font-size: 100px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  #root p {
+    color: #D0D3D4; }
+  #root .subtitle {
+    padding-top: 0%;
+    text-align: center;
+    color: #D0D3D4; }
+  #root h2 {
+    text-align: center;
+    padding-top: 15%;
+    font-size: 50px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }

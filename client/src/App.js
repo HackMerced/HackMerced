@@ -4,16 +4,17 @@ import {
   Route
 } from 'react-router-dom';
 
-import Header from './components/Design/Header';
-import Footer from './components/Design/Footer';
+import Header from './Components/Design/Header';
+import Footer from './Components/Design/Footer';
 import Main from './main';
-import ContactUs from './components/Design/ContactUs';
-import FAQ from './components/Design/Faqs';
-import Hacker from './components/Design/SignUpHacker';
-import Volunteer from './components/Design/SignUpVolunteer';
-import AboutUs from './components/Design/AboutUs';
+import ContactUs from './Components/Design/ContactUs';
+import FAQ from './Components/Design/Faqs';
+import Hacker from './Components/Design/SignUpHacker';
+import Volunteer from './Components/Design/SignUpVolunteer';
+import AboutUs from './Components/Design/AboutUs';
+import LogIn from './Components/Design/LogIn';
 
-import './assets/css/main.css';
+import './assets/css/home.css';
 import "./assets/css/team.css";
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
           <Route path='/faqs' component={FAQ}/>
           <Route path='/volunteer' component={Volunteer} />
           <Route path='/aboutus' component={AboutUs} />
+          <Route path='/logIn' component={LogIn} />
           <Footer/>
         </div>
       </Router>
