@@ -6,7 +6,7 @@ import {
 
 import Header from './Components/Design/Header';
 import Footer from './Components/Design/Footer';
-import Main from './main';
+import Home from './layouts/Home';
 import ContactUs from './Components/Design/ContactUs';
 import FAQ from './Components/Design/Faqs';
 import Hacker from './Components/Design/SignUpHacker';
@@ -23,7 +23,7 @@ class App extends Component {
       <Router>
         <div>
           <Header/>
-          <Route exact path='/' component={Main}/>
+          <Route exact path='/' component={Home}/>
           <Route path='/contactus' component={ContactUs}/>
           <Route path='/register' component={Hacker}/>
           <Route path='/faqs' component={FAQ}/>
