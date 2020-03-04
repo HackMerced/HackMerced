@@ -6,7 +6,8 @@
         "build": "react-scripts build",
         "eject": "react-scripts eject",
         "start": "react-scripts start",
-        "test": "react-scripts test"
+        "test": "react-scripts test",
+        "storybook": "start-storybook -p 9001 -c .storybook"
     },
     "browserslist": {
         "production": [
@@ -29,6 +30,7 @@
         "react-scripts": "3.4.0"
     },
     "devDependencies": {
+        "@storybook/react": "^5.3.14",
         "@testing-library/jest-dom": "^5.1.1",
         "@testing-library/react": "^9.4.1",
         "@testing-library/user-event": "^10.0.0",
@@ -38,11 +40,14 @@
         "@types/react-dom": "^16.9.5",
         "@typescript-eslint/eslint-plugin": "^2.22.0",
         "@typescript-eslint/parser": "^2.22.0",
+        "awesome-typescript-loader": "^5.2.1",
         "eslint": "^6.8.0",
         "eslint-config-prettier": "^6.10.0",
         "eslint-plugin-prettier": "^3.1.2",
         "eslint-plugin-react": "^7.18.3",
         "prettier": "^1.19.1",
+        "react-docgen-typescript-loader": "^3.6.0",
+        "react-docgen-typescript-webpack-plugin": "^1.1.0",
         "typescript": "^3.8.3"
     }
 }
