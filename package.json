@@ -31,6 +31,12 @@
     },
     "devDependencies": {
         "@storybook/addon-a11y": "^5.3.14",
+        "@storybook/addon-actions": "^5.3.14",
+        "@storybook/addon-centered": "^5.3.14",
+        "@storybook/addon-docs": "^6.0.0-alpha.20",
+        "@storybook/addon-knobs": "^5.3.14",
+        "@storybook/addon-notes": "^5.3.14",
+        "@storybook/addon-viewport": "^5.3.14",
         "@storybook/react": "^5.3.14",
         "@testing-library/jest-dom": "^5.1.1",
         "@testing-library/react": "^9.4.1",
