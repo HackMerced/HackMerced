@@ -30,6 +30,7 @@
         "react-scripts": "3.4.0"
     },
     "devDependencies": {
+        "@storybook/addon-a11y": "^5.3.14",
         "@storybook/react": "^5.3.14",
         "@testing-library/jest-dom": "^5.1.1",
         "@testing-library/react": "^9.4.1",
@@ -38,6 +39,7 @@
         "@types/node": "^13.7.7",
         "@types/react": "^16.9.23",
         "@types/react-dom": "^16.9.5",
+        "@types/storybook__addon-a11y": "^5.1.2",
         "@typescript-eslint/eslint-plugin": "^2.22.0",
         "@typescript-eslint/parser": "^2.22.0",
         "awesome-typescript-loader": "^5.2.1",
