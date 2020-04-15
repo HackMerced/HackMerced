@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/HackMerced/static/css/main.f19f92cc.chunk.css",
+    "main.js": "/HackMerced/static/js/main.65bff9d3.chunk.js",
+    "main.js.map": "/HackMerced/static/js/main.65bff9d3.chunk.js.map",
+    "runtime-main.js": "/HackMerced/static/js/runtime-main.96d7a6b3.js",
+    "runtime-main.js.map": "/HackMerced/static/js/runtime-main.96d7a6b3.js.map",
+    "static/js/2.57677e1e.chunk.js": "/HackMerced/static/js/2.57677e1e.chunk.js",
+    "static/js/2.57677e1e.chunk.js.map": "/HackMerced/static/js/2.57677e1e.chunk.js.map",
+    "index.html": "/HackMerced/index.html",
+    "precache-manifest.4d8eacb276648487e7ab7c907465a3da.js": "/HackMerced/precache-manifest.4d8eacb276648487e7ab7c907465a3da.js",
+    "service-worker.js": "/HackMerced/service-worker.js",
+    "static/css/main.f19f92cc.chunk.css.map": "/HackMerced/static/css/main.f19f92cc.chunk.css.map",
+    "static/js/2.57677e1e.chunk.js.LICENSE.txt": "/HackMerced/static/js/2.57677e1e.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/HackMerced/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.96d7a6b3.js",
+    "static/js/2.57677e1e.chunk.js",
+    "static/css/main.f19f92cc.chunk.css",
+    "static/js/main.65bff9d3.chunk.js"
+  ]
+}
