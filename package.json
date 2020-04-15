@@ -6,12 +6,12 @@
     "scripts": {
         "build": "yarn tailwind:css && react-scripts build",
         "eject": "react-scripts eject",
+        "gren": "gren release --override --tags=all --config=.grenrc.js",
         "setup": "yarn clean && yarn install",
         "start": "yarn tailwind:css && react-scripts start",
         "storybook": "start-storybook -p 9001 -c .storybook",
         "tailwind:css": "tailwind build src/tailwind.css -c tailwind.config.js -o src/index.css",
-        "test": "react-scripts test",
-        "gren": "gren release --override --tags=all --config=.grenrc.js"
+        "test": "react-scripts test"
     },
     "browserslist": {
         "production": [
