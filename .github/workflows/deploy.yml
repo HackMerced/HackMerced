@@ -68,7 +68,7 @@ jobs:
         run: |
           echo 'Running Setup...'
           yarn install
-          yarn global add github-release-notes
+          npm install -g github-release-notes
 
       - name: Update Release notes
         run: |
