@@ -1,0 +1,27 @@
+# Add 'test' label to any change to *.spec.js files within the source dir
+test: 
+  - src/**/*.spec.js
+  - e2e/*
+
+# Add 'workflows' label to any new or updated GitHub action workflow
+workflows: 
+  - .github/workflows/*
+
+# Add 'actions' label to any new or updated GitHub action workflow
+actions: 
+  - .github/actions/*
+
+# Add 'react' label to any changes done to the React application
+react:
+  - src/*
+
+# Add 'storybook' label to any changes done to the React application
+ngrx:
+  - .storybook
+  - src/**/*.stories.*
+
+# Add the 'documentation' label to any changes in either of the documented files
+documentation:
+  - README.md
+  - LICENSE
+  - CODE_OF_CONDUCT.md
