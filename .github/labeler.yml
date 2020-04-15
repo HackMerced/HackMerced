@@ -15,8 +15,8 @@ actions:
 react:
   - src/*
 
-# Add 'storybook' label to any changes done to the React application
-ngrx:
+# Add 'storybook' label to any changes done to the StoryBook
+storybook:
   - .storybook
   - src/**/*.stories.*
 
