@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . .
 
 RUN npm install react-scripts -g --silent
-RUN yarn install --silent
+RUN yarn install --silent --ignore-scripts --check-files
 RUN yarn build --silent
 
 # Serve built react app
