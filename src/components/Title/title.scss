@@ -1,0 +1,43 @@
+.TITLE {
+    background-image: url(../../assets/images/header1.jpg);
+    width: auto;
+    height: 810px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    
+
+
+    .TITLE-TEXT {
+        font-size: 54px;
+        line-height: 1em;
+        text-align: center;
+        margin: 15% auto auto auto;
+        color: white;
+        font-weight: bolder;
+        overflow: hidden;
+    }
+
+    .title-subtext {
+        color: rgb(223, 223, 223);
+        font-size: 20px;
+        text-align: center;
+        margin: 2% auto auto auto;
+        font-weight: bold;
+    }
+    .BUTTON {
+        display: block;
+        margin: 2% auto 0% auto;
+        font-size: 20px;
+        font-weight: 4%;
+        width: 14%;
+        height: 5%;
+        border-radius: 4px;
+        
+    }
+
+    .BUTTON:hover {
+        box-shadow: 0 12px 16px 0 black;
+    }
+    
+}
