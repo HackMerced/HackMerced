@@ -1,3 +1,20 @@
-.NAVBAR{
-    background-color: white;
+.NAVBAR {
+    background-color: rgb(15, 15, 17);
+    padding: 0.5% 0% 0.5% 0%;
+
+    .NAVTEXT {
+        font-size: 16px;
+        display: block;
+    }
+    .sticky {
+        position: fixed;
+        width: 100%;
+    }
+    .MLH-banner {
+        width: 170px;
+        height: 40px;
+    }
+    .active:active {
+        background-color: white;
+    }
 }
