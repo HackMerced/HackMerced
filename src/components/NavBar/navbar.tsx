@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
                 </ul>
             </div>
             <div className="MLH-banner">
-                <img src={MLHBANNER} style={styles} alt="MLH BANNER" />
+                <img className="MLH" src={MLHBANNER} style={styles} alt="MLH BANNER" />
             </div>
         </nav>
     );

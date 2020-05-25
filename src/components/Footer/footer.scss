@@ -1,6 +1,6 @@
 .footer {
     color: white;
-    background-color: rgb(15, 15, 17);
+    background-color: #ffb26e;
     min-height: 10vh;
     display: flex;
     flex-direction: column;
@@ -16,6 +16,8 @@
       color: white;
       font-size: 35px !important;
       margin: 10px;
+      border-radius: 70%;
+      box-shadow: 6px 6px 10px #885a3e, -6px -6px 10px #eb9c6b;
     }
   
     .credits {
