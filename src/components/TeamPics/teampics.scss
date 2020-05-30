@@ -1,0 +1,74 @@
+h1, h2, h3, h4, p {
+    color: black;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.Header {
+    font-size: 40px;
+    padding: 0% 0% 2% 0%;
+}
+
+/* Most of .Container and .Card code taken from Codepen and edited: https://codepen.io/izer/pen/RYvevG */
+.Component {
+    padding: 7%;
+
+    .Container1 {
+
+        //margin: auto;
+        //margin-top: 50px;
+        //max-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(6, 200px);
+        //grid-auto-rows: auto;
+        grid-gap: 14px;
+        //padding-bottom: 10px;
+
+        .Card1 {
+            //padding: 2% 2% 2% 2%;
+            //display: inline-block;
+
+            //position: relative;
+            //width: 240px;
+            height: 210px;
+            background-color: #424242;
+            clip-path: polygon(50% 5%, 100% 20%, 100% 80%, 50% 95%, 0% 80%, 0% 20%);
+
+        }
+    }
+
+    .Container2 {
+
+        //margin: auto;
+        //margin-top: 50px;
+        //max-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(6, 200px);
+        //grid-auto-rows: auto;
+        grid-gap: 14px;
+        //padding-bottom: 10px;
+        padding-left: 107.5px;
+        position: relative;
+        top: -40px;
+
+        .Card2 {
+            //padding: 2% 2% 2% 2%;
+            //display: inline-block;
+
+            //position: relative;
+            //width: 240px;
+            height: 210px;
+            background-color: #424242;
+            clip-path: polygon(50% 5%, 100% 20%, 100% 80%, 50% 95%, 0% 80%, 0% 20%);
+
+        }
+    }
+}
+
+.Picture {
+    max-width: 300px;
+    max-height: 350px;
+    display: inline-block;
+}
