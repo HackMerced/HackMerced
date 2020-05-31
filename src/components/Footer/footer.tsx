@@ -61,7 +61,7 @@ const Footer: FC = () => {
             <section className="credits">
                 <span className="copyright">
                     © 2020 HackMerced. All Rights Reserved.
-                    <br /> Made with 💓 by HackMerced
+                    <br /> Made with 💓 by HackMerced.
                 </span>
             </section>
         </footer>

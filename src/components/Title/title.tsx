@@ -21,7 +21,7 @@ const Title: React.FC = () => {
             <div className="font-black TITLE-TEXT">
                 HackMerced <br />{' '}
             </div>
-            <div className="title-subtext">The biggest San Joaquin Valley hackathon.</div>
+            <div className="title-subtext text-gray-100 ">The biggest San Joaquin Valley hackathon.</div>
             <button className="bg-white text-black BUTTON font-bold">Subscribe</button>
             <div className="wrapper">
                 <div className="wave-top"></div>
