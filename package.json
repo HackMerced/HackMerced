@@ -1,6 +1,6 @@
 {
     "name": "hackmerced",
-    "version": "0.1.0",
+    "version": "0.2.1",
     "private": true,
     "homepage": "http://HackMerced.github.io/HackMerced",
     "scripts": {
@@ -36,6 +36,7 @@
         "react-scripts": "3.4.0"
     },
     "devDependencies": {
+        "@babel/plugin-transform-react-jsx-development": "^7.10.1",
         "@storybook/addon-a11y": "^5.3.14",
         "@storybook/addon-actions": "^5.3.14",
         "@storybook/addon-centered": "^5.3.14",
