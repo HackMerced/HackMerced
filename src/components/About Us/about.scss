@@ -1,33 +1,7 @@
+ABOUT {
+height: 70%;
 
-body {
-	font-family: sans-serif;
-	font-size: 20px;
-	line-height: 24px;
-	color: #000;
-}
-.About {
-	width: 400px;
-	background-color: rgb(194, 105, 46);
-	padding: 20px 30px 30px 50px;
-	margin: 30px 100px 30px 30px;
-	h1 {
-		color: rgb(187, 102, 102);
-		position: relative;
-		background-color: #2E3268;
-		margin: 0px -70px 20px -30px;
-		padding: 24px 0px 16px 30px;
-		&:after {
-			content: "";
-			display: block;
-			height: 40px;
-			width: 40px;
-			background: url("http://gdurl.com/mhmH") no-repeat 0 0;
-			position: absolute;
-			right: 0px;
-			bottom: -40px;
-		}
-	}
-	p {
-		text-align: justify;
-	}
+
+
+
 }
