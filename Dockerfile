@@ -1,5 +1,9 @@
 FROM node:12.16.1-alpine3.11 AS builder
 
+LABEL maintainer="HackMerced"
+LABEL maintainer.email="general@hackmerced.com"
+LABEL version="0.2.1"
+
 WORKDIR /app
 COPY . .
 
