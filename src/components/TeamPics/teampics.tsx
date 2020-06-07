@@ -1,17 +1,17 @@
 import React from 'react';
 
-import TRUMAN from '../../assets/images/truman1.jpg';
-import LORENZO from '../../assets/images/lorenzo1.jpg';
-import MARY from '../../assets/images/mary1.jpg';
+import TRUMAN from '../../assets/images/truman.jpg';
+import LORENZO from '../../assets/images/lorenzo.jpg';
+import MARY from '../../assets/images/mary2.jpg';
 import SHIV from '../../assets/images/shiv1.jpg';
-import ATHENA from '../../assets/images/athena1.jpg';
-import ADRIAN from '../../assets/images/adrian1.jpg';
-import BUSHER from '../../assets/images/busher.jpg';
-import TUZETTE from '../../assets/images/tuzette.jpg';
-import MANJOT from '../../assets/images/manjot1.jpg';
-import KACEY from '../../assets/images/kacey.jpg';
+import ATHENA from '../../assets/images/athena2.jpg';
+import ADRIAN from '../../assets/images/adrian.jpg';
+import BUSHER from '../../assets/images/busher2.jpg';
+import TUZETTE from '../../assets/images/tuzette2.jpg';
+import MANJOT from '../../assets/images/manjot2.jpg';
+import KACEY from '../../assets/images/kc.jpg';
+import INTISER from '../../assets/images/Intiser3.png';
 // import SID from '../../assets/images/sid.jpg';
-// import INTISER from '../../assets/images/intiser.jpg';
 
 import './teampics.scss';
 
@@ -101,14 +101,14 @@ const Test: React.FC = () => {
                             <img className="Picture" src={SID} alt="Sid" />
                         </a>
                     </div>
-                </li>
+                </li> */}
                 <li>
                     <div className="hexagon">
                         <a href="https://www.linkedin.com/in/intiseraziz/">
                             <img className="Picture" src={INTISER} alt="Intiser" />
                         </a>
                     </div>
-                </li> */}
+                </li>
             </ul>
         </body>
     );
