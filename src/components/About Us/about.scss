@@ -1,0 +1,54 @@
+
+
+.ABOUT {
+  font-size: 32px;
+  text-decoration: bold;
+	line-height: 33px;
+	color: #000;
+
+.About {
+  width: 690px;
+  text-decoration: bold;
+  font-size: 32px;
+	padding: 20px 30px 30px 50px;
+	margin: 30px 100px 30px 30px;
+	h1 {
+		position: relative;
+		margin: 0px -70px 60px 30px;
+		padding: 24px 0px px 30px;
+	}
+	p {
+    text-align: left;
+    font-size: 22px;
+	}
+}
+
+.TEAMPICTURE {
+    float: right;
+    width: 700px;
+	padding: 20px 30px 30px 50px;
+	margin: -480px 40px 30px 40px
+  
+}
+
+/* Small devices (phones, portrait tablets, and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  font-size: 20px;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  font-size: 25px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  font-size: 35px;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  font-size: 40px;
+}
+
+}
