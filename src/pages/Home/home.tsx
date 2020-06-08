@@ -11,9 +11,9 @@ const Home: React.FC = () => {
         <div className="">
             <Navbar />
             <Title />
+            <About />
             <TeamPics />
             <Footer />
-            <About />
         </div>
     );
 };
