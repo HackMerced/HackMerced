@@ -19,7 +19,7 @@ import './teampics.scss';
 
 const Test: React.FC = () => {
     return (
-        <body>
+        <section className="TEAMPICTURE">
             <div className="Header">
                 <h1>Our Team</h1>
             </div>
@@ -110,7 +110,7 @@ const Test: React.FC = () => {
                     </div>
                 </li>
             </ul>
-        </body>
+        </section>
     );
 };
 
