@@ -22,14 +22,14 @@ const Navbar: React.FC = () => {
                             HOME
                         </Link>
                     </li>
-                    <li className="mr-3">
+                    {/* <li className="mr-3">
                         <a
                             className="inline-block rounded font-bold hover:text-black hover:bg-white  py-2 px-3"
                             href="http://localhost:3000/"
                         >
                             EVENTS
                         </a>
-                    </li>
+                    </li> */}
                     <li className="mr-3">
                         <a
                             className="inline-block rounded font-bold hover:text-black hover:bg-white py-2 px-3 text-gray-100 "
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
                 </ul>
             </div>
             <div className="MLH-banner">
-                <img src={MLHBANNER} style={styles} alt="MLH BANNER" />
+                <img className="MLH" src={MLHBANNER} style={styles} alt="MLH BANNER" />
             </div>
         </nav>
     );
