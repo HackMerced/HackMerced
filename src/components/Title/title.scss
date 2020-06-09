@@ -1,10 +1,11 @@
 .TITLE {
-    background-image: url(../../assets/images/header1.jpg);
-    width: auto;
+    background-image: linear-gradient(#ffb181, #ffb26e);
     height: 810px;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    
+   
     
 
 
@@ -19,7 +20,6 @@
     }
 
     .title-subtext {
-        color: rgb(223, 223, 223);
         font-size: 20px;
         text-align: center;
         margin: 2% auto auto auto;

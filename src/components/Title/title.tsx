@@ -11,7 +11,7 @@ const styles = {
 
 const Title: React.FC = () => {
     return (
-        <section className="TITLE">
+        <section className="TITLE t-wave">
             <div className="hackmerced-logo">
                 <Link to="/">
                     {' '}
@@ -21,8 +21,12 @@ const Title: React.FC = () => {
             <div className="font-black TITLE-TEXT">
                 HackMerced <br />{' '}
             </div>
-            <div className="title-subtext">The biggest San Joaquin Valley hackathon.</div>
+            <div className="title-subtext text-gray-100 ">The biggest San Joaquin Valley hackathon.</div>
             <button className="bg-white text-black BUTTON font-bold">Subscribe</button>
+            <div className="wrapper">
+                <div className="wave-top"></div>
+                <div className="wave-bottom"></div>
+            </div>
         </section>
     );
 };
