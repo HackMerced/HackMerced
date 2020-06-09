@@ -48,8 +48,8 @@ const Test: React.FC = () => {
                 </li>
                 <li>
                     <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/shiv248/">
-                            <img className="Picture" src={SHIV} alt="Shiv" />
+                        <a href="https://www.linkedin.com/in/adriandarian/">
+                            <img className="Picture" src={ADRIAN} alt="Adrian" />
                         </a>
                     </div>
                 </li>
@@ -62,8 +62,8 @@ const Test: React.FC = () => {
                 </li>
                 <li>
                     <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/adriandarian/">
-                            <img className="Picture" src={ADRIAN} alt="Adrian" />
+                        <a href="https://www.linkedin.com/in/shiv248/">
+                            <img className="Picture" src={SHIV} alt="Shiv" />
                         </a>
                     </div>
                 </li>
