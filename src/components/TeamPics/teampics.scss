@@ -9,7 +9,7 @@
     }
 
     .clear:after {
-        content: "";
+        content: '';
         display: block;
         clear: both;
     }
@@ -77,20 +77,13 @@
         margin-left: 0.4%;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    p {
-        color: black;
-    }
-
-    h1 {
-        font-weight: bold;
-    }
-
     .Header {
         padding: 3% 0% 2% 5%;
+
+        h1 {
+            color: black;
+            font-weight: bold;
+        }
 
         /* Media Queries taken from and edited: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 
