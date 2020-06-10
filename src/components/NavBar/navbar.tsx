@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import HMLOGO from '../../assets/images/hackmerced-logo.png';
 import MLHBANNER from '../../assets/images/mlh-badge.svg';
 
 import './navbar.scss';
@@ -9,9 +10,20 @@ const styles = {
     height: '175px',
 };
 
+const styles1 = {
+    width: '100px',
+    height: '90px',
+};
+
 const Navbar: React.FC = () => {
     return (
         <nav className="NAVBAR sticky flex">
+            <div className="hackmerced-logo">
+                <Link to="/">
+                    {' '}
+                    <img src={HMLOGO} style={styles1} alt="HACKMERCED LOGO" />
+                </Link>
+            </div>
             <div className="NAVTEXT block flex-auto ">
                 <ul className="flex float-right">
                     <li className="mr-3 active">
