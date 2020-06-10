@@ -4,16 +4,21 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    
-   
-    
 
+    .hackmerced-title {
+        margin: 2% auto auto 57%;
+    }
+    .hackmerced-tower {
+        display: block;
+        min-width: auto;
+        min-height: auto;
+    }
 
     .TITLE-TEXT {
         font-size: 54px;
         line-height: 1em;
         text-align: center;
-        margin: 15% auto auto auto;
+        margin: 10% auto auto auto;
         color: white;
         font-weight: bolder;
         overflow: hidden;
@@ -22,22 +27,46 @@
     .title-subtext {
         font-size: 20px;
         text-align: center;
-        margin: 2% auto auto auto;
+        margin: 2% auto auto 40%;
         font-weight: bold;
     }
-    .BUTTON {
-        display: block;
-        margin: 2% auto 0% auto;
+
+    .BUTTON{
+        position: absolute;
+        text-transform: uppercase;
+        margin: 2% auto 0% 57%;
         font-size: 20px;
         font-weight: 4%;
-        width: 14%;
+        width: 25%;
         height: 5%;
-        border-radius: 4px;
-        
+        border-radius: 20px;
+        transition: .2s all;
+        text-align:center;
+    }
+
+    .BUTTON:before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        right: 5%;
+        width: 90%;
+        height: 5%;
+        opacity: 0;
+        box-shadow: 0 12px 16px 0 black;
+       transition: .2s all;
+       transition-delay: 0.10;
+       background: radial-gradient(ellipse at center, rgpa (0,0,0,0, 0.45) 0%, rgba(0,0,0,0)100%);
+
     }
 
     .BUTTON:hover {
-        box-shadow: 0 12px 16px 0 black;
+        transform:translateY(-5px);
+        color: black;
+       
+    }
+    .BUTTON:hover:before{
+        opacity:1;
+        transform:translateY(5px);
     }
     
 }
