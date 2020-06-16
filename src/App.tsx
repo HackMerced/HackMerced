@@ -12,7 +12,7 @@ const App: React.FC = () => {
         <Router history={history}>
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/SponsorUs" compenent={SponsorUs} />
+                <Route exact path="/sponsors" component={SponsorUs} />
                 <Redirect from="/HackMerced" to="/" />
             </Switch>
         </Router>
