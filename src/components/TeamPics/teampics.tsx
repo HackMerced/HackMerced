@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import TRUMAN from '../../assets/images/truman.jpg';
 import LORENZO from '../../assets/images/lorenzo.jpg';
@@ -17,101 +17,91 @@ import './teampics.scss';
 
 /* Outline for this component largely taken from: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
 
-const Test: React.FC = () => {
+function teampics(team: Array<{ url: string; src: any; alt: string }>): JSX.Element {
+    let teamArray: Array<JSX.Element> = [];
+
+    team.forEach((member: { url: string; src: any; alt: string }, index: number) => {
+        teamArray.push(
+            <li key={index}>
+                <div className="hexagon">
+                    <a href={member.url}>
+                        <img className="Picture" src={member.src} alt={member.alt} />
+                    </a>
+                </div>
+            </li>,
+        );
+    });
+
+    return <ul id="grid" className="clear">{teamArray}</ul>;
+}
+
+const TeamPics: FC = (): JSX.Element => {
+    const team: Array<{ url: string; src: any; alt: string }> = [
+        {
+            url: 'https://www.linkedin.com/in/trumanjfchan/',
+            src: TRUMAN,
+            alt: 'Truman',
+        },
+        {
+            url: 'https://www.linkedin.com/in/lorenzo-scaturchio-62203b160/',
+            src: LORENZO,
+            alt: 'Lorenzo',
+        },
+        {
+            url: 'https://www.linkedin.com/in/maryfrancine/',
+            src: MARY,
+            alt: 'Mary Francine',
+        },
+        {
+            url: 'https://www.linkedin.com/in/adriandarian/',
+            src: ADRIAN,
+            alt: 'Adrian',
+        },
+        {
+            url: 'https://www.linkedin.com/in/athena-siaotong/',
+            src: ATHENA,
+            alt: 'Athena',
+        },
+        {
+            url: 'https://www.linkedin.com/in/shiv248/',
+            src: SHIV,
+            alt: 'Shivanshu',
+        },
+        {
+            url: 'https://www.linkedin.com/in/busher-bridi/',
+            src: BUSHER,
+            alt: 'Busher',
+        },
+        {
+            url: 'https://www.linkedin.com/in/tuzette-vu-500550100/',
+            src: TUZETTE,
+            alt: 'Tuzette',
+        },
+        {
+            url: 'https://www.linkedin.com/in/manjot-singh-0a41a8195/',
+            src: MANJOT,
+            alt: 'Manjot',
+        },
+        {
+            url: 'https://www.linkedin.com/in/kacey-su-351950176/',
+            src: KACEY,
+            alt: 'Kacey',
+        },
+        {
+            url: 'https://www.linkedin.com/in/intiseraziz/',
+            src: INTISER,
+            alt: 'Intiser',
+        },
+    ];
+
     return (
         <section className="TEAMPICTURE">
-            <div className="Header">
+            <header className="Header">
                 <h1>Our Team</h1>
-            </div>
-
-            <ul id="grid" className="clear">
-                <li>
-                    <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/trumanjfchan/">
-                            <img className="Picture" src={TRUMAN} alt="Truman" />
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/lorenzo-scaturchio-62203b160/">
-                            <img className="Picture" src={LORENZO} alt="Lorenzo" />
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/maryfrancine/">
-                            <img className="Picture" src={MARY} alt="Mary" />
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/shiv248/">
-                            <img className="Picture" src={SHIV} alt="Shiv" />
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/athena-siaotong/">
-                            <img className="Picture" src={ATHENA} alt="Athena" />
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/adriandarian/">
-                            <img className="Picture" src={ADRIAN} alt="Adrian" />
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/busher-bridi/">
-                            <img className="Picture" src={BUSHER} alt="Busher" />
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/tuzette-vu-500550100/">
-                            <img className="Picture" src={TUZETTE} alt="Tuzette" />
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/manjot-singh-0a41a8195/">
-                            <img className="Picture" src={MANJOT} alt="Manjot" />
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/kacey-su-351950176/">
-                            <img className="Picture" src={KACEY} alt="Kacey" />
-                        </a>
-                    </div>
-                </li>
-                {/* <li>
-                    <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/sidharth-babu/">
-                            <img className="Picture" src={SID} alt="Sid" />
-                        </a>
-                    </div>
-                </li> */}
-                <li>
-                    <div className="hexagon">
-                        <a href="https://www.linkedin.com/in/intiseraziz/">
-                            <img className="Picture" src={INTISER} alt="Intiser" />
-                        </a>
-                    </div>
-                </li>
-            </ul>
+            </header>
+            {teampics(team)}
         </section>
     );
 };
 
-export default Test;
+export default TeamPics;
