@@ -1,0 +1,35 @@
+.NAVBAR1 {
+    background-color: white;
+    padding: 0.5% 0% 0.5% 0%;
+    align-items: flex-start;
+
+    .NAVTEXT {
+        font-size: 16px;
+        display: block;
+    }
+    .sticky {
+        position: fixed;
+        width: 100%;
+    }
+    .MLH-banner {
+        width: 170px;
+        height: 40px;
+ 
+    }
+
+    .MLH{
+        position: -webkit-sticky;
+        position: sticky;
+    }
+    .active:active {
+        background-color: white;
+    }
+    .navbar-white:hover{
+        background-color: #ffb181;
+        color:white;
+    }
+    .navbar-white{
+        color:black;
+        font-weight: bold;
+    }
+}
