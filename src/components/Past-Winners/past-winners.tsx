@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faHandHoldingHeart,
@@ -12,95 +12,64 @@ import {
     faCloud,
 } from '@fortawesome/free-solid-svg-icons';
 import { faDigitalOcean } from '@fortawesome/free-brands-svg-icons';
+
 import './past-winners.scss';
 
-const PastWinners: React.FC = () => {
+const PastWinners: FC = (): JSX.Element => {
     return (
         <section className="PAST-WINNERS">
-            <div className="Header">Past Winners</div>
-            <nav className="winners-icons">
-                <table className="tg">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <a href="https://devpost.com/software/helpers-spot" style={{ color: '#ffb26e' }}>
-                                    <FontAwesomeIcon icon={faHandHoldingHeart} className="fa" />
-                                </a>
-                                <div className="winner-title">Social Good</div>
-                                <div className="winner-group">Helpers Spot</div>
-                            </td>
-                            <td>
-                                <a href="https://devpost.com/software/vibe-xja5cd" style={{ color: '#ffb26e' }}>
-                                    <FontAwesomeIcon icon={faMedkit} className="fa" />
-                                </a>
-                                <div className="winner-title">Health</div>
-                                <div className="winner-group">Vibe</div>
-                            </td>
-                            <td>
-                                <a href="https://devpost.com/software/kabobcat" style={{ color: '#ffb26e' }}>
-                                    <FontAwesomeIcon icon={faSeedling} className="fa" />
-                                </a>
-                                <div className="winner-title">Sustainability</div>
-                                <div className="winner-group">Kabobcat</div>
-                            </td>
-                            <td>
-                                <a href="https://devpost.com/software/code-dude" style={{ color: '#ffb26e' }}>
-                                    <FontAwesomeIcon icon={faPalette} className="fa" />
-                                </a>
-                                <div className="winner-title">Best in Design</div>
-                                <div className="winner-group">Code-Dude</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="https://devpost.com/software/snapcode-vabpfn" style={{ color: '#ffb26e' }}>
-                                    <FontAwesomeIcon icon={faUserPlus} className="fa" />
-                                </a>
-                                <div className="winner-title">Best Beginner Hack</div>
-                                <div className="winner-group">Snapcode</div>
-                            </td>
-                            <td>
-                                <a href="https://devpost.com/software/esose" style={{ color: '#ffb26e' }}>
-                                    <FontAwesomeIcon icon={faSearch} className="fa" />
-                                </a>
-                                <div className="winner-title">Best Product Research</div>
-                                <div className="winner-group">ESOSE</div>
-                            </td>
-                            <td>
-                                <a href="https://devpost.com/software/3d-for-education" style={{ color: '#ffb26e' }}>
-                                    <FontAwesomeIcon icon={faMicrochip} className="fa" />
-                                </a>
-                                <div className="winner-title">Best Hardware Hack</div>
-                                <div className="winner-group">3D for Education</div>
-                            </td>
-                            <td>
-                                <a href="https://devpost.com/software/ghym" style={{ color: '#ffb26e' }}>
-                                    <FontAwesomeIcon icon={faMeteor} className="fa" />
-                                </a>
-                                <div className="winner-title">Moonshot</div>
-                                <div className="winner-group">Ghym</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <a href="https://devpost.com/software/a-clear-space" style={{ color: '#ffb26e' }}>
-                                    <FontAwesomeIcon icon={faDigitalOcean} className="fa" />
-                                </a>
-                                <div className="winner-title">Best Use of Digital Ocean</div>
-                                <div className="winner-group">A Clean Space</div>
-                            </td>
-                            <td>
-                                <a href="https://devpost.com/software/project-dms" style={{ color: '#ffb26e' }}>
-                                    <FontAwesomeIcon icon={faCloud} className="fa" />
-                                </a>
-                                <div className="winner-title">Best Use of Google Cloud</div>
-                                <div className="winner-group">Project DMS</div>
-                            </td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h3 className="past-winners-title">Past Winners</h3>
+            <nav className="winners">
+                <a href="https://devpost.com/software/helpers-spot">
+                    <FontAwesomeIcon icon={faHandHoldingHeart} className="fa winner-icon" />
+                    <h5 className="winner-title">Social Good</h5>
+                    <h6 className="winner-group">Helpers Spot</h6>
+                </a>
+                <a href="https://devpost.com/software/vibe-xja5cd">
+                    <FontAwesomeIcon icon={faMedkit} className="fa winner-icon" />
+                    <h5 className="winner-title">Health</h5>
+                    <h6 className="winner-group">Vibe</h6>
+                </a>
+                <a href="https://devpost.com/software/kabobcat">
+                    <FontAwesomeIcon icon={faSeedling} className="fa winner-icon" />
+                    <h5 className="winner-title">Sustainability</h5>
+                    <h6 className="winner-group">Kabobcat</h6>
+                </a>
+                <a href="https://devpost.com/software/code-dude">
+                    <FontAwesomeIcon icon={faPalette} className="fa winner-icon" />
+                    <h5 className="winner-title">Best in Design</h5>
+                    <h6 className="winner-group">Code-Dude</h6>
+                </a>
+                <a href="https://devpost.com/software/snapcode-vabpfn">
+                    <FontAwesomeIcon icon={faUserPlus} className="fa winner-icon" />
+                    <h5 className="winner-title">Best Beginner Hack</h5>
+                    <h6 className="winner-group">Snapcode</h6>
+                </a>
+                <a href="https://devpost.com/software/esose">
+                    <FontAwesomeIcon icon={faSearch} className="fa winner-icon" />
+                    <h5 className="winner-title">Best Product Research</h5>
+                    <h6 className="winner-group">ESOSE</h6>
+                </a>
+                <a href="https://devpost.com/software/3d-for-education">
+                    <FontAwesomeIcon icon={faMicrochip} className="fa winner-icon" />
+                    <h5 className="winner-title">Best Hardware Hack</h5>
+                    <h6 className="winner-group">3D for Education</h6>
+                </a>
+                <a href="https://devpost.com/software/ghym">
+                    <FontAwesomeIcon icon={faMeteor} className="fa winner-icon" />
+                    <h5 className="winner-title">Moonshot</h5>
+                    <h6 className="winner-group">Ghym</h6>
+                </a>
+                <a href="https://devpost.com/software/a-clear-space">
+                    <FontAwesomeIcon icon={faDigitalOcean} className="fa winner-icon" />
+                    <h5 className="winner-title">Best Use of Digital Ocean</h5>
+                    <h6 className="winner-group">A Clean Space</h6>
+                </a>
+                <a href="https://devpost.com/software/project-dms">
+                    <FontAwesomeIcon icon={faCloud} className="fa winner-icon" />
+                    <h5 className="winner-title">Best Use of Google Cloud</h5>
+                    <h6 className="winner-group">Project DMS</h6>
+                </a>
             </nav>
         </section>
     );
