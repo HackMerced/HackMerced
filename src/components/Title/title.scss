@@ -3,12 +3,10 @@
     height: 810px;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden ; 
-  
+    overflow: hidden;
 
     .t-wave{
       overflow: hidden;
-    
     }
     .hackmerced-title {
         margin: -38% auto auto 57%;
@@ -75,11 +73,9 @@
        background: radial-gradient(ellipse at center, rgpa (0,0,0,0, 0.45) 0%, rgba(0,0,0,0)100%);
 
     }
-
     .BUTTON:hover {
         transform:translateY(-5px);
         color: black;
-       
     }
     .BUTTON:hover:before{
         opacity:1;

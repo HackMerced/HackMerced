@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Route, Switch, Redirect } from 'react-router-dom';
-import history from './app.history';
 
+import history from './app.history';
 import Home from './pages/Home/home';
 import Hackathons from './pages/Hackathons/hackathons';
 import SponsorUs from './pages/SponsorUs/sponsors-us';

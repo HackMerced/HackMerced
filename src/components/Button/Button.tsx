@@ -17,7 +17,7 @@ const styles = {
     padding: '3px 10px',
 };
 
-const Button: React.SFC<IButtonProps> = props => (
+const Button: React.SFC<IButtonProps> = (props: React.PropsWithChildren<IButtonProps>) => (
     <button onClick={props.onClick} style={props.styles} disabled={props.disabled} type="button">
         {props.children}
     </button>
