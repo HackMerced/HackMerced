@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
+
 import TEAM from '../../assets/images/hackmerced-v.jpg';
 import './about.scss';
 
-const About: React.FC = () => {
+const About: FC = (): JSX.Element => {
     return (
         <section className="ABOUT">
             <div className="About">
@@ -13,7 +14,7 @@ const About: React.FC = () => {
                     collaborate in teams and attend workshops to learn about new technologies.
                 </p>
                 <p>
-                    <br></br>We aim to create a collaborative, interdisciplinary event that brings together students
+                    <br />We aim to create a collaborative, interdisciplinary event that brings together students
                     from all universities and prospective sponsors to see the innovation and creativity culminating
                     within the San Joaquin Valley.
                 </p>
