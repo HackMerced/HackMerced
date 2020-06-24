@@ -1,5 +1,4 @@
 .splash-body {
-    display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 2% 0;
@@ -12,14 +11,14 @@
     }
 
     .splash-content {
-        margin-right: 2rem;
+      
 
         .Header {
             font-size: 54px;
-            line-height: 1em;
+            line-height: 1.5em;
             text-align: center;
-            margin: 15% auto auto auto;
-            color: white;
+            margin: 8% auto auto auto;
+            color: black;
             font-weight: bolder;
             overflow: hidden;
         }
@@ -34,6 +33,8 @@
                 text-align: center;
                 margin: 2% auto auto auto;
                 font-weight: bold;
+                color: black;
+                text-align: center;
             }
 
             p {
@@ -42,6 +43,8 @@
                 margin-block-end: 1em;
                 margin-inline-start: 0px;
                 margin-inline-end: 0px;
+                color: black;
+                text-align: center;
             }
         }
 
@@ -59,11 +62,11 @@
     .splash-form {
         display: flex;
         flex-direction: column;
-
-        padding: 2rem;
+        width: 80%;
+        padding: 3rem;
         background-image: linear-gradient(#ffb181, #ffb26e);
         border-radius: 2rem;
-
+        margin: 0% 0% 5% 10%;
         @media only screen and (max-width: 900px),
         only screen and (max-height: 640px) {
             margin-bottom: 2rem;
@@ -80,7 +83,7 @@
             padding: 0 1rem;
             margin: 1rem 0;
             height: calc(2.5rem - 8px);
-            border: 4px solid orange;
+           box-shadow: 8px 8px 10px #e9925b, -8px -8px 10px #faae7f;
             border-radius: 0.75rem;
             color: black;
             font-size: 18px;
@@ -88,6 +91,7 @@
 
         textarea {
             flex: 1;
+            padding: .5rem 1rem;
         }
 
         button {

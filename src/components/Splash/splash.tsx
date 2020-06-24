@@ -7,33 +7,34 @@ const Splash: FC = (): JSX.Element => {
         <main className="splash-body">
             <div className="splash-content">
                 <section className="Header">
-                    <h1>Make HackMerced your event!</h1>
+                    <h1>Become a sponsor to empower and help grow the next generation of HackMerced.</h1>
                 </section>
                 <section className="splash-section">
-                    <h4>Establish your brand</h4>
+                    <h4>Leave your mark in the Heart of California</h4>
                     <p>
-                        HackMerced is the perfect way to establish your brand and build and grow awareness for your
-                        company among thousands of talented engineers.
+                        As the newest UC, more than half of the student body is first generation. Joining HackMerced not
+                        only brings awareness for your brand,<br></br> but also brings together the talent in the
+                        Central Valley.
                     </p>
                 </section>
                 <section className="splash-section">
-                    <h4>Connect with top candidates</h4>
-                    <p>We can provide you everything you need to find top talent in the tech and hacker community.</p>
+                    <h4>Connect with our diverse hackers</h4>
+                    <p>Network and build relationships in our hacker society. Make your company known in our events!</p>
                 </section>
-                <section className="splash-section">
+                {/* <section className="splash-section">
                     <h4>Show off your tech</h4>
                     <p>
                         HackMerced is the largest collegiate hackathon, the best place to display your tech and see
                         hackers use your APIs in creative and innovative ways
                     </p>
-                </section>
+                </section> */}
             </div>
             <form className="splash-form">
-                <h3>Lets get in touch!</h3>
+                <h3>Become a sponsor!</h3>
                 <input id="nameInput" placeholder="Full Name"></input>
                 <input id="companyInput" placeholder="Company"></input>
                 <input id="emailInput" placeholder="Email"></input>
-                <textarea id="contenInput" placeholder="Comments"></textarea>
+                <textarea id="contenInput" placeholder="Message"></textarea>
                 <button type="submit">Send</button>
             </form>
         </main>
