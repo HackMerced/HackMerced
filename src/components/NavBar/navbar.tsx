@@ -47,12 +47,12 @@ const Navbar: React.FC = () => {
                         </Link>
                     </li>
                     <li>
-                        <a
+                        <Link
                             className="inline-block rounded font-bold hover:text-black hover:bg-white py-2 px-3 text-gray-100 "
-                            href="http://localhost:3000/"
+                            to="contact-us"
                         >
                             CONTACT US
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
