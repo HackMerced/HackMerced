@@ -27,7 +27,7 @@
             h4 {
                 font-size: 20px;
                 text-align: center;
-                margin: 2% auto auto auto;
+                margin: 1% auto auto auto;
                 font-weight: bold;
                 color: black;
                 text-align: center;
@@ -104,14 +104,11 @@
         }
 
         button:hover {
-            transform:translateY(-5px);
-            color: orange;
+            background:linear-gradient(#fdab78, #faa55a);
+            color: white;
            
         }
-        button:hover:before{
-            opacity:1;
-            transform:translateY(5px);
-        }
+        
         button:active{
           background:linear-gradient(#fdab78, #faa55a);
           color: white;
