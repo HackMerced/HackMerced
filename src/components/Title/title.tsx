@@ -15,7 +15,16 @@ const styles3 = {
 
 const Title: React.FC = () => {
     return (
-        <section className="TITLE t-wave">
+        <section className="TITLE ">
+            <div className="t-wave">
+                <div className="cloud c1"></div>
+                <div className="cloud c2"></div>
+                <div className="cloud c3"></div>
+                <div className="cloud c4"></div>
+                <div className="cloud c5"></div>
+            </div>
+            {/* <div className="cloud fcloud01"></div>
+            <div className="cloud fcloud02"></div> */}
             <div className="hackmerced-title">
                 <img src={HMTITLE} style={styles2} alt="HACKMERCED TITLE" />
             </div>
@@ -23,6 +32,9 @@ const Title: React.FC = () => {
                 HackMerced <br />{' '}
             </div> */}
             <div className="title-subtext text-gray-100 ">The biggest San Joaquin Valley hackathon.</div>
+            <div className="title-text text-gray-100 ">
+                Stay updated with HackMerced and subscribe to our email list!
+            </div>
             <button className="bg-white text-black BUTTON font-bold">Subscribe</button>
             <div className="hackmerced-tower">
                 <img src={HMTOWER} style={styles3} alt="HACKMERCED TITLE" />

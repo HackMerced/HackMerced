@@ -3,10 +3,15 @@
     height: 810px;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow: hidden ; 
+  
 
+    .t-wave{
+      overflow: hidden;
+    
+    }
     .hackmerced-title {
-        margin: 2% auto auto 57%;
+        margin: -38% auto auto 57%;
     }
     .hackmerced-tower {
         display: block;
@@ -23,6 +28,12 @@
         font-weight: bolder;
         overflow: hidden;
     }
+    .title-text {
+      font-size: 15px;
+      text-align: center;
+      margin: 1% auto auto 40%;
+      font-weight: medium;
+  }
 
     .title-subtext {
         font-size: 20px;
@@ -68,5 +79,151 @@
         opacity:1;
         transform:translateY(5px);
     }
+    .BUTTON:active{
+      background:linear-gradient(#fdab78, #faa55a);
+      color: white;
+  }
+
+    // .cloud {
+	// 	width: 550px;
+	// 	height: 300px;
+	// 	left: -250px;
+	// 	position: absolute;
+	// 	background: transparent url('https://media.discordapp.net/attachments/708322953649193040/709058890733584484/p-trans.png') 0 0 no-repeat;
+	// }
+	
+	// .fcloud01 {
+	// 	top: 100px;
+	// 	z-index: 100;
+	// 	/*animation-name: drift;
+	// 	animation-duration: .25s;
+	// 	animation-timing-function: linear;
+	// 	animation-iteration-count: ifinite;*/
+
+	// 	animation: drift 25s linear infinite;
+	// }
+	
+	// .fcloud02 {
+	// 	top: 240px;
+	// 	z-index: 200;
+
+	// 	animation: drift 45s linear infinite; 
+	// }
+
+	// @keyframes drift {
+	// 	from {
+	// 		transform: translate(-255px);
+	// 	}
+
+	// 	to {
+	// 		transform: translateX(calc(100vw + 250px));
+    //     }
+    // }
     
+    .cloud {
+        background: #fff;
+        width: 200px;
+        height: 60px;
+        border-radius: 200px;
+        position: relative;
+        margin: 4% 0% 0% 0%;
+      }
+      .cloud:before, .cloud:after {
+        content: '';
+        position: absolute;
+        top: -15px; left: 10px;
+        background: #fff;
+        width: 100px;
+        height: 80px;
+        border-radius: 100px;
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+          
+      }
+      .cloud:after {
+        width: 120px;
+        height: 120px;
+        top: -55px;
+        left: auto;
+        right: 15px;
+        
+      }
+      .c1 {
+        animation:  cloudMoving 18s linear infinite; 
+        -webkit-animation: cloudMoving 18s linear infinite; 
+        -moz-animation: cloudMoving 18s linear infinite; 
+        -o-animation: cloudMoving 18s linear infinite;
+        left: 230px;
+        
+      }
+      .c2 {
+          animation:cloudMoving 25s linear infinite ;
+        -webkit-animation: cloudMoving 25s linear infinite; 
+        -moz-animation: cloudMoving 25s linear infinite; 
+        -o-animation: cloudMoving 25s linear infinite; 
+        transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -o-transform: scale(0.5);
+        opacity: 0.5;
+        left: 400px;
+        top: -50px;
+      }
+      .c3 {
+          animation: cloudMoving 20s linear infinite ;
+        -webkit-animation: cloudMoving 20s linear infinite; 
+        -moz-animation: cloudMoving 20s linear infinite; 
+        -o-animation: cloudMoving 20s linear infinite; 
+        transform: scale(0.75);
+        -webkit-transform: scale(0.75);
+        -moz-transform: scale(0.75);
+        -o-transform: scale(0.75);
+        opacity: 0.75;
+        left: 380px;
+        top: -150px;
+      }
+      .c4 {
+          animation: cloudMoving 18s linear infinite;
+        -webkit-animation: cloudMoving 18s linear infinite; 
+        -moz-animation: cloudMoving 18s linear infinite; 
+        -o-animation: cloudMoving 18s linear infinite; 
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -o-transform: scale(0.8);
+        opacity: 0.8;
+        left: 650px;
+        top: -120px;
+      }
+      .c5 {
+          animation: cloudMoving 22s linear infinite;
+        -webkit-animation: cloudMoving 22s linear infinite; 
+        -moz-animation: cloudMoving 22s linear infinite; 
+        -o-animation: cloudMoving 22s linear infinite; 
+        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        opacity: 0.7;
+        left: 760px;
+        top: -150px;
+      }
+      @keyframes cloudMoving {
+        0%{
+          margin-left: 100%;
+        }
+        100%{
+          margin-left: -100%;
+        }
+      }
+      @-webkit-keyframes cloudMoving {
+        0%{
+          margin-left: 100%;
+        }
+        100%{
+          margin-left: -100%;
+        }
+      }
+      
 }
