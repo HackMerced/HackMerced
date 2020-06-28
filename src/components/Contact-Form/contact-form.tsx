@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faCode } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faInstagram, faGithub, faSlack } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faEnvelope, faCode } from '@fortawesome/free-solid-svg-icons';
+// import { faFacebook, faInstagram, faGithub, faSlack } from '@fortawesome/free-brands-svg-icons';
 
 import './contact-form.scss';
 
@@ -17,9 +17,18 @@ const ContactForm: FC = (): JSX.Element => {
                 </section>
                 <section className="splash-section">
                     <h4>Connect with our social medias</h4>
-                    <p>Our social media handles: @hackmerced</p>
+                    <p>Our handles: @hackmerced</p>
                 </section>
-                <section className="footer Footer-container">
+
+                <form className="splash-form">
+                    <h3>Message Us</h3>
+                    <input id="nameInput" placeholder="Full Name"></input>
+                    <input id="emailInput" placeholder="Email"></input>
+                    <textarea id="contenInput" placeholder="Message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+
+                {/* <section className="footer Footer-container">
                     <nav className="Footer-social">
                         <a
                             href="mailto:general@hackmerced.com?subject=HackMerced Questions&amp;body=Dear HackMerced,"
@@ -68,15 +77,8 @@ const ContactForm: FC = (): JSX.Element => {
                             <FontAwesomeIcon icon={faCode} className="fa" />
                         </a>
                     </nav>
-                </section>
+                </section> */}
             </div>
-            <form className="splash-form">
-                <h3>Message Us!</h3>
-                <input id="nameInput" placeholder="Full Name"></input>
-                <input id="emailInput" placeholder="Email"></input>
-                <textarea id="contenInput" placeholder="Message"></textarea>
-                <button type="submit">Send</button>
-            </form>
         </main>
     );
 };

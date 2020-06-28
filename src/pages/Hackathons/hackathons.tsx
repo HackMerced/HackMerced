@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Navbar1 from '../../components/NavBar-White/navbar-white';
+import Navbar1 from '../../components/NavBar-Orange/navbar';
 import SuccessV from '../../components/Success-V/success-v';
 import HackMercedV from '../../components/HackMerced-V/hackmerced-v';
 import SuccessIV from '../../components/Success-IV/success-iv';
