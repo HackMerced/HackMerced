@@ -1,31 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import HMLOGO from '../../assets/images/hackmerced-logo.png';
+import HMTITLE from '../../assets/images/placeholder-title.png';
+import HMTOWER from '../../assets/images/placeholder-tower.png';
 
 import './title.scss';
 
-const styles = {
-    width: '100px',
-    height: '90px',
+const styles2 = {
+    width: '400px',
+    height: '175px',
+};
+const styles3 = {
+    width: '650px',
+    height: '705px',
 };
 
 const Title: React.FC = () => {
     return (
         <section className="TITLE t-wave">
-            <div className="hackmerced-logo">
-                <Link to="/">
-                    {' '}
-                    <img src={HMLOGO} style={styles} alt="HACKMERCED LOGO" />
-                </Link>
+            <div className="hackmerced-title">
+                <img src={HMTITLE} style={styles2} alt="HACKMERCED TITLE" />
             </div>
-            <div className="font-black TITLE-TEXT">
+            {/* <div className="font-black TITLE-TEXT">
                 HackMerced <br />{' '}
-            </div>
+            </div> */}
             <div className="title-subtext text-gray-100 ">The biggest San Joaquin Valley hackathon.</div>
             <button className="bg-white text-black BUTTON font-bold">Subscribe</button>
-            <div className="wrapper">
-                <div className="wave-top"></div>
-                <div className="wave-bottom"></div>
+            <div className="hackmerced-tower">
+                <img src={HMTOWER} style={styles3} alt="HACKMERCED TITLE" />
             </div>
         </section>
     );
