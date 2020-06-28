@@ -1,0 +1,149 @@
+.contact-body {
+    flex-direction: row;
+    justify-content: center;
+    margin: 2% 0;
+
+    @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
+        flex-direction: column;
+
+        margin: 0 auto;
+    }
+
+    .splash-content {
+        .Header {
+            font-size: 54px;
+            line-height: 1.5em;
+            text-align: center;
+            margin: 0% auto auto auto;
+            color: black;
+            font-weight: bolder;
+            overflow: hidden;
+        }
+
+        .splash-section {
+            display: block;
+            margin-bottom: 2rem;
+
+            h4 {
+                font-size: 20px;
+                text-align: center;
+                margin: 2% auto auto auto;
+                font-weight: bold;
+                color: black;
+                text-align: center;
+            }
+
+            p {
+                display: block;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                color: black;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
+            margin: 0;
+            margin-bottom: 2rem;
+
+            h1 {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .splash-form {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding: 3rem;
+        background-image: linear-gradient(#ffb181, #ffb26e);
+        border-radius: 2rem;
+        margin: 0% 0% 5% 10%;
+        @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-weight: bolder;
+            font-size: 20px;
+            margin-bottom: 1rem;
+        }
+
+        input,
+        textarea {
+            padding: 0 1rem;
+            margin: 1rem 0;
+            height: calc(2.5rem - 8px);
+            box-shadow: 8px 8px 10px #e9925b, -8px -8px 10px #faae7f;
+            border-radius: 0.75rem;
+            color: black;
+            font-size: 18px;
+        }
+
+        textarea {
+            flex: 1;
+            padding: 0.5rem 1rem;
+        }
+
+        button {
+            padding: 0 1rem;
+            margin: 1rem 0;
+            height: 2.5rem;
+            font-size: 16px;
+            color: orange;
+            background: white;
+            border-radius: 0.75rem;
+            border: none;
+            box-shadow: 0px 3px 0px orange;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            box-shadow: 0 12px 16px 0 black;
+        }
+    }
+
+    .footer {
+        color: #ffb26e;
+        background-color: white;
+        min-height: 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 45px;
+      
+        text-align: center;
+     
+      
+        .fa {
+          color: #ffb26e;
+          font-size: 35px !important;
+          margin: 10px;
+          
+        }
+        .fa:hover{
+          -webkit-filter: brightness(20%);
+          -webkit-transition: all .5s ease;
+          -moz-transition: all .5s ease;
+          -o-transition: all .5s ease;
+          -ms-transition: all .5s ease;
+          transition: all .5s ease;
+        }
+      
+        .credits {
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          font-size: 16px;
+      
+          .copyright {
+            overflow: hidden;
+          }
+        }
+      }
+}

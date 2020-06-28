@@ -1,0 +1,108 @@
+.PAST-WINNERS {
+    .fa {
+        font-size: 55px;
+        margin: 25px;
+        min-height: 10vh;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        width: 100%;
+    }
+
+    tbody {
+        width: 120%;
+    }
+
+    .winner-title {
+        color: black;
+        text-align: center;
+        font-weight: bold;
+        font-size: 22px;
+        margin: 0% 0% 0% 12%;
+    }
+
+    .winner-group{
+        color: black;
+        text-align: center;
+        font-size: 17px;
+        margin: 0% 0% 10% 10%;
+ 
+    }
+
+    .Header {
+        padding: 3% 0% 2% 5%;
+        color: black;
+        font-weight: bold;
+
+        /* Media Queries taken from and edited: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+
+        /* Small devices (phones, portrait tablets, and large phones, 600px and up) */
+        @media only screen and (min-width: 300px) {
+            font-size: 20px;
+            .fa {
+                width: 100%;
+            }
+        
+            .tbody {
+                width: 100%;
+            }
+        
+            .winner-title {
+                width: 100%;
+            }
+        
+            .winner-group{
+                margin: 0% 0% 10% 0%;
+                width: 100%;
+            }
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            font-size: 25px;
+            .fa {
+                width: 50%;
+            }
+        
+            .tbody {
+                width: 100%;
+            }
+        
+            .winner-title {
+                width: 100%;
+            }
+        
+            .winner-group{
+                margin: 0% 0% 10% 0%;
+                width: 100%;
+            }
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            font-size: 35px;
+            .fa {
+                width: 120%;
+            }
+        
+            .tbody {
+                width: 100%;
+            }
+        
+            .winner-title {
+                width: 100%;
+            }
+        
+            .winner-group{
+                margin: 0% 0% 10% 0%;
+                width: 100%;
+            }
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            font-size: 40px;
+        }
+    }
+}
