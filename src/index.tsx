@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import { configure } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 
-import './index.css';
+import './index.scss';
+import './tailwind.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
