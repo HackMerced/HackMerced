@@ -10,14 +10,13 @@ const ContactForm: FC = (): JSX.Element => {
         <main className="contact-body">
             <div className="splash-content">
                 <section className="Header">
-                    <h1>Ways to contact us!</h1>
+                    <h1>Ways to contact us</h1>
                 </section>
                 <section className="splash-section">
                     <h4>Email us at general@hackmerced.com</h4>
                 </section>
                 <section className="splash-section">
-                    <h4>Connect with our social medias</h4>
-                    <p>Our handles: @hackmerced</p>
+                    <h4>Connect with our social medias: @hackmerced</h4>
                 </section>
 
                 <form className="splash-form">
