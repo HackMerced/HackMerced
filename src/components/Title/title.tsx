@@ -1,9 +1,7 @@
 import React from 'react';
+
 import HMTITLE from '../../assets/images/placeholder-title.png';
 import HMTOWER from '../../assets/images/tower.png';
-// import HMSTATUE from '../../assets/images/beginningsilustration.png';
-
-import HMLOGO from '../../assets/images/hackmerced-logo.png';
 import './title.scss';
 
 const styles2 = {
