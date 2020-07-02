@@ -32,6 +32,7 @@
         "@fortawesome/free-brands-svg-icons": "5.13.0",
         "@fortawesome/free-solid-svg-icons": "5.13.0",
         "@fortawesome/react-fontawesome": "0.1.9",
+        "axios": "0.19.2",
         "hover.css": "2.3.2",
         "node-sass": "4.14.1",
         "react": "16.13.0",
