@@ -1,6 +1,7 @@
 import React from 'react';
 import HMTITLE from '../../assets/images/placeholder-title.png';
-import HMTOWER from '../../assets/images/placeholder-tower.png';
+import HMTOWER from '../../assets/images/tower.png';
+// import HMSTATUE from '../../assets/images/beginningsilustration.png';
 
 import './title.scss';
 
@@ -9,10 +10,13 @@ const styles2 = {
     height: '175px',
 };
 const styles3 = {
-    width: '650px',
-    height: '705px',
+    width: '525px',
+    height: '1005px',
 };
-
+// const styles4 = {
+//     width: '350px',
+//     height: '405px',
+// };
 const Title: React.FC = () => {
     return (
         <section className="TITLE ">
@@ -39,6 +43,9 @@ const Title: React.FC = () => {
             <div className="hackmerced-tower">
                 <img src={HMTOWER} style={styles3} alt="HACKMERCED TITLE" />
             </div>
+            {/* <div className="hackmerced-statue">
+                <img src={HMSTATUE} style={styles4} alt="HACKMERCED STATUE" />
+            </div> */}
         </section>
     );
 };
