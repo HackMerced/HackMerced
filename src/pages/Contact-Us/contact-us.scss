@@ -1,0 +1,56 @@
+.contact-body {
+    flex-direction: row;
+    justify-content: center;
+    margin: 2% 0;
+
+    @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
+        flex-direction: column;
+
+        margin: 0 auto;
+    }
+
+    .splash-content {
+        .Header {
+            font-size: 54px;
+            line-height: 1.5em;
+            text-align: center;
+            margin: 0% auto auto auto;
+            color: black;
+            font-weight: bolder;
+            overflow: hidden;
+        }
+
+        .splash-section {
+            display: block;
+            margin-bottom: 2rem;
+
+            h4 {
+                font-size: 20px;
+                text-align: center;
+                margin: 1% auto auto auto;
+                font-weight: bold;
+                color: black;
+                text-align: center;
+            }
+
+            p {
+                display: block;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                color: black;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
+            margin: 0;
+            margin-bottom: 2rem;
+
+            h1 {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
