@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
                             className="inline-block rounded font-bold hover:text-black hover:bg-white py-2 px-3 text-gray-100 "
                             to="sponsors"
                         >
-                            SPONSOR US
+                            SPONSORS
                         </Link>
                     </li>
                     <li>
