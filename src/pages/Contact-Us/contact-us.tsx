@@ -4,6 +4,8 @@ import NavbarOrange from '../../components/NavBar-Orange/navbar';
 import Form from '../../components/Form/Form';
 import Footer from '../../components/Footer/footer';
 
+import './contact-us.scss';
+
 const ContactUs: FC = (): JSX.Element => {
     return (
         <>
