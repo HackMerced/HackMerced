@@ -12,12 +12,12 @@ class Form extends Component<FormProps, FormState> {
         message: '',
     };
 
-    constructor(props: Readonly<FormProps>) {
+    private constructor(props: Readonly<FormProps>) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleSubmit(event: React.ChangeEvent<HTMLFormElement>): void {
+    private handleSubmit(event: React.ChangeEvent<HTMLFormElement>): void {
         event.preventDefault();
 
         Axios({
@@ -34,14 +34,14 @@ class Form extends Component<FormProps, FormState> {
         });
     }
 
-    resetForm(): void {
+    private resetForm(): void {
         const reset = !this.props.askCompany
             ? { name: '', email: '', message: '' }
             : { name: '', company: '', email: '', message: '' };
         this.setState(reset);
     }
 
-    render(): JSX.Element {
+    public render(): JSX.Element {
         const { name, email, message } = this.state;
         const { formTitle, askCompany } = this.props;
 
@@ -49,6 +49,7 @@ class Form extends Component<FormProps, FormState> {
             <form className="splash-form" onSubmit={this.handleSubmit}>
                 <h3>{formTitle}</h3>
                 <div className="input-wrapper">
+                    <label htmlFor="name">Name</label>
                     <input
                         id="name"
                         required
@@ -58,10 +59,10 @@ class Form extends Component<FormProps, FormState> {
                             this.setState({ name: event.target.value });
                         }}
                     />
-                    <label htmlFor="name">user name</label>
                 </div>
                 {askCompany ? (
                     <div className="input-wrapper">
+                        <label htmlFor="company">Company</label>
                         <input
                             id="company"
                             required
@@ -71,23 +72,22 @@ class Form extends Component<FormProps, FormState> {
                                 this.setState({ name: event.target.value });
                             }}
                         />
-                        <label htmlFor="company">user name</label>
                     </div>
                 ) : null}
                 <div className="input-wrapper">
+                    <label htmlFor="email">Email</label>
                     <input
                         id="email"
                         required
                         placeholder="Email"
-                        aria-describedby="emailHelp"
                         value={email}
                         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                             this.setState({ email: event.target.value });
                         }}
                     />
-                    <label htmlFor="email">user name</label>
                 </div>
                 <div className="input-wrapper">
+                    <label htmlFor="message">Message</label>
                     <textarea
                         id="message"
                         required
@@ -98,7 +98,6 @@ class Form extends Component<FormProps, FormState> {
                             this.setState({ message: event.target.value });
                         }}
                     />
-                    <label htmlFor="message">user name</label>
                 </div>
                 <button type="submit">Send</button>
             </form>
