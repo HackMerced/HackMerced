@@ -19,33 +19,35 @@
     }
 
     .input-wrapper {
-        position: relative;
-        line-height: 14px;
-        margin: 0 10px;
-        display: inline-block;
+      display: flex;
+      flex-direction: column;
+        // position: relative;
+        // line-height: 14px;
+        // margin: 0 10px;
+        // display: inline-block;
 
-        label {
-          color: red;
-          font-size: 11px;
-          text-transform: uppercase;
-          position: absolute;
-          z-index: 2;
-          left: 20px;
-          top: 14px;
-          padding: 0 2px;
-          pointer-events: none;
-          background: #fff;
-          -webkit-transition: -webkit-transform 100ms ease;
-          -moz-transition: -moz-transform 100ms ease;
-          -o-transition: -o-transform 100ms ease;
-          -ms-transition: -ms-transform 100ms ease;
-          transition: transform 100ms ease;
-          -webkit-transform: translateY(-20px);
-          -moz-transform: translateY(-20px);
-          -o-transform: translateY(-20px);
-          -ms-transform: translateY(-20px);
-          transform: translateY(-20px);
-      }
+        //   label {
+        //     color: red;
+        //     font-size: 11px;
+        //     text-transform: uppercase;
+        //     position: absolute;
+        //     z-index: 2;
+        //     left: 20px;
+        //     top: 14px;
+        //     padding: 0 2px;
+        //     pointer-events: none;
+        //     background: #fff;
+        //     -webkit-transition: -webkit-transform 100ms ease;
+        //     -moz-transition: -moz-transform 100ms ease;
+        //     -o-transition: -o-transform 100ms ease;
+        //     -ms-transition: -ms-transform 100ms ease;
+        //     transition: transform 100ms ease;
+        //     -webkit-transform: translateY(-20px);
+        //     -moz-transform: translateY(-20px);
+        //     -o-transform: translateY(-20px);
+        //     -ms-transform: translateY(-20px);
+        //     transform: translateY(-20px);
+        // }
 
         input,
         textarea {
@@ -56,9 +58,9 @@
             border-radius: 0.75rem;
             color: black;
             font-size: 18px;
-            outline: none;
-            border: 1px solid #bbb;
-            position: relative;
+            // outline: none;
+            // border: 1px solid #bbb;
+            // position: relative;
         }
 
         textarea {
@@ -66,29 +68,29 @@
             padding: 0.5rem 1rem;
         }
 
-        input:invalid + label,
-        textarea:invalid + label {
-            -webkit-transform: translateY(0);
-            -moz-transform: translateY(0);
-            -o-transform: translateY(0);
-            -ms-transform: translateY(0);
-            transform: translateY(0);
-        }
+        // input:invalid + label,
+        // textarea:invalid + label {
+        //     -webkit-transform: translateY(0);
+        //     -moz-transform: translateY(0);
+        //     -o-transform: translateY(0);
+        //     -ms-transform: translateY(0);
+        //     transform: translateY(0);
+        // }
 
-        input:focus,
-        textarea:focus {
-            border-color: #2b96f1;
-        }
+        // input:focus,
+        // textarea:focus {
+        //     border-color: #2b96f1;
+        // }
 
-        input:focus + label,
-        textarea:focus + label {
-            color: #2b96f1;
-            -webkit-transform: translateY(-20px);
-            -moz-transform: translateY(-20px);
-            -o-transform: translateY(-20px);
-            -ms-transform: translateY(-20px);
-            transform: translateY(-20px);
-        }
+        // input:focus + label,
+        // textarea:focus + label {
+        //     color: #2b96f1;
+        //     -webkit-transform: translateY(-20px);
+        //     -moz-transform: translateY(-20px);
+        //     -o-transform: translateY(-20px);
+        //     -ms-transform: translateY(-20px);
+        //     transform: translateY(-20px);
+        // }
     }
 
     button {
