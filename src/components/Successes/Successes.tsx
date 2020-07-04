@@ -17,10 +17,11 @@ const Successes: FC<SuccessesProps> = (props): JSX.Element => {
     return (
         <section className="SUCCESS">
             <div className="font-black hackathons-title">
-                HackMerced {iteration}<br />
+                HackMerced {iteration}
+                <br />
             </div>
             <div className="wrapper clearfix center">
-                <div className="card ">
+                <div className="card card1">
                     <h1>{hoursOfHacking}</h1>
                     <h2>hours of hacking</h2>
                 </div>
