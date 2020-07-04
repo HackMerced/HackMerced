@@ -1,13 +1,5 @@
-import React, { FC } from 'react';
-
-import Navbar from '../../components/NavBar/navbar';
-import SuccessV from '../../components/Success-V/success-v';
-import SuccessIV from '../../components/Success-IV/success-iv';
-import SuccessIII from '../../components/Success-III/success-iii';
-import SuccessII from '../../components/Success-II/success-ii';
-import Success from '../../components/Success/success';
-import Footer from '../../components/Footer/footer';
-import PastHackathonsGallery from '../../components/PastHackathonsGallery/PastHackathonsGallery';
+import { storiesOf } from '@storybook/react';
+import * as React from 'react';
 
 // HackMerced I
 import CHECKIN from '../../assets/images/checkin.jpg';
@@ -49,23 +41,30 @@ import SPONSORSV from '../../assets/images/sponsors-v.jpg';
 import HEALTHWINNER from '../../assets/images/health2.jpg';
 import SHUBAWARD from '../../assets/images/shub-award.jpg';
 
-const Home: FC = (): JSX.Element => {
-    return (
-        <main>
-            <Navbar />
-            <SuccessV />
-            <PastHackathonsGallery iteration={"V"} images={[HACKERS, HMFOODV, CITRIS, SPONSORSV, HEALTHWINNER, SHUBAWARD]} />
-            <SuccessIV />
-            <PastHackathonsGallery iteration={"IV"} images={[HACKING, PRESENTER, PRESENTATIONS, HACKIV, JUDGES, AWARDS]} />
-            <SuccessIII />
-            <PastHackathonsGallery iteration={"III"} images={[MLHCUPSTACK, WINNERSIII, AWARDSIII, PRIZES, JUDGESIII, REDBULL]} />
-            <SuccessII />
-            <PastHackathonsGallery iteration={"II"} images={[SPEAKERII, HACKERSII, COLLABORATION, CHECKINGINII, MLHII, SPONSORSII]} />
-            <Success />
-            <PastHackathonsGallery iteration={null} images={[CHECKIN, HMFOOD, MACHINE, TEACHING, OLDTEAM, TUTOR]} />
-            <Footer />
-        </main>
-    );
-};
+import PastHackathonsGallery from './PastHackathonsGallery';
 
-export default Home;
+storiesOf('Past Hackathons Gallery', module)
+    .add('HackMerced I', () => (
+        <PastHackathonsGallery iteration={null} images={[CHECKIN, HMFOOD, MACHINE, TEACHING, OLDTEAM, TUTOR]} />
+    ))
+    .add('HackMerced II', () => (
+        <PastHackathonsGallery
+            iteration={'II'}
+            images={[SPEAKERII, HACKERSII, COLLABORATION, CHECKINGINII, MLHII, SPONSORSII]}
+        />
+    ))
+    .add('HackMerced III', () => (
+        <PastHackathonsGallery
+            iteration={'III'}
+            images={[MLHCUPSTACK, WINNERSIII, AWARDSIII, PRIZES, JUDGESIII, REDBULL]}
+        />
+    ))
+    .add('HackMerced IV', () => (
+        <PastHackathonsGallery iteration={'IV'} images={[HACKING, PRESENTER, PRESENTATIONS, HACKIV, JUDGES, AWARDS]} />
+    ))
+    .add('HackMerced V', () => (
+        <PastHackathonsGallery
+            iteration={'V'}
+            images={[HACKERS, HMFOODV, CITRIS, SPONSORSV, HEALTHWINNER, SHUBAWARD]}
+        />
+    ));
