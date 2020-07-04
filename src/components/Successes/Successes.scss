@@ -4,7 +4,6 @@
     background-size: cover;
     overflow: hidden;
 
-
     .hackathons-title {
         font-size: 45px;
         line-height: 1em;
@@ -25,9 +24,11 @@
         width: 280px;
         border-radius: 10%;
     }
+    
     .wrapper {
         text-align: center;
     }
+
     .card2 {
         display: inline-block;
     }
@@ -35,6 +36,7 @@
     .card4 {
         display: inline-block;
     }
+
     .wrapper h2 {
         margin: 0;
         padding: 0;
@@ -42,6 +44,7 @@
         color: white;
         margin: 6% auto auto auto;
     }
+
     .wrapper h1 {
         margin: 0;
         padding: 0;

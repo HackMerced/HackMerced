@@ -1,13 +1,9 @@
 import React, { FC } from 'react';
 
 import Navbar from '../../components/NavBar/navbar';
-import SuccessV from '../../components/Success-V/success-v';
-import SuccessIV from '../../components/Success-IV/success-iv';
-import SuccessIII from '../../components/Success-III/success-iii';
-import SuccessII from '../../components/Success-II/success-ii';
-import Success from '../../components/Success/success';
 import Footer from '../../components/Footer/footer';
 import PastHackathonsGallery from '../../components/PastHackathonsGallery/PastHackathonsGallery';
+import Successes from '../../components/Successes/Successes';
 
 // HackMerced I
 import CHECKIN from '../../assets/images/checkin.jpg';
@@ -53,15 +49,67 @@ const Home: FC = (): JSX.Element => {
     return (
         <main>
             <Navbar />
-            <SuccessV />
-            <PastHackathonsGallery iteration={"V"} images={[HACKERS, HMFOODV, CITRIS, SPONSORSV, HEALTHWINNER, SHUBAWARD]} />
-            <SuccessIV />
-            <PastHackathonsGallery iteration={"IV"} images={[HACKING, PRESENTER, PRESENTATIONS, HACKIV, JUDGES, AWARDS]} />
-            <SuccessIII />
-            <PastHackathonsGallery iteration={"III"} images={[MLHCUPSTACK, WINNERSIII, AWARDSIII, PRIZES, JUDGESIII, REDBULL]} />
-            <SuccessII />
-            <PastHackathonsGallery iteration={"II"} images={[SPEAKERII, HACKERSII, COLLABORATION, CHECKINGINII, MLHII, SPONSORSII]} />
-            <Success />
+            <Successes
+                iteration={'V'}
+                hoursOfHacking={36}
+                numberOfAttendees={400}
+                projectsSubmitted={35}
+                numberOfPrizes={15}
+                numberOfWorkshops={10}
+                numberOfSponsors={25}
+            />
+            <PastHackathonsGallery
+                iteration={'V'}
+                images={[HACKERS, HMFOODV, CITRIS, SPONSORSV, HEALTHWINNER, SHUBAWARD]}
+            />
+              <Successes
+                iteration={'IV'}
+                hoursOfHacking={36}
+                numberOfAttendees={500}
+                projectsSubmitted={34}
+                numberOfPrizes={5}
+                numberOfWorkshops={8}
+                numberOfSponsors={20}
+            />
+            <PastHackathonsGallery
+                iteration={'IV'}
+                images={[HACKING, PRESENTER, PRESENTATIONS, HACKIV, JUDGES, AWARDS]}
+            />
+             <Successes
+                iteration={'III'}
+                hoursOfHacking={36}
+                numberOfAttendees={500}
+                projectsSubmitted={32}
+                numberOfPrizes={5}
+                numberOfWorkshops={8}
+                numberOfSponsors={15}
+            />
+            <PastHackathonsGallery
+                iteration={'III'}
+                images={[MLHCUPSTACK, WINNERSIII, AWARDSIII, PRIZES, JUDGESIII, REDBULL]}
+            />
+              <Successes
+                iteration={'II'}
+                hoursOfHacking={36}
+                numberOfAttendees={400}
+                projectsSubmitted={33}
+                numberOfPrizes={5}
+                numberOfWorkshops={8}
+                numberOfSponsors={15}
+            />
+            <PastHackathonsGallery
+                iteration={'II'}
+                images={[SPEAKERII, HACKERSII, COLLABORATION, CHECKINGINII, MLHII, SPONSORSII]}
+            />
+            <Successes
+                iteration={null}
+                hoursOfHacking={36}
+                numberOfAttendees={200}
+                projectsSubmitted={20}
+                numberOfPrizes={2}
+                numberOfWorkshops={8}
+                numberOfSponsors={10}
+            />
             <PastHackathonsGallery iteration={null} images={[CHECKIN, HMFOOD, MACHINE, TEACHING, OLDTEAM, TUTOR]} />
             <Footer />
         </main>
