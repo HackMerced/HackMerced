@@ -1,25 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import HMLOGO from '../../assets/images/hackmerced-logo.png';
+
 import MLHBANNER from '../../assets/images/mlh-badge.svg';
-
 import './navbar.scss';
-
-const styles = {
-    width: '100px',
-    height: '175px',
-};
-
-// const styles1 = {
-//     width: '100px',
-//     height: '90px',
-// };
 
 const Navbar: React.FC = () => {
     return (
         <nav className="NAVBAR sticky flex">
             <div className="MLH-banner">
-                <img className="MLH" src={MLHBANNER} style={styles} alt="MLH BANNER" />
+                <img className="MLH" src={MLHBANNER} width="100" height="175" alt="MLH BANNER" />
             </div>
             <div className="NAVTEXT block flex-auto ">
                 <ul className="flex float-right">
