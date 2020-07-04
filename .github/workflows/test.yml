@@ -1,6 +1,6 @@
 name: Test CI
 
-on: 
+on:
   pull_request:
     branches:
       - develop
@@ -25,12 +25,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Ensure a clean branch
-      run: |
-        echo 'Cleaning repo before executing test scripts...'
-        yarn clean
-
-    - name: Install Dependencies 
+    - name: Install Dependencies
       run: |
         echo 'Running Setup...'
         yarn install
