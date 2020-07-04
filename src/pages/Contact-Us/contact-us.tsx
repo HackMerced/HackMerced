@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import NavbarOrange from '../../components/NavBar-Orange/navbar';
+import NavbarOrange from '../../components/NavBar/navbar';
 import Form from '../../components/Form/Form';
 import Footer from '../../components/Footer/footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

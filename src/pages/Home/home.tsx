@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Title from '../../components/Title/title';
-import Navbar from '../../components/NavBar-Orange/navbar';
+import Navbar from '../../components/NavBar/navbar';
 import About from '../../components/About Us/about';
 import PastWinners from '../../components/Past-Winners/past-winners';
 import TeamPics from '../../components/TeamPics/teampics';
