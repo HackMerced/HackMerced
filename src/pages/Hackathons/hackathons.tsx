@@ -62,7 +62,7 @@ const Home: FC = (): JSX.Element => {
                 iteration={'V'}
                 images={[HACKERS, HMFOODV, CITRIS, SPONSORSV, HEALTHWINNER, SHUBAWARD]}
             />
-              <Successes
+            <Successes
                 iteration={'IV'}
                 hoursOfHacking={36}
                 numberOfAttendees={500}
@@ -75,7 +75,7 @@ const Home: FC = (): JSX.Element => {
                 iteration={'IV'}
                 images={[HACKING, PRESENTER, PRESENTATIONS, HACKIV, JUDGES, AWARDS]}
             />
-             <Successes
+            <Successes
                 iteration={'III'}
                 hoursOfHacking={36}
                 numberOfAttendees={500}
@@ -88,7 +88,7 @@ const Home: FC = (): JSX.Element => {
                 iteration={'III'}
                 images={[MLHCUPSTACK, WINNERSIII, AWARDSIII, PRIZES, JUDGESIII, REDBULL]}
             />
-              <Successes
+            <Successes
                 iteration={'II'}
                 hoursOfHacking={36}
                 numberOfAttendees={400}
