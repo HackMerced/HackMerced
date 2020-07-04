@@ -1,12 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+// import HMLOGO from '../../assets/images/hackmerced-logo.png';
 import MLHBANNER from '../../assets/images/mlh-badge.svg';
+
 import './navbar.scss';
+
+const styles = {
+    width: '100px',
+    height: '175px',
+};
+
+// const styles1 = {
+//     width: '100px',
+//     height: '90px',
+// };
 
 const Navbar: React.FC = () => {
     return (
         <nav className="NAVBAR sticky flex">
+            <div className="MLH-banner">
+                <img className="MLH" src={MLHBANNER} style={styles} alt="MLH BANNER" />
+            </div>
             <div className="NAVTEXT block flex-auto ">
                 <ul className="flex float-right">
                     <li className="mr-3 active">
@@ -26,33 +40,30 @@ const Navbar: React.FC = () => {
                         </a>
                     </li> */}
                     <li className="mr-3">
-                        <a
+                        <Link
                             className="inline-block rounded font-bold hover:text-black hover:bg-white py-2 px-3 text-gray-100 "
-                            href="http://localhost:3000/"
+                            to="past-hackathons"
                         >
                             PAST HACKATHONS
-                        </a>
+                        </Link>
                     </li>
                     <li className="mr-3">
-                        <a
+                        <Link
                             className="inline-block rounded font-bold hover:text-black hover:bg-white py-2 px-3 text-gray-100 "
-                            href="http://localhost:3000/"
+                            to="sponsors"
                         >
-                            SPONSOR US
-                        </a>
+                            SPONSORS
+                        </Link>
                     </li>
                     <li>
-                        <a
+                        <Link
                             className="inline-block rounded font-bold hover:text-black hover:bg-white py-2 px-3 text-gray-100 "
-                            href="http://localhost:3000/"
+                            to="contact-us"
                         >
                             CONTACT US
-                        </a>
+                        </Link>
                     </li>
                 </ul>
-            </div>
-            <div className="MLH-banner">
-                <img className="MLH" src={MLHBANNER} width="100px" height="175px" alt="MLH BANNER" />
             </div>
         </nav>
     );
