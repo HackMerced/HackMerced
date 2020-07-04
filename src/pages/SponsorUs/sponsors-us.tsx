@@ -14,11 +14,9 @@ const SponsorUs: FC = (): JSX.Element => {
             <NavbarOrange />
             <main className="sponsors-body">
                 <div className="sponsors-content">
-                    <section className="Header">
-                        <h1>
+                    <header>
                             Become a sponsor to empower and help <br></br> grow the next generation of HackMerced.
-                        </h1>
-                    </section>
+                    </header>
                     <section className="sponsors-section">
                         <a style={{ color: '#0000' }}>
                             <FontAwesomeIcon icon={faHeart} className="fa" />
