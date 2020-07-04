@@ -2,25 +2,27 @@ import React, { FC } from 'react';
 
 import TRUMAN from '../../assets/images/truman.jpg';
 import LORENZO from '../../assets/images/lorenzo.jpg';
-import MARY from '../../assets/images/mary2.jpg';
-import SHIV from '../../assets/images/shiv1.jpg';
-import ATHENA from '../../assets/images/athena2.jpg';
+import MARY from '../../assets/images/mary.jpg';
+import SHIV from '../../assets/images/shivanshu.jpg';
+import ATHENA from '../../assets/images/athena.jpg';
 import ADRIAN from '../../assets/images/adrian.jpg';
-import BUSHER from '../../assets/images/busher2.jpg';
-import TUZETTE from '../../assets/images/tuzette2.jpg';
-import MANJOT from '../../assets/images/manjot2.jpg';
-import KACEY from '../../assets/images/kc.jpg';
-import INTISER from '../../assets/images/Intiser3.png';
+import BUSHER from '../../assets/images/busher.jpg';
+import TUZETTE from '../../assets/images/tuzette.jpg';
+import MANJOT from '../../assets/images/manjot.jpg';
+import KACEY from '../../assets/images/kacey.jpg';
+import INTISER from '../../assets/images/Intiser.png';
 
 import './teampics.scss';
+import { TeamPicsState } from './teampics.types';
 
 /* Outline for this component largely taken from: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
 
-function teampics(team: Array<{ url: string; src: any }>): JSX.Element {
+function teampics(team: Array<TeamPicsState>): JSX.Element {
     let teamArray: Array<JSX.Element> = [];
 
-    team.forEach((member: { url: string; src: any }, index: number) => {
-        const name: string = member.src.split('/')[4].split('.')[0];
+    team.forEach((member: TeamPicsState, index: number) => {
+        const name: string = member.src.includes('/') ? member.src.split('/')[4].split('.')[0] : member.src.split('.')[0];
+
         teamArray.push(
             <li key={index}>
                 <div className="hexagon">
@@ -42,7 +44,7 @@ function teampics(team: Array<{ url: string; src: any }>): JSX.Element {
 }
 
 const TeamPics: FC = (): JSX.Element => {
-    const team: Array<{ url: string; src: any }> = [
+    const team: Array<TeamPicsState> = [
         {
             url: 'https://www.linkedin.com/in/trumanjfchan/',
             src: TRUMAN,
