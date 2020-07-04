@@ -2,7 +2,7 @@ import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 
-import App from './App';
+import Form from './Form';
 
 let container: HTMLDivElement;
 beforeEach(() => {
@@ -17,9 +17,16 @@ afterEach(() => {
     container.remove();
 });
 
-it('renders home page', () => {
+it('renders contact us form', () => {
     act(() => {
-        render(<App />, container);
+        render(<Form formTitle="Message Us" askCompany={false} />, container);
     });
-    expect(container.textContent).toContain('HackMerced');
+    expect(container.textContent).toContain('Message Us');
+});
+
+it('renders sponsor us form', () => {
+    act(() => {
+        render(<Form formTitle="Sponsor Us" askCompany={true} />, container);
+    });
+    expect(container.textContent).toContain('Sponsor Us');
 });
