@@ -5,9 +5,34 @@ import { faFacebook, faInstagram, faGithub, faSlack } from '@fortawesome/free-br
 
 import './footer.scss';
 
+// function generateBalls(): void {
+//     for (const i = 0; i < Math.floor(window.innerWidth / 20); i++) {
+//         $('.gooey-animations').append(`
+//       <div class="ball"></div>
+//     `);
+//         let colors = ['#28323B', '#FFA036'];
+//         $('.ball')
+//             .eq(i)
+//             .css({
+//                 bottom: '0px',
+//                 left: Math.random() * window.innerWidth - 100,
+//                 'animation-delay': Math.random() * 5 + 's',
+//                 transform: 'translateY(' + Math.random() * 10 + 'px)',
+//                 'background-color': colors[i % 2],
+//             });
+//     }
+// }
+// generateBalls();
+
+// window.addEventListener('resize', function(e) {
+//     $('.gooey-animations .ball').remove();
+//     generateBalls();
+// });
+
 const Footer: FC = () => {
     return (
         <footer className="footer">
+            <div className="gooey-animations"></div>
             <section className="Footer-container">
                 <nav className="Footer-social">
                     <a
