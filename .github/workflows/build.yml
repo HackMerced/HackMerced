@@ -1,6 +1,6 @@
 name: Build CI
 
-on: 
+on:
   pull_request:
     branches:
       - develop
@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [11.x]
+        node-version: [12.x]
         os: [ubuntu-latest]
 
     steps:
@@ -24,17 +24,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Ensure a clean branch
-      run: |
-        echo 'Cleaning repo before executing build script...'
-        yarn clean
-
-    - name: Install Dependencies 
+    - name: Install Dependencies
       run: |
         echo 'Running Setup...'
         yarn install
 
-    - name: Build React Application
+    - name: Build HackMerced Hub
       run: |
-        echo 'Building React Application...'
+        echo 'Building HackMerced Hub...'
         yarn build
