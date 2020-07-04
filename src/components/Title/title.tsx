@@ -39,7 +39,40 @@ const Title: React.FC = () => {
             <div className="title-text text-gray-100 ">
                 Stay updated with HackMerced and subscribe to our email list!
             </div>
-            <button className="bg-white text-black BUTTON font-bold">Subscribe</button>
+            <button
+                onClick={(): void => {
+                    window.location.href = '#popup3';
+                }}
+                className="bg-white text-black BUTTON font-bold"
+            >
+                Subscribe
+            </button>
+
+            <div id="popup3" className="overlay light">
+                <a className="cancel" href="#"></a>
+                <div className="popup1">
+                    <h3>HackMerced Mailing List</h3>
+                    <div className="formpopup1">
+                        <form>
+                            <div className="labels-form">
+                                <h2>Name</h2>
+                            </div>
+                            <input placeholder="Name" type="text" required></input>
+                            <br></br>
+                            <div className="labels-form">
+                                <h2>Email</h2>
+                            </div>
+                            <input placeholder="Email" type="email" required></input>
+                            <br></br>
+                            <div className="formbutton">
+                                <button className="button4">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <br></br>
+                    <br></br>
+                </div>
+            </div>
             <div className="hackmerced-tower">
                 <img src={HMTOWER} style={styles3} alt="HACKMERCED TITLE" />
             </div>
