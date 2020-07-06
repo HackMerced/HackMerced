@@ -17,15 +17,15 @@
     .MLH-banner {
         width: 170px;
         height: 50px;
-        position: fixed;
-        margin: 0% 0% 0% .3%;
+        position: sticky;
+        margin: 0% 0% 0% 0.3%;
 
         @media only screen and (max-width: 420px) {
-          width: 60px;
+            width: 60px;
         }
     }
 
-    .MLH{
+    .MLH {
         position: -webkit-sticky;
         position: sticky;
     }
