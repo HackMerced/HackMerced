@@ -1,135 +1,41 @@
 .footer {
-    color: white;
-    background-color: #ffb26e;
-    min-height: 10vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    padding-bottom: 5px;
-    text-align: center;
- 
-  
-    .fa {
-      color: white;
-      font-size: 35px !important;
-      margin: 10px;
-      
-    }
-    .fa:hover{
-      -webkit-filter: brightness(20%);
-      -webkit-transition: all .5s ease;
-      -moz-transition: all .5s ease;
-      -o-transition: all .5s ease;
-      -ms-transition: all .5s ease;
-      transition: all .5s ease;
-    }
-  
-    .credits {
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      font-size: 16px;
-  
-      .copyright {
-        overflow: hidden;
-      }
-    }
+  color: white;
+  background-color: #ffb26e;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  padding-bottom: 5px;
+  text-align: center;
 
-    // Testing Animations
-    
-    svg {
-      width: 100vw;
-    }
-    
-    footer {
-      width: 100vw;
-      bottom: 0;
-      position: absolute;
-      left: 0;
-      display: flex;
-      align-items: flex-end;
-      padding-bottom: 3rem;
-      justify-content: center;
-      overflow: hidden;
-      position: absolute;
-      width: 100vw;
-      height: 400px;
-      bottom: 0;
-      filter: url("#goo");
-    }
-    footer h1 {
-      z-index: 2;
-      color: white;
-      font-family: "Ubuntu", sans-serif;
-      font-weight: lighter;
-      font-size: calc(2vmin + 8px);
-    }
-    footer h1 span {
-      font-weight: bold;
-      color: #FFA036;
-      text-shadow: 0 0 15px rgba(255, 160, 54, 0.4);
-    }
-    footer::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 225px;
-      clip-path: url("#wave");
-      background-color: #28323B;
-    }
-    @media only screen and (max-width: 700px) {
-      footer::after {
-        clip-path: none;
-        height: 150px;
-      }
-    }
-    footer .ball {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background-color: #28323B;
-      position: absolute;
-      animation: up 5s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
-    }
-    @media only screen and (max-width: 700px) {
-      footer .ball {
-        animation: up-small 5s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
-      }
-    }
-    
-    @keyframes up {
-      0% {
-        bottom: 0px;
-        width: 100px;
-        height: 100px;
-      }
-      50% {
-        bottom: 200px;
-      }
-      100% {
-        bottom: 0px;
-        width: 0px;
-        height: 0px;
-      }
-    }
-    @keyframes up-small {
-      0% {
-        bottom: 0px;
-        width: 100px;
-        height: 100px;
-      }
-      50% {
-        bottom: 150px;
-      }
-      100% {
-        bottom: 0px;
-        width: 0px;
-        height: 0px;
-      }
-    }
+
+  .fa {
+    color: white;
+    font-size: 35px !important;
+    margin: 10px;
     
   }
+  .fa:hover{
+    -webkit-filter: brightness(20%);
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+
+  .credits {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 16px;
+
+    .copyright {
+      overflow: hidden;
+    }
+  }
+
+  
+}
