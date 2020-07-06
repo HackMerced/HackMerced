@@ -22,7 +22,11 @@
 
         .sponsors-section {
             display: block;
-            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
 
             h4 {
                 font-size: 20px;
@@ -116,4 +120,12 @@
             color: white;
         }
     }
+
+    .fa {
+        color: #fdab78;
+        font-size: 35px !important;
+        margin: 10px;
+        
+        
+      }
 }
