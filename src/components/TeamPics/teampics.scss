@@ -1,16 +1,15 @@
 /* HEXAGON DESIGN code taken from and edited: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
 
 .TEAMPICTURE {
-  
     #grid {
         position: relative;
-        width: 70%; /* Scales original sizes */
+        width: 75%; /* Scales original sizes */
         margin: 0 auto;
         padding: 0 0 5% 0; /* Padding under Grid component (under last row of hexagons) */
     }
 
     .clear:after {
-        content: '';
+        content: "";
         display: block;
         clear: both;
     }
@@ -107,5 +106,9 @@
         @media only screen and (min-width: 1200px) {
             font-size: 40px;
         }
+    }
+
+    .CenterHexagons {
+        margin-left: 5.5%;
     }
 }
