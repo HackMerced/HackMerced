@@ -32,7 +32,13 @@ function teampics(team: Array<{ url: string; src: any; alt: string }>): JSX.Elem
         );
     });
 
-    return <ul id="grid" className="clear">{teamArray}</ul>;
+    return (
+        <ul id="grid" className="clear">
+            <div className="CenterHexagons">
+                {teamArray}
+            </div>
+        </ul>
+    );
 }
 
 const TeamPics: FC = (): JSX.Element => {
