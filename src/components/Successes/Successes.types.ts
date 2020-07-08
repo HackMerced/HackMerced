@@ -2,7 +2,7 @@ export type SuccessesProps = {
   hoursOfHacking: number;
   numberOfAttendees: number;
   projectsSubmitted: number;
-  numberOfPrizes: number;
+  amountOfPrizes: number;
   numberOfWorkshops: number;
   numberOfSponsors: number;
   iteration: string | null;
