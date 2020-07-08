@@ -10,7 +10,7 @@ storiesOf('Successes', module)
             hoursOfHacking={36}
             numberOfAttendees={200}
             projectsSubmitted={20}
-            numberOfPrizes={2}
+            amountOfPrizes={2}
             numberOfWorkshops={8}
             numberOfSponsors={10}
         />
@@ -21,7 +21,7 @@ storiesOf('Successes', module)
             hoursOfHacking={36}
             numberOfAttendees={400}
             projectsSubmitted={33}
-            numberOfPrizes={5}
+            amountOfPrizes={5}
             numberOfWorkshops={8}
             numberOfSponsors={15}
         />
@@ -32,7 +32,7 @@ storiesOf('Successes', module)
             hoursOfHacking={36}
             numberOfAttendees={500}
             projectsSubmitted={32}
-            numberOfPrizes={5}
+            amountOfPrizes={5}
             numberOfWorkshops={8}
             numberOfSponsors={15}
         />
@@ -43,7 +43,7 @@ storiesOf('Successes', module)
             hoursOfHacking={36}
             numberOfAttendees={500}
             projectsSubmitted={34}
-            numberOfPrizes={5}
+            amountOfPrizes={5}
             numberOfWorkshops={8}
             numberOfSponsors={20}
         />
@@ -54,7 +54,7 @@ storiesOf('Successes', module)
             hoursOfHacking={36}
             numberOfAttendees={400}
             projectsSubmitted={35}
-            numberOfPrizes={15}
+            amountOfPrizes={15}
             numberOfWorkshops={10}
             numberOfSponsors={25}
         />

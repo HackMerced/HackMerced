@@ -8,7 +8,7 @@ const Successes: FC<SuccessesProps> = (props): JSX.Element => {
         hoursOfHacking,
         numberOfAttendees,
         projectsSubmitted,
-        numberOfPrizes,
+        amountOfPrizes,
         numberOfWorkshops,
         numberOfSponsors,
         iteration,
@@ -36,7 +36,7 @@ const Successes: FC<SuccessesProps> = (props): JSX.Element => {
             </div>
             <div className="wrapper clearfix center">
                 <div className="card card4">
-                    <h1>{numberOfPrizes}k+</h1>
+                    <h1>{amountOfPrizes}k+</h1>
                     <h2>amount of prizes</h2>
                 </div>
                 <div className="card card5">

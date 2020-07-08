@@ -52,9 +52,9 @@ const Home: FC = (): JSX.Element => {
             <Successes
                 iteration={'V'}
                 hoursOfHacking={36}
-                numberOfAttendees={400}
+                numberOfAttendees={300}
                 projectsSubmitted={35}
-                numberOfPrizes={15}
+                amountOfPrizes={16}
                 numberOfWorkshops={10}
                 numberOfSponsors={25}
             />
@@ -65,11 +65,11 @@ const Home: FC = (): JSX.Element => {
             <Successes
                 iteration={'IV'}
                 hoursOfHacking={36}
-                numberOfAttendees={500}
+                numberOfAttendees={300}
                 projectsSubmitted={34}
-                numberOfPrizes={5}
+                amountOfPrizes={5}
                 numberOfWorkshops={8}
-                numberOfSponsors={20}
+                numberOfSponsors={13}
             />
             <PastHackathonsGallery
                 iteration={'IV'}
@@ -79,10 +79,10 @@ const Home: FC = (): JSX.Element => {
                 iteration={'III'}
                 hoursOfHacking={36}
                 numberOfAttendees={500}
-                projectsSubmitted={32}
-                numberOfPrizes={5}
+                projectsSubmitted={34}
+                amountOfPrizes={2}
                 numberOfWorkshops={8}
-                numberOfSponsors={15}
+                numberOfSponsors={7}
             />
             <PastHackathonsGallery
                 iteration={'III'}
@@ -91,10 +91,10 @@ const Home: FC = (): JSX.Element => {
             <Successes
                 iteration={'II'}
                 hoursOfHacking={36}
-                numberOfAttendees={400}
-                projectsSubmitted={33}
-                numberOfPrizes={5}
-                numberOfWorkshops={8}
+                numberOfAttendees={700}
+                projectsSubmitted={46}
+                amountOfPrizes={7.2}
+                numberOfWorkshops={1}
                 numberOfSponsors={15}
             />
             <PastHackathonsGallery
@@ -103,12 +103,12 @@ const Home: FC = (): JSX.Element => {
             />
             <Successes
                 iteration={null}
-                hoursOfHacking={36}
-                numberOfAttendees={200}
-                projectsSubmitted={20}
-                numberOfPrizes={2}
-                numberOfWorkshops={8}
-                numberOfSponsors={10}
+                hoursOfHacking={24}
+                numberOfAttendees={300}
+                projectsSubmitted={16}
+                amountOfPrizes={2.7}
+                numberOfWorkshops={0}
+                numberOfSponsors={7}
             />
             <PastHackathonsGallery iteration={null} images={[CHECKIN, HMFOOD, MACHINE, TEACHING, OLDTEAM, TUTOR]} />
             <Footer />
