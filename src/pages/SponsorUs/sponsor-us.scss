@@ -10,17 +10,12 @@
 
     .sponsors-content {
         header {
-            font-size: 54px;
             line-height: 1.5em;
             text-align: center;
             margin: 3% auto auto auto;
             color: black;
             font-weight: bolder;
             overflow: hidden;
-
-            @media only screen and (max-width: 420px) {
-              font-size: 36px;
-            }
         }
 
         .sponsors-section {
