@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import NavbarOrange from '../../components/NavBar/navbar';
+import Navbar from '../../components/NavBar/navbar';
 import Form from '../../components/Form/Form';
 import Footer from '../../components/Footer/footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,7 +11,7 @@ import './contact-us.scss';
 const ContactUs: FC = (): JSX.Element => {
     return (
         <>
-            <NavbarOrange />
+            <Navbar />
             <main className="contact-body">
                 <div className="splash-content">
                     <section className="Header">
