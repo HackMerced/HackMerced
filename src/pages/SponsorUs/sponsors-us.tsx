@@ -32,7 +32,7 @@ const SponsorUs: FC = (): JSX.Element => {
                         </p>
                     </section>
                     <section className="sponsors-section">
-                    <a style={{ color: '#0000' }}>
+                        <a style={{ color: '#0000' }}>
                             <FontAwesomeIcon icon={faHandshake} className="fa" />
                         </a>
                         <h4>Connect with our diverse hackers</h4>
