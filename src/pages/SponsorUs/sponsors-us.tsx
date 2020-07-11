@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import NavbarOrange from '../../components/NavBar/navbar';
+import Navbar from '../../components/NavBar/navbar';
 import Footer from '../../components/Footer/footer';
 import Form from '../../components/Form/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,11 +11,11 @@ import './sponsor-us.scss';
 const SponsorUs: FC = (): JSX.Element => {
     return (
         <>
-            <NavbarOrange />
+            <Navbar />
             <main className="sponsors-body">
                 <div className="sponsors-content">
                     <header className="text-3xl md:text-5xl">
-                            Become a sponsor to empower and help <br></br> grow the next generation of HackMerced.
+                        Become a sponsor to empower and help <br></br> grow the next generation of HackMerced.
                     </header>
                     <section className="sponsors-section">
                         <a style={{ color: '#000' }}>
@@ -30,7 +30,7 @@ const SponsorUs: FC = (): JSX.Element => {
                         </p>
                     </section>
                     <section className="sponsors-section">
-                    <a style={{ color: '#000' }}>
+                        <a style={{ color: '#000' }}>
                             <FontAwesomeIcon icon={faHandshake} className="fa" />
                         </a>
                         <h4>Connect with our diverse hackers</h4>
