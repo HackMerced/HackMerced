@@ -5,356 +5,320 @@
     background-size: cover;
     overflow: hidden;
 
-    .t-wave{
-      overflow: hidden;
+    .t-wave {
+        overflow: hidden;
+
+        .cloud {
+            background: #fff;
+            width: 200px;
+            height: 60px;
+            border-radius: 200px;
+            position: relative;
+            margin: 4% 0% 0% 0%;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                top: -15px;
+                left: 10px;
+                background: #fff;
+                width: 100px;
+                height: 80px;
+                border-radius: 100px;
+                -webkit-transform: rotate(30deg);
+                transform: rotate(30deg);
+                -moz-transform: rotate(30deg);
+            }
+
+            &:after {
+                width: 120px;
+                height: 120px;
+                top: -55px;
+                left: auto;
+                right: 15px;
+            }
+        }
+
+        .c1 {
+            animation: cloudMoving 18s linear infinite;
+            -webkit-animation: cloudMoving 18s linear infinite;
+            -moz-animation: cloudMoving 18s linear infinite;
+            -o-animation: cloudMoving 18s linear infinite;
+            left: 230px;
+        }
+
+        .c2 {
+            animation: cloudMoving 25s linear infinite;
+            -webkit-animation: cloudMoving 25s linear infinite;
+            -moz-animation: cloudMoving 25s linear infinite;
+            -o-animation: cloudMoving 25s linear infinite;
+            transform: scale(0.5);
+            -webkit-transform: scale(0.5);
+            -moz-transform: scale(0.5);
+            -o-transform: scale(0.5);
+            opacity: 0.5;
+            left: 400px;
+            top: -50px;
+        }
+
+        .c3 {
+            animation: cloudMoving 20s linear infinite;
+            -webkit-animation: cloudMoving 20s linear infinite;
+            -moz-animation: cloudMoving 20s linear infinite;
+            -o-animation: cloudMoving 20s linear infinite;
+            transform: scale(0.75);
+            -webkit-transform: scale(0.75);
+            -moz-transform: scale(0.75);
+            -o-transform: scale(0.75);
+            opacity: 0.75;
+            left: 380px;
+            top: -150px;
+        }
+
+        .c4 {
+            animation: cloudMoving 18s linear infinite;
+            -webkit-animation: cloudMoving 18s linear infinite;
+            -moz-animation: cloudMoving 18s linear infinite;
+            -o-animation: cloudMoving 18s linear infinite;
+            transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            opacity: 0.8;
+            left: 650px;
+            top: -120px;
+        }
+
+        .c5 {
+            animation: cloudMoving 22s linear infinite;
+            -webkit-animation: cloudMoving 22s linear infinite;
+            -moz-animation: cloudMoving 22s linear infinite;
+            -o-animation: cloudMoving 22s linear infinite;
+            transform: scale(0.7);
+            -webkit-transform: scale(0.7);
+            -moz-transform: scale(0.7);
+            -o-transform: scale(0.7);
+            opacity: 0.7;
+            left: 760px;
+            top: -150px;
+        }
+
+        @keyframes cloudMoving {
+            0% {
+                margin-left: 100%;
+            }
+            100% {
+                margin-left: -100%;
+            }
+        }
+
+        @-webkit-keyframes cloudMoving {
+            0% {
+                margin-left: 100%;
+            }
+            100% {
+                margin-left: -100%;
+            }
+        }
     }
-    .hackmerced-title {
-        margin: -38% auto auto 57%;
+
+    .hackmerced {
+        .hackmerced-title {
+            margin: -38% auto auto 57%;
+        }
+
+        .hackmerced-text {
+            font-size: 15px;
+            text-align: center;
+            margin: 1% auto auto 40%;
+            font-weight: medium;
+        }
+
+        .hackmerced-subtext {
+            font-size: 20px;
+            text-align: center;
+            margin: 2% auto auto 40%;
+            font-weight: bold;
+        }
+
+        button {
+            position: absolute;
+            text-transform: uppercase;
+            margin: 2% auto 0% 57%;
+            font-size: 20px;
+            font-weight: 4%;
+            width: 25%;
+            height: 5%;
+            border-radius: 20px;
+            transition: 0.2s all;
+            text-align: center;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                right: 5%;
+                width: 90%;
+                height: 5%;
+                opacity: 0;
+                box-shadow: 0 12px 16px 0 black;
+                transition: 0.2s all;
+                transition-delay: 0.1;
+                background: radial-gradient(ellipse at center, rgpa (0, 0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+                color: black;
+            }
+
+            &:hover:before {
+                opacity: 1;
+                transform: translateY(5px);
+            }
+
+            &:active {
+                background: linear-gradient(#fdab78, #faa55a);
+                color: white;
+            }
+        }
+
+        @media (max-width: 500px) {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+
+            &-title {
+                margin-top: -30%;
+            }
+
+            &-title,
+            &-subtext,
+            &-text {
+              width: 80%;
+            }
+
+            &-title,
+            &-subtext,
+            &-text,
+            button {
+                margin: 3% 0 !important;
+            }
+
+            button {
+                position: relative;
+                font-size: medium;
+            }
+        }
     }
+
+    // Form Popup
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        transition: opacity 200ms;
+        visibility: hidden;
+        opacity: 0;
+
+        &.light {
+            background: rgba(41, 40, 40, 0.9);
+        }
+
+        .cancel {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: default;
+        }
+
+        &:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .subscribe {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            margin: 50px auto;
+            padding: 0px;
+            background-image: linear-gradient(#ffb181, #ffb26e);
+            border: 1px solid #666;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            border-radius: 25px;
+
+            h3 {
+                display: flex;
+                color: white;
+                align-items: center;
+                justify-content: center;
+                margin: 5% 0% 5% 0%;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: Helvetica, Arial, sans-serif;
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                input {
+                    color: black;
+                    display: flex;
+                    border: none;
+                    border-color: black;
+                    box-shadow: none;
+                    padding: 0% 0% 0% 5%;
+                    border-radius: 25px;
+                    outline: none;
+                    background-position: 0 0;
+                }
+
+                .form-submit-button {
+                    background: white;
+                    color: #fe980f;
+                    border: 0px solid #aaa;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: all 0.2s ease-out;
+                    padding: 10px 30px 10px 30px;
+
+                    &:active {
+                        background: linear-gradient(#fdab78, #faa55a);
+                        color: white;
+                    }
+                }
+
+                input .form-submit-button {
+                    padding-bottom: 10px;
+                }
+            }
+
+            @media (max-width: 500px) {
+                width: 100%;
+            }
+        }
+
+        .light .subscribe {
+            border-color: #aaa;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+        }
+    }
+
     .hackmerced-tower {
         display: block;
         min-width: auto;
         min-height: auto;
         margin: -20% auto 0% 5%;
     }
-    .hackmerced-statue {
-      position: relative;
-      bottom: 77%;
-      left: 75%;
-  }
-
-    .TITLE-TEXT {
-        font-size: 54px;
-        line-height: 1em;
-        text-align: center;
-        margin: 10% auto auto auto;
-        color: white;
-        font-weight: bolder;
-        overflow: hidden;
-    }
-    .title-text {
-      font-size: 15px;
-      text-align: center;
-      margin: 1% auto auto 40%;
-      font-weight: medium;
-  }
-
-    .title-subtext {
-        font-size: 20px;
-        text-align: center;
-        margin: 2% auto auto 40%;
-        font-weight: bold;
-    }
-
-    .BUTTON{
-        position: absolute;
-        text-transform: uppercase;
-        margin: 2% auto 0% 57%;
-        font-size: 20px;
-        font-weight: 4%;
-        width: 25%;
-        height: 5%;
-        border-radius: 20px;
-        transition: .2s all;
-        text-align:center;
-    }
-
-    .BUTTON:before {
-        content: "";
-        position: absolute;
-        top: 100%;
-        right: 5%;
-        width: 90%;
-        height: 5%;
-        opacity: 0;
-        box-shadow: 0 12px 16px 0 black;
-       transition: .2s all;
-       transition-delay: 0.10;
-       background: radial-gradient(ellipse at center, rgpa (0,0,0,0, 0.45) 0%, rgba(0,0,0,0)100%);
-
-    }
-    .BUTTON:hover {
-        transform:translateY(-5px);
-        color: black;
-    }
-    .BUTTON:hover:before{
-        opacity:1;
-        transform:translateY(5px);
-    }
-    .BUTTON:active{
-      background:linear-gradient(#fdab78, #faa55a);
-      color: white;
-  }
-
-    // .cloud {
-	// 	width: 550px;
-	// 	height: 300px;
-	// 	left: -250px;
-	// 	position: absolute;
-	// 	background: transparent url('https://media.discordapp.net/attachments/708322953649193040/709058890733584484/p-trans.png') 0 0 no-repeat;
-	// }
-	
-	// .fcloud01 {
-	// 	top: 100px;
-	// 	z-index: 100;
-	// 	/*animation-name: drift;
-	// 	animation-duration: .25s;
-	// 	animation-timing-function: linear;
-	// 	animation-iteration-count: ifinite;*/
-
-	// 	animation: drift 25s linear infinite;
-	// }
-	
-	// .fcloud02 {
-	// 	top: 240px;
-	// 	z-index: 200;
-
-	// 	animation: drift 45s linear infinite; 
-	// }
-
-	// @keyframes drift {
-	// 	from {
-	// 		transform: translate(-255px);
-	// 	}
-
-	// 	to {
-	// 		transform: translateX(calc(100vw + 250px));
-    //     }
-    // }
-    
-    .cloud {
-        background: #fff;
-        width: 200px;
-        height: 60px;
-        border-radius: 200px;
-        position: relative;
-        margin: 4% 0% 0% 0%;
-      }
-      .cloud:before, .cloud:after {
-        content: '';
-        position: absolute;
-        top: -15px; left: 10px;
-        background: #fff;
-        width: 100px;
-        height: 80px;
-        border-radius: 100px;
-        -webkit-transform: rotate(30deg);
-        transform: rotate(30deg);
-        -moz-transform: rotate(30deg);
-          
-      }
-      .cloud:after {
-        width: 120px;
-        height: 120px;
-        top: -55px;
-        left: auto;
-        right: 15px;
-        
-      }
-      .c1 {
-        animation:  cloudMoving 18s linear infinite; 
-        -webkit-animation: cloudMoving 18s linear infinite; 
-        -moz-animation: cloudMoving 18s linear infinite; 
-        -o-animation: cloudMoving 18s linear infinite;
-        left: 230px;
-        
-      }
-      .c2 {
-          animation:cloudMoving 25s linear infinite ;
-        -webkit-animation: cloudMoving 25s linear infinite; 
-        -moz-animation: cloudMoving 25s linear infinite; 
-        -o-animation: cloudMoving 25s linear infinite; 
-        transform: scale(0.5);
-        -webkit-transform: scale(0.5);
-        -moz-transform: scale(0.5);
-        -o-transform: scale(0.5);
-        opacity: 0.5;
-        left: 400px;
-        top: -50px;
-      }
-      .c3 {
-          animation: cloudMoving 20s linear infinite ;
-        -webkit-animation: cloudMoving 20s linear infinite; 
-        -moz-animation: cloudMoving 20s linear infinite; 
-        -o-animation: cloudMoving 20s linear infinite; 
-        transform: scale(0.75);
-        -webkit-transform: scale(0.75);
-        -moz-transform: scale(0.75);
-        -o-transform: scale(0.75);
-        opacity: 0.75;
-        left: 380px;
-        top: -150px;
-      }
-      .c4 {
-          animation: cloudMoving 18s linear infinite;
-        -webkit-animation: cloudMoving 18s linear infinite; 
-        -moz-animation: cloudMoving 18s linear infinite; 
-        -o-animation: cloudMoving 18s linear infinite; 
-        transform: scale(0.8);
-        -webkit-transform: scale(0.8);
-        -moz-transform: scale(0.8);
-        -o-transform: scale(0.8);
-        opacity: 0.8;
-        left: 650px;
-        top: -120px;
-      }
-      .c5 {
-          animation: cloudMoving 22s linear infinite;
-        -webkit-animation: cloudMoving 22s linear infinite; 
-        -moz-animation: cloudMoving 22s linear infinite; 
-        -o-animation: cloudMoving 22s linear infinite; 
-        transform: scale(0.7);
-        -webkit-transform: scale(0.7);
-        -moz-transform: scale(0.7);
-        -o-transform: scale(0.7);
-        opacity: 0.7;
-        left: 760px;
-        top: -150px;
-      }
-      @keyframes cloudMoving {
-        0%{
-          margin-left: 100%;
-        }
-        100%{
-          margin-left: -100%;
-        }
-      }
-      @-webkit-keyframes cloudMoving {
-        0%{
-          margin-left: 100%;
-        }
-        100%{
-          margin-left: -100%;
-        }
-      }
-
-      // Form Popup
-
-      .button4{
-        background: white;
-         color:#FE980F;
-        border: 0px solid #aaa;
-         border-radius: 8px;
-        cursor: pointer;
-         transition: all 0.2s ease-out;
-        padding: 10px 30px 10px 30px;
-      }
-
-      .button4:active{
-        background: linear-gradient(#fdab78, #faa55a);
-        color: white;
-      }
-      
-       .overlay {
-         position: absolute;
-         top: 0;
-         bottom: 0;
-         left: 0;
-         right: 0;
-         background: rgba(0, 0, 0, 0.5);
-         transition: opacity 200ms;
-         visibility: hidden;
-         opacity: 0;
-      }
-       .overlay.light {
-         background: rgba(207, 206, 206, 0.9);
-      }
-       .overlay .cancel {
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         cursor: default;
-      }
-       .overlay:target {
-         visibility: visible;
-         opacity: 1;
-      }
-       .popup1 {
-         top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 27%;
-         margin: 50px auto;
-         padding: 0px;
-         background-image: linear-gradient(#ffb181, #ffb26e);;
-         border: 1px solid #666;
-        
-         box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-         position: fixed;
-         border-radius: 25px;
-      }
-       .light .popup1 {
-         border-color: #aaa;
-         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
-      }
-       .popup1 h3 {display: flex;
-         color: white;
-        align-items: center;
-        justify-content: center;
-         margin: 5% 0% 5% 0%;
-         font-size: 20px;
-         font-weight: bold;
-         font-family: Helvetica, Arial, sans-serif;
-      }
-       .popup1 .close {
-         position: absolute;
-         width: 20px;
-         height: 20px;
-         top: 20px;
-         right: 20px;
-         opacity: 0.8;
-         transition: all 200ms;
-         font-size: 24px;
-         font-weight: bold;
-         text-decoration: none;
-         color: #666;
-      }
-       .popup1 .close:hover {
-         opacity: 1;
-      }
-       .popup1 .content {
-         max-height: 400px;
-         overflow: auto;
-      }
-       .popup1 p {
-         margin: 0 0 1em;
-      }
-       .popup1 p:last-child {
-         margin: 0;
-      }
-       
-      .hamo{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #F39731;
-        border-radius: 0px 0px 8px 8px;
-      }
-      .formpopup1{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-      }
-      
-      
-      .formbutton{
-        padding-top: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;  
-      }
-      input{
-        color: black;
-        display: flex;
-        border: none;
-        border-color: black;
-        box-shadow: none;
-        padding: 0% 0% 0% 5%;
-        border-radius: 3%;
-          outline: none;
-          background-position: 0 0;
-      }
-      
-      
 }
