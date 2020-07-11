@@ -56,7 +56,7 @@ const Home: FC = (): JSX.Element => {
                 projectsSubmitted={35}
                 amountOfPrizes={16}
                 numberOfWorkshops={10}
-                numberOfSponsors={25}
+                numberOfSponsors={20}
             />
             <PastHackathonsGallery
                 iteration={'V'}
