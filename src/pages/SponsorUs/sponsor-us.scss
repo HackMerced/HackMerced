@@ -60,6 +60,23 @@
         }
     }
 
+    .past-sponsors {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        h1 {
+            text-align: center;
+            margin: 2% auto auto auto;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+        }
+    }
+
     .sponsors-form {
         display: flex;
         flex-direction: column;

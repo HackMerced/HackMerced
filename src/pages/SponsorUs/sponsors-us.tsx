@@ -5,6 +5,7 @@ import Footer from '../../components/Footer/footer';
 import Form from '../../components/Form/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faHandshake } from '@fortawesome/free-solid-svg-icons';
+import PASTSPONSORS from '../../assets/images/past-sponsors.png';
 
 import './sponsor-us.scss';
 
