@@ -15,13 +15,20 @@
     }
 
     .MLH-banner {
-        width: 170px;
         height: 50px;
         position: fixed;
-        margin: 0% 0% 0% 0.3%;
+        margin-left: 0.3%;
 
-        @media only screen and (max-width: 420px) {
+        @media (min-width: 100px) {
             width: 60px;
+        }
+
+        @media (min-width: 500px) {
+          width: 80px;
+        }
+
+        @media (min-width: 700px) {
+          width: 170px;
         }
     }
 
