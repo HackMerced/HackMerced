@@ -5,6 +5,10 @@
     background-size: cover;
     overflow: hidden;
 
+    @media (max-width: 700px) {
+      height: 600px;
+    }
+
     .t-wave {
         overflow: hidden;
 
@@ -184,14 +188,15 @@
             }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 700px) {
             display: flex;
             flex-flow: column wrap;
             justify-content: center;
             align-items: center;
+            margin-top: -50% !important;
 
             &-title {
-                margin-top: -30%;
+                margin: 3% 0 0 10% !important;
             }
 
             &-title,
@@ -200,7 +205,6 @@
               width: 80%;
             }
 
-            &-title,
             &-subtext,
             &-text,
             button {
@@ -304,7 +308,7 @@
                 }
             }
 
-            @media (max-width: 500px) {
+            @media (max-width: 700px) {
                 width: 100%;
             }
         }

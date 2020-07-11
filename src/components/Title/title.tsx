@@ -48,7 +48,7 @@ const Title: FC = (): JSX.Element => {
                     <br />
                 </article>
             </div>
-            {width > 500 ? (
+            {width > 700 ? (
                 <img src={HMTOWER} width="525" height="1005" alt="HACKMERCED TITLE" className="hackmerced-tower" />
             ) : null}
         </header>
