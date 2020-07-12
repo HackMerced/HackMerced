@@ -77,6 +77,80 @@
         margin-left: 0.4%;
     }
 
+    /* Small devices (phones, portrait tablets, and large phones, 850px and lower) */
+    @media only screen and (max-width: 850px) {
+        #grid {
+            position: relative;
+            width: 100%; /* Scales original sizes */
+            margin: 0 auto;
+            padding: 0 0 5% 0; /* Padding under Grid component (under last row of hexagons) */
+        }
+
+        /* Parallelogram */
+        #grid li {
+            list-style-type: none;
+            position: relative;
+            float: left;
+            width: 14.85714285714286%; /* Directly related to original hexagon size */
+            padding: 0% 0% 17% 0%; /* Directly related to original hexagon size */
+            -o-transform: rotate(-60deg) skewY(30deg);
+            -moz-transform: rotate(-60deg) skewY(30deg);
+            -webkit-transform: rotate(-60deg) skewY(30deg);
+            -ms-transform: rotate(-60deg) skewY(30deg);
+            transform: rotate(-60deg) skewY(30deg);
+            background: #fd005f;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+        #grid li:nth-child(1) { 
+            margin-left: 25%;
+        } 
+
+        /* Translates each child in the second row (starting child 5) to the right a little bit, and moves them down. */
+        #grid li:nth-child(5),
+        #grid li:nth-child(6),
+        #grid li:nth-child(7) {
+            margin-top: -3.2%;
+            margin-bottom: 0%;
+            -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+            -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+            -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+            -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+            transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        }
+        /* Translates each child in the second row (starting child 8) to the right a little bit, and moves them down. */
+        #grid li:nth-child(8),
+        #grid li:nth-child(9),
+        #grid li:nth-child(10),
+        #grid li:nth-child(11) {
+            margin-top: -3.2%;
+            margin-bottom: 0%;
+            -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+            -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+            -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+            -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+            transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        }
+
+        /* Aligns second and third rows into honeycomb style */
+        #grid li:nth-child(5) { 
+            margin-left: 25.5%;
+        } 
+        #grid li:nth-child(8) { 
+            margin-left: 17.5%;
+        } 
+
+        /* Child 7 was shifted to the right a little bit for some reason, so this fixes it. */
+        #grid li:nth-child(7) { 
+            margin-left: -0.05%;
+        } 
+
+        .CenterHexagons {
+            margin-right: 15.8%;
+        }
+    }
+
     .Header {
         padding: 3% 0% 2% 5%;
 
