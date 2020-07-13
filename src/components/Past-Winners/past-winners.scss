@@ -2,9 +2,15 @@ $titles: black;
 
 .PAST-WINNERS {
     .past-winners-title {
-        padding: 3% 0% 2% 5%;
+        padding: 3% 0% 2% 0%;
         font-weight: bold;
         color: $titles;
+        text-align: center;
+
+          /* Small devices (iphones, 350px and up) */
+          @media only screen and (min-width: 350px) {
+            font-size: 25px;
+        }
 
         /* Medium devices (landscape tablets, 768px and up) */
         @media only screen and (min-width: 768px) {

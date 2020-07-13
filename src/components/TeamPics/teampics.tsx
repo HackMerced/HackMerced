@@ -21,7 +21,9 @@ function teampics(team: Array<TeamPicsState>): JSX.Element {
     let teamArray: Array<JSX.Element> = [];
 
     team.forEach((member: TeamPicsState, index: number) => {
-        const name: string = member.src.includes('/') ? member.src.split('/')[4].split('.')[0] : member.src.split('.')[0];
+        const name: string = member.src.includes('/')
+            ? member.src.split('/')[4].split('.')[0]
+            : member.src.split('.')[0];
 
         teamArray.push(
             <li key={index}>
@@ -36,9 +38,7 @@ function teampics(team: Array<TeamPicsState>): JSX.Element {
 
     return (
         <ul id="grid" className="clear">
-            <div className="CenterHexagons">
-                {teamArray}
-            </div>
+            <div className="CenterHexagons">{teamArray}</div>
         </ul>
     );
 }

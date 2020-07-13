@@ -1,71 +1,107 @@
-.about {
-    text-decoration: bold;
-    line-height: 33px;
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+$titles: black;
+.ABOUT {
+    h1 {
+        padding: 3% 0% 2% 0%;
+        font-weight: bold;
+        color: $titles;
+        text-align: center;
 
-    @media (min-width: 1000px) {
-        flex-direction: row;
-    }
+        /* Small devices (iphones, 350px and up) */
+        @media only screen and (min-width: 350px) {
+          font-size: 25px;
+      }
 
-    &-description {
-        text-decoration: bold;
-        width: 69%;
-        flex-direction: column;
-
-        h1 {
-            font-weight: bolder;
-            margin: 2% 0 2% 35%;
-            font-size: x-large;
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            font-size: 35px;
         }
 
-        p {
-            text-align: left;
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            font-size: 35px;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            font-size: 35px;
+        }
+    }
+
+    .about {
+        line-height: 35px;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 1000px) {
+            flex-direction: row;
+        }
+
+        &-description {
+            text-decoration: bold;
+            flex-direction: column;
+            h1 {
+                font-weight: bolder;
+                margin: 3% 0 2% 0%;
+                text-align: center;
+            }
+
+            p {
+                text-align: left;
+
+                @media (min-width: 350px) {
+                  width: 80%;
+                  margin-left: 10%;
+                  font-size: 105%;
+              }
+
+                @media (min-width: 850px) {
+                    width: 70%;
+                    margin-left: 14%;
+                    font-size: 85%;
+                }
+
+                @media (min-width: 1270px) {
+                    width: 80%;
+                    margin-left: 16%;
+                    font-size: 135%;
+                }
+
+                @media (min-width: 1800px) {
+                    width: 80%;
+                    margin-left: 4%;
+                    font-size: 25px;
+                }
+            }
 
             @media (min-width: 850px) {
-                width: 70%;
-                margin-left: 14%;
+                width: 100%;
             }
 
             @media (min-width: 1270px) {
-              width: 80%;
-              margin-left: 15%;
-            }
-
-            @media (min-width: 1800px) {
-              width: 90%;
-              margin-left: 4%;
+                width: 50%;
             }
         }
 
-        @media (min-width: 850px) {
-          width: 100%;
-        }
+        .TEAMPICTURE {
+            width: 80%;
 
-        @media (min-width: 1270px) {
-          width: 50%;
-        }
-    }
+            @media (min-width: 600px) {
+                width: 70%;
+                margin-right: 2%;
+            }
 
-    .TEAMPICTURE {
-        width: 80%;
+            @media (min-width: 1000px) {
+                margin-top: 2%;
+                width: 50%;
+            }
 
-        @media (min-width: 600px) {
-            width: 70%;
-            margin-right: 2%;
-        }
-
-        @media (min-width: 1000px) {
-          margin-top: 2%;
-          width: 50%;
-        }
-
-        @media (min-width: 1270px) {
-          width: 50%;
-          max-width: 650px;
+            @media (min-width: 1270px) {
+                width: 50%;
+                max-width: 650px;
+            }
         }
     }
 }
