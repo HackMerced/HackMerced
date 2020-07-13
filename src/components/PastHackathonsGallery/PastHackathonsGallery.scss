@@ -6,13 +6,13 @@
         font-size: xx-large;
     }
 
-    .hackmerced-row {
+    .hackmerced-column {
         display: flex;
         flex-wrap: wrap;
         margin: 0 2%;
 
         /* Create four equal columns that sits next to each other */
-        .hackmerced-column {
+        .hackmerced-row {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;

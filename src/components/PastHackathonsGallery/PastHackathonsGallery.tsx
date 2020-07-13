@@ -9,13 +9,13 @@ const PastHackathonsGallery: FC<PastHackathonsGalleryProps> = (props): JSX.Eleme
     return (
         <section className="HACKMERCED">
             <h1 className="font-black text-center hackmercedv-title"> HackMerced {iteration} Gallery </h1>
-            <div className="hackmerced-row">
-                <div className="hackmerced-column">
+            <div className="hackmerced-column">
+                <div className="hackmerced-row">
                     <img className="picollage" src={images[0]} alt="HackMerced Team" />
                     <img className="picollage" src={images[1]} alt="HackMerced Team" />
                     <img className="picollage" src={images[2]} alt="HackMerced Team" />
                 </div>
-                <div className="hackmerced-column">
+                <div className="hackmerced-row">
                     <img className="picollage" src={images[3]} alt="HackMerced Team" />
                     <img className="picollage" src={images[4]} alt="HackMerced Team" />
                     <img className="picollage" src={images[5]} alt="HackMerced Team" />
