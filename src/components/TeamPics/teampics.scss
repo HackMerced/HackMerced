@@ -152,7 +152,8 @@
     }
 
     .Header {
-        padding: 3% 0% 2% 5%;
+        padding: 3% 0% 2% 0%;
+        text-align: center;
 
         h1 {
             color: black;
@@ -162,8 +163,12 @@
         /* Media Queries taken from and edited: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 
         /* Small devices (phones, portrait tablets, and large phones, 600px and up) */
+          /* Small devices (iphones, 350px and up) */
+          @media only screen and (min-width: 350px) {
+            font-size: 25px;
+        }
         @media only screen and (min-width: 600px) {
-            font-size: 20px;
+            font-size: 25px;
         }
 
         /* Medium devices (landscape tablets, 768px and up) */
