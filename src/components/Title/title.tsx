@@ -33,7 +33,8 @@ const Title: FC = (): JSX.Element => {
                 </button>
             </section>
             <div id="subscribe-modal" className="overlay light">
-                <a className="cancel" href="#"></a>
+                {/* eslint-disable-next-line */}
+                <a className="cancel" href="/#"></a>
                 <article className="subscribe">
                     <h3>HackMerced Mailing List</h3>
                     <form className="form">
