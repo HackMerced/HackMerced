@@ -2,8 +2,29 @@
     h1 {
         font-weight: bold;
         color: black;
-        padding: 0% 0% 4% 0%;
-        font-size: xx-large;
+        padding: 5% 0% 3% 0%;
+
+        @media only screen and (min-width: 350px) {
+            font-size: 15px;
+        }
+        @media only screen and (min-width: 600px) {
+            font-size: 15px;
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            font-size: 25px;
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            font-size: 30px;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            font-size: 30px;
+        }
     }
 
     .hackmerced-column {
@@ -26,10 +47,10 @@
                 height: 100%;
                 object-fit: cover;
                 transition: transform 400ms ease-out;
-                margin-left: 3%;
+                margin-left: 2%;
 
                 @media (min-width: 1000px) {
-                    max-width: 500px;
+                    max-width: 450px;
                 }
             }
 

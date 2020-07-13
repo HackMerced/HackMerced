@@ -102,7 +102,7 @@ const Home: FC = (): JSX.Element => {
                 images={[SPEAKERII, HACKERSII, COLLABORATION, CHECKINGINII, MLHII, SPONSORSII]}
             />
             <Successes
-                iteration={null}
+                iteration={''}
                 hoursOfHacking={24}
                 numberOfAttendees={300}
                 projectsSubmitted={16}

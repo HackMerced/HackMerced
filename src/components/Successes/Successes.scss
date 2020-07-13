@@ -2,19 +2,38 @@
     overflow: hidden;
 
     .hackathons-title {
-        font-size: xx-large;
         line-height: 1em;
         text-align: center;
         color: BLACK;
         font-weight: bolder;
         overflow: hidden;
         margin: 2% 0;
+        @media only screen and (min-width: 350px) {
+            font-size: 25px;
+        }
+        @media only screen and (min-width: 600px) {
+            font-size: 25px;
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            font-size: 30px;
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            font-size: 35px;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            font-size: 40px;
+        }
     }
 
     .wrapper {
         text-align: center;
         margin: auto;
-        width: 100%;
         display: flex;
         flex-wrap: wrap;
 
@@ -22,32 +41,53 @@
             background-image: linear-gradient(#ffb181, #ffb26e);
             border-radius: 25px;
             margin: 1%;
-            height: 100px;
-            flex: 1 0 21%;
+            height: 170px;
+            flex: 1 0 30%;
 
             h1 {
-                font-size: larger;
                 color: white;
                 font-weight: bold;
-                margin-top: 6%;
+                margin: 4% 0% 7% 0%;
+
+                @media only screen and (min-width: 350px) {
+                    font-size: 25px;
+                }
+                @media only screen and (min-width: 600px) {
+                    font-size: 25px;
+                }
+        
+                /* Medium devices (landscape tablets, 768px and up) */
+                @media only screen and (min-width: 768px) {
+                    font-size: 30px;
+                }
+        
+                /* Large devices (laptops/desktops, 992px and up) */
+                @media only screen and (min-width: 992px) {
+                    font-size: 35px;
+                }
+        
+                /* Extra large devices (large laptops and desktops, 1200px and up) */
+                @media only screen and (min-width: 1200px) {
+                    font-size: 35px;
+                }
             }
 
             h2 {
-                font-size: medium;
+                font-size: large;
                 color: white;
 
                 @media (min-width: 350px) and (max-width: 370px) {
-                    font-size: small;
+                    font-size: medium;
                 }
             }
         }
 
         @media (min-width: 350px) {
-            width: 80%;
+            width: 90%;
         }
 
         @media (min-width: 500px) {
-            width: 70%;
+            width: 90%;
         }
 
         @media (min-width: 800px) {
@@ -55,7 +95,7 @@
         }
 
         @media (min-width: 1200px) {
-          width: 50%;
+          width: 85%;
       }
     }
 }
