@@ -9,6 +9,10 @@
         margin: 0 auto;
     }
 
+    @media (max-width: 500px) {
+        width: 90%;
+    }
+
     .splash-content {
         .Header {
             font-size: 54px;
@@ -18,6 +22,10 @@
             color: black;
             font-weight: bolder;
             overflow: hidden;
+
+            @media (max-width: 500px) {
+              font-size: 46px
+            }
         }
 
         .splash-section {

@@ -1,0 +1,43 @@
+.NAVBAR {
+    background-color: #ffb181;
+    padding: 0.2% 0% 0.5% 0%;
+    align-items: flex-start;
+
+    .NAVTEXT {
+        font-size: 16px;
+        display: block;
+        width: 100%;
+    }
+
+    .sticky {
+        position: fixed;
+        width: 100%;
+    }
+
+    .MLH-banner {
+        height: 50px;
+        position: fixed;
+        margin-left: 0.3%;
+
+        @media (min-width: 100px) {
+            width: 60px;
+        }
+
+        @media (min-width: 600px) {
+          width: 80px;
+        }
+
+        @media (min-width: 700px) {
+          width: 170px;
+        }
+    }
+
+    .MLH {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+
+    .active:active {
+        background-color: white;
+    }
+}

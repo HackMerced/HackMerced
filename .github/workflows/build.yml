@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Test application and make sure it runs on ${{ matrix.os }}
+    name: Build application and make sure it runs on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
 
     strategy:

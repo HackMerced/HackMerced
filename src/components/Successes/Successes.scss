@@ -1,0 +1,61 @@
+.SUCCESS {
+    overflow: hidden;
+
+    .hackathons-title {
+        font-size: xx-large;
+        line-height: 1em;
+        text-align: center;
+        color: BLACK;
+        font-weight: bolder;
+        overflow: hidden;
+        margin: 2% 0;
+    }
+
+    .wrapper {
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .card {
+            background-image: linear-gradient(#ffb181, #ffb26e);
+            border-radius: 25px;
+            margin: 1%;
+            height: 100px;
+            flex: 1 0 21%;
+
+            h1 {
+                font-size: larger;
+                color: white;
+                font-weight: bold;
+                margin-top: 6%;
+            }
+
+            h2 {
+                font-size: medium;
+                color: white;
+
+                @media (min-width: 350px) and (max-width: 370px) {
+                    font-size: small;
+                }
+            }
+        }
+
+        @media (min-width: 350px) {
+            width: 80%;
+        }
+
+        @media (min-width: 500px) {
+            width: 70%;
+        }
+
+        @media (min-width: 800px) {
+            width: 80%;
+        }
+
+        @media (min-width: 1200px) {
+          width: 50%;
+      }
+    }
+}

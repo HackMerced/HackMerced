@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import NavbarOrange from '../../components/NavBar-Orange/navbar';
+import Navbar from '../../components/NavBar/navbar';
 import Form from '../../components/Form/Form';
 import Footer from '../../components/Footer/footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,22 +11,18 @@ import './contact-us.scss';
 const ContactUs: FC = (): JSX.Element => {
     return (
         <>
-            <NavbarOrange />
+            <Navbar />
             <main className="contact-body">
                 <div className="splash-content">
                     <section className="Header">
                         <h1>Ways to contact us</h1>
                     </section>
                     <section className="splash-section">
-                        <a style={{ color: '#0000' }}>
-                            <FontAwesomeIcon icon={faEnvelope} className="fa" />
-                        </a>
+                        <FontAwesomeIcon icon={faEnvelope} className="fa" />
                         <h4>Email us at general@hackmerced.com</h4>
                     </section>
                     <section className="splash-section">
-                        <a style={{ color: '#0000' }}>
-                            <FontAwesomeIcon icon={faUsers} className="fa" />
-                        </a>
+                        <FontAwesomeIcon icon={faUsers} className="fa" />
                         <h4>Connect with our social medias: @hackmerced</h4>
                     </section>
                     <Form formTitle="Message Us" askCompany={false} />
