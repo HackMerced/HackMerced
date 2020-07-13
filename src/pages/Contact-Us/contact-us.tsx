@@ -18,15 +18,11 @@ const ContactUs: FC = (): JSX.Element => {
                         <h1>Ways to contact us</h1>
                     </section>
                     <section className="splash-section">
-                        <a style={{ color: '#0000' }}>
-                            <FontAwesomeIcon icon={faEnvelope} className="fa" />
-                        </a>
+                        <FontAwesomeIcon icon={faEnvelope} className="fa" />
                         <h4>Email us at general@hackmerced.com</h4>
                     </section>
                     <section className="splash-section">
-                        <a style={{ color: '#0000' }}>
-                            <FontAwesomeIcon icon={faUsers} className="fa" />
-                        </a>
+                        <FontAwesomeIcon icon={faUsers} className="fa" />
                         <h4>Connect with our social medias: @hackmerced</h4>
                     </section>
                     <Form formTitle="Message Us" askCompany={false} />
