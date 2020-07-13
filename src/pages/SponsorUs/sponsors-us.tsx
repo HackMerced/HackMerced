@@ -18,10 +18,7 @@ const SponsorUs: FC = (): JSX.Element => {
                         Become a sponsor to empower and help <br></br> grow the next generation of HackMerced.
                     </header>
                     <section className="sponsors-section">
-                        <a style={{ color: '#000' }}>
-                            <FontAwesomeIcon icon={faHeart} className="fa" />
-                        </a>
-
+                        <FontAwesomeIcon icon={faHeart} className="fa" />
                         <h4>Leave your mark in the Heart of California</h4>
                         <p>
                             As the newest UC, more than half of the student body is first generation. Joining HackMerced
@@ -30,9 +27,7 @@ const SponsorUs: FC = (): JSX.Element => {
                         </p>
                     </section>
                     <section className="sponsors-section">
-                        <a style={{ color: '#000' }}>
-                            <FontAwesomeIcon icon={faHandshake} className="fa" />
-                        </a>
+                        <FontAwesomeIcon icon={faHandshake} className="fa" />
                         <h4>Connect with our diverse hackers</h4>
                         <p>
                             Network and build relationships in our HackMerced community and make your company known in
