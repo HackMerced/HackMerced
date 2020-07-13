@@ -8,8 +8,8 @@ $titles: black;
 
         /* Small devices (iphones, 350px and up) */
         @media only screen and (min-width: 350px) {
-          font-size: 25px;
-      }
+            font-size: 25px;
+        }
 
         /* Medium devices (landscape tablets, 768px and up) */
         @media only screen and (min-width: 768px) {
@@ -52,10 +52,15 @@ $titles: black;
                 text-align: left;
 
                 @media (min-width: 350px) {
-                  width: 80%;
-                  margin-left: 10%;
-                  font-size: 80%;
-              }
+                    width: 80%;
+                    margin-left: 10%;
+                    font-size: 105%;
+                }
+
+                @media (min-width: 600px) and (max-width: 850px) {
+                    margin-left: 15%;
+                    width: 70%;
+                }
 
                 @media (min-width: 850px) {
                     width: 70%;
