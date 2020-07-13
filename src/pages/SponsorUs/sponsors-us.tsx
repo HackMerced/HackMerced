@@ -4,7 +4,7 @@ import Navbar from '../../components/NavBar/navbar';
 import Footer from '../../components/Footer/footer';
 import Form from '../../components/Form/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faHandshake, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import PASTSPONSORS from '../../assets/images/past-sponsors.png';
 
 import './sponsor-us.scss';
@@ -35,8 +35,19 @@ const SponsorUs: FC = (): JSX.Element => {
                             our events!
                         </p>
                     </section>
+                    <section className="sponsors-section">
+                        <a style={{ color: '#0000' }}>
+                            <FontAwesomeIcon icon={faInfoCircle} className="fa" />
+                        </a>
+                        <h4>For more Information</h4>
+                        <p>If you want more information, check out our sponsorship packet.</p>
+                    </section>
                 </div>
                 <Form formTitle="Sponsor Us" askCompany={true} formRequest="sponsor" />
+                <section className="past-sponsors text-3xl md:text-5xl">
+                    <h1>Past Sponsors</h1>
+                    <img src={PASTSPONSORS} width="100%" alt="Past Hackathons Sponsors" />
+                </section>
             </main>
             <Footer />
         </>
