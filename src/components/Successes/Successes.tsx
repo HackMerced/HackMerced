@@ -20,30 +20,28 @@ const Successes: FC<SuccessesProps> = (props): JSX.Element => {
                 HackMerced {iteration}
                 <br />
             </div>
-            <div className="wrapper clearfix center">
-                <div className="card card1">
+            <div className="wrapper">
+                <div className="card w-1/3 h-16">
                     <h1>{hoursOfHacking}</h1>
                     <h2>hours of hacking</h2>
                 </div>
-                <div className="card card2">
+                <div className="card w-1/3 h-16">
                     <h1>{numberOfAttendees}+</h1>
                     <h2>attendees</h2>
                 </div>
-                <div className="card card3">
-                    <h1>{projectsSubmitted}</h1>
-                    <h2>projects submitted</h2>
-                </div>
-            </div>
-            <div className="wrapper clearfix center">
-                <div className="card card4">
+                <div className="card w-1/3 h-16">
                     <h1>{amountOfPrizes}k+</h1>
                     <h2>amount of prizes</h2>
                 </div>
-                <div className="card card5">
+                <div className="card w-1/3 h-16">
                     <h1>{numberOfWorkshops}</h1>
                     <h2>workshops</h2>
                 </div>
-                <div className="card card6">
+                <div className="card w-1/3 h-16">
+                    <h1>{projectsSubmitted}</h1>
+                    <h2>projects submitted</h2>
+                </div>
+                <div className="card w-1/3 h-16">
                     <h1>{numberOfSponsors}</h1>
                     <h2>sponsors</h2>
                 </div>
