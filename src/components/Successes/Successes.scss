@@ -41,7 +41,7 @@
             background-image: linear-gradient(#ffb181, #ffb26e);
             border-radius: 25px;
             margin: 1%;
-            height: 170px;
+            height: 200px;
             flex: 1 0 30%;
 
             h1 {
@@ -50,34 +50,34 @@
                 margin: 4% 0% 7% 0%;
 
                 @media only screen and (min-width: 350px) {
-                    font-size: 25px;
+                    font-size: 35px;
                 }
                 @media only screen and (min-width: 600px) {
-                    font-size: 25px;
+                    font-size: 35px;
                 }
         
                 /* Medium devices (landscape tablets, 768px and up) */
                 @media only screen and (min-width: 768px) {
-                    font-size: 30px;
+                    font-size: 40px;
                 }
         
                 /* Large devices (laptops/desktops, 992px and up) */
                 @media only screen and (min-width: 992px) {
-                    font-size: 35px;
+                    font-size: 45px;
                 }
         
                 /* Extra large devices (large laptops and desktops, 1200px and up) */
                 @media only screen and (min-width: 1200px) {
-                    font-size: 35px;
+                    font-size: 50px;
                 }
             }
 
             h2 {
-                font-size: large;
+                font-size: x-large;
                 color: white;
 
                 @media (min-width: 350px) and (max-width: 370px) {
-                    font-size: medium;
+                    font-size: large;
                 }
             }
         }
