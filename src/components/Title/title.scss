@@ -6,7 +6,7 @@
     overflow: hidden;
 
     @media (max-width: 700px) {
-      height: 600px;
+        height: 600px;
     }
 
     .t-wave {
@@ -146,14 +146,61 @@
             font-weight: bold;
         }
 
+        .subscribe-container {
+            margin: 2% auto 0% 53%;
+        }
+
+        .subscribe {
+            display: flex;
+            width: 500px;
+            padding: 1rem;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        @media (max-width: 600px) {
+            .subscribe {
+                width: calc(100% - 2rem);
+            }
+        }
+
+        // subscribe email
+        .subscribe input {
+            font-size: 1rem;
+            flex-grow: 1;
+        }
+
+        .subscribe input:focus {
+            color: white;
+        }
+
+        .email-input{
+            color: white;
+        }
+
+        .subscribe * {
+            border: none;
+            letter-spacing: 2px;
+            background-color: transparent;
+            color: #fff;
+        }
+
+        .subscribe > button {
+            cursor: pointer;
+        }
+
+        .subscribe > button:hover {
+            color: white;
+        }
+
         button {
             position: absolute;
             text-transform: uppercase;
-            margin: 2% auto 0% 57%;
+            margin: 2% auto 0% 53%;
             font-size: 20px;
             font-weight: 4%;
-            width: 25%;
-            height: 5%;
+            width: 35%;
+            height: 6%;
             border-radius: 20px;
             transition: 0.2s all;
             text-align: center;
@@ -183,7 +230,7 @@
             }
 
             &:active {
-                background: linear-gradient(#fdab78, #faa55a);
+                background: transparent;
                 color: white;
             }
         }
@@ -202,7 +249,7 @@
             &-title,
             &-subtext,
             &-text {
-              width: 80%;
+                width: 80%;
             }
 
             &-subtext,
