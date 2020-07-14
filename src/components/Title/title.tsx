@@ -31,6 +31,12 @@ const Title: FC = (): JSX.Element => {
                 >
                     Subscribe
                 </button>
+                {/* <div className="subscribe-container">
+                    <form className="subscribe">
+                        <input className="email-input" type="email" placeholder="Enter email for updates" />
+                        <button type="submit">→</button>
+                    </form>
+                </div> */}
             </section>
             <div id="subscribe-modal" className="overlay light">
                 {/* eslint-disable-next-line */}
