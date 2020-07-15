@@ -18,14 +18,14 @@
             font-size: 54px;
             line-height: 1.5em;
             text-align: center;
-            margin: 0% auto auto auto;
+            margin: 2% auto auto auto;
             color: black;
             font-weight: bolder;
             overflow: hidden;
 
-            @media (max-width: 500px) {
-              font-size: 46px
-            }
+            // @media (max-width: 500px) {
+            //   font-size: 46px
+            // }
         }
 
         .splash-section {

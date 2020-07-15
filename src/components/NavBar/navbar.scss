@@ -1,6 +1,6 @@
 .NAVBAR {
     background-color: #ffb181;
-    padding: 0.2% 0% 0.5% 0%;
+    padding: 0.5% 1% 1% 0%;
     align-items: flex-start;
 
     .NAVTEXT {
@@ -40,4 +40,8 @@
     .active:active {
         background-color: white;
     }
+
+    // .active:focus{
+    //     background-color: white;
+    // }
 }
