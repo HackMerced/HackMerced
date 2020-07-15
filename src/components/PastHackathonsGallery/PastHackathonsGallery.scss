@@ -5,25 +5,25 @@
         padding: 5% 0% 3% 0%;
 
         @media only screen and (min-width: 350px) {
-            font-size: 15px;
+            font-size: 20px;
         }
         @media only screen and (min-width: 600px) {
-            font-size: 15px;
+            font-size: 20px;
         }
 
         /* Medium devices (landscape tablets, 768px and up) */
         @media only screen and (min-width: 768px) {
-            font-size: 25px;
+            font-size: 30px;
         }
 
         /* Large devices (laptops/desktops, 992px and up) */
         @media only screen and (min-width: 992px) {
-            font-size: 30px;
+            font-size: 35px;
         }
 
         /* Extra large devices (large laptops and desktops, 1200px and up) */
         @media only screen and (min-width: 1200px) {
-            font-size: 30px;
+            font-size: 35px;
         }
     }
 
@@ -48,6 +48,7 @@
                 object-fit: cover;
                 transition: transform 400ms ease-out;
                 margin-left: 2%;
+                border-radius: 25px;
 
                 @media (min-width: 1000px) {
                     max-width: 450px;
