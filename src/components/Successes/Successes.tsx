@@ -16,7 +16,7 @@ const Successes: FC<SuccessesProps> = (props): JSX.Element => {
 
     return (
         <section className="SUCCESS">
-            <div className="font-black hackathons-title">
+            <div className="text-3xl md:text-5xl font-black hackathons-title">
                 {iteration === 'V' ? `Our Successes` : `HackMerced ${iteration}`}
                 <br />
             </div>

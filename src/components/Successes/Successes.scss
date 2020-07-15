@@ -7,28 +7,28 @@
         color: BLACK;
         font-weight: bolder;
         overflow: hidden;
-        margin: 2% 0;
-        @media only screen and (min-width: 350px) {
-            font-size: 25px;
-        }
-        @media only screen and (min-width: 600px) {
-            font-size: 25px;
-        }
+        margin: 3% auto 2% auto;
+        // @media only screen and (min-width: 350px) {
+        //     font-size: 25px;
+        // }
+        // @media only screen and (min-width: 600px) {
+        //     font-size: 25px;
+        // }
 
-        /* Medium devices (landscape tablets, 768px and up) */
-        @media only screen and (min-width: 768px) {
-            font-size: 30px;
-        }
+        // /* Medium devices (landscape tablets, 768px and up) */
+        // @media only screen and (min-width: 768px) {
+        //     font-size: 30px;
+        // }
 
-        /* Large devices (laptops/desktops, 992px and up) */
-        @media only screen and (min-width: 992px) {
-            font-size: 35px;
-        }
+        // /* Large devices (laptops/desktops, 992px and up) */
+        // @media only screen and (min-width: 992px) {
+        //     font-size: 35px;
+        // }
 
-        /* Extra large devices (large laptops and desktops, 1200px and up) */
-        @media only screen and (min-width: 1200px) {
-            font-size: 40px;
-        }
+        // /* Extra large devices (large laptops and desktops, 1200px and up) */
+        // @media only screen and (min-width: 1200px) {
+        //     font-size: 40px;
+        // }
     }
 
     .wrapper {

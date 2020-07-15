@@ -14,11 +14,13 @@ const ContactUs: FC = (): JSX.Element => {
             <Navbar />
             <main className="contact-body">
                 <div className="splash-content">
-                    <section className="Header">
+                    <section className="Header text-3xl md:text-5xl">
                         <h1>Ways to contact us</h1>
                     </section>
                     <section className="splash-section">
-                        <FontAwesomeIcon icon={faEnvelope} className="fa" />
+                        <a href="mailto:general@hackmerced.com?subject=HackMerced Questions&amp;body=Dear HackMerced,">
+                            <FontAwesomeIcon icon={faEnvelope} className="fa" />
+                        </a>
                         <h4>Email us at general@hackmerced.com</h4>
                     </section>
                     <section className="splash-section">
