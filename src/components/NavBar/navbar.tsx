@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
                 <ul className="flex float-right">
                     <li className="mr-3 active">
                         <Link
-                            className="active inline-block rounded font-bold hover:text-black hover:bg-white text-gray-100 py-2 px-3"
+                            className="active inline-block font-bold hover:text-black hover:bg-white text-gray-100 py-2 px-3"
                             to="/"
                         >
                             HOME
@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
                     </li> */}
                     <li className="mr-3">
                         <Link
-                            className="inline-block rounded font-bold hover:text-black hover:bg-white py-2 px-3 text-gray-100 "
+                            className="active inline-block font-bold hover:text-black hover:bg-white py-2 px-3 text-gray-100 "
                             to="past-hackathons"
                         >
                             PAST HACKATHONS
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
                     </li>
                     <li className="mr-3">
                         <Link
-                            className="inline-block rounded font-bold hover:text-black hover:bg-white py-2 px-3 text-gray-100 "
+                            className="active inline-block font-bold hover:text-black hover:bg-white py-2 px-3 text-gray-100 "
                             to="sponsors"
                         >
                             SPONSORS
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
                     </li>
                     <li>
                         <Link
-                            className="inline-block rounded font-bold hover:text-black hover:bg-white py-2 px-3 text-gray-100 "
+                            className="active inline-block font-bold hover:text-black hover:bg-white py-2 px-3 text-gray-100 "
                             to="contact-us"
                         >
                             CONTACT US

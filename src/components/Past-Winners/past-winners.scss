@@ -43,6 +43,7 @@ $titles: black;
             .winner-icon {
                 color: #ffb26e;
                 font-size: 35px;
+                
 
                 /* Medium devices (landscape tablets, 768px and up) */
                 @media only screen and (min-width: 768px) {
@@ -59,10 +60,17 @@ $titles: black;
                     font-size: 50px;
                 }
             }
+            h5{
+                padding: 5% 0% 0% 0%;
+            }
+            h6{
+                padding: 2% 0% 0% 0%; 
+            }
 
             .winner-title,
             .winner-group {
                 color: $titles;
+            
             }
 
             .winner-title {
