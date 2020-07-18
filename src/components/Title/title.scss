@@ -130,6 +130,18 @@
     .hackmerced {
         .hackmerced-title {
             margin: -38% auto auto 57%;
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            margin: -38% auto auto 47%;
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            margin: -38% auto auto 57%;
+        }
+
+         
         }
 
         .hackmerced-text {
@@ -322,6 +334,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                
 
                 input {
                     color: black;
@@ -377,5 +390,17 @@
         min-width: auto;
         min-height: auto;
         margin: -20% auto 0% 5%;
+    
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                margin: -20% auto 0% 5%;
+                width: 35%;
+            }
+    
+             /* Extra large devices (large laptops and desktops, 1200px and up) */
+             @media only screen and (min-width: 1200px) {
+                margin: -20% auto 0% 5%;
+                width: 35%;
+            }
     }
 }
