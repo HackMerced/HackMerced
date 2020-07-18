@@ -27,7 +27,7 @@ const ContactUs: FC = (): JSX.Element => {
                         <FontAwesomeIcon icon={faUsers} className="fa" />
                         <h4>Connect with our social medias: @hackmerced</h4>
                     </section>
-                    <Form formTitle="Message Us" askCompany={false} />
+                    <Form formTitle="Message Us" askCompany={false} formRequest="contact"/>
                 </div>
             </main>
             <Footer />
