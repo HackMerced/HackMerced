@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
             <div className="MLH-banner">
                 <img className="MLH" src={MLHBANNER} width="100" height="175" alt="MLH BANNER" />
             </div>
-            <div className="NAVTEXT block flex-auto ">
+            <div className="NAVTEXT navigation block flex-auto ">
                 <ul className="flex float-right">
                     <li className="mr-3 active">
                         <Link
