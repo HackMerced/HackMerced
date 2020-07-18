@@ -35,7 +35,7 @@ const SponsorUs: FC = (): JSX.Element => {
                         </p>
                     </section>
                 </div>
-                <Form formTitle="Sponsor Us" askCompany={true} />
+                <Form formTitle="Sponsor Us" askCompany={true} formRequest="sponsor" />
             </main>
             <Footer />
         </>

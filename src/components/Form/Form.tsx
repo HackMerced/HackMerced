@@ -20,25 +20,20 @@ class Form extends Component<FormProps, FormState> {
     private handleSubmit(event: React.ChangeEvent<HTMLFormElement>): void {
         event.preventDefault();
 
+        const { name, email, company, message } = this.state;
+
         Axios({
             method: 'POST',
-            url: 'http://localhost:3002/send',
-            data: this.state,
+            url: `https://hackmerced-myriagon.herokuapp.com/v1/zoho/${this.props.formRequest}-us`,
+            data: company === '' ? { name, email, message } : { name, email, company, message },
         }).then(response => {
-            if (response.data.status === 'success') {
-                alert('Message Sent.');
-                this.resetForm();
-            } else if (response.data.status === 'fail') {
-                alert('Message failed to send.');
-            }
+            const { status } = response.data;
+            if (status === 'success') this.resetForm();
         });
     }
 
     private resetForm(): void {
-        const reset = !this.props.askCompany
-            ? { name: '', email: '', message: '' }
-            : { name: '', company: '', email: '', message: '' };
-        this.setState(reset);
+        this.setState({ name: '', company: '', email: '', message: '' });
     }
 
     public render(): JSX.Element {
