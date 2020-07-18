@@ -19,14 +19,14 @@ afterEach(() => {
 
 it('renders contact us form', () => {
     act(() => {
-        render(<Form formTitle="Message Us" askCompany={false} />, container);
+        render(<Form formTitle="Message Us" askCompany={false} formRequest="contact" />, container);
     });
     expect(container.textContent).toContain('Message Us');
 });
 
 it('renders sponsor us form', () => {
     act(() => {
-        render(<Form formTitle="Sponsor Us" askCompany={true} />, container);
+        render(<Form formTitle="Sponsor Us" askCompany={true} formRequest="sponsor" />, container);
     });
     expect(container.textContent).toContain('Sponsor Us');
 });
