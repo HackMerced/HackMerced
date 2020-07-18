@@ -38,12 +38,20 @@
     }
 
     .active:active {
-        background-color: white;
+        background: white;
+        color: black;
     }
 
     .active{
         border-radius: 25px;
     }
+
+    .navigation :focus {
+        background: white;
+        color: black;
+      }
+    
+     
 
     // .active:focus{
     //     background-color: white;
