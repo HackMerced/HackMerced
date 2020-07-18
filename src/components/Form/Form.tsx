@@ -1,103 +1,95 @@
-import React, { Component } from 'react';
+import React, { FC, useState } from 'react';
 import Axios from 'axios';
 
 import './Form.scss';
-import { FormProps, FormState } from './Form.types';
+import { FormProps } from './Form.types';
 
-class Form extends Component<FormProps, FormState> {
-    state = {
+const Form: FC<FormProps> = (props): JSX.Element => {
+    const { formTitle, askCompany, formRequest } = props;
+    const [values, setValues] = useState({
         name: '',
         email: '',
         company: '',
         message: '',
-    };
+    });
 
-    private constructor(props: Readonly<FormProps>) {
-        super(props);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    private handleSubmit(event: React.ChangeEvent<HTMLFormElement>): void {
+    const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
         event.preventDefault();
 
-        const { name, email, company, message } = this.state;
+        const { name, email, company, message } = values;
 
         Axios({
             method: 'POST',
-            url: `https://hackmerced-myriagon.herokuapp.com/v1/zoho/${this.props.formRequest}-us`,
+            url: `https://hackmerced-myriagon.herokuapp.com/v1/zoho/${formRequest}-us`,
             data: company === '' ? { name, email, message } : { name, email, company, message },
         }).then(response => {
             const { status } = response.data;
-            if (status === 'success') this.resetForm();
+            if (status === 'success') resetForm();
         });
-    }
+    };
 
-    private resetForm(): void {
-        this.setState({ name: '', company: '', email: '', message: '' });
-    }
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>): void => {
+        const { name, value } = event.target;
+        setValues({ ...values, [name]: value });
+    };
 
-    public render(): JSX.Element {
-        const { name, email, message } = this.state;
-        const { formTitle, askCompany } = this.props;
+    const resetForm = (): void => {
+        setValues({ name: '', company: '', email: '', message: '' });
+    };
 
-        return (
-            <form className="splash-form" onSubmit={this.handleSubmit}>
-                <h3>{formTitle}</h3>
+    return (
+        <form className="splash-form" onSubmit={handleSubmit}>
+            <h3>{formTitle}</h3>
+            <div className="input-wrapper">
+                <label htmlFor="name">Name</label>
+                <input
+                    id="name"
+                    required
+                    placeholder="Full Name"
+                    name="name"
+                    value={values.name}
+                    onChange={handleInputChange}
+                />
+            </div>
+            {askCompany ? (
                 <div className="input-wrapper">
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="company">Company</label>
                     <input
-                        id="name"
+                        id="company"
                         required
-                        placeholder="Full Name"
-                        value={name}
-                        onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                            this.setState({ name: event.target.value });
-                        }}
+                        placeholder="Company Name"
+                        name="company"
+                        value={values.company}
+                        onChange={handleInputChange}
                     />
                 </div>
-                {askCompany ? (
-                    <div className="input-wrapper">
-                        <label htmlFor="company">Company</label>
-                        <input
-                            id="company"
-                            required
-                            placeholder="Company Name"
-                            value={name}
-                            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                                this.setState({ name: event.target.value });
-                            }}
-                        />
-                    </div>
-                ) : null}
-                <div className="input-wrapper">
-                    <label htmlFor="email">Email</label>
-                    <input
-                        id="email"
-                        required
-                        placeholder="Email"
-                        value={email}
-                        onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                            this.setState({ email: event.target.value });
-                        }}
-                    />
-                </div>
-                <div className="input-wrapper">
-                    <label htmlFor="message">Message</label>
-                    <textarea
-                        id="message"
-                        required
-                        placeholder="Message"
-                        rows={5}
-                        value={message}
-                        onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
-                            this.setState({ message: event.target.value });
-                        }}
-                    />
-                </div>
-                <button type="submit">Send</button>
-            </form>
-        );
-    }
-}
+            ) : null}
+            <div className="input-wrapper">
+                <label htmlFor="email">Email</label>
+                <input
+                    id="email"
+                    required
+                    placeholder="Email"
+                    name="email"
+                    value={values.email}
+                    onChange={handleInputChange}
+                />
+            </div>
+            <div className="input-wrapper">
+                <label htmlFor="message">Message</label>
+                <textarea
+                    id="message"
+                    required
+                    placeholder="Message"
+                    name="message"
+                    rows={5}
+                    value={values.message}
+                    onChange={handleInputChange}
+                />
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    );
+};
 
 export default Form;
