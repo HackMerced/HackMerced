@@ -7,6 +7,7 @@ const About: FC = (): JSX.Element => {
     return (
         <section className="ABOUT">
             <h1>About Us</h1>
+            <div className="break-line"></div>
             <section className="about">
                 <article className="about-description">
                     <p>
