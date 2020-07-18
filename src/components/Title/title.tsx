@@ -6,7 +6,7 @@ import HMTITLE from '../../assets/images/placeholder-title.png';
 import HMTOWER from '../../assets/images/tower.png';
 import './title.scss';
 
-const Title: FC = () => {
+const Title: FC = (): JSX.Element => {
     const [values, setValues] = useState({ name: '', email: '' });
     const { width } = useWindowDimensions();
 

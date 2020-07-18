@@ -3,10 +3,3 @@ export type FormProps = {
   askCompany: boolean;
   formRequest: string;
 }
-
-export type FormState = {
-  name: string;
-  company?: string;
-  email: string;
-  message: string;
-}
