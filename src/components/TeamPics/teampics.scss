@@ -190,4 +190,31 @@
     .CenterHexagons {
         margin-left: 5.5%;
     }
+
+    .break-line {
+        border: 0.5rem solid #fe980f;
+        border-width: .5rem;
+        border-radius: 25px;
+        margin: 0 auto;
+
+         /* Small devices (iphones, 350px and up) */
+         @media only screen and (min-width: 350px) {
+            width: 30%;
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            width: 25%
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            width: 20%
+        }
+
+         /* Extra large devices (large laptops and desktops, 1200px and up) */
+         @media only screen and (min-width: 1200px) {
+            width: 20%;
+        }
+    }
 }

@@ -95,6 +95,7 @@ const TeamPics: FC = (): JSX.Element => {
         <section className="TEAMPICTURE">
             <header className="Header">
                 <h1>Our Team</h1>
+                <div className="break-line"></div>
             </header>
             {teampics(team)}
         </section>

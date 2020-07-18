@@ -19,6 +19,7 @@ const PastWinners: FC = (): JSX.Element => {
     return (
         <section className="PAST-WINNERS">
             <h3 className="past-winners-title">Past Winners</h3>
+            <div className="break-line"></div>
             <nav className="winners">
                 <a href="https://devpost.com/software/helpers-spot">
                     <FontAwesomeIcon icon={faHandHoldingHeart} className="fa winner-icon" />
