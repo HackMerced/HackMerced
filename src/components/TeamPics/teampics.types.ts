@@ -1,1 +1,1 @@
-export type TeamPicsState = { url: string; src: string };
+export type TeamPics = { url: string; src: string };

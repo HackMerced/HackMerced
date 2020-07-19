@@ -13,38 +13,11 @@ import KACEY from '../../assets/images/kacey.jpg';
 import INTISER from '../../assets/images/Intiser.png';
 
 import './teampics.scss';
-import { TeamPicsState } from './teampics.types';
+import { TeamPics } from './teampics.types';
 
 /* Outline for this component largely taken from: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
-
-function teampics(team: Array<TeamPicsState>): JSX.Element {
-    let teamArray: Array<JSX.Element> = [];
-
-    team.forEach((member: TeamPicsState, index: number) => {
-        const name: string = member.src.includes('/')
-            ? member.src.split('/')[4].split('.')[0]
-            : member.src.split('.')[0];
-
-        teamArray.push(
-            <li key={index}>
-                <div className="hexagon">
-                    <a href={member.url}>
-                        <img className="Picture" src={member.src} alt={name.charAt(0).toUpperCase() + name.slice(1)} />
-                    </a>
-                </div>
-            </li>,
-        );
-    });
-
-    return (
-        <ul id="grid" className="clear">
-            <div className="CenterHexagons">{teamArray}</div>
-        </ul>
-    );
-}
-
 const TeamPics: FC = (): JSX.Element => {
-    const team: Array<TeamPicsState> = [
+    const team: Array<TeamPics> = [
         {
             url: 'https://www.linkedin.com/in/trumanjfchan/',
             src: TRUMAN,
@@ -90,6 +63,36 @@ const TeamPics: FC = (): JSX.Element => {
             src: INTISER,
         },
     ];
+
+    const teampics = (team: Array<TeamPics>): JSX.Element => {
+        let teamArray: Array<JSX.Element> = [];
+
+        team.forEach((member: TeamPics, index: number) => {
+            const name: string = member.src.includes('/')
+                ? member.src.split('/')[4].split('.')[0]
+                : member.src.split('.')[0];
+
+            teamArray.push(
+                <li key={index}>
+                    <div className="hexagon">
+                        <a href={member.url}>
+                            <img
+                                className="Picture"
+                                src={member.src}
+                                alt={name.charAt(0).toUpperCase() + name.slice(1)}
+                            />
+                        </a>
+                    </div>
+                </li>,
+            );
+        });
+
+        return (
+            <ul id="grid" className="clear">
+                <div className="CenterHexagons">{teamArray}</div>
+            </ul>
+        );
+    };
 
     return (
         <section className="TEAMPICTURE">
