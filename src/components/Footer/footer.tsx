@@ -5,7 +5,7 @@ import { faFacebook, faInstagram, faGithub, faSlack } from '@fortawesome/free-br
 
 import './footer.scss';
 
-const Footer: FC = () => {
+const Footer: FC = (): JSX.Element => {
     return (
         <footer className="footer">
             <section className="Footer-container">

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import MLHBANNER from '../../assets/images/mlh-badge.svg';
 import './navbar.scss';
 
-const Navbar: React.FC = () => {
+const Navbar: FC = (): JSX.Element => {
     return (
         <nav className="NAVBAR sticky flex">
             <div className="MLH-banner">
