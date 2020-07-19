@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import history from './app.history';
@@ -9,7 +9,7 @@ import ContactUs from './pages/Contact-Us/contact-us';
 
 import './App.scss';
 
-const App: React.FC = () => {
+const App: FC = (): JSX.Element => {
     return (
         <Router history={history}>
             <Switch>
