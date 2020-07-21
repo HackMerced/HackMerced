@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { createGlobalStyle } from 'styled-components';
 
-import HamburgerMenu from '../../components/HamburgerMenu/HamburgerMenu';
+import Menu from '../../components/HamburgerMenu/Menu';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -18,7 +18,7 @@ const TestPage: FC = () => {
     return (
         <div>
             <GlobalStyle />
-            <HamburgerMenu />
+            <Menu />
         </div>
     );
 };
