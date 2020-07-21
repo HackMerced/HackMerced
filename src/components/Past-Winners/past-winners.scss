@@ -108,6 +108,11 @@ $titles: black;
                 font-weight: bold;
             }
 
+              /* Small devices (iphones, 350px and up) */
+         @media only screen and (min-width: 350px) {
+            width: 30%;
+        }
+
             /* Large devices (laptops/desktops, 992px and up) */
             @media only screen and (min-width: 992px) {
                 width: 19%;
