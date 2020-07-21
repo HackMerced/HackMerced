@@ -49,6 +49,7 @@ const Styles = {
         display: flex;
         background-color: #eeeeee;
         height: 100vh;
+        color: black;
     `,
 };
 
