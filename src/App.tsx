@@ -16,8 +16,8 @@ const App: FC = (): JSX.Element => {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/sponsors" component={SponsorUs} />
                 <Route exact path="/contact-us" component={ContactUs} />
-                <Redirect from="/HackMerced" to="/" />
                 <Route exact path="/past-hackathons" component={Hackathons} />
+                <Redirect from="/HackMerced" to="/" />
             </Switch>
         </Router>
     );
