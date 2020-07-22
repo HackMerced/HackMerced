@@ -8,9 +8,16 @@
         <meta name="description" content="Web site created using create-react-app" />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-        <title>React App</title>
+        <title>HackMerced</title>
     </head>
     <body>
+        <script type="text/javascript">
+            fetch('%PUBLIC_URL%/tower.txt')
+                .then(r => r.text())
+                .then(text => {
+                    console.log(text);
+                });
+        </script>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root"></div>
     </body>
