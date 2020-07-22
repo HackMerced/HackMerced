@@ -1,59 +1,28 @@
-.NAVBAR {
-    background-color: #ffb181;
-    padding: 0.5% 1% 1% 0%;
-    align-items: flex-start;
+.MLH {
+  position: fixed;
+  top: 1%;
+  left: 1%;
 
-    .NAVTEXT {
-        font-size: 16px;
-        display: block;
-        width: 100%;
-    }
+  @media (min-width: 100px) {
+      width: 60px;
+  }
 
-    .sticky {
-        position: fixed;
-        width: 100%;
-    }
+  @media (min-width: 600px) {
+      width: 80px;
+  }
 
-    .MLH-banner {
-        height: 50px;
-        position: fixed;
-        margin-left: 0.3%;
+  @media (min-width: 700px) {
+      width: 100px;
+  }
 
-        @media (min-width: 100px) {
-            width: 60px;
-        }
+  @media (min-width: 1100px) {
+      width: 120px;
+  }
+}
 
-        @media (min-width: 600px) {
-          width: 80px;
-        }
-
-        @media (min-width: 700px) {
-          width: 170px;
-        }
-    }
-
-    .MLH {
-        position: -webkit-sticky;
-        position: sticky;
-    }
-
-    .active:active {
-        background: white;
-        color: black;
-    }
-
-    .active{
-        border-radius: 25px;
-    }
-
-    .navigation :focus {
-        background: white;
-        color: black;
-      }
-    
-     
-
-    // .active:focus{
-    //     background-color: white;
-    // }
+.break-line {
+  border: 3px solid white;
+  opacity: 50%;
+  border-radius: 25px;
+  margin: 0 auto;
 }
