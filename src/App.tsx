@@ -1,19 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { FC } from 'react';
+import { Router, Route, Switch, Redirect } from 'react-router-dom';
 
-const App: React.FC = () => {
+import history from './app.history';
+import Home from './pages/Home/home';
+import Hackathons from './pages/Hackathons/hackathons';
+import SponsorUs from './pages/SponsorUs/sponsors-us';
+import ContactUs from './pages/Contact-Us/contact-us';
+
+import './App.scss';
+
+const App: FC = (): JSX.Element => {
     return (
-        <div className="m-auto antialiased font-sans font-serif font-mono text-center">
-            <header className="bg-gray-900 min-h-screen flex flex-col items-center justify-center text-white text-2xl">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a className="text-blue-300" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                    Learn Taiwlind with React TypeScript
-                </a>
-            </header>
-        </div>
+        <Router history={history}>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/sponsors" component={SponsorUs} />
+                <Route exact path="/contact-us" component={ContactUs} />
+                <Route exact path="/past-hackathons" component={Hackathons} />
+                <Redirect from="/HackMerced" to="/" />
+            </Switch>
+        </Router>
     );
 };
 
