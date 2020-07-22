@@ -276,10 +276,14 @@
             }
 
             button {
-                position: relative;
+              position: inherit;
                 font-size: medium;
                 height: 50px;
                 width: 38%;
+            }
+
+            button:hover{
+                position: inherit;
             }
         }
 
