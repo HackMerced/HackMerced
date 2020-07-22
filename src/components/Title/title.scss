@@ -141,6 +141,11 @@
             margin: -38% auto auto 57%;
         }
 
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 1500px) {
+            margin: -35% auto auto 58.5%;
+        }
+
          
         }
 
@@ -255,7 +260,7 @@
             margin-top: -50% !important;
 
             &-title {
-                margin: 3% 0 0 10% !important;
+                margin: 0% 0 0 5% !important;
             }
 
             &-title,
@@ -273,9 +278,22 @@
             button {
                 position: relative;
                 font-size: medium;
+                height: 50px;
+                width: 38%;
             }
         }
+
+        @media (min-width: 1500px) {
+
+            button {
+                width: 35%;
+                height: 50px;
+            }
+        }
+        
     }
+
+   
 
     // Form Popup
     .overlay {
@@ -401,6 +419,12 @@
              @media only screen and (min-width: 1200px) {
                 margin: -20% auto 0% 5%;
                 width: 35%;
+            }
+
+             /* Extra large devices (large laptops and desktops, 1200px and up) */
+             @media only screen and (min-width: 1500px) {
+                margin: -15% auto 0% 5%;
+                width: 32%;
             }
     }
 }
