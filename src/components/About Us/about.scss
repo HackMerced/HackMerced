@@ -3,11 +3,13 @@ $titles: black;
     padding: 3% 0% 2% 0%;
 
     .break-line {
-        border: 0.5rem solid #ffb181;
+        border: 0.5rem solid  #ffb181;
         opacity: 50%;
         border-width: .5rem;
-        border-radius: 25px;
+        border-radius: 10px;
         margin: 0 auto;
+        box-shadow: -6px -6px 16px #fff,
+                6px 6px 16px #696865;
 
          /* Small devices (iphones, 350px and up) */
          @media only screen and (min-width: 350px) {
