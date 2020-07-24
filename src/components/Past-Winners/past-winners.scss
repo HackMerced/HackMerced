@@ -36,6 +36,8 @@ $titles: black;
         border-width: .5rem;
         border-radius: 25px;
         margin: 0 auto;
+        box-shadow: -6px -6px 16px #fff,
+        6px 6px 16px #696865;
 
          /* Small devices (iphones, 350px and up) */
          @media only screen and (min-width: 350px) {
