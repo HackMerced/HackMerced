@@ -1,8 +1,6 @@
 import React, { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import { faEnvelope, faCode } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-//import { Link } from 'react-router-dom';
 
 import './footer.scss';
 
@@ -58,12 +56,6 @@ const Footer: FC = (): JSX.Element => {
                         <FontAwesomeIcon icon={faCode} className="fa text-white" />
                     </a>*/}
             </section> 
-            {/* <section className="credits">
-                <span className="copyright">
-                    © 2020 HackMerced. All Rights Reserved.
-                    <br /> Made with ♡ by HackMerced.
-                </span>
-            </section>  */}
         </footer>
     );
 };
