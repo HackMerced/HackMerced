@@ -11,7 +11,12 @@ $titles: black;
         box-shadow: -6px -6px 16px #fff,
                 6px 6px 16px #696865;
 
-         /* Small devices (iphones, 350px and up) */
+        /* Smallest devices (iphones, 350px and lower) */
+        @media only screen and (max-width: 350px) {
+            width: 30%;
+        }
+
+        /* Small devices (iphones, 350px and up) */
          @media only screen and (min-width: 350px) {
             width: 30%;
         }
@@ -81,6 +86,12 @@ $titles: black;
 
             p {
                 text-align: left;
+
+                @media (max-width: 350px) {
+                    width: 80%;
+                    margin-left: 10%;
+                    font-size: 105%;
+                }
 
                 @media (min-width: 350px) {
                     width: 80%;

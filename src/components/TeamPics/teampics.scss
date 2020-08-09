@@ -162,11 +162,12 @@
 
         /* Media Queries taken from and edited: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 
-        /* Small devices (phones, portrait tablets, and large phones, 600px and up) */
-          /* Small devices (iphones, 350px and up) */
-          @media only screen and (min-width: 350px) {
+        /* Small devices (iphones, 350px and up) */
+        @media only screen and (min-width: 350px) {
             font-size: 25px;
         }
+
+        /* Small devices (phones, portrait tablets, and large phones, 600px and up) */
         @media only screen and (min-width: 600px) {
             font-size: 25px;
         }
@@ -200,8 +201,13 @@
         box-shadow: -6px -6px 16px #fff,
         6px 6px 16px #696865;
 
-         /* Small devices (iphones, 350px and up) */
-         @media only screen and (min-width: 350px) {
+        /* Smallest devices (iphones, 350px and lower) */
+        @media only screen and (max-width: 350px) {
+            width: 30%;
+        }
+
+        /* Small devices (iphones, 350px and up) */
+        @media only screen and (min-width: 350px) {
             width: 30%;
         }
 
