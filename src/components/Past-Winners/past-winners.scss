@@ -39,8 +39,13 @@ $titles: black;
         box-shadow: -6px -6px 16px #fff,
         6px 6px 16px #696865;
 
-         /* Small devices (iphones, 350px and up) */
-         @media only screen and (min-width: 350px) {
+        /* Smallest devices (iphones, 350px and lower) */
+        @media only screen and (max-width: 350px) {
+            width: 30%;
+        }
+
+        /* Small devices (iphones, 350px and up) */
+        @media only screen and (min-width: 350px) {
             width: 30%;
         }
 
