@@ -6,6 +6,8 @@
     background-image: linear-gradient(#ffb181, #ffb26e);
     border-radius: 2rem;
     margin: 0% 0% 2% 10%;
+    box-shadow: -6px -6px 16px #fff,
+                6px 6px 16px #696865;
 
     @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
         margin-bottom: 2rem;
@@ -105,12 +107,13 @@
         box-shadow: 0px 3px 0px orange;
         cursor: pointer;
         transition: all 0.2s ease;
+        box-shadow: 8px 8px 10px #e9925b, -8px -8px 10px #faae7f;
     }
 
-    button:hover {
-        background: linear-gradient(#fdab78, #faa55a);
-        color: white;
-    }
+    // button:hover {
+    //     background: linear-gradient(#fdab78, #faa55a);
+    //     color: white;
+    // }
 
     button:active {
         background: linear-gradient(#fdab78, #faa55a);
