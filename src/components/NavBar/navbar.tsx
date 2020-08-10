@@ -70,10 +70,10 @@ const Styles = {
 
         @media only screen and (max-width: 40em) {
             height: ${(): string => {
-                const { pathname } = useLocation();
-                return pathname !== '/' ? '13vw' : 'auto';
-            }};
+            const { pathname } = useLocation();
+            return pathname !== '/' ? '13vw' : 'auto';
         }
+        };
     `,
 };
 
@@ -86,12 +86,12 @@ const Menu = {
         justify-content: space-between;
         align-items: center;
 
-        // 40em == 640px
+/*         // 40em == 640px
         @media only screen and (max-width: 40em) {
             position: fixed;
             width: 100vw;
             top: 0;
-        }
+        } */
     `,
     Logo: styled.h1`
         padding: 0.5rem 1rem;
