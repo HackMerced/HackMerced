@@ -69,9 +69,8 @@ const TeamPics: FC = (): JSX.Element => {
 
         team.forEach((member: TeamPicsState, index: number) => {
             const name: string = member.src.includes('/')
-                ? member.src.split('/')[4].split('.')[0]
+                ? member.src.split('/')[3].split('.')[0]
                 : member.src.split('.')[0];
-
             teamArray.push(
                 <li key={index}>
                     <div className="hexagon">
