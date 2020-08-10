@@ -135,6 +135,7 @@ $titles: black;
         .TEAMPICTURE {
             width: 80%;
             border-radius: 25px;
+            box-shadow: -6px -6px 16px #fff, 6px 6px 16px #696865;
 
             @media (min-width: 600px) {
                 width: 70%;
