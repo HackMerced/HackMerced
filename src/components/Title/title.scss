@@ -172,7 +172,7 @@
             width: 500px;
             padding: 1rem;
             color: #fff;
-            border: 1px solid #fff;
+         
         }
 
         @media (max-width: 600px) {
@@ -221,9 +221,7 @@
             border-radius: 20px;
             transition: 0.2s all;
             text-align: center;
-            box-shadow: 8px 8px 10px #e9925b, -8px -8px 10px #faae7f;
-            box-shadow: 8px 8px 16px 0 #e9925b,
-            -8px -8px 12px 0 #f5b68f;
+           
 
             &:before {
                 content: '';
