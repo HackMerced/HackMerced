@@ -74,7 +74,7 @@ const TeamPics: FC = (): JSX.Element => {
             teamArray.push(
                 <li key={index}>
                     <div className="hexagon">
-                        <a href={member.url}>
+                        <a href={member.url} target="_blank">
                             <img
                                 className="Picture"
                                 src={member.src}
