@@ -3,7 +3,7 @@
     "description": "HackMerced Hub",
     "version": "1.0.0",
     "private": true,
-    "homepage": "http://hackmerced.io",
+    "homepage": "http://hackmerced.com",
     "scripts": {
         "build": "yarn tailwind:css && react-scripts build",
         "gren": "gren release --override --tags=all --config=.grenrc.js",
