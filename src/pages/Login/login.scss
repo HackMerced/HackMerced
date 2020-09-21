@@ -1,0 +1,167 @@
+.login-page {
+    .center-container {
+        position: relative;
+        display: inline-block;
+        width: 40%; //sets width of the container. Changing this means you'll need to recenter the container with margin-left.
+        margin-top: 1.2%;
+        margin-bottom: 1%;
+        background-color: #ffb181;
+        border-radius: 65px;
+        margin-left: 29.5%; //manually pushes the center container to the center of the page.
+
+        /* offset-x | offset-y | blur-radius | color */
+        box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
+
+        @media only screen and (max-width: 1100px) {
+            width: 60%;
+            margin-left: 19.5%;
+        }
+        @media only screen and (max-width: 740px) {
+            width: 68%;
+            margin-left: 14.7%;
+        }
+
+        .logo {
+            //hackmerced logo at the top
+            display: block;
+            margin: auto;
+            padding-top: 2.5%;
+        }
+        h1 {
+            //'LOGIN' below hackmerced logo
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap; //makes 'Create an Account' go under 'Forgot Password?' at lower resolutions
+            justify-content: space-around; //puts even space on the left and right of contents
+            padding: 0% 4% 3% 4%;
+
+            .flex-item {
+                display: inline;
+                text-align: center;
+            }
+        }
+
+        .loginicons {
+            text-align: center; //centers everything inside loginicons div
+
+            p {
+                color: white;
+                font-weight: 510;
+                font-size: 22px;
+                position: static;
+                display: block;
+                padding: 3% 0% 0% 0%;
+            }
+            .facebookicon {
+                font-size: 80px;
+                padding: 3% 1% 2% 1%;
+                color: #4c6ef5;
+            }
+            .googleicon {
+                font-size: 80px;
+                padding: 3% 1% 2% 1%;
+                color: #fa7000;
+            }
+            .githubicon {
+                font-size: 80px;
+                padding: 3% 2% 2% 2%;
+                color: #15aabf;
+            }
+        }
+
+        /* Form */
+
+        .emailinput {
+            width: 80%;
+            height: 50px;
+            margin-top: 2%;
+            border-radius: 65px;
+            display: block;
+
+            /* offset-x | offset-y | blur-radius | color */
+            box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
+        }
+        .passwordinput {
+            width: 80%;
+            height: 50px;
+            margin-top: 2%;
+            border-radius: 65px;
+            display: block;
+
+            /* offset-x | offset-y | blur-radius | color */
+            box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
+        }
+        .submitbutton {
+            width: 45%;
+            height: 70px;
+            border-radius: 65px;
+            background-color: white;
+            color: #ffb181;
+            font-weight: bold;
+            font-size: 25px;
+            margin: auto;
+            display: block;
+
+            /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+            @media only screen and (max-width: 350px) {
+                font-size: 20px;
+            }
+        }
+        .blackicon {
+            color: black;
+            font-size: 32px;
+            position: relative;
+            display: inline-block;
+            width: 35%;
+            bottom: 40px;
+
+            @media only screen and (max-width: 550px) {
+                font-size: 25px;
+            }
+            @media only screen and (max-width: 450px) {
+                font-size: 20px;
+                bottom: 35px;
+            }
+        }
+    }
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Form */
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.301);
+    font-weight: bold;
+    font-size: 20px;
+    position: fixed;
+    text-align: left;
+
+    opacity: 1; /* Firefox */
+}
+input[type="email"],
+select {
+    display: inline-block;
+    margin: 0 auto;
+    color: black;
+    text-align: left;
+    padding: 0% 0% 0% 12%; //moves location of select (input) to the right, which also moves the placeholder
+}
+input[type="password"],
+select {
+    display: inline-block;
+    margin: 0 auto;
+    color: black;
+    text-align: left;
+    padding: 0% 0% 0% 12%; //moves location of select (input) to the right, which also moves the placeholder
+}
