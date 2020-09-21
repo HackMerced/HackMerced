@@ -31,18 +31,20 @@
         "@fortawesome/fontawesome-svg-core": "1.2.28",
         "@fortawesome/free-brands-svg-icons": "5.13.0",
         "@fortawesome/free-solid-svg-icons": "5.13.0",
-        "@fortawesome/react-fontawesome": "0.1.9",
+        "@fortawesome/react-fontawesome": "^0.1.9",
         "axios": "0.19.2",
+        "babel-loader": "^8.1.0",
+        "dotenv": "^8.2.0",
         "hover.css": "2.3.2",
         "node-sass": "4.14.1",
-        "react": "16.13.0",
-        "react-dom": "16.13.0",
+        "react": "^16.13.0",
+        "react-dom": "^16.13.0",
         "react-router-dom": "5.2.0",
         "react-scripts": "3.4.0",
-        "styled-components": "5.1.1"
+        "styled-components": "5.1.1",
+        "yarn": "^1.22.5"
     },
     "devDependencies": {
-        "@babel/plugin-transform-react-jsx-development": "7.10.1",
         "@storybook/addon-a11y": "5.3.14",
         "@storybook/addon-actions": "5.3.14",
         "@storybook/addon-centered": "5.3.14",
@@ -81,5 +83,9 @@
         "tailwindcss": "1.2.0",
         "ts-jest": "25.2.1",
         "typescript": "3.8.3"
-    }
+    },
+    "main": "index.js",
+    "repository": "https://github.com/HackMerced/HackMerced.git",
+    "author": "Jatnael Montes <ifelsejet@gmail.com>",
+    "license": "MIT"
 }
