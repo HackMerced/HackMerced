@@ -6,6 +6,7 @@ import Home from './pages/Home/home';
 import Hackathons from './pages/Hackathons/hackathons';
 import SponsorUs from './pages/SponsorUs/sponsors-us';
 import ContactUs from './pages/Contact-Us/contact-us';
+import Login from './pages/Login/login';
 
 import './App.scss';
 
@@ -17,6 +18,7 @@ const App: FC = (): JSX.Element => {
                 <Route exact path="/sponsors" component={SponsorUs} />
                 <Route exact path="/contact-us" component={ContactUs} />
                 <Route exact path="/past-hackathons" component={Hackathons} />
+                <Route exact path="/login" component={Login} />
                 <Redirect from="/HackMerced" to="/" />
             </Switch>
         </Router>
