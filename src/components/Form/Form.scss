@@ -94,6 +94,20 @@
         //     transform: translateY(-20px);
         // }
     }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        
+        opacity: 1; /* Firefox */
+        font-weight: lighter;
+        font-size: 18px;
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        font-weight: lighter;
+      }
+      
+      ::-ms-input-placeholder { /* Microsoft Edge */
+        font-weight: lighter;
+      }
 
     button {
         padding: 0 1rem;
