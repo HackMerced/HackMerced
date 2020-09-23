@@ -1,26 +1,26 @@
 .login-page {
     padding: .5% 0% 7.5% 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
     .center-container {
         position: relative;
         display: inline-block;
-        width: 40%; //sets width of the container. Changing this means you'll need to recenter the container with margin-left.
+        width: 45%; //sets width of the container. Changing this means you'll need to recenter the container with margin-left.
         margin-top: 1.2%;
         margin-bottom: 1%;
         background-image: linear-gradient(#ffb181, #ffb26e);
         border-radius: 65px;
-        margin-left: 29.5%; //manually pushes the center container to the center of the page.
 
         /* offset-x | offset-y | blur-radius | color */
         box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
 
         @media only screen and (max-width: 1100px) {
             width: 60%;
-            margin-left: 19.5%;
         }
         @media only screen and (max-width: 740px) {
             width: 68%;
-            margin-left: 14.7%;
         }
 
         .logo {
@@ -35,6 +35,7 @@
             font-weight: bold;
             font-size: 30px;
             text-align: center;
+            padding: 1% 0% 1% 0%;
         }
 
         .flex-container {
