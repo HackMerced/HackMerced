@@ -1,4 +1,6 @@
 .login-page {
+    padding: .5% 0% 7.5% 0%;
+
     .center-container {
         position: relative;
         display: inline-block;
@@ -118,7 +120,7 @@
             font-size: 32px;
             position: relative;
             display: inline-block;
-            width: 35%;
+            margin-left: 13.5%;
             bottom: 40px;
 
             @media only screen and (max-width: 550px) {
