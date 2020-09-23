@@ -7,7 +7,7 @@
         width: 40%; //sets width of the container. Changing this means you'll need to recenter the container with margin-left.
         margin-top: 1.2%;
         margin-bottom: 1%;
-        background-color: #ffb181;
+        background-image: linear-gradient(#ffb181, #ffb26e);
         border-radius: 65px;
         margin-left: 29.5%; //manually pushes the center container to the center of the page.
 
@@ -73,11 +73,26 @@
             .githubicon {
                 font-size: 80px;
                 padding: 3% 2% 2% 2%;
-                color: #15aabf;
+                color: rgb(39, 38, 38);
             }
         }
 
-        /* Form */
+       
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        
+            opacity: 1; /* Firefox */
+            font-weight: lighter;
+            font-size: 18px;
+          }
+          
+          :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            font-weight: lighter;
+          }
+          
+          ::-ms-input-placeholder { /* Microsoft Edge */
+            font-weight: lighter;
+          }
+      
 
         .emailinput {
             width: 80%;
@@ -85,6 +100,7 @@
             margin-top: 2%;
             border-radius: 65px;
             display: block;
+            
 
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
@@ -116,7 +132,7 @@
             }
         }
         .blackicon {
-            color: black;
+            color: rgb(56, 55, 55);
             font-size: 32px;
             position: relative;
             display: inline-block;
