@@ -5,14 +5,13 @@ import './schedule-design.scss';
 const ScheduleDesign: FC = (): JSX.Element => {
     return (
         <main className="ScheduleDesign">
-            <h1>Schedule</h1>
             <section className="schedule-designathon">
                 <article className="calendar-designmerced">
                     <div className="container-designmerced">
                         <div className="calendar">
                             <div className="calendar_header">
-                                <h1 className="header_title">DesignMerced</h1>
-                                <p className="calendar_subheader">Designathon 2020</p>
+                                <div className="header_title">Schedule</div>
+                                <p className="calendar_subheader">November 21, 2020</p>
                             </div>
 
                             {/* <div className="calendar_plan">
@@ -24,7 +23,7 @@ const ScheduleDesign: FC = (): JSX.Element => {
                             </div> */}
 
                             <div className="calendar_events">
-                                <p className="calendar_events_title">November 21, 2020</p>
+                                {/* <p className="calendar_events_title">November 21, 2020</p> */}
 
                                 <div className="event_item">
                                     <div className="event_item_dot dot_active"></div>
