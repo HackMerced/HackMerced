@@ -1,8 +1,146 @@
 .ScheduleDesign {
-    background-color: #0D0721;
+    background-color: #0d0721;
 
-    h1{
+    h1 {
         font-size: 36px;
         text-align: center;
+        padding: 2% 0% 0% 0%;
+    }
+
+    .calendar-designmerced {
+        .container-designmerced {
+            margin: auto;
+            width: 40%;
+            padding: 2% 0% 3% 0%;
+        }
+
+        .calendar {
+            padding: 2em 3em;
+
+            width: 37em;
+            background-color: white;
+            color: black;
+
+            box-shadow: 0px 0px 35px -10px rgba(0, 0, 0, 0.75);
+            border-radius: 10%;
+        }
+
+        .calendar_header {
+            font-size: 1.5em;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        }
+        .header_title {
+            font-size: 2em;
+        }
+
+        .calendar_subheader {
+            text-align: center;
+            font-size: 1.2em;
+            color: pink;
+        }
+
+        .calendar_plan {
+            background-image: linear-gradient(to bottom right, green), lightgreen;
+            color: white;
+            margin: 2em 0 4em 0;
+            padding: 3em;
+            box-shadow: 0px 0px 35px -10px rgba(0, 0, 0, 0.75);
+
+            display: flex;
+        }
+
+        .day_title {
+            font-size: 2.2em;
+            font-weight: 600;
+        }
+
+        .day_body {
+            font-size: 2em;
+            float: left;
+            line-height: 2em;
+            text-align: center;
+        }
+        .day_add {
+            margin-left: 20px;
+            float: left;
+            border-radius: 50%;
+            background-color: white;
+            width: 4em;
+            height: 4em;
+
+            text-align: center;
+            line-height: 4em;
+        }
+
+        .plus_sign::after {
+            font-size: 4em;
+            content: '+';
+            color: pink;
+        }
+
+        .calendar_events {
+            clear: both;
+            color: palevioletred;
+        }
+        .calendar_events_title {
+            font-size: 1.5em;
+            padding: 3% 0% 0% 0%;
+            text-align: center;
+        }
+        .event_item {
+            margin-left: 0.5em;
+            margin-top: 1.8em;
+            cursor: pointer;
+            padding: 1em;
+        }
+
+        .event_item_dot {
+            float: left;
+            border-radius: 50%;
+            background-color: black;
+            width: 1.5em;
+            height: 1.5em;
+        }
+        .dot_active {
+            background-color: black;
+        }
+
+        .event_item_title {
+            float: left;
+            color: var(--dark_text);
+            margin-left: 1em;
+            text-align: center;
+
+            height: 1.5em;
+            line-height: 1.5em;
+        }
+        .event_item_body {
+            clear: both;
+            font-size: 1.2em;
+            margin-left: 2.1em;
+        }
+
+        .event_item:hover {
+            background-image: linear-gradient(to bottom right, lightblue, lightblue);
+            color: white;
+            box-shadow: 0px 0px 35px -10px rgba(0, 0, 0, 0.75);
+        }
+        .event_item:hover .event_item_title {
+            color: white;
+        }
+
+        .event_item:hover .event_item_dot {
+            background-color: white;
+        }
+
+        .contact {
+            color: orange;
+        }
+        .contact::before {
+            content: '@';
+        }
+        .event_item:hover .contact {
+            color: pink;
+        }
     }
 }
