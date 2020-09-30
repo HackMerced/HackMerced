@@ -44,6 +44,10 @@ function Navbar() {
                         {pathname === '/' ? <div className="break-line"></div> : null}
                     </Menu.Item>
                     <Menu.Item>
+                        <Link to="/">DesignMerced</Link>
+                        {pathname === '/designmerced' ? <div className="break-line"></div> : null}
+                    </Menu.Item>
+                    <Menu.Item>
                         <Link to="/past-hackathons">Past Hackathons</Link>
                         {pathname === '/past-hackathons' ? <div className="break-line"></div> : null}
                     </Menu.Item>
