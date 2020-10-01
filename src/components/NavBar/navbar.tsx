@@ -5,7 +5,12 @@ import { Link, useLocation } from 'react-router-dom';
 import MLHBANNER from '../../assets/images/mlh-badge.svg';
 import './navbar.scss';
 
-const Navbar: FC<{ className?: string }> = ({ className }): JSX.Element => {
+const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string; showBanner?: Boolean }> = ({
+    backgroundColor,
+    textColor,
+    breakLineColor,
+    showBanner = true,
+}): JSX.Element => {
     let { pathname } = useLocation();
     const [openDrawer, toggleDrawer] = useState(false);
     const drawerRef = useRef(null);
@@ -27,11 +32,19 @@ const Navbar: FC<{ className?: string }> = ({ className }): JSX.Element => {
         openDrawer: openDrawer,
     };
 
+    const BreakLine = (): JSX.Element => {
+        return <div className="break-line" style={{ borderColor: breakLineColor }}></div>;
+    };
+
     return (
-        <Styles.Wrapper className={className + ' test'}>
+        <Styles.Wrapper className="test" style={{ backgroundColor, color: textColor }}>
             <Menu.Wrapper>
                 <Menu.Logo>
-                    <img className="MLH" src={MLHBANNER} width="100" height="175" alt="MLH BANNER" />
+                    {showBanner ? (
+                        <img className="MLH" src={MLHBANNER} width="100" height="175" alt="MLH BANNER" />
+                    ) : (
+                        <b>HackMerced</b>
+                    )}
                 </Menu.Logo>
 
                 <HamburgerButton.Wrapper onClick={() => toggleDrawer(true)}>
@@ -41,27 +54,27 @@ const Navbar: FC<{ className?: string }> = ({ className }): JSX.Element => {
                 <Menu.Items ref={drawerRef} {...NavbarItemsProps}>
                     <Menu.Item>
                         <Link to="/">Home</Link>
-                        {pathname === '/' ? <div className="break-line"></div> : null}
+                        {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item>
                         <Link to="/designmerced">DesignMerced</Link>
-                        {pathname === '/designmerced' ? <div className="break-line"></div> : null}
+                        {pathname === '/designmerced' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item>
                         <Link to="/past-hackathons">Past Hackathons</Link>
-                        {pathname === '/past-hackathons' ? <div className="break-line"></div> : null}
+                        {pathname === '/past-hackathons' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item>
                         <Link to="/sponsors">Sponsors</Link>
-                        {pathname === '/sponsors' ? <div className="break-line"></div> : null}
+                        {pathname === '/sponsors' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item>
                         <Link to="/contact-us">Contact Us</Link>
-                        {pathname === '/contact-us' ? <div className="break-line"></div> : null}
+                        {pathname === '/contact-us' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item>
                         <Link to="/login">Login</Link>
-                        {pathname === '/login' ? <div className="break-line"></div> : null}
+                        {pathname === '/login' ? BreakLine() : null}
                     </Menu.Item>
                 </Menu.Items>
             </Menu.Wrapper>

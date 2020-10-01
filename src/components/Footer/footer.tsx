@@ -5,9 +5,9 @@ import { faFacebook, faInstagram, faGithub, faSlack } from '@fortawesome/free-br
 
 import './footer.scss';
 
-const Footer: FC<{ className?: string }> = ({ className }): JSX.Element => {
+const Footer: FC<{ backgroundColor?: string }> = ({ backgroundColor }): JSX.Element => {
     return (
-        <footer className={className + " footer"}>
+        <footer className="footer" style={{ backgroundColor }}>
             <section className="Footer-container">
                 <nav className="Footer-social">
                     <a href="mailto:general@hackmerced.com?subject=HackMerced Questions&amp;body=Dear HackMerced,">
