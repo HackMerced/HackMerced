@@ -327,7 +327,7 @@
             top: 45%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 40%;
+            width: 50%;
             margin: 50px auto;
             padding: 0px;
             background-image: linear-gradient(#ffb181, #ffb26e);
@@ -348,41 +348,10 @@
             }
 
             .form {
-                .spacer {
-                  grid-area: space;
-                }
-
-                .first-name-label {
-                    grid-area: 'first-name-label';
-                }
-
-                .last-name-label {
-                    grid-area: 'last-name-label';
-                }
-
-                .first-name-input {
-                    grid-area: 'first-name-input';
-                }
-
-                .last-name-input {
-                    grid-area: 'last-name-input';
-                }
-
-                .email-label {
-                    grid-area: 'email-label';
-                }
-
-                .email-input {
-                    grid-area: 'email-input';
-                }
-
-                display: grid;
-                grid-template:
-                    [row1-start] 'first-name-label space space space last-name-label' 25px [row1-end]
-                    [row2-start] 'first-name-input first-name-input space last-name-input last-name-input' 25px [row2-end]
-                    [row3-start] 'email-label space space space space' 25px [row3-end]
-                    [row4-start] 'email-input email-input email-input email-input email-input' 25px [row4-end]
-                    / repeat(5, 1fr);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
 
                 input {
                     color: black;
