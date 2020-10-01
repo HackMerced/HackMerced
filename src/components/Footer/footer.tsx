@@ -5,36 +5,43 @@ import { faFacebook, faInstagram, faGithub, faSlack } from '@fortawesome/free-br
 
 import './footer.scss';
 
-const Footer: FC<{ backgroundColor?: string }> = ({ backgroundColor }): JSX.Element => {
+const Footer: FC<{ backgroundColor?: string; textColor?: string; fontColor?: string }> = ({
+    backgroundColor,
+    textColor,
+    fontColor,
+}): JSX.Element => {
+    const footerIcons = (icon: any) => {
+        return <FontAwesomeIcon icon={icon} className="fa text-white" style={{ color: fontColor }} />;
+    };
     return (
-        <footer className="footer" style={{ backgroundColor }}>
+        <footer className="footer" style={{ backgroundColor, color: textColor }}>
             <section className="Footer-container">
                 <nav className="Footer-social">
                     <a href="mailto:general@hackmerced.com?subject=HackMerced Questions&amp;body=Dear HackMerced,">
-                        <FontAwesomeIcon icon={faEnvelope} className="fa text-white" />
+                        {footerIcons(faEnvelope)}
                     </a>
                     <a href="https://www.facebook.com/hackmerced/" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faFacebook} className="fa text-white" />
+                        {footerIcons(faFacebook)}
                     </a>
                     <a href="https://www.instagram.com/hackmerced/" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faInstagram} className="fa text-white" />
+                        {footerIcons(faInstagram)}
                     </a>
                     <a
                         href="https://join.slack.com/t/hackmerced-v/shared_invite/enQtODUyNzkxMDY2NjkyLTZiODAyZjNiYTFjZTlkYTQ0NDVhOGQ5OTI3OTEzNjAxMDBiZTdjY2QyMTI0ZGE4MTlhMmNhMGYyNzQzOGNhZTI"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <FontAwesomeIcon icon={faSlack} className="fa text-white" />
+                        {footerIcons(faSlack)}
                     </a>
                     <a href="https://github.com/HackMerced" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faGithub} className="fa text-white" />
+                        {footerIcons(faGithub)}
                     </a>
                     <a
                         href="https://devpost.com/hackathons?utf8=%E2%9C%93&search=HackMerced&challenge_type=all&sort_by=Recently+Added"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <FontAwesomeIcon icon={faCode} className="fa text-white" />
+                        {footerIcons(faCode)}
                     </a>
                 </nav>
             </section>
