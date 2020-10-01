@@ -9,7 +9,7 @@ const DesignMerced: FC = (): JSX.Element => {
         <main className="DESIGNMERCED">
             <Navbar backgroundColor="#EEEBF5" textColor="#B486CE" breakLineColor="#C4BDDC" showBanner={false} />
             <Schedule />
-            <Footer />
+            <Footer backgroundColor="#EEEBF5" textColor="#B486CE" fontColor="#B486CE" />
         </main>
     );
 };
