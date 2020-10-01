@@ -64,7 +64,7 @@ const TeamPics: FC = (): JSX.Element => {
             src: ALISSON,
         },
         // {
-        //     url: 'https://www.linkedin.com/in/alisson-ross-6a7b75182/',
+        //     url: 'https://www.linkedin.com/in/marthen-r-nodado/',
         //     src: MARTHEN,
         // },
     ];
