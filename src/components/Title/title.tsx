@@ -74,12 +74,8 @@ const Title: FC = (): JSX.Element => {
                     <article className="subscribe">
                         <h3>HackMerced Mailing List</h3>
                         <form className="form" onSubmit={handleSubmit}>
-                          <div className="spacer"></div>
                             <label className="form-label first-name-label" htmlFor="firstName">
                                 First Name
-                            </label>
-                            <label className="form-label last-name-label" htmlFor="lastName">
-                                Last Name
                             </label>
                             <input
                                 id="firstName"
@@ -91,6 +87,9 @@ const Title: FC = (): JSX.Element => {
                                 onChange={handleInputChange}
                             />
                             &nbsp;&nbsp;
+                            <label className="form-label last-name-label" htmlFor="lastName">
+                                Last Name
+                            </label>
                             <input
                                 id="lastName"
                                 className="last-name-input"
