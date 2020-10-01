@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { FC, useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 
 import MLHBANNER from '../../assets/images/mlh-badge.svg';
 import './navbar.scss';
 
-function Navbar() {
+const Navbar: FC<{ className?: string }> = ({ className }): JSX.Element => {
     let { pathname } = useLocation();
     const [openDrawer, toggleDrawer] = useState(false);
     const drawerRef = useRef(null);
@@ -28,7 +28,7 @@ function Navbar() {
     };
 
     return (
-        <Styles.Wrapper className="test">
+        <Styles.Wrapper className={className + ' test'}>
             <Menu.Wrapper>
                 <Menu.Logo>
                     <img className="MLH" src={MLHBANNER} width="100" height="175" alt="MLH BANNER" />
@@ -67,7 +67,7 @@ function Navbar() {
             </Menu.Wrapper>
         </Styles.Wrapper>
     );
-}
+};
 
 const Styles = {
     Wrapper: styled.main`
