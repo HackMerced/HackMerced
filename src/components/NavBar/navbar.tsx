@@ -48,7 +48,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                 </Menu.Logo>
 
                 <HamburgerButton.Wrapper onClick={() => toggleDrawer(true)}>
-                    <HamburgerButton.Lines />
+                    <HamburgerButton.Lines breakLineColor={breakLineColor} />
                 </HamburgerButton.Wrapper>
 
                 <Menu.Items ref={drawerRef} {...NavbarItemsProps} style={{ backgroundColor }}>
@@ -178,6 +178,7 @@ const HamburgerButton = {
             width: 100%;
             background-color: white;
             position: absolute;
+            background-color: ${({ breakLineColor }: { breakLineColor: any }) => breakLineColor };
         }
 
         &:after {
