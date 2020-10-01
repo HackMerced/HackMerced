@@ -51,7 +51,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                     <HamburgerButton.Lines />
                 </HamburgerButton.Wrapper>
 
-                <Menu.Items ref={drawerRef} {...NavbarItemsProps}>
+                <Menu.Items ref={drawerRef} {...NavbarItemsProps} style={{ backgroundColor }}>
                     <Menu.Item>
                         <Link to="/">Home</Link>
                         {pathname === '/' ? BreakLine() : null}
@@ -105,13 +105,6 @@ const Menu = {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        /*         // 40em == 640px
-        @media only screen and (max-width: 40em) {
-            position: fixed;
-            width: 100vw;
-            top: 0;
-        } */
     `,
     Logo: styled.h1`
         padding: 0.5rem 1rem;
@@ -122,7 +115,7 @@ const Menu = {
         font-weight: 700;
         text-transform: uppercase;
 
-        @media only screen and (max-width: 40em) {
+        @media only screen and (max-width: 910px) {
             position: fixed;
             right: 0;
             top: 0;
@@ -138,7 +131,7 @@ const Menu = {
         padding: 0 1rem;
         cursor: pointer;
 
-        @media only screen and (max-width: 40em) {
+        @media only screen and (max-width: 910px) {
             padding: 1rem 0;
         }
     `,
@@ -166,7 +159,7 @@ const HamburgerButton = {
             left: -25%;
         }
 
-        @media only screen and (max-width: 40em) {
+        @media only screen and (max-width: 910px) {
             display: block;
         }
     `,
