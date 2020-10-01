@@ -131,22 +131,20 @@
         .hackmerced-title {
             margin: -38% auto auto 57%;
 
-        /* Medium devices (landscape tablets, 768px and up) */
-        @media only screen and (min-width: 768px) {
-            margin: -38% auto auto 47%;
-        }
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                margin: -38% auto auto 47%;
+            }
 
-        /* Large devices (laptops/desktops, 992px and up) */
-        @media only screen and (min-width: 992px) {
-            margin: -38% auto auto 57%;
-        }
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                margin: -38% auto auto 57%;
+            }
 
-        /* Large devices (laptops/desktops, 992px and up) */
-        @media only screen and (min-width: 1500px) {
-            margin: -35% auto auto 58.5%;
-        }
-
-         
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 1500px) {
+                margin: -35% auto auto 58.5%;
+            }
         }
 
         .hackmerced-text {
@@ -172,7 +170,6 @@
             width: 500px;
             padding: 1rem;
             color: #fff;
-         
         }
 
         @media (max-width: 600px) {
@@ -191,7 +188,7 @@
             color: white;
         }
 
-        .email-input{
+        .email-input {
             color: white;
         }
 
@@ -221,7 +218,6 @@
             border-radius: 20px;
             transition: 0.2s all;
             text-align: center;
-           
 
             &:before {
                 content: '';
@@ -277,40 +273,34 @@
             }
 
             button {
-              position: inherit;
+                position: inherit;
                 font-size: medium;
                 height: 50px;
                 width: 38%;
             }
 
-            button:hover{
+            button:hover {
                 position: inherit;
             }
         }
 
         @media (min-width: 1500px) {
-
             button {
                 width: 35%;
                 height: 50px;
             }
         }
-        
     }
-
-   
 
     // Form Popup
     .overlay {
-        position: absolute;
+        position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         background: rgba(0, 0, 0, 0.5);
         transition: opacity 200ms;
-        visibility: hidden;
-        opacity: 0;
 
         &.light {
             background: rgba(41, 40, 40, 0.9);
@@ -326,6 +316,11 @@
         &:target {
             visibility: visible;
             opacity: 1;
+        }
+
+        .light .subscribe {
+            border-color: #aaa;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
         }
 
         .subscribe {
@@ -353,15 +348,44 @@
             }
 
             .form {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                
+                .spacer {
+                  grid-area: space;
+                }
+
+                .first-name-label {
+                    grid-area: 'first-name-label';
+                }
+
+                .last-name-label {
+                    grid-area: 'last-name-label';
+                }
+
+                .first-name-input {
+                    grid-area: 'first-name-input';
+                }
+
+                .last-name-input {
+                    grid-area: 'last-name-input';
+                }
+
+                .email-label {
+                    grid-area: 'email-label';
+                }
+
+                .email-input {
+                    grid-area: 'email-input';
+                }
+
+                display: grid;
+                grid-template:
+                    [row1-start] 'first-name-label space space space last-name-label' 25px [row1-end]
+                    [row2-start] 'first-name-input first-name-input space last-name-input last-name-input' 25px [row2-end]
+                    [row3-start] 'email-label space space space space' 25px [row3-end]
+                    [row4-start] 'email-input email-input email-input email-input email-input' 25px [row4-end]
+                    / repeat(5, 1fr);
 
                 input {
                     color: black;
-                    display: flex;
                     border: none;
                     border-color: black;
                     box-shadow: none;
@@ -370,7 +394,7 @@
                     outline: none;
                     background-position: 0 0;
                     height: 35px;
-                    width:80%;
+                    width: 80%;
                 }
 
                 .form-submit-button {
@@ -381,6 +405,7 @@
                     cursor: pointer;
                     transition: all 0.2s ease-out;
                     padding: 10px 30px 10px 30px;
+                    margin: 3% 0;
 
                     &:active {
                         background: linear-gradient(#fdab78, #faa55a);
@@ -397,14 +422,9 @@
                 width: 100%;
             }
 
-            .form-label{
+            .form-label {
                 padding: 0% 0% 1.5% 0%;
             }
-        }
-
-        .light .subscribe {
-            border-color: #aaa;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
         }
     }
 
@@ -413,23 +433,23 @@
         min-width: auto;
         min-height: auto;
         margin: -20% auto 0% 5%;
-    
-            /* Medium devices (landscape tablets, 768px and up) */
-            @media only screen and (min-width: 768px) {
-                margin: -20% auto 0% 5%;
-                width: 35%;
-            }
-    
-             /* Extra large devices (large laptops and desktops, 1200px and up) */
-             @media only screen and (min-width: 1200px) {
-                margin: -20% auto 0% 5%;
-                width: 35%;
-            }
 
-             /* Extra large devices (large laptops and desktops, 1200px and up) */
-             @media only screen and (min-width: 1500px) {
-                margin: -15% auto 0% 5%;
-                width: 32%;
-            }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            margin: -20% auto 0% 5%;
+            width: 35%;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            margin: -20% auto 0% 5%;
+            width: 35%;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1500px) {
+            margin: -15% auto 0% 5%;
+            width: 32%;
+        }
     }
 }
