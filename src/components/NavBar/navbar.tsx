@@ -43,7 +43,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                     {showBanner ? (
                         <img className="MLH" src={MLHBANNER} width="100" height="175" alt="MLH BANNER" />
                     ) : (
-                        <b>HackMerced</b>
+                        <div className="hmtext">HackMerced</div>
                     )}
                 </Menu.Logo>
 
