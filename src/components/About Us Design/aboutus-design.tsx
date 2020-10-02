@@ -23,7 +23,9 @@ const AboutUsDesign: FC = (): JSX.Element => {
                     </p>
                     </div>
                 </article>
-                <img src={TEAM} width="100%" alt="HackMerced Team" className="LOGO" />
+                <div className="image">     
+                           <img src={TEAM} width="100%" alt="HackMerced Team" className="LOGO" />
+                </div>
             </section>
         </section>
     );
