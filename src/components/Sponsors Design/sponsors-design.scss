@@ -1,0 +1,44 @@
+.SponsorsDesign {
+    background-color: #eeebf5;
+    padding: 4% 5% 0% 5%;
+    max-width: 100%;
+    height: auto;
+
+    .grid-container1 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+        justify-content: space-evenly;
+    }
+    .grid-container2 {
+        padding-top: 20px;
+        padding-bottom: 80px;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto;
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+
+        /* @media only screen and (max-width: 320px) {
+            grid-template-columns: auto auto auto;
+        } */
+
+        .item4 {
+            grid-column-start: 6;
+            grid-column-end: 7;
+
+            justify-self: center;     //toggle ON if 3 sponsors
+            max-width: 25vw;
+            //justify-self: end;      //IF WE HAVE A 4TH SPONSOR, toggle this code and the two media queries, and comment out the above 'justify-self:center'
+
+            /* @media only screen and (max-width: 320px) {
+                grid-column-start: 2;
+                grid-column-end: 3;
+            } */
+        }
+        .item5 {                      //if we have a 4th sponsor, this CSS kicks in.
+            justify-self: start;
+            max-width: 25vw;
+        }
+    }
+}
