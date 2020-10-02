@@ -17,12 +17,12 @@ const App: FC = (): JSX.Element => {
         <Router history={history}>
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/designmerced" component={DesignMerced} />
-                <Route exact path="/past-hackathons" component={Hackathons} />
-                <Route exact path="/sponsors" component={SponsorUs} />
-                <Route exact path="/contact-us" component={ContactUs} />
-                <Route exact path="/login" component={Login} />
-                <Route component={Error} />
+                <Route path="/designmerced" component={DesignMerced} />
+                <Route path="/past-hackathons" component={Hackathons} />
+                <Route path="/sponsors" component={SponsorUs} />
+                <Route path="/contact-us" component={ContactUs} />
+                <Route path="/login" component={Login} />
+                <Route path="*" component={Error} />
                 <Redirect from="/HackMerced" to="/" />
             </Switch>
         </Router>
