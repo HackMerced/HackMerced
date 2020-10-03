@@ -1,15 +1,17 @@
 .SponsorsDesign {
     background-color: #eeebf5;
-    padding: 4% 5% 0% 5%;
+    padding: 4% 3% 0% 0%;
     max-width: 100%;
     height: auto;
 
+
+
     .title5 {
         font-weight: bolder;
-        color: #B486CE;
+        color: #b486ce;
 
-         /* Extra small devices (phones, 600px and down) */
-         @media only screen and (max-width: 600px) {
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
             font-size: 18px;
         }
 
@@ -33,7 +35,6 @@
             font-size: 35px;
         }
     }
-
 
 
 

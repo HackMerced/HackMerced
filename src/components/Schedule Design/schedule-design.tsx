@@ -14,14 +14,6 @@ const ScheduleDesign: FC = (): JSX.Element => {
                                 <p className="calendar_subheader">November 21, 2020</p>
                             </div>
 
-                            {/* <div className="calendar_plan">
-                                <div className="day_title">Σήμερα</div>
-                                <div className="day_body">Opening Ceremony</div>
-                                <div className="day_add">
-                                    <span className="plus_sign"></span>
-                                </div>
-                            </div> */}
-
                             <div className="calendar_events">
                                 {/* <p className="calendar_events_title">November 21, 2020</p> */}
 
