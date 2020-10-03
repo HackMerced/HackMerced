@@ -6,7 +6,7 @@ const SponsorsDesign: FC = (): JSX.Element => {
     return (
         <main className="SponsorsDesign">
             <section className="sponsor-designathon-title">
-                <img src={SponsorDesign} width="120%" alt="Our Sponsors for DesignMerced" />
+                <img src={SponsorDesign} width="100%" alt="Our Sponsors for DesignMerced" />
             </section>
         </main>
     );

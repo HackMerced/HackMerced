@@ -1,20 +1,45 @@
 .DESIGNPROMPT {
     background-color: #0d0721;
+    padding: 5% 0% 15% 0%;
 
     .ui-ux-title {
         color: #eeebf5;
         font-size: 32px;
         text-align: center;
-        padding: 3% 0% 0% 0%;
+        padding: 5% 0% 0% 0%;
     }
+
     .circle {
-        background: #f00;
-        width: 200px;
-        height: 200px;
+        position: relative;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
+        overflow: hidden;
+        line-height: 16px;
+        border-radius: 100%;
+        box-sizing: border-box;
+    }
+    #one {
+        top: 10px;
+        left: 225px;
+        z-index: 2;
+        background-color: #eeebf5;
+        opacity: 80%;
+    }
+
+    #two {
+        top: -100px;
+        left: 250px;
+        z-index: 1;
+        background-image: linear-gradient(#b2128e, #80a0cf);
     }
 
     article {
         float: left;
+    }
+
+    .lightbulb {
+        left: 100px;
+        bottom: 50px;
     }
 }
