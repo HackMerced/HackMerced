@@ -1,5 +1,5 @@
 .TITLEDESIGN {
-    background-image: linear-gradient(#eeebf5, #b486ce);
+    background-image: #eeebf5;
     height: 810px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,20 +10,52 @@
     }
 
     .designmerced {
+        .background-square {
+            position: absolute;
+            height: 55%;
+            width: 25%;
+            background-color: #0d0721;
+        }
+
+        .image-square {
+            position: absolute;
+            left: 10%;
+            bottom: 30%;
+            height: 50%;
+            width: 30%;
+            background-color: #b486ce;
+        }
+
         .designmerced-title {
-            margin-left: auto;
+            position: absolute;
+            right: 0;
+            top: 20%;
+        }
+
+        .designmerced-date {
+            position: absolute;
+            top: 20%;
+            right: 0;
         }
 
         .designmerced-subtext {
-            font-size: 20px;
+            font-size: 25px;
+            color: #b486ce;
             text-align: center;
             font-weight: bold;
+            position: absolute;
+            top: 75%;
+            left: 50%;
         }
 
         .designmerced-text {
-            font-size: 15px;
+            font-size: 25px;
+            color: #b486ce;
             text-align: center;
-            font-weight: medium;
+            font-weight: bold;
+            position: absolute;
+            top: 70%;
+            left: 50%;
         }
 
         .apply {
@@ -62,12 +94,16 @@
         }
 
         .apply-button {
+            background-color: #ac58bc;
             position: absolute;
+            top: 80%;
+            left: 50%;
+            color: white;
             text-transform: uppercase;
             font-size: 20px;
-            width: 35%;
-            height: 6%;
-            border-radius: 20px;
+            width: 20%;
+            height: 7%;
+            border-radius: 10px;
             transition: 0.2s all;
             text-align: center;
 

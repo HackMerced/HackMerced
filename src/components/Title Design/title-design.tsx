@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react';
 import Axios from 'axios';
 
 import Title from '../../assets/images/title.png';
+import Date from '../../assets/images/date.png';
 import './title-design.scss';
 
 const TitleDesign: FC = (): JSX.Element => {
@@ -44,17 +45,20 @@ const TitleDesign: FC = (): JSX.Element => {
     return (
         <header className="TITLEDESIGN">
             <section className="designmerced">
-                <img src={Title} width="auto" alt="DESIGNMERCED TITLE" className="designmerced-title" />
-                <div className="designmerced-subtext text-gray-100">November 21st, 2020</div>
-                <div className="designmerced-text text-gray-100">Apply today to see if you have what it takes!</div>
+                <div className="background-square"></div>
+                <div className="image-square"></div>
+                <img src={Title} width="600px" alt="DESIGNMERCED TITLE" className="designmerced-title" />
+                <img src={Date} width="600px" alt="DESIGNMERCED DATE" className="designmerced-date" />
+                <div className="designmerced-subtext text-gray-100">24 hour designathon.</div>
+                <div className="designmerced-text text-gray-100">HackMerced's first</div>
                 <button className="apply-button bg-white text-black font-bold" onClick={openModal}>
-                    Apply
+                    Register Now
                 </button>
             </section>
             {showModal ? (
                 <div className="overlay light" onClick={closeModal}>
                     <article className="apply">
-                        <h3>HackMerced Mailing List</h3>
+                        <h3>Register to become apart of this exprerience!</h3>
                         <form className="form" onSubmit={handleSubmit}>
                             <label className="form-label first-name-label" htmlFor="firstName">
                                 First Name
