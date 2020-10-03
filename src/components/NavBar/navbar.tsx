@@ -55,6 +55,10 @@ function Navbar() {
                         <Link to="/contact-us">Contact Us</Link>
                         {pathname === '/contact-us' ? <div className="break-line"></div> : null}
                     </Menu.Item>
+                    <Menu.Item>
+                        <Link to="/application">Apply</Link>
+                        {pathname === '/application' ? <div className="break-line"></div> : null}
+                    </Menu.Item>
                 </Menu.Items>
             </Menu.Wrapper>
         </Styles.Wrapper>
