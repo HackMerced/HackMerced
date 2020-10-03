@@ -1,6 +1,5 @@
 .DESIGNPROMPT {
     background-color: #0d0721;
-    padding: 5% 0% 15% 0%;
 
     .ui-ux-title {
         color: #eeebf5;
@@ -34,12 +33,35 @@
         background-image: linear-gradient(#b2128e, #80a0cf);
     }
 
-    article {
-        float: left;
+    .lightbulb {
+        right: 100px;
+        bottom: 5%;
+        position: absolute;
+        width: 25%;
     }
 
-    .lightbulb {
-        left: 100px;
-        bottom: 50px;
+    .PromptRight{
+        width: 80%;
+        height: 100px;
+        position: relative;
     }
+
+    .infront-prompt {
+        background-color: red;
+        top: 10px;
+        left: 80px;
+        z-index: 2;
+      }
+      .behind-prompt {
+        background-color: gold;
+        top: -60px;
+        left: 35px;
+        z-index: 1;
+      }
+
+      .lightbulb2{
+          width: 15%;
+          margin: 0% 0% 0% 10%; 
+          padding: 0% 0% 0% 0%;
+      }
 }
