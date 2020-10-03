@@ -2,8 +2,6 @@ $titles: white;
 .ABOUTUSDESIGN {
     padding: 3% 0% 2% 0%;
     background-color: #0d0721;
-    border: red;
-    border-style: solid;
 
     h1 {
        
@@ -133,7 +131,10 @@ $titles: white;
         .LOGO {
             border-radius: 2em; //pixel value instead
             // box-shadow: -6px -6px 16px #fff, 6px 6px 16px #696865;
-            margin: 0% 0% 0% 20%;
+            margin-top: 0%;
+            margin-bottom: 60%;
+            margin-right: 0%;
+            margin-left: 50%;
             background-color: #eeebf5;
             padding:5px;
 
