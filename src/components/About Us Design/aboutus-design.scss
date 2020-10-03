@@ -36,7 +36,7 @@ $titles: white;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 1% 0% 6% 0%;
+        //padding: 1% 0% 6% 0%;
 
         @media (min-width: 1000px) {
             flex-direction: row;
@@ -108,8 +108,8 @@ $titles: white;
 
         .image{
             background-color:rgb(238, 235, 245);
-             width: 20%;
-             border-radius: 25%; //pixel value instead
+            width: 20%;
+            border-radius: 25%; //pixel value instead
              // box-shadow: -6px -6px 16px #fff, 6px 6px 16px #696865;
              @media (min-width: 600px) {
                  width: 40%;
@@ -130,12 +130,12 @@ $titles: white;
 
         .LOGO {
             border-radius: 50%; //pixel value instead
-            box-shadow: 10px 10px #b486ce;
+            //box-shadow: 10px 10px #b486ce;
             margin-top: 0%;
-            margin-bottom: 60%;
+            margin-bottom: 30%;
             margin-right: 0%;
             margin-left: 20%;
-            background-color: rgb(238, 235, 245);
+            //background-color: rgb(238, 235, 245);
             padding: 1em;
 
             @media (min-width: 600px) {
