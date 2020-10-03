@@ -18,12 +18,11 @@ const DesignPrompt: FC = (): JSX.Element => {
                 </section>
             </article>
             <img src={lightbulb} alt="Lightbulb Icon" /> */}
-            <aside>
-                <section className="PromptRight">
-                    <div className="infront-prompt"></div>
-                    <div className="behind-prompt"></div>
-                </section>
-            </aside>
+
+            <section className="promptright">
+                <div className="infront-prompt"></div>
+                <div className="behind-prompt"></div>
+            </section>
         </main>
     );
 };

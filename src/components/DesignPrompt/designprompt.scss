@@ -8,42 +8,47 @@
         padding: 5% 0% 0% 0%;
     }
 
-    .circle {
+    // .circle {
+    //     position: relative;
+    //     width: 150px;
+    //     height: 150px;
+    //     border-radius: 50%;
+    //     overflow: hidden;
+    //     line-height: 16px;
+    //     border-radius: 100%;
+    //     box-sizing: border-box;
+    // }
+    // #one {
+    //     top: 10px;
+    //     left: 225px;
+    //     z-index: 2;
+    //     background-color: #eeebf5;
+    //     opacity: 80%;
+    // }
+
+    // #two {
+    //     top: -100px;
+    //     left: 250px;
+    //     z-index: 1;
+    //     background-image: linear-gradient(#b2128e, #80a0cf);
+    // }
+
+    // .lightbulb {
+    //     right: 100px;
+    //     bottom: 5%;
+    //     position: absolute;
+    //     width: 25%;
+    // }
+
+    .promptright{
+        width: 80px;
+        height: 200px;
         position: relative;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
         overflow: hidden;
         line-height: 16px;
         border-radius: 100%;
         box-sizing: border-box;
-    }
-    #one {
-        top: 10px;
-        left: 225px;
-        z-index: 2;
-        background-color: #eeebf5;
-        opacity: 80%;
-    }
-
-    #two {
-        top: -100px;
-        left: 250px;
-        z-index: 1;
-        background-image: linear-gradient(#b2128e, #80a0cf);
-    }
-
-    .lightbulb {
-        right: 100px;
-        bottom: 5%;
-        position: absolute;
-        width: 25%;
-    }
-
-    .PromptRight{
-        width: 80%;
-        height: 100px;
-        position: relative;
+    
     }
 
     .infront-prompt {
@@ -51,6 +56,7 @@
         top: 10px;
         left: 80px;
         z-index: 2;
+        
       }
       .behind-prompt {
         background-color: gold;
