@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import TEAM from '../../assets/images/light-bulb.png';
+import TEAM from '../../assets/images/lightbulb-layers.png';
 import './aboutus-design.scss';
 
 const AboutUsDesign: FC = (): JSX.Element => {
