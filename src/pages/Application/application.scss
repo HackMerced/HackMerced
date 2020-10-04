@@ -12,10 +12,15 @@
     @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
         margin-bottom: 2rem;
     }
+    .hackmerced-logo{
+        width: 20%;
+        display: block;
+        margin: 0% auto 4% auto;
+    }
 
     h3 {
         font-weight: bolder;
-        font-size: 20px;
+        font-size: 30px;
         margin-bottom: 1rem;
         text-align: center;
     }
@@ -60,6 +65,7 @@
     // Grid defaults: first parameter is the amount of columns you want, 2nd paramenter is the padding
     .input-wrapper1, label {
         float: left;
+     
         input,
         textarea {
             padding: 0 1rem;
@@ -69,6 +75,7 @@
             border-radius: 0.75rem;
             color: black;
             font-size: 18px;
+            width: 100%;
             // outline: none;
             // border: 1px solid #bbb;
             // position: relative;
@@ -91,6 +98,7 @@
             border-radius: 0.75rem;
             color: black;
             font-size: 18px;
+            width: 100%;
         }
 
         textarea {
