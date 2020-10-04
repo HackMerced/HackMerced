@@ -48,53 +48,77 @@ const Application: FC = (): JSX.Element => {
                                 />
                             </div>
                         </div>
-                        <div className="input-wrapper">
-                            <label htmlFor="university">University</label>
-                            <input
-                                id="university"
-                                required
-                                placeholder="University"
-                                name="University"
-                                onChange={handleInputChange}
-                            />
+                        <div className="wrapper2">
+                            <div className="input-wrapper3">
+                                <label className="input-label3" htmlFor="university">University</label>
+                                <input
+                                    className="input-group"
+                                    id="university"
+                                    required
+                                    placeholder="University"
+                                    name="University"
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                            <div className="input-wrapper4">
+                                <label className="input-label4" htmlFor="email">Email</label>
+                                    <input 
+                                    className="input-group"
+                                    id="email" 
+                                    required 
+                                    placeholder="Email" 
+                                    name="email" 
+                                    onChange={handleInputChange} 
+                                />
+                            </div>
                         </div>
-                        <div className="input-wrapper">
-                            <label htmlFor="email">Email</label>
-                            <input id="email" required placeholder="Email" name="email" onChange={handleInputChange} />
+                        <div className="wrapper3">
+                            <div className="input-wrapper5">
+                                <label className="input-label5" htmlFor="birthday">Birthday</label>
+                                    <input
+                                    className="input-group"
+                                    id="birthday"
+                                    required
+                                    placeholder="Birthday"
+                                    name="birthday"
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                            <div className="input-wrapper6">
+                                <label className="input-label6" htmlFor="studylevel">Current Level of Study</label>
+                                    <input
+                                    className="input-group"
+                                    id="studylevel"
+                                    required
+                                    placeholder="Current Level of Study"
+                                    name="studylevel"
+                                    onChange={handleInputChange}
+                                />
+                            </div>
                         </div>
-                        <div className="input-wrapper">
-                            <label htmlFor="birthday">Birthday</label>
-                            <input
-                                id="birthday"
-                                required
-                                placeholder="Birthday"
-                                name="birthday"
-                                onChange={handleInputChange}
-                            />
-                        </div>
-                        <div className="input-wrapper">
-                            <label htmlFor="studylevel">Current Level of Study</label>
-                            <input
-                                id="studylevel"
-                                required
-                                placeholder="Current Level of Study"
-                                name="studylevel"
-                                onChange={handleInputChange}
-                            />
-                        </div>
-                        <div className="input-wrapper">
-                            <label htmlFor="gender">Gender</label>
-                            <input
-                                id="gender"
-                                required
-                                placeholder="Gender"
-                                name="gender"
-                                onChange={handleInputChange}
-                            />
-                        </div>
-                        <div className="input-wrapper">
-                            <label htmlFor="race">Race</label>
-                            <input id="race" required placeholder="Race" name="race" onChange={handleInputChange} />
+                        <div className="wrapper4">
+                            <div className="input-wrapper7">
+                                <label className="input-label7" htmlFor="gender">Gender</label>
+                                    <input
+                                    className="input-group"
+                                    id="gender"
+                                    required
+                                    placeholder="Gender"
+                                    name="gender"
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                            <div className="input-wrapper8">
+                                    <label className="input-label8" htmlFor="race">Race</label>
+                                    <input 
+                                    className="input-group"
+                                    id="race" 
+                                    required 
+                                    placeholder="Race" 
+                                    name="race" 
+                                    onChange={handleInputChange} 
+                                />
+                            </div>
                         </div>
                         <div className="input-wrapper">
                             <label htmlFor="location">
