@@ -24,7 +24,7 @@ const Application: FC = (): JSX.Element => {
             <main className="contact-body">
                 <div className="splash-content">
                     {/* Start of Form */}
-                    <form className="splash-form" onSubmit={handleSubmit}>
+                    <form className="application-form" onSubmit={handleSubmit}>
                         <img src={HMLOGO} className="hackmerced-logo" alt="HackMerced Logo" />
                         <h3>Application Form</h3>
                         <div className="wrapper1">
@@ -171,7 +171,7 @@ const Application: FC = (): JSX.Element => {
                                 onChange={handleInputChange}
                             />
                         </div>
-                        <button className="font-black" type="submit">
+                        <button className="submit-application" type="submit">
                             SUBMIT
                         </button>
                     </form>

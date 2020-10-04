@@ -1,5 +1,5 @@
-.splash-form {
-   
+.application-form {
+    display: flex;
     flex-direction: column;
     width: 80%;
     padding: 3rem;
@@ -332,5 +332,9 @@
     button:active {
         background: linear-gradient(#fdab78, #faa55a);
         color: white;
+    }
+
+    .submit-application{
+        font-weight: bolder;
     }
 }
