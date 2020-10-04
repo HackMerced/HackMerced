@@ -14,8 +14,8 @@ import ALISSON from '../../assets/images/alisson.png';
 import MARTHEN from '../../assets/images/marty.jpg';
 import LAURENCE from '../../assets/images/laurence.png';
 import JET from '../../assets/images/jet.jpg';
-// import JOSEPH from '../../assets/images/joseph.png';
-// import JANELLE from '../../assets/images/janelle.jpg';
+import JOSEPH from '../../assets/images/joseph.jpg';
+import JANELLE from '../../assets/images/janelle.jpg';
 
 import './teampics.scss';
 import { TeamPicsState } from './teampics.types';
@@ -79,14 +79,14 @@ const TeamPics: FC = (): JSX.Element => {
             url: 'https://www.linkedin.com/in/jatnael-montes/',
             src: JET,
         },
-        // {
-        //     url: 'https://www.linkedin.com/in/joseph-hoang-414836194/',
-        //     src: JOSEPH,
-        // },
-        // {
-        //     url: 'https://www.linkedin.com/in/jpjanelleperez/',
-        //     src: JANELLE,
-        // },
+        {
+            url: 'https://www.linkedin.com/in/joseph-hoang-414836194/',
+            src: JOSEPH,
+        },
+        {
+            url: 'https://www.linkedin.com/in/jpjanelleperez/',
+            src: JANELLE,
+        },
     ];
 
     const teampics = (team: Array<TeamPicsState>): JSX.Element => {
