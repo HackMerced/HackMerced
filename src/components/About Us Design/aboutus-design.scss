@@ -48,8 +48,10 @@ $titles: white;
             border-radius:2em;
             text-decoration: bold;
             flex-direction: column;
-            // box-shadow: 55px 50px #b486ce;
+            //box-shadow: 55px 50px #b486ce;
             background-image: linear-gradient(#b2128e, #80a0cf);
+            position: relative;
+            left: 2em;
             h1 {
                 font-weight: bolder;
                 margin: 3% 0 2% 0%;
