@@ -27,6 +27,8 @@ $titles: white;
         /* Extra large devices (large laptops and desktops, 1200px and up) */
         @media only screen and (min-width: 1200px) {
             font-size: 35px;
+            padding-bottom: 1%;
+            
         }
     }
 
@@ -52,6 +54,38 @@ $titles: white;
                 font-weight: bolder;
                 margin: 3% 0 2% 0%;
                 text-align: center;
+
+                   @media (min-width: 400px) {
+                width: 40%;
+                margin-right: 20%;
+                margin-top: -5%;
+
+            }
+
+            @media (min-width: 600px) {
+                width: 70%;
+                margin-right: 2%;
+                margin-top: -5%;
+
+            }
+
+            @media (min-width: 1080px) {
+                margin-top: -35%;
+                width: 50%;
+            }
+
+          
+            @media (min-width: 1270px) {
+                width: 50%;
+                margin-top: -35%;
+                max-width: 650px;
+            }
+
+            @media (min-width: 1920px) {
+                width: 50%;
+                margin-top: -65%;
+                max-width: 650px;
+            }
             }
 
             p {
