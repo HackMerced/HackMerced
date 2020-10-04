@@ -9,8 +9,9 @@ import ADRIAN from '../../assets/images/adrian.jpg';
 import BUSHER from '../../assets/images/busher.jpg';
 import TUZETTE from '../../assets/images/tuzette.jpg';
 import MANJOT from '../../assets/images/manjot.jpg';
-import KACEY from '../../assets/images/kacey.jpg';
 import INTISER from '../../assets/images/Intiser.png';
+import ALISSON from '../../assets/images/alisson.jpg';
+// import MARTHEN from '../../assets/images/marty.jpg';
 
 import './teampics.scss';
 import { TeamPicsState } from './teampics.types';
@@ -55,13 +56,17 @@ const TeamPics: FC = (): JSX.Element => {
             src: MANJOT,
         },
         {
-            url: 'https://www.linkedin.com/in/kacey-su-351950176/',
-            src: KACEY,
-        },
-        {
             url: 'https://www.linkedin.com/in/intiseraziz/',
             src: INTISER,
         },
+        {
+            url: 'https://www.linkedin.com/in/alisson-ross-6a7b75182/',
+            src: ALISSON,
+        },
+        // {
+        //     url: 'https://www.linkedin.com/in/marthen-r-nodado/',
+        //     src: MARTHEN,
+        // },
     ];
 
     const teampics = (team: Array<TeamPicsState>): JSX.Element => {

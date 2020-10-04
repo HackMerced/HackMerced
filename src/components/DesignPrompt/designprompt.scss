@@ -1,0 +1,73 @@
+.DESIGNPROMPT {
+    background-color: #0d0721;
+
+    .ui-ux-title {
+        color: #eeebf5;
+        font-size: 32px;
+        text-align: center;
+        padding: 5% 0% 0% 0%;
+    }
+
+    // .circle {
+    //     position: relative;
+    //     width: 150px;
+    //     height: 150px;
+    //     border-radius: 50%;
+    //     overflow: hidden;
+    //     line-height: 16px;
+    //     border-radius: 100%;
+    //     box-sizing: border-box;
+    // }
+    // #one {
+    //     top: 10px;
+    //     left: 225px;
+    //     z-index: 2;
+    //     background-color: #eeebf5;
+    //     opacity: 80%;
+    // }
+
+    // #two {
+    //     top: -100px;
+    //     left: 250px;
+    //     z-index: 1;
+    //     background-image: linear-gradient(#b2128e, #80a0cf);
+    // }
+
+    // .lightbulb {
+    //     right: 100px;
+    //     bottom: 5%;
+    //     position: absolute;
+    //     width: 25%;
+    // }
+
+    .promptright{
+        width: 80px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        line-height: 16px;
+        border-radius: 100%;
+        box-sizing: border-box;
+    
+    }
+
+    .infront-prompt {
+        background-color: red;
+        top: 10px;
+        left: 80px;
+        z-index: 2;
+        
+      }
+      .behind-prompt {
+        background-color: gold;
+        top: -60px;
+        left: 35px;
+        z-index: 1;
+      }
+
+      .lightbulb2{
+          width: 15%;
+          margin: 0% 0% 0% 10%; 
+          padding: 0% 0% 0% 0%;
+      }
+}

@@ -1,3 +1,7 @@
-import { createBrowserHistory } from 'history';
+import { createHashHistory } from 'history';
 
-export default createBrowserHistory();
+export default createHashHistory({
+    basename: '',
+    hashType: 'noslash',
+    getUserConfirmation: (message, callback) => callback(window.confirm(message)),
+});
