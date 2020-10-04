@@ -20,7 +20,6 @@ import JANELLE from '../../assets/images/janelle.jpg';
 import './teampics.scss';
 import { TeamPicsState } from './teampics.types';
 
-
 const TeamPics: FC = (): JSX.Element => {
     const team: Array<TeamPicsState> = [
         {
