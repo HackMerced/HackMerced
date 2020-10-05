@@ -2,26 +2,23 @@ import React, { FC } from 'react';
 
 import './designprompt.scss';
 // import lightbulb from '../../assets/images/lightbulb.png';
-import lightbulb2 from '../../assets/images/lightbulb-layers.png';
+import PROMPTICON from '../../assets/images/lightbulb-layers.png';
 
 const DesignPrompt: FC = (): JSX.Element => {
     return (
-        <main className="DESIGNPROMPT">
-            <div className="ui-ux-title">The UI/UX Prompt</div>
-            <img className="lightbulb2" src={lightbulb2} alt="Lightbulb Icon"></img>
-
-            {/* <article>
-                <div className="ui-ux-title">The UI/UX Prompt</div>
-                <section className="PromptLeft">
-                    <div id="one" className="circle"></div>
-                    <div id="two" className="circle"></div>
-                </section>
-            </article>
-            <img src={lightbulb} alt="Lightbulb Icon" /> */}
-
-            <section className="promptright">
-                <div className="infront-prompt"></div>
-                <div className="behind-prompt"></div>
+        <main className="DESIGN__PROMPT">
+            <div className="DESIGN__PROMPT__title">The UI/UX Prompt</div>
+            <img className="DESIGN__PROMPT__icon" src={PROMPTICON} alt="Lightbulb Icon"></img>
+            <section className="DESIGN__PROMPT__content">
+                <div id="one__design__box" className="DESIGN__PROMPT__box"></div>
+                <div id="two__design__box" className="DESIGN__PROMPT__box"></div>
+                <p className="DESIGN__PROMPT__content__description__text">
+                    We want you to design an application from the ground up of your dream app that involves
+                    connectivity. Since quarantine started, there was a loss of physical contact and a greater push
+                    toward fostering online connections. This can include enriching peoples’ relationships, team
+                    collaboration/productivity, and devices finding new ways to connect with each other. No programming
+                    necessary.
+                </p>
             </section>
         </main>
     );
