@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import useWindowDimensions from '../WindowDimensions/WindowDimensions';
-import ABOUTICON from '../../assets/images/about-icon.png';
+import ABOUT_ICON from '../../assets/images/about-icon.png';
 import './aboutus-design.scss';
 
 const AboutUsDesign: FC = (): JSX.Element => {
@@ -12,11 +12,11 @@ const AboutUsDesign: FC = (): JSX.Element => {
             <div className="about-us-design__title">About DesignMerced</div>
             <section className="about-us-design__content">
                 {width < 600 ? (
-                    <img src={ABOUTICON} alt="About Icon" className="about-us-design__content__logo" />
+                    <img src={ABOUT_ICON} alt="About Icon" className="about-us-design__content__logo" />
                 ) : null}
                 <article className="about-us-design__content__description">
-                    <div id="one__design__box" className="about-us-design__box"></div>
-                    <div id="two__design__box" className="about-us-design__box"></div>
+                    <div id="" className="about-us-design__content__description__box one__design__box"></div>
+                    <div id="" className="about-us-design__content__description__box two__design__box"></div>
                     <p className="about-us-design__content__description__text">
                         DesignMerced is UC Merced’s first virtual designathon, hosted by HackMerced for creatives and
                         design individuals in high school and college from around the world. DesignMerced is a 24-hour
@@ -28,7 +28,7 @@ const AboutUsDesign: FC = (): JSX.Element => {
                     </p>
                 </article>
                 {width > 600 ? (
-                    <img src={ABOUTICON} alt="About Icon" className="about-us-design__content__logo" />
+                    <img src={ABOUT_ICON} alt="About Icon" className="about-us-design__content__logo" />
                 ) : null}
             </section>
         </section>

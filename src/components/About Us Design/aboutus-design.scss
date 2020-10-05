@@ -6,7 +6,7 @@
 
     &__title {
         font-family: 'Montserrat', sans-serif;
-        color: #EEEBF5;
+        color: #eeebf5;
         text-align: center;
         padding: 0% 0% % 0%;
 
@@ -40,213 +40,67 @@
         margin: 0 0 0 0;
 
         &__description {
-            width: 60%;
+            width: 80%;
             margin-top: 2%;
+            height: 75vh;
+
+            &__box {
+                position: relative;
+                width: 100%;
+                height: 300px;
+                border-radius: 10px;
+                overflow: hidden;
+                line-height: 0px;
+                margin-left: 6%;
+            }
+
+            .one__design__box {
+                top: 0px;
+                left: -40px;
+                z-index: 2;
+                background-color: #eeebf5;
+                opacity: 80%;
+            }
+
+            .two__design__box {
+                top: -260px;
+                left: 0px;
+                z-index: 1;
+                background-image: linear-gradient(#b2128e, #80a0cf);
+            }
+
+            &__text {
+                z-index: 3;
+                top: -530px;
+                left: 10px;
+                position: relative;
+                color: black;
+                width: 85%;
+                font-size: x-small;
+            }
         }
 
         &__logo {
-            width: 17%;
+            width: 20%;
             height: 20%;
             margin: 0 5%;
         }
 
-        @media only screen and (min-wdith: 600px) {
+        @media only screen and (min-width: 600px) {
             flex-direction: row;
-            background-color: red;
 
             &__description {
-                width: 100%;
+                width: 60%;
+
+                &__text {
+                  left: 5vw;
+                  font-size: inherit;
+                }
             }
 
             &__logo {
-                width: 50%;
-                height: 50%;
                 margin: 5%;
             }
         }
     }
-
-    .about-us-design__box {
-        position: relative;
-        width: 100%;
-        height: 300px;
-        border-radius: 10px;
-        overflow: hidden;
-        line-height: 0px;
-    }
-    #one__design__box {
-        top: 0px;
-        left: -40px;
-        z-index: 2;
-        background-color: #eeebf5;
-        opacity: 80%;
-    }
-
-    #two__design__box {
-        top: -260px;
-        left: 0px;
-        z-index: 1;
-        background-image: linear-gradient(#b2128e, #80a0cf);
-    }
-
-    .about-us-design__content__description__text {
-        z-index: 3;
-        top: -530px;
-        left: 10px;
-        position: relative;
-        color: black;
-        width: 90%;
-    }
-
-    // .about {
-    //     color: #000000;
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-    //     //padding: 1% 0% 6% 0%;
-
-    //     // @media (min-width: 1000px) {
-    //     //     flex-direction: row;
-    //     // }
-
-    //     &-description {
-    //         border-radius: 2em;
-    //         text-decoration: bold;
-    //         flex-direction: column;
-    //         background-image: linear-gradient(#b2128e, #80a0cf);
-    //         position: offset;
-    //         left: 2em;
-
-    //         h1 {
-    //             font-weight: bolder;
-    //             margin: 3% 0 2% 0%;
-    //             text-align: left;
-    //             @media (min-width: 400px) {
-    //                 width: 40%;
-    //                 margin-right: 20%;
-    //                 margin-top: -5%;
-    //                 text-align: center;
-    //             }
-
-    //             @media (min-width: 600px) {
-    //                 width: 70%;
-    //                 margin-right: 2%;
-    //                 margin-top: -5%;
-    //                 text-align: center;
-    //             }
-
-    //             @media (min-width: 1080px) {
-    //                 margin-top: -35%;
-    //                 width: 50%;
-    //             }
-
-    //             @media (min-width: 1270px) {
-    //                 width: 50%;
-    //                 margin-top: -35%;
-    //                 max-width: 650px;
-    //             }
-
-    //             @media (min-width: 1920px) {
-    //                 width: 50%;
-    //                 margin-top: -65%;
-    //                 max-width: 650px;
-    //             }
-    //         }
-
-    //         p {
-    //             text-align: left;
-    //             padding: 1% 5% 1% 5%;
-
-    //             @media (max-width: 350px) {
-    //                 width: 100%;
-    //                 font-size: 14px;
-    //             }
-
-    //             @media (min-width: 600px) and (max-width: 850px) {
-    //                 width: 100%;
-    //                 padding: 1% 5% 0% 5%;
-    //                 text-align: left;
-    //                 font-size: 15px;
-    //                 margin-block-start: 0%;
-    //                 margin-block-end: 20%;
-    //                 margin-bottom: 2%;
-    //             }
-
-    //             @media (min-width: 850px) {
-    //                 width: 100%;
-    //                 font-size: 15px;
-    //             }
-
-    //             @media (min-width: 1270px) {
-    //                 width: 100%;
-    //                 font-size: 17px;
-    //             }
-
-    //             @media (min-width: 1800px) {
-    //                 width: 100%;
-    //                 font-size: 25px;
-    //             }
-    //         }
-
-    //         @media (min-width: 350px) {
-    //             width: 0%;
-    //         }
-
-    //         @media (min-width: 850px) {
-    //             width: 100%;
-    //         }
-
-    //         @media (min-width: 1270px) {
-    //             width: 100%;
-    //             padding-left: 2em;
-    //         }
-    //     }
-
-    //     .about-description {
-    //         @media (min-width: 350px) {
-    //             align-self: flex-start;
-    //             padding: 1em;
-    //             width: 100%;
-    //         }
-    //     }
-
-    //     .aboutUsText {
-    //         border-radius: 2em;
-    //         background-color: #eeebf5;
-    //         opacity: 80%;
-    //         padding: 5% 0% 5% 0%;
-
-    //         @media (min-width: 1200px) {
-    //             width: 97%;
-    //         }
-    //         @media (min-width: 350px) {
-    //             width: 99%;
-    //         }
-    //     }
-
-    //     .image {
-    //         background-color: rgb(238, 235, 245);
-    //         width: 20%;
-    //         border-radius: 25%;
-
-    //         @media (min-width: 600px) {
-    //             width: 40%;
-    //             margin-right: 2%;
-    //         }
-
-    //         @media (min-width: 600px) {
-    //             margin-top: 2%;
-    //             width: 40%;
-    //         }
-
-    //         @media (min-width: 600px) {
-    //             width: 40%;
-    //             max-width: 650px;
-    //         }
-    //     }
-
-    //     .aboutlogo {
-    //     }
-    // }
 }
