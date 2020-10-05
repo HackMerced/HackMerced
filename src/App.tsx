@@ -6,7 +6,7 @@ import Home from './pages/Home/home';
 import Hackathons from './pages/Hackathons/hackathons';
 import SponsorUs from './pages/SponsorUs/sponsors-us';
 import ContactUs from './pages/Contact-Us/contact-us';
-import Application from "./pages/Application/application";
+import Application from './pages/Application/application';
 import Error from './components/404/404';
 import DesignMerced from './pages/DesignMerced/designmerced';
 

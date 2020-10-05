@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { FC, useState } from 'react';
 import Axios from 'axios';
 
@@ -36,8 +37,8 @@ const Application: FC = (): JSX.Element => {
     };
 
     return (
-        <>
-            <Navbar />
+        <div className="Outside-Background">
+            <Navbar backgroundColor="#EEEBF5" textColor="#B486CE" breakLineColor="#C4BDDC" showBanner={false} />
             <main className="application">
                 <img src={HMLOGO} className="hackmerced-logo" alt="HackMerced Logo" />
                 <h3>Application Form</h3>
@@ -2858,9 +2859,9 @@ const Application: FC = (): JSX.Element => {
                                 <option value="" disabled={true} selected={true}>
                                     Gender
                                 </option>
-                                <option value="male">male</option>
-                                <option value="female">female</option>
-                                <option value="other">other</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
                             </select>
                         </div>
                         <div className="cell right-cell">
@@ -2869,7 +2870,7 @@ const Application: FC = (): JSX.Element => {
                             </label>
                             <select id="race" name="race" onChange={handleInputChange} required>
                                 <option value="" disabled={true} selected={true}>
-                                    race
+                                    Race
                                 </option>
                                 <option value="American Indian or Alaskan Native">
                                     American Indian or Alaskan Native
@@ -2890,7 +2891,7 @@ const Application: FC = (): JSX.Element => {
                         </label>
                         <select id="stateOrCountry" name="stateOrCountry" onChange={handleInputChange} required>
                             <option value="" disabled={true} selected={true}>
-                                Select an Option
+                                Select
                             </option>
                             <option value="Alabama">Alabama</option>
                             <option value="Alaska">Alaska</option>
@@ -3217,7 +3218,7 @@ const Application: FC = (): JSX.Element => {
                             required
                         >
                             <option value="" disabled={true} selected={true}>
-                                Select an Option
+                                Select
                             </option>
                             <option value="Social Media">Social Media</option>
                             <option value="Friends">Friends</option>
@@ -3236,7 +3237,7 @@ const Application: FC = (): JSX.Element => {
                             required
                         >
                             <option value="" disabled={true} selected={true}>
-                                Select an Option
+                                Select
                             </option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
@@ -3247,8 +3248,8 @@ const Application: FC = (): JSX.Element => {
                     </button>
                 </form>
             </main>
-            <Footer />
-        </>
+            <Footer backgroundColor="#EEEBF5" textColor="#B486CE" fontColor="#B486CE" />
+        </div>
     );
 };
 
