@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart, faHandshake, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import Navbar from '../../components/NavBar/navbar';
 import Footer from '../../components/Footer/footer';
 import Form from '../../components/Form/Form';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faHandshake, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import PASTSPONSORS from '../../assets/images/past-sponsors.png';
 
 import './sponsor-us.scss';
