@@ -4,7 +4,7 @@ import Axios from 'axios';
 
 import Navbar from '../../components/NavBar/navbar';
 import Footer from '../../components/Footer/footer';
-import HMLOGO from '../../assets/images/hackmerced-logo.png';
+// import HMLOGO from '../../assets/images/hackmerced-logo.png';
 
 import './application.scss';
 
@@ -40,11 +40,12 @@ const Application: FC = (): JSX.Element => {
         <div className="Outside-Background">
             <Navbar backgroundColor="#EEEBF5" textColor="#B486CE" breakLineColor="#C4BDDC" showBanner={false} />
             <main className="application">
-                <img src={HMLOGO} className="hackmerced-logo" alt="HackMerced Logo" />
-                <h3>Application Form</h3>
+                <h3>
+                    DesignMerced <br></br>Application Form
+                </h3>
                 <form className="application-form" onSubmit={handleSubmit}>
                     <section className="row">
-                        <div className="cell left-cell">
+                        <div className="cell left-cell ">
                             <label htmlFor="firstName">
                                 First Name <span className="required">*</span>
                             </label>
