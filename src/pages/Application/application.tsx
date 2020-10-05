@@ -89,7 +89,7 @@ const Application: FC = (): JSX.Element => {
                             <input
                                 id="birthday"
                                 name="dateOfBirth"
-                                type="text"
+                                type="date"
                                 placeholder="Birthday"
                                 onChange={handleInputChange}
                                 required
