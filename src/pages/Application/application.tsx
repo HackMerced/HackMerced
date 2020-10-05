@@ -2870,12 +2870,15 @@ const Application: FC = (): JSX.Element => {
                                 <option value="" disabled={true} selected={true}>
                                     race
                                 </option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
+                                <option value="American Indian or Alaskan Native">
+                                    American Indian or Alaskan Native
+                                </option>
+                                <option value="Asian/Pacific Islander">Asian/Pacific Islander</option>
+                                <option value="Black or African American">Black or African American</option>
+                                <option value="Latino">Latino</option>
+                                <option value="White/Caucasion">White/Caucasion</option>
+                                <option value="Prefer not to answer">Prefer not to answer</option>
+                                <option value="other">Other</option>
                             </select>
                         </div>
                     </section>
@@ -2886,7 +2889,7 @@ const Application: FC = (): JSX.Element => {
                         </label>
                         <select id="stateOrCountry" name="stateOrCountry" onChange={handleInputChange} required>
                             <option value="" disabled={true} selected={true}>
-                               Select an Option
+                                Select an Option
                             </option>
                             <option value="Alabama">Alabama</option>
                             <option value="Alaska">Alaska</option>
