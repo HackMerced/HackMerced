@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react';
+import Axios from 'axios';
 
 import Navbar from '../../components/NavBar/navbar';
 import Footer from '../../components/Footer/footer';
@@ -19,12 +20,12 @@ const Application: FC = (): JSX.Element => {
         stateOrCountry: '',
         howDidYourHearAboutUs: '',
         firstDesignathon: '',
-        hasUploadedResume: false,
-        hasUploadedPortfolio: false,
     });
 
     const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
         event.preventDefault();
+
+        Axios.post(`https://hackmerced-tomoe.herokuapp.com/v1/design-merced/apply`, form);
     };
 
     const handleInputChange = (
