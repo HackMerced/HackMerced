@@ -16,8 +16,8 @@
         display: block;
         margin: 0% auto 2% auto;
 
-        @media only screen  and (max-width: 600px) {
-          width: 50%;
+        @media only screen and (max-width: 600px) {
+            width: 50%;
         }
     }
 
@@ -52,9 +52,21 @@
                     margin: 1rem 0;
                     height: 6vh;
                     border-radius: 3rem;
-                    color: black;
+                    color: grey;
                     font-size: 18px;
                     width: 100%;
+                }
+
+                ::placeholder {
+                    color: grey;
+                    opacity: 1;
+                }
+
+                select {
+                    [disabled],
+                    option:disabled {
+                        color: #ccd3dd;
+                    }
                 }
 
                 label {
@@ -65,11 +77,11 @@
             }
 
             @media only screen and (max-width: 600px) {
-              flex-direction: column;
+                flex-direction: column;
 
-              .cell {
-                width: 100%;
-              }
+                .cell {
+                    width: 100%;
+                }
             }
         }
 
@@ -84,9 +96,16 @@
                 margin: 1rem 0;
                 height: 6vh;
                 border-radius: 3rem;
-                color: black;
+                color: grey;
                 font-size: 18px;
                 width: 100%;
+            }
+
+            select {
+                [disabled],
+                option:disabled {
+                    color: #ccd3dd;
+                }
             }
         }
 
