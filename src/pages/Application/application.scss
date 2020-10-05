@@ -41,7 +41,6 @@
 
                 input,
                 select {
-                    width: 100%;
                     padding: 0 1rem;
                     margin: 1rem 0;
                     height: 6vh;
@@ -61,9 +60,12 @@
             .left-cell {
                 justify-content: flex-start;
                 align-items: flex-start;
+                width: 50%;
             }
 
             .right-cell {
+                width: 50%;
+
                 label {
                     justify-content: flex-start;
                     align-items: flex-start;
