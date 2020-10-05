@@ -72,10 +72,10 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                         <Link to="/contact-us">Contact Us</Link>
                         {pathname === '/contact-us' ? BreakLine() : null}
                     </Menu.Item>
-                    {/* <Menu.Item>
-                        <Link to="/login">Login</Link>
-                        {pathname === '/login' ? BreakLine() : null}
-                    </Menu.Item> */}
+                    <Menu.Item>
+                        <Link to="/application">Apply</Link>
+                        {pathname === '/application' ? <div className="break-line"></div> : null}
+                    </Menu.Item>
                 </Menu.Items>
             </Menu.Wrapper>
         </Styles.Wrapper>

@@ -8,6 +8,7 @@ import './title.scss';
 
 const Title: FC = (): JSX.Element => {
     const [showModal, setShowModal] = useState(false);
+    // eslint-disable-next-line @typescript-eslint/camelcase
     const [values, setValues] = useState({ FNAME: '', LNAME: '', email_address: '' });
     const { width } = useWindowDimensions();
 
@@ -18,7 +19,9 @@ const Title: FC = (): JSX.Element => {
             method: 'POST',
             url: 'https://hackmerced-myriagon.herokuapp.com/v1/mailchimp/subscribe',
             data: {
+                // eslint-disable-next-line @typescript-eslint/camelcase
                 email_address: values.email_address,
+                // eslint-disable-next-line @typescript-eslint/camelcase
                 merge_fields: {
                     FNAME: values.FNAME,
                     LNAME: values.LNAME,
