@@ -1,4 +1,4 @@
-.TITLEDESIGN {
+.TITLE__DESIGN {
     background: #eeebf5;
     height: 810px;
     background-repeat: no-repeat;
@@ -9,8 +9,8 @@
         height: 600px;
     }
 
-    .designmerced {
-        .background-square {
+    &__designmerced {
+        .TITLE__DESIGN__background__square {
             position: absolute;
             height: 55%;
             width: 30%;
@@ -19,7 +19,7 @@
             z-index: 1;
         }
 
-        .image-square {
+        .TITLE__DESIGN__abstract__painting {
             position: absolute;
             left: 10%;
             bottom: 30%;
@@ -30,13 +30,13 @@
             z-index: 2;
         }
 
-        .designmerced-title {
+        .TITLE__DESIGN__title {
             position: absolute;
             right: 0;
             top: 20%;
         }
 
-        .designmerced-date {
+        .TITLE__DESIGN__date {
             position: absolute;
             top: 20%;
             right: 0;

@@ -18,12 +18,12 @@ const AboutUsDesign: FC = (): JSX.Element => {
                     <div id="one__design__box" className="about-us-design__box"></div>
                     <div id="two__design__box" className="about-us-design__box"></div>
                     <p className="about-us-design__content__description__text">
-                        DesignMerced is HackMerced’s first virtual designathon for creatives and design individuals in
-                        high school and college from around the world. DesignMerced is a 24-hour event that will enhance
-                        designers/creators innovative skills and showcase their own uniqueness of solving design with
-                        technology. ‍<br></br> <br></br>
-                        Students with all levels of design experience are encouraged to join us and discover their
-                        potential as problem-solvers, innovators, and future designers. Look forward to a day of
+                        DesignMerced is UC Merced’s first virtual designathon, hosted by HackMerced for creatives and
+                        design individuals in high school and college from around the world. DesignMerced is a 24-hour
+                        event that will enhance designer&apos;s and creator&apos;s innovative skills and showcase their
+                        uniqueness of solving design with technology. ‍ <br></br>
+                        <br></br>Students with all levels of design experience are encouraged to join us and discover
+                        their potential as problem-solvers, innovators, and future designers. Look forward to a day of
                         workshops, activities, networking, games, and more!
                     </p>
                 </article>
