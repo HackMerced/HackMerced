@@ -2885,8 +2885,8 @@ const Application: FC = (): JSX.Element => {
                             US, what country are you from?
                         </label>
                         <select id="stateOrCountry" name="stateOrCountry" onChange={handleInputChange} required>
-                            <option value="-------- Select an Option --------" disabled={true} selected={true}>
-                                -------- Select an Option --------
+                            <option value="" disabled={true} selected={true}>
+                               Select an Option
                             </option>
                             <option value="Alabama">Alabama</option>
                             <option value="Alaska">Alaska</option>
@@ -2938,7 +2938,7 @@ const Application: FC = (): JSX.Element => {
                             <option value="West Virginia">West Virginia</option>
                             <option value="Wisconsin">Wisconsin</option>
                             <option value="Wyoming">Wyoming</option>
-                            <option value="--------" disabled={true}>
+                            <option value="" disabled={true}>
                                 --------
                             </option>
                             <option value="Afghanistan">Afghanistan</option>
@@ -3212,8 +3212,8 @@ const Application: FC = (): JSX.Element => {
                             onChange={handleInputChange}
                             required
                         >
-                            <option value="-------- Select an Option --------" disabled={true} selected={true}>
-                                -------- Select an Option --------
+                            <option value="" disabled={true} selected={true}>
+                                Select an Option
                             </option>
                             <option value="Social Media">Social Media</option>
                             <option value="Friends">Friends</option>
@@ -3231,8 +3231,8 @@ const Application: FC = (): JSX.Element => {
                             onChange={handleInputChange}
                             required
                         >
-                            <option value="-------- Select an Option --------" disabled={true} selected={true}>
-                                -------- Select an Option --------
+                            <option value="" disabled={true} selected={true}>
+                                Select an Option
                             </option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>

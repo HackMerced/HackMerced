@@ -15,6 +15,10 @@
         width: 15%;
         display: block;
         margin: 0% auto 2% auto;
+
+        @media only screen  and (max-width: 600px) {
+          width: 50%;
+        }
     }
 
     h3 {
@@ -37,6 +41,9 @@
                 display: flex;
                 flex-direction: column;
                 flex-grow: 1;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 50%;
                 margin: 0 2%;
 
                 input,
@@ -57,24 +64,12 @@
                 }
             }
 
-            .left-cell {
-                justify-content: flex-start;
-                align-items: flex-start;
-                width: 50%;
-            }
+            @media only screen and (max-width: 600px) {
+              flex-direction: column;
 
-            .right-cell {
-                width: 50%;
-
-                label {
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                }
-
-                input {
-                    justify-content: flex-end;
-                    align-items: flex-end;
-                }
+              .cell {
+                width: 100%;
+              }
             }
         }
 
@@ -96,10 +91,10 @@
         }
 
         .submit-application {
-            margin: 0 1%;
+            margin: 0 2% 0 auto;
             height: 3.5rem;
             font-size: 22px;
-            width: 97%;
+            width: 96%;
             text-align: center;
             font-weight: bolder;
             color: orange;
