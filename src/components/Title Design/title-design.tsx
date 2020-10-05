@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import DESIGNTITLE from '../../assets/images/title.png';
 import DESIGNDATE from '../../assets/images/date.png';
@@ -20,7 +21,9 @@ const TitleDesign: FC = (): JSX.Element => {
                 <img src={DESIGNDATE} width="600px" alt="DESIGNMERCED DATE" className="TITLE__DESIGN__date" />
                 <div className="designmerced-subtext text-gray-100">24-hour designathon.</div>
                 <div className="designmerced-text text-gray-100">HackMerced&apos;s first</div>
-                <button className="apply-button bg-white text-black font-bold">Apply Now</button>
+                <Link to="/application">
+                    <button className="apply-button bg-white text-black font-bold">Apply Now</button>
+                </Link>
             </section>
         </header>
     );
