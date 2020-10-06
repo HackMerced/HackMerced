@@ -33,7 +33,7 @@ const Footer: FC<{ backgroundColor?: string; textColor?: string; fontColor?: str
                     >
                         {footerIcons(faSlack)}
                     </a>
-                    <a href="https://github.com/HackMerced" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/HackMerced?q=&type=source&language=" target="_blank" rel="noopener noreferrer">
                         {footerIcons(faGithub)}
                     </a>
                     <a

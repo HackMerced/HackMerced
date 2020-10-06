@@ -1,4 +1,4 @@
-.TITLEDESIGN {
+.TITLE__DESIGN {
     background: #eeebf5;
     height: 810px;
     background-repeat: no-repeat;
@@ -9,30 +9,34 @@
         height: 600px;
     }
 
-    .designmerced {
-        .background-square {
+    &__designmerced {
+        .TITLE__DESIGN__background__square {
             position: absolute;
             height: 55%;
-            width: 25%;
+            width: 30%;
+            border-radius: 3em;
             background-color: #0d0721;
+            z-index: 1;
         }
 
-        .image-square {
+        .TITLE__DESIGN__abstract__painting {
             position: absolute;
             left: 10%;
             bottom: 30%;
             height: 50%;
             width: 30%;
+            border-radius: 3em;
             background-color: #b486ce;
+            z-index: 2;
         }
 
-        .designmerced-title {
+        .TITLE__DESIGN__title {
             position: absolute;
             right: 0;
             top: 20%;
         }
 
-        .designmerced-date {
+        .TITLE__DESIGN__date {
             position: absolute;
             top: 20%;
             right: 0;
@@ -132,8 +136,8 @@
             }
 
             &:active {
-                background: transparent;
-                color: white;
+                background: #0D0721;
+                color: #eeebf5;
             }
         }
 
@@ -264,7 +268,7 @@
                     margin: 3% 0;
 
                     &:active {
-                        background: linear-gradient(#fdab78, #faa55a);
+                        background: #0D0721;
                         color: white;
                     }
                 }
