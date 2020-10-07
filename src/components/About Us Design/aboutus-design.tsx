@@ -11,7 +11,7 @@ const AboutUsDesign: FC = (): JSX.Element => {
         <section className="about-us-design">
             <div className="about-us-design__title">About DesignMerced</div>
             <section className="about-us-design__content">
-                {width < 600 ? (
+                {width < 1000 ? (
                     <img src={ABOUT_ICON} alt="About Icon" className="about-us-design__content__logo" />
                 ) : null}
                 <article className="about-us-design__content__description">
@@ -27,7 +27,7 @@ const AboutUsDesign: FC = (): JSX.Element => {
                         workshops, activities, networking, games, and more!
                     </p>
                 </article>
-                {width > 600 ? (
+                {width > 1000 ? (
                     <img src={ABOUT_ICON} alt="About Icon" className="about-us-design__content__logo" />
                 ) : null}
             </section>
