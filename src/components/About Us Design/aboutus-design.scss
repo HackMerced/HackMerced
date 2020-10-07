@@ -52,10 +52,6 @@
                 height: 45vh;
             }
 
-            @media only screen and (max-width: 1200px) {
-                font-size: medium;
-            }
-
             &__box {
                 position: relative;
                 width: 100%;
@@ -90,9 +86,17 @@
                 width: 85%;
                 font-size: x-small;
 
-                @media only screen and (min-width: 600px) {
+                @media only screen and (min-width: 450px) {
+                    font-size: 12px;
+                }
+
+                @media only screen and (min-width: 680px) {
                     left: 6vw;
-                    font-size: small;
+                    font-size: 14px;
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    font-size: medium;
                 }
 
                 @media only screen and (max-width: 300px) {
