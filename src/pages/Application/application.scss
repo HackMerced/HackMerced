@@ -30,6 +30,10 @@
             margin-bottom: 1rem;
             text-align: center;
         }
+        ::placeholder {
+            color: grey;
+          
+        }
 
         .application-form {
             display: flex;
