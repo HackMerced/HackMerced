@@ -9,6 +9,7 @@
         color: #eeebf5;
         font-size: 32px;
         text-align: center;
+        padding: 5% 0% 0% 0%;
     }
 
     &__content {
@@ -50,7 +51,7 @@
             position: absolute;
             color: rgb(44, 34, 34);
             width: 50%;
-            margin: 70px 0 0 37%;
+            margin: 100px 0 0 37%;
         }
 
         @media only screen and (max-width: 1000px) {
