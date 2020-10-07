@@ -43,12 +43,24 @@
             margin-top: 10%;
         }
 
+        @media only screen and (min-width: 700px) {
+            width: 70%;
+        }
+
         @media only screen and (min-width: 800px) {
             width: 60%;
         }
 
+        @media only screen and (min-width: 1000px) {
+            width: 50%;
+        }
+
         @media only screen and (min-width: 1100px) {
             width: 40%;
+        }
+
+        @media only screen and (min-width: 1400px) {
+            width: 500px;
         }
     }
 
@@ -85,6 +97,10 @@
             padding: 20px;
             margin-top: 2%;
 
+            @media only screen and (max-width: 1000px) {
+                padding: 20px 5px;
+            }
+
             @media only screen and (min-width: 1100px) {
                 width: 20%;
             }
@@ -103,7 +119,7 @@
         }
 
         @media only screen and (min-width: 1500px) {
-          top: -250px;
-      }
+            top: -250px;
+        }
     }
 }
