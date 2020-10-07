@@ -30,6 +30,10 @@
             margin-bottom: 1rem;
             text-align: center;
         }
+        ::placeholder {
+            color: grey;
+          
+        }
 
         .application-form {
             display: flex;
@@ -132,5 +136,37 @@
                 }
             }
         }
+    }
+}
+
+.select-search {
+    width: 100%;
+
+    &__input {
+        padding: 0 1rem;
+        margin: 1rem 0;
+        height: 6vh;
+        border-radius: 3rem;
+        font-size: 18px;
+        width: 100%;
+        color: gray;
+
+        ::placeholder {
+          color: gray;
+        }
+
+        &:focus {
+          color: gray;
+        }
+    }
+
+    &__select {
+        position: absolute;
+        z-index: 10;
+        background-color: #eeebf5;
+        color: #b486ce;
+        width: 50%;
+        padding: 2%;
+        border-radius: 3rem;
     }
 }
