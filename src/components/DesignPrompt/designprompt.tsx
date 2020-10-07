@@ -1,18 +1,17 @@
 import React, { FC } from 'react';
 
 import './designprompt.scss';
-// import lightbulb from '../../assets/images/lightbulb.png';
-import PROMPTICON from '../../assets/images/lightbulb-layers.png';
+import PROMPT_ICON from '../../assets/images/lightbulb-layers.png';
 
 const DesignPrompt: FC = (): JSX.Element => {
     return (
-        <main className="DESIGN__PROMPT">
-            <div className="DESIGN__PROMPT__title">The UI/UX Prompt</div>
-            <img className="DESIGN__PROMPT__icon" src={PROMPTICON} alt="Lightbulb Icon"></img>
-            <section className="DESIGN__PROMPT__content">
-                <div id="one__design__box" className="DESIGN__PROMPT__box"></div>
-                <div id="two__design__box" className="DESIGN__PROMPT__box"></div>
-                <p className="DESIGN__PROMPT__content__description__text">
+        <section className="design-prompt">
+            <div className="design-prompt__title">The UI/UX Prompt</div>
+            <section className="design-prompt__content">
+                <img className="design-prompt__content__icon" src={PROMPT_ICON} alt="Lightbulb Icon" />
+                <div className="design-prompt__content__box one-design-box"></div>
+                <div className="design-prompt__content__box two-design-box"></div>
+                <p className="design-prompt__content__description">
                     We want teams/individuals to design an application from the ground up of your dream app that
                     involves connectivity. Since quarantine started, there was a loss of physical contact and a needed
                     push toward fostering online connections. This UI/UX design app can include enriching peoples’
@@ -20,7 +19,7 @@ const DesignPrompt: FC = (): JSX.Element => {
                     programming necessary.
                 </p>
             </section>
-        </main>
+        </section>
     );
 };
 
