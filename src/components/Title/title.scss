@@ -217,10 +217,11 @@
             margin: 2% auto 0% 53%;
             font-size: 20px;
             width: 35%;
-            height: 6%;
+            // height: 10%;
             border-radius: 20px;
             transition: 0.2s all;
             text-align: center;
+            padding: .8%;
 
             &:before {
                 content: '';
@@ -250,6 +251,7 @@
                 background: transparent;
                 color: white;
             }
+         
         }
 
         @media (max-width: 700px) {
