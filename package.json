@@ -8,7 +8,7 @@
         "build": "yarn tailwind:css && react-scripts build",
         "gren": "gren release --override --tags=all --config=.grenrc.js",
         "start": "yarn tailwind:css && react-scripts start",
-        "storybook": "start-storybook -p 9001 -c .storybook",
+        "storybook": "start-storybook -p 9001 -s ./src/assets -c .storybook",
         "tailwind:css": "tailwind build src/tailwind.css -c tailwind.config.js -o src/tailwind.scss",
         "test": "react-scripts test"
     },
