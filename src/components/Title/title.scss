@@ -9,6 +9,10 @@
         height: 600px;
     }
 
+    @media (max-width: 450px) {
+        height: 400px;
+    }
+
     .t-wave {
         overflow: hidden;
 
@@ -208,7 +212,7 @@
         }
 
         .subscribe-button {
-            position: absolute;
+            position: relative;
             text-transform: uppercase;
             margin: 2% auto 0% 53%;
             font-size: 20px;
@@ -217,6 +221,7 @@
             border-radius: 20px;
             transition: 0.2s all;
             text-align: center;
+            padding: 2%;
 
             &:before {
                 content: '';
@@ -253,7 +258,7 @@
             flex-flow: column wrap;
             justify-content: center;
             align-items: center;
-            margin-top: -50% !important;
+            margin-top: 10%;
 
             &-title {
                 margin: 0% 0 0 5% !important;
