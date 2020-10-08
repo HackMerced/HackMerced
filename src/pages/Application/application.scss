@@ -135,6 +135,9 @@
                     color: white;
                 }
             }
+            input[type="file"] {
+                display: none;
+            }
             .file-submission {
                 margin: 2% 2% 0 auto;
                 height: 3.5rem;
@@ -148,6 +151,7 @@
                 border: none;
                 cursor: pointer;
                 transition: all 0.2s ease;
+                padding: 2% 0% 0% 0%;
 
                 &:active {
                     background: #b486ce;
