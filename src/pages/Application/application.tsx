@@ -226,6 +226,20 @@ const Application: FC = (): JSX.Element => {
                             <option value="No">No</option>
                         </select>
                     </section>
+                    <section className="row">
+                        <div className="cell left-cell">
+                            <label htmlFor="Resume">
+                                Upload Resume  <span className="required">*</span> (PDF only)
+                            </label>
+                            <div className="file-submission">
+                                <input type="file" id="myFile" name="filename"></input>
+                            </div>
+                        </div>
+                        <div className="cell right-cell">
+                            <label htmlFor="Design">Upload Design Portfolio (PDF only)</label>
+                            <input className="file-submission" type="file" id="myFile" name="filename"></input>
+                        </div>
+                    </section>
                     <button className="submit-application" type="submit">
                         SUBMIT
                     </button>

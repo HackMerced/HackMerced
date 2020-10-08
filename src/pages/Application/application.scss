@@ -135,6 +135,25 @@
                     color: white;
                 }
             }
+            .file-submission {
+                margin: 2% 2% 0 auto;
+                height: 3.5rem;
+                font-size: 22px;
+                width: 96%;
+                text-align: center;
+                font-weight: bold;
+                color: #b486ce !important;
+                background: white;
+                border-radius: 3rem;
+                border: none;
+                cursor: pointer;
+                transition: all 0.2s ease;
+
+                &:active {
+                    background: #b486ce;
+                    color: white;
+                }
+            }
         }
     }
 }
