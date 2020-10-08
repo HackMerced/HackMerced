@@ -296,7 +296,6 @@
         }
     }
 
-    // Form Popup
     .overlay {
         position: fixed;
         top: 0;
@@ -305,6 +304,7 @@
         right: 0;
         background: rgba(0, 0, 0, 0.5);
         transition: opacity 200ms;
+        z-index: 1;
 
         &.light {
             background: rgba(41, 40, 40, 0.9);
@@ -421,8 +421,8 @@
 
         /* Extra large devices (large laptops and desktops, 1200px and up) */
         @media only screen and (min-width: 1500px) {
-            margin: -15% auto 0% 5%;
-            width: 32%;
+            margin: -18% auto 0% 15%;
+            width: 28%;
         }
     }
 }
