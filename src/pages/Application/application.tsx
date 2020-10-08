@@ -231,7 +231,10 @@ const Application: FC = (): JSX.Element => {
                             <label htmlFor="Resume">
                                 Upload Resume <span className="required">*</span> (PDF only)
                             </label>
-                            <input className="file-submission" type="file" name="filename"></input>
+                            <label className="file-submission" htmlFor="file-type">
+                                <input type="file" />
+                                Upload Resume
+                            </label>
                         </div>
                         <div className="cell right-cell">
                             <label htmlFor="Design">Upload Design Portfolio (PDF only)</label>
