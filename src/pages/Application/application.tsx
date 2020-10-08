@@ -3,6 +3,7 @@ import React, { FC, useState } from 'react';
 import Axios from 'axios';
 import SelectSearch from 'react-select-search';
 
+import FileUploader from '../../components/FileUploader/FileUpoader';
 import Navbar from '../../components/NavBar/navbar';
 import Footer from '../../components/Footer/footer';
 import { universities } from './universities';
@@ -228,14 +229,14 @@ const Application: FC = (): JSX.Element => {
                     </section>
                     <section className="row">
                         <div className="cell left-cell">
-                            <label htmlFor="Resume">
+                            <label htmlFor="resume">
                                 Upload Resume <span className="required">*</span> (PDF only)
                             </label>
-                            <input className="file-submission" type="file" name="filename"></input>
+                            <FileUploader id="resume" className="file-submission" name="resume" />
                         </div>
                         <div className="cell right-cell">
-                            <label htmlFor="Design">Upload Design Portfolio (PDF only)</label>
-                            <input className="file-submission" type="file" name="filename"></input>
+                            <label htmlFor="portfolio">Upload Design Portfolio (PDF only)</label>
+                            <FileUploader id="portfolio" className="file-submission" name="portfolio" />
                         </div>
                     </section>
                     <button className="submit-application" type="submit">
