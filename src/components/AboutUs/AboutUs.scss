@@ -1,44 +1,9 @@
-$titles: black;
-.ABOUT {
+.about-us {
     padding: 3% 0% 2% 0%;
 
-    .break-line {
-        border: 0.5rem solid  #ffb181;
-        opacity: 50%;
-        border-width: .5rem;
-        border-radius: 10px;
-        margin: 0 auto;
-        
-
-        /* Smallest devices (iphones, 350px and lower) */
-        @media only screen and (max-width: 350px) {
-            width: 30%;
-        }
-
-        /* Small devices (iphones, 350px and up) */
-         @media only screen and (min-width: 350px) {
-            width: 30%;
-        }
-
-        /* Medium devices (landscape tablets, 768px and up) */
-        @media only screen and (min-width: 768px) {
-            width: 25%
-        }
-
-        /* Large devices (laptops/desktops, 992px and up) */
-        @media only screen and (min-width: 992px) {
-            width: 20%
-        }
-
-         /* Extra large devices (large laptops and desktops, 1200px and up) */
-         @media only screen and (min-width: 1200px) {
-            width: 20%;
-        }
-
-    }
-    h1 {
+    &__title {
         font-weight: bold;
-        color: $titles;
+        color: black;
         text-align: center;
 
         /* Small devices (iphones, 350px and up) */
@@ -62,7 +27,40 @@ $titles: black;
         }
     }
 
-    .about {
+    &__break-line {
+        border: 0.5rem solid #ffb181;
+        opacity: 50%;
+        border-width: 0.5rem;
+        border-radius: 10px;
+        margin: 0 auto;
+
+        /* Smallest devices (iphones, 350px and lower) */
+        @media only screen and (max-width: 350px) {
+            width: 30%;
+        }
+
+        /* Small devices (iphones, 350px and up) */
+        @media only screen and (min-width: 350px) {
+            width: 30%;
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            width: 25%;
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            width: 20%;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            width: 20%;
+        }
+    }
+
+    &__content {
         line-height: 38px;
         color: #000;
         display: flex;
@@ -74,14 +72,9 @@ $titles: black;
             flex-direction: row;
         }
 
-        &-description {
+        &__description {
             text-decoration: bold;
             flex-direction: column;
-            h1 {
-                font-weight: bolder;
-                margin: 3% 0 2% 0%;
-                text-align: center;
-            }
 
             p {
                 text-align: left;
@@ -131,10 +124,9 @@ $titles: black;
             }
         }
 
-        .TEAMPICTURE {
+        &__team-picture {
             width: 80%;
             border-radius: 25px;
-            // box-shadow: -6px -6px 16px #fff, 6px 6px 16px #696865;
 
             @media (min-width: 600px) {
                 width: 70%;

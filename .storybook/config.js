@@ -9,6 +9,27 @@ addDecorator(withA11y);
 addDecorator(centered);
 addDecorator(withKnobs);
 addParameters({
+    backgrounds: {
+        default: 'HackMercedBody',
+        values: [
+            {
+                name: 'HackMerced',
+                value: '#ffb276',
+            },
+            {
+                name: 'HackMercedBody',
+                value: '#ffffff',
+            },
+            {
+                name: 'DesignMercedBody',
+                value: '#0d0721',
+            },
+            {
+                name: 'DesignMerced',
+                value: '#eeebf5',
+            },
+        ],
+    },
     docs: {
         container: DocsContainer,
         page: DocsPage,

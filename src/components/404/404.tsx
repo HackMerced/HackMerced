@@ -4,11 +4,9 @@ import './404.scss';
 
 const Error: FC = (): JSX.Element => {
     return (
-        <>
-            <main>
-                <div className="error"></div>
-            </main>
-        </>
+        <main>
+            <div className="error"></div>
+        </main>
     );
 };
 

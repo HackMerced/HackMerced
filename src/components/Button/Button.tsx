@@ -1,4 +1,4 @@
-import React, { SFC, PropsWithChildren, ReactNode } from 'react';
+import React, { FC, PropsWithChildren, ReactNode } from 'react';
 
 export interface IButtonProps {
     children?: ReactNode;
@@ -17,7 +17,7 @@ const styles = {
     padding: '3px 10px',
 };
 
-const Button: SFC<IButtonProps> = (props: PropsWithChildren<IButtonProps>) => (
+const Button: FC<IButtonProps> = (props: PropsWithChildren<IButtonProps>) => (
     <button onClick={props.onClick} style={props.styles} disabled={props.disabled} type="button">
         {props.children}
     </button>
