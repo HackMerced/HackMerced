@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import useWindowDimensions from '../WindowDimensions/WindowDimensions';
 import ABOUT_ICON from '../../assets/images/about-icon.png';
-import './aboutus-design.scss';
+import './DesignMercedAboutUs.scss';
 
 const AboutUsDesign: FC = (): JSX.Element => {
     const { width } = useWindowDimensions();
