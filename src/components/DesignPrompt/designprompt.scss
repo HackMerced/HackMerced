@@ -5,6 +5,10 @@
     align-items: center;
     justify-content: center;
 
+    @media (min-width: 1000px) and (max-width: 1280px) {
+      height: 600px;
+    }
+
     &__title {
         color: #eeebf5;
         font-size: 32px;
