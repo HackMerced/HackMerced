@@ -32,7 +32,6 @@
         }
         ::placeholder {
             color: grey;
-          
         }
 
         .application-form {
@@ -135,7 +134,7 @@
                     color: white;
                 }
             }
-           
+
             .file-submission {
                 margin: 2% 2% 0 auto;
                 height: 3.5rem;
@@ -156,8 +155,6 @@
                     color: white;
                 }
             }
-
-            
         }
     }
 }
@@ -175,11 +172,11 @@
         color: gray;
 
         ::placeholder {
-          color: gray;
+            color: gray;
         }
 
         &:focus {
-          color: gray;
+            color: gray;
         }
     }
 
@@ -193,3 +190,7 @@
         border-radius: 3rem;
     }
 }
+
+// input#file-upload-button {
+//   display: none;
+// }
