@@ -221,7 +221,6 @@
             border-radius: 20px;
             transition: 0.2s all;
             text-align: center;
-            padding: 2%;
 
             &:before {
                 content: '';
@@ -259,6 +258,7 @@
             justify-content: center;
             align-items: center;
             margin-top: 10%;
+            padding: 2%;
 
             &-title {
                 margin: 0% 0 0 5% !important;
