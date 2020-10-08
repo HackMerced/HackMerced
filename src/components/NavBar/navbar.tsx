@@ -83,7 +83,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
 };
 
 const Styles = {
-    Wrapper: styled.main`
+    Wrapper: styled.header`
         display: flex;
         background-color: #ffb181;
         height: auto;
