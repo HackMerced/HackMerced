@@ -1,11 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { FC, useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 
 import MLHBANNER from '../../assets/images/mlh-badge.svg';
 import './navbar.scss';
 
-function Navbar() {
+const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string; showBanner?: Boolean }> = ({
+    backgroundColor,
+    textColor,
+    breakLineColor,
+    showBanner = true,
+}): JSX.Element => {
     let { pathname } = useLocation();
     const [openDrawer, toggleDrawer] = useState(false);
     const drawerRef = useRef(null);
@@ -27,46 +32,58 @@ function Navbar() {
         openDrawer: openDrawer,
     };
 
+    const BreakLine = (): JSX.Element => {
+        return <div className="break-line" style={{ borderColor: breakLineColor }}></div>;
+    };
+
     return (
-        <Styles.Wrapper className="test">
+        <Styles.Wrapper className="test" style={{ backgroundColor, color: textColor }}>
             <Menu.Wrapper>
                 <Menu.Logo>
-                    <img className="MLH" src={MLHBANNER} width="100" height="175" alt="MLH BANNER" />
+                    {showBanner ? (
+                        <img className="MLH" src={MLHBANNER} width="100" height="175" alt="MLH BANNER" />
+                    ) : (
+                        <div className="hmtext">HackMerced</div>
+                    )}
                 </Menu.Logo>
 
                 <HamburgerButton.Wrapper onClick={() => toggleDrawer(true)}>
-                    <HamburgerButton.Lines />
+                    <HamburgerButton.Lines breakLineColor={breakLineColor} />
                 </HamburgerButton.Wrapper>
 
-                <Menu.Items ref={drawerRef} {...NavbarItemsProps}>
+                <Menu.Items ref={drawerRef} {...NavbarItemsProps} style={{ backgroundColor }}>
                     <Menu.Item>
                         <Link to="/">Home</Link>
-                        {pathname === '/' ? <div className="break-line"></div> : null}
+                        {pathname === '/' ? BreakLine() : null}
+                    </Menu.Item>
+                    <Menu.Item>
+                        <Link to="/designmerced">DesignMerced</Link>
+                        {pathname === '/designmerced' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item>
                         <Link to="/past-hackathons">Past Hackathons</Link>
-                        {pathname === '/past-hackathons' ? <div className="break-line"></div> : null}
+                        {pathname === '/past-hackathons' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item>
                         <Link to="/sponsors">Sponsors</Link>
-                        {pathname === '/sponsors' ? <div className="break-line"></div> : null}
+                        {pathname === '/sponsors' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item>
                         <Link to="/contact-us">Contact Us</Link>
-                        {pathname === '/contact-us' ? <div className="break-line"></div> : null}
+                        {pathname === '/contact-us' ? BreakLine() : null}
                     </Menu.Item>
-                    <Menu.Item>
-                        <Link to="/login">Login</Link>
-                        {pathname === '/login' ? <div className="break-line"></div> : null}
-                    </Menu.Item>
+                    {/* <Menu.Item>
+                        <Link to="/application">Apply</Link>
+                        {pathname === '/application' ? <div className="break-line"></div> : null}
+                    </Menu.Item> */}
                 </Menu.Items>
             </Menu.Wrapper>
         </Styles.Wrapper>
     );
-}
+};
 
 const Styles = {
-    Wrapper: styled.main`
+    Wrapper: styled.header`
         display: flex;
         background-color: #ffb181;
         height: auto;
@@ -74,10 +91,9 @@ const Styles = {
 
         @media only screen and (max-width: 40em) {
             height: ${(): string => {
-            const { pathname } = useLocation();
-            return pathname !== '/' ? '13vw' : 'auto';
-        }
-        };
+                const { pathname } = useLocation();
+                return pathname !== '/' ? '13vw' : 'auto';
+            }};
     `,
 };
 
@@ -89,13 +105,6 @@ const Menu = {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-/*         // 40em == 640px
-        @media only screen and (max-width: 40em) {
-            position: fixed;
-            width: 100vw;
-            top: 0;
-        } */
     `,
     Logo: styled.h1`
         padding: 0.5rem 1rem;
@@ -106,7 +115,7 @@ const Menu = {
         font-weight: 700;
         text-transform: uppercase;
 
-        @media only screen and (max-width: 40em) {
+        @media only screen and (max-width: 910px) {
             position: fixed;
             right: 0;
             top: 0;
@@ -122,7 +131,7 @@ const Menu = {
         padding: 0 1rem;
         cursor: pointer;
 
-        @media only screen and (max-width: 40em) {
+        @media only screen and (max-width: 910px) {
             padding: 1rem 0;
         }
     `,
@@ -150,7 +159,7 @@ const HamburgerButton = {
             left: -25%;
         }
 
-        @media only screen and (max-width: 40em) {
+        @media only screen and (max-width: 910px) {
             display: block;
         }
     `,
@@ -169,6 +178,7 @@ const HamburgerButton = {
             width: 100%;
             background-color: white;
             position: absolute;
+            background-color: ${({ breakLineColor }: { breakLineColor: any }) => breakLineColor };
         }
 
         &:after {

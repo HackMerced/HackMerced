@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-import TRUMAN from '../../assets/images/truman.jpg';
-import LORENZO from '../../assets/images/lorenzo.jpg';
+import TRUMAN from '../../assets/images/truman.png';
+import LORENZO from '../../assets/images/lorenzo.png';
 import MARY from '../../assets/images/mary.jpg';
 import SHIV from '../../assets/images/shivanshu.jpg';
 import ATHENA from '../../assets/images/athena.jpg';
@@ -9,13 +9,17 @@ import ADRIAN from '../../assets/images/adrian.jpg';
 import BUSHER from '../../assets/images/busher.jpg';
 import TUZETTE from '../../assets/images/tuzette.jpg';
 import MANJOT from '../../assets/images/manjot.jpg';
-import KACEY from '../../assets/images/kacey.jpg';
 import INTISER from '../../assets/images/Intiser.png';
+import ALISSON from '../../assets/images/alisson.png';
+import MARTHEN from '../../assets/images/marty.jpg';
+import LAURENCE from '../../assets/images/laurence.png';
+import JET from '../../assets/images/jet.jpg';
+import JOSEPH from '../../assets/images/joseph.jpg';
+import JANELLE from '../../assets/images/janelle.jpg';
 
 import './teampics.scss';
 import { TeamPicsState } from './teampics.types';
 
-/* Outline for this component largely taken from: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
 const TeamPics: FC = (): JSX.Element => {
     const team: Array<TeamPicsState> = [
         {
@@ -55,12 +59,32 @@ const TeamPics: FC = (): JSX.Element => {
             src: MANJOT,
         },
         {
-            url: 'https://www.linkedin.com/in/kacey-su-351950176/',
-            src: KACEY,
-        },
-        {
             url: 'https://www.linkedin.com/in/intiseraziz/',
             src: INTISER,
+        },
+        {
+            url: 'https://www.linkedin.com/in/alisson-ross-6a7b75182/',
+            src: ALISSON,
+        },
+        {
+            url: 'https://www.linkedin.com/in/marthen-r-nodado/',
+            src: MARTHEN,
+        },
+        {
+            url: 'https://www.linkedin.com/in/laurenceamorganiii/',
+            src: LAURENCE,
+        },
+        {
+            url: 'https://www.linkedin.com/in/jatnael-montes/',
+            src: JET,
+        },
+        {
+            url: 'https://www.linkedin.com/in/joseph-hoang-414836194/',
+            src: JOSEPH,
+        },
+        {
+            url: 'https://www.linkedin.com/in/jpjanelleperez/',
+            src: JANELLE,
         },
     ];
 

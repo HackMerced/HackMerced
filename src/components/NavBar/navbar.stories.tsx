@@ -3,6 +3,10 @@ import * as React from 'react';
 
 import Navbar from './navbar';
 
-storiesOf('NavBar', module).add('Base Navbar', () => {
-    return <Navbar />;
-});
+storiesOf('NavBar', module)
+    .add('Base Navbar', () => {
+        return <Navbar />;
+    })
+    .add('Navbar with Different Background Color', () => {
+        return <Navbar backgroundColor="#EEEBF5" />;
+    });
