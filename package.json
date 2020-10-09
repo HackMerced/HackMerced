@@ -37,7 +37,7 @@
         "@fortawesome/react-fontawesome": "0.1.9",
         "axios": "0.19.2",
         "hover.css": "2.3.2",
-        "html-react-parser": "^0.14.0",
+        "html-react-parser": "0.14.0",
         "node-sass": "4.14.1",
         "react": "16.13.0",
         "react-dom": "16.13.0",
