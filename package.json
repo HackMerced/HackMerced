@@ -6,6 +6,8 @@
     "homepage": "http://hackmerced.com",
     "scripts": {
         "build": "yarn tailwind:css && react-scripts build",
+        "predeploy": "yarn build",
+        "deploy": "gh-pages -d build -b gh-pages",
         "gren": "gren release --override --tags=all --config=.grenrc.js",
         "start": "yarn tailwind:css && react-scripts start",
         "storybook": "start-storybook -p 9001 -s ./src/assets -c .storybook",
