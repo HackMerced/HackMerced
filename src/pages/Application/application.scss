@@ -191,6 +191,12 @@
     }
 }
 
-// input#file-upload-button {
-//   display: none;
-// }
+.Toastify__toast--default {
+    background: #eeebf5 !important;
+    color: #b486ce !important;
+    border-radius: 10px !important;
+}
+
+.Toastify__progress-bar--default {
+    background: linear-gradient(#b486ce, #80a0cf) !important;
+}
