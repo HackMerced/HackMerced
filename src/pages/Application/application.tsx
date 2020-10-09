@@ -87,6 +87,18 @@ const Application: FC = (): JSX.Element => {
             .then(() => {
                 setIsLoading(false);
                 success();
+
+                Axios.post(`https://hackmerced-myriagon.herokuapp.com/v1/zoho/applied`, {
+                    email: form.email,
+                });
+
+                Axios.post(`https://hackmerced-myriagon.herokuap.com/v1/mailchimp/subscribe`, {
+                    email_address: form.email,
+                    merge_fields: {
+                        FNAME: form.firstName,
+                        LNAME: form.lastName,
+                    },
+                });
             })
             .catch(() => {
                 setIsLoading(false);
