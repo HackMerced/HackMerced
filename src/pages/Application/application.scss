@@ -32,7 +32,6 @@
         }
         ::placeholder {
             color: grey;
-          
         }
 
         .application-form {
@@ -135,6 +134,27 @@
                     color: white;
                 }
             }
+
+            .file-submission {
+                margin: 2% 2% 0 auto;
+                height: 3.5rem;
+                font-size: 22px;
+                width: 96%;
+                text-align: center;
+                font-weight: bold;
+                color: #b486ce !important;
+                background: white;
+                border-radius: 3rem;
+                border: none;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                padding: 0% 2% 0% 0%;
+
+                &:active {
+                    background: #b486ce;
+                    color: white;
+                }
+            }
         }
     }
 }
@@ -152,11 +172,11 @@
         color: gray;
 
         ::placeholder {
-          color: gray;
+            color: gray;
         }
 
         &:focus {
-          color: gray;
+            color: gray;
         }
     }
 
@@ -169,4 +189,14 @@
         padding: 2%;
         border-radius: 3rem;
     }
+}
+
+.Toastify__toast--default {
+    background: #eeebf5 !important;
+    color: #b486ce !important;
+    border-radius: 10px !important;
+}
+
+.Toastify__progress-bar--default {
+    background: linear-gradient(#b486ce, #80a0cf) !important;
 }
