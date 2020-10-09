@@ -2,16 +2,28 @@
 import React, { FC, useState } from 'react';
 import Axios from 'axios';
 import SelectSearch from 'react-select-search';
+import { ToastContainer, toast } from 'react-toastify';
+import { css } from '@emotion/core';
+import { PulseLoader } from 'react-spinners';
 
-import FileUploader from '../../components/FileUploader/FileUpoader';
+// import FileUploader from '../../components/FileUploader/FileUpoader';
 import Navbar from '../../components/NavBar/navbar';
 import Footer from '../../components/Footer/footer';
 import { universities } from './universities';
 import { states } from './states';
 import { countries } from './countries';
 import './application.scss';
+import 'react-toastify/dist/ReactToastify.css';
+
+const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+`;
 
 const Application: FC = (): JSX.Element => {
+    const [canSubmit, setCanSubmit] = useState<Boolean>(true);
+    const [isLoading, setIsLoading] = useState<Boolean>(false);
     const [location, setLocation] = useState<any>();
     const [university, setUniversity] = useState<any>();
     const [form, setForm] = useState({
@@ -26,8 +38,38 @@ const Application: FC = (): JSX.Element => {
         firstDesignathon: '',
     });
 
+    const handleInputChange = (
+        event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
+    ): void => {
+        const { name, value } = event.target;
+        setForm({ ...form, [name]: value });
+    };
+
+    const success = () =>
+        toast('Successful! 🎉 We have received your application.', {
+            position: 'top-right',
+            autoClose: 10000,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+        });
+
+    const error = () =>
+        toast(
+            'Sorry! You have already submitted your application. Think its an error? Contact us on our Contact Page.',
+            {
+                position: 'top-right',
+                autoClose: 10000,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            },
+        );
+
     const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
         event.preventDefault();
+        setIsLoading(true);
+        setCanSubmit(false);
 
         Axios.post(`https://hackmerced-tomoe.herokuapp.com/v1/design-merced/apply`, {
             firstName: form.firstName,
@@ -41,14 +83,15 @@ const Application: FC = (): JSX.Element => {
             stateOrCountry: location,
             howDidYourHearAboutUs: form.howDidYourHearAboutUs,
             firstDesignathon: form.firstDesignathon,
-        });
-    };
-
-    const handleInputChange = (
-        event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
-    ): void => {
-        const { name, value } = event.target;
-        setForm({ ...form, [name]: value });
+        })
+            .then(() => {
+                setIsLoading(false);
+                success();
+            })
+            .catch(() => {
+                setIsLoading(false);
+                error();
+            });
     };
 
     return (
@@ -227,7 +270,7 @@ const Application: FC = (): JSX.Element => {
                             <option value="No">No</option>
                         </select>
                     </section>
-                    <section className="row">
+                    {/* <section className="row">
                         <div className="cell left-cell">
                             <label htmlFor="resume">
                                 Upload Resume <span className="required">*</span> (PDF only)
@@ -238,13 +281,20 @@ const Application: FC = (): JSX.Element => {
                             <label htmlFor="portfolio">Upload Design Portfolio (PDF only)</label>
                             <FileUploader id="portfolio" className="file-submission" name="portfolio" />
                         </div>
-                    </section>
-                    <button className="submit-application" type="submit">
-                        SUBMIT
+                    </section> */}
+                    <button className="submit-application" type="submit" disabled={!canSubmit}>
+                        {isLoading ? (
+                            <PulseLoader css={override} size={15} color={'#B486CE'} loading={isLoading} />
+                        ) : canSubmit ? (
+                            'SUBMIT'
+                        ) : (
+                            'SUBMITTED'
+                        )}
                     </button>
                 </form>
             </main>
             <Footer backgroundColor="#EEEBF5" textColor="#B486CE" fontColor="#B486CE" />
+            <ToastContainer />
         </div>
     );
 };
