@@ -114,6 +114,7 @@ const Menu = {
         list-style: none;
         font-weight: 700;
         text-transform: uppercase;
+        z-index: 30;
 
         @media only screen and (max-width: 910px) {
             position: fixed;
