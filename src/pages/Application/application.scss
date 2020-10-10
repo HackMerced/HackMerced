@@ -30,6 +30,9 @@
             margin-bottom: 1rem;
             text-align: center;
         }
+        ::placeholder {
+            color: grey;
+        }
 
         .application-form {
             display: flex;
@@ -131,6 +134,69 @@
                     color: white;
                 }
             }
+
+            .file-submission {
+                margin: 2% 2% 0 auto;
+                height: 3.5rem;
+                font-size: 22px;
+                width: 96%;
+                text-align: center;
+                font-weight: bold;
+                color: #b486ce !important;
+                background: white;
+                border-radius: 3rem;
+                border: none;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                padding: 0% 2% 0% 0%;
+
+                &:active {
+                    background: #b486ce;
+                    color: white;
+                }
+            }
         }
     }
+}
+
+.select-search {
+    width: 100%;
+
+    &__input {
+        padding: 0 1rem;
+        margin: 1rem 0;
+        height: 6vh;
+        border-radius: 3rem;
+        font-size: 18px;
+        width: 100%;
+        color: gray;
+
+        ::placeholder {
+            color: gray;
+        }
+
+        &:focus {
+            color: gray;
+        }
+    }
+
+    &__select {
+        position: absolute;
+        z-index: 10;
+        background-color: #eeebf5;
+        color: #b486ce;
+        width: 50%;
+        padding: 2%;
+        border-radius: 3rem;
+    }
+}
+
+.Toastify__toast--default {
+    background: #eeebf5 !important;
+    color: #b486ce !important;
+    border-radius: 10px !important;
+}
+
+.Toastify__progress-bar--default {
+    background: linear-gradient(#b486ce, #80a0cf) !important;
 }

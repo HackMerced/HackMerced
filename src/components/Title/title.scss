@@ -9,6 +9,10 @@
         height: 600px;
     }
 
+    @media (max-width: 450px) {
+        height: 400px;
+    }
+
     .t-wave {
         overflow: hidden;
 
@@ -208,15 +212,16 @@
         }
 
         .subscribe-button {
-            position: absolute;
+            position: relative;
             text-transform: uppercase;
             margin: 2% auto 0% 53%;
             font-size: 20px;
             width: 35%;
-            height: 6%;
+            // height: 10%;
             border-radius: 20px;
             transition: 0.2s all;
             text-align: center;
+            padding: .8%;
 
             &:before {
                 content: '';
@@ -246,6 +251,7 @@
                 background: transparent;
                 color: white;
             }
+         
         }
 
         @media (max-width: 700px) {
@@ -253,7 +259,8 @@
             flex-flow: column wrap;
             justify-content: center;
             align-items: center;
-            margin-top: -50% !important;
+            margin-top: 10%;
+            padding: 2%;
 
             &-title {
                 margin: 0% 0 0 5% !important;
@@ -291,7 +298,6 @@
         }
     }
 
-    // Form Popup
     .overlay {
         position: fixed;
         top: 0;
@@ -300,6 +306,7 @@
         right: 0;
         background: rgba(0, 0, 0, 0.5);
         transition: opacity 200ms;
+        z-index: 1;
 
         &.light {
             background: rgba(41, 40, 40, 0.9);
@@ -416,7 +423,7 @@
 
         /* Extra large devices (large laptops and desktops, 1200px and up) */
         @media only screen and (min-width: 1500px) {
-            margin: -15% auto 0% 5%;
+            margin: -20% auto 0% 5%;
             width: 32%;
         }
     }

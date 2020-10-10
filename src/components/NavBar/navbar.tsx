@@ -83,7 +83,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
 };
 
 const Styles = {
-    Wrapper: styled.main`
+    Wrapper: styled.header`
         display: flex;
         background-color: #ffb181;
         height: auto;
@@ -114,6 +114,7 @@ const Menu = {
         list-style: none;
         font-weight: 700;
         text-transform: uppercase;
+        z-index: 30;
 
         @media only screen and (max-width: 910px) {
             position: fixed;

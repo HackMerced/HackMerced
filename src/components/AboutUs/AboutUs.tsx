@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
 
-import TEAM from '../../assets/images/hackmerced-v.jpg';
-import './about.scss';
+import TEAM_PICTURE from '../../assets/images/hackmerced-v.jpg';
+import './AboutUs.scss';
 
 const About: FC = (): JSX.Element => {
     return (
-        <section className="ABOUT">
-            <h1>About Us</h1>
-            <div className="break-line"></div>
-            <section className="about">
-                <article className="about-description">
+        <section className="about-us">
+            <h1 className="about-us__title">About Us</h1>
+            <div className="about-us__break-line"></div>
+            <section className="about-us__content">
+                <article className="about-us__content__description">
                     <p>
                         HackMerced is a 36 hour annual programming competition that occurs at the University of
                         California, Merced and is open to students from all over the world. During the event,
@@ -21,7 +21,7 @@ const About: FC = (): JSX.Element => {
                         the San Joaquin Valley.
                     </p>
                 </article>
-                <img src={TEAM} width="100%" alt="HackMerced Team" className="TEAMPICTURE" />
+                <img className="about-us__content__team-picture" src={TEAM_PICTURE} alt="HackMerced Team" />
             </section>
         </section>
     );
