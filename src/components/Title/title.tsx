@@ -48,7 +48,7 @@ const Title: FC = (): JSX.Element => {
     };
 
     return (
-        <header className="TITLE">
+        <section className="TITLE">
             {width > 700 ? (
                 <section className="t-wave">
                     <div className="cloud c1"></div>
@@ -121,9 +121,9 @@ const Title: FC = (): JSX.Element => {
                 </div>
             ) : null}
             {width > 700 ? (
-                <img src={HMTOWER} width="525" height="1005" alt="HACKMERCED TITLE" className="hackmerced-tower" />
+                <img src={HMTOWER} width="525" height="1005" alt="HACKMERCED TOWER" className="hackmerced-tower" />
             ) : null}
-        </header>
+        </section>
     );
 };
 

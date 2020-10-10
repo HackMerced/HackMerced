@@ -1,31 +1,35 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-import DESIGNTITLE from '../../assets/images/title.png';
-import DESIGNDATE from '../../assets/images/date.png';
-import ABSTRACTPAINTING from '../../assets/images/paint-purple.jpeg';
+import useWindowDimensions from '../WindowDimensions/WindowDimensions';
+import DESIGN_MERCED_TITLE from '../../assets/images/title-designmerced.png';
+import ABSTRACT_PAINTING from '../../assets/images/paint-purple.jpeg';
 import './title-design.scss';
 
 const TitleDesign: FC = (): JSX.Element => {
+    const { width } = useWindowDimensions();
+
     return (
-        <header className="TITLE__DESIGN">
-            <section className="TITLE__DESIGN__designmerced">
-                <img
-                    src={ABSTRACTPAINTING}
-                    width="600px"
-                    alt="DESIGNMERCED TITLE"
-                    className="TITLE__DESIGN__abstract__painting"
-                />
-                <div className="TITLE__DESIGN__background__square"></div>
-                <img src={DESIGNTITLE} width="600px" alt="DESIGNMERCED TITLE" className="TITLE__DESIGN__title" />
-                <img src={DESIGNDATE} width="600px" alt="DESIGNMERCED DATE" className="TITLE__DESIGN__date" />
-                <div className="designmerced-subtext text-gray-100">24-hour designathon.</div>
-                <div className="designmerced-text text-gray-100">HackMerced&apos;s first</div>
-                <Link to="/application">
-                    <button className="apply-button bg-white text-black font-bold">Apply Now</button>
+        <section className="title-design">
+            {width > 1200 ? (
+                <>
+                    <img
+                        src={ABSTRACT_PAINTING}
+                        alt="DesignMerced Abstract Painting"
+                        className="title-design__abstract-painting"
+                    />
+                    <div className="title-design__background-square"></div>
+                </>
+            ) : null}
+            <img src={DESIGN_MERCED_TITLE} alt="DesignMerced Title" className="title-design__title" />
+            <div className="title-design__heading">
+                <div className="title-design__heading__text">HackMerced&apos;s first</div>
+                <div className="title-design__heading__subtext">24-hour designathon.</div>
+                <Link to="/application" className="title-design__heading__button">
+                    Apply Now
                 </Link>
-            </section>
-        </header>
+            </div>
+        </section>
     );
 };
 
