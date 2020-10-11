@@ -235,7 +235,7 @@ const Application: FC = (): JSX.Element => {
                     <section className="long-questions">
                         <label htmlFor="stateOrCountry">
                             If you live in the US, what state do you currently live in? If you do not reside within the
-                            US, what country are you from?
+                            US, what country are you from? <span className="required">*</span>
                         </label>
                         <SelectSearch
                             id="stateOrCountry"
@@ -254,7 +254,6 @@ const Application: FC = (): JSX.Element => {
                             name="howDidYourHearAboutUs"
                             placeholder="How did you hear about DesignMerced?"
                             onChange={handleInputChange}
-                            required
                         >
                             <option value="" disabled={true} selected={true}>
                                 Select
@@ -267,7 +266,9 @@ const Application: FC = (): JSX.Element => {
                         </select>
                     </section>
                     <section className="long-questions">
-                        <label htmlFor="firstDesignathon">Will DesignMerced be your first Designathon?</label>
+                        <label htmlFor="firstDesignathon">
+                            Will DesignMerced be your first Designathon? <span className="required">*</span>
+                        </label>
                         <select
                             id="firstDesignathon"
                             name="firstDesignathon"
