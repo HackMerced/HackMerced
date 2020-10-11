@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React, { FC, useState } from 'react';
 import Axios from 'axios';
 import SelectSearch from 'react-select-search';
@@ -22,8 +21,8 @@ const override = css`
 `;
 
 const Application: FC = (): JSX.Element => {
-    const [canSubmit, setCanSubmit] = useState<Boolean>(true);
-    const [isLoading, setIsLoading] = useState<Boolean>(false);
+    const [canSubmit, setCanSubmit] = useState<boolean>(true);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const [location, setLocation] = useState<any>();
     const [university, setUniversity] = useState<any>();
     const [form, setForm] = useState({
