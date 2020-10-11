@@ -19,9 +19,7 @@ const Title: FC = (): JSX.Element => {
             method: 'POST',
             url: 'https://hackmerced-myriagon.herokuapp.com/v1/mailchimp/subscribe',
             data: {
-                // eslint-disable-next-line @typescript-eslint/camelcase
                 email_address: values.email_address,
-                // eslint-disable-next-line @typescript-eslint/camelcase
                 merge_fields: {
                     FNAME: values.FNAME,
                     LNAME: values.LNAME,
