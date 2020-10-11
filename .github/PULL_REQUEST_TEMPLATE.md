@@ -22,6 +22,30 @@ _Put an `x` in the boxes that apply. You can also fill these out after creating 
 - [ ] I have added necessary documentation (if appropriate)
 - [ ] Any dependent changes have been merged and published in downstream modules
 
+## Responsiveness
+
+Check off the different **browsers** and **devices** you have tested on.
+
+### Browsers
+
+- [ ] Chrome
+- [ ] Firefox
+- [ ] Edge
+- [ ] Safari
+
+### Devices
+
+- [ ] Windows
+- [ ] MacOSX
+- [ ] Linux
+- [ ] IPhone
+- [ ] Android
+- [ ] Tablet
+
+## Screenshots
+
+_Please attach at least one Desktop and Mobile screenshot of your update._
+
 ## Further comments
 
 If this is a relatively large or complex change, kick off the discussion by explaining why you chose the solution you did and what alternatives you considered, etc...
