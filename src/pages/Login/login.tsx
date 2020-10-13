@@ -11,10 +11,7 @@ import Hackmercedlogo from '../../assets/images/hackmerced-logo.png';
 import './login.scss';
 
 const Login: FC = (): JSX.Element => {
-    const [form, setForm] = useState({ email: "", password: "" });
-    const [modalForm, setModalForm] = useState({ email: "" });
-
-    const [showModal, setShowModal] = useState(false);
+    const[form, setForm] = useState({email:"", password:""});
 
     const handleInputChange = (
         event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
@@ -23,34 +20,11 @@ const Login: FC = (): JSX.Element => {
         setForm({ ...form, [name]: value });
     };
 
-    const handleModalInputChange = (
-        event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
-    ): void => {
-        const { name } = event.target;
-        setModalForm({ ...modalForm, [name]: name });
-    };
-
     const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
         event.preventDefault();
         console.log(form);
         Axios.post(`https://hackmerced-tomoe.herokuapp.com/v1/auth/login`, form).then(Response => console.log(Response));
-    };
-
-    const handleModalSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
-        event.preventDefault();
-        console.log(modalForm);
-        Axios.post(`https://hackmerced-tomoe.herokuapp.com/v1/auth/login`, modalForm).then(Response => console.log(Response));
-    };
-
-    const openModal = (): void => {
-        setShowModal(true);
-        document.body.style.overflow = 'hidden';
-    };
-
-    /* const closeModal = (): void => {
-        setShowModal(false);
-        document.body.style.overflow = 'scroll';
-    }; */
+    }
 
     return (
         <>
@@ -74,36 +48,15 @@ const Login: FC = (): JSX.Element => {
 
                         <div className="flex-container">
                             <h2 className="flex-item">
-                                <button type="button" className="modal-btn"
-                                    onClick={() => {
-                                        openModal();
-                                    }}> <u>Forgot Password?</u>
-                                </button>
+                                <u>Forgot Password?</u>
                             </h2>
-
                             <h2 className="flex-item">
-                                <button type="button"> <u>Create an Account</u> </button>
+                                <u>Create an Account</u>
                             </h2>
                         </div>
 
                         <input className="submitbutton" type="submit" value="LOG IN"></input>
                     </form>
-
-                    {showModal ? (
-                        <div className="modal-center-container-overlay light" onClick={openModal}>
-                            <form className="modal-form" onSubmit={handleModalSubmit}>
-                                <input
-                                    className="modal-email-input"
-                                    placeholder="Email"
-                                    type="email"
-                                    required
-                                    onChange={handleModalInputChange}
-                                />
-                                <button className="modal-form-submit-button">Submit</button>
-                                <h3>After submitting, refresh the page or go to another page.</h3>
-                            </form>
-                        </div>
-                    ) : null}
 
                     <div className="loginicons">
                         <p>Or login with</p>
