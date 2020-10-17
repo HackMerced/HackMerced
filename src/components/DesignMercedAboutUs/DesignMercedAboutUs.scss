@@ -15,7 +15,7 @@
         padding: 5% 0% 5% 0%;
 
         /* Small devices (iphones, 350px and up) */
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 320px) {
             font-size: 30px;
         }
 
@@ -102,14 +102,13 @@
                     font-size: medium;
                 }
 
-                @media only screen and (max-width: 300px) {
+                @media only screen and (max-width: 440px) {
                     left: 0;
-                    top: -580px;
+                    top: -560px;
                 }
 
-                @media only screen and (max-width: 440px) {
-                    left: 25px;
-                   
+                @media only screen and (max-width: 300px) {
+                    top: -580px;
                 }
             }
         }
