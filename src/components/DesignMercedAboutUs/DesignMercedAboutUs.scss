@@ -1,142 +1,71 @@
 .about-us-design {
     padding: 3% 0% 2% 0%;
     background-color: #0d0721;
-    display: flex;
-    flex-direction: column;
-
-    @media only screen and (min-width: 1000px) {
-        margin-bottom: -200px;
-    }
 
     &__title {
         font-family: 'Montserrat', sans-serif;
         color: #eeebf5;
         text-align: center;
-        padding: 5% 0% 5% 0%;
+        padding: 16px 0;
+        font-size: 32px;
 
-        /* Small devices (iphones, 350px and up) */
-        @media only screen and (max-width: 320px) {
-            font-size: 30px;
-        }
-
-        /* Medium devices (landscape tablets, 768px and up) */
-        @media only screen and (min-width: 768px) {
-            font-size: 35px;
-        }
-
-        /* Large devices (laptops/desktops, 992px and up) */
-        @media only screen and (min-width: 992px) {
-            font-size: 35px;
-        }
-
-        /* Extra large devices (large laptops and desktops, 1200px and up) */
-        @media only screen and (min-width: 1200px) {
-            font-size: 35px;
+        @media only screen and (min-width: 1000px) {
+            text-align: left;
+            padding-left: 80px;
         }
     }
 
     &__content {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        width: 100%;
-        margin: 0 0 0 0;
+        margin: 0 6vw;
 
         &__description {
-            width: 80%;
-            margin-top: 2%;
-            height: 35vh;
-
-            @media only screen and (max-width: 1000px) {
-                height: 45vh;
-            }
-
-            &__box {
-                position: relative;
-                width: 100%;
-                height: 300px;
-                border-radius: 10px;
-                overflow: hidden;
-                line-height: 0px;
-                margin-left: 6%;
-            }
-
-            .one-design-box {
-                top: 0px;
-                left: -40px;
-                z-index: 2;
-                background-color: #eeebf5;
-                opacity: 0.8;
-            }
-
-            .two-design-box {
-                top: -260px;
-                left: 0px;
-                z-index: 1;
-                background-image: linear-gradient(#b2128e, #80a0cf);
-            }
+            flex-grow: 1;
+            background-image: linear-gradient(#b2128e, #80a0cf);
+            border-radius: 10px;
+            transform: translate(4vw, 4vw); /* Shifts the article diagonally by percentage of the screen's width*/
+            margin: 0 4vw 4vw 0; /* extend the bounding box of the <section> by 3vw in the direction of the background shift .*/
 
             &__text {
-                z-index: 3;
-                top: -530px;
-                left: 10px;
-                position: relative;
                 color: black;
-                width: 85%;
-                font-size: x-small;
-
+                font-size: x-small; 
+                background-color: rgba(238, 235, 245, 0.8);
+                border-radius: 10px;
+                transform: translate(-4vw, -4vw);  /* Shift the child <p/> back the other way */
+                padding: 7vw;
     
 
                 @media only screen and (min-width: 450px) {
                     font-size: 12px;
-                    left: 40px;
                 }
 
                 @media only screen and (min-width: 680px) {
-                    left: 6vw;
                     font-size: 14px;
                 }
 
                 @media only screen and (min-width: 1200px) {
                     font-size: medium;
                 }
-
-                @media only screen and (max-width: 440px) {
-                    left: 0;
-                    top: -560px;
-                }
-
-                @media only screen and (max-width: 300px) {
-                    top: -580px;
-                }
             }
         }
 
         &__logo {
-            width: 20%;
-            height: 20%;
-            margin: 0% 5% 0% 8%;
+            width: 20vw;
+            height: 20vw;
+            flex: 0 0 20vw;
 
-            @media only screen and (max-width: 300px) {
-                width: 40%;
+            @media only screen and (max-width: 1000px) {
+                margin-bottom: 10vw;
+            }
+            
+            @media only screen and (min-width: 1001px) {
+                margin-left: 3vw;
             }
         }
 
-        @media only screen and (min-width: 1000px) {
-            flex-direction: row;
-
-            &__description {
-                width: 60%;
-
-                &__text {
-                    left: 5vw;
-                }
-            }
-
-            &__logo {
-                align-self: baseline;
-            }
+        @media only screen and (max-width: 1000px) {
+            flex-direction: column-reverse; /* Makes bulb above the text on the y axis */
         }
     }
 }
