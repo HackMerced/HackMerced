@@ -45,19 +45,7 @@
                 border-radius: 10px;
                 transform: translate(-4vw, -4vw);  /* Shift the child <p/> back the other way */
                 padding: 7vw;
-    
-
-                @media only screen and (min-width: 450px) {
-                    font-size: 12px;
-                }
-
-                @media only screen and (min-width: 680px) {
-                    font-size: 14px;
-                }
-
-                @media only screen and (min-width: 1200px) {
-                    font-size: medium;
-                }
+                font-size: 1em;
             }
         }
 
