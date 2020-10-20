@@ -84,16 +84,15 @@
             opacity: 1; /* Firefox */
             font-weight: lighter;
             font-size: 18px;
-          }
           
-          :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            font-weight: lighter;
-          }
+            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                font-weight: lighter;
+            }
           
-          ::-ms-input-placeholder { /* Microsoft Edge */
-            font-weight: lighter;
-          }
-      
+            ::-ms-input-placeholder { /* Microsoft Edge */
+                font-weight: lighter;
+            }
+        }
 
         .emailinput {
             width: 80%;
@@ -156,6 +155,10 @@ h2 {
     font-weight: bold;
     font-size: 20px;
 }
+u {
+    font-weight: bold;
+}
+
 
 /* Form */
 
