@@ -1,124 +1,70 @@
 .design-prompt {
+    padding: 3% 0% 2% 0%;
     background-color: #0d0721;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    @media (min-width: 1000px) and (max-width: 1280px) {
-      height: 900px;
-    }
 
     &__title {
+        font-family: 'Montserrat', sans-serif;
         color: #eeebf5;
-        font-size: 32px;
         text-align: center;
-        padding: 15% 0% 0% 0%;
-
-        @media only screen and (max-width: 350px) {
-            margin-top: 80px;
-        }
-
+        padding: 16px 0;
+        font-size: 32px;
+        
         @media only screen and (min-width: 1000px) {
-            margin-top: 200px;
+            text-align: right;
+            padding-right: 10vw;
         }
+
+    //     /* Small devices (iphones, 350px and up) */
+    //     @media only screen and (max-width: 320px) {
+    //         font-size: 30px;
+    //     }
+
+    //     /* Medium devices (landscape tablets, 768px and up) */
+    //    /* @media only screen and (min-width: 768px) {
+    //         font-size: 35px;
+    //     }
     }
 
     &__content {
         display: flex;
-        flex-direction: row;
-        margin: 5% 0 10% 0;
-        width: 100%;
-
-        &__icon {
-            width: 20%;
-            margin: -3% 10% 0 5%;
-        }
-
-        &__box {
-            position: absolute;
-            width: 60%;
-            height: 300px;
-            border-radius: 10px;
-            overflow: hidden;
-            line-height: 0px;
-        }
-
-        .one-design-box {
-            left: 30vw;
-            z-index: 2;
-            background-color: #eeebf5;
-            opacity: 0.8;
-        }
-
-        .two-design-box {
-            left: 35vw;
-            margin-top: 50px;
-            z-index: 1;
-            background-image: linear-gradient(#b2128e, #80a0cf);
-        }
+        flex-direction: row-reverse;
+        align-items: center;
+        margin: 0 6vw;
 
         &__description {
-            z-index: 3;
-            position: absolute;
-            color: rgb(44, 34, 34);
-            width: 50%;
-            margin: 100px 0 0 37%;
+            flex-grow: 1;
+            background-image: linear-gradient(#b2128e, #80a0cf);
+            border-radius: 10px;
+            transform: translate(4vw, 4vw); /* Shifts the article diagonally by percentage of the screen's width*/
+            margin: 0 4vw 4vw 0; /* extend the bounding box of the <section> by 3vw in the direction of the background shift .*/
+
+            &__text {
+                color: black;
+                font-size: x-small; 
+                background-color: rgba(238, 235, 245, 0.8);
+                border-radius: 10px;
+                transform: translate(-4vw, -4vw);  /* Shift the child <p/> back the other way */
+                padding: 7vw;
+                font-size: 1em;
+            }
+        }
+
+        &__logo {
+            width: 20vw;
+            height: 20vw;
+            flex: 0 0 20vw;
+
+            @media only screen and (max-width: 1000px) {
+                margin-bottom: 10vw;
+            }
+            
+            @media only screen and (min-width: 1001px) {
+                margin-right: 3vw;
+            }
         }
 
         @media only screen and (max-width: 1000px) {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            &__icon {
-                margin-bottom: 400px;
-            }
-
-            &__box {
-                width: 80%;
-                margin: 100px 0;
-            }
-
-            .one-design-box {
-                left: 8vw;
-                margin-top: 300px;
-            }
-
-            .two-design-box {
-                left: 13vw;
-                margin-top: 400px;
-            }
-
-            &__description {
-                width: 70%;
-                margin: 200px 0 0 10px;
-            }
-        }
-
-        @media only screen and (max-width: 600px) {
-            .one-design-box {
-                margin-top: 150px;
-            }
-
-            .two-design-box {
-                margin-top: 250px;
-            }
-
-            &__description {
-                margin-top: 100px;
-                font-size: small;
-            }
-        }
-
-        @media only screen and (max-width: 350px) {
-            .two-design-box {
-                margin-top: 200px;
-            }
-
-            &__description {
-                margin-top: 50px;
-            }
+            flex-direction: column-reverse; /* Makes bulb above the text on the y axis */
         }
     }
 }

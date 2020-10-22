@@ -74,12 +74,6 @@
                             color: #ccd3dd;
                         }
                     }
-
-                    label {
-                        .required {
-                            color: rgb(201, 53, 53);
-                        }
-                    }
                 }
 
                 @media only screen and (max-width: 600px) {
@@ -199,4 +193,8 @@
 
 .Toastify__progress-bar--default {
     background: linear-gradient(#b486ce, #80a0cf) !important;
+}
+
+.required {
+    color: rgb(201, 53, 53);
 }
