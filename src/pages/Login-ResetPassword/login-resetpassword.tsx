@@ -12,7 +12,7 @@ const LoginResetPassword: FC = (): JSX.Element => {
     const [form, setForm] = useState({ email: "" });
 
     const handleInputChange = (
-        event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
+        event: React.ChangeEvent<HTMLInputElement>,
     ): void => {
         const { name, value } = event.target;
         setForm({ ...form, [name]: value });
