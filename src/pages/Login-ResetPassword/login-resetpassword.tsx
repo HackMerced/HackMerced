@@ -29,7 +29,7 @@ const LoginResetPassword: FC = (): JSX.Element => {
             <Navbar />
             <section className="reset-page">
                 <div className="center-container">
-                    <img className="logo" src={Hackmercedlogo} alt="Logo" height={120} width={120} />
+                    <img className="logo" src={Hackmercedlogo} alt="Logo" />
                     <h1>Reset Password</h1>
                     <form onSubmit={handleSubmit} className="form-container">
                         <input onChange={handleInputChange} className="emailinput" type="email" placeholder="Email" id="email" name="email" />
