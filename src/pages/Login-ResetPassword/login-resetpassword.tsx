@@ -27,20 +27,17 @@ const LoginResetPassword: FC = (): JSX.Element => {
     return (
         <>
             <Navbar />
-            <main className="reset-page">
+            <section className="reset-page">
                 <div className="center-container">
                     <img className="logo" src={Hackmercedlogo} alt="Logo" height={120} width={120} />
                     <h1>Reset Password</h1>
-
                     <form onSubmit={handleSubmit} className="form-container">
-                        <input onChange={handleInputChange} className="emailinput" type="email" placeholder="Email" id="email" name="email"></input>
+                        <input onChange={handleInputChange} className="emailinput" type="email" placeholder="Email" id="email" name="email" />
                         <FontAwesomeIcon icon={faUser} className="blackicon" />
-
-                        <input className="submitbutton" type="submit" value="Submit"></input>
+                        <input className="submitbutton" type="submit" value="Submit" />
                     </form>
-
                 </div>
-            </main>
+            </section>
             <Footer />
         </>
     );
