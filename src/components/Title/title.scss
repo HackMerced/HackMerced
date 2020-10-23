@@ -216,12 +216,31 @@
             text-transform: uppercase;
             margin: 2% auto 0% 53%;
             font-size: 20px;
-            width: 35%;
             // height: 10%;
             border-radius: 20px;
             transition: 0.2s all;
             text-align: center;
             padding: .8%;
+
+            /* Small devices (landscape tablets, 300px and up) */
+        @media only screen and (min-width: 768px) {
+            width: 65%;
+        }
+
+             /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            width: 45%;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            width: 35%;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1500px) {
+            width: 35%;
+        }
 
             &:before {
                 content: '';
@@ -282,7 +301,6 @@
                 position: inherit;
                 font-size: medium;
                 height: 50px;
-                width: 38%;
             }
 
             button:hover {
