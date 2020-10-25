@@ -31,7 +31,7 @@
             transition: all 0.2s ease-in;
 
             @media only screen and (max-width: 500px) {
-                width: 43vh;
+                width: 40vh;
                 height: 10vh;
                 margin: 0% 0% 0% 15%;
              }
@@ -41,11 +41,11 @@
                 height: 15vh;
                 margin: 0% 0% 0% 18%;
              }
-             @media only screen and (max-width: 450px) {
-                width: 50vh;
-                height: 12vh;
-                margin: 0% 0% 0% 13%;
-             }
+            //  @media only screen and (max-width: 450px) {
+            //     width: 50vh;
+            //     height: 12vh;
+            //     margin: 0% 0% 0% 13%;
+            //  }
           
 
             &:hover {

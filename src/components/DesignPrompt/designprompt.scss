@@ -6,14 +6,22 @@
     justify-content: center;
 
     @media (min-width: 1000px) and (max-width: 1280px) {
-      height: 600px;
+      height: 900px;
     }
 
     &__title {
         color: #eeebf5;
         font-size: 32px;
         text-align: center;
-        padding: 5% 0% 0% 0%;
+        padding: 15% 0% 0% 0%;
+
+        @media only screen and (max-width: 350px) {
+            margin-top: 80px;
+        }
+
+        @media only screen and (min-width: 1000px) {
+            margin-top: 200px;
+        }
     }
 
     &__content {
