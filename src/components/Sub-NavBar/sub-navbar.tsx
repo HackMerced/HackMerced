@@ -5,9 +5,9 @@ import './sub-navbar.scss';
 const SubNavbar: FC = () => {
 
     return (
-        <main>
+        <section>
 
-        </main>
+        </section>
     );
 }
 

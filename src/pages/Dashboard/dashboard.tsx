@@ -1,11 +1,17 @@
 import React, { FC } from 'react';
-
-import './dashboard.scss'
-
+import Footer from '../../components/Footer/footer';
+import Navbar from '../../components/NavBar/navbar';
+import Application from '../../components/HackMercedApplication/hackmerced-application';
 const DashBoard: FC = (): JSX.Element => {
     return (
-        <main></main>
-    )
+        <>
+            <Navbar />
+            <section>
+                <Application />
+            </section>
+            <Footer />
+        </>
+    );
 
 };
 
