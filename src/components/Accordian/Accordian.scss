@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300, 400, 700');
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300, 400, 700");
 
 .accordion {
     background-color: #0d0721;
@@ -6,18 +6,16 @@
     flex-wrap: wrap;
     justify-content: center;
 
-   
-
     &__item {
-        flex: 1 1 150px; /*  Stretching: */
-        flex: 0 1 150px; /*  No stretching: */
-        margin: 0 20px 30px 20px;
+        //flex: 1 1 150px; /*  Stretching: */
+        //flex: 0 1 150px; /*  No stretching: */
+        margin: 0 20px 30px 20px; //margin around each accordion_item
 
         &__title {
             height: 55px;
             width: 500px;
-            background-color: #2D2058;
-            color: #EEEBF5;
+            background-color: #2d2058;
+            color: #eeebf5;
             text-transform: uppercase;
             letter-spacing: 1px;
             text-align: left;
@@ -31,22 +29,16 @@
             transition: all 0.2s ease-in;
 
             @media only screen and (max-width: 500px) {
-                width: 40vh;
-                height: 10vh;
-                margin: 0% 0% 0% 15%;
-             }
-
-             @media only screen and (max-width: 360px) {
-                width: 50vh;
-                height: 15vh;
-                margin: 0% 0% 0% 18%;
-             }
-            //  @media only screen and (max-width: 450px) {
-            //     width: 50vh;
-            //     height: 12vh;
-            //     margin: 0% 0% 0% 13%;
-            //  }
-          
+                //media queries for accordion_item_titles
+                width: 35vh;
+                height: 105px; //had to increase the height for iphone5/SE and higher
+                margin-left: 50%; //move to center
+            }
+            @media only screen and (max-width: 400px) {
+                width: 35vh;
+                height: 105px; //had to increase the height for iphone5/SE and higher
+                margin-left: 40%; //move left of center
+            }
 
             &:hover {
                 cursor: pointer;
@@ -70,8 +62,6 @@
                 .fa-rotate-180 {
                     color: rgba(255, 255, 255, 1);
                 }
-
-               
             }
 
             &__title-text {
@@ -101,7 +91,7 @@
                 transition: all 0.2s ease-in;
 
                 a {
-                  text-decoration: underline;
+                    text-decoration: underline;
                 }
             }
 
@@ -109,11 +99,18 @@
                 visibility: visible;
                 opacity: 1;
                 transition: all 0.8s ease-in;
+
                 @media only screen and (max-width: 500px) {
-                    width: 50vh;
-                    margin: 0% 0% 0% 12%;
-                   
-                 }
+                    //media queries for accordion_item_contents
+                    width: 35vh;
+                    height: 100%;
+                    margin-left: 50%;
+                }
+                @media only screen and (max-width: 400px) {
+                    width: 35vh;
+                    height: 100%;
+                    margin-left: 40%;
+                }
             }
         }
 
@@ -122,8 +119,13 @@
             height: 200px;
             background-color: rgba(0, 0, 0, 0.1);
             transition: all 350ms cubic-bezier(0.08, 1.09, 0.32, 1.275);
-
-          
         }
+    }
+
+    @media only screen and (max-width: 500px) {
+        // when accordion_item_titles and accordion_item_contents flex on top of each other,
+        // we need to shift the entire accordion container to the left so that accordion_items and contents don't budge off the screen
+        // and thus allow the user to swipe left and right on the Designathon page.
+        margin-right: 50%;
     }
 }
