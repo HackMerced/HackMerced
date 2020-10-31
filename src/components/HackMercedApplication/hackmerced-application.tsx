@@ -104,7 +104,7 @@ const Application: FC = (): JSX.Element => {
     };
 
     return (
-        <div className="Outside-Background">
+        <div className="Dashboard-Outside-Background">
             <main className="application">
                 <h3>
                     Application
