@@ -32,7 +32,7 @@ const Application: FC = (): JSX.Element => {
         gender: '',
         race: '',
         howDidYourHearAboutUs: '',
-        firstDesignathon: '',
+        firstHackathon: '',
     });
 
     const handleInputChange = (
@@ -68,7 +68,7 @@ const Application: FC = (): JSX.Element => {
         setIsLoading(true);
         setCanSubmit(false);
 
-        Axios.post(`https://hackmerced-tomoe.herokuapp.com/v1/design-merced/apply`, {
+        Axios.post(`https://Hackmerced-tomoe.herokuapp.com/v1/Hack-merced/apply`, {
             firstName: form.firstName,
             lastName: form.lastName,
             email: form.email,
@@ -79,17 +79,17 @@ const Application: FC = (): JSX.Element => {
             race: form.race,
             stateOrCountry: location,
             howDidYourHearAboutUs: form.howDidYourHearAboutUs,
-            firstDesignathon: form.firstDesignathon,
+            firstHackathon: form.firstHackathon,
         })
             .then(() => {
                 setIsLoading(false);
                 success();
 
-                Axios.post(`https://hackmerced-myriagon.herokuapp.com/v1/zoho/applied`, {
+                Axios.post(`https://Hackmerced-myriagon.herokuapp.com/v1/zoho/applied`, {
                     email: form.email,
                 });
 
-                Axios.post(`https://hackmerced-myriagon.herokuap.com/v1/mailchimp/subscribe`, {
+                Axios.post(`https://Hackmerced-myriagon.herokuap.com/v1/mailchimp/subscribe`, {
                     email_address: form.email,
                     merge_fields: {
                         FNAME: form.firstName,
@@ -104,8 +104,8 @@ const Application: FC = (): JSX.Element => {
     };
 
     return (
-        <div className="Dashboard-Outside-Background">
-            <main className="application">
+        <>
+            <main className="dashboard-application">
                 <h3>
                     Application
                 </h3>
@@ -228,6 +228,34 @@ const Application: FC = (): JSX.Element => {
                             </select>
                         </div>
                     </section>
+                    <section className="row">
+                        <div className="cell left-cell ">
+                            <label htmlFor="firstName">
+                                Current Major <span className="required">*</span>
+                            </label>
+                            <input
+                                id="major"
+                                name="major"
+                                type="text"
+                                placeholder="Major"
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="cell right-cell">
+                            <label htmlFor="tShirtSize">
+                                T-Shirt Size <span className="required">*</span>
+                            </label>
+                            <input
+                                id="tShirtSize"
+                                name="tShirtSize"
+                                type="text"
+                                placeholder="Size"
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                    </section>
                     <section className="long-questions">
                         <label htmlFor="stateOrCountry">
                             If you live in the US, what state do you currently live in? If you do not reside within the
@@ -244,11 +272,11 @@ const Application: FC = (): JSX.Element => {
                         />
                     </section>
                     <section className="long-questions">
-                        <label htmlFor="howDidYourHearAboutUs">How did you hear about DesignMerced?</label>
+                        <label htmlFor="howDidYourHearAboutUs">How did you hear about HackMerced?</label>
                         <select
                             id="howDidYourHearAboutUs"
                             name="howDidYourHearAboutUs"
-                            placeholder="How did you hear about DesignMerced?"
+                            placeholder="How did you hear about HackMerced?"
                             onChange={handleInputChange}
                         >
                             <option value="" disabled={true} selected={true}>
@@ -262,13 +290,13 @@ const Application: FC = (): JSX.Element => {
                         </select>
                     </section>
                     <section className="long-questions">
-                        <label htmlFor="firstDesignathon">
-                            Will DesignMerced be your first Designathon? <span className="required">*</span>
+                        <label htmlFor="firstHackathon">
+                            Will HackMerced be your first Hackathon? <span className="required">*</span>
                         </label>
                         <select
-                            id="firstDesignathon"
-                            name="firstDesignathon"
-                            placeholder="Will DesignMerced be your first Designathon?"
+                            id="firstHackathon"
+                            name="firstHackathon"
+                            placeholder="Will HackMerced be your first Hackathon?"
                             onChange={handleInputChange}
                             required
                         >
@@ -282,13 +310,11 @@ const Application: FC = (): JSX.Element => {
                     {<section className="row">
                         <div className="cell left-cell">
                             <label htmlFor="resume">
-                                Upload Resume <span className="required">*</span> (PDF only)
+                                <span className="required"></span>
                             </label>
-                            <FileUploader id="resume" className="file-submission" name="resume" />
-                        </div>
-                        <div className="cell right-cell">
-                            <label htmlFor="portfolio">Upload Design Portfolio (PDF only)</label>
-                            <FileUploader id="portfolio" className="file-submission" name="portfolio" />
+                            <FileUploader id="resume" className="file-submission" name="resume">
+                                File Upload
+                            </FileUploader>
                         </div>
                     </section>}
                     <button className="submit-application" type="submit" disabled={!canSubmit}>
@@ -303,7 +329,7 @@ const Application: FC = (): JSX.Element => {
                 </form>
             </main>
             <ToastContainer />
-        </div>
+        </>
     );
 };
 
