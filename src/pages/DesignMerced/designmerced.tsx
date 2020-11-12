@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/footer';
 import AboutUsDesign from '../../components/DesignMercedAboutUs/DesignMercedAboutUs';
 import Prompt from '../../components/DesignPrompt/designprompt';
 import DesignMercedFAQ from '../../components/DesignMercedFAQ/DesignMercedFAQ';
-// import Schedule from '../../components/Schedule Design/schedule-design';
+import Schedule from '../../components/Schedule Design/schedule-design';
 import Sponsors from '../../components/Sponsors Design/sponsors-design';
 
 const DesignMerced: FC = (): JSX.Element => {
@@ -17,7 +17,7 @@ const DesignMerced: FC = (): JSX.Element => {
             <AboutUsDesign />
             <Prompt />
             <DesignMercedFAQ />
-            {/* <Schedule /> */}
+            <Schedule />
             <Sponsors />
             <Footer backgroundColor="#0d0721" textColor="#EEEBF5" fontColor="#EEEBF5" />
         </main>
