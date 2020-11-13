@@ -57,8 +57,8 @@ const Login: FC = (): JSX.Element => {
                             </h2>
                             <h2 className="flex-item">
                                 <button type="button">
-                                    <Link to="/login-resetpassword"><u>Create an Account</u></Link>     {/* NEED TO LINK TO SIGN-UP PAGE */}
-                                    {pathname === '/login-resetpassword'}                               {/* THESE ARE PLACEHOLDERS */}
+                                    <Link to="/SignUp"><u>Create an Account</u></Link>     {/* NEED TO LINK TO SIGN-UP PAGE */}
+                                    {pathname === '/SignUp'}                               {/* THESE ARE PLACEHOLDERS */}
                                 </button>
                             </h2>
                         </div>
