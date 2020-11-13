@@ -1,4 +1,4 @@
-.login-page {
+.sign-page {
     padding: .5% 0% 2% 0%;
     display: flex;
     flex-direction: row;
@@ -38,6 +38,11 @@
             padding: 1% 0% 1% 0%;
         }
 
+        h3 {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
         .flex-container {
             display: flex;
             flex-wrap: wrap; //makes 'Create an Account' go under 'Forgot Password?' at lower resolutions
@@ -48,6 +53,13 @@
                 display: inline;
                 text-align: center;
             }
+        }
+        .flex-container-circle {
+            display: flex;
+            flex-wrap: wrap; //makes 'Create an Account' go under 'Forgot Password?' at lower resolutions
+            
+            padding: 0% 4% 3% 2%;
+
         }
 
         .loginicons {
@@ -93,11 +105,20 @@
                 font-weight: lighter;
             }
         }
-
+        .firstinput {
+            width: 80%;
+            height: 50px;
+            margin-top: 4%;
+            border-radius: 65px;
+            display: block;
+            
+            /* offset-x | offset-y | blur-radius | color */
+            box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
+        }
         .emailinput {
             width: 80%;
             height: 50px;
-            margin-top: 2%;
+            margin-top: 4%;
             border-radius: 65px;
             display: block;
             
@@ -105,10 +126,11 @@
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
         }
+
         .passwordinput {
             width: 80%;
             height: 50px;
-            margin-top: 2%;
+            margin-top: 4%;
             border-radius: 65px;
             display: block;
 
@@ -155,6 +177,8 @@ h2 {
     font-weight: bold;
     font-size: 20px;
 }
+
+
 u {
     font-weight: bold;
 }
@@ -171,13 +195,22 @@ u {
 
     opacity: 1; /* Firefox */
 }
+
+input[type="text"],
+select {
+    display: inline-block;
+    margin: 0 auto;
+    color: black;
+    text-align: left;
+    padding: 0% 0% 0% 4%; //moves location of select (input) to the right, which also moves the placeholder
+}
 input[type="email"],
 select {
     display: inline-block;
     margin: 0 auto;
     color: black;
     text-align: left;
-    padding: 0% 0% 0% 12%; //moves location of select (input) to the right, which also moves the placeholder
+    padding: 0% 0% 0% 4%; //moves location of select (input) to the right, which also moves the placeholder
 }
 input[type="password"],
 select {
@@ -185,5 +218,21 @@ select {
     margin: 0 auto;
     color: black;
     text-align: left;
-    padding: 0% 0% 0% 12%; //moves location of select (input) to the right, which also moves the placeholder
+    padding: 0% 0% 0% 4%; //moves location of select (input) to the right, which also moves the placeholder
+}
+input[type="checkbox"],
+select {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    color: black;
+    text-align: left;
+    margin: 0% 0% 0% 0%;
+     //moves location of select (input) to the right, which also moves the placeholder
 }
