@@ -57,7 +57,6 @@
         .flex-container-circle {
             display: flex;
             flex-wrap: wrap; //makes 'Create an Account' go under 'Forgot Password?' at lower resolutions
-            
             padding: 0% 4% 3% 2%;
 
         }
@@ -145,7 +144,7 @@
             color: #ffb181;
             font-weight: bold;
             font-size: 25px;
-            margin: auto;
+            margin: auto auto 5% auto;
             display: block;
 
             /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
@@ -233,6 +232,6 @@ select {
     cursor: pointer;
     color: black;
     text-align: left;
-    margin: 0% 0% 0% 0%;
+    margin: 1% 0% 0% 0%;
      //moves location of select (input) to the right, which also moves the placeholder
 }

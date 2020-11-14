@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Footer from '../../components/Footer/footer';
 import Navbar from '../../components/NavBar/navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
+// import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faKey, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import Hackmercedlogo from '../../assets/images/hackmerced-logo.png';
@@ -66,12 +66,12 @@ const Login: FC = (): JSX.Element => {
                         <input className="submitbutton" type="submit" value="LOG IN"></input>
                     </form>
 
-                    <div className="loginicons">
+                    {/* <div className="loginicons">
                         <p>Or login with</p>
                         <FontAwesomeIcon icon={faFacebook} className="facebookicon" />
                         <FontAwesomeIcon icon={faGoogle} className="googleicon" />
                         <FontAwesomeIcon icon={faGithub} className="githubicon" />
-                    </div>
+                    </div> */}
                 </div>
             </main>
             <Footer />
