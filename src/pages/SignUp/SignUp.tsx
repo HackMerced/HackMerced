@@ -3,8 +3,8 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer/footer';
 import Navbar from '../../components/NavBar/navbar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import Hackmercedlogo from '../../assets/images/hackmerced-logo.png';
 
 import './SignUp.scss';
@@ -62,10 +62,8 @@ const SignUp: FC = (): JSX.Element => {
                             name="password"
                         ></input>
                         <br></br>
-
-                        <input type="checkbox" id="rememberme" name="remember" />
-
                         <div className="flex-container">
+                            <input type="checkbox" id="rememberme" name="remember" />
                             <h2 className="flex-item">
                                 <h3>Remember Me?</h3>
 
@@ -85,12 +83,12 @@ const SignUp: FC = (): JSX.Element => {
                         <input className="submitbutton" type="submit" value="Create an Account"></input>
                     </form>
 
-                    <div className="loginicons">
+                    {/* <div className="loginicons">
                         <p>Or Sign Up with</p>
                         <FontAwesomeIcon icon={faFacebook} className="facebookicon" />
                         <FontAwesomeIcon icon={faGoogle} className="googleicon" />
                         <FontAwesomeIcon icon={faGithub} className="githubicon" />
-                    </div>
+                    </div> */}
                 </div>
             </main>
             <Footer />
