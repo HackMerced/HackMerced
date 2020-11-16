@@ -1,5 +1,5 @@
 .sign-page {
-    padding: .5% 0% 2% 0%;
+    padding: 3% 0% 3% 0%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -169,21 +169,7 @@
             }
         }
     }
-}
-
-h2 {
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-
-u {
-    font-weight: bold;
-}
-
-
-/* Form */
+    /* Form */
 
 ::placeholder {
     color: rgba(0, 0, 0, 0.301);
@@ -235,3 +221,18 @@ select {
     margin: 1% 0% 0% 0%;
      //moves location of select (input) to the right, which also moves the placeholder
 }
+
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+u {
+    font-weight: bold;
+}
+
+
