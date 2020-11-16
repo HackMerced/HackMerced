@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Footer from '../../components/Footer/footer';
 import Navbar from '../../components/NavBar/navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
+// import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faKey, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import Hackmercedlogo from '../../assets/images/hackmerced-logo.png';
@@ -57,8 +57,8 @@ const Login: FC = (): JSX.Element => {
                             </h2>
                             <h2 className="flex-item">
                                 <button type="button">
-                                    <Link to="/login-resetpassword"><u>Create an Account</u></Link>     {/* NEED TO LINK TO SIGN-UP PAGE */}
-                                    {pathname === '/login-resetpassword'}                               {/* THESE ARE PLACEHOLDERS */}
+                                    <Link to="/SignUp"><u>Create an Account</u></Link>     {/* NEED TO LINK TO SIGN-UP PAGE */}
+                                    {pathname === '/SignUp'}                               {/* THESE ARE PLACEHOLDERS */}
                                 </button>
                             </h2>
                         </div>
@@ -66,12 +66,12 @@ const Login: FC = (): JSX.Element => {
                         <input className="submitbutton" type="submit" value="LOG IN"></input>
                     </form>
 
-                    <div className="loginicons">
+                    {/* <div className="loginicons">
                         <p>Or login with</p>
                         <FontAwesomeIcon icon={faFacebook} className="facebookicon" />
                         <FontAwesomeIcon icon={faGoogle} className="googleicon" />
                         <FontAwesomeIcon icon={faGithub} className="githubicon" />
-                    </div>
+                    </div> */}
                 </div>
             </main>
             <Footer />
