@@ -32,10 +32,6 @@ export const schedule: any = {
             title: "8:00 PM - 9:00 PM",
             body: "Beginner Product Design"
         },
-        {
-            title: "11:00 PM - 12:00 AM",
-            body: "How to Prototype/Wireframe"
-        },
     ],
     22: [
         {
