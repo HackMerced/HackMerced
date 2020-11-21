@@ -13,19 +13,15 @@ export const schedule: any = {
             body: "Introduction to Adobe Workshop"
         },
         {
-            title: "1:00 PM - 2:00 PM",
+            title: "2:00 PM - 3:00 PM",
             body: "Beginner Figma Workshop"
         },
         {
             title: "3:00 PM - 4:00 PM",
-            body: "Adobe Researching Design"
-        },
-        {
-            title: "4:00 PM - 5:00 PM",
             body: "Minecraft Activity"
         },
         {
-            title: "6:00 PM - 7:00 PM",
+            title: "5:00 PM - 6:00 PM",
             body: "Intro to UI/UX and Design Careers"
         },
         {
@@ -56,8 +52,8 @@ export const schedule: any = {
             body: "JackBox"
         },
         {
-            title: "9:00 AM",
-            body: "Designing Ends"
+            title: "10:00 AM",
+            body: "Designing Ends & Submission Deadline"
         },
         {
             title: "10:00 AM - 12:00 PM",
