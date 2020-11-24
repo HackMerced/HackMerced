@@ -43,19 +43,19 @@ const SubNavbar: FC<{ backgroundColor?: string; textColor?: string; breakLineCol
                 </HamburgerButton.Wrapper>
 
                 <Menu.Items ref={drawerRef} {...SubNavbarItemsProps} style={{ backgroundColor }}>
-                    <Menu.Item className="selected">
+                    <Menu.Item className="selected subnavbar-text">
                         <Link to="/">MY APPLICATION</Link>
                         {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
-                    <Menu.Item>
+                    <Menu.Item className="subnavbar-text">
                         <Link to="/">LIVE</Link>
                         {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
-                    <Menu.Item>
+                    <Menu.Item className="subnavbar-text">
                         <Link to="/">SCHEDULE</Link>
                         {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
-                    <Menu.Item>
+                    <Menu.Item className="subnavbar-text">
                         <Link to="/">PRIZES</Link>
                         {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
