@@ -1,6 +1,6 @@
 .sub-navbar{
     border-radius: 1em;
-    padding: 1em 0 1em 0em;
+    padding: 3em 0 3em 0em;
     margin: 0 2em 2em 2em;
     box-shadow: 5px 5px 5px rgb(221, 221, 221);
 
@@ -43,9 +43,14 @@
             margin: 0% 0% 5% -30%;
         }
     }
+    .subnavbar-text{
+        font-size: 23px;
+    }
 
     .selected > a {
+        
         border-bottom: rgba(255, 177, 129, 0.5) 0.35rem solid;
     }
+    
 }
 
