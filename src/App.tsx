@@ -12,6 +12,7 @@ import LoginResetPassword from './pages/Login-ResetPassword/login-resetpassword'
 import Error from './components/404/404';
 import DesignMerced from './pages/DesignMerced/designmerced';
 import SignUp from './pages/SignUp/SignUp';
+import HackMercedVI from './pages/HackMercedVI/HackMercedVI';
 
 import './App.scss';
 
@@ -28,6 +29,7 @@ const App: FC = (): JSX.Element => {
                 <Route exact path="/login-resetpassword" component={LoginResetPassword} />
                 <Route exact path="/SignUp" component={SignUp} />
                 <Route exact path="/designmerced" component={DesignMerced} />
+                <Route exact path="/hackmercedvi" component={HackMercedVI} />
                 <Route path="*" component={Error} />
                 <Redirect from="/HackMerced" to="/" />
             </Switch>
