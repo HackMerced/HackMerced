@@ -63,7 +63,9 @@ const Login: FC = (): JSX.Element => {
                             </h2>
                         </div>
 
-                        <input className="submitbutton" type="submit" value="LOG IN"></input>
+                        <button className="submitbutton" type="submit" value="LOG IN">
+                         <Link to="/dashboard"><a>LOG IN</a></Link>    
+                                    {pathname === '/dashboard'} </button>
                     </form>
 
                     {/* <div className="loginicons">
