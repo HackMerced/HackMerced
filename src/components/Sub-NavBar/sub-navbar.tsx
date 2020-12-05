@@ -2,14 +2,12 @@ import React, { FC, useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 
-import MLHBANNER from '../../assets/images/mlh-badge.svg';
-import './navbar.scss';
+import './sub-navbar.scss';
 
-const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string; showBanner?: Boolean }> = ({
+const SubNavbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string; }> = ({
     backgroundColor,
     textColor,
     breakLineColor,
-    showBanner = true,
 }): JSX.Element => {
     let { pathname } = useLocation();
     const [openDrawer, toggleDrawer] = useState(false);
@@ -28,7 +26,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
         return () => document.removeEventListener('mousedown', closeDrawer);
     }, []);
 
-    const NavbarItemsProps = {
+    const SubNavbarItemsProps = {
         openDrawer: openDrawer,
     };
 
@@ -37,44 +35,29 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
     };
 
     return (
-        <Styles.Wrapper className="test" style={{ backgroundColor, color: textColor }}>
+        <Styles.Wrapper className="sub-navbar" style={{ backgroundColor, color: textColor }}>
             <Menu.Wrapper>
-                <Menu.Logo>
-                    {showBanner ? (
-                        <img className="MLH" src={MLHBANNER} width="100" height="175" alt="MLH BANNER" />
-                    ) : (
-                        <div className="hmtext">HackMerced</div>
-                    )}
-                </Menu.Logo>
 
                 <HamburgerButton.Wrapper onClick={() => toggleDrawer(true)}>
                     <HamburgerButton.Lines breakLineColor={breakLineColor} />
                 </HamburgerButton.Wrapper>
 
-                <Menu.Items ref={drawerRef} {...NavbarItemsProps} style={{ backgroundColor }}>
-                    <Menu.Item>
-                        <Link to="/">Home</Link>
+                <Menu.Items ref={drawerRef} {...SubNavbarItemsProps} style={{ backgroundColor }}>
+                    <Menu.Item className="selected subnavbar-text">
+                        <Link to="/">MY APPLICATION</Link>
                         {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
-                    {/* <Menu.Item>
-                        <Link to="/designmerced">DesignMerced</Link>
-                        {pathname === '/designmerced' ? BreakLine() : null}
-                    </Menu.Item> */}
-                    <Menu.Item>
-                        <Link to="/past-hackathons">Past Hackathons</Link>
-                        {pathname === '/past-hackathons' ? BreakLine() : null}
+                    <Menu.Item className="subnavbar-text">
+                        <Link to="/">LIVE</Link>
+                        {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
-                    <Menu.Item>
-                        <Link to="/sponsors">Sponsors</Link>
-                        {pathname === '/sponsors' ? BreakLine() : null}
+                    <Menu.Item className="subnavbar-text">
+                        <Link to="/">SCHEDULE</Link>
+                        {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
-                    <Menu.Item>
-                        <Link to="/contact-us">Contact Us</Link>
-                        {pathname === '/contact-us' ? BreakLine() : null}
-                    </Menu.Item>
-                    <Menu.Item>
-                        <Link to="/login">Login</Link>
-                        {pathname === '/login' ? <div className="break-line"></div> : null}
+                    <Menu.Item className="subnavbar-text">
+                        <Link to="/">PRIZES</Link>
+                        {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
                 </Menu.Items>
             </Menu.Wrapper>
@@ -85,15 +68,14 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
 const Styles = {
     Wrapper: styled.header`
         display: flex;
-        background-color: #ffb181;
+        background-color: #eeebf5;
         height: auto;
         color: white;
-
         @media only screen and (max-width: 40em) {
             height: ${(): string => {
-                const { pathname } = useLocation();
-                return pathname !== '/' ? '13vw' : 'auto';
-            }};
+            const { pathname } = useLocation();
+            return pathname !== '/' ? '13vw' : 'auto';
+        }};
     `,
 };
 
@@ -101,16 +83,13 @@ const Menu = {
     Wrapper: styled.nav`
         flex: 1;
         align-self: flex-start;
-        padding: 1rem 3rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
     `,
-    Logo: styled.h1`
-        padding: 0.5rem 1rem;
-    `,
     Items: styled.ul`
         display: flex;
+        width: 100%;
         list-style: none;
         font-weight: 700;
         text-transform: uppercase;
@@ -129,8 +108,10 @@ const Menu = {
         }
     `,
     Item: styled.li`
-        padding: 0 1rem;
+        flex-grow: 1;
+        padding: 0 3rem;
         cursor: pointer;
+        text-align: center;
 
         @media only screen and (max-width: 910px) {
             padding: 1rem 0;
@@ -177,9 +158,9 @@ const HamburgerButton = {
             display: block;
             content: '';
             width: 100%;
-            background-color: white;
+            background-color: #ffb181;
             position: absolute;
-            background-color: ${({ breakLineColor }: { breakLineColor: any }) => breakLineColor };
+            background-color: ${({ breakLineColor }: { breakLineColor: any }) => breakLineColor};
         }
 
         &:after {
@@ -194,4 +175,5 @@ const HamburgerButton = {
     `,
 };
 
-export default Navbar;
+export default SubNavbar;
+
