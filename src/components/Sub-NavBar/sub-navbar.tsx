@@ -56,8 +56,8 @@ const SubNavbar: FC<{ backgroundColor?: string; textColor?: string; breakLineCol
                         {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item className="subnavbar-text">
-                        <Link to="/">PRIZES</Link>
-                        {pathname === '/' ? BreakLine() : null}
+                        <Link to="/dashboard-prizes">PRIZES</Link>
+                        {pathname === '/dashboard-prizes' ? BreakLine() : null}
                     </Menu.Item>
                 </Menu.Items>
             </Menu.Wrapper>
