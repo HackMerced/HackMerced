@@ -44,8 +44,8 @@ const SubNavbar: FC<{ backgroundColor?: string; textColor?: string; breakLineCol
 
                 <Menu.Items ref={drawerRef} {...SubNavbarItemsProps} style={{ backgroundColor }}>
                     <Menu.Item className="selected subnavbar-text">
-                        <Link to="/">MY APPLICATION</Link>
-                        {pathname === '/' ? BreakLine() : null}
+                        <Link to="/dashboard">MY APPLICATION</Link>
+                        {pathname === '/dashboard' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item className="subnavbar-text">
                         <Link to="/">LIVE</Link>
