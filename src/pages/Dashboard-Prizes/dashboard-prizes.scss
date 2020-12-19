@@ -127,6 +127,20 @@
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.212);
         }
+        .generateButton {
+            background-color: #ffb181;
+            color: black;
+            border: 1px solid black; 
+            padding: 4% 4%;
+            
+        }
+        .generateButton:hover{
+            background-color: #cf8a5f;
+        }
+        .generateButton:active{
+            background-color: #cf8a5f;
+        }
+
 
         .submitButton {
             background-color: #ffb181;
