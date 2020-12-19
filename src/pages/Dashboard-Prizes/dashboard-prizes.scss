@@ -128,7 +128,18 @@
             box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.212);
         }
 
-        @media only screen and (max-width: 770px) and (min-width: 601px) {
+        .submitButton {
+            background-color: #ffb181;
+            color: black;
+            border: 1px solid black; 
+            padding: 4% 4%;
+            
+        }
+        .submitButton:hover{
+            background-color: #cf8a5f;
+        }
+
+        @media only screen and (max-width: 770px) {
             h1 {
                 padding-top: 30%;
             }
