@@ -14,11 +14,11 @@ const DashBoard: FC = (): JSX.Element => {
                 <section>
                     <SubNavbar backgroundColor="white" textColor="#ffb181" breakLineColor="#ffb181" />
                     <Application />
-
+                    <aside>
+                        <AsideBox />
+                    </aside>
                 </section>
-                <AsideBox />
-                <aside>
-                </aside>
+
             </div>
             <Footer />
         </>
