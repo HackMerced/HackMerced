@@ -61,8 +61,9 @@ const DashboardPrizes: FC = (): JSX.Element => {
                             <h1>Team Code</h1>
                             <h3>fkjlash</h3>
                             <p>- or -</p>
-                            <h2>Enter Team Code</h2>
+                            <h2>Enter Team Code!</h2>
                             <input className="teamcodeInput" type="password" id="codeInput" name="password"></input>
+                            <button className = "submitButton" type="button">Submit</button>
                         </div>
                     </div>
 
