@@ -6,6 +6,7 @@ import Hackmercedlogo from '../../assets/images/hackmerced-logo.png';
 
 import './dashboard-prizes.scss'
 
+
 const DashboardPrizes: FC = (): JSX.Element => {
     return (
         <>
@@ -59,7 +60,8 @@ const DashboardPrizes: FC = (): JSX.Element => {
 
                         <div className ="item-c">
                             <h1>Team Code</h1>
-                            <h3>fkjlash</h3>
+                            <h3 className = "teamCode">fkjlash</h3>
+                            <button className = "generateButton" type="button">Generate</button>
                             <p>- or -</p>
                             <h2>Enter Team Code!</h2>
                             <input className="teamcodeInput" type="password" id="codeInput" name="password"></input>
