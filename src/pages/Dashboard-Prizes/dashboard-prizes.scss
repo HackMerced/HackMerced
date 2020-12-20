@@ -10,8 +10,7 @@
     grid-column-gap: 4rem;
     grid-row-gap: 3rem;
     justify-self: center;
-    margin: 0 auto;
-    padding: 2% 0% 2% 0%;
+    padding: 2% 0%;
     grid-template-areas:
         "prizesList prizesList prizesList hackathonDates"
         "prizesList prizesList prizesList hackathonDates"
@@ -31,44 +30,45 @@
             "hackathonDates teamCode";
     }
 
-    .item-a {
+    .category-prizes {
         grid-area: prizesList;
         background-color: #eeebf5;
         text-align: center;
         border-radius: 10px;
         box-shadow: -3px -3px 10px 2px white, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color
         border: 1px solid #eeebf5;
+        border-top: solid 20px #ffb181;
 
         h1 {
             font-size: 35px;
             padding-bottom: 9%;
         }
-        .orangeRectangle {
-            background-color: #ffb181;
-            border-radius: 10px;
-            padding-bottom: 5%;
-        }
-        .flexContainer {
+        .category-prize-list {
             display: flex;
             flex-wrap: wrap;
             flex: 1;
-            //flex-direction: column;     //TURNS INTO ONE COLUMN. THIS IS AN ALTERNATIVE TO HAVING TWO COLUMNS AT LOWER WIDTH RESOLUTION!!!
             align-items: center;
-
-            @media only screen and (max-width: 770px) {
-                padding-bottom: 8%;
+            
+            @media only screen and (max-width: 680px) {
+                flex-direction: column;     //TURNS INTO ONE COLUMN
             }
         }
-        .flexContainer > div {
+        .category-prize-list > div {
             flex-grow: 1;
             width: 50%;
             padding: 1%;
+            margin: 10px;
+            box-sizing: border-box;
             height: auto;
             border-radius: 25px;
             box-shadow: -3px -3px 10px 2px white, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color
+
+            @media only screen and (max-width: 680px) {
+                width: 100%;     //TURNS INTO ONE COLUMN
+            }
         }
     }
-    .item-b {
+    .event-schedule {
         grid-area: hackathonDates;
         background-color: #eeebf5;
         text-align: center;
@@ -88,7 +88,7 @@
             }
         }
     }
-    .item-c {
+    .team-code {
         grid-area: teamCode;
         background-color: #eeebf5;
         text-align: center;

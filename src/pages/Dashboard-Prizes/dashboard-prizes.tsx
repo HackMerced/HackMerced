@@ -15,12 +15,10 @@ const DashboardPrizes: FC = (): JSX.Element => {
                     <SubNavbar backgroundColor="white" textColor="#ffb181" breakLineColor="#ffb181" />
 
                     <div className="container">
-                        <div className ="item-a">
-                            <div className="orangeRectangle"></div>
-
+                        <div className="category-prizes">
                             <h1>Prizes</h1>
 
-                            <div className="flexContainer">
+                            <div className="category-prize-list">
                                 <div>
                                     <h3>Best in Design</h3>
                                     <h4>Fujifilms to each member</h4>
@@ -48,7 +46,7 @@ const DashboardPrizes: FC = (): JSX.Element => {
                             </div>
                         </div>
 
-                        <div className ="item-b">
+                        <div className="event-schedule">
                             <img className="logo" src={Hackmercedlogo} alt="Logo" />
                             <h1>HackMerced VI</h1>
                             <h2>Hacking Starts</h2>
@@ -57,7 +55,7 @@ const DashboardPrizes: FC = (): JSX.Element => {
                             <h3>March 5, 2020</h3>
                         </div>
 
-                        <div className ="item-c">
+                        <div className="team-code">
                             <h1>Team Code</h1>
                             <h3>fkjlash</h3>
                             <p>- or -</p>
