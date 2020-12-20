@@ -30,6 +30,15 @@
             "hackathonDates teamCode";
     }
 
+    @media only screen and (max-width: 600px) {
+        grid-template-areas:
+            "prizesList"
+            "prizesList"
+            "prizesList"
+            "hackathonDates"
+            "teamCode";
+    }
+
     .category-prizes {
         grid-area: prizesList;
         background-color: #eeebf5;
@@ -55,16 +64,15 @@
         }
         .category-prize-list > div {
             flex-grow: 1;
-            width: 50%;
+            width: calc(50% - 20px);
             padding: 1%;
             margin: 10px;
-            box-sizing: border-box;
             height: auto;
             border-radius: 25px;
             box-shadow: -3px -3px 10px 2px white, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color
 
             @media only screen and (max-width: 680px) {
-                width: 100%;     //TURNS INTO ONE COLUMN
+                width: calc(100% - 20px);;     //TURNS INTO ONE COLUMN
             }
         }
     }
@@ -86,6 +94,10 @@
                 height: 70px;
                 width: 70px;
             }
+        }
+
+        @media only screen and (max-width: 600px) {
+            padding: 4% 0% 4% 0%;
         }
     }
     .team-code {
@@ -114,10 +126,14 @@
             box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.212);
         }
 
-        @media only screen and (max-width: 770px) {
+        @media only screen and (max-width: 770px) and (min-width: 601px) {
             h1 {
                 padding-top: 30%;
             }
+        }
+
+        @media only screen and (max-width: 600px) {
+            padding-bottom: 4%;
         }
     }
 
