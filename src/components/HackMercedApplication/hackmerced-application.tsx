@@ -181,8 +181,8 @@ const Application: FC = (): JSX.Element => {
                             <label htmlFor="levelOfStudy">
                                 Current Level of Study <span className="required">*</span>
                             </label>
-                            <select id="levelOfStudy" name="levelOfStudy" onChange={handleInputChange} required>
-                                <option value="" disabled={true} selected={true}>
+                            <select id="levelOfStudy" name="levelOfStudy" onChange={handleInputChange} required defaultValue="">
+                                <option value="" disabled={true}>
                                     Current Level of Study
                                 </option>
                                 <option value="High School">High School</option>
@@ -199,8 +199,8 @@ const Application: FC = (): JSX.Element => {
                             <label htmlFor="gender">
                                 Gender <span className="required">*</span>
                             </label>
-                            <select id="gender" name="gender" onChange={handleInputChange} required>
-                                <option value="" disabled={true} selected={true}>
+                            <select id="gender" name="gender" onChange={handleInputChange} required defaultValue="">
+                                <option value="" disabled={true}>
                                     Gender
                                 </option>
                                 <option value="male">Male</option>
@@ -212,8 +212,8 @@ const Application: FC = (): JSX.Element => {
                             <label htmlFor="race">
                                 Race <span className="required">*</span>
                             </label>
-                            <select id="race" name="race" onChange={handleInputChange} required>
-                                <option value="" disabled={true} selected={true}>
+                            <select id="race" name="race" onChange={handleInputChange} required defaultValue="">
+                                <option value="" disabled={true}>
                                     Race
                                 </option>
                                 <option value="American Indian or Alaskan Native">
@@ -278,8 +278,9 @@ const Application: FC = (): JSX.Element => {
                             name="howDidYourHearAboutUs"
                             placeholder="How did you hear about HackMerced?"
                             onChange={handleInputChange}
+                            defaultValue=""
                         >
-                            <option value="" disabled={true} selected={true}>
+                            <option value="" disabled={true}>
                                 Select
                             </option>
                             <option value="Social Media">Social Media</option>
@@ -299,8 +300,9 @@ const Application: FC = (): JSX.Element => {
                             placeholder="Will HackMerced be your first Hackathon?"
                             onChange={handleInputChange}
                             required
+                            defaultValue=""
                         >
-                            <option value="" disabled={true} selected={true}>
+                            <option value="" disabled={true}>
                                 Select
                             </option>
                             <option value="Yes">Yes</option>
