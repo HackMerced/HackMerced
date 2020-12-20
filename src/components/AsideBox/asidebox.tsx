@@ -6,7 +6,7 @@ const AsideBox: FC = (): JSX.Element => {
     return (
         <>
             <div className="container">
-                <div className="item-box">
+                <div className="event-scheduleox">
                     <div className="orangeRectangle"></div>
                     <h1>HackMerced VI</h1>
                     <h2>Hacking Starts</h2>
