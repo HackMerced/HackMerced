@@ -48,8 +48,8 @@ const SubNavbar: FC<{ backgroundColor?: string; textColor?: string; breakLineCol
                         {pathname === '/dashboard' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item className="subnavbar-text">
-                        <Link to="/">LIVE</Link>
-                        {pathname === '/' ? BreakLine() : null}
+                        <Link to="/live">LIVE</Link>
+                        {pathname === '/live' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item className="subnavbar-text">
                         <Link to="/">SCHEDULE</Link>

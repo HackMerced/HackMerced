@@ -15,6 +15,7 @@ import SignUp from './pages/SignUp/SignUp';
 import HackMercedVI from './pages/HackMercedVI/HackMercedVI';
 import DashBoard from './pages/Dashboard/dashboard';
 import DashboardPrizes from './pages/Dashboard-Prizes/dashboard-prizes';
+import Live from './pages/Live/live';
 
 import './App.scss';
 
@@ -34,6 +35,7 @@ const App: FC = (): JSX.Element => {
                 <Route exact path="/hackmercedvi" component={HackMercedVI} />
                 <Route exact path="/dashboard" component={DashBoard} />
                 <Route exact path="/dashboard-prizes" component={DashboardPrizes} />
+                <Route exact path="/live" component={Live} />
                 <Route path="*" component={Error} />
                 <Redirect from="/HackMerced" to="/" />
             </Switch>
