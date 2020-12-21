@@ -9,7 +9,7 @@ import './SignUp.scss';
 import { environment } from '../../environments';
 
 const SignUp: FC = (): JSX.Element => {
-    const [form, setForm] = useState({ email: '', password: '' });
+    const [form, setForm] = useState({ firstName: '', lastName: '', email: '', password: '' });
 
     const handleInputChange = (
         event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
@@ -20,8 +20,11 @@ const SignUp: FC = (): JSX.Element => {
 
     const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
         event.preventDefault();
-        console.log(`${environment.HACKER_API}/v1/auth/register`);
-        Axios.post(`${environment.HACKER_API}/v1/auth/register`, form).then(Response => console.log(Response));
+        Axios.post(`${environment.HACKER_API}/v1/auth/register`, form, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }).then(response => console.log(response));
     };
 
     return (
@@ -69,9 +72,7 @@ const SignUp: FC = (): JSX.Element => {
                         <br />
                         <div className="flex-container">
                             <input type="checkbox" id="rememberme" name="remember" />
-                            <h2 className="flex-item">
-                                <h3>Remember Me?</h3>
-                            </h2>
+                            <h3 className="flex-item">Remember Me?</h3>
                             <h2 className="flex-item">
                                 <Link to="/Login">
                                     <u>Already have an Account?</u>
