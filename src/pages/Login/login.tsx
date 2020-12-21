@@ -67,7 +67,7 @@ const Login: FC = (): JSX.Element => {
                                 </Link>
                             </h2>
                             <h2 className="flex-item">
-                                <Link to="/SignUp">
+                                <Link to="/signup">
                                     <u>Create an Account</u>
                                 </Link>
                             </h2>
