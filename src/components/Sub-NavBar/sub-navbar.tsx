@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import './sub-navbar.scss';
 
-const SubNavbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string; }> = ({
+const SubNavbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string }> = ({
     backgroundColor,
     textColor,
     breakLineColor,
@@ -37,7 +37,6 @@ const SubNavbar: FC<{ backgroundColor?: string; textColor?: string; breakLineCol
     return (
         <Styles.Wrapper className="sub-navbar" style={{ backgroundColor, color: textColor }}>
             <Menu.Wrapper>
-
                 <HamburgerButton.Wrapper onClick={() => toggleDrawer(true)}>
                     <HamburgerButton.Lines breakLineColor={breakLineColor} />
                 </HamburgerButton.Wrapper>
@@ -52,8 +51,8 @@ const SubNavbar: FC<{ backgroundColor?: string; textColor?: string; breakLineCol
                         {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item className="subnavbar-text">
-                        <Link to="/">SCHEDULE</Link>
-                        {pathname === '/' ? BreakLine() : null}
+                        <Link to="/dashboard-schedule">SCHEDULE</Link>
+                        {pathname === '/dashboard-schedule' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item className="subnavbar-text">
                         <Link to="/dashboard-prizes">PRIZES</Link>
@@ -73,9 +72,9 @@ const Styles = {
         color: white;
         @media only screen and (max-width: 40em) {
             height: ${(): string => {
-            const { pathname } = useLocation();
-            return pathname !== '/' ? '13vw' : 'auto';
-        }};
+                const { pathname } = useLocation();
+                return pathname !== '/' ? '13vw' : 'auto';
+            }};
     `,
 };
 
@@ -176,4 +175,3 @@ const HamburgerButton = {
 };
 
 export default SubNavbar;
-
