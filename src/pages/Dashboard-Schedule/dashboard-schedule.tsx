@@ -26,9 +26,9 @@ const DashboardSchedule: FC = (): JSX.Element => {
                             <img className="logo" src={Hackmercedlogo} alt="Logo" />
                             <h1>HackMerced VI</h1>
                             <h2>Hacking Starts</h2>
-                            <h3>March 3, 2020</h3>
-                            <h2>Hacking Ends</h2>
                             <h3>March 5, 2020</h3>
+                            <h2>Hacking Ends</h2>
+                            <h3>March 7, 2020</h3>
                         </div>
 
                         <div className="item-c">
