@@ -28,13 +28,13 @@ const ScheduleDesign: FC = (): JSX.Element => {
         <h1>Upcoming Events</h1>
                 <div className="side-by-side">
                     <div className="calendar_subheader" onClick={() => setDay(3)}>
-                       Friday , March 3
+                       Friday , March 5
                     </div>
                     <div className="calendar_subheader" onClick={() => setDay(4)}>
-                    Saturday, March 4
+                    Saturday, March 6
                     </div>
                     <div className="calendar_subheader" onClick={() => setDay(5)}>
-                    Sunday, March 5
+                    Sunday, March 7
                     </div>
                 </div>
             </div>
