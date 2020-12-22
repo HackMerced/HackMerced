@@ -1,5 +1,5 @@
 .dashboard-outside-background {
-    background: #eeebf5;
+    background: #F0F0F3;
     padding: 2rem 0 2rem 0;
 }
 
@@ -41,12 +41,13 @@
 
     .category-prizes {
         grid-area: prizesList;
-        background-color: #eeebf5;
+        background-color: #F0F0F3;
         text-align: center;
-        border-radius: 10px;
+        border-radius: 20px;
         box-shadow: -3px -3px 10px 2px white, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color
         border: 1px solid #eeebf5;
-        border-top: solid 20px #ffb181;
+        border-top: solid 40px #ffb181;
+
 
         h1 {
             font-size: 35px;
@@ -78,7 +79,7 @@
     }
     .event-schedule {
         grid-area: hackathonDates;
-        background-color: #eeebf5;
+        background-color: #F0F0F3;
         text-align: center;
         border-radius: 10px;
         box-shadow: -3px -3px 10px 2px white, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color
@@ -102,7 +103,7 @@
     }
     .team-code {
         grid-area: teamCode;
-        background-color: #eeebf5;
+        background-color: #F0F0F3;
         text-align: center;
         border-radius: 10px;
         box-shadow: -3px -3px 10px 2px white, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color

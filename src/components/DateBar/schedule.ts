@@ -1,12 +1,16 @@
 export const schedule: any = {
     3: [
         {
-            title: "9:00 AM - 10:00 AM",
+            title: "9:00 PM - 10:00 PM",
             body: "Opening Ceremony"
         },
         {
-            title: "10:00 AM",
+            title: "10:00 PM",
             body: "Hacking Begins"
+        },
+        {
+            title: "10:00 PM - 11:00 PM",
+            body: "Team Formation"
         },
     ],
     4: [

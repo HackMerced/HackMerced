@@ -1,39 +1,41 @@
 .calendar {
     margin: auto;
-    background-color: #eeebf5;
+    background-color: #F0F0F3;
 
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
-        width: 18em;
-        padding: 0.02em 0.2em;
+        width: 100%;
+        padding: 0 0 0 0;
     }
 
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
-        width: 25em;
+        width: 100%;
     }
 
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
-        width: 35em;
-        padding: 2em 3em;
+        width: 100%;
+        padding: 0% 0% 0% 0%;
     }
 
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media only screen and (min-width: 1200px) {
-        width: 34em;
+        width: 95%;
     }
 }
 
 .calendar_header {
     // font-size: 1.5em;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid white;
+    border-radius: 10px;
 }
 
 .header_title {
     text-align: center;
     color: black;
     font-weight: bold;
+    font-size: 35px;
 
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
@@ -47,7 +49,7 @@
 
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
-        font-size: 1em;
+        font-size: 1.3em;
     }
 
     /* Large devices (laptops/desktops, 992px and up) */
@@ -73,6 +75,8 @@
     text-align: center;
     font-weight: bold;
     color: #ffb181;
+    cursor: pointer;
+    margin-bottom: 10px;
 
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
@@ -86,17 +90,17 @@
 
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
-        font-size: 1em;
+        font-size: 1.4em;
     }
 
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media only screen and (min-width: 1200px) {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 }
 
@@ -151,7 +155,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1em;
+    padding: 5% 0% 2% 0%;
 
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
@@ -168,11 +172,23 @@
 
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
-        margin-top: 1.8em;
+     
     }
 
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media only screen and (min-width: 1200px) {
-        margin-top: 1.8em;
+      font-size: 20px;
     }
+}
+
+.event_item_body{
+    background-color: #F0F0F3;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: -3px -3px 10px 2px white, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color
+    width: 600px;
+            padding: 1%;
+            margin: 10px;
+            height: 50px;
+      
 }
