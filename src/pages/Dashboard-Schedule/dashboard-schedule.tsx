@@ -3,7 +3,7 @@ import Navbar from '../../components/NavBar/navbar';
 import Footer from '../../components/Footer/footer';
 import SubNavbar from '../../components/Sub-NavBar/sub-navbar';
 import DateBar from '../../components/DateBar/datebar';
-import Hackmercedlogo from '../../assets/images/hackmerced-logo.png';
+import Hackmercedlogo from '../../assets/images/hackmercedvi-logo.png';
 import './dashboard-schedule.scss';
 
 const DashboardSchedule: FC = (): JSX.Element => {

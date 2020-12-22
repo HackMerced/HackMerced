@@ -5,7 +5,7 @@ import Footer from '../../components/Footer/footer';
 import Navbar from '../../components/NavBar/navbar';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import Hackmercedlogo from '../../assets/images/hackmerced-logo.png';
+import Hackmercedlogo from '../../assets/images/hackmercedvi-logo.png';
 
 import './SignUp.scss';
 

@@ -87,9 +87,10 @@
         padding: 10% 0% 10% 0%;
 
         .logo {
-            height: 100px;
+            height: 105px;
             width: 100px;
             margin: auto;
+            border-radius: 50px;
 
             @media only screen and (max-width: 600px) {
                 height: 70px;

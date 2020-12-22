@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import Footer from '../../components/Footer/footer';
 import Navbar from '../../components/NavBar/navbar';
 import SubNavbar from '../../components/Sub-NavBar/sub-navbar';
-import Hackmercedlogo from '../../assets/images/hackmerced-logo.png';
+import Hackmercedlogo from '../../assets/images/hackmercedvi-logo.png';
 
 import './dashboard-prizes.scss'
 
