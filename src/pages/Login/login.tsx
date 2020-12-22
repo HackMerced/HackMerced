@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faKey, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import Hackmercedlogo from '../../assets/images/hackmerced-logo.png';
+import Hackmercedlogo from '../../assets/images/hackmercedvi-logo.png';
 
 import './login.scss';
 
