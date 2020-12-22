@@ -67,9 +67,9 @@ const SubNavbar: FC<{ backgroundColor?: string; textColor?: string; breakLineCol
 const Styles = {
     Wrapper: styled.header`
         display: flex;
-        background-color: #eeebf5;
+        background-color: #F0F0F3;
         height: auto;
-        color: white;
+        color: #F0F0F3;
         @media only screen and (max-width: 40em) {
             height: ${(): string => {
                 const { pathname } = useLocation();

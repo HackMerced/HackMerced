@@ -12,7 +12,7 @@ const DashboardPrizes: FC = (): JSX.Element => {
             <Navbar showBanner={false} />
             <div className="dashboard-outside-background">
                 <section>
-                    <SubNavbar backgroundColor="white" textColor="#ffb181" breakLineColor="#ffb181" />
+                    <SubNavbar backgroundColor="#F0F0F3" textColor="#ffb181" breakLineColor="#ffb181" />
 
                     <div className="container">
                         <div className="category-prizes">
