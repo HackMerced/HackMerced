@@ -70,7 +70,7 @@ const Title: FC = (): JSX.Element => {
                         window.location.href = 'https://hackmercedvi.typeform.com/to/mY7E1Fug';
                     }}
                 >
-                    HackMerced VI
+                    Register 
                 </button>
             </section>
             {showModal ? (
