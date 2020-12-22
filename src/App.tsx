@@ -13,9 +13,6 @@ import Error from './components/404/404';
 import DesignMerced from './pages/DesignMerced/designmerced';
 import SignUp from './pages/SignUp/SignUp';
 import HackMercedVI from './pages/HackMercedVI/HackMercedVI';
-import DashBoard from './pages/Dashboard/dashboard';
-import DashboardPrizes from './pages/Dashboard-Prizes/dashboard-prizes';
-import DashboardSchedule from './pages/Dashboard-Schedule/dashboard-schedule';
 
 import './App.scss';
 
@@ -33,9 +30,6 @@ const App: FC = (): JSX.Element => {
                 <Route exact path="/SignUp" component={SignUp} />
                 <Route exact path="/designmerced" component={DesignMerced} />
                 <Route exact path="/hackmercedvi" component={HackMercedVI} />
-                <Route exact path="/dashboard" component={DashBoard} />
-                <Route exact path="/dashboard-prizes" component={DashboardPrizes} />
-                <Route exact path="/dashboard-schedule" component={DashboardSchedule} />
                 <Route path="*" component={Error} />
                 <Redirect from="/HackMerced" to="/" />
             </Switch>

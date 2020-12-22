@@ -80,10 +80,7 @@ const SignUp: FC = (): JSX.Element => {
                             </h2>
                         </div>
 
-                        <button className="submitbutton" type="submit" value="Create an Account">
-                        <Link to="/dashboard"><a>Create an Account</a></Link>    
-                                   
-                        </button>
+                        <input className="submitbutton" type="submit" value="Create an Account"></input>
                     </form>
 
                     {/* <div className="loginicons">

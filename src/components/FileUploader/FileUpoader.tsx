@@ -26,7 +26,7 @@ const FileUploader: FC<any> = props => {
                 className={'upload-button ' + props.className}
                 name={props.name}
             >
-                Upload Resume* (PDF only)
+                Upload a file
             </button>
             <input type="file" ref={hiddenFileInput} onChange={handleChange} style={{ display: 'none' }} />
         </>
