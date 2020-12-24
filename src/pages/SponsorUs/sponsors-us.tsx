@@ -36,9 +36,7 @@ const SponsorUs: FC = (): JSX.Element => {
                         </p>
                     </section>
                     <section className="sponsors-section">
-                        <a style={{ color: '#0000' }}>
-                            <FontAwesomeIcon icon={faInfoCircle} className="fa" />
-                        </a>
+                        <FontAwesomeIcon icon={faInfoCircle} className="fa" />
                         <h4>For more Information</h4>
                         <p>If you want more information, check out our sponsorship packet.</p>
                     </section>
