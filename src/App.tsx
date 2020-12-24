@@ -37,8 +37,15 @@ const App: FC = (): JSX.Element => {
                 <Route path="/contact-us" component={ContactUs} />
                 <Route path="/past-hackathons" component={Hackathons} />
                 <Route path="/application" component={Application} />
-                <Route path="/login" component={Login} />
-                <Route path="/reset-password" component={LoginResetPassword} />
+                <Route
+                    path="/login"
+                    render={({ match: { url } }): JSX.Element => (
+                        <>
+                            <Route path={`${url}/`} component={Login} exact />
+                            <Route path={`${url}/reset-password`} component={LoginResetPassword} />
+                        </>
+                    )}
+                />
                 <Route path="/signup">
                     <SignUp updateHacker={setHacker} updateToken={setToken} />
                 </Route>

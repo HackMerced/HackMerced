@@ -1,4 +1,4 @@
 export const environment_dev = {
-  production: false,
-  HACKER_API: "http://localhost:3001"
+    production: false,
+    HACKER_API: 'http://localhost:3001',
 };

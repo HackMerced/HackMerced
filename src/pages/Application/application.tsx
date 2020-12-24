@@ -112,7 +112,7 @@ const Application: FC = (): JSX.Element => {
                 <main className="application">
                     <h3>
                         DesignMerced <br></br>Application Form
-                </h3>
+                    </h3>
                     <form className="application-form" onSubmit={handleSubmit}>
                         <section className="row">
                             <div className="cell left-cell ">
@@ -188,7 +188,7 @@ const Application: FC = (): JSX.Element => {
                                 <select id="levelOfStudy" name="levelOfStudy" onChange={handleInputChange} required>
                                     <option value="" disabled={true} selected={true}>
                                         Current Level of Study
-                                </option>
+                                    </option>
                                     <option value="High School">High School</option>
                                     <option value="Freshman">Freshman</option>
                                     <option value="Sophomore">Sophomore</option>
@@ -206,7 +206,7 @@ const Application: FC = (): JSX.Element => {
                                 <select id="gender" name="gender" onChange={handleInputChange} required>
                                     <option value="" disabled={true} selected={true}>
                                         Gender
-                                </option>
+                                    </option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                     <option value="other">Other</option>
@@ -219,10 +219,10 @@ const Application: FC = (): JSX.Element => {
                                 <select id="race" name="race" onChange={handleInputChange} required>
                                     <option value="" disabled={true} selected={true}>
                                         Race
-                                </option>
+                                    </option>
                                     <option value="American Indian or Alaskan Native">
                                         American Indian or Alaskan Native
-                                </option>
+                                    </option>
                                     <option value="Asian/Pacific Islander">Asian/Pacific Islander</option>
                                     <option value="Black or African American">Black or African American</option>
                                     <option value="Latino">Latino</option>
@@ -234,8 +234,8 @@ const Application: FC = (): JSX.Element => {
                         </section>
                         <section className="long-questions">
                             <label htmlFor="stateOrCountry">
-                                If you live in the US, what state do you currently live in? If you do not reside within the
-                            US, what country are you from? <span className="required">*</span>
+                                If you live in the US, what state do you currently live in? If you do not reside within
+                                the US, what country are you from? <span className="required">*</span>
                             </label>
                             <SelectSearch
                                 id="stateOrCountry"
@@ -257,7 +257,7 @@ const Application: FC = (): JSX.Element => {
                             >
                                 <option value="" disabled={true} selected={true}>
                                     Select
-                            </option>
+                                </option>
                                 <option value="Social Media">Social Media</option>
                                 <option value="Friends">Friends</option>
                                 <option value="Family">Family</option>
@@ -278,7 +278,7 @@ const Application: FC = (): JSX.Element => {
                             >
                                 <option value="" disabled={true} selected={true}>
                                     Select
-                            </option>
+                                </option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
                             </select>
@@ -301,8 +301,8 @@ const Application: FC = (): JSX.Element => {
                             ) : canSubmit ? (
                                 'SUBMIT'
                             ) : (
-                                        'SUBMITTED'
-                                    )}
+                                'SUBMITTED'
+                            )}
                         </button>
                     </form>
                 </main>

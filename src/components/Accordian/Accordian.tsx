@@ -4,15 +4,15 @@ import ReactHtmlParser from 'react-html-parser';
 import './Accordian.scss';
 
 type AccordianProps = { data: Array<{ title: string; content: string }> };
-type AccordianItemState = { title: string; content: string; open: Boolean };
-type AccordianState = Array<{ title: string; content: string; open: Boolean }>;
+type AccordianItemState = { title: string; content: string; open: boolean };
+type AccordianState = Array<{ title: string; content: string; open: boolean }>;
 
 const Accordian: FC<AccordianProps> = ({ data }) => {
     const [accordionItems, setAccodionItems] = useState<AccordianState>([]);
 
     useEffect(() => {
         const parseData: () => void = (): void => {
-            let accordion: AccordianState = [];
+            const accordion: AccordianState = [];
 
             data.forEach((i: { title: string; content: string }) => {
                 accordion.push({

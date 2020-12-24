@@ -1,1 +1,1 @@
-declare module "react-spinners";
+declare module 'react-spinners';

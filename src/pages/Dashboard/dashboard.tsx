@@ -6,10 +6,10 @@ import Navbar from '../../components/NavBar/navbar';
 import SubNavbar from '../../components/Sub-NavBar/sub-navbar';
 // import Application from '../../components/HackMercedApplication/hackmerced-application';
 // import AsideBox from '../../components/AsideBox/asidebox'
-import './dashboard.scss'
+import './dashboard.scss';
 import { HackerState, TokenState } from '../../App.types';
 
-const DashBoard: FC<{
+const Dashboard: FC<{
     hacker: HackerState | undefined;
     updateHacker: React.Dispatch<React.SetStateAction<HackerState | undefined>>;
     token: TokenState | undefined;
@@ -38,4 +38,4 @@ const DashBoard: FC<{
     );
 };
 
-export default DashBoard;
+export default Dashboard;

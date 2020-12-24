@@ -9,7 +9,7 @@ const SubNavbar: FC<{ backgroundColor?: string; textColor?: string; breakLineCol
     textColor,
     breakLineColor,
 }): JSX.Element => {
-    let { pathname } = useLocation();
+    const { pathname } = useLocation();
     const [openDrawer, toggleDrawer] = useState(false);
     const drawerRef = useRef(null);
 
@@ -55,11 +55,15 @@ const SubNavbar: FC<{ backgroundColor?: string; textColor?: string; breakLineCol
                         {pathname === '/dashboard-schedule' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item className="subnavbar-text">
-                        <Link to={{
-                                        pathname: '/dashboard',
-                                        hash: '',
-                                        state: { fromDashboard: true },
-                                    }}>PRIZES</Link>
+                        <Link
+                            to={{
+                                pathname: '/dashboard',
+                                hash: '',
+                                state: { fromDashboard: true },
+                            }}
+                        >
+                            PRIZES
+                        </Link>
                         {pathname === '/dashboard-prizes' ? BreakLine() : null}
                     </Menu.Item>
                 </Menu.Items>
