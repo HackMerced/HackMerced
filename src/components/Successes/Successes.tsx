@@ -16,7 +16,7 @@ const Successes: FC<SuccessesProps> = (props): JSX.Element => {
 
     return (
         <section className="SUCCESS">
-                 <div className="confetti-wall">
+            <div className="confetti-wall">
                 <div className="confetti-149"></div>
                 <div className="confetti-148"></div>
                 <div className="confetti-147"></div>

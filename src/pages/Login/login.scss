@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+    height: 80vh;
     .center-container {
         position: relative;
         display: inline-block;
@@ -12,17 +12,14 @@
         margin-bottom: 1%;
         background-image: linear-gradient(#ffb181, #ffb26e);
         border-radius: 65px;
-
         /* offset-x | offset-y | blur-radius | color */
         box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
-
         @media only screen and (max-width: 1100px) {
             width: 60%;
         }
         @media only screen and (max-width: 740px) {
             width: 68%;
         }
-
         .logo {
             //hackmerced logo at the top
             display: block;
@@ -38,22 +35,18 @@
             text-align: center;
             padding: 1% 0% 1% 0%;
         }
-
         .flex-container {
             display: flex;
             flex-wrap: wrap; //makes 'Create an Account' go under 'Forgot Password?' at lower resolutions
             justify-content: space-around; //puts even space on the left and right of contents
             padding: 0% 4% 3% 4%;
-
             .flex-item {
                 display: inline;
                 text-align: center;
             }
         }
-
         .loginicons {
             text-align: center; //centers everything inside loginicons div
-
             p {
                 color: white;
                 font-weight: 510;
@@ -78,31 +71,27 @@
                 color: rgb(39, 38, 38);
             }
         }
-
-       
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        
-            opacity: 1; /* Firefox */
+         ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            opacity: 1;
+            /* Firefox */
             font-weight: lighter;
             font-size: 18px;
-          
-            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+             :-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
                 font-weight: lighter;
             }
-          
-            ::-ms-input-placeholder { /* Microsoft Edge */
+             ::-ms-input-placeholder {
+                /* Microsoft Edge */
                 font-weight: lighter;
             }
         }
-
         .emailinput {
             width: 80%;
             height: 50px;
             margin-top: 2%;
             border-radius: 65px;
             display: block;
-            
-
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
         }
@@ -112,7 +101,6 @@
             margin-top: 2%;
             border-radius: 65px;
             display: block;
-
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
         }
@@ -126,7 +114,6 @@
             font-size: 25px;
             margin: auto auto 5% auto;
             display: block;
-
             /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
             @media only screen and (max-width: 350px) {
                 font-size: 20px;
@@ -139,7 +126,6 @@
             display: inline-block;
             margin-left: 13.5%;
             bottom: 40px;
-
             @media only screen and (max-width: 550px) {
                 font-size: 25px;
             }
@@ -156,6 +142,7 @@ h2 {
     font-weight: bold;
     font-size: 20px;
 }
+
 u {
     font-weight: bold;
 }
@@ -169,9 +156,10 @@ u {
     font-size: 20px;
     position: fixed;
     text-align: left;
-
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox */
 }
+
 input[type="email"],
 select {
     display: inline-block;
@@ -180,6 +168,7 @@ select {
     text-align: left;
     padding: 0% 0% 0% 12%; //moves location of select (input) to the right, which also moves the placeholder
 }
+
 input[type="password"],
 select {
     display: inline-block;

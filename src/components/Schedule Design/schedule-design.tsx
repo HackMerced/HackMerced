@@ -7,7 +7,7 @@ const ScheduleDesign: FC = (): JSX.Element => {
     const [day, setDay] = useState(21);
 
     const generateSchedule = (): any => {
-        let scheduleElements: any = [];
+        const scheduleElements: any = [];
 
         schedule[day].forEach((e: any) =>
             scheduleElements.push(

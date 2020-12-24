@@ -7,7 +7,7 @@ const ScheduleDesign: FC = (): JSX.Element => {
     const [day, setDay] = useState(3);
 
     const generateSchedule = (): any => {
-        let scheduleElements: any = [];
+        const scheduleElements: any = [];
 
         schedule[day].forEach((e: any) =>
             scheduleElements.push(
@@ -25,16 +25,16 @@ const ScheduleDesign: FC = (): JSX.Element => {
     return (
         <div className="calendar">
             <div className="calendar_header">
-        <h1>Upcoming Events</h1>
+                <h1>Upcoming Events</h1>
                 <div className="side-by-side">
                     <div className="calendar_subheader" onClick={() => setDay(3)}>
-                       Friday , March 5
+                        Friday , March 5
                     </div>
                     <div className="calendar_subheader" onClick={() => setDay(4)}>
-                    Saturday, March 6
+                        Saturday, March 6
                     </div>
                     <div className="calendar_subheader" onClick={() => setDay(5)}>
-                    Sunday, March 7
+                        Sunday, March 7
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
 export type PastHackathonsGalleryProps = {
-  images: Array<string>;
-  iteration: string | null;
-}
+    images: Array<string>;
+    iteration: string | null;
+};

@@ -4,7 +4,7 @@ import Navbar from '../../components/NavBar/navbar';
 import SubNavbar from '../../components/Sub-NavBar/sub-navbar';
 import Hackmercedlogo from '../../assets/images/hackmercedvi-logo.png';
 
-import './dashboard-prizes.scss'
+import './dashboard-prizes.scss';
 
 const DashboardPrizes: FC = (): JSX.Element => {
     return (
@@ -63,10 +63,8 @@ const DashboardPrizes: FC = (): JSX.Element => {
                             <input className="teamcodeInput" type="password" id="codeInput" name="password"></input>
                         </div>
                     </div>
-
                 </section>
-                <aside>
-                </aside>
+                <aside></aside>
             </div>
             <Footer />
         </>

@@ -28,7 +28,9 @@ const Form: FC<FormProps> = (props): JSX.Element => {
         });
     };
 
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>): void => {
+    const handleInputChange = (
+        event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>,
+    ): void => {
         const { name, value } = event.target;
         setValues({ ...values, [name]: value });
     };

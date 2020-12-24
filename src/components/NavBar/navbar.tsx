@@ -5,13 +5,13 @@ import { Link, useLocation } from 'react-router-dom';
 import MLHBANNER from '../../assets/images/mlh-badge.svg';
 import './navbar.scss';
 
-const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string; showBanner?: Boolean }> = ({
+const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string; showBanner?: boolean }> = ({
     backgroundColor,
     textColor,
     breakLineColor,
     showBanner = true,
 }): JSX.Element => {
-    let { pathname } = useLocation();
+    const { pathname } = useLocation();
     const [openDrawer, toggleDrawer] = useState(false);
     const drawerRef = useRef(null);
 
