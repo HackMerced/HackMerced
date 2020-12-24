@@ -106,9 +106,7 @@ const Application: FC = (): JSX.Element => {
     return (
         <>
             <main className="dashboard-application">
-                <h3>
-                    Application
-                </h3>
+                <h3>Application</h3>
                 <form className="application-form" onSubmit={handleSubmit}>
                     <section className="row">
                         <div className="cell left-cell ">
@@ -181,7 +179,13 @@ const Application: FC = (): JSX.Element => {
                             <label htmlFor="levelOfStudy">
                                 Current Level of Study <span className="required">*</span>
                             </label>
-                            <select id="levelOfStudy" name="levelOfStudy" onChange={handleInputChange} required defaultValue="">
+                            <select
+                                id="levelOfStudy"
+                                name="levelOfStudy"
+                                onChange={handleInputChange}
+                                required
+                                defaultValue=""
+                            >
                                 <option value="" disabled={true}>
                                     Current Level of Study
                                 </option>
@@ -309,24 +313,26 @@ const Application: FC = (): JSX.Element => {
                             <option value="No">No</option>
                         </select>
                     </section>
-                    {<section className="row">
-                        <div className="cell left-cell">
-                            <label htmlFor="resume">
-                                <span className="required"></span>
-                            </label>
-                            <FileUploader id="resume" className="file-submission" name="resume">
-                                File Upload
-                            </FileUploader>
-                        </div>
-                    </section>}
+                    {
+                        <section className="row">
+                            <div className="cell left-cell">
+                                <label htmlFor="resume">
+                                    <span className="required"></span>
+                                </label>
+                                <FileUploader id="resume" className="file-submission" name="resume">
+                                    File Upload
+                                </FileUploader>
+                            </div>
+                        </section>
+                    }
                     <button className="submit-application" type="submit" disabled={!canSubmit}>
                         {isLoading ? (
                             <PulseLoader css={override} size={15} color={'#B486CE'} loading={isLoading} />
                         ) : canSubmit ? (
                             'SUBMIT'
                         ) : (
-                                    'SUBMITTED'
-                                )}
+                            'SUBMITTED'
+                        )}
                     </button>
                 </form>
             </main>

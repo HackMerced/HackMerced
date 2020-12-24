@@ -23,9 +23,7 @@ const Login: FC = (): JSX.Element => {
 
     const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
         event.preventDefault();
-        Axios.post(`${environment.HACKER_API}/v1/auth/login`, form).then(Response =>
-            console.log(Response),
-        );
+        Axios.post(`${environment.HACKER_API}/v1/auth/login`, form).then(Response => console.log(Response));
     };
 
     return (
@@ -56,13 +54,7 @@ const Login: FC = (): JSX.Element => {
                         <FontAwesomeIcon icon={faKey} className="blackicon" />
                         <div className="flex-container">
                             <h2 className="flex-item">
-                                <Link
-                                    to={{
-                                        pathname: '/login',
-                                        hash: '#reset-password',
-                                        state: { fromLogin: true },
-                                    }}
-                                >
+                                <Link to="/login/reset-password">
                                     <u>Forgot Password?</u>
                                 </Link>
                             </h2>

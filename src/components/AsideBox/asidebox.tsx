@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import './asidebox.scss'
+import './asidebox.scss';
 
 const AsideBox: FC = (): JSX.Element => {
     return (

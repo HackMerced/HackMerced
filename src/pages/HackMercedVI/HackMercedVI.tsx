@@ -9,7 +9,7 @@ import './HackMercedVI.scss';
 const HackMercedVI: FC = (): JSX.Element => {
     return (
         <>
-            <Navbar backgroundColor="#E0E5EC" textColor="#0d0721" breakLineColor="#C4BDDC" showBanner={false}/>
+            <Navbar backgroundColor="#E0E5EC" textColor="#0d0721" breakLineColor="#C4BDDC" showBanner={false} />
             <section className="version-six">
                 <div className="back">
                     <a href="https://hackmerced.com" className="text">

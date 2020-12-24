@@ -5,13 +5,13 @@ import { Link, useLocation } from 'react-router-dom';
 import MLHBANNER from '../../assets/images/mlh-badge.svg';
 import './navbar.scss';
 
-const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string; showBanner?: Boolean }> = ({
+const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string; showBanner?: boolean }> = ({
     backgroundColor,
     textColor,
     breakLineColor,
     showBanner = true,
 }): JSX.Element => {
-    let { pathname } = useLocation();
+    const { pathname } = useLocation();
     const [openDrawer, toggleDrawer] = useState(false);
     const drawerRef = useRef(null);
 
@@ -73,7 +73,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                         {pathname === '/contact-us' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item>
-                    <a href="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</a>
+                        <a href="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</a>
                         {/* <Link to="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</Link> */}
                         {pathname === '/application' ? <div className="break-line"></div> : null}
                     </Menu.Item>
@@ -184,7 +184,7 @@ const HamburgerButton = {
             width: 100%;
             background-color: white;
             position: absolute;
-            background-color: ${({ breakLineColor }: { breakLineColor: any }) => breakLineColor };
+            background-color: ${({ breakLineColor }: { breakLineColor: any }) => breakLineColor};
         }
 
         &:after {

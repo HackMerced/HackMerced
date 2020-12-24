@@ -1,5 +1,5 @@
 export type FormProps = {
-  formTitle: string;
-  askCompany: boolean;
-  formRequest: string;
-}
+    formTitle: string;
+    askCompany: boolean;
+    formRequest: string;
+};

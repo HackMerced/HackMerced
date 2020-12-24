@@ -89,7 +89,7 @@ const TeamPics: FC = (): JSX.Element => {
     ];
 
     const teampics = (team: Array<TeamPicsState>): JSX.Element => {
-        let teamArray: Array<JSX.Element> = [];
+        const teamArray: Array<JSX.Element> = [];
 
         team.forEach((member: TeamPicsState, index: number) => {
             const name: string = member.src.includes('/')

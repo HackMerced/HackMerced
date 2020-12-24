@@ -59,7 +59,10 @@ afterEach(() => {
 
 test('check if images load for HackMerced I', () => {
     act(() => {
-        render(<PastHackathonsGallery iteration={null} images={[CHECKIN, HMFOOD, MACHINE, TEACHING, OLDTEAM, TUTOR]} />, container);
+        render(
+            <PastHackathonsGallery iteration={null} images={[CHECKIN, HMFOOD, MACHINE, TEACHING, OLDTEAM, TUTOR]} />,
+            container,
+        );
     });
 
     expect(container.getElementsByTagName('img')[0]).toHaveAttribute('src', CHECKIN);
@@ -71,53 +74,77 @@ test('check if images load for HackMerced I', () => {
 });
 
 test('check if images load for HackMerced II', () => {
-  act(() => {
-      render(<PastHackathonsGallery iteration={"II"} images={[SPEAKERII, HACKERSII, COLLABORATION, CHECKINGINII, MLHII, SPONSORSII]} />, container);
-  });
+    act(() => {
+        render(
+            <PastHackathonsGallery
+                iteration={'II'}
+                images={[SPEAKERII, HACKERSII, COLLABORATION, CHECKINGINII, MLHII, SPONSORSII]}
+            />,
+            container,
+        );
+    });
 
-  expect(container.getElementsByTagName('img')[0]).toHaveAttribute('src', SPEAKERII);
-  expect(container.getElementsByTagName('img')[1]).toHaveAttribute('src', HACKERSII);
-  expect(container.getElementsByTagName('img')[2]).toHaveAttribute('src', COLLABORATION);
-  expect(container.getElementsByTagName('img')[3]).toHaveAttribute('src', CHECKINGINII);
-  expect(container.getElementsByTagName('img')[4]).toHaveAttribute('src', MLHII);
-  expect(container.getElementsByTagName('img')[5]).toHaveAttribute('src', SPONSORSII);
+    expect(container.getElementsByTagName('img')[0]).toHaveAttribute('src', SPEAKERII);
+    expect(container.getElementsByTagName('img')[1]).toHaveAttribute('src', HACKERSII);
+    expect(container.getElementsByTagName('img')[2]).toHaveAttribute('src', COLLABORATION);
+    expect(container.getElementsByTagName('img')[3]).toHaveAttribute('src', CHECKINGINII);
+    expect(container.getElementsByTagName('img')[4]).toHaveAttribute('src', MLHII);
+    expect(container.getElementsByTagName('img')[5]).toHaveAttribute('src', SPONSORSII);
 });
 
 test('check if images load for HackMerced III', () => {
-  act(() => {
-      render(<PastHackathonsGallery iteration={"III"} images={[MLHCUPSTACK, WINNERSIII, AWARDSIII, PRIZES, JUDGESIII, REDBULL]} />, container);
-  });
+    act(() => {
+        render(
+            <PastHackathonsGallery
+                iteration={'III'}
+                images={[MLHCUPSTACK, WINNERSIII, AWARDSIII, PRIZES, JUDGESIII, REDBULL]}
+            />,
+            container,
+        );
+    });
 
-  expect(container.getElementsByTagName('img')[0]).toHaveAttribute('src', MLHCUPSTACK);
-  expect(container.getElementsByTagName('img')[1]).toHaveAttribute('src', WINNERSIII);
-  expect(container.getElementsByTagName('img')[2]).toHaveAttribute('src', AWARDSIII);
-  expect(container.getElementsByTagName('img')[3]).toHaveAttribute('src', PRIZES);
-  expect(container.getElementsByTagName('img')[4]).toHaveAttribute('src', JUDGESIII);
-  expect(container.getElementsByTagName('img')[5]).toHaveAttribute('src', REDBULL);
+    expect(container.getElementsByTagName('img')[0]).toHaveAttribute('src', MLHCUPSTACK);
+    expect(container.getElementsByTagName('img')[1]).toHaveAttribute('src', WINNERSIII);
+    expect(container.getElementsByTagName('img')[2]).toHaveAttribute('src', AWARDSIII);
+    expect(container.getElementsByTagName('img')[3]).toHaveAttribute('src', PRIZES);
+    expect(container.getElementsByTagName('img')[4]).toHaveAttribute('src', JUDGESIII);
+    expect(container.getElementsByTagName('img')[5]).toHaveAttribute('src', REDBULL);
 });
 
 test('check if images load for HackMerced IV', () => {
-  act(() => {
-      render(<PastHackathonsGallery iteration={"IV"} images={[HACKING, PRESENTER, PRESENTATIONS, HACKIV, JUDGES, AWARDS]} />, container);
-  });
+    act(() => {
+        render(
+            <PastHackathonsGallery
+                iteration={'IV'}
+                images={[HACKING, PRESENTER, PRESENTATIONS, HACKIV, JUDGES, AWARDS]}
+            />,
+            container,
+        );
+    });
 
-  expect(container.getElementsByTagName('img')[0]).toHaveAttribute('src', HACKING);
-  expect(container.getElementsByTagName('img')[1]).toHaveAttribute('src', PRESENTER);
-  expect(container.getElementsByTagName('img')[2]).toHaveAttribute('src', PRESENTATIONS);
-  expect(container.getElementsByTagName('img')[3]).toHaveAttribute('src', HACKIV);
-  expect(container.getElementsByTagName('img')[4]).toHaveAttribute('src', JUDGES);
-  expect(container.getElementsByTagName('img')[5]).toHaveAttribute('src', AWARDS);
+    expect(container.getElementsByTagName('img')[0]).toHaveAttribute('src', HACKING);
+    expect(container.getElementsByTagName('img')[1]).toHaveAttribute('src', PRESENTER);
+    expect(container.getElementsByTagName('img')[2]).toHaveAttribute('src', PRESENTATIONS);
+    expect(container.getElementsByTagName('img')[3]).toHaveAttribute('src', HACKIV);
+    expect(container.getElementsByTagName('img')[4]).toHaveAttribute('src', JUDGES);
+    expect(container.getElementsByTagName('img')[5]).toHaveAttribute('src', AWARDS);
 });
 
 test('check if images load for HackMerced V', () => {
-  act(() => {
-      render(<PastHackathonsGallery iteration={"V"} images={[HACKERS, HMFOODV, CITRIS, SPONSORSV, HEALTHWINNER, SHUBAWARD]} />, container);
-  });
+    act(() => {
+        render(
+            <PastHackathonsGallery
+                iteration={'V'}
+                images={[HACKERS, HMFOODV, CITRIS, SPONSORSV, HEALTHWINNER, SHUBAWARD]}
+            />,
+            container,
+        );
+    });
 
-  expect(container.getElementsByTagName('img')[0]).toHaveAttribute('src', HACKERS);
-  expect(container.getElementsByTagName('img')[1]).toHaveAttribute('src', HMFOODV);
-  expect(container.getElementsByTagName('img')[2]).toHaveAttribute('src', CITRIS);
-  expect(container.getElementsByTagName('img')[3]).toHaveAttribute('src', SPONSORSV);
-  expect(container.getElementsByTagName('img')[4]).toHaveAttribute('src', HEALTHWINNER);
-  expect(container.getElementsByTagName('img')[5]).toHaveAttribute('src', SHUBAWARD);
+    expect(container.getElementsByTagName('img')[0]).toHaveAttribute('src', HACKERS);
+    expect(container.getElementsByTagName('img')[1]).toHaveAttribute('src', HMFOODV);
+    expect(container.getElementsByTagName('img')[2]).toHaveAttribute('src', CITRIS);
+    expect(container.getElementsByTagName('img')[3]).toHaveAttribute('src', SPONSORSV);
+    expect(container.getElementsByTagName('img')[4]).toHaveAttribute('src', HEALTHWINNER);
+    expect(container.getElementsByTagName('img')[5]).toHaveAttribute('src', SHUBAWARD);
 });
