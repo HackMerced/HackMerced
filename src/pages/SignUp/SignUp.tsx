@@ -1,15 +1,20 @@
 import React, { FC, useState } from 'react';
 import Axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import Footer from '../../components/Footer/footer';
 import Navbar from '../../components/NavBar/navbar';
 import Hackmercedlogo from '../../assets/images/hackmercedvi-logo.png';
 import './SignUp.scss';
 import { environment } from '../../environments';
+import { HackerState, TokenState } from '../../App.types';
 
-const SignUp: FC = (): JSX.Element => {
+const SignUp: FC<{
+    updateHacker: React.Dispatch<React.SetStateAction<HackerState | undefined>>;
+    updateToken: React.Dispatch<React.SetStateAction<TokenState | undefined>>;
+}> = ({ updateHacker, updateToken }): JSX.Element => {
     const [form, setForm] = useState({ firstName: '', lastName: '', email: '', password: '' });
+    const history = useHistory();
 
     const handleInputChange = (
         event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
@@ -24,7 +29,13 @@ const SignUp: FC = (): JSX.Element => {
             headers: {
                 'Content-Type': 'application/json',
             },
-        }).then(response => console.log(response));
+        }).then(response => {
+            if (response.status === 201 && response.statusText === 'Created') {
+                updateHacker(response.data.user);
+                updateToken(response.data.token);
+                history.push('/dashboard');
+            }
+        });
     };
 
     return (
@@ -37,7 +48,6 @@ const SignUp: FC = (): JSX.Element => {
                     <form onSubmit={handleSubmit}>
                         <input
                             className="firstinput"
-                            id="email"
                             name="firstName"
                             type="text"
                             placeholder="First Name"
@@ -46,7 +56,6 @@ const SignUp: FC = (): JSX.Element => {
                         />
                         <input
                             className="firstinput"
-                            id="email"
                             name="lastName"
                             type="text"
                             placeholder="Last Name"
@@ -57,7 +66,6 @@ const SignUp: FC = (): JSX.Element => {
                             className="emailinput"
                             type="email"
                             placeholder="Email"
-                            id="email"
                             name="email"
                             onChange={handleInputChange}
                         />
@@ -65,14 +73,15 @@ const SignUp: FC = (): JSX.Element => {
                             className="passwordinput"
                             type="password"
                             placeholder="Password"
-                            id="password"
                             name="password"
                             onChange={handleInputChange}
                         />
                         <br />
                         <div className="flex-container">
-                            <input type="checkbox" id="rememberme" name="remember" />
-                            <h3 className="flex-item">Remember Me?</h3>
+                            {/* <div className="flex-item">
+                                <input type="checkbox" id="rememberme" name="remember" />
+                                <h3>Remember Me?</h3>
+                            </div> */}
                             <h2 className="flex-item">
                                 <Link to="/Login">
                                     <u>Already have an Account?</u>
