@@ -12,10 +12,10 @@ const HackMercedVI: FC = (): JSX.Element => {
             <Navbar backgroundColor="#E0E5EC" textColor="#0d0721" breakLineColor="#C4BDDC" showBanner={false}/>
             <section className="version-six">
                 <div className="back">
-                    <a  className="text">
+                    <a href="https://hackmerced.com" className="text">
                         HackMerced VI
                     </a>
-                    <a  className="text2">
+                    <a href="https://hackmerced.com" className="text2">
                         Coming Soon in Spring 2021
                     </a>
                 </div>

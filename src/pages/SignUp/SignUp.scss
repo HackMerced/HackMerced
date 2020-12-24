@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-
     .center-container {
         position: relative;
         display: inline-block;
@@ -12,17 +11,14 @@
         margin-bottom: 1%;
         background-image: linear-gradient(#ffb181, #ffb26e);
         border-radius: 65px;
-
         /* offset-x | offset-y | blur-radius | color */
         box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
-
         @media only screen and (max-width: 1100px) {
             width: 60%;
         }
         @media only screen and (max-width: 740px) {
             width: 68%;
         }
-
         .logo {
             //hackmerced logo at the top
             display: block;
@@ -38,7 +34,6 @@
             text-align: center;
             padding: 1% 0% 1% 0%;
         }
-
         h3 {
             color: white;
             font-weight: bold;
@@ -49,7 +44,6 @@
             flex-wrap: wrap; //makes 'Create an Account' go under 'Forgot Password?' at lower resolutions
             justify-content: space-around; //puts even space on the left and right of contents
             padding: 0% 4% 3% 4%;
-
             .flex-item {
                 display: inline;
                 text-align: center;
@@ -59,12 +53,9 @@
             display: flex;
             flex-wrap: wrap; //makes 'Create an Account' go under 'Forgot Password?' at lower resolutions
             padding: 0% 4% 3% 2%;
-
         }
-
         .loginicons {
             text-align: center; //centers everything inside loginicons div
-
             p {
                 color: white;
                 font-weight: 510;
@@ -89,19 +80,18 @@
                 color: rgb(39, 38, 38);
             }
         }
-
-       
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        
-            opacity: 1; /* Firefox */
+         ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            opacity: 1;
+            /* Firefox */
             font-weight: lighter;
             font-size: 18px;
-          
-            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+             :-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
                 font-weight: lighter;
             }
-          
-            ::-ms-input-placeholder { /* Microsoft Edge */
+             ::-ms-input-placeholder {
+                /* Microsoft Edge */
                 font-weight: lighter;
             }
         }
@@ -111,7 +101,6 @@
             margin-top: 4%;
             border-radius: 65px;
             display: block;
-            
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
         }
@@ -121,19 +110,15 @@
             margin-top: 4%;
             border-radius: 65px;
             display: block;
-            
-
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
         }
-
         .passwordinput {
             width: 80%;
             height: 50px;
             margin-top: 4%;
             border-radius: 65px;
             display: block;
-
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212);
         }
@@ -147,7 +132,9 @@
             font-size: 25px;
             margin: auto auto 5% auto;
             display: block;
-
+            @media only screen and (max-width: 500px) {
+                width: 80%;
+            }
             /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
             @media only screen and (max-width: 350px) {
                 font-size: 20px;
@@ -160,7 +147,6 @@
             display: inline-block;
             margin-left: 13.5%;
             bottom: 40px;
-
             @media only screen and (max-width: 550px) {
                 font-size: 25px;
             }
@@ -171,58 +157,55 @@
         }
     }
     /* Form */
-
-::placeholder {
-    color: rgba(0, 0, 0, 0.301);
-    font-weight: bold;
-    font-size: 20px;
-    position: fixed;
-    text-align: left;
-
-    opacity: 1; /* Firefox */
-}
-
-input[type="text"],
-select {
-    display: inline-block;
-    margin: 0 auto;
-    color: black;
-    text-align: left;
-    padding: 0% 0% 0% 4%; //moves location of select (input) to the right, which also moves the placeholder
-}
-input[type="email"],
-select {
-    display: inline-block;
-    margin: 0 auto;
-    color: black;
-    text-align: left;
-    padding: 0% 0% 0% 4%; //moves location of select (input) to the right, which also moves the placeholder
-}
-input[type="password"],
-select {
-    display: inline-block;
-    margin: 0 auto;
-    color: black;
-    text-align: left;
-    padding: 0% 0% 0% 4%; //moves location of select (input) to the right, which also moves the placeholder
-}
-input[type="checkbox"],
-select {
-    width: 1.3em;
-    height: 1.3em;
-    background-color: white;
-    border-radius: 50%;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    -webkit-appearance: none;
-    outline: none;
-    cursor: pointer;
-    color: black;
-    text-align: left;
-    margin: 1% 0% 0% 0%;
-     //moves location of select (input) to the right, which also moves the placeholder
-}
-
+     ::placeholder {
+        color: rgba(0, 0, 0, 0.301);
+        font-weight: bold;
+        font-size: 20px;
+        position: fixed;
+        text-align: left;
+        opacity: 1;
+        /* Firefox */
+    }
+    input[type='text'],
+    select {
+        display: inline-block;
+        margin: 0 auto;
+        color: black;
+        text-align: left;
+        padding: 0% 0% 0% 4%; //moves location of select (input) to the right, which also moves the placeholder
+    }
+    input[type='email'],
+    select {
+        display: inline-block;
+        margin: 0 auto;
+        color: black;
+        text-align: left;
+        padding: 0% 0% 0% 4%; //moves location of select (input) to the right, which also moves the placeholder
+    }
+    input[type='password'],
+    select {
+        display: inline-block;
+        margin: 0 auto;
+        color: black;
+        text-align: left;
+        padding: 0% 0% 0% 4%; //moves location of select (input) to the right, which also moves the placeholder
+    }
+    input[type='checkbox'],
+    select {
+        width: 1.3em;
+        height: 1.3em;
+        background-color: white;
+        border-radius: 50%;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+        color: black;
+        text-align: left;
+        margin: 1% 0% 0% 0%;
+        //moves location of select (input) to the right, which also moves the placeholder
+    }
 }
 
 h2 {
@@ -231,9 +214,6 @@ h2 {
     font-size: 20px;
 }
 
-
 u {
     font-weight: bold;
 }
-
-
