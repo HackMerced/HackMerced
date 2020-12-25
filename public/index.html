@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="The HackMerced Hub" />
-        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-        <title>HackMerced</title>
-    </head>
-    <body>
-        <script type="text/javascript">
-            fetch('%PUBLIC_URL%/tower.txt')
-                .then(r => r.text())
-                .then(text => {
-                    console.log(text);
-                });
-        </script>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-    </body>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="The HackMerced Hub" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>HackMerced</title>
+    <script type="text/javascript">
+        fetch('%PUBLIC_URL%/tower.txt')
+            .then(r => r.text())
+            .then(text => {
+                console.log(text);
+            });
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
 </html>
