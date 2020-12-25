@@ -1,10 +1,10 @@
 import React, { FC, useState } from 'react';
-import Axios from 'axios';
+import Axios, { AxiosResponse } from 'axios';
 import { Link, useHistory } from 'react-router-dom';
 
 import Footer from '../../components/Footer/footer';
 import Navbar from '../../components/NavBar/navbar';
-import Hackmercedlogo from '../../assets/images/hackmercedvi-logo.png';
+import HACKMERCED_LOGO from '../../assets/images/hackmercedvi-logo.png';
 import './SignUp.scss';
 import { environment } from '../../environments';
 import { HackerState, TokenState } from '../../App.types';
@@ -13,7 +13,12 @@ const SignUp: FC<{
     updateHacker: React.Dispatch<React.SetStateAction<HackerState | undefined>>;
     updateToken: React.Dispatch<React.SetStateAction<TokenState | undefined>>;
 }> = ({ updateHacker, updateToken }): JSX.Element => {
-    const [form, setForm] = useState({ firstName: '', lastName: '', email: '', password: '' });
+    const [form, setForm] = useState<{ firstName: string; lastName: string; email: string; password: string }>({
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+    });
     const history = useHistory();
 
     const handleInputChange = (
@@ -29,7 +34,7 @@ const SignUp: FC<{
             headers: {
                 'Content-Type': 'application/json',
             },
-        }).then(response => {
+        }).then((response: AxiosResponse) => {
             if (response.status === 201 && response.statusText === 'Created') {
                 updateHacker(response.data.user);
                 updateToken(response.data.token);
@@ -41,13 +46,19 @@ const SignUp: FC<{
     return (
         <>
             <Navbar />
-            <main className="sign-page">
-                <div className="center-container">
-                    <img className="logo" src={Hackmercedlogo} alt="Logo" height={120} width={120} />
-                    <h1 className="uppercase">Sign Up</h1>
-                    <form onSubmit={handleSubmit}>
+            <main className="SIGNUP">
+                <div className="SIGNUP__container">
+                    <img
+                        className="SIGNUP__container__logo"
+                        src={HACKMERCED_LOGO}
+                        alt="Logo"
+                        height={120}
+                        width={120}
+                    />
+                    <h1 className="SIGNUP__container__title uppercase">Sign Up</h1>
+                    <form onSubmit={handleSubmit} className="SIGNUP__container__form">
                         <input
-                            className="firstinput"
+                            className="SIGNUP__container__form__first-name"
                             name="firstName"
                             type="text"
                             placeholder="First Name"
@@ -55,7 +66,7 @@ const SignUp: FC<{
                             onChange={handleInputChange}
                         />
                         <input
-                            className="firstinput"
+                            className="SIGNUP__container__form__last-name"
                             name="lastName"
                             type="text"
                             placeholder="Last Name"
@@ -63,32 +74,26 @@ const SignUp: FC<{
                             onChange={handleInputChange}
                         />
                         <input
-                            className="emailinput"
+                            className="SIGNUP__container__form__email"
                             type="email"
                             placeholder="Email"
                             name="email"
                             onChange={handleInputChange}
+                            required
                         />
                         <input
-                            className="passwordinput"
+                            className="SIGNUP__container__form__password"
                             type="password"
                             placeholder="Password"
                             name="password"
                             onChange={handleInputChange}
+                            required
                         />
                         <br />
-                        <div className="flex-container">
-                            {/* <div className="flex-item">
-                                <input type="checkbox" id="rememberme" name="remember" />
-                                <h3>Remember Me?</h3>
-                            </div> */}
-                            <h2 className="flex-item">
-                                <Link to="/Login">
-                                    <u>Already have an Account?</u>
-                                </Link>
-                            </h2>
-                        </div>
-                        <button className="submitbutton" type="submit">
+                        <h2 className="SIGNUP__container__form__already-member">
+                            <Link to="/Login">Already have an Account?</Link>
+                        </h2>
+                        <button className="SIGNUP__container__form__submit-button" type="submit">
                             Create an Account
                         </button>
                     </form>
