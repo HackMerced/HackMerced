@@ -146,7 +146,7 @@ $borderColor: #eeebf5;
                         color: $offWhite;
                         padding: 40px 20px;
                         background: $offOrange;
-                        border-radius: 6px;
+                        border-radius: 0.6em;
                         margin-right: 25px;
                         min-width: 200px;
                         box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.5);
@@ -282,7 +282,7 @@ $borderColor: #eeebf5;
             &__timeline {
                 display: flex;
                 justify-content: space-between;
-                flex-direction: column;
+                flex-flow: row wrap;
                 color: $offBlack;
                 font-size: 23px;
                 font-weight: bold;
@@ -352,8 +352,9 @@ $borderColor: #eeebf5;
                     width: 40%;
                     flex: 1 1 auto;
                     border-radius: 25px;
-                    margin: 10px;
-                    padding: 20px;
+                    text-align: center;
+                    margin: 20px 10px;
+                    padding: 30px;
                     box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
 
                     &__title {
@@ -389,6 +390,7 @@ $borderColor: #eeebf5;
         border: 1px solid $borderColor;
         height: 500px;
         padding-top: 30px;
+        width: 350px;
 
         &__logo {
             width: 100px;
@@ -411,15 +413,14 @@ $borderColor: #eeebf5;
         }
 
         &__title,
-        &__start-time,
-        &__end-time {
+        &__start-title,
+        &__end-title {
             color: $offBlack;
         }
 
-        &__start-title,
-        &__end-title {
+        &__start-time,
+        &__end-time {
             color: $offOrange;
-            font-size: 25px;
         }
 
         &__title {
@@ -428,8 +429,15 @@ $borderColor: #eeebf5;
             padding: 4% 1%;
         }
 
+        &__start-title,
+        &__end-title {
+            font-weight: normal;
+            font-size: 25px;
+        }
+
         &__start-time,
         &__end-time {
+            font-weight: bold;
             font-size: 23px;
         }
     }
@@ -449,6 +457,7 @@ $borderColor: #eeebf5;
         border: 1px solid $borderColor;
         height: 400px;
         padding-top: 30px;
+        width: 350px;
 
         @media only screen and (max-width: 800px) {
             height: 500px;
