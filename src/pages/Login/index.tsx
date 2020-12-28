@@ -53,8 +53,8 @@ const Login: FC<{
               className="emailinput"
               type="email"
               placeholder="Email"
-              id="email"
               name="email"
+              required
             />
             <FontAwesomeIcon icon={faUser} className="blackicon" />
             <input
@@ -62,8 +62,8 @@ const Login: FC<{
               className="passwordinput"
               type="password"
               placeholder="Password"
-              id="password"
               name="password"
+              required
             />
             <FontAwesomeIcon icon={faKey} className="blackicon" />
             <div className="flex-container">

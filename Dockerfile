@@ -2,7 +2,7 @@ FROM node:12.16.1-alpine3.11 AS builder
 
 LABEL maintainer="HackMerced"
 LABEL maintainer.email="general@hackmerced.com"
-LABEL version="1.0.0"
+LABEL version="2.0.0"
 
 WORKDIR /app
 COPY . .
