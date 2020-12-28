@@ -14,67 +14,60 @@ import DesignMerced from "./pages/DesignMerced";
 import SignUp from "./pages/SignUp";
 import Maintenance from "./pages/Maintenance";
 import Dashboard from "./pages/Dashboard";
-import DashboardPrizes from "./pages/DashboardPrizes";
-import DashboardSchedule from "./pages/DashboardSchedule";
 import { HackerState, TokenState } from "./App.types";
 import "./App.scss";
+import Countdown from "./components/Countdown";
 
 const App: FC = (): JSX.Element => {
-  const [hacker, setHacker] = useState<HackerState>();
-  const [token, setToken] = useState<TokenState>();
+    const [hacker, setHacker] = useState<HackerState>();
+    const [token, setToken] = useState<TokenState>();
 
-  return (
-    <Router
-      history={createHashHistory({
-        basename: "",
-        hashType: "slash",
-        getUserConfirmation: (message, callback) => callback(window.confirm(message)),
-      })}
-    >
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/sponsors" component={SponsorUs} />
-        <Route exact path="/contact-us" component={ContactUs} />
-        <Route exact path="/past-hackathons" component={Hackathons} />
-        <Route exact path="/application" component={Application} />
-        <Route
-          exact path="/login"
-          render={({ match: { url } }): JSX.Element => (
-            <Fragment>
-              <Route exact path={`${url}/`} >
-                <Login updateHacker={setHacker} updateToken={setToken} />
-              </Route>
-              <Route exact path={`${url}/reset-password`} component={ResetPassword} />
-            </Fragment>
-          )}
-        />
-        <Route exact path="/signup">
-          <SignUp updateHacker={setHacker} updateToken={setToken} />
-        </Route>
-        <Route exact path="/designmerced" component={DesignMerced} />
-        <Route exact path="/maintenance" component={Maintenance} />
-        <Route
-          exact path="/dashboard"
-          render={({ match: { url } }): JSX.Element => (
-            <Fragment>
-              <Route path={`${url}/`} exact>
-                <Dashboard
-                  hacker={hacker}
-                  updateHacker={setHacker}
-                  token={token}
-                  updateToken={setToken}
+    return (
+        <Router
+            history={createHashHistory({
+                basename: "",
+                hashType: "slash",
+                getUserConfirmation: (message, callback) => callback(window.confirm(message)),
+            })}
+        >
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/sponsors" component={SponsorUs} />
+                <Route path="/contact-us" component={ContactUs} />
+                <Route path="/past-hackathons" component={Hackathons} />
+                <Route path="/application" component={Application} />
+                <Route
+                    path="/login"
+                    render={({ match: { url } }): JSX.Element => (
+                        <Fragment>
+                            <Route exact path={`${url}/`}>
+                                <Login updateHacker={setHacker} updateToken={setToken} />
+                            </Route>
+                            <Route path={`${url}/reset-password`} component={ResetPassword} />
+                        </Fragment>
+                    )}
                 />
-              </Route>
-              <Route exact path={`${url}/prizes`} component={DashboardPrizes} />
-              <Route exact path={`${url}/schedule`} component={DashboardSchedule} />
-            </Fragment>
-          )}
-        />
-        <Route path="*" component={Error} />
-        <Redirect from="/HackMerced" to="/" />
-      </Switch>
-    </Router>
-  );
+                <Route
+                    path="/signup"
+                    render={(): JSX.Element => <SignUp updateHacker={setHacker} updateToken={setToken} />}
+                />
+                <Route path="/designmerced" component={DesignMerced} />
+                <Route path="/maintenance" component={Maintenance} />
+                <Route
+                    path="/dashboard"
+                    render={(): JSX.Element => (
+                        <Dashboard hacker={hacker} updateHacker={setHacker} token={token} updateToken={setToken} />
+                    )}
+                />
+                <Route
+                    path="/countdown"
+                    render={(): JSX.Element => <Countdown destination={"2021-03-05T20:00:00.000Z"} />}
+                />
+                <Route path="*" component={Error} />
+                <Redirect from="/HackMerced" to="/" />
+            </Switch>
+        </Router>
+    );
 };
 
 export default App;
