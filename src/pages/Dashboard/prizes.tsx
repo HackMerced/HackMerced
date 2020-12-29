@@ -28,7 +28,7 @@ const Prizes: FC = (): JSX.Element => {
                     <h3 className="dashboard__content__prizes__ul__li__title">Best Hardware Hack</h3>
                     <h4 className="dashboard__content__prizes__ul__li__body">Raspberry Pi to each member</h4>
                 </li>
-                <li  className="dashboard__content__prizes__ul__li">
+                <li className="dashboard__content__prizes__ul__li">
                     <h3 className="dashboard__content__prizes__ul__li__title">Best Beginner Hack</h3>
                     <h4 className="dashboard__content__prizes__ul__li__body">Mechanical Keyboard to each member</h4>
                 </li>

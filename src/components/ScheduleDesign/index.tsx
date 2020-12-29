@@ -10,18 +10,18 @@ const ScheduleDesign: FC = (): JSX.Element => {
         const scheduleElements: Array<JSX.Element> = [];
 
         schedule.forEach((e: { day: number; title: string; body: string }) => {
-          if (e.day === day) {
-            scheduleElements.push(
-                <div className="event_item">
-                    <div className="event_item_dot dot_active"></div>
-                    <div className="event_item_title">{e.title}</div>
-                    <div className="event_item_body">{e.body}</div>
-                </div>,
-            )
-          }
-            });
+            if (e.day === day) {
+                scheduleElements.push(
+                    <div className="event_item">
+                        <div className="event_item_dot dot_active"></div>
+                        <div className="event_item_title">{e.title}</div>
+                        <div className="event_item_body">{e.body}</div>
+                    </div>,
+                );
+            }
+        });
 
-        return (<div className="calendar_events">{scheduleElements}</div>);
+        return <div className="calendar_events">{scheduleElements}</div>;
     };
 
     return (
@@ -33,8 +33,12 @@ const ScheduleDesign: FC = (): JSX.Element => {
                             <div className="calendar_header">
                                 <div className="header_title">Schedule</div>
                                 <div className="side-by-side">
-                                    <p className="calendar_subheader" onClick={(): void => setDay(21)}>November 21</p>
-                                    <p className="calendar_subheader" onClick={(): void => setDay(22)}>November 22</p>
+                                    <p className="calendar_subheader" onClick={(): void => setDay(21)}>
+                                        November 21
+                                    </p>
+                                    <p className="calendar_subheader" onClick={(): void => setDay(22)}>
+                                        November 22
+                                    </p>
                                 </div>
                             </div>
                             {generateSchedule()}

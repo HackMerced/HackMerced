@@ -111,14 +111,14 @@ afterEach(() => {
 
 test("render HackMerced V statistics", () => {
     const successs: {
-      hoursOfHacking: number;
-      numberOfAttendees: number;
-      projectsSubmitted: number;
-      amountOfPrizes: number;
-      numberOfWorkshops: number;
-      numberOfSponsors: number;
-      iteration: string | null;
-  } = {
+        hoursOfHacking: number;
+        numberOfAttendees: number;
+        projectsSubmitted: number;
+        amountOfPrizes: number;
+        numberOfWorkshops: number;
+        numberOfSponsors: number;
+        iteration: string | null;
+    } = {
         iteration: "V",
         hoursOfHacking: 36,
         numberOfAttendees: 400,
