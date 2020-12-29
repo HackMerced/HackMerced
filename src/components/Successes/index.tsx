@@ -3,13 +3,13 @@ import React, { FC } from "react";
 import "./styles.scss";
 
 const Successes: FC<{
-  hoursOfHacking: number;
-  numberOfAttendees: number;
-  projectsSubmitted: number;
-  amountOfPrizes: number;
-  numberOfWorkshops: number;
-  numberOfSponsors: number;
-  iteration: string | null;
+    hoursOfHacking: number;
+    numberOfAttendees: number;
+    projectsSubmitted: number;
+    amountOfPrizes: number;
+    numberOfWorkshops: number;
+    numberOfSponsors: number;
+    iteration: string | null;
 }> = (props): JSX.Element => {
     const {
         hoursOfHacking,
