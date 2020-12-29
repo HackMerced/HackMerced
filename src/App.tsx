@@ -16,7 +16,6 @@ import Maintenance from "./pages/Maintenance";
 import Dashboard from "./pages/Dashboard";
 import { HackerState, TokenState } from "./App.types";
 import "./App.scss";
-import Countdown from "./components/Countdown";
 
 const App: FC = (): JSX.Element => {
     const [hacker, setHacker] = useState<HackerState>();
@@ -58,10 +57,6 @@ const App: FC = (): JSX.Element => {
                     render={(): JSX.Element => (
                         <Dashboard hacker={hacker} updateHacker={setHacker} token={token} updateToken={setToken} />
                     )}
-                />
-                <Route
-                    path="/countdown"
-                    render={(): JSX.Element => <Countdown destination={"2021-03-05T20:00:00.000Z"} />}
                 />
                 <Route path="*" component={Error} />
                 <Redirect from="/HackMerced" to="/" />
