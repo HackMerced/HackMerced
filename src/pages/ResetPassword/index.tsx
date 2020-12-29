@@ -9,7 +9,7 @@ import HACKMERCED_LOGO from "../../assets/images/hackmerced-logo.png";
 import "./styles.scss";
 
 const ResetPassword: FC<{}> = (): JSX.Element => {
-    const [form, setForm] = useState<{email: string}>({ email: "" });
+    const [form, setForm] = useState<{ email: string }>({ email: "" });
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const { name, value } = event.target;
@@ -18,9 +18,10 @@ const ResetPassword: FC<{}> = (): JSX.Element => {
 
     const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
         event.preventDefault();
-        Axios.post(`https://hackmerced-tomoe.herokuapp.com/v1/auth/login-resetpassword`, form).then((response: AxiosResponse) =>
-            console.log(response),
-        );
+        Axios.post(
+            `https://hackmerced-tomoe.herokuapp.com/v1/auth/login-resetpassword`,
+            form,
+        ).then((response: AxiosResponse) => console.log(response));
     };
 
     return (

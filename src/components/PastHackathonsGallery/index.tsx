@@ -3,8 +3,8 @@ import React, { FC } from "react";
 import "./styles.scss";
 
 const PastHackathonsGallery: FC<{
-  images: Array<string>;
-  iteration: string | null;
+    images: Array<string>;
+    iteration: string | null;
 }> = (props): JSX.Element => {
     const { images, iteration } = props;
 

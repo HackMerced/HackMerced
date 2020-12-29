@@ -4,9 +4,9 @@ import Axios, { AxiosResponse } from "axios";
 import "./styles.scss";
 
 const Form: FC<{
-  formTitle: string;
-  askCompany: boolean;
-  formRequest: string;
+    formTitle: string;
+    askCompany: boolean;
+    formRequest: string;
 }> = (props): JSX.Element => {
     const { formTitle, askCompany, formRequest } = props;
     const [values, setValues] = useState({
