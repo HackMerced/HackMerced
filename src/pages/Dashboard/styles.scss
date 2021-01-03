@@ -2,45 +2,21 @@ $offWhite: #f0f0f3;
 $offOrange: #ffb181;
 $offBlack: #313639;
 $borderColor: #eeebf5;
-
 .dashboard {
     display: grid;
     background: $offWhite;
     padding: 2rem;
     row-gap: 30px;
     column-gap: 50px;
-    grid-template-areas:
-        "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav"
-        "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav"
-        "main main main main main main main main date date"
-        "main main main main main main main main date date"
-        "main main main main main main main main date date"
-        "main main main main main main main main date date"
-        "main main main main main main main main team team"
-        "main main main main main main main main team team"
-        "main main main main main main main main team team"
-        "main main main main main main main main team team";
-
-    @media only screen and (max-width: 800px) {
-        grid-template-areas:
-            "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav"
-            "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav"
-            "main main main main main main main main main main"
-            "main main main main main main main main main main"
-            "main main main main main main main main main main"
-            "main main main main main main main main main main"
-            "main main main main main main main main main main"
-            "main main main main main main main main main main"
-            "date date date date date team team team team team"
-            "date date date date date team team team team team";
+    grid-template-areas: "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav" "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside";
+    @media only screen and (max-width: 1000px) {
+        grid-template-areas: "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav" "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav" "main main main main main main main main main main" "main main main main main main main main main main" "main main main main main main main main main main" "main main main main main main main main main main" "main main main main main main main main main main" "main main main main main main main main main main" "aside aside aside aside aside aside aside aside aside aside" "aside aside aside aside aside aside aside aside aside aside";
     }
-
     /*
     * ########################
     * # Dashboard Sub NavBar #
     * ########################
     */
-
     &__sub-navbar {
         grid-area: nav;
         display: flex;
@@ -50,14 +26,12 @@ $borderColor: #eeebf5;
         border-radius: 2em;
         padding: 3em 0;
         box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color
-
         &__nav {
             flex: 1;
             align-self: flex-start;
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             &__ul {
                 display: flex;
                 width: 100%;
@@ -66,18 +40,18 @@ $borderColor: #eeebf5;
                 text-transform: uppercase;
                 z-index: 30;
                 background-color: $offWhite;
-
                 &__li {
                     flex-grow: 1;
                     padding: 0 3rem;
                     cursor: pointer;
                     text-align: center;
                     font-size: 23px;
-
+                    @media (max-width: 700px) {
+                        padding: 0 1rem;
+                    }
                     &__title {
                         text-decoration: none;
                     }
-
                     .break-line {
                         border: 5px solid $offOrange;
                         opacity: 0.5;
@@ -89,32 +63,26 @@ $borderColor: #eeebf5;
             }
         }
     }
-
     /*
     * ########################
     * # Dashboard Main Block #
     * ########################
     */
-
     &__content {
         grid-area: main;
         border-radius: 2em;
-
         /*
         * ##################
         * # Dashboard Live #
         * ##################
         */
-
         &__live {
             display: flex;
             flex-direction: column;
-
             &__countdown,
             &__resources {
                 border-radius: 2em;
                 box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
-
                 &__header {
                     background-color: $offWhite;
                     text-align: center;
@@ -124,10 +92,8 @@ $borderColor: #eeebf5;
                     padding: 30px 0;
                 }
             }
-
             &__countdown {
                 margin-bottom: 50px;
-
                 &__timer {
                     display: flex;
                     align-items: center;
@@ -136,7 +102,6 @@ $borderColor: #eeebf5;
                     width: auto;
                     margin: 0 auto;
                     flex-wrap: wrap;
-
                     &__digits {
                         display: block;
                         font-size: 42px;
@@ -147,39 +112,33 @@ $borderColor: #eeebf5;
                         padding: 40px 20px;
                         background: $offOrange;
                         border-radius: 0.6em;
-                        margin-right: 25px;
-                        min-width: 200px;
+                        margin: 25px;
+                        width: 5em;
                         box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.5);
-
                         & span {
                             display: block;
                             font-size: 28px;
                             line-height: 1.5;
                         }
-
                         &:last-child {
                             margin-right: 0;
                         }
-
                         @media (max-width: 999px) {
                             padding: 30px 15px;
                             font-size: 35px;
                             min-width: 170px;
                         }
-
                         @media (max-width: 767px) {
                             font-size: 34px;
                             margin-right: 20px;
                             min-width: 130px;
                         }
-
                         @media (max-width: 640px) {
                             font-size: 30px;
                             margin-right: 15px;
                             padding: 15px;
                             min-width: 98px;
                         }
-
                         @media (max-width: 480px) {
                             margin-right: 0;
                             margin-bottom: 15px;
@@ -188,14 +147,12 @@ $borderColor: #eeebf5;
                         }
                     }
                 }
-
                 &__body {
                     color: $offBlack;
                     font-size: 23px;
                     padding: 40px;
                 }
             }
-
             &__resources {
                 &__ul {
                     display: flex;
@@ -204,7 +161,6 @@ $borderColor: #eeebf5;
                     width: 100%;
                     padding: 30px;
                     color: $offBlack;
-
                     &__li {
                         border-radius: 25px;
                         margin: 10px;
@@ -214,7 +170,6 @@ $borderColor: #eeebf5;
                         font-size: 28px;
                         font-weight: bold;
                         transform: scale(0.95);
-
                         &:hover {
                             cursor: pointer;
                             transform: scale(1);
@@ -223,31 +178,26 @@ $borderColor: #eeebf5;
                 }
             }
         }
-
         /*
         * ######################
         * # Dashboard Schedule #
         * ######################
         */
-
         &__schedule {
             border-radius: 2em;
             box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
-
             &__header {
                 background-color: $offWhite;
                 text-align: center;
                 border-bottom-left-radius: 2em;
                 border-bottom-right-radius: 2em;
                 box-shadow: 0 4px 10px 2px rgb(192, 192, 192);
-
                 &__title {
                     font-size: 35px;
                     color: $offBlack;
                     font-weight: bolder;
                     padding: 30px 0;
                 }
-
                 &__sub-header {
                     display: flex;
                     flex-direction: row;
@@ -255,18 +205,15 @@ $borderColor: #eeebf5;
                     color: $offOrange;
                     font-size: 28px;
                     padding: 5px;
-
                     &__li {
                         display: flex;
                         flex-direction: column;
                         flex: 1 1 auto;
                         text-align: center;
                         margin: 5px;
-
                         &:hover {
                             cursor: pointer;
                         }
-
                         .break-line {
                             border: 5px solid $offOrange;
                             opacity: 0.5;
@@ -278,7 +225,6 @@ $borderColor: #eeebf5;
                     }
                 }
             }
-
             &__timeline {
                 display: flex;
                 justify-content: space-between;
@@ -287,20 +233,16 @@ $borderColor: #eeebf5;
                 font-size: 23px;
                 font-weight: bold;
                 padding: 30px;
-
-                @media only screen and (max-width: 800px) {
+                @media only screen and (max-width: 1000px) {
                     padding-bottom: 8%;
                 }
-
                 &__item {
                     display: flex;
                     flex-direction: row;
                     width: 100%;
-
                     &__title {
                         padding: 20px;
                     }
-
                     &__body {
                         flex-grow: 1;
                         width: 50%;
@@ -312,24 +254,20 @@ $borderColor: #eeebf5;
                         border-radius: 25px;
                         box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
                     }
-
-                    & > div {
+                    &>div {
                         margin: 20px;
                     }
                 }
             }
         }
-
         /*
         * ####################
         * # Dashboard Prizes #
         * ####################
         */
-
         &__prizes {
             border-radius: 2em;
             box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
-
             &__header {
                 background-color: $offWhite;
                 text-align: center;
@@ -338,14 +276,12 @@ $borderColor: #eeebf5;
                 font-weight: bolder;
                 padding: 30px 0;
             }
-
             &__ul {
                 display: flex;
                 flex-flow: row wrap;
                 align-content: flex-start;
                 width: 100%;
                 padding: 30px;
-
                 &__li {
                     display: flex;
                     flex-direction: column;
@@ -356,15 +292,12 @@ $borderColor: #eeebf5;
                     margin: 20px 10px;
                     padding: 30px;
                     box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
-
                     &__title {
                         color: $offOrange;
                     }
-
                     &__body {
                         color: $offBlack;
                     }
-
                     &__title,
                     &__body {
                         font-size: 28px;
@@ -374,140 +307,153 @@ $borderColor: #eeebf5;
             }
         }
     }
-
-    /*
-    * ###################
-    * # Dashboard Dates #
-    * ###################
-    */
-
-    &__event {
-        grid-area: date;
-        background-color: $offWhite;
-        text-align: center;
-        border-radius: 2em;
-        box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color
-        border: 1px solid $borderColor;
-        height: 500px;
-        padding-top: 30px;
-        width: 350px;
-
-        &__logo {
-            width: 100px;
-            height: auto;
-            margin: 5% auto;
-            border-radius: 50px;
-            box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
-
-            @media only screen and (max-width: 600px) {
-                width: 70px;
-                height: auto;
-            }
+    &__aside {
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 1000px) {
+            flex-direction: row;
+            justify-content: center;
         }
-
-        &__start-time,
-        &__end-time,
-        &__start-title,
-        &__end-title {
-            padding: 2% 1%;
+        @media (max-width: 600px) {
+            flex-direction: column;
         }
-
-        &__title,
-        &__start-title,
-        &__end-title {
-            color: $offBlack;
-        }
-
-        &__start-time,
-        &__end-time {
-            color: $offOrange;
-        }
-
-        &__title {
-            font-size: 28px;
-            font-weight: bolder;
-            padding: 4% 1%;
-        }
-
-        &__start-title,
-        &__end-title {
-            font-weight: normal;
-            font-size: 25px;
-        }
-
-        &__start-time,
-        &__end-time {
-            font-weight: bold;
-            font-size: 23px;
-        }
-    }
-
-    /*
-    * ##################
-    * # Dashboard Team #
-    * ##################
-    */
-
-    &__team {
-        grid-area: team;
-        background-color: $offWhite;
-        text-align: center;
-        border-radius: 2em;
-        box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192); // box-shadow: none|h-offset v-offset blur spread color
-        border: 1px solid $borderColor;
-        height: 400px;
-        padding-top: 30px;
-        width: 350px;
-
-        @media only screen and (max-width: 800px) {
-            height: 500px;
-        }
-
-        &__title,
-        &__break,
-        &__code-title {
-            color: $offBlack;
-        }
-
-        &__code {
-            color: $offOrange;
-        }
-
-        &__title {
-            font-weight: bolder;
-            font-size: 28px;
-            padding: 40px 1% 4% 1%;
-        }
-
-        &__code,
-        &__code-title {
-            font-weight: bold;
-            font-size: 23px;
-            padding: 2% 1%;
-        }
-
-        &__code-input {
-            display: inline-block;
-            margin: 15px auto 0 auto;
-            color: $offBlack;
+        /*
+        * ###################
+        * # Dashboard Dates #
+        * ###################
+        */
+        &__event {
+            background-color: $offWhite;
             text-align: center;
-            width: 65%;
-            height: 40px;
-            border-radius: 20px;
-            box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192); // offset-x | offset-y | blur-radius | color
-        }
-
-        @media only screen and (max-width: 800px) {
+            border-radius: 2em;
+            box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color
+            border: 1px solid $borderColor;
+            height: 500px;
+            padding-top: 30px;
+            width: 350px;
+            margin-bottom: 40px;
+            &__logo {
+                width: 100px;
+                height: auto;
+                margin: 5% auto;
+                border-radius: 50px;
+                box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
+                @media only screen and (max-width: 600px) {
+                    width: 70px;
+                    height: auto;
+                }
+            }
+            &__start-time,
+            &__end-time,
+            &__start-title,
+            &__end-title {
+                padding: 2% 1%;
+            }
+            &__title,
+            &__start-title,
+            &__end-title {
+                color: $offBlack;
+            }
+            &__start-time,
+            &__end-time {
+                color: $offOrange;
+            }
             &__title {
-                padding-top: 30%;
+                font-size: 28px;
+                font-weight: bolder;
+                padding: 4% 1%;
+            }
+            &__start-title,
+            &__end-title {
+                font-weight: normal;
+                font-size: 25px;
+            }
+            &__start-time,
+            &__end-time {
+                font-weight: bold;
+                font-size: 23px;
+            }
+        }
+        /*
+        * ##################
+        * # Dashboard Team #
+        * ##################
+        */
+        &__team {
+            background-color: $offWhite;
+            text-align: center;
+            border-radius: 2em;
+            box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192); // box-shadow: none|h-offset v-offset blur spread color
+            border: 1px solid $borderColor;
+            height: 400px;
+            padding-top: 30px;
+            width: 350px;
+            @media only screen and (max-width: 1000px) {
+                height: 500px;
+            }
+            &__title,
+            &__break,
+            &__code-title {
+                color: $offBlack;
+            }
+            &__code {
+                color: $offOrange;
+            }
+            &__title {
+                font-weight: bolder;
+                font-size: 28px;
+                padding: 40px 1% 4% 1%;
+            }
+            &__code,
+            &__code-title {
+                font-weight: bold;
+                font-size: 23px;
+                padding: 2% 1%;
+            }
+            &__code-container {
+                display: flex;
+                flex-direction: row;
+                margin: 15px auto 0 auto;
+                color: $offBlack;
+                text-align: center;
+                width: 65%;
+                height: 40px;
+                border-radius: 20px;
+                box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192); // offset-x | offset-y | blur-radius | color
+                @media (min-width: 500px) and (max-width: 700px) {
+                    width: 85%;
+                }
+                &__input {
+                    flex-grow: 2;
+                    text-align: center;
+                    border-radius: 20px;
+                }
+                &__submit {
+                    width: 100%;
+                    @media (max-width: 600px) {
+                        width: 15%;
+                    }
+                }
+            }
+            @media only screen and (max-width: 1000px) {
+                &__title {
+                    padding-top: 30%;
+                }
+            }
+        }
+        &__team,
+        &__event {
+            @media (max-width: 1000px) {
+                margin: 10px;
+                width: 100%;
             }
         }
     }
-}
-
-.orange-rectangle {
-    background-color: $offOrange;
-    height: 50px;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
+    .orange-rectangle {
+        background-color: $offOrange;
+        height: 50px;
+        border-top-left-radius: 2em;
+        border-top-right-radius: 2em;
+    }
 }
