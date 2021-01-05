@@ -240,8 +240,14 @@ $borderColor: #eeebf5;
                     display: flex;
                     flex-direction: row;
                     width: 100%;
+                    @media (max-width: 500px) {
+                        flex-direction: column;
+                    }
                     &__title {
                         padding: 20px;
+                        @media (max-width: 500px) {
+                            text-align: center;
+                        }
                     }
                     &__body {
                         flex-grow: 1;
@@ -253,9 +259,15 @@ $borderColor: #eeebf5;
                         line-height: 90px;
                         border-radius: 25px;
                         box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
+                        @media (max-width: 500px) {
+                            width: 100%;
+                        }
                     }
                     &>div {
                         margin: 20px;
+                        @media (max-width: 500px) {
+                            margin: 0;
+                        }
                     }
                 }
             }
@@ -282,6 +294,9 @@ $borderColor: #eeebf5;
                 align-content: flex-start;
                 width: 100%;
                 padding: 30px;
+                @media (max-width: 500px) {
+                    flex-direction: column;
+                }
                 &__li {
                     display: flex;
                     flex-direction: column;
@@ -292,6 +307,9 @@ $borderColor: #eeebf5;
                     margin: 20px 10px;
                     padding: 30px;
                     box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
+                    @media (max-width: 500px) {
+                        width: 100%;
+                    }
                     &__title {
                         color: $offOrange;
                     }
@@ -448,6 +466,9 @@ $borderColor: #eeebf5;
                 margin: 10px;
                 width: 100%;
             }
+            @media (max-width: 500px) {
+                margin: 10px 0;
+            }
         }
     }
     .orange-rectangle {
@@ -455,5 +476,12 @@ $borderColor: #eeebf5;
         height: 50px;
         border-top-left-radius: 2em;
         border-top-right-radius: 2em;
+    }
+    @media (max-width: 500px) {
+        &__sub-navbar,
+        &__content,
+        &__aside {
+            width: 90%;
+        }
     }
 }
