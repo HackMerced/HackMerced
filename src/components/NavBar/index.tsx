@@ -147,7 +147,9 @@ const HamburgerButton = {
     Wrapper: styled.button`
         height: 3rem;
         width: 3rem;
-        position: relative;
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
         font-size: 12px;
         display: none;
         border: none;
