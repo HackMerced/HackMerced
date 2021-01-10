@@ -312,15 +312,15 @@ $borderColor: #eeebf5;
                     }
                     &__title {
                         color: $offOrange;
-                    }
-                    &__body {
-                        color: $offBlack;
-                    }
-                    &__title,
-                    &__body {
                         font-size: 28px;
                         font-weight: bold;
                     }
+                    &__body {
+                        color: $offBlack;
+                        font-size: 23px;
+                        padding: 15px 0 0 0;
+                    }
+                   
                 }
             }
         }
