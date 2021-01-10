@@ -159,16 +159,16 @@ $borderColor: #eeebf5;
                     flex-direction: column;
                     align-content: flex-start;
                     width: 100%;
-                    padding: 30px;
+                    padding: 40px;
                     color: $offBlack;
                     &__li {
                         border-radius: 25px;
-                        margin: 10px;
+                        margin: 15px;
                         padding: 20px;
                         box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
                         text-align: center;
                         font-size: 28px;
-                        font-weight: bold;
+                      
                         transform: scale(0.95);
                         &:hover {
                             cursor: pointer;

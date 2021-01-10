@@ -59,9 +59,9 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
                 <div className="orange-rectangle"></div>
                 <h1 className="dashboard__content__live__resources__header">Resources</h1>
                 <ul className="dashboard__content__live__resources__ul">
-                    <li className="dashboard__content__live__resources__ul__li">MLH</li>
-                    <li className="dashboard__content__live__resources__ul__li">Machine Learning</li>
-                    <li className="dashboard__content__live__resources__ul__li">UI/UX</li>
+                    <li className="dashboard__content__live__resources__ul__li"> <a href="https://hack.mlh.io/software/">MLH Software</a></li>
+                    <li className="dashboard__content__live__resources__ul__li"><a href="https://hack.mlh.io/hardware/">MLH Hardware</a></li>
+                    <li className="dashboard__content__live__resources__ul__li"><a href="https://designresourc.es">UI/UX</a></li>
                 </ul>
             </div>
         </div>
