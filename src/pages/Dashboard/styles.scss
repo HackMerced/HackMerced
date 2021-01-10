@@ -99,12 +99,12 @@ $borderColor: #eeebf5;
                     align-items: center;
                     justify-content: center;
                     text-align: center;
-                    width: 90%;
+                    width: 100%;
                     margin: 0 auto;
                     flex-wrap: wrap;
                     &__digits {
                         display: block;
-                        font-size: 42px;
+                        font-size: 35px;
                         text-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.5);
                         line-height: 1;
                         font-weight: bold;
