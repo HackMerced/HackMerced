@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 import Navbar from "../../components/NavBar";
 import "./styles.scss";
 import { HackerState, TokenState } from "../../App.types";
-import HACKMERCED_LOGO from "../../assets/images/hackmerced-logo.png";
+import HACKMERCED_LOGO from "../../assets/images/hackmercedvi-logo.png";
 import Live from "./live";
 import Schedule from "./schedule";
 import Prizes from "./prizes";
