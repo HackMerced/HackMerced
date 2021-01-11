@@ -110,6 +110,10 @@ const Menu = {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media only screen and (max-width: 910px) {
+            padding: 0;
+        }
     `,
     Logo: styled.h1`
         padding: 0.5rem 1rem;
@@ -130,6 +134,7 @@ const Menu = {
             padding: 1rem 2rem;
             transition: 0.2s ease-out;
             background-color: #ffb181;
+            z-index: 99;
             transform: ${({ openDrawer }: { openDrawer: any }) => (openDrawer ? `translateX(0)` : `translateX(100%)`)};
         }
     `,
@@ -147,9 +152,7 @@ const HamburgerButton = {
     Wrapper: styled.button`
         height: 3rem;
         width: 3rem;
-        position: absolute;
-        top: 0.5rem;
-        right: 1rem;
+        position: relative;
         font-size: 12px;
         display: none;
         border: none;
@@ -161,14 +164,12 @@ const HamburgerButton = {
             content: "";
             display: block;
             position: absolute;
-            height: 150%;
             width: 150%;
-            top: -25%;
-            left: -25%;
         }
 
         @media only screen and (max-width: 910px) {
             display: block;
+            margin-right: 1rem;
         }
     `,
     Lines: styled.div`
