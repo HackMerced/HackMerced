@@ -37,7 +37,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
     };
 
     return (
-        <Styles.Wrapper className="test" style={{ backgroundColor, color: textColor }}>
+        <Styles.Wrapper style={{ backgroundColor, color: textColor }}>
             <Menu.Wrapper>
                 <Menu.Logo>
                     {showBanner ? (
@@ -56,10 +56,6 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                         <Link to="/">Home</Link>
                         {pathname === "/" ? BreakLine() : null}
                     </Menu.Item>
-                    {/* <Menu.Item>
-                        <Link to="/designmerced">DesignMerced</Link>
-                        {pathname === '/designmerced' ? BreakLine() : null}
-                    </Menu.Item> */}
                     <Menu.Item>
                         <Link to="/past-hackathons">Past Hackathons</Link>
                         {pathname === "/past-hackathons" ? BreakLine() : null}
@@ -74,12 +70,11 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                     </Menu.Item>
                     <Menu.Item>
                         <a href="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</a>
-                        {/* <Link to="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</Link> */}
-                        {pathname === "/application" ? <div className="break-line"></div> : null}
+                        {pathname === "/application" ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item>
                         <Link to="/login">Login</Link>
-                        {pathname === "/login" ? <div className="break-line"></div> : null}
+                        {pathname === "/login" ? BreakLine() : null}
                     </Menu.Item>
                 </Menu.Items>
             </Menu.Wrapper>
@@ -99,6 +94,12 @@ const Styles = {
                 const { pathname } = useLocation();
                 return pathname !== "/" ? "13vw" : "auto";
             }};
+
+        @media only screen and (max-height: 400px) {
+            height: ${(): string => {
+                const { pathname } = useLocation();
+                return pathname !== "/" ? "9vw" : "auto";
+            }};
     `,
 };
 
@@ -112,7 +113,11 @@ const Menu = {
         align-items: center;
 
         @media only screen and (max-width: 910px) {
-            padding: 0;
+            padding: 0 2% 0 5%;
+        }
+
+        @media only screen and (max-height: 400px) {
+            padding-top: 1%;
         }
     `,
     Logo: styled.h1`
