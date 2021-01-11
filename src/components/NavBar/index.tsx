@@ -74,7 +74,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                     </Menu.Item>
                     <Menu.Item>
                         <Link to="/login">Login</Link>
-                        {pathname === "/login" ? BreakLine() : null}
+                        {pathname === "/login" || pathname === "/signup" || pathname === "/login/reset-password" ? BreakLine() : null}
                     </Menu.Item>
                 </Menu.Items>
             </Menu.Wrapper>
