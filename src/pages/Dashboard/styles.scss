@@ -293,6 +293,16 @@ $borderColor: #eeebf5;
                 color: $offBlack;
                 font-size: 23px;
                 padding: 30px;
+                @media only screen and (max-width: 1100px) {
+                    font-size: 20px;
+                }
+                @media only screen and (max-width: 740px) {
+                    font-size: 18px;
+                }
+                /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                @media only screen and (max-width: 350px) {
+                    font-size: 15px;
+                }
                 @media only screen and (max-width: 1000px) {
                     padding-bottom: 8%;
                 }
@@ -387,13 +397,33 @@ $borderColor: #eeebf5;
                     }
                     &__title {
                         color: $offOrange;
-                        font-size: 26px;
+                        font-size: 28px;
                         font-weight: bold;
+                        @media only screen and (max-width: 1100px) {
+                            font-size: 25px;
+                        }
+                        @media only screen and (max-width: 740px) {
+                            font-size: 23px;
+                        }
+                        /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                        @media only screen and (max-width: 350px) {
+                            font-size: 20px;
+                        }
                     }
                     &__body {
                         color: $offBlack;
                         font-size: 22px;
                         padding: 15px 0 0 0;
+                        @media only screen and (max-width: 1100px) {
+                            font-size: 20px;
+                        }
+                        @media only screen and (max-width: 740px) {
+                            font-size: 18px;
+                        }
+                        /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                        @media only screen and (max-width: 350px) {
+                            font-size: 16px;
+                        }
                     }
                    
                 }
@@ -434,7 +464,16 @@ $borderColor: #eeebf5;
                 box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
                 @media only screen and (max-width: 600px) {
                     width: 70px;
-                    height: auto;
+                 
+                }
+                @media only screen and (max-width: 740px) {
+                    width: 25%;
+                    height: 100px;
+                }
+                /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                @media only screen and (max-width: 350px) {
+                    width: 20%;
+                    height: 95px;
                 }
             }
             &__start-time,
@@ -447,6 +486,7 @@ $borderColor: #eeebf5;
             &__start-title,
             &__end-title {
                 color: $offBlack;
+                
             }
             &__start-time,
             &__end-time {
@@ -461,11 +501,31 @@ $borderColor: #eeebf5;
             &__end-title {
                 font-weight: normal;
                 font-size: 25px;
+                @media only screen and (max-width: 1100px) {
+                    font-size: 23px;
+                }
+                @media only screen and (max-width: 740px) {
+                    font-size: 20px;
+                }
+                /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                @media only screen and (max-width: 350px) {
+                    font-size: 20px;
+                }
             }
             &__start-time,
             &__end-time {
                 font-weight: bold;
-                font-size: 23px;
+                font-size: 25px;
+                @media only screen and (max-width: 1100px) {
+                    font-size: 23px;
+                }
+                @media only screen and (max-width: 740px) {
+                    font-size: 22px;
+                }
+                /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                @media only screen and (max-width: 350px) {
+                    font-size: 20px;
+                }
             }
         }
         /*
