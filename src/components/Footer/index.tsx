@@ -15,8 +15,8 @@ const Footer: FC<{ backgroundColor?: string; textColor?: string; fontColor?: str
     };
     return (
         <footer className="footer" style={{ backgroundColor, color: textColor }}>
-            <section className="Footer-container">
-                <nav className="Footer-social">
+            <section className="footer__container">
+                <nav className="footer__container__social">
                     <a href="mailto:general@hackmerced.com?subject=HackMerced Questions&amp;body=Dear HackMerced,">
                         {footerIcons(faEnvelope)}
                     </a>
@@ -49,8 +49,8 @@ const Footer: FC<{ backgroundColor?: string; textColor?: string; fontColor?: str
                     </a>
                 </nav>
             </section>
-            <section className="credits">
-                <span className="copyright">
+            <section className="footer__credits">
+                <span className="footer__credits__copyright">
                     © 2020 HackMerced. All Rights Reserved.
                     <br /> Made with ♡ by HackMerced.
                 </span>
