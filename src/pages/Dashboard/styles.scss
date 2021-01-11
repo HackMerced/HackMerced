@@ -51,6 +51,16 @@ $borderColor: #eeebf5;
                     }
                     &__title {
                         text-decoration: none;
+                        @media only screen and (max-width: 1100px) {
+                            font-size: 23px;
+                        }
+                        @media only screen and (max-width: 740px) {
+                            font-size: 20px;
+                        }
+                        /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                        @media only screen and (max-width: 350px) {
+                            font-size: 20px;
+                        }
                     }
                     .break-line {
                         border: 5px solid $offOrange;
@@ -90,6 +100,16 @@ $borderColor: #eeebf5;
                     font-size: 35px;
                     font-weight: bolder;
                     padding: 30px 0;
+                    @media only screen and (max-width: 1100px) {
+                        font-size: 32px;
+                    }
+                    @media only screen and (max-width: 740px) {
+                        font-size: 30px;
+                    }
+                    /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                    @media only screen and (max-width: 350px) {
+                        font-size: 25px;
+                    }
                 }
             }
             &__countdown {
@@ -151,6 +171,16 @@ $borderColor: #eeebf5;
                     color: $offBlack;
                     font-size: 23px;
                     padding: 40px;
+                    @media only screen and (max-width: 1100px) {
+                        font-size: 20px;
+                    }
+                    @media only screen and (max-width: 740px) {
+                        font-size: 18px;
+                    }
+                    /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                    @media only screen and (max-width: 350px) {
+                        font-size: 15px;
+                    }
                 }
             }
             &__resources {
@@ -170,6 +200,16 @@ $borderColor: #eeebf5;
                         font-size: 28px;
                       
                         transform: scale(0.95);
+                        @media only screen and (max-width: 1100px) {
+                            font-size: 25px;
+                        }
+                        @media only screen and (max-width: 740px) {
+                            font-size: 23px;
+                        }
+                        /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                        @media only screen and (max-width: 350px) {
+                            font-size: 20px;
+                        }
                         &:hover {
                             cursor: pointer;
                             transform: scale(1);
@@ -192,11 +232,22 @@ $borderColor: #eeebf5;
                 border-bottom-left-radius: 2em;
                 border-bottom-right-radius: 2em;
                 box-shadow: 0 4px 10px 2px rgb(192, 192, 192);
+                
                 &__title {
                     font-size: 35px;
                     color: $offBlack;
                     font-weight: bolder;
                     padding: 30px 0;
+                    @media only screen and (max-width: 1100px) {
+                        font-size: 32px;
+                    }
+                    @media only screen and (max-width: 740px) {
+                        font-size: 30px;
+                    }
+                    /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                    @media only screen and (max-width: 350px) {
+                        font-size: 25px;
+                    }
                 }
                 &__sub-header {
                     display: flex;
@@ -205,6 +256,16 @@ $borderColor: #eeebf5;
                     color: $offOrange;
                     font-size: 28px;
                     padding: 5px;
+                    @media only screen and (max-width: 1100px) {
+                        font-size: 25px;
+                    }
+                    @media only screen and (max-width: 740px) {
+                        font-size: 20px;
+                    }
+                    /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                    @media only screen and (max-width: 350px) {
+                        font-size: 20px;
+                    }
                     &__li {
                         display: flex;
                         flex-direction: column;
@@ -287,6 +348,16 @@ $borderColor: #eeebf5;
                 font-size: 35px;
                 font-weight: bolder;
                 padding: 30px 0;
+                @media only screen and (max-width: 1100px) {
+                    font-size: 32px;
+                }
+                @media only screen and (max-width: 740px) {
+                    font-size: 30px;
+                }
+                /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                @media only screen and (max-width: 350px) {
+                    font-size: 25px;
+                }
             }
             &__ul {
                 display: flex;
@@ -304,9 +375,13 @@ $borderColor: #eeebf5;
                     flex: 1 1 auto;
                     border-radius: 25px;
                     text-align: center;
-                    margin: 20px 30px;
+                    margin: 10px;
                     padding: 30px;
                     box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
+                    @media only screen and (min-width: 500px) {
+                        margin: 20px 30px;
+                    }
+                    
                     @media (max-width: 500px) {
                         width: 100%;
                     }
@@ -422,6 +497,16 @@ $borderColor: #eeebf5;
                 font-weight: bolder;
                 font-size: 28px;
                 padding: 40px 1% 4% 1%;
+                @media only screen and (max-width: 1100px) {
+                    font-size: 25px;
+                }
+                @media only screen and (max-width: 740px) {
+                    font-size: 23px;
+                }
+                /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
+                @media only screen and (max-width: 350px) {
+                    font-size: 23px;
+                }
             }
             &__code,
             &__code-title {
@@ -481,7 +566,7 @@ $borderColor: #eeebf5;
         &__sub-navbar,
         &__content,
         &__aside {
-            width: 90%;
+            width: 80%;
         }
     }
 }
