@@ -4,6 +4,7 @@
     flex-direction: row;
     justify-content: center;
     height: 80vh;
+    min-height: calc(100vh - 70px);
     .center-container {
         position: relative;
         display: inline-block;
