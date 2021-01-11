@@ -61,7 +61,6 @@
                     &__password {
                         width: 80%;
                         height: 50px;
-                        margin-top: 4%;
                         border-radius: 65px;
                         display: block;
                         /* offset-x | offset-y | blur-radius | color */
@@ -69,12 +68,11 @@
                     }
                     &__already-member {
                         color: white;
-                        font-weight: bold;
-                        font-size: 20px;
+                        font-size: 18px;
                         display: inline;
                         text-align: center;
                         text-decoration: underline;
-                        margin-bottom: 20px;
+                        margin-bottom: 15px;
                     }
                     &__submit-button {
                         width: 45%;
@@ -99,7 +97,7 @@
                     input[type='password'],
                     select {
                         display: inline-block;
-                        margin: 5px auto;
+                        margin: 15px auto;
                         color: black;
                         text-align: left;
                         padding: 0% 0% 0% 4%; //moves location of select (input) to the right, which also moves the placeholder
