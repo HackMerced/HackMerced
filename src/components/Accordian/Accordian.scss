@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand:300, 400, 700");
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300, 400, 700');
 
 .accordion {
-    background-color: #0d0721;
+    background-color: #272831;
+    opacity: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -14,7 +15,7 @@
         &__title {
             height: 55px;
             width: 500px;
-            background-color: #2d2058;
+            background-color: #b63f1a;
             color: #eeebf5;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -24,7 +25,7 @@
             position: relative;
             padding: 10px;
             z-index: 2000;
-            border-radius: 15px;
+            border-radius: 20px;
             margin-top: 2px;
             transition: all 0.2s ease-in;
 
@@ -117,7 +118,18 @@
         &__content-open {
             margin-top: 0px;
             height: 200px;
-            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 30px;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e8684c+68,e04040+100 */
+            background: #e8684c; /* Old browsers */
+            background: -moz-linear-gradient(top, #e8684c 68%, #e04040 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #e8684c 68%, #e04040 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(
+                to bottom,
+                #e8684c 68%,
+                #e04040 100%
+            ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8684c', endColorstr='#e04040',GradientType=0 ); /* IE6-9 */
+
             transition: all 350ms cubic-bezier(0.08, 1.09, 0.32, 1.275);
         }
     }
