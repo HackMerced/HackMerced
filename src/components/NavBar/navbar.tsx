@@ -56,6 +56,10 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                         <Link to="/">Home</Link>
                         {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
+                    <Menu.Item>
+                        <Link to="/hackmercedvi">HackMercedVI</Link>
+                        {pathname === '/hackmercedvi' ? BreakLine() : null}
+                    </Menu.Item>
                     {/* <Menu.Item>
                         <Link to="/designmerced">DesignMerced</Link>
                         {pathname === '/designmerced' ? BreakLine() : null}
