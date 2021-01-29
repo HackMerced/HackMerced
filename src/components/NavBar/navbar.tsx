@@ -57,6 +57,11 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                         {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item>
+                        <a href="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</a>
+                        {/* <Link to="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</Link> */}
+                        {pathname === '/application' ? <div className="break-line"></div> : null}
+                    </Menu.Item>
+                    <Menu.Item>
                         <Link to="/hackmercedvi">HackMercedVI</Link>
                         {pathname === '/hackmercedvi' ? BreakLine() : null}
                     </Menu.Item>
@@ -76,11 +81,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                         <Link to="/contact-us">Contact Us</Link>
                         {pathname === '/contact-us' ? BreakLine() : null}
                     </Menu.Item>
-                    <Menu.Item>
-                    <a href="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</a>
-                        {/* <Link to="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</Link> */}
-                        {pathname === '/application' ? <div className="break-line"></div> : null}
-                    </Menu.Item>
+
                     <Menu.Item>
                         <Link to="/login">Login</Link>
                         {pathname === '/login' ? <div className="break-line"></div> : null}
@@ -188,7 +189,7 @@ const HamburgerButton = {
             width: 100%;
             background-color: white;
             position: absolute;
-            background-color: ${({ breakLineColor }: { breakLineColor: any }) => breakLineColor };
+            background-color: ${({ breakLineColor }: { breakLineColor: any }) => breakLineColor};
         }
 
         &:after {
