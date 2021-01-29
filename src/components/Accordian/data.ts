@@ -67,7 +67,7 @@ export const FAQData = [
         content: `You can be in teams of up to 4 people and it is highly encouraged to find at least one other person to participate with! If you need help forming a team, we'll help set you up with others who are looking for teammates.`,
     },
     {
-        title: `How should I create?`,
+        title: `What should I create?`,
         content: `You will be building a project based on our themes this year! Our themes are sustainability, inclusivity, and cybersecurity.`,
     },
     {
