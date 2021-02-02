@@ -13,8 +13,8 @@
         display: inline-flex;
 
         h2 {
-            color: white;
-            font-size: 30px;
+            
+            font-size: 32px;
             font-weight: normal;
             text-shadow: 0px 0px 10px #f65331, 0px 0px 10px #ff785a;
         }
@@ -26,7 +26,7 @@
         }
         p {
             margin: auto;
-            max-width: 60%;
+            max-width: 80%;
             font-size: 18px;
         }
 
@@ -48,17 +48,19 @@
                 font-size: 30px;
             }
             h2 {
-                font-size: 20px;
+                font-size: 25px;
             }
             .hackathon-tracks {
                 position: relative;
                 right: 4.5px;
-                width: 28%;
+                width: 30%;
                 margin: auto;
+                padding: 3% 0;
             }
             p {
                 margin: auto;
-                max-width: 40%;
+                max-width: 80%;
+                padding: 3% 0;
             }
 
             .trackone {
