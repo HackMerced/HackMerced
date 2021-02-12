@@ -5,22 +5,24 @@
     h1 {
         color: white;
         font-size: 40px;
-        padding: 5% 0% 3% 0%;
+        padding: 6%;
+        font-weight: bold;
+        text-align: center;
     }
 
     .flex-container {
         color: #c1c0cd;
         display: inline-flex;
+        justify-content: center;
+        text-align: center;
+        
 
         h2 {
-            
             font-size: 32px;
             font-weight: normal;
             text-shadow: 0px 0px 10px #f65331, 0px 0px 10px #ff785a;
         }
         .hackathon-tracks {
-            position: relative;
-            right: 4.5px;
             width: 50%;
             margin: auto;
         }
@@ -31,13 +33,13 @@
         }
 
         .trackone {
-            padding: 0% 1% 0% 1%;
+            padding: 0% 0% 0% 3%;
         }
         .tracktwo {
-            padding: 8% 1% 0% 1%;
+            padding: 8% 0% 0% 3%;
         }
         .trackthree {
-            padding: 0% 1% 0% 1%;
+            padding: 0% 0% 0% 3%;
         }
 
         /* Everything under 900px width - responsiveness */
@@ -51,8 +53,7 @@
                 font-size: 25px;
             }
             .hackathon-tracks {
-                position: relative;
-                right: 4.5px;
+               
                 width: 30%;
                 margin: auto;
                 padding: 3% 0;
