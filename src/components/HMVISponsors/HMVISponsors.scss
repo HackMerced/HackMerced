@@ -1,14 +1,21 @@
-.SponsorsDesign {
-    background-color: #eeebf5;
-    padding: 4% 3% 0% 0%;
+.SponsorsHackMercedVI {
+    background-color: #B63F1A;
     max-width: 100%;
     height: auto;
 
 
 
+    h2{
+        font-size: 52px;
+        text-align: center;
+        padding: 3%;
+        background-color: #B63F1A
+    }
+
+
     .title5 {
         font-weight: bolder;
-        color: #b486ce;
+        color:white;
 
         /* Extra small devices (phones, 600px and down) */
         @media only screen and (max-width: 600px) {
@@ -38,5 +45,5 @@
 
 
 
-
+  
 }
