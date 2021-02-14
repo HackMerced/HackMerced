@@ -3,6 +3,7 @@ import Footer from '../../components/Footer/footer';
 import Navbar from '../../components/NavBar/navbar';
 import SubNavbar from '../../components/Sub-NavBar/sub-navbar';
 import Hackmercedlogo from '../../assets/images/hackmercedvi-logo.png';
+import TeamCode from '../../components/TeamCode/teamCode';
 
 import './dashboard-prizes.scss'
 
@@ -56,15 +57,7 @@ const DashboardPrizes: FC = (): JSX.Element => {
                             <h3>March 7, 2020</h3>
                         </div>
 
-                        <div className="team-code">
-                            <h1>Team Code</h1>
-                            <h3 className = "teamCode">fkjlash</h3>
-                            <button className = "generateButton" type="button">Generate</button>
-                            <p>- or -</p>
-                            <h2>Enter Team Code!</h2>
-                            <input className="teamcodeInput" type="password" id="codeInput" name="password"></input>
-                            <button className = "submitButton" type="button">Submit</button>
-                        </div>
+                        <TeamCode></TeamCode>
                     </div>
 
                 </section>
