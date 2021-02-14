@@ -9,9 +9,11 @@
         text-align: center;
 
         @media only screen and (max-width: 900px) {
-            h1 {
-              font-size: 30px;
-          }
+            font-size: 30px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            font-size: 25px;
         }
     }
     .flex-container {
@@ -59,6 +61,34 @@
                 max-width: 80%;
                 padding: 3% 0;
                 font-size: 14px;
+            }
+
+            .trackone {
+                padding: 3% 1% 0% 1%;
+            }
+            .tracktwo {
+                padding: 5% 1% 0% 1%;
+            }
+            .trackthree {
+                padding: 5% 1% 0% 1%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            display: inline;
+            h2 {
+                font-size: 18px;
+            }
+            .hackathon-tracks {
+                width: 120px;
+                margin: auto;
+                padding: 3% 0;
+            }
+            p {
+                margin: auto;
+                max-width: 80%;
+                padding: 3% 0;
+                font-size: 12px;
             }
 
             .trackone {
