@@ -10,7 +10,7 @@ import Schedule from '../../components/HMVISchedule/HMVISchedule';
 const HackMercedVI: FC = (): JSX.Element => {
     return (
         <main>
-            <Navbar backgroundColor="#B63F1A" textColor="#FFFFF" breakLineColor="#C4BDDC" showBanner={false} />
+            <Navbar backgroundColor="#B63F1A" textColor="#FFFFF" breakLineColor="#C4BDDC" showBanner={true} />
             <Landing />
             <Themes />
             <FAQ />

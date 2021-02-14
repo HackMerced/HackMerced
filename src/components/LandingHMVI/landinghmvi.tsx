@@ -1,7 +1,6 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import LANDING_DESIGN from "../../assets/images/landing-page-hmvi.png";
-
+import LANDING_DESIGN from '../../assets/images/landing-page-hmvi.png';
 
 const LandingHMVI: FC = (): JSX.Element => {
     return (
