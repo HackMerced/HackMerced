@@ -34,7 +34,6 @@ const Dashboard: FC<{
     hacker: HackerState | undefined;
     updateHacker: React.Dispatch<React.SetStateAction<HackerState | undefined>>;
     token: TokenState | undefined;
-    updateToken: React.Dispatch<React.SetStateAction<TokenState | undefined>>;
 }> = ({ hacker, token }): JSX.Element => {
     const { pathname } = useLocation();
     const [code, setCode] = useState<string>("");
@@ -61,7 +60,7 @@ const Dashboard: FC<{
             case "/dashboard":
             case "/dashboard/live":
             default:
-                return <Live time="05 March 2021 22:00:00" />;
+                return <Live time="12 March 2021 22:00:00" />;
         }
     };
 
