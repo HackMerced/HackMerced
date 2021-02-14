@@ -10,7 +10,10 @@ $borderColor: #eeebf5;
     column-gap: 50px;
     grid-template-areas: "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav" "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside";
     @media only screen and (max-width: 1000px) {
-        grid-template-areas: "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav" "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav" "main main main main main main main main main main" "main main main main main main main main main main" "main main main main main main main main main main" "main main main main main main main main main main" "main main main main main main main main main main" "main main main main main main main main main main" "aside aside aside aside aside aside aside aside aside aside" "aside aside aside aside aside aside aside aside aside aside";
+        grid-template-areas: "nav" "nav" "main" "main" "main" "main" "main" "main" "aside" "aside";
+    }
+    @media only screen and (max-width: 500px) {
+        padding: 1rem;
     }
     /*
     * ########################
@@ -22,19 +25,23 @@ $borderColor: #eeebf5;
         display: flex;
         background-color: $offWhite;
         height: auto;
+        width: 100%;
         color: $offOrange;
         border-radius: 2em;
         padding: 3em 0;
         box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color
+        @media only screen and (max-width: 500px) {
+            padding: 1rem 0;
+        }
         &__nav {
             flex: 1;
-            align-self: flex-start;
+            align-self: center;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             &__ul {
                 display: flex;
-                width: 100%;
+                width: 95%;
                 list-style: none;
                 font-weight: 700;
                 text-transform: uppercase;
@@ -51,15 +58,8 @@ $borderColor: #eeebf5;
                     }
                     &__title {
                         text-decoration: none;
-                        @media only screen and (max-width: 1100px) {
-                            font-size: 23px;
-                        }
-                        @media only screen and (max-width: 740px) {
-                            font-size: 20px;
-                        }
-                        /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
-                        @media only screen and (max-width: 350px) {
-                            font-size: 20px;
+                        @media only screen and (max-width: 500px) {
+                            font-size: 16px;
                         }
                     }
                     .break-line {
@@ -99,16 +99,15 @@ $borderColor: #eeebf5;
                     color: $offBlack;
                     font-size: 35px;
                     font-weight: bolder;
-                    padding: 30px 0;
+                    padding: 15px 0;
                     @media only screen and (max-width: 1100px) {
                         font-size: 32px;
                     }
                     @media only screen and (max-width: 740px) {
                         font-size: 30px;
                     }
-                    /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
-                    @media only screen and (max-width: 350px) {
-                        font-size: 25px;
+                    @media only screen and (max-width: 500px) {
+                        font-size: 26px;
                     }
                 }
             }
@@ -121,7 +120,6 @@ $borderColor: #eeebf5;
                     text-align: center;
                     width: 100%;
                     margin: 0 auto;
-                    flex-wrap: wrap;
                     &__digits {
                         display: block;
                         font-size: 35px;
@@ -159,11 +157,32 @@ $borderColor: #eeebf5;
                             padding: 15px;
                             min-width: 98px;
                         }
-                        @media (max-width: 480px) {
-                            margin-right: 0;
-                            margin-bottom: 15px;
-                            font-size: 28px;
-                            min-width: 115px;
+                        @media (max-width: 500px) {
+                            min-width: 82px;
+                            margin: 5px;
+                            padding: 9px 4px;
+                            &,
+                            & span {
+                                font-size: 16px;
+                            }
+                        }
+                        @media (max-width: 400px) {
+                            min-width: 70px;
+                            margin: 5px;
+                            padding: 9px 4px;
+                            &,
+                            & span {
+                                font-size: 14px;
+                            }
+                        }
+                        @media (max-width: 320px) {
+                            min-width: 60px;
+                            margin: 5px;
+                            padding: 9px 4px;
+                            &,
+                            & span {
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
@@ -177,9 +196,8 @@ $borderColor: #eeebf5;
                     @media only screen and (max-width: 740px) {
                         font-size: 18px;
                     }
-                    /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
-                    @media only screen and (max-width: 350px) {
-                        font-size: 15px;
+                    @media only screen and (max-width: 500px) {
+                        font-size: 16px;
                     }
                 }
             }
@@ -189,7 +207,6 @@ $borderColor: #eeebf5;
                     flex-direction: column;
                     align-content: flex-start;
                     width: 100%;
-                    padding: 40px;
                     color: $offBlack;
                     &__li {
                         border-radius: 25px;
@@ -198,7 +215,6 @@ $borderColor: #eeebf5;
                         box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
                         text-align: center;
                         font-size: 28px;
-                      
                         transform: scale(0.95);
                         @media only screen and (max-width: 1100px) {
                             font-size: 25px;
@@ -206,7 +222,6 @@ $borderColor: #eeebf5;
                         @media only screen and (max-width: 740px) {
                             font-size: 23px;
                         }
-                        /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
                         @media only screen and (max-width: 350px) {
                             font-size: 20px;
                         }
@@ -232,7 +247,6 @@ $borderColor: #eeebf5;
                 border-bottom-left-radius: 2em;
                 border-bottom-right-radius: 2em;
                 box-shadow: 0 4px 10px 2px rgb(192, 192, 192);
-                
                 &__title {
                     font-size: 35px;
                     color: $offBlack;
@@ -244,7 +258,6 @@ $borderColor: #eeebf5;
                     @media only screen and (max-width: 740px) {
                         font-size: 30px;
                     }
-                    /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
                     @media only screen and (max-width: 350px) {
                         font-size: 25px;
                     }
@@ -262,7 +275,6 @@ $borderColor: #eeebf5;
                     @media only screen and (max-width: 740px) {
                         font-size: 20px;
                     }
-                    /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
                     @media only screen and (max-width: 350px) {
                         font-size: 20px;
                     }
@@ -299,7 +311,6 @@ $borderColor: #eeebf5;
                 @media only screen and (max-width: 740px) {
                     font-size: 18px;
                 }
-                /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
                 @media only screen and (max-width: 350px) {
                     font-size: 15px;
                 }
@@ -315,7 +326,7 @@ $borderColor: #eeebf5;
                     }
                     &__title {
                         padding: 20px;
-                         font-weight: bold;
+                        font-weight: bold;
                         @media (max-width: 500px) {
                             text-align: center;
                         }
@@ -364,7 +375,6 @@ $borderColor: #eeebf5;
                 @media only screen and (max-width: 740px) {
                     font-size: 30px;
                 }
-                /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
                 @media only screen and (max-width: 350px) {
                     font-size: 25px;
                 }
@@ -391,7 +401,6 @@ $borderColor: #eeebf5;
                     @media only screen and (min-width: 500px) {
                         margin: 20px 30px;
                     }
-                    
                     @media (max-width: 500px) {
                         width: 100%;
                     }
@@ -405,7 +414,6 @@ $borderColor: #eeebf5;
                         @media only screen and (max-width: 740px) {
                             font-size: 23px;
                         }
-                        /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
                         @media only screen and (max-width: 350px) {
                             font-size: 20px;
                         }
@@ -420,12 +428,10 @@ $borderColor: #eeebf5;
                         @media only screen and (max-width: 740px) {
                             font-size: 18px;
                         }
-                        /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
                         @media only screen and (max-width: 350px) {
                             font-size: 16px;
                         }
                     }
-                   
                 }
             }
         }
@@ -464,7 +470,6 @@ $borderColor: #eeebf5;
                 box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
                 @media only screen and (max-width: 600px) {
                     width: 70px;
-                 
                 }
                 @media only screen and (max-width: 740px) {
                     width: 25%;
@@ -486,7 +491,6 @@ $borderColor: #eeebf5;
             &__start-title,
             &__end-title {
                 color: $offBlack;
-                
             }
             &__start-time,
             &__end-time {
@@ -621,12 +625,5 @@ $borderColor: #eeebf5;
         height: 50px;
         border-top-left-radius: 2em;
         border-top-right-radius: 2em;
-    }
-    @media (max-width: 500px) {
-        &__sub-navbar,
-        &__content,
-        &__aside {
-            width: 80%;
-        }
     }
 }
