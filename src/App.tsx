@@ -55,7 +55,7 @@ const App: FC = (): JSX.Element => {
                 <Route
                     path="/dashboard"
                     render={(): JSX.Element => (
-                        <Dashboard hacker={hacker} updateHacker={setHacker} token={token} updateToken={setToken} />
+                        <Dashboard hacker={hacker} updateHacker={setHacker} token={token} />
                     )}
                 />
                 <Route path="*" component={Error} />
