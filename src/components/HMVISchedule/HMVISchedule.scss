@@ -1,0 +1,251 @@
+.ScheduleHMVI {
+    background-color:#B63F1A;
+
+    h1 {
+        text-align: center;
+        padding: 2% 0% 0% 0%;
+        color: #eeebf5;
+    }
+
+    .calendar-HMVI {
+        .container-HMVI {
+            margin: auto;
+            padding: 4% 0% 4% 0%;
+        }
+
+        .calendar {
+            margin: auto;
+
+            background-color:  #272831; //#FFE2C0;
+            color: black;
+            //box-shadow: 0px 0px 35px -10px rgba(0, 0, 0, 0.75);
+            border-radius: 5%;
+
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px) {
+                //width: 18em;
+                padding: 0.02em 0.2em;
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+               // width: 25em;
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+               // width: 35em;
+                padding: 2em 3em;
+            }
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+               // width: 34em;
+            }
+        }
+
+        .calendar_header {
+            font-size: 1.5em;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+
+            .side-by-side {
+                display: flex;
+                flex-direction: row;
+                flex-grow: 1;
+                justify-content: space-between;
+            }
+        }
+
+        .header_title {
+            text-align: center;
+            color: white;
+            font-weight: bold;
+
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px) {
+                font-size: 1em;
+            }
+
+            /* Small devices (portrait tablets and large phones, 600px and up) */
+            @media only screen and (min-width: 600px) {
+                font-size: 1em;
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                font-size: 1em;
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                font-size: 1.6em;
+            }
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                font-size: 1.6em;
+            }
+        }
+
+        .calendar_subheader {
+            text-align: center;
+            color: white;
+
+            &:hover {
+                cursor: pointer;
+                color: #B63F1A;
+            }
+
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px) {
+                font-size: 0.8em;
+            }
+
+            /* Small devices (portrait tablets and large phones, 600px and up) */
+            @media only screen and (min-width: 600px) {
+                font-size: 0.8em;
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                font-size: 1em;
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                font-size: 1.2em;
+            }
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                font-size: 1.2em;
+            }
+        }
+
+        .calendar_plan {
+            color: white;
+            margin: 2em 0 4em 0;
+            padding: 3em;
+            //box-shadow: 0px 0px 35px -10px rgba(0, 0, 0, 0.75);
+
+            display: flex;
+        }
+
+        .day_title {
+            font-size: 2.2em;
+            font-weight: 600;
+        }
+
+        .day_body {
+            font-size: 2em;
+            float: left;
+            line-height: 2em;
+            text-align: center;
+        }
+        .day_add {
+            margin-left: 20px;
+            float: left;
+            border-radius: 50%;
+            background-color: white;
+            width: 4em;
+            height: 4em;
+
+            text-align: center;
+            line-height: 4em;
+        }
+
+        .plus_sign::after {
+            font-size: 4em;
+            content: '+';
+            color: pink;
+        }
+
+        .calendar_events {
+            clear: both;
+            color: white;
+        }
+        .calendar_events_title {
+            font-size: 1.5em;
+            padding: 3% 0% 0% 0%;
+            text-align: center;
+        }
+        .event_item {
+            margin-left: 0.5em;
+
+            cursor: pointer;
+            padding: 1em;
+
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px) {
+            }
+
+            /* Small devices (portrait tablets and large phones, 600px and up) */
+            @media only screen and (min-width: 600px) {
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                margin-top: 1.8em;
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                margin-top: 1.8em;
+            }
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                margin-top: 1.8em;
+            }
+        }
+
+        .event_item_dot {
+            float: left;
+            border-radius: 50%;
+            background-color:#272831;
+            width: 1.3em;
+            height: 1.3em;
+        }
+        .dot_active {
+            background-color:#B63F1A;
+        }
+
+        .event_item_title {
+            float: left;
+            color: white;
+            margin-left: 1em;
+            text-align: center;
+
+            height: 1.5em;
+            line-height: 1.5em;
+        }
+        .event_item_body {
+            clear: both;
+            font-size: 1.2em;
+            margin-left: 2.1em;
+        }
+
+        .event_item:hover {
+            background-image: linear-gradient(to bottom right, #EB9B6E, #D15236);
+            color: white;
+            //box-shadow: 0px 0px 35px -10px rgba(0, 0, 0, 0.75);
+        }
+        .event_item:hover .event_item_title {
+            color:white;
+        }
+
+        .event_item:hover .event_item_dot {
+            background-color:white;
+        }
+
+        .contact {
+            color: orange;
+        }
+        .contact::before {
+            content: '@';
+        }
+        .event_item:hover .contact {
+            color: pink;
+        }
+    }
+}

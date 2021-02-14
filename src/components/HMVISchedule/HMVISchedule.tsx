@@ -1,9 +1,9 @@
 import React, { FC, useState } from 'react';
 
-import './schedule-design.scss';
+import './HMVISchedule.scss';
 import { schedule } from './schedule';
 
-const ScheduleDesign: FC = (): JSX.Element => {
+const ScheduleHMVI: FC = (): JSX.Element => {
     const [day, setDay] = useState(21);
 
     const generateSchedule = (): any => {
@@ -24,10 +24,10 @@ const ScheduleDesign: FC = (): JSX.Element => {
     };
 
     return (
-        <main className="ScheduleDesign">
-            <section className="schedule-designathon">
-                <article className="calendar-designmerced">
-                    <div className="container-designmerced">
+        <main className="ScheduleHMVI">
+            <section className="schedule-HMVI">
+                <article className="calendar-HMVI">
+                    <div className="container-HMVI">
                         <div className="calendar">
                             <div className="calendar_header">
                                 <div className="header_title">Schedule</div>
@@ -54,4 +54,4 @@ const ScheduleDesign: FC = (): JSX.Element => {
     );
 };
 
-export default ScheduleDesign;
+export default ScheduleHMVI;
