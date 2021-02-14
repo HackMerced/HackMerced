@@ -1,62 +1,29 @@
 .MLH {
-    position: fixed;
-    top: 1%;
-    left: 1%;
-
-    @media (min-width: 100px) {
-        width: 60px;
-    }
-
-    @media (min-width: 600px) {
-        width: 80px;
-    }
-
-    @media (min-width: 700px) {
-        width: 100px;
-    }
-
-    @media (min-width: 1100px) {
-        width: 100px;
-    }
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  @media (min-width: 100px) {
+      width: 60px;
+  }
+  @media (min-width: 600px) {
+      width: 80px;
+  }
+  @media (min-width: 700px) {
+      width: 100px;
+  }
+  @media (min-width: 1100px) {
+      width: 100px;
+  }
 }
 
 .break-line {
-    border: 5px solid white;
-    opacity: 0.5;
-    border-radius: 25px;
-    margin: 0 auto;
+  border: 5px solid white;
+  opacity: 0.5;
+  border-radius: 25px;
+  margin: 0 auto;
 }
 
 .hmtext {
-    font-weight: bold;
-    font-size: 18px;
-
-    /* Extra small devices (phones, 600px and down) */
-    @media only screen and (max-width: 600px) {
-        padding: 0% 0% 0% 0%;
-        margin: 0% 0% 50% -30%;
-    }
-
-    /* Small devices (portrait tablets and large phones, 600px and up) */
-    @media only screen and (min-width: 600px) {
-        padding: 0% 0% 0% 0%;
-        margin: 0% 0% 5% -30%;
-    }
-    /* Medium devices (landscape tablets, 768px and up) */
-    @media only screen and (min-width: 768px) {
-        padding: 0% 0% 0% 0%;
-        margin: 0% 0% 5% -30%;
-    }
-
-    /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (min-width: 992px) {
-        padding: 0% 0% 0% 0%;
-        margin: 0% 0% 5% -30%;
-    }
-
-    /* Extra large devices (large laptops and desktops, 1200px and up) */
-    @media only screen and (min-width: 1200px) {
-        padding: 0% 0% 0% 0%;
-        margin: 0% 0% 5% -30%;
-    }
+  font-weight: bold;
+  font-size: 18px;
 }
