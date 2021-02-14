@@ -35,10 +35,12 @@
         "@fortawesome/free-brands-svg-icons": "5.13.0",
         "@fortawesome/free-solid-svg-icons": "5.13.0",
         "@fortawesome/react-fontawesome": "0.1.9",
+        "autoprefixer": "^10.1.0",
         "axios": "0.19.2",
         "hover.css": "2.3.2",
         "html-react-parser": "0.14.0",
         "node-sass": "4.14.1",
+        "postcss": "^8.2.2",
         "react": "16.13.0",
         "react-dom": "16.13.0",
         "react-html-parser": "^2.0.2",
@@ -47,7 +49,8 @@
         "react-select-search": "^2.1.1",
         "react-spinners": "^0.9.0",
         "react-toastify": "^6.0.9",
-        "styled-components": "5.1.1"
+        "styled-components": "5.1.1",
+        "yarn": "^1.22.10"
     },
     "devDependencies": {
         "@babel/plugin-transform-react-jsx-development": "7.10.1",
@@ -90,7 +93,7 @@
         "react-docgen-typescript-loader": "3.6.0",
         "react-docgen-typescript-webpack-plugin": "1.1.0",
         "react-test-renderer": "16.13.0",
-        "tailwindcss": "1.2.0",
+        "tailwindcss": "^2.0.2",
         "ts-jest": "25.2.1",
         "typescript": "3.8.3"
     }
