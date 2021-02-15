@@ -1,0 +1,50 @@
+.SponsorsHackMercedVI {
+    background-color: #b63f1a;
+    max-width: 100%;
+    height: auto;
+
+    h2 {
+        font-size: 40px;
+        text-align: center;
+        padding: 3%;
+        background-color: #b63f1a;
+
+        @media only screen and (max-width: 900px) {
+            font-size: 30px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            font-size: 25px;
+        }
+    }
+
+    .title5 {
+        font-weight: bolder;
+        color: white;
+    }
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        font-size: 18px;
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        font-size: 20px;
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        font-size: 30px;
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        font-size: 35px;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        font-size: 35px;
+    }
+}

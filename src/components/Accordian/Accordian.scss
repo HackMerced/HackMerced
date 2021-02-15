@@ -1,20 +1,31 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand:300, 400, 700");
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300, 400, 700');
 
 .accordion {
-    background-color: #0d0721;
+    background-color: #272831;
+    opacity: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 4%;
 
     &__item {
-        //flex: 1 1 150px; /*  Stretching: */
-        //flex: 0 1 150px; /*  No stretching: */
+        // flex: 1 1 150px; /*  Stretching: */
+        // flex: 0 1 150px; /*  No stretching: */
         margin: 0 20px 30px 20px; //margin around each accordion_item
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: 500px) {
+            min-width: 90%;
+        }
 
         &__title {
             height: 55px;
             width: 500px;
-            background-color: #2d2058;
+            background-color: #b63f1a;
             color: #eeebf5;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -23,21 +34,13 @@
             font-weight: lighter;
             position: relative;
             padding: 10px;
-            z-index: 2000;
-            border-radius: 15px;
-            margin-top: 2px;
+            z-index: 100;
+            border-radius: 20px;
             transition: all 0.2s ease-in;
 
             @media only screen and (max-width: 500px) {
-                //media queries for accordion_item_titles
-                width: 35vh;
-                height: 105px; //had to increase the height for iphone5/SE and higher
-                margin-left: 50%; //move to center
-            }
-            @media only screen and (max-width: 400px) {
-                width: 35vh;
-                height: 105px; //had to increase the height for iphone5/SE and higher
-                margin-left: 40%; //move left of center
+                width: 100%;
+                height: 80px;
             }
 
             &:hover {
@@ -65,13 +68,15 @@
             }
 
             &__title-text {
-                margin-left: 10px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
             }
         }
 
         &__content {
             height: 30px;
-            width: 500px;
+            width: 100%;
             background-color: transparent;
             border-radius: 4px;
             color: white;
@@ -79,9 +84,10 @@
             text-align: center;
             position: relative;
             z-index: 1000;
-            margin-top: -30px;
+            margin-top: -20px;
             text-align: left;
             transition: all 200ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+           
 
             &__content-text {
                 padding: 15px;
@@ -99,33 +105,25 @@
                 visibility: visible;
                 opacity: 1;
                 transition: all 0.8s ease-in;
-
-                @media only screen and (max-width: 500px) {
-                    //media queries for accordion_item_contents
-                    width: 35vh;
-                    height: 100%;
-                    margin-left: 50%;
-                }
-                @media only screen and (max-width: 400px) {
-                    width: 35vh;
-                    height: 100%;
-                    margin-left: 40%;
-                }
             }
         }
 
         &__content-open {
             margin-top: 0px;
-            height: 200px;
-            background-color: rgba(0, 0, 0, 0.1);
+            height: auto;
+            border-radius: 30px;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e8684c+68,e04040+100 */
+            background: #e8684c; /* Old browsers */
+            background: -moz-linear-gradient(top, #e8684c 68%, #e04040 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #e8684c 68%, #e04040 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(
+                to bottom,
+                #e8684c 68%,
+                #e04040 100%
+            ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8684c', endColorstr='#e04040',GradientType=0 ); /* IE6-9 */
+
             transition: all 350ms cubic-bezier(0.08, 1.09, 0.32, 1.275);
         }
-    }
-
-    @media only screen and (max-width: 500px) {
-        // when accordion_item_titles and accordion_item_contents flex on top of each other,
-        // we need to shift the entire accordion container to the left so that accordion_items and contents don't budge off the screen
-        // and thus allow the user to swipe left and right on the Designathon page.
-        margin-right: 50%;
     }
 }
