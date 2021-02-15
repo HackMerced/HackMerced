@@ -1,5 +1,10 @@
 .Outside-Background {
     background: #eeebf5;
+    padding: 5% 0% 5% 0%;
+    
+    @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
+        padding-bottom: 2rem;
+    }
 
     .application {
         display: flex;
@@ -8,11 +13,7 @@
         padding: 3rem;
         background-image: linear-gradient(#b486ce, #80a0cf);
         border-radius: 2rem;
-        margin: 5% 0% 5% 10%;
-
-        @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
-            margin-bottom: 2rem;
-        }
+        margin: 0 auto;
 
         .hackmerced-logo {
             width: 15%;

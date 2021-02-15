@@ -1,0 +1,194 @@
+.calendar {
+    margin: auto;
+    background-color: #F0F0F3;
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        padding: 0 0 0 0;
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        width: 100%;
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        width: 100%;
+        padding: 0% 0% 0% 0%;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        width: 95%;
+    }
+}
+
+.calendar_header {
+    // font-size: 1.5em;
+    border-bottom: 2px solid white;
+    border-radius: 10px;
+}
+
+.header_title {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 35px;
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        font-size: 1em;
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        font-size: 1em;
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        font-size: 1.3em;
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        font-size: 1.6em;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        font-size: 1.6em;
+    }
+}
+
+.side-by-side {
+    margin-top: 5%;
+    page-break-after: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.calendar_subheader {
+    text-align: center;
+    font-weight: bold;
+    color: #ffb181;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        font-size: 0.8em;
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        font-size: 0.8em;
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        font-size: 1.4em;
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        font-size: 1.5em;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        font-size: 1.5em;
+    }
+}
+
+.calendar_plan {
+    color: white;
+    margin: 2em 0 4em 0;
+    padding: 3em;
+    box-shadow: 0px 0px 35px -10px rgba(0, 0, 0, 0.75);
+
+    display: flex;
+}
+
+.day_title {
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.day_body {
+    font-size: 2em;
+    float: left;
+    line-height: 2em;
+    text-align: center;
+}
+.day_add {
+    margin-left: 20px;
+    float: left;
+    border-radius: 50%;
+    background-color: white;
+    width: 4em;
+    height: 4em;
+
+    text-align: center;
+    line-height: 4em;
+}
+
+.plus_sign::after {
+    font-size: 4em;
+    content: '+';
+    color: black;
+}
+
+.calendar_events {
+    clear: both;
+    color: black;
+}
+.calendar_events_title {
+    font-size: 1.5em;
+    padding: 3% 0% 0% 0%;
+    text-align: center;
+}
+.event_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5% 0% 2% 0%;
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        margin-top: 1.8em;
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+     
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+      font-size: 20px;
+    }
+}
+
+.event_item_body{
+    background-color: #F0F0F3;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: -3px -3px 10px 2px white, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color
+    width: 600px;
+            padding: 1%;
+            margin: 10px;
+            height: 50px;
+      
+}

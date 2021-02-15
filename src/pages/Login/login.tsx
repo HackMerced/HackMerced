@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faKey, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import Hackmercedlogo from '../../assets/images/hackmerced-logo.png';
+import Hackmercedlogo from '../../assets/images/hackmercedvi-logo.png';
 
 import './login.scss';
 
@@ -63,7 +63,9 @@ const Login: FC = (): JSX.Element => {
                             </h2>
                         </div>
 
-                        <input className="submitbutton" type="submit" value="LOG IN"></input>
+                        <button className="submitbutton" type="submit" value="LOG IN">
+                         <Link to="/dashboard"><a>LOG IN</a></Link>    
+                                    {pathname === '/dashboard'} </button>
                     </form>
 
                     {/* <div className="loginicons">
