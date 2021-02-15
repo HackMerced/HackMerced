@@ -51,28 +51,36 @@ export const mockData = [
 
 export const FAQData = [
     {
-        title: `Is DesignMerced virtual?`,
+        title: `What is a hackathon?`,
+        content: `A hackathon is a 36-hour competition in which teams of students collaborate to ideate and innovate solutions to real world problems! No knowledge of coding or hacking necessary.`,
+    },
+    {
+        title: `Is HackMerced VI virtual?`,
         content: `Yes, we are completely virtual.`,
     },
     {
         title: `Who can attend?`,
-        content: `All high school students, undergraduates, and graduate students are welcome!`,
+        content: `All undergraduates, and graduate students are welcome!`,
     },
     {
         title: `How do teams work?`,
         content: `You can be in teams of up to 4 people and it is highly encouraged to find at least one other person to participate with! If you need help forming a team, we'll help set you up with others who are looking for teammates.`,
     },
     {
-        title: `What if I have no design background?`,
+        title: `What should I create?`,
+        content: `You will be building a project based on our themes this year! Our themes are sustainability, inclusivity, and cybersecurity.`,
+    },
+    {
+        title: `What if I have no coding background?`,
         content: `No worries! We will help guide you and offer beginner-friendly workshops to help you start your project off.`,
     },
     {
         title: `What will I need?`,
-        content: `A computer, a design software, and a passion to design in DesignMerced!`,
+        content: `Since HackMerced VI is online this year due to COVID-19, we will provide resources, mentorship, and workshops during the event. Bring your passion to solve our tech-related themes this year!`,
     },
     {
-        title: `Is DesignMerced free?`,
-        content: `Admission to DesignMerced is completely free. Workshops and mentorship are free for the entire event!`,
+        title: `Is HackMerced free?`,
+        content: `Admission to HackMerced is completely free. Workshops and mentorship are free for the entire event!`,
     },
     {
         title: `What are the rules for this event?`,
