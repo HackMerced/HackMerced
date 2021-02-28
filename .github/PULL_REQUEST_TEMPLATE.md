@@ -24,7 +24,7 @@ _Put an `x` in the boxes that apply. You can also fill these out after creating 
 
 ## Responsiveness
 
-Check off the different **browsers** and **devices** you have tested on.
+Check off the different **browsers** and **devices** you have tested on. Note: testing includes Horizontal and Vertical alignments
 
 ### Browsers
 
@@ -32,15 +32,32 @@ Check off the different **browsers** and **devices** you have tested on.
 - [ ] Firefox
 - [ ] Edge
 - [ ] Safari
+- [ ] Brave
+- [ ] Opera
 
 ### Devices
 
-- [ ] Windows
-- [ ] MacOSX
-- [ ] Linux
-- [ ] IPhone
-- [ ] Android
-- [ ] Tablet
+#### Phones
+
+* [ ] Moto G4
+* [ ] Galaxy S5
+* [ ] Pixel 2
+* [ ] Pixel 2 XL
+* [ ] iPhone 5/SE
+* [ ] iPhone 6/7/8
+* [ ] iPhone 6/7/8 Plus
+* [ ] iPhone X
+
+#### Tablets
+
+* [ ] iPad
+* [ ] iPad Pro
+
+#### Desktops
+
+* [ ] Windows 10
+* [ ] MacOSX
+* [ ] Ubuntu
 
 ## Screenshots
 

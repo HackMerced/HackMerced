@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-import { FAQData } from '../Accordian/data';
-import Accordian from '../Accordian/Accordian';
+import { FAQData } from "../../stories/data";
+import Accordian from '../Accordian';
 import './HMVIFAQ.scss';
 
 const HMVIFAQ: FC = () => {
