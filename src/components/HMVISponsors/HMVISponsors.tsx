@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import SponsorHackMercedVI from '../../assets/images/sponsors-hackmercedvi.jpg';
+import SponsorHackMercedVI from '../../assets/images/sponsors-hackmercedvi.png';
 import './HMVISponsors.scss';
 
 const HMVISponsors: FC = (): JSX.Element => {
