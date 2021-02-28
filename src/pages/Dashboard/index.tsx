@@ -1,51 +1,16 @@
-import React, { FC, Fragment, useState } from "react";
-import { Link, useLocation, useHistory } from "react-router-dom";
-import Axios, { AxiosResponse } from "axios";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import React, { FC, Fragment } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import Footer from "../../components/Footer";
 import Navbar from "../../components/NavBar";
 import "./styles.scss";
-import { HackerState, TokenState } from "../../App.types";
 import HACKMERCED_LOGO from "../../assets/images/hackmercedvi-logo.png";
 import Live from "./live";
 import Schedule from "./schedule";
 import Prizes from "./prizes";
-import { environment } from "../../environments";
 
-const authenticateHacker = (hacker: HackerState) => {
-    if (hacker.id === "" || hacker.email === "" || hacker.firstName === "" || hacker.lastName === "") {
-        return false;
-    }
-
-    return true;
-};
-
-const authenticateToken = (token: TokenState) => {
-    if (token.accessToken === "" || token.refreshToken === "" || token.tokenType !== "Bearer") {
-        return false;
-    }
-
-    return true;
-};
-
-const Dashboard: FC<{
-    hacker: HackerState | undefined;
-    updateHacker: React.Dispatch<React.SetStateAction<HackerState | undefined>>;
-    token: TokenState | undefined;
-}> = ({ hacker, token }): JSX.Element => {
+const Dashboard: FC = (): JSX.Element => {
     const { pathname } = useLocation();
-    const [code, setCode] = useState<string>("");
-    const history = useHistory();
-
-    if (hacker === undefined || token === undefined) {
-        // history.push("/login");
-    } else if (!authenticateHacker(hacker as HackerState) && !authenticateToken(token as TokenState)) {
-        history.push("/401");
-    } else {
-        setCode(hacker?.teamCode);
-    }
 
     const BreakLine = (): JSX.Element => {
         return <div className="break-line"></div>;
@@ -53,40 +18,14 @@ const Dashboard: FC<{
 
     const getDashboardContent = (): JSX.Element => {
         switch (pathname) {
-            case "/dashboard/schedule":
+            case "/live/schedule":
                 return <Schedule />;
-            case "/dashboard/prizes":
+            case "/live/prizes":
                 return <Prizes />;
-            case "/dashboard":
-            case "/dashboard/live":
+            case "/live":
             default:
                 return <Live time="12 March 2021 22:00:00" />;
         }
-    };
-
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        setCode(event.target.value);
-    };
-
-    const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
-        event.preventDefault();
-        Axios.post(
-            `${environment.HACKER_API}/v1/auth/login`,
-            {
-                hacker: hacker?.id,
-                teamCode: code,
-            },
-            {
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            },
-        ).then((response: AxiosResponse) => {
-            if (response.status === 201 && response.statusText === "CREATED") {
-                // updateHacker({ ...hacker, teamCode: code });
-                console.table({ ...hacker, teamCode: code });
-            }
-        });
     };
 
     return (
@@ -97,22 +36,22 @@ const Dashboard: FC<{
                     <nav className="dashboard__sub-navbar__nav">
                         <ul className="dashboard__sub-navbar__nav__ul">
                             <li className="dashboard__sub-navbar__nav__ul__li">
-                                <Link to="/dashboard" className="dashboard__sub-navbar__nav__ul__li__title">
+                                <Link to="/live" className="dashboard__sub-navbar__nav__ul__li__title">
                                     LIVE
                                 </Link>
-                                {pathname === "/dashboard" || pathname === "/dashboard/live" ? BreakLine() : null}
+                                {pathname === "/live" ? BreakLine() : null}
                             </li>
                             <li className="dashboard__sub-navbar__nav__ul__li">
-                                <Link to="/dashboard/schedule" className="dashboard__sub-navbar__nav__ul__li__title">
+                                <Link to="/live/schedule" className="dashboard__sub-navbar__nav__ul__li__title">
                                     SCHEDULE
                                 </Link>
-                                {pathname === "/dashboard/schedule" ? BreakLine() : null}
+                                {pathname === "/live/schedule" ? BreakLine() : null}
                             </li>
                             <li className="dashboard__sub-navbar__nav__ul__li">
-                                <Link to="/dashboard/prizes" className="dashboard__sub-navbar__nav__ul__li__title">
+                                <Link to="/live/prizes" className="dashboard__sub-navbar__nav__ul__li__title">
                                     PRIZES
                                 </Link>
-                                {pathname === "/dashboard/prizes" ? BreakLine() : null}
+                                {pathname === "/live/prizes" ? BreakLine() : null}
                             </li>
                         </ul>
                     </nav>
@@ -126,22 +65,6 @@ const Dashboard: FC<{
                         <h3 className="dashboard__aside__event__start-time">March 5, 2021</h3>
                         <h2 className="dashboard__aside__event__end-title">Hacking Ends</h2>
                         <h3 className="dashboard__aside__event__end-time">March 7, 2021</h3>
-                    </section>
-                    <section className="dashboard__aside__team">
-                        <h1 className="dashboard__aside__team__title">Team Code</h1>
-                        <h3 className="dashboard__aside__team__code">{code === "" ? "No Team" : code}</h3>
-                        <p className="dashboard__aside__team__break">- or -</p>
-                        <h2 className="dashboard__aside__team__code-title">Enter Team Code</h2>
-                        <form className="dashboard__aside__team__code-container" onSubmit={handleSubmit}>
-                            <input
-                                className="dashboard__aside__team__code-container__input"
-                                type="text"
-                                onChange={handleInputChange}
-                            />
-                            <button className="dashboard__aside__team__code-container__submit" type="submit">
-                                <FontAwesomeIcon icon={faPlay} className="blackicon" />
-                            </button>
-                        </form>
                     </section>
                 </aside>
             </main>
