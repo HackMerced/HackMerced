@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-import Navbar from '../../components/NavBar/navbar';
-import Footer from '../../components/Footer/footer';
+import Navbar from '../../components/NavBar';
+import Footer from '../../components/Footer';
 import Landing from '../../components/LandingHMVI/landinghmvi';
 import Themes from '../../components/Themes/themes';
 import FAQ from '../../components/HMVIFAQ/HMVIFAQ';
