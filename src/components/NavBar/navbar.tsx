@@ -60,9 +60,14 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                         <Link to="/designmerced">DesignMerced</Link>
                         {pathname === '/designmerced' ? BreakLine() : null}
                     </Menu.Item> */}
-                    <Menu.Item>
+                    {/* <Menu.Item>
                         <Link to="/past-hackathons">Past Hackathons</Link>
                         {pathname === '/past-hackathons' ? BreakLine() : null}
+                    </Menu.Item> */}
+                    <Menu.Item>
+                        <a href="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</a>
+                        {/* <Link to="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</Link> */}
+                        {pathname === '/application' ? <div className="break-line"></div> : null}
                     </Menu.Item>
                     <Menu.Item>
                         <Link to="/sponsors">Sponsors</Link>
@@ -72,15 +77,10 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                         <Link to="/contact-us">Contact Us</Link>
                         {pathname === '/contact-us' ? BreakLine() : null}
                     </Menu.Item>
-                    <Menu.Item>
-                        <a href="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</a>
-                        {/* <Link to="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</Link> */}
-                        {pathname === '/application' ? <div className="break-line"></div> : null}
-                    </Menu.Item>
-                    <Menu.Item>
+                    {/* <Menu.Item>
                         <Link to="/login">Login</Link>
                         {pathname === '/login' ? <div className="break-line"></div> : null}
-                    </Menu.Item>
+                    </Menu.Item> */}
                 </Menu.Items>
             </Menu.Wrapper>
         </Styles.Wrapper>

@@ -1,4 +1,4 @@
-import React, { FC, Fragment, useState } from "react";
+import React, { FC } from "react";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { createHashHistory } from "history";
 
@@ -7,20 +7,18 @@ import Hackathons from "./pages/Hackathons";
 import SponsorUs from "./pages/SponsorUs";
 import ContactUs from "./pages/ContactUs";
 import Application from "./pages/Application";
-import Login from "./pages/Login";
-import ResetPassword from "./pages/ResetPassword";
+// import Login from "./pages/Login";
+// import ResetPassword from "./pages/ResetPassword";
 import Error from "./components/404";
 import DesignMerced from "./pages/DesignMerced";
-import SignUp from "./pages/SignUp";
+import HackMercedVI from './pages/HackMercedVI/HackMercedVI';
+// import SignUp from "./pages/SignUp";
 import Maintenance from "./pages/Maintenance";
 import Dashboard from "./pages/Dashboard";
-import { HackerState, TokenState } from "./App.types";
+
 import "./App.scss";
 
 const App: FC = (): JSX.Element => {
-    const [hacker, setHacker] = useState<HackerState>();
-    const [token, setToken] = useState<TokenState>();
-
     return (
         <Router
             history={createHashHistory({
@@ -35,7 +33,7 @@ const App: FC = (): JSX.Element => {
                 <Route path="/contact-us" component={ContactUs} />
                 <Route path="/past-hackathons" component={Hackathons} />
                 <Route path="/application" component={Application} />
-                <Route
+                {/* <Route
                     path="/login"
                     render={({ match: { url } }): JSX.Element => (
                         <Fragment>
@@ -45,19 +43,15 @@ const App: FC = (): JSX.Element => {
                             <Route path={`${url}/reset-password`} component={ResetPassword} />
                         </Fragment>
                     )}
-                />
-                <Route
+                /> */}
+                {/* <Route
                     path="/signup"
                     render={(): JSX.Element => <SignUp updateHacker={setHacker} updateToken={setToken} />}
-                />
+                /> */}
                 <Route path="/designmerced" component={DesignMerced} />
+                <Route exact path="/hackmercedvi" component={HackMercedVI} />
                 <Route path="/maintenance" component={Maintenance} />
-                <Route
-                    path="/dashboard"
-                    render={(): JSX.Element => (
-                        <Dashboard hacker={hacker} updateHacker={setHacker} token={token} />
-                    )}
-                />
+                <Route path="/live" component={Dashboard} />
                 <Route path="*" component={Error} />
                 <Redirect from="/HackMerced" to="/" />
             </Switch>

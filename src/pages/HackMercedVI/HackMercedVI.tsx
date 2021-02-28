@@ -1,27 +1,23 @@
 import React, { FC } from 'react';
-// import Axios from 'axios';
-// import { Link } from 'react-router-dom';
-import Footer from '../../components/Footer/footer';
-import Navbar from '../../components/NavBar/navbar';
 
-import './HackMercedVI.scss';
-
+import Navbar from '../../components/NavBar';
+import Footer from '../../components/Footer';
+import Landing from '../../components/LandingHMVI/landinghmvi';
+import Themes from '../../components/Themes/themes';
+import FAQ from '../../components/HMVIFAQ/HMVIFAQ';
+import Sponsors from '../../components/HMVISponsors/HMVISponsors';
+// import Schedule from '../../components/HMVISchedule/HMVISchedule';
 const HackMercedVI: FC = (): JSX.Element => {
     return (
-        <>
-            <Navbar backgroundColor="#E0E5EC" textColor="#0d0721" breakLineColor="#C4BDDC" showBanner={false} />
-            <section className="version-six">
-                <div className="back">
-                    <a href="https://hackmerced.com" className="text">
-                        HackMerced VI
-                    </a>
-                    <a href="https://hackmerced.com" className="text2">
-                        Coming Soon in Spring 2021
-                    </a>
-                </div>
-            </section>
-            <Footer backgroundColor="#E0E5EC" textColor="#0d0721" fontColor="#0d0721" />
-        </>
+        <main>
+            <Navbar backgroundColor="#B63F1A" textColor="#FFFFF" breakLineColor="#C4BDDC" showBanner={true} />
+            <Landing />
+            <Themes />
+            <FAQ />
+            {/* <Schedule /> */}
+            <Sponsors />
+            <Footer backgroundColor="#B63F1A" textColor="#FFFFF" fontColor="#EEEBF5" />
+        </main>
     );
 };
 
