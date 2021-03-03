@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.38febb77.chunk.css",
-    "main.js": "/static/js/main.3b6b512f.chunk.js",
-    "main.js.map": "/static/js/main.3b6b512f.chunk.js.map",
+    "main.css": "/static/css/main.3687d230.chunk.css",
+    "main.js": "/static/js/main.86d48237.chunk.js",
+    "main.js.map": "/static/js/main.86d48237.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a6aa62cc.js",
     "runtime-main.js.map": "/static/js/runtime-main.a6aa62cc.js.map",
     "static/css/2.d34346ea.chunk.css": "/static/css/2.d34346ea.chunk.css",
     "static/js/2.5a6e8758.chunk.js": "/static/js/2.5a6e8758.chunk.js",
     "static/js/2.5a6e8758.chunk.js.map": "/static/js/2.5a6e8758.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.06969b53841dd10da20738664d31e99d.js": "/precache-manifest.06969b53841dd10da20738664d31e99d.js",
+    "precache-manifest.3f741243bbaed8c4bafa93b058b5934f.js": "/precache-manifest.3f741243bbaed8c4bafa93b058b5934f.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d34346ea.chunk.css.map": "/static/css/2.d34346ea.chunk.css.map",
-    "static/css/main.38febb77.chunk.css.map": "/static/css/main.38febb77.chunk.css.map",
+    "static/css/main.3687d230.chunk.css.map": "/static/css/main.3687d230.chunk.css.map",
     "static/js/2.5a6e8758.chunk.js.LICENSE.txt": "/static/js/2.5a6e8758.chunk.js.LICENSE.txt",
     "static/media/404.scss": "/static/media/Error-404.3f7f5e56.jpg",
     "static/media/Intiser.png": "/static/media/Intiser.a8c63ac8.png",
@@ -69,7 +69,7 @@
     "static/media/sponsors-hackmercedvi.png": "/static/media/sponsors-hackmercedvi.9366c405.png",
     "static/media/sponsors-ii.jpg": "/static/media/sponsors-ii.e760c691.jpg",
     "static/media/sponsors-v.jpg": "/static/media/sponsors-v.91cce107.jpg",
-    "static/media/sticker-mule-logo-light.png": "/static/media/sticker-mule-logo-light.037f4766.png",
+    "static/media/sticker-mule-logo-light.png": "/static/media/sticker-mule-logo-light.1ee4e901.png",
     "static/media/sustainability.png": "/static/media/sustainability.527c0062.png",
     "static/media/teaching.jpg": "/static/media/teaching.8b401ffe.jpg",
     "static/media/team-2016.jpg": "/static/media/team-2016.b27f155e.jpg",
@@ -84,7 +84,7 @@
     "static/js/runtime-main.a6aa62cc.js",
     "static/css/2.d34346ea.chunk.css",
     "static/js/2.5a6e8758.chunk.js",
-    "static/css/main.38febb77.chunk.css",
-    "static/js/main.3b6b512f.chunk.js"
+    "static/css/main.3687d230.chunk.css",
+    "static/js/main.86d48237.chunk.js"
   ]
 }

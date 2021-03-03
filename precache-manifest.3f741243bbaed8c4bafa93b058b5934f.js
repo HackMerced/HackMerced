@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b8864c1821b748af53f9cadfc54ecbbb",
+    "revision": "e3eedac9cac4e480f640913e72893bde",
     "url": "/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.d34346ea.chunk.css"
   },
   {
-    "revision": "0703a7fe0ad21c6a4758",
-    "url": "/static/css/main.38febb77.chunk.css"
+    "revision": "85b8116871d5d503168a",
+    "url": "/static/css/main.3687d230.chunk.css"
   },
   {
     "revision": "85f908b3fc5b1c8c4801",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.5a6e8758.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0703a7fe0ad21c6a4758",
-    "url": "/static/js/main.3b6b512f.chunk.js"
+    "revision": "85b8116871d5d503168a",
+    "url": "/static/js/main.86d48237.chunk.js"
   },
   {
     "revision": "13034c83617003164f8d",
@@ -248,8 +248,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/sponsors-v.91cce107.jpg"
   },
   {
-    "revision": "037f47668d244493bd297d898484a19f",
-    "url": "/static/media/sticker-mule-logo-light.037f4766.png"
+    "revision": "1ee4e901d846c03f108b36329535afb0",
+    "url": "/static/media/sticker-mule-logo-light.1ee4e901.png"
   },
   {
     "revision": "527c006226b9c5c09c146ef21af117c8",
