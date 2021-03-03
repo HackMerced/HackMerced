@@ -9,7 +9,7 @@ import Sponsors from '../../components/HMVISponsors/HMVISponsors';
 // import Schedule from '../../components/HMVISchedule/HMVISchedule';
 const HackMercedVI: FC = (): JSX.Element => {
     return (
-        <main>
+        <main style={{ overflowX: 'hidden' }}>
             <Navbar backgroundColor="#B63F1A" textColor="#FFFFF" breakLineColor="#C4BDDC" showBanner={true} />
             <Landing />
             <Themes />

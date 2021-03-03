@@ -48,3 +48,23 @@
         font-size: 35px;
     }
 }
+
+.sticker_mule {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 4rem;
+
+  &__img {
+    width: 200px;
+    height: auto;
+
+    @media (max-width: 800px) {
+      width: 100px;
+    }
+
+    @media (max-width: 500px) {
+      width: 50px;
+    }
+  }
+}
