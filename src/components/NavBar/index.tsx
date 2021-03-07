@@ -56,11 +56,10 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                         <Link to="/">Home</Link>
                         {pathname === '/' ? BreakLine() : null}
                     </Menu.Item>
-                    <Menu.Item>
+                    {/* <Menu.Item>
                         <a href="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</a>
-                        {/* <Link to="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</Link> */}
                         {pathname === '/application' ? <div className="break-line"></div> : null}
-                    </Menu.Item>
+                    </Menu.Item> */}
                     <Menu.Item>
                         <Link to="/live">Live</Link>
                         {pathname === '/live' ? BreakLine() : null}

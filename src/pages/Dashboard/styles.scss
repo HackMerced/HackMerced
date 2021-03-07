@@ -29,7 +29,7 @@ $borderColor: #eeebf5;
         color: $offOrange;
         border-radius: 2em;
         padding: 3em 0;
-        box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color
+        box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08); //box-shadow: none|h-offset v-offset blur spread color
         @media only screen and (max-width: 500px) {
             padding: 1rem 0;
         }
@@ -92,7 +92,7 @@ $borderColor: #eeebf5;
             &__countdown,
             &__resources {
                 border-radius: 2em;
-                box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
+                box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08);
                 &__header {
                     background-color: $offWhite;
                     text-align: center;
@@ -123,7 +123,7 @@ $borderColor: #eeebf5;
                     &__digits {
                         display: block;
                         font-size: 35px;
-                        text-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.5);
+                        // text-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.5);
                         line-height: 1;
                         font-weight: bold;
                         color: $offWhite;
@@ -132,7 +132,7 @@ $borderColor: #eeebf5;
                         border-radius: 0.6em;
                         margin: 8px;
                         width: 5em;
-                        box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.5);
+                        // box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.5);
                         & span {
                             display: block;
                             font-size: 28px;
@@ -219,7 +219,7 @@ $borderColor: #eeebf5;
                         border-radius: 25px;
                         margin: 15px;
                         padding: 20px;
-                        box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
+                        box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.2);
                         text-align: center;
                         font-size: 28px;
                         transform: scale(0.95);
@@ -247,13 +247,13 @@ $borderColor: #eeebf5;
         */
         &__schedule {
             border-radius: 2em;
-            box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
+            box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08);
             &__header {
                 background-color: $offWhite;
                 text-align: center;
                 border-bottom-left-radius: 2em;
                 border-bottom-right-radius: 2em;
-                box-shadow: 0 4px 10px 2px rgb(192, 192, 192);
+                box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08);
                 &__title {
                     font-size: 35px;
                     color: $offBlack;
@@ -333,7 +333,8 @@ $borderColor: #eeebf5;
                     }
                     &__title {
                         padding: 20px;
-                        font-weight: bold;
+                        font-weight: lighter;
+                        width: 30%;
                         @media (max-width: 500px) {
                             text-align: center;
                         }
@@ -347,7 +348,7 @@ $borderColor: #eeebf5;
                         vertical-align: middle;
                         line-height: 90px;
                         border-radius: 25px;
-                        box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
+                        box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08);
                         @media (max-width: 500px) {
                             width: 100%;
                         }
@@ -368,7 +369,7 @@ $borderColor: #eeebf5;
         */
         &__prizes {
             border-radius: 2em;
-            box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
+            box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08);
             &__header {
                 background-color: $offWhite;
                 text-align: center;
@@ -404,7 +405,7 @@ $borderColor: #eeebf5;
                     text-align: center;
                     margin: 10px;
                     padding: 30px;
-                    box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
+                    box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08);
                     @media only screen and (min-width: 500px) {
                         margin: 20px 30px;
                     }
@@ -427,16 +428,16 @@ $borderColor: #eeebf5;
                     }
                     &__body {
                         color: $offBlack;
-                        font-size: 22px;
+                        font-size: 15px;
                         padding: 15px 0 0 0;
                         @media only screen and (max-width: 1100px) {
-                            font-size: 20px;
+                            font-size: 10px;
                         }
                         @media only screen and (max-width: 740px) {
-                            font-size: 18px;
+                            font-size: 12px;
                         }
                         @media only screen and (max-width: 350px) {
-                            font-size: 16px;
+                            font-size: 14px;
                         }
                     }
                 }
@@ -463,10 +464,11 @@ $borderColor: #eeebf5;
             background-color: $offWhite;
             text-align: center;
             border-radius: 2em;
-            box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192); //box-shadow: none|h-offset v-offset blur spread color
+            box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08); //box-shadow: none|h-offset v-offset blur spread color
             border: 1px solid $borderColor;
             height: auto;
             padding-top: 30px;
+            padding-bottom: 40px;
             width: 350px;
             margin-bottom: 40px;
             &__logo {
@@ -474,7 +476,7 @@ $borderColor: #eeebf5;
                 height: 105px;
                 margin: 5% auto;
                 border-radius: 50px;
-                box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
+                // box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
                 @media only screen and (max-width: 600px) {
                     width: 70px;
                 }

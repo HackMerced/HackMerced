@@ -6,38 +6,48 @@ import useWindowDimensions from "../../components/WindowDimensions";
 const data: Array<{ day: number; title: string; body: string }> = [
     {
         day: 5,
-        title: "9:00 PM - 10:00 PM",
+        title: "8:00 PM - 9:00 PM",
         body: "Opening Ceremony",
     },
     {
         day: 5,
-        title: "10:00 PM  - 11:00 PM",
+        title: "9:00 PM",
         body: "Hacking Begins",
     },
     {
         day: 5,
-        title: "10:00 PM - 11:00 PM",
+        title: "9:00 PM - 10:00 PM",
         body: "Team Formation",
     },
     {
+        day: 5,
+        title: "10:00 PM - 11:00 PM",
+        body: "Brainstorming Activity",
+    },
+    {
+        day: 5,
+        title: "11:00 PM - 12:00 PM",
+        body: "Notion Workshop",
+    },
+    {
+        day: 5,
+        title: "11:00 PM - 12:00 PM",
+        body: "GitKraken Workshop",
+    },
+    {
         day: 6,
         title: "12:00 AM - 1:00 AM",
-        body: "Lunch Break",
+        body: "GoDot Beginner Workshop",
     },
     {
         day: 6,
         title: "1:00 AM - 2:00 AM",
-        body: "Brainstorming activity",
+        body: "Machine Learning Workshop",
     },
     {
-        day: 7,
-        title: "12:00 AM - 1:00 AM",
-        body: "Among Us Game",
-    },
-    {
-        day: 7,
+        day: 6,
         title: "1:00 AM - 2:00 AM",
-        body: "Closing Ceremony",
+        body: "Machine Learning Workshop",
     },
 ];
 
@@ -70,7 +80,7 @@ const Schedule: FC = (): JSX.Element => {
         <div className="dashboard__content__schedule">
             <div className="orange-rectangle"></div>
             <div className="dashboard__content__schedule__header">
-                <h1 className="dashboard__content__schedule__header__title">Upcoming Events</h1>
+                <h1 className="dashboard__content__schedule__header__title">Schedule</h1>
                 <ul className="dashboard__content__schedule__header__sub-header">
                     <li className="dashboard__content__schedule__header__sub-header__li">
                         <div
@@ -78,10 +88,10 @@ const Schedule: FC = (): JSX.Element => {
                             onClick={(): void => setDay(5)}
                         >
                             {width > 800 ? (
-                                <span>Friday, March 5</span>
+                                <span>Friday, March 12</span>
                             ) : (
                                 <span>
-                                    Friday, <br /> March 5
+                                    Friday, <br /> March 12
                                 </span>
                             )}
                         </div>
@@ -93,10 +103,10 @@ const Schedule: FC = (): JSX.Element => {
                             onClick={(): void => setDay(6)}
                         >
                             {width > 800 ? (
-                                <span>Saturday, March 6</span>
+                                <span>Saturday, March 13</span>
                             ) : (
                                 <span>
-                                    Saturday, <br /> March 6
+                                    Saturday, <br /> March 13
                                 </span>
                             )}
                         </div>
@@ -108,10 +118,10 @@ const Schedule: FC = (): JSX.Element => {
                             onClick={(): void => setDay(7)}
                         >
                             {width > 800 ? (
-                                <span>Sunday, March 7</span>
+                                <span>Sunday, March 14</span>
                             ) : (
                                 <span>
-                                    Sunday, <br /> March 7
+                                    Sunday, <br /> March 14
                                 </span>
                             )}
                         </div>
