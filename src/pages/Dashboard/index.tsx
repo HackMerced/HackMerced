@@ -62,9 +62,9 @@ const Dashboard: FC = (): JSX.Element => {
                         <img className="dashboard__aside__event__logo" src={HACKMERCED_LOGO} alt="Logo" />
                         <h1 className="dashboard__aside__event__title">HackMerced VI</h1>
                         <h2 className="dashboard__aside__event__start-title">Hacking Starts</h2>
-                        <h3 className="dashboard__aside__event__start-time">March 12, 2021 at 9PM</h3>
+                        <h3 className="dashboard__aside__event__start-time">March 12, 2021</h3>
                         <h2 className="dashboard__aside__event__end-title">Hacking Ends</h2>
-                        <h3 className="dashboard__aside__event__end-time">March 14, 2021 at 9PM</h3>
+                        <h3 className="dashboard__aside__event__end-time">March 14, 2021</h3>
                     </section>
                 </aside>
             </main>
