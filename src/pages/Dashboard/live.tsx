@@ -26,7 +26,7 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
     };
 
     useEffect(() => {
-        setInterval(function () {
+        setInterval(function() {
             countDownTimer();
         }, 1000);
     }, []);
@@ -51,17 +51,30 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
                     </div>
                 </div>
                 <p className="dashboard__content__live__countdown__body">
-                    <b>HackMerced VI</b> will occur on March 5th through the 7th of 2021. This year is the first time we
-                    are doing a Hub website. We will want to hear a feedback of the new site from you soon. 
+                    <b>HackMerced VI</b> will occur on March 12th through the 14th of 2021. This year is the first time
+                    we are doing a Hub website. We will want to hear a feedback of the new site from you soon.
                 </p>
             </div>
             <div className="dashboard__content__live__resources">
                 <div className="orange-rectangle"></div>
                 <h1 className="dashboard__content__live__resources__header">Resources</h1>
                 <ul className="dashboard__content__live__resources__ul">
-                    <li className="dashboard__content__live__resources__ul__li"> <a href="https://hack.mlh.io/software/">MLH Software</a></li>
-                    <li className="dashboard__content__live__resources__ul__li"><a href="https://hack.mlh.io/hardware/">MLH Hardware</a></li>
-                    <li className="dashboard__content__live__resources__ul__li"><a href="https://designresourc.es">UI/UX</a></li>
+                    <a href="https://hackmerced-vi.devpost.com/">
+                        {" "}
+                        <li className="dashboard__content__live__resources__ul__li"> Devpost</li>
+                    </a>
+                    <a href="https://hack.mlh.io/software/">
+                        {" "}
+                        <li className="dashboard__content__live__resources__ul__li"> MLH Software</li>
+                    </a>
+                    <a href="https://hack.mlh.io/hardware/">
+                        {" "}
+                        <li className="dashboard__content__live__resources__ul__li">MLH Hardware</li>
+                    </a>
+                    <a href="https://designresourc.es">
+                        {" "}
+                        <li className="dashboard__content__live__resources__ul__li">UI/UX</li>
+                    </a>
                 </ul>
             </div>
         </div>
