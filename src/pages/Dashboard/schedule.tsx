@@ -121,6 +121,11 @@ const data: Array<{ day: number; title: string; body: string }> = [
     },
     {
         day: 7,
+        title: "5:00 AM - 6:00 AM",
+        body: "How to Make a Compelling Demo",
+    },
+    {
+        day: 7,
         title: "9:00 AM",
         body: "Hacking Ends",
     },
