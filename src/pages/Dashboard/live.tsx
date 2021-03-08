@@ -75,6 +75,42 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">UI/UX</li>
                     </a>
+                    <a href="https://education.github.com/pack">
+                        {" "}
+                        <li className="dashboard__content__live__resources__ul__li">GitHub Student Pack</li>
+                    </a>
+                    <a href="https://startupstash.com/cybersecurity-resources/">
+                        {" "}
+                        <li className="dashboard__content__live__resources__ul__li">CyberSecurity Beginner</li>
+                    </a>
+                    <a href="https://github.com/GoogleCloudPlatform/hackathon-toolkit">
+                        {" "}
+                        <li className="dashboard__content__live__resources__ul__li">Google Cloud Toolkit</li>
+                    </a>
+                    <a href="https://reactjs.org/tutorial/tutorial.html">
+                        {" "}
+                        <li className="dashboard__content__live__resources__ul__li">Intro to React.js Tutorial</li>
+                    </a>
+                    <a href="https://flutter.dev/docs/get-started/install">
+                        {" "}
+                        <li className="dashboard__content__live__resources__ul__li">Getting Started with Flutter</li>
+                    </a>
+                    <a href="https://nodejs.dev/learn">
+                        {" "}
+                        <li className="dashboard__content__live__resources__ul__li">Node.js Tutorial</li>
+                    </a>
+                    <a href="https://www.tensorflow.org/tutorials">
+                        {" "}
+                        <li className="dashboard__content__live__resources__ul__li">Machine Learning Tutorials</li>
+                    </a>
+                    <a href="https://medium.com/augmented-reality-tutorial">
+                        {" "}
+                        <li className="dashboard__content__live__resources__ul__li">Augmented Reality</li>
+                    </a>
+                    <a href="https://www.notion.so/createdmary/How-to-Edit-and-Submit-Video-d36031b34f0748668a3492d846c61042">
+                        {" "}
+                        <li className="dashboard__content__live__resources__ul__li">How to Edit and Submit Video</li>
+                    </a>
                 </ul>
             </div>
         </div>
