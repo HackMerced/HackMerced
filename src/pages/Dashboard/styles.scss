@@ -337,6 +337,7 @@ $borderColor: #eeebf5;
                         width: 30%;
                         @media (max-width: 500px) {
                             text-align: center;
+                            width: 100%;
                         }
                     }
                     &__body {
