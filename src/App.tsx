@@ -11,7 +11,7 @@ import Application from "./pages/Application";
 // import ResetPassword from "./pages/ResetPassword";
 import Error from "./components/404";
 import DesignMerced from "./pages/DesignMerced";
-import HackMercedVI from './pages/HackMercedVI/HackMercedVI';
+import HackMercedVI from './pages/HackMercedVI';
 // import SignUp from "./pages/SignUp";
 import Maintenance from "./pages/Maintenance";
 import Dashboard from "./pages/Dashboard";
