@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.21683701.chunk.css",
-    "main.js": "/static/js/main.683e9740.chunk.js",
-    "main.js.map": "/static/js/main.683e9740.chunk.js.map",
+    "main.css": "/static/css/main.86dbf8b6.chunk.css",
+    "main.js": "/static/js/main.862ff090.chunk.js",
+    "main.js.map": "/static/js/main.862ff090.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a6aa62cc.js",
     "runtime-main.js.map": "/static/js/runtime-main.a6aa62cc.js.map",
     "static/css/2.d34346ea.chunk.css": "/static/css/2.d34346ea.chunk.css",
-    "static/js/2.c4d516d9.chunk.js": "/static/js/2.c4d516d9.chunk.js",
-    "static/js/2.c4d516d9.chunk.js.map": "/static/js/2.c4d516d9.chunk.js.map",
+    "static/js/2.b408aaca.chunk.js": "/static/js/2.b408aaca.chunk.js",
+    "static/js/2.b408aaca.chunk.js.map": "/static/js/2.b408aaca.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.3c2015cd705661f845bf492c5a43d10f.js": "/precache-manifest.3c2015cd705661f845bf492c5a43d10f.js",
+    "precache-manifest.4b43365e4e3ea4e690eae5f234c5ab56.js": "/precache-manifest.4b43365e4e3ea4e690eae5f234c5ab56.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d34346ea.chunk.css.map": "/static/css/2.d34346ea.chunk.css.map",
-    "static/css/main.21683701.chunk.css.map": "/static/css/main.21683701.chunk.css.map",
-    "static/js/2.c4d516d9.chunk.js.LICENSE.txt": "/static/js/2.c4d516d9.chunk.js.LICENSE.txt",
-    "static/media/404.scss": "/static/media/Error-404.3f7f5e56.jpg",
+    "static/css/main.86dbf8b6.chunk.css.map": "/static/css/main.86dbf8b6.chunk.css.map",
+    "static/js/2.b408aaca.chunk.js.LICENSE.txt": "/static/js/2.b408aaca.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/static/media/Error-404.3f7f5e56.jpg",
     "static/media/Intiser.png": "/static/media/Intiser.a8c63ac8.png",
     "static/media/about-icon.png": "/static/media/about-icon.d5a06e45.png",
     "static/media/adrian.jpg": "/static/media/adrian.e6c6f6d0.jpg",
@@ -32,7 +32,6 @@
     "static/media/hackers.jpg": "/static/media/hackers.c513582c.jpg",
     "static/media/hackers2.jpg": "/static/media/hackers2.bc84a0e1.jpg",
     "static/media/hackiv.jpg": "/static/media/hackiv.2bf84793.jpg",
-    "static/media/hackmerced-logo.png": "/static/media/hackmerced-logo.afe718af.png",
     "static/media/hackmerced-v.jpg": "/static/media/hackmerced-v.a3e89d54.jpg",
     "static/media/hackmercedvi-logo.png": "/static/media/hackmercedvi-logo.911def12.png",
     "static/media/health2.jpg": "/static/media/health2.cbbd8ddf.jpg",
@@ -83,8 +82,8 @@
   "entrypoints": [
     "static/js/runtime-main.a6aa62cc.js",
     "static/css/2.d34346ea.chunk.css",
-    "static/js/2.c4d516d9.chunk.js",
-    "static/css/main.21683701.chunk.css",
-    "static/js/main.683e9740.chunk.js"
+    "static/js/2.b408aaca.chunk.js",
+    "static/css/main.86dbf8b6.chunk.css",
+    "static/js/main.862ff090.chunk.js"
   ]
 }
