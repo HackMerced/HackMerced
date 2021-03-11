@@ -146,12 +146,12 @@ const data: Array<{ day: number; title: string; body: string }> = [
     },
     {
         day: 7,
-        title: "11:00 AM - 1:00 PM PST",
+        title: "11:00 AM - 2:00 PM PST",
         body: "Judging",
     },
     {
         day: 7,
-        title: "1:00 PM PST",
+        title: "2:00 PM PST",
         body: "Closing Ceremony",
     },
 ];
