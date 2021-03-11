@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import useWindowDimensions from '../WindowDimensions/WindowDimensions';
+import useWindowDimensions from '../WindowDimensions';
 import './landinghmvi.scss';
 
 const LandingHMVI: FC = (): JSX.Element => {

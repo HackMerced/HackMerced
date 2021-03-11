@@ -1,14 +1,13 @@
-import React from 'react';
-import { render, unmountComponentAtNode } from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import React from "react";
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from "react-dom/test-utils";
 
-import Successes from './Successes';
-import { SuccessesProps } from './Successes.types';
+import Successes from ".";
 
 let container: HTMLDivElement;
 beforeEach(() => {
     // setup a DOM element as a render target
-    container = document.createElement('div');
+    container = document.createElement("div");
     document.body.appendChild(container);
 });
 
@@ -110,9 +109,17 @@ afterEach(() => {
 //     expect(container.getElementsByClassName('card6')).toHaveTextContent(/(sponsors)/i);
 // });
 
-test('render HackMerced V statistics', () => {
-    const successs: SuccessesProps = {
-        iteration: 'V',
+test("render HackMerced V statistics", () => {
+    const successs: {
+        hoursOfHacking: number;
+        numberOfAttendees: number;
+        projectsSubmitted: number;
+        amountOfPrizes: number;
+        numberOfWorkshops: number;
+        numberOfSponsors: number;
+        iteration: string | null;
+    } = {
+        iteration: "V",
         hoursOfHacking: 36,
         numberOfAttendees: 400,
         projectsSubmitted: 35,
