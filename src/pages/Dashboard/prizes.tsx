@@ -10,8 +10,8 @@ const Prizes: FC = (): JSX.Element => {
             <ul className="dashboard__content__prizes__ul">
                 <li className="dashboard__content__prizes__ul__li">
                     <h3 className="dashboard__content__prizes__ul__li__title">Inclusiveness</h3>
-                    <h4 className="dashboard__content__prizes__ul__li__body"><b>1st Place </b> - $125 Amazon Gift Card for each member
-                    <br></br> <br></br> <b>2nd Place </b> - $75 Amazon Gift Card for each member <br></br><br></br> <b>3rd Place</b> - $50 Amazon Gift Card for each member </h4>
+                    <h4 className="dashboard__content__prizes__ul__li__body"><b>1st Place </b> - Portable Projector for each member
+                    <br></br> <br></br> <b>2nd Place </b> - Bento Stack for each member <br></br><br></br> <b>3rd Place</b> - $50 Amazon Gift Card for each member </h4>
                 </li>
                 <li className="dashboard__content__prizes__ul__li">
                     <h3 className="dashboard__content__prizes__ul__li__title">Social Good</h3>
