@@ -1,13 +1,13 @@
-import React from 'react';
-import { render, unmountComponentAtNode } from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import React from "react";
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from "react-dom/test-utils";
 
-import Form from './Form';
+import Form from ".";
 
 let container: HTMLDivElement;
 beforeEach(() => {
     // setup a DOM element as a render target
-    container = document.createElement('div');
+    container = document.createElement("div");
     document.body.appendChild(container);
 });
 
@@ -17,16 +17,16 @@ afterEach(() => {
     container.remove();
 });
 
-it('renders contact us form', () => {
+it("renders contact us form", () => {
     act(() => {
         render(<Form formTitle="Message Us" askCompany={false} formRequest="contact" />, container);
     });
-    expect(container.textContent).toContain('Message Us');
+    expect(container.textContent).toContain("Message Us");
 });
 
-it('renders sponsor us form', () => {
+it("renders sponsor us form", () => {
     act(() => {
         render(<Form formTitle="Sponsor Us" askCompany={true} formRequest="sponsor" />, container);
     });
-    expect(container.textContent).toContain('Sponsor Us');
+    expect(container.textContent).toContain("Sponsor Us");
 });
