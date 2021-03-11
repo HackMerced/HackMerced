@@ -115,6 +115,11 @@ const data: Array<{ day: number; title: string; body: string }> = [
         body: "Arduino Workshop",
     },
     {
+        day: 6,
+        title: "11:00 PM - 12:00 AM PST",
+        body: "Maching Learning Workshop ft. QuickDraw Program",
+    },
+    {
         day: 7,
         title: "12:00 AM - 1:00 AM PST",
         body: "Scribble.io",
