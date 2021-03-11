@@ -52,7 +52,7 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
                 </div>
                 <p className="dashboard__content__live__countdown__body">
                     <b>HackMerced VI</b> occurs on March 12th through the 14th of 2021. Countdown till Hacking Ends! This year is the first time
-                    we are doing a Hub website. We will want to hear a feedback of the new site from you soon.
+                    we are doing a Hub website. So please provide any feedback you may have!
                 </p>
             </div>
             <div className="dashboard__content__live__resources">
