@@ -131,12 +131,12 @@ const data: Array<{ day: number; title: string; body: string }> = [
     },
     {
         day: 7,
-        title: "9:00 AM PST",
+        title: "10:00 AM PST",
         body: "Hacking Ends",
     },
     {
         day: 7,
-        title: "9:00 AM - 11:00 AM PST",
+        title: "10:00 AM - 11:00 AM PST",
         body: "Create your submission video",
     },
     {
