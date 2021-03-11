@@ -59,55 +59,55 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
                 <div className="orange-rectangle"></div>
                 <h1 className="dashboard__content__live__resources__header">Resources</h1>
                 <ul className="dashboard__content__live__resources__ul">
-                    <a href="https://hackmerced-vi.devpost.com/">
+                    <a href="https://hackmerced-vi.devpost.com/" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li"> Devpost</li>
                     </a>
-                    <a href="https://hack.mlh.io/software/">
+                    <a href="https://hack.mlh.io/software/" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li"> MLH Software</li>
                     </a>
-                    <a href="https://hack.mlh.io/hardware/">
+                    <a href="https://hack.mlh.io/hardware/" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">MLH Hardware</li>
                     </a>
-                    <a href="https://designresourc.es">
+                    <a href="https://designresourc.es" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">UI/UX</li>
                     </a>
-                    <a href="https://education.github.com/pack">
+                    <a href="https://education.github.com/pack" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">GitHub Student Pack</li>
                     </a>
-                    <a href="https://startupstash.com/cybersecurity-resources/">
+                    <a href="https://startupstash.com/cybersecurity-resources/" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">CyberSecurity Beginner</li>
                     </a>
-                    <a href="https://github.com/GoogleCloudPlatform/hackathon-toolkit">
+                    <a href="https://github.com/GoogleCloudPlatform/hackathon-toolkit" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">Google Cloud Toolkit</li>
                     </a>
-                    <a href="https://reactjs.org/tutorial/tutorial.html">
+                    <a href="https://reactjs.org/tutorial/tutorial.html" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">Intro to React.js Tutorial</li>
                     </a>
-                    <a href="https://flutter.dev/docs/get-started/install">
+                    <a href="https://flutter.dev/docs/get-started/install" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">Getting Started with Flutter</li>
                     </a>
-                    <a href="https://nodejs.dev/learn">
+                    <a href="https://nodejs.dev/learn" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">Node.js Tutorial</li>
                     </a>
-                    <a href="https://www.tensorflow.org/tutorials">
+                    <a href="https://www.tensorflow.org/tutorials" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">Machine Learning Tutorials</li>
                     </a>
-                    <a href="https://medium.com/augmented-reality-tutorial">
+                    <a href="https://medium.com/augmented-reality-tutorial" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">Augmented Reality</li>
                     </a>
-                    <a href="https://www.notion.so/createdmary/How-to-Edit-and-Submit-Video-d36031b34f0748668a3492d846c61042">
+                    <a href="https://www.notion.so/createdmary/How-to-Edit-and-Submit-Video-d36031b34f0748668a3492d846c61042" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">How to Edit and Submit Video</li>
                     </a>
