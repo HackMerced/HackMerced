@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import SponsorHackMercedVI from '../../assets/images/sponsors-hackmercedvi1.png';
+import SponsorHackMercedVI from '../../assets/images/sponsors-hackmercedvi.png';
 import STICKER_MULE from '../../assets/images/sticker-mule-logo-light.png';
 import './HMVISponsors.scss';
 
