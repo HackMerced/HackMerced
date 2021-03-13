@@ -24,7 +24,7 @@ const Dashboard: FC = (): JSX.Element => {
                 return <Prizes />;
             case "/live":
             default:
-                return <Live time="15 March 2021 09:00:00" />; //Time is in Military
+                return <Live time="15 March 2021 11:00:00" />; //Time is in Military
         }
     };
 
