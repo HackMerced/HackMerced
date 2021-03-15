@@ -45,10 +45,31 @@ import SPONSORSV from "../../assets/images/sponsors-v.jpg";
 import HEALTHWINNER from "../../assets/images/health2.jpg";
 import SHUBAWARD from "../../assets/images/shub-award.jpg";
 
+// HackMerced V
+import CLOSINGCEREMONY from "../../assets/images/closing-ceremony.png";
+import OPENINGCEREMONY from "../../assets/images/openingceremony.png";
+import VIRTUALTEAM from "../../assets/images/team-members-virtual.png";
+import BOBROSS from "../../assets/images/bob-ross-painting.jpg";
+import REACTWS from "../../assets/images/react-native-workshop.png";
+import VIRTUALSTICKERS from "../../assets/images/virtual-stickers.jpg";
+
 const Home: FC = (): JSX.Element => {
     return (
         <main>
             <Navbar />
+            <Successes
+                iteration={"VI"}
+                hoursOfHacking={36}
+                numberOfAttendees={400}
+                projectsSubmitted={40}
+                amountOfPrizes={12}
+                numberOfWorkshops={11}
+                numberOfSponsors={14}
+            />
+             <PastHackathonsGallery
+                iteration={"VI"}
+                images={[OPENINGCEREMONY, VIRTUALTEAM, BOBROSS, VIRTUALSTICKERS, REACTWS, CLOSINGCEREMONY]}
+            />
             <Successes
                 iteration={"V"}
                 hoursOfHacking={36}

@@ -35,10 +35,10 @@ const Title: FC = (): JSX.Element => {
         setValues({ ...values, [name]: value });
     };
 
-    const openModal = (): void => {
-        setShowModal(true);
-        document.body.style.overflow = "hidden";
-    };
+    // const openModal = (): void => {
+    //     setShowModal(true);
+    //     document.body.style.overflow = "hidden";
+    // };
 
     const closeModal = (): void => {
         setShowModal(false);
@@ -62,7 +62,7 @@ const Title: FC = (): JSX.Element => {
                 <div className="hackmerced-text text-gray-100">
                     Stay updated with HackMerced and subscribe to our email list!
                 </div>
-                <button
+                {/* <button
                     className="subscribe-button bg-white text-black font-bold"
                     // className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                     onClick={() => {
@@ -71,7 +71,7 @@ const Title: FC = (): JSX.Element => {
                     }}
                 >
                     Register
-                </button>
+                </button> */}
             </section>
             {showModal ? (
                 <div className="overlay light" onClick={closeModal}>

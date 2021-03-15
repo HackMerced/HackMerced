@@ -48,6 +48,7 @@
                 object-fit: cover;
                 transition: transform 400ms ease-out;
                 margin-left: 2%;
+                margin: 0 auto;
                 border-radius: 25px;
                 // box-shadow: -6px -6px 16px #fff, 6px 6px 16px #696865;
 
@@ -56,9 +57,12 @@
                 }
             }
 
-            @media (min-width: 1800px) {
-                margin-left: 6%;
+            @media (min-width: 1600px) {
+                min-width: 450px;
+                margin: 0 auto;
             }
+          
+            
         }
     }
 }
