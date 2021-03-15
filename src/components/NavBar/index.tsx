@@ -60,22 +60,22 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                         <a href="https://hackmercedvi.typeform.com/to/mY7E1Fug">Apply</a>
                         {pathname === '/application' ? <div className="break-line"></div> : null}
                     </Menu.Item> */}
-                    <Menu.Item>
+                    {/* <Menu.Item>
                         <Link to="/live">Live</Link>
                         {pathname === '/live' ? BreakLine() : null}
-                    </Menu.Item>
-                    <Menu.Item>
+                    </Menu.Item> */}
+                    {/* <Menu.Item>
                         <Link to="/hackmercedvi">HackMerced VI</Link>
                         {pathname === '/hackmercedvi' ? BreakLine() : null}
-                    </Menu.Item>
+                    </Menu.Item> */}
                     {/* <Menu.Item>
                         <Link to="/designmerced">DesignMerced</Link>
                         {pathname === '/designmerced' ? BreakLine() : null}
                     </Menu.Item> */}
-                    {/* <Menu.Item>
+                    <Menu.Item>
                         <Link to="/past-hackathons">Past Hackathons</Link>
                         {pathname === '/past-hackathons' ? BreakLine() : null}
-                    </Menu.Item> */}
+                    </Menu.Item>
                     <Menu.Item>
                         <Link to="/sponsors">Sponsors</Link>
                         {pathname === '/sponsors' ? BreakLine() : null}

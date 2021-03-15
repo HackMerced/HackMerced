@@ -176,7 +176,7 @@ const Successes: FC<{
                 <div className="confetti-0"></div>
             </div>
             <div className="text-3xl md:text-5xl font-black hackathons-title">
-                {iteration === "V" ? `Our Successes` : `HackMerced ${iteration}`}
+                {iteration === "VI" ? `Our Successes` : `HackMerced ${iteration}`}
                 <br />
             </div>
             <div className="wrapper">
