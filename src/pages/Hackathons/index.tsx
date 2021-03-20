@@ -6,52 +6,52 @@ import PastHackathonsGallery from "../../components/PastHackathonsGallery";
 import Successes from "../../components/Successes";
 
 // HackMerced I
-import CHECKIN from "../../assets/images/checkin.jpg";
-import HMFOOD from "../../assets/images/hmfood.jpg";
-import MACHINE from "../../assets/images/machine.jpg";
-import TEACHING from "../../assets/images/teaching.jpg";
-import OLDTEAM from "../../assets/images/team-2016.jpg";
-import TUTOR from "../../assets/images/tutor.jpg";
+import HACKMERCED_I_CHECK_IN from "../../assets/images/checkin.jpg";
+import HACKMERCED_I_FOOD from "../../assets/images/hmfood.jpg";
+import HACKMERCED_I_MACHINE from "../../assets/images/machine.jpg";
+import HACKMERCED_I_TEACHING from "../../assets/images/teaching.jpg";
+import HACKMERCED_I_OLD_TEAM from "../../assets/images/team-2016.jpg";
+import HACKMERCED_I_TUTOR from "../../assets/images/tutor.jpg";
 
 // HackMerced II
-import SPEAKERII from "../../assets/images/speaker-ii.jpg";
-import HACKERSII from "../../assets/images/hackers-ii.jpg";
-import COLLABORATION from "../../assets/images/collaboration.jpg";
-import CHECKINGINII from "../../assets/images/checking-in-ii.jpg";
-import MLHII from "../../assets/images/mlh-ii.jpg";
-import SPONSORSII from "../../assets/images/sponsors-ii.jpg";
+import HACKMERCED_II_SPEAKER from "../../assets/images/speaker-ii.jpg";
+import HACKMERCED_II_HACKERS from "../../assets/images/hackers-ii.jpg";
+import HACKMERCED_II_COLLABORATION from "../../assets/images/collaboration.jpg";
+import HACKMERCED_II_CHECK_IN from "../../assets/images/checking-in-ii.jpg";
+import HACKMERCED_II_MLH from "../../assets/images/mlh-ii.jpg";
+import HACKMERCED_II_SPONSORS from "../../assets/images/sponsors-ii.jpg";
 
 // HackMerced III
-import MLHCUPSTACK from "../../assets/images/mlh-cupstack.jpg";
-import WINNERSIII from "../../assets/images/winners-iii.jpg";
-import AWARDSIII from "../../assets/images/awards-iii.jpg";
-import PRIZES from "../../assets/images/prizes-iii.jpg";
-import JUDGESIII from "../../assets/images/judges-iii.jpg";
-import REDBULL from "../../assets/images/redbull.jpg";
+import HACKMERCED_III_MLH_CUP_STACK from "../../assets/images/mlh-cupstack.jpg";
+import HACKMERCED_III_WINNERS from "../../assets/images/winners-iii.jpg";
+import HACKMERCED_III_AWARDS from "../../assets/images/awards-iii.jpg";
+import HACKMERCED_III_PRIZES from "../../assets/images/prizes-iii.jpg";
+import HACKMERCED_III_JUDGES from "../../assets/images/judges-iii.jpg";
+import HACKMERCED_III_RED_BULL from "../../assets/images/redbull.jpg";
 
 // HackMerced IV
-import HACKING from "../../assets/images/hackers2.jpg";
-import PRESENTER from "../../assets/images/presenter.jpg";
-import PRESENTATIONS from "../../assets/images/presentations.jpg";
-import HACKIV from "../../assets/images/hackiv.jpg";
-import JUDGES from "../../assets/images/judges.jpg";
-import AWARDS from "../../assets/images/awards2.jpg";
+import HACKMERCED_IV_HACKING from "../../assets/images/hackers2.jpg";
+import HACKMERCED_IV_PRESENTER from "../../assets/images/presenter.jpg";
+import HACKMERCED_IV_PRESENTATIONS from "../../assets/images/presentations.jpg";
+import HACKMERCED_IV_HACKERS from "../../assets/images/hackiv.jpg";
+import HACKMERCED_IV_JUDGES from "../../assets/images/judges.jpg";
+import HACKMERCED_IV_AWARDS from "../../assets/images/awards2.jpg";
 
 // HackMerced V
-import HACKERS from "../../assets/images/hackers.jpg";
-import HMFOODV from "../../assets/images/hmfood-v.jpg";
-import CITRIS from "../../assets/images/citris.jpg";
-import SPONSORSV from "../../assets/images/sponsors-v.jpg";
-import HEALTHWINNER from "../../assets/images/health2.jpg";
-import SHUBAWARD from "../../assets/images/shub-award.jpg";
+import HACKMERCED_V_HACKERS from "../../assets/images/hackers.jpg";
+import HACKMERCED_V_FOOD from "../../assets/images/hmfood-v.jpg";
+import HACKMERCED_V_CITRIS from "../../assets/images/citris.jpg";
+import HACKMERCED_V_SPONSORS from "../../assets/images/sponsors-v.jpg";
+import HACKMERCED_V_HEALTH_WINNER from "../../assets/images/health2.jpg";
+import HACKMERCED_V_SHUB_AWARD from "../../assets/images/shub-award.jpg";
 
-// HackMerced V
-import CLOSINGCEREMONY from "../../assets/images/closing-ceremony.png";
-import OPENINGCEREMONY from "../../assets/images/openingceremony.png";
-import VIRTUALTEAM from "../../assets/images/team-members-virtual.png";
-import BOBROSS from "../../assets/images/bob-ross-painting.jpg";
-import REACTWS from "../../assets/images/react-native-workshop.png";
-import VIRTUALSTICKERS from "../../assets/images/virtual-stickers.jpg";
+// HackMerced VI
+import HACKMERCED_VI_CLOSING_CEREMONY from "../../assets/images/closing-ceremony.png";
+import HACKMERCED_VI_OPENING_CEREMONY from "../../assets/images/openingceremony.png";
+import HACKMERCED_VI_VIRTUAL_TEAM from "../../assets/images/team-members-virtual.png";
+import HACKMERCED_VI_BOB_ROSS from "../../assets/images/bob-ross-painting.jpg";
+import HACKMERCED_VI_REACT_NATIVE_WORKSHOP from "../../assets/images/react-native-workshop.png";
+import HACKMERCED_VI_VIRTUAL_STICKERS from "../../assets/images/virtual-stickers.jpg";
 
 const Home: FC = (): JSX.Element => {
     return (
@@ -66,9 +66,16 @@ const Home: FC = (): JSX.Element => {
                 numberOfWorkshops={11}
                 numberOfSponsors={14}
             />
-             <PastHackathonsGallery
+            <PastHackathonsGallery
                 iteration={"VI"}
-                images={[OPENINGCEREMONY, VIRTUALTEAM, BOBROSS, VIRTUALSTICKERS, REACTWS, CLOSINGCEREMONY]}
+                images={[
+                    HACKMERCED_VI_OPENING_CEREMONY,
+                    HACKMERCED_VI_VIRTUAL_TEAM,
+                    HACKMERCED_VI_BOB_ROSS,
+                    HACKMERCED_VI_VIRTUAL_STICKERS,
+                    HACKMERCED_VI_REACT_NATIVE_WORKSHOP,
+                    HACKMERCED_VI_CLOSING_CEREMONY,
+                ]}
             />
             <Successes
                 iteration={"V"}
@@ -81,7 +88,14 @@ const Home: FC = (): JSX.Element => {
             />
             <PastHackathonsGallery
                 iteration={"V"}
-                images={[HACKERS, HMFOODV, CITRIS, SPONSORSV, HEALTHWINNER, SHUBAWARD]}
+                images={[
+                    HACKMERCED_V_HACKERS,
+                    HACKMERCED_V_FOOD,
+                    HACKMERCED_V_CITRIS,
+                    HACKMERCED_V_SPONSORS,
+                    HACKMERCED_V_HEALTH_WINNER,
+                    HACKMERCED_V_SHUB_AWARD,
+                ]}
             />
             <Successes
                 iteration={"IV"}
@@ -94,7 +108,14 @@ const Home: FC = (): JSX.Element => {
             />
             <PastHackathonsGallery
                 iteration={"IV"}
-                images={[HACKING, PRESENTER, PRESENTATIONS, HACKIV, JUDGES, AWARDS]}
+                images={[
+                    HACKMERCED_IV_HACKING,
+                    HACKMERCED_IV_PRESENTER,
+                    HACKMERCED_IV_PRESENTATIONS,
+                    HACKMERCED_IV_HACKERS,
+                    HACKMERCED_IV_JUDGES,
+                    HACKMERCED_IV_AWARDS,
+                ]}
             />
             <Successes
                 iteration={"III"}
@@ -107,7 +128,14 @@ const Home: FC = (): JSX.Element => {
             />
             <PastHackathonsGallery
                 iteration={"III"}
-                images={[MLHCUPSTACK, WINNERSIII, AWARDSIII, PRIZES, JUDGESIII, REDBULL]}
+                images={[
+                    HACKMERCED_III_MLH_CUP_STACK,
+                    HACKMERCED_III_WINNERS,
+                    HACKMERCED_III_AWARDS,
+                    HACKMERCED_III_PRIZES,
+                    HACKMERCED_III_JUDGES,
+                    HACKMERCED_III_RED_BULL,
+                ]}
             />
             <Successes
                 iteration={"II"}
@@ -120,7 +148,14 @@ const Home: FC = (): JSX.Element => {
             />
             <PastHackathonsGallery
                 iteration={"II"}
-                images={[SPEAKERII, HACKERSII, COLLABORATION, CHECKINGINII, MLHII, SPONSORSII]}
+                images={[
+                    HACKMERCED_II_SPEAKER,
+                    HACKMERCED_II_HACKERS,
+                    HACKMERCED_II_COLLABORATION,
+                    HACKMERCED_II_CHECK_IN,
+                    HACKMERCED_II_MLH,
+                    HACKMERCED_II_SPONSORS,
+                ]}
             />
             <Successes
                 iteration={""}
@@ -131,7 +166,17 @@ const Home: FC = (): JSX.Element => {
                 numberOfWorkshops={0}
                 numberOfSponsors={7}
             />
-            <PastHackathonsGallery iteration={null} images={[CHECKIN, HMFOOD, MACHINE, TEACHING, OLDTEAM, TUTOR]} />
+            <PastHackathonsGallery
+                iteration={null}
+                images={[
+                    HACKMERCED_I_CHECK_IN,
+                    HACKMERCED_I_FOOD,
+                    HACKMERCED_I_MACHINE,
+                    HACKMERCED_I_TEACHING,
+                    HACKMERCED_I_OLD_TEAM,
+                    HACKMERCED_I_TUTOR,
+                ]}
+            />
             <Footer />
         </main>
     );
