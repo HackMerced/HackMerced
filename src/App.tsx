@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, Fragment } from "react";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { createHashHistory } from "history";
 
@@ -9,7 +9,7 @@ import ContactUs from "./pages/ContactUs";
 import Application from "./pages/Application";
 // import Login from "./pages/Login";
 // import ResetPassword from "./pages/ResetPassword";
-import Error from "./components/404";
+import Error from "./pages/404";
 import DesignMerced from "./pages/DesignMerced";
 import HackMercedVI from './pages/HackMercedVI';
 // import SignUp from "./pages/SignUp";
@@ -48,10 +48,23 @@ const App: FC = (): JSX.Element => {
                     path="/signup"
                     render={(): JSX.Element => <SignUp updateHacker={setHacker} updateToken={setToken} />}
                 /> */}
-                <Route path="/designmerced" component={DesignMerced} />
-                <Route exact path="/hackmercedvi" component={HackMercedVI} />
+                <Route
+                    path="/archive"
+                    render={({ match: { url } }): JSX.Element => (
+                        <Fragment>
+                            <Route exact path={`${url}/designmerced`}>
+                                <DesignMerced />
+                            </Route>
+                            <Route exact path={`${url}/hackmercedvi`}>
+                                <HackMercedVI />
+                            </Route>
+                            <Route exact path={`${url}/live`}>
+                                <Dashboard />
+                            </Route>
+                        </Fragment>
+                    )}
+                />
                 <Route path="/maintenance" component={Maintenance} />
-                <Route path="/live" component={Dashboard} />
                 <Route path="*" component={Error} />
                 <Redirect from="/HackMerced" to="/" />
             </Switch>
