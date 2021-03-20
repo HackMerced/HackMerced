@@ -10,5 +10,12 @@
     },
     "[typescript]": {
         "editor.tabSize": 4
-    }
+    },
+    "cSpell.words": [
+        "CITRIS",
+        "HACKMERCED",
+        "Hackathons",
+        "Merced",
+        "SHUB"
+    ]
 }
