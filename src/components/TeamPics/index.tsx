@@ -19,74 +19,74 @@ import JANELLE from "../../assets/images/janelle.jpg";
 
 import "./styles.scss";
 
-const TeamPics: FC = (): JSX.Element => {
-    const team: Array<{ url: string; src: string }> = [
-        {
-            url: "https://www.linkedin.com/in/trumanjfchan/",
-            src: TRUMAN,
-        },
-        {
-            url: "https://www.linkedin.com/in/lorenzo-scaturchio-62203b160/",
-            src: LORENZO,
-        },
-        {
-            url: "https://www.linkedin.com/in/maryfrancine/",
-            src: MARY,
-        },
-        {
-            url: "https://www.linkedin.com/in/adriandarian/",
-            src: ADRIAN,
-        },
-        {
-            url: "https://www.linkedin.com/in/athena-siaotong/",
-            src: ATHENA,
-        },
-        {
-            url: "https://www.linkedin.com/in/shiv248/",
-            src: SHIV,
-        },
-        {
-            url: "https://www.linkedin.com/in/busher-bridi/",
-            src: BUSHER,
-        },
-        {
-            url: "https://www.linkedin.com/in/tuzette-vu-500550100/",
-            src: TUZETTE,
-        },
-        {
-            url: "https://www.linkedin.com/in/manjot-singh-0a41a8195/",
-            src: MANJOT,
-        },
-        {
-            url: "https://www.linkedin.com/in/intiseraziz/",
-            src: INTISER,
-        },
-        {
-            url: "https://www.linkedin.com/in/alisson-ross-6a7b75182/",
-            src: ALISSON,
-        },
-        {
-            url: "https://www.linkedin.com/in/marthen-r-nodado/",
-            src: MARTHEN,
-        },
-        {
-            url: "https://www.linkedin.com/in/laurenceamorganiii/",
-            src: LAURENCE,
-        },
-        {
-            url: "https://www.linkedin.com/in/jatnael-montes/",
-            src: JET,
-        },
-        {
-            url: "https://www.linkedin.com/in/joseph-hoang-414836194/",
-            src: JOSEPH,
-        },
-        {
-            url: "https://www.linkedin.com/in/jpjanelleperez/",
-            src: JANELLE,
-        },
-    ];
+const team: Array<{ url: string; src: string }> = [
+    {
+        url: "https://www.linkedin.com/in/trumanjfchan/",
+        src: TRUMAN,
+    },
+    {
+        url: "https://www.linkedin.com/in/lorenzo-scaturchio-62203b160/",
+        src: LORENZO,
+    },
+    {
+        url: "https://www.linkedin.com/in/maryfrancine/",
+        src: MARY,
+    },
+    {
+        url: "https://www.linkedin.com/in/adriandarian/",
+        src: ADRIAN,
+    },
+    {
+        url: "https://www.linkedin.com/in/athena-siaotong/",
+        src: ATHENA,
+    },
+    {
+        url: "https://www.linkedin.com/in/shiv248/",
+        src: SHIV,
+    },
+    {
+        url: "https://www.linkedin.com/in/busher-bridi/",
+        src: BUSHER,
+    },
+    {
+        url: "https://www.linkedin.com/in/tuzette-vu-500550100/",
+        src: TUZETTE,
+    },
+    {
+        url: "https://www.linkedin.com/in/manjot-singh-0a41a8195/",
+        src: MANJOT,
+    },
+    {
+        url: "https://www.linkedin.com/in/intiseraziz/",
+        src: INTISER,
+    },
+    {
+        url: "https://www.linkedin.com/in/alisson-ross-6a7b75182/",
+        src: ALISSON,
+    },
+    {
+        url: "https://www.linkedin.com/in/marthen-r-nodado/",
+        src: MARTHEN,
+    },
+    {
+        url: "https://www.linkedin.com/in/laurenceamorganiii/",
+        src: LAURENCE,
+    },
+    {
+        url: "https://www.linkedin.com/in/jatnael-montes/",
+        src: JET,
+    },
+    {
+        url: "https://www.linkedin.com/in/joseph-hoang-414836194/",
+        src: JOSEPH,
+    },
+    {
+        url: "https://www.linkedin.com/in/jpjanelleperez/",
+        src: JANELLE,
+    },
+];
 
+const TeamPics: FC = (): JSX.Element => {
     const teampics = (team: Array<{ url: string; src: string }>): JSX.Element => {
         const teamArray: Array<JSX.Element> = [];
 

@@ -1,7 +1,7 @@
 /* HEXAGON DESIGN code taken from and edited: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
 
-.TEAMPICTURE {
-    #grid {
+.home__team-pictures {
+    .grid {
         position: relative;
         width: 80%; /* Scales original sizes */
         margin: 0 auto;
@@ -15,7 +15,7 @@
     }
 
     /* Parallelogram */
-    #grid li {
+    .grid li {
         list-style-type: none;
         position: relative;
         float: left;
@@ -31,7 +31,7 @@
         visibility: hidden;
     }
 
-    #grid li .hexagon {
+    .grid li .hexagon {
         position: absolute;
         top: 0;
         left: 0;
@@ -47,25 +47,25 @@
     }
 
     /* Makes all children of li visable */
-    #grid li * {
+    .grid li * {
         visibility: visible;
     }
 
     /* Makes every 2 child have padding on left and right of itself */
-    #grid li:nth-child(2n + 2) {
+    .grid li:nth-child(2n + 2) {
         margin: 0 1%;
     }
 
     /* Manually push first row to center */
-    #grid li:nth-child(1) {
+    .grid li:nth-child(1) {
         margin-left: 8.6%;
     }
 
     /* Translates each child in the second row to the right a little bit, and moves them down. */
-    #grid li:nth-child(6),
-    #grid li:nth-child(7),
-    #grid li:nth-child(8),
-    #grid li:nth-child(9) {
+    .grid li:nth-child(6),
+    .grid li:nth-child(7),
+    .grid li:nth-child(8),
+    .grid li:nth-child(9) {
         margin-top: -3.35%;
         -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
         -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
@@ -75,21 +75,21 @@
     }
 
     /* 6th child (2nd row): Move into interlocking position, which moves the rest of the children in the row. */
-    #grid li:nth-child(6) {
+    .grid li:nth-child(6) {
         margin-left: 9%;
     }
 
     /* Forces 10th child to go to the next row. */
-    #grid li:nth-child(9) {
+    .grid li:nth-child(9) {
         margin-right: 20%;
     }
 
     /* Translates each child in the third row down */
-    #grid li:nth-child(10),
-    #grid li:nth-child(11),
-    #grid li:nth-child(12),
-    #grid li:nth-child(13),
-    #grid li:nth-child(14) {
+    .grid li:nth-child(10),
+    .grid li:nth-child(11),
+    .grid li:nth-child(12),
+    .grid li:nth-child(13),
+    .grid li:nth-child(14) {
         margin-top: -3.35%;
         -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
         -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
@@ -99,18 +99,18 @@
     }
 
     /* Forces 15th child to go to the next row. */
-    #grid li:nth-child(14) {
+    .grid li:nth-child(14) {
         margin-right: 20%;
     }
 
     /* Manually push fouth row to center */
-    #grid li:nth-child(15) {
+    .grid li:nth-child(15) {
         margin-left: 24.7%;
     }
 
     /* Translates each child in the fourth row down */
-    #grid li:nth-child(15),
-    #grid li:nth-child(16) {
+    .grid li:nth-child(15),
+    .grid li:nth-child(16) {
         margin-top: -3.35%;
         -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
         -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
@@ -121,7 +121,7 @@
 
     /* Medium-Small devices (phones, portrait tablets, and large phones, 850px and lower) */
     @media only screen and (max-width: 850px) {
-        #grid {
+        .grid {
             position: relative;
             width: 100%; /* Scales original sizes */
             margin: 0 auto;
