@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import { FAQData } from "../../assets/data";
+import { FAQData } from "../../assets/faq";
 import Accordian from "../Accordian";
 import "./styles.scss";
 
