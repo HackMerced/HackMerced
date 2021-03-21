@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
-import { FAQData } from "../../assets/data";
-import Accordian from '../Accordian';
-import './HMVIFAQ.scss';
+import { FAQData } from "../../assets/faq";
+import Accordian from "../Accordian";
+import "./HMVIFAQ.scss";
 
 const HMVIFAQ: FC = () => {
     return (
