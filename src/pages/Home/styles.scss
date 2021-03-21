@@ -1,6 +1,5 @@
-$titles: black;
-
 .home {
+    // Home page heading
     &__heading {
         background-image: linear-gradient(#ffb181, #ffb26e);
         height: 810px;
@@ -16,6 +15,7 @@ $titles: black;
             height: 400px;
         }
 
+        // Scrolling clouds in the background of the heading
         &__wave {
             overflow: hidden;
 
@@ -204,25 +204,21 @@ $titles: black;
                 width: 35%;
             }
 
-            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            /* Large devices (large laptops and desktops, 1200px and up) */
             @media only screen and (min-width: 1200px) {
                 margin: -20% auto 0% 5%;
                 width: 35%;
             }
 
-            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            /* Extra large devices (extra large laptops and desktops, 1500px and up) */
             @media only screen and (min-width: 1500px) {
                 margin: -15% auto 0% 5%;
                 width: 32%;
             }
         }
     }
-}
 
-.about-us {
-    padding: 3% 0% 2% 0%;
-
-    &__title {
+    &__section-title {
         font-weight: bold;
         color: black;
         text-align: center;
@@ -253,7 +249,7 @@ $titles: black;
         opacity: 50%;
         border-width: 0.5rem;
         border-radius: 10px;
-        margin: 0 auto;
+        margin: 0 auto 1rem auto;
 
         /* Smallest devices (iphones, 350px and lower) */
         @media only screen and (max-width: 350px) {
@@ -281,419 +277,286 @@ $titles: black;
         }
     }
 
-    &__content {
-        line-height: 38px;
-        color: #000;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    &__about-us {
+        padding: 3% 0% 2% 0%;
 
-        @media (min-width: 1000px) {
-            flex-direction: row;
-        }
-
-        &__description {
-            text-decoration: bold;
+        &__content {
+            line-height: 38px;
+            color: #000;
+            display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-            p {
-                text-align: left;
+            @media (min-width: 1000px) {
+                flex-direction: row;
+            }
 
-                @media (max-width: 350px) {
-                    width: 80%;
-                    margin-left: 10%;
-                    font-size: 105%;
-                }
+            &__description {
+                text-decoration: bold;
+                flex-direction: column;
 
-                @media (min-width: 350px) {
-                    width: 80%;
-                    margin-left: 10%;
-                    font-size: 105%;
-                }
+                p {
+                    text-align: left;
 
-                @media (min-width: 600px) and (max-width: 850px) {
-                    margin-left: 15%;
-                    width: 70%;
+                    @media (max-width: 350px) {
+                        width: 80%;
+                        margin-left: 10%;
+                        font-size: 105%;
+                    }
+
+                    @media (min-width: 350px) {
+                        width: 80%;
+                        margin-left: 10%;
+                        font-size: 105%;
+                    }
+
+                    @media (min-width: 600px) and (max-width: 850px) {
+                        margin-left: 15%;
+                        width: 70%;
+                    }
+
+                    @media (min-width: 850px) {
+                        width: 70%;
+                        margin-left: 14%;
+                        font-size: 85%;
+                    }
+
+                    @media (min-width: 1270px) {
+                        width: 80%;
+                        margin-left: 16%;
+                        font-size: 135%;
+                    }
+
+                    @media (min-width: 1800px) {
+                        width: 80%;
+                        margin-left: 4%;
+                        font-size: 25px;
+                    }
                 }
 
                 @media (min-width: 850px) {
-                    width: 70%;
-                    margin-left: 14%;
-                    font-size: 85%;
+                    width: 100%;
                 }
 
                 @media (min-width: 1270px) {
-                    width: 80%;
-                    margin-left: 16%;
-                    font-size: 135%;
-                }
-
-                @media (min-width: 1800px) {
-                    width: 80%;
-                    margin-left: 4%;
-                    font-size: 25px;
+                    width: 50%;
                 }
             }
 
-            @media (min-width: 850px) {
-                width: 100%;
-            }
+            &__team-picture {
+                width: 80%;
+                border-radius: 25px;
 
-            @media (min-width: 1270px) {
-                width: 50%;
-            }
-        }
+                @media (min-width: 600px) {
+                    width: 70%;
+                    margin-right: 2%;
+                }
 
-        &__team-picture {
-            width: 80%;
-            border-radius: 25px;
+                @media (min-width: 1000px) {
+                    margin-top: 2%;
+                    width: 50%;
+                }
 
-            @media (min-width: 600px) {
-                width: 70%;
-                margin-right: 2%;
-            }
-
-            @media (min-width: 1000px) {
-                margin-top: 2%;
-                width: 50%;
-            }
-
-            @media (min-width: 1270px) {
-                width: 50%;
-                max-width: 650px;
+                @media (min-width: 1270px) {
+                    width: 50%;
+                    max-width: 650px;
+                }
             }
         }
     }
-}
 
-.PAST-WINNERS {
-    .past-winners-title {
-        padding: 3% 0% 0.5% 0%;
-        font-weight: bold;
-        color: $titles;
-        text-align: center;
+    &__past-winners {
+        &__list {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5px;
+            margin: 1% 0% 0% 0%;
 
-        /* Small devices (iphones, 350px and up) */
-        @media only screen and (min-width: 350px) {
-            font-size: 25px;
-        }
+            &__past-winner {
+                flex: 1 1 auto;
+                margin: 1% 0% 3% 0%;
 
-        /* Medium devices (landscape tablets, 768px and up) */
-        @media only screen and (min-width: 768px) {
-            font-size: 25px;
-        }
+                &__icon {
+                    color: #ffb26e;
+                    font-size: 35px;
 
-        /* Large devices (laptops/desktops, 992px and up) */
-        @media only screen and (min-width: 992px) {
-            font-size: 35px;
-        }
+                    /* Medium devices (landscape tablets, 768px and up) */
+                    @media only screen and (min-width: 768px) {
+                        font-size: 40px;
+                    }
 
-        /* Extra large devices (large laptops and desktops, 1200px and up) */
-        @media only screen and (min-width: 1200px) {
-            font-size: 35px;
-        }
-    }
+                    /* Large devices (laptops/desktops, 992px and up) */
+                    @media only screen and (min-width: 992px) {
+                        font-size: 45px;
+                    }
 
-    .break-line {
-        border: 0.5rem solid #ffb181;
-        opacity: 50%;
-        border-width: 0.5rem;
-        border-radius: 25px;
-        margin: 0 auto;
-        // box-shadow: -6px -6px 16px #fff,
-        // 6px 6px 16px #696865;
+                    /* Extra large devices (large laptops and desktops, 1200px and up) */
+                    @media only screen and (min-width: 1200px) {
+                        font-size: 50px;
+                    }
+                }
 
-        /* Smallest devices (iphones, 350px and lower) */
-        @media only screen and (max-width: 350px) {
-            width: 30%;
-        }
+                &__category {
+                    font-weight: bold;
+                    padding: 5% 0% 0% 0%;
+                }
 
-        /* Small devices (iphones, 350px and up) */
-        @media only screen and (min-width: 350px) {
-            width: 30%;
-        }
+                &__group {
+                    padding: 2% 0% 0% 0%;
+                }
 
-        /* Medium devices (landscape tablets, 768px and up) */
-        @media only screen and (min-width: 768px) {
-            width: 25%;
-        }
+                &__category,
+                &__group {
+                    color: black;
+                }
 
-        /* Large devices (laptops/desktops, 992px and up) */
-        @media only screen and (min-width: 992px) {
-            width: 20%;
-        }
-
-        /* Extra large devices (large laptops and desktops, 1200px and up) */
-        @media only screen and (min-width: 1200px) {
-            width: 20%;
-        }
-    }
-
-    .winners {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 5px;
-        margin: 1% 0% 0% 0%;
-
-        li {
-            flex: 1 1 auto;
-            margin: 1% 0% 3% 0%;
-
-            .winner-icon {
-                color: #ffb26e;
-                font-size: 35px;
-
-                /* Medium devices (landscape tablets, 768px and up) */
-                @media only screen and (min-width: 768px) {
-                    font-size: 40px;
+                /* Small devices (iphones, 350px and up) */
+                @media only screen and (min-width: 350px) {
+                    width: 30%;
                 }
 
                 /* Large devices (laptops/desktops, 992px and up) */
                 @media only screen and (min-width: 992px) {
-                    font-size: 45px;
+                    width: 19%;
                 }
-
-                /* Extra large devices (large laptops and desktops, 1200px and up) */
-                @media only screen and (min-width: 1200px) {
-                    font-size: 50px;
-                }
-            }
-            h5 {
-                padding: 5% 0% 0% 0%;
-            }
-            h6 {
-                padding: 2% 0% 0% 0%;
-            }
-
-            .winner-category,
-            .winner-group {
-                color: $titles;
-            }
-
-            .winner-category {
-                font-weight: bold;
-            }
-
-            /* Small devices (iphones, 350px and up) */
-            @media only screen and (min-width: 350px) {
-                width: 30%;
-            }
-
-            /* Large devices (laptops/desktops, 992px and up) */
-            @media only screen and (min-width: 992px) {
-                width: 19%;
             }
         }
     }
-}
 
-/* HEXAGON DESIGN code taken from and edited: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
-.home__team-pictures {
-    .grid {
-        position: relative;
-        width: 80%; /* Scales original sizes */
-        margin: 0 auto;
-        padding: 0 0 5% 0; /* Padding under Grid component (under last row of hexagons) */
-    }
-
-    .clear:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-
-    /* Parallelogram */
-    .grid li {
-        list-style-type: none;
-        position: relative;
-        float: left;
-        width: 14.85714285714286%; /* Directly related to original hexagon size */
-        padding: 0% 0% 17% 0%; /* Directly related to original hexagon size */
-        -o-transform: rotate(-60deg) skewY(30deg);
-        -moz-transform: rotate(-60deg) skewY(30deg);
-        -webkit-transform: rotate(-60deg) skewY(30deg);
-        -ms-transform: rotate(-60deg) skewY(30deg);
-        transform: rotate(-60deg) skewY(30deg);
-        background: #fd005f;
-        overflow: hidden;
-        visibility: hidden;
-    }
-
-    .grid li .hexagon {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #fdbf00;
-        -o-transform: skewY(-30deg) rotate(60deg);
-        -moz-transform: skewY(-30deg) rotate(60deg);
-        -webkit-transform: skewY(-30deg) rotate(60deg);
-        -ms-transform: skewY(-30deg) rotate(60deg);
-        transform: skewY(-30deg) rotate(60deg);
-        overflow: hidden;
-    }
-
-    /* Makes all children of li visable */
-    .grid li * {
-        visibility: visible;
-    }
-
-    /* Makes every 2 child have padding on left and right of itself */
-    .grid li:nth-child(2n + 2) {
-        margin: 0 1%;
-    }
-
-    /* Manually push first row to center */
-    .grid li:nth-child(1) {
-        margin-left: 8.6%;
-    }
-
-    /* Translates each child in the second row to the right a little bit, and moves them down. */
-    .grid li:nth-child(6),
-    .grid li:nth-child(7),
-    .grid li:nth-child(8),
-    .grid li:nth-child(9) {
-        margin-top: -3.35%;
-        -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        transform: translateX(50%) rotate(-60deg) skewY(30deg);
-    }
-
-    /* 6th child (2nd row): Move into interlocking position, which moves the rest of the children in the row. */
-    .grid li:nth-child(6) {
-        margin-left: 9%;
-    }
-
-    /* Forces 10th child to go to the next row. */
-    .grid li:nth-child(9) {
-        margin-right: 20%;
-    }
-
-    /* Translates each child in the third row down */
-    .grid li:nth-child(10),
-    .grid li:nth-child(11),
-    .grid li:nth-child(12),
-    .grid li:nth-child(13),
-    .grid li:nth-child(14) {
-        margin-top: -3.35%;
-        -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        transform: translateX(50%) rotate(-60deg) skewY(30deg);
-    }
-
-    /* Forces 15th child to go to the next row. */
-    .grid li:nth-child(14) {
-        margin-right: 20%;
-    }
-
-    /* Manually push fouth row to center */
-    .grid li:nth-child(15) {
-        margin-left: 24.7%;
-    }
-
-    /* Translates each child in the fourth row down */
-    .grid li:nth-child(15),
-    .grid li:nth-child(16) {
-        margin-top: -3.35%;
-        -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        transform: translateX(50%) rotate(-60deg) skewY(30deg);
-    }
-
-    /* Medium-Small devices (phones, portrait tablets, and large phones, 850px and lower) */
-    @media only screen and (max-width: 850px) {
-        .grid {
+    /* HEXAGON DESIGN code taken from and edited: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
+    &__team-pictures {
+        &__grid {
             position: relative;
-            width: 100%; /* Scales original sizes */
+            width: 80%; /* Scales original sizes */
             margin: 0 auto;
             padding: 0 0 5% 0; /* Padding under Grid component (under last row of hexagons) */
+
+            /* Medium-Small devices (phones, portrait tablets, and large phones, 850px and lower) */
+            @media only screen and (max-width: 850px) {
+                position: relative;
+                width: 100%; /* Scales original sizes */
+                margin: 0 auto;
+                padding: 0 0 5% 0; /* Padding under Grid component (under last row of hexagons) */
+            }
+
+            /* Parallelogram */
+            &__items {
+                list-style-type: none;
+                position: relative;
+                float: left;
+                width: 14.85714285714286%; /* Directly related to original hexagon size */
+                padding: 0% 0% 17% 0%; /* Directly related to original hexagon size */
+                -o-transform: rotate(-60deg) skewY(30deg);
+                -moz-transform: rotate(-60deg) skewY(30deg);
+                -webkit-transform: rotate(-60deg) skewY(30deg);
+                -ms-transform: rotate(-60deg) skewY(30deg);
+                transform: rotate(-60deg) skewY(30deg);
+                background: #fd005f;
+                overflow: hidden;
+                visibility: hidden;
+
+                &__hexagon {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #fdbf00;
+                    -o-transform: skewY(-30deg) rotate(60deg);
+                    -moz-transform: skewY(-30deg) rotate(60deg);
+                    -webkit-transform: skewY(-30deg) rotate(60deg);
+                    -ms-transform: skewY(-30deg) rotate(60deg);
+                    transform: skewY(-30deg) rotate(60deg);
+                    overflow: hidden;
+                }
+
+                /* Makes all children of li visible */
+                * {
+                    visibility: visible;
+                }
+
+                /* Makes every 2 child have padding on left and right of itself */
+                &:nth-child(2n + 2) {
+                    margin: 0 1%;
+                }
+
+                /* Manually push first row to center */
+                &:nth-child(1) {
+                    margin-left: 8.6%;
+                }
+
+                /* Translates each child in the second row to the right a little bit, and moves them down. */
+                &:nth-child(6),
+                &:nth-child(7),
+                &:nth-child(8),
+                &:nth-child(9) {
+                    margin-top: -3.35%;
+                    -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                    -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                    -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                    -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                    transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                }
+
+                /* 6th child (2nd row): Move into interlocking position, which moves the rest of the children in the row. */
+                &:nth-child(6) {
+                    margin-left: 9%;
+                }
+
+                /* Forces 10th child to go to the next row. */
+                &:nth-child(9) {
+                    margin-right: 20%;
+                }
+
+                /* Translates each child in the third row down */
+                &:nth-child(10),
+                &:nth-child(11),
+                &:nth-child(12),
+                &:nth-child(13),
+                &:nth-child(14) {
+                    margin-top: -3.35%;
+                    -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                    -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                    -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                    -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                    transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                }
+
+                /* Forces 15th child to go to the next row. */
+                &:nth-child(14) {
+                    margin-right: 20%;
+                }
+
+                /* Manually push fourth row to center */
+                &:nth-child(15) {
+                    margin-left: 24.7%;
+                }
+
+                /* Translates each child in the fourth row down */
+                &:nth-child(15),
+                &:nth-child(16) {
+                    margin-top: -3.35%;
+                    -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                    -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                    -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                    -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                    transform: translateX(50%) rotate(-60deg) skewY(30deg);
+                }
+            }
         }
-    }
 
-    .Header {
-        padding: 3% 0% 2% 0%;
-        text-align: center;
-
-        h1 {
-            color: black;
-            font-weight: bold;
+        .clear:after {
+            content: "";
+            display: block;
+            clear: both;
         }
 
-        /* Media Queries taken from and edited: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
-
-        /* Small devices (iphones, 350px and up) */
-        @media only screen and (min-width: 350px) {
-            font-size: 25px;
-        }
-
-        /* Small devices (phones, portrait tablets, and large phones, 600px and up) */
-        @media only screen and (min-width: 600px) {
-            font-size: 25px;
-        }
-
-        /* Medium devices (landscape tablets, 768px and up) */
-        @media only screen and (min-width: 768px) {
-            font-size: 25px;
-        }
-
-        /* Large devices (laptops/desktops, 992px and up) */
-        @media only screen and (min-width: 992px) {
-            font-size: 35px;
-        }
-
-        /* Extra large devices (large laptops and desktops, 1200px and up) */
-        @media only screen and (min-width: 1200px) {
-            font-size: 40px;
-        }
-    }
-
-    .CenterHexagons {
-        margin-left: 5.5%;
-    }
-
-    .break-line {
-        border: 0.5rem solid #ffb181;
-        opacity: 50%;
-        border-width: 0.5rem;
-        border-radius: 25px;
-        margin: 0 auto;
-        // box-shadow: -6px -6px 16px #fff,
-        // 6px 6px 16px #696865;
-
-        /* Smallest devices (iphones, 350px and lower) */
-        @media only screen and (max-width: 350px) {
-            width: 30%;
-        }
-
-        /* Small devices (iphones, 350px and up) */
-        @media only screen and (min-width: 350px) {
-            width: 30%;
-        }
-
-        /* Medium devices (landscape tablets, 768px and up) */
-        @media only screen and (min-width: 768px) {
-            width: 25%;
-        }
-
-        /* Large devices (laptops/desktops, 992px and up) */
-        @media only screen and (min-width: 992px) {
-            width: 20%;
-        }
-
-        /* Extra large devices (large laptops and desktops, 1200px and up) */
-        @media only screen and (min-width: 1200px) {
-            width: 20%;
+        .CenterHexagons {
+            margin-left: 5.5%;
         }
     }
 }
