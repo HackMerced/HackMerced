@@ -29,15 +29,15 @@ type WinnersProps = {
 
 const generateTeamPics = (team: Array<TeamProps>): JSX.Element => {
     const teamArray: Array<JSX.Element> = team.map((member: TeamProps, index: number) => (
-        <li key={index} className="home__team-pictures__grid__items">
+        <li key={index} className="home__team-pictures__grid__items__item">
             <a
                 href={member.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="home__team-pictures__grid__items__hexagon"
+                className="home__team-pictures__grid__items__item__hexagon"
             >
                 <img
-                    className="home__team-pictures__grid__items__hexagon__picture"
+                    className="home__team-pictures__grid__items__item__hexagon__picture"
                     src={member.src}
                     alt={`${member.firstName} ${member.lastName}`}
                 />
@@ -45,7 +45,7 @@ const generateTeamPics = (team: Array<TeamProps>): JSX.Element => {
         </li>
     ));
 
-    return <ul className="CenterHexagons">{teamArray}</ul>;
+    return <ul className="home__team-pictures__grid__items">{teamArray}</ul>;
 };
 
 const generateWinners = (winners: Array<WinnersProps>): JSX.Element => {
@@ -95,10 +95,8 @@ const Home: FC = (): JSX.Element => {
                         alt="HackMerced Title Image"
                         className="home__heading__title__img"
                     />
-                    <div className="home__heading__title__text text-gray-100">
-                        The biggest San Joaquin Valley hackathon.
-                    </div>
-                    <div className="home__heading__title__sub-text text-gray-100">
+                    <div className="home__heading__title__text">The biggest San Joaquin Valley hackathon.</div>
+                    <div className="home__heading__title__sub-text">
                         Stay updated with HackMerced and subscribe to our email list!
                     </div>
                 </section>
