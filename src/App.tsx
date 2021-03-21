@@ -3,7 +3,7 @@ import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { createHashHistory } from "history";
 
 import Home from "./pages/Home";
-import Hackathons from "./pages/Hackathons";
+import PastHackathons from "./pages/PastHackathons";
 import SponsorUs from "./pages/SponsorUs";
 import ContactUs from "./pages/ContactUs";
 import Application from "./pages/Application";
@@ -11,7 +11,7 @@ import Application from "./pages/Application";
 // import ResetPassword from "./pages/ResetPassword";
 import Error from "./pages/404";
 import DesignMerced from "./pages/DesignMerced";
-import HackMercedVI from './pages/HackMercedVI';
+import HackMercedVI from "./pages/HackMercedVI";
 // import SignUp from "./pages/SignUp";
 import Maintenance from "./pages/Maintenance";
 import Dashboard from "./pages/Dashboard";
@@ -31,7 +31,7 @@ const App: FC = (): JSX.Element => {
                 <Route exact path="/" component={Home} />
                 <Route path="/sponsors" component={SponsorUs} />
                 <Route path="/contact-us" component={ContactUs} />
-                <Route path="/past-hackathons" component={Hackathons} />
+                <Route path="/past-hackathons" component={PastHackathons} />
                 <Route path="/application" component={Application} />
                 {/* <Route
                     path="/login"

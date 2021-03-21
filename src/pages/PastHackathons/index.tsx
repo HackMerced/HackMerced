@@ -53,7 +53,7 @@ import HACKMERCED_VI_BOB_ROSS from "../../assets/images/bob-ross-painting.jpg";
 import HACKMERCED_VI_REACT_NATIVE_WORKSHOP from "../../assets/images/react-native-workshop.png";
 import HACKMERCED_VI_VIRTUAL_STICKERS from "../../assets/images/virtual-stickers.jpg";
 
-const Home: FC = (): JSX.Element => {
+const PastHackathons: FC = (): JSX.Element => {
     return (
         <main>
             <Navbar />
@@ -182,4 +182,4 @@ const Home: FC = (): JSX.Element => {
     );
 };
 
-export default Home;
+export default PastHackathons;
