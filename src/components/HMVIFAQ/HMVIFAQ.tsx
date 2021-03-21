@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { FAQData } from "../../stories/data";
+import { FAQData } from "../../assets/data";
 import Accordian from '../Accordian';
 import './HMVIFAQ.scss';
 
