@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
@@ -64,10 +64,10 @@ const generateWinners = (winners: Array<WinnersProps>): JSX.Element => {
 
 const generateSectionHeading = (title: string): JSX.Element => {
     return (
-        <>
+        <Fragment>
             <h1 className="home__section-title">{title}</h1>
             <div className="home__break-line"></div>
-        </>
+        </Fragment>
     );
 };
 
