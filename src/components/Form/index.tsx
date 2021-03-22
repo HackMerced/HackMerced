@@ -36,7 +36,7 @@ const Form: FC<{
             return response.data.status;
         });
 
-        if (status === "success") setSubmitText("🎉 🎉 🎉 Submitted!!! 🎉 🎉 🎉 ");
+        if (status === "success") setSubmitText("Submitted! 🎉  ");
     };
 
     const handleInputChange = (
