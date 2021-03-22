@@ -227,6 +227,7 @@
         font-weight: bold;
         color: black;
         text-align: center;
+        margin-top: 3%;
 
         /* Small devices (iphones, 350px and up) */
         @media only screen and (min-width: 350px) {
@@ -255,6 +256,7 @@
         border-width: 0.5rem;
         border-radius: 10px;
         margin: 0 auto 1rem auto;
+        margin-bottom: 5%;
 
         /* Smallest devices (iphones, 350px and lower) */
         @media only screen and (max-width: 350px) {
