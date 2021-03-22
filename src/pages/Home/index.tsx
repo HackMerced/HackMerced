@@ -92,7 +92,7 @@ const Home: FC = (): JSX.Element => {
                         src={HACKMERCED_TITLE}
                         width="400"
                         height="175"
-                        alt="HackMerced Title Image"
+                        alt="HackMerced Title"
                         className="home__heading__title__img"
                     />
                     <div className="home__heading__title__text">The biggest San Joaquin Valley hackathon.</div>
