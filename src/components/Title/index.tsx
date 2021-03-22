@@ -67,7 +67,7 @@ const Title: FC = (): JSX.Element => {
                     // className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                     onClick={() => {
                         if (false) openModal();
-                        window.location.href = "https://hackmercedvi.typeform.com/to/mY7E1Fug";
+                        window.location.href = "https://hackmercedvi.typeform.com/to/GLB4v3b3";
                     }}
                 >
                     Register to be part of HackMerced Team
