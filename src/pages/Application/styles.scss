@@ -1,99 +1,58 @@
-.Outside-Background {
-    background: #eeebf5;
-    padding: 5% 0% 5% 0%;
-    
-    @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
-        padding-bottom: 2rem;
+.dashboard-application {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 3rem;
+    background: #ffb181;
+    border-radius: 2rem;
+    margin: 0 auto;
+
+    .hackmerced-logo {
+        width: 15%;
+        display: block;
+        margin: 0% auto 2% auto;
+
+        @media only screen and (max-width: 600px) {
+            width: 50%;
+        }
     }
 
-    .application {
+    ::placeholder {
+        color: grey;
+        font-weight: lighter;
+    }
+
+    h3 {
+        font-weight: bolder;
+        font-size: 30px;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    ::placeholder {
+        color: grey;
+    }
+
+    .application-form {
         display: flex;
         flex-direction: column;
-        width: 80%;
-        padding: 3rem;
-        background-image: linear-gradient(#b486ce, #80a0cf);
-        border-radius: 2rem;
-        margin: 0 auto;
 
-        .hackmerced-logo {
-            width: 15%;
-            display: block;
-            margin: 0% auto 2% auto;
-
-            @media only screen and (max-width: 600px) {
-                width: 50%;
-            }
-        }
-
-        h3 {
-            font-weight: bolder;
-            font-size: 30px;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        ::placeholder {
-            color: grey;
-           font-weight: lighter;
-        }
-
-        .application-form {
+        .row {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            width: 100%;
 
-            .row {
-                display: flex;
-                flex-direction: row;
-                width: 100%;
-
-                .cell {
-                    display: flex;
-                    flex-direction: column;
-                    flex-grow: 1;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    width: 50%;
-                    margin: 0 2%;
-
-                    input,
-                    select {
-                        padding: 0 1rem;
-                        margin: 1rem 0;
-                        height: 6vh;
-                        border-radius: 3rem;
-                        color: grey;
-                        font-size: 18px;
-                        width: 100%;
-                    }
-
-                    ::placeholder {
-                        color: grey;
-                        opacity: 1;
-                    }
-
-                    select {
-                        [disabled],
-                        option:disabled {
-                            color: #ccd3dd;
-                        }
-                    }
-                }
-
-                @media only screen and (max-width: 600px) {
-                    flex-direction: column;
-
-                    .cell {
-                        width: 100%;
-                    }
-                }
-            }
-
-            .long-questions {
+            .cell {
                 display: flex;
                 flex-direction: column;
+                flex-grow: 1;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 50%;
                 margin: 0 2%;
 
+                input,
                 select {
-                    width: 100%;
                     padding: 0 1rem;
                     margin: 1rem 0;
                     height: 6vh;
@@ -101,6 +60,11 @@
                     color: grey;
                     font-size: 18px;
                     width: 100%;
+                }
+
+                ::placeholder {
+                    color: grey;
+                    opacity: 1;
                 }
 
                 select {
@@ -111,92 +75,78 @@
                 }
             }
 
-            .submit-application {
-                margin: 2% 2% 0 auto;
-                height: 3.5rem;
-                font-size: 22px;
-                width: 96%;
-                text-align: center;
-                font-weight: bolder;
-                color: #b486ce;
-                background: white;
-                border-radius: 3rem;
-                border: none;
-                cursor: pointer;
-                transition: all 0.2s ease;
+            @media only screen and (max-width: 600px) {
+                flex-direction: column;
 
-                &:active {
-                    background: #b486ce;
-                    color: white;
-                }
-            }
-
-            .file-submission {
-                margin: 2% 2% 0 auto;
-                height: 3.5rem;
-                font-size: 22px;
-                width: 96%;
-                text-align: center;
-                font-weight: bold;
-                color: #b486ce !important;
-                background: white;
-                border-radius: 3rem;
-                border: none;
-                cursor: pointer;
-                transition: all 0.2s ease;
-                padding: 0% 2% 0% 0%;
-
-                &:active {
-                    background: #b486ce;
-                    color: white;
+                .cell {
+                    width: 100%;
                 }
             }
         }
-    }
-}
 
-.select-search {
-    width: 100%;
+        .long-questions {
+            display: flex;
+            flex-direction: column;
+            margin: 0 2%;
 
-    &__input {
-        padding: 0 1rem;
-        margin: 1rem 0;
-        height: 6vh;
-        border-radius: 3rem;
-        font-size: 18px;
-        width: 100%;
-        color: gray;
+            select {
+                width: 100%;
+                padding: 0 1rem;
+                margin: 1rem 0;
+                height: 6vh;
+                border-radius: 3rem;
+                color: grey;
+                font-size: 18px;
+                width: 100%;
+            }
 
-        ::placeholder {
-            color: gray;
+            select {
+                [disabled],
+                option:disabled {
+                    color: #ccd3dd;
+                }
+            }
         }
 
-        &:focus {
-            color: gray;
+        .submit-application {
+            margin: 2% 2% 0 auto;
+            height: 3.5rem;
+            font-size: 22px;
+            width: 96%;
+            text-align: center;
+            font-weight: bolder;
+            color: #ffb181;
+            background: white;
+            border-radius: 3rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &:active {
+                background: #ffb181;
+                color: white;
+            }
+        }
+
+        .file-submission {
+            margin: 2% 2% 0 auto;
+            height: 3.5rem;
+            font-size: 22px;
+            width: 96%;
+            text-align: center;
+            font-weight: bold;
+            color: #ffb181 !important;
+            background: white;
+            border-radius: 3rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            padding: 0% 2% 0% 0%;
+
+            &:active {
+                background: #ffb181;
+                color: white;
+            }
         }
     }
-
-    &__select {
-        position: absolute;
-        z-index: 10;
-        background-color: #eeebf5;
-        color: #b486ce;
-        width: 50%;
-        padding: 2%;
-        border-radius: 3rem;
-    }
-}
-
-.Toastify__toast--default {
-    background: #eeebf5 !important;
-    color: #b486ce !important;
-    border-radius: 10px !important;
-}
-
-.Toastify__progress-bar--default {
-    background: linear-gradient(#b486ce, #80a0cf) !important;
-}
-
-.required {
-    color: rgb(201, 53, 53);
 }

@@ -1,54 +1,64 @@
-import React, { FC } from "react";
+import React, { FC, Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faHandshake, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 import Navbar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Form from "../../components/Form";
-import PASTSPONSORS from "../../assets/images/past-sponsors.png";
+import PAST_SPONSORS from "../../assets/images/past-sponsors.png";
 
 import "./styles.scss";
 
 const SponsorUs: FC = (): JSX.Element => {
     return (
-        <>
+        <Fragment>
             <Navbar />
-            <main className="sponsors-body">
-                <div className="sponsors-content">
-                    <header className="text-3xl md:text-5xl">
+            <main className="sponsors-us">
+                <div className="sponsors-us__content">
+                    <h3 className="sponsors-us__content__heading">
                         Become a sponsor to empower and help <br></br> grow the next generation of HackMerced.
-                    </header>
-                    <section className="sponsors-section">
-                        <FontAwesomeIcon icon={faHeart} className="fa" />
-                        <h4>Leave your mark in the Heart of California</h4>
-                        <p>
+                    </h3>
+                    <section className="sponsors-us__content__section">
+                        <FontAwesomeIcon icon={faHeart} className="fa sponsors-us__content__section__icon" />
+                        <h4 className="sponsors-us__content__section__title">
+                            Leave your mark in the Heart of California
+                        </h4>
+                        <p className="sponsors-us__content__section__text">
                             As the newest UC, more than half of the student body is first generation. Joining HackMerced
                             not only brings awareness for your brand,<br></br> but also brings together the talent in
                             the Central Valley.
                         </p>
-                    </section>
-                    <section className="sponsors-section">
-                        <FontAwesomeIcon icon={faHandshake} className="fa" />
-                        <h4>Connect with our diverse hackers</h4>
-                        <p>
+                        <br />
+                        <FontAwesomeIcon icon={faHandshake} className="fa sponsors-us__content__section__icon" />
+                        <h4 className="sponsors-us__content__section__title">Connect with our diverse hackers</h4>
+                        <p className="sponsors-us__content__section__text">
                             Network and build relationships in our HackMerced community and make your company known in
                             our events!
                         </p>
-                    </section>
-                    <section className="sponsors-section">
-                        <FontAwesomeIcon icon={faInfoCircle} className="fa" />
-                        <h4>For more Information</h4>
-                        <p>If you want more information, check out our sponsorship packet.</p>
+                        <br />
+                        <FontAwesomeIcon icon={faInfoCircle} className="fa sponsors-us__content__section__icon" />
+                        <h4 className="sponsors-us__content__section__title">For more Information</h4>
+                        <p className="sponsors-us__content__section__text">
+                            If you want more information, please fill the following form out or email us at&nbsp;
+                            <a href="mailto:sponsors@hackmerced.com?subject=HackMerced Sponsor Inquiry&amp;body=Dear HackMerced,">
+                                sponsors@hackmerced.com
+                            </a>
+                        </p>
                     </section>
                 </div>
                 <Form formTitle="Sponsor Us" askCompany={true} formRequest="sponsor" />
-                <section className="past-sponsors text-3xl md:text-5xl">
-                    <h1>Past Sponsors</h1>
-                    <img src={PASTSPONSORS} width="100%" alt="Past Hackathons Sponsors" />
+                <section className="sponsors-us__past-sponsors">
+                    <h1 className="sponsors-us__past-sponsors__title">Past Sponsors</h1>
+                    <img
+                        src={PAST_SPONSORS}
+                        width="100%"
+                        alt="Past Hackathons Sponsors"
+                        className="sponsors-us__past-sponsors__img"
+                    />
                 </section>
             </main>
             <Footer />
-        </>
+        </Fragment>
     );
 };
 

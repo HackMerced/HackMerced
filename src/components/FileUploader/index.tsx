@@ -11,6 +11,7 @@ const FileUploader: FC<any> = (props) => {
     const handleClick = () => {
         (hiddenFileInput as any).current.click();
     };
+
     // Call a function (passed as a prop from the parent component)
     // to handle the user-selected file
     const handleChange = (event: any) => {

@@ -1,5 +1,7 @@
 import React, { FC, useState } from "react";
 import Axios, { AxiosResponse } from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 
 import "./styles.scss";
 
@@ -9,6 +11,8 @@ const Form: FC<{
     formRequest: string;
 }> = (props): JSX.Element => {
     const { formTitle, askCompany, formRequest } = props;
+    const [isDisabled, setIsDisabled] = useState(false);
+    const [submitText, setSubmitText] = useState<JSX.Element | string>("Send");
     const [values, setValues] = useState({
         name: "",
         email: "",
@@ -16,19 +20,23 @@ const Form: FC<{
         message: "",
     });
 
-    const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
+    const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>): Promise<void> => {
         event.preventDefault();
 
         const { name, email, company, message } = values;
 
-        Axios({
+        setIsDisabled(true);
+        setSubmitText(<FontAwesomeIcon icon={faSyncAlt} className="fa fa-spinner" />);
+
+        const status = await Axios({
             method: "POST",
             url: `https://hackmerced-myriagon.herokuapp.com/v1/zoho/${formRequest}-us`,
             data: company === "" ? { name, email, message } : { name, email, company, message },
         }).then((response: AxiosResponse) => {
-            const { status } = response.data;
-            if (status === "success") resetForm();
+            return response.data.status;
         });
+
+        if (status === "success") setSubmitText("Submitted! 🎉  ");
     };
 
     const handleInputChange = (
@@ -38,15 +46,13 @@ const Form: FC<{
         setValues({ ...values, [name]: value });
     };
 
-    const resetForm = (): void => {
-        setValues({ name: "", company: "", email: "", message: "" });
-    };
-
     return (
-        <form className="splash-form" onSubmit={handleSubmit}>
-            <h3>{formTitle}</h3>
-            <div className="input-wrapper">
-                <label htmlFor="name">Name</label>
+        <form className="form" onSubmit={handleSubmit}>
+            <h3 className="form__title">{formTitle}</h3>
+            <div className="form__input">
+                <label htmlFor="name" className="form__input__label">
+                    Name
+                </label>
                 <input
                     id="name"
                     required
@@ -54,11 +60,14 @@ const Form: FC<{
                     name="name"
                     value={values.name}
                     onChange={handleInputChange}
+                    className="form__input__field"
                 />
             </div>
             {askCompany ? (
-                <div className="input-wrapper">
-                    <label htmlFor="company">Company</label>
+                <div className="form__input">
+                    <label htmlFor="company" className="form__input__label">
+                        Company
+                    </label>
                     <input
                         id="company"
                         required
@@ -66,11 +75,14 @@ const Form: FC<{
                         name="company"
                         value={values.company}
                         onChange={handleInputChange}
+                        className="form__input__field"
                     />
                 </div>
             ) : null}
-            <div className="input-wrapper">
-                <label htmlFor="email">Email</label>
+            <div className="form__input">
+                <label htmlFor="email" className="form__input__label">
+                    Email
+                </label>
                 <input
                     id="email"
                     required
@@ -78,10 +90,13 @@ const Form: FC<{
                     name="email"
                     value={values.email}
                     onChange={handleInputChange}
+                    className="form__input__field"
                 />
             </div>
-            <div className="input-wrapper">
-                <label htmlFor="message">Message</label>
+            <div className="form__input">
+                <label htmlFor="message" className="form__input__label">
+                    Message
+                </label>
                 <textarea
                     id="message"
                     required
@@ -90,9 +105,12 @@ const Form: FC<{
                     rows={5}
                     value={values.message}
                     onChange={handleInputChange}
+                    className="form__input__text-area"
                 />
             </div>
-            <button type="submit">Send</button>
+            <button type="submit" className="form__submit" disabled={isDisabled}>
+                {submitText}
+            </button>
         </form>
     );
 };

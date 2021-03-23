@@ -5,9 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { css } from "@emotion/core";
 import { PulseLoader } from "react-spinners";
 
-// import FileUploader from '../../components/FileUploader/FileUpoader';
-import Navbar from "../../components/NavBar";
-import Footer from "../../components/Footer";
+import FileUploader from "../../components/FileUploader";
 import { universities } from "./universities";
 import { states } from "./states";
 import { countries } from "./countries";
@@ -34,7 +32,7 @@ const Application: FC = (): JSX.Element => {
         gender: "",
         race: "",
         howDidYourHearAboutUs: "",
-        firstDesignathon: "",
+        firstHackathon: "",
     });
 
     const handleInputChange = (
@@ -70,7 +68,7 @@ const Application: FC = (): JSX.Element => {
         setIsLoading(true);
         setCanSubmit(false);
 
-        Axios.post(`https://hackmerced-tomoe.herokuapp.com/v1/design-merced/apply`, {
+        Axios.post(`https://Hackmerced-tomoe.herokuapp.com/v1/Hack-merced/apply`, {
             firstName: form.firstName,
             lastName: form.lastName,
             email: form.email,
@@ -81,7 +79,7 @@ const Application: FC = (): JSX.Element => {
             race: form.race,
             stateOrCountry: location,
             howDidYourHearAboutUs: form.howDidYourHearAboutUs,
-            firstDesignathon: form.firstDesignathon,
+            firstHackathon: form.firstHackathon,
         })
             .then(() => {
                 setIsLoading(false);
@@ -107,208 +105,238 @@ const Application: FC = (): JSX.Element => {
 
     return (
         <>
-            <Navbar backgroundColor="#EEEBF5" textColor="#B486CE" breakLineColor="#C4BDDC" showBanner={false} />
-            <div className="Outside-Background">
-                <main className="application">
-                    <h3>
-                        DesignMerced <br></br>Application Form
-                    </h3>
-                    <form className="application-form" onSubmit={handleSubmit}>
-                        <section className="row">
-                            <div className="cell left-cell ">
-                                <label htmlFor="firstName">
-                                    First Name <span className="required">*</span>
-                                </label>
-                                <input
-                                    id="firstName"
-                                    name="firstName"
-                                    type="text"
-                                    placeholder="First Name"
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                            </div>
-                            <div className="cell right-cell">
-                                <label htmlFor="lastName">
-                                    Last Name <span className="required">*</span>
-                                </label>
-                                <input
-                                    id="lastName"
-                                    name="lastName"
-                                    type="text"
-                                    placeholder="Last Name"
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                            </div>
-                        </section>
-                        <section className="row">
-                            <div className="cell left-cell">
-                                <label htmlFor="Email">
-                                    Email <span className="required">*</span>
-                                </label>
-                                <input
-                                    id="email"
-                                    name="email"
-                                    type="email"
-                                    placeholder="Email"
-                                    onChange={handleInputChange}
-                                />
-                            </div>
-                            <div className="cell right-cell">
-                                <label htmlFor="birthday">
-                                    Birthday <span className="required">*</span>
-                                </label>
-                                <input
-                                    id="birthday"
-                                    name="dateOfBirth"
-                                    type="date"
-                                    placeholder="Birthday"
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                            </div>
-                        </section>
-                        <section className="row">
-                            <div className="cell left-cell">
-                                <label htmlFor="university">University</label>
-                                <SelectSearch
-                                    id="university"
-                                    className="select-search"
-                                    onChange={setUniversity}
-                                    options={universities}
-                                    search
-                                    placeholder="Select your university"
-                                />
-                            </div>
-                            <div className="cell right-cell">
-                                <label htmlFor="levelOfStudy">
-                                    Current Level of Study <span className="required">*</span>
-                                </label>
-                                <select id="levelOfStudy" name="levelOfStudy" onChange={handleInputChange} required>
-                                    <option value="" disabled={true} selected={true}>
-                                        Current Level of Study
-                                    </option>
-                                    <option value="High School">High School</option>
-                                    <option value="Freshman">Freshman</option>
-                                    <option value="Sophomore">Sophomore</option>
-                                    <option value="Junior">Junior</option>
-                                    <option value="Senior">Senior</option>
-                                    <option value="Graduate">Graduate</option>
-                                </select>
-                            </div>
-                        </section>
-                        <section className="row">
-                            <div className="cell left-cell">
-                                <label htmlFor="gender">
-                                    Gender <span className="required">*</span>
-                                </label>
-                                <select id="gender" name="gender" onChange={handleInputChange} required>
-                                    <option value="" disabled={true} selected={true}>
-                                        Gender
-                                    </option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div className="cell right-cell">
-                                <label htmlFor="race">
-                                    Race <span className="required">*</span>
-                                </label>
-                                <select id="race" name="race" onChange={handleInputChange} required>
-                                    <option value="" disabled={true} selected={true}>
-                                        Race
-                                    </option>
-                                    <option value="American Indian or Alaskan Native">
-                                        American Indian or Alaskan Native
-                                    </option>
-                                    <option value="Asian/Pacific Islander">Asian/Pacific Islander</option>
-                                    <option value="Black or African American">Black or African American</option>
-                                    <option value="Latino">Latino</option>
-                                    <option value="White/Caucasion">White/Caucasion</option>
-                                    <option value="Prefer not to answer">Prefer not to answer</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                        </section>
-                        <section className="long-questions">
-                            <label htmlFor="stateOrCountry">
-                                If you live in the US, what state do you currently live in? If you do not reside within
-                                the US, what country are you from? <span className="required">*</span>
+            <main className="dashboard-application">
+                <h3>Application</h3>
+                <form className="application-form" onSubmit={handleSubmit}>
+                    <section className="row">
+                        <div className="cell left-cell ">
+                            <label htmlFor="firstName">
+                                First Name <span className="required">*</span>
                             </label>
-                            <SelectSearch
-                                id="stateOrCountry"
-                                className="select-search"
-                                onChange={setLocation}
-                                options={[...states, ...countries]}
-                                value={location}
-                                search
-                                placeholder="Select your state or country"
-                            />
-                        </section>
-                        <section className="long-questions">
-                            <label htmlFor="howDidYourHearAboutUs">How did you hear about DesignMerced?</label>
-                            <select
-                                id="howDidYourHearAboutUs"
-                                name="howDidYourHearAboutUs"
-                                placeholder="How did you hear about DesignMerced?"
-                                onChange={handleInputChange}
-                            >
-                                <option value="" disabled={true} selected={true}>
-                                    Select
-                                </option>
-                                <option value="Social Media">Social Media</option>
-                                <option value="Friends">Friends</option>
-                                <option value="Family">Family</option>
-                                <option value="University Postings">University Postings</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </section>
-                        <section className="long-questions">
-                            <label htmlFor="firstDesignathon">
-                                Will DesignMerced be your first Designathon? <span className="required">*</span>
-                            </label>
-                            <select
-                                id="firstDesignathon"
-                                name="firstDesignathon"
-                                placeholder="Will DesignMerced be your first Designathon?"
+                            <input
+                                id="firstName"
+                                name="firstName"
+                                type="text"
+                                placeholder="First Name"
                                 onChange={handleInputChange}
                                 required
-                            >
-                                <option value="" disabled={true} selected={true}>
-                                    Select
-                                </option>
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
-                        </section>
-                        {/* <section className="row">
-                        <div className="cell left-cell">
-                            <label htmlFor="resume">
-                                Upload Resume <span className="required">*</span> (PDF only)
-                            </label>
-                            <FileUploader id="resume" className="file-submission" name="resume" />
+                            />
                         </div>
                         <div className="cell right-cell">
-                            <label htmlFor="portfolio">Upload Design Portfolio (PDF only)</label>
-                            <FileUploader id="portfolio" className="file-submission" name="portfolio" />
+                            <label htmlFor="lastName">
+                                Last Name <span className="required">*</span>
+                            </label>
+                            <input
+                                id="lastName"
+                                name="lastName"
+                                type="text"
+                                placeholder="Last Name"
+                                onChange={handleInputChange}
+                                required
+                            />
                         </div>
-                    </section> */}
-                        <button className="submit-application" type="submit" disabled={!canSubmit}>
-                            {isLoading ? (
-                                <PulseLoader css={override} size={15} color={"#B486CE"} loading={isLoading} />
-                            ) : canSubmit ? (
-                                "SUBMIT"
-                            ) : (
-                                "SUBMITTED"
-                            )}
-                        </button>
-                    </form>
-                </main>
-                <Footer backgroundColor="#EEEBF5" textColor="#B486CE" fontColor="#B486CE" />
-                <ToastContainer />
-            </div>
+                    </section>
+                    <section className="row">
+                        <div className="cell left-cell">
+                            <label htmlFor="Email">
+                                Email <span className="required">*</span>
+                            </label>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                placeholder="Email"
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                        <div className="cell right-cell">
+                            <label htmlFor="birthday">
+                                Birthday <span className="required">*</span>
+                            </label>
+                            <input
+                                id="birthday"
+                                name="dateOfBirth"
+                                type="date"
+                                placeholder="Birthday"
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                    </section>
+                    <section className="row">
+                        <div className="cell left-cell">
+                            <label htmlFor="university">University</label>
+                            <SelectSearch
+                                id="university"
+                                className="select-search"
+                                onChange={setUniversity}
+                                options={universities}
+                                search
+                                placeholder="Select your university"
+                            />
+                        </div>
+                        <div className="cell right-cell">
+                            <label htmlFor="levelOfStudy">
+                                Current Level of Study <span className="required">*</span>
+                            </label>
+                            <select
+                                id="levelOfStudy"
+                                name="levelOfStudy"
+                                onChange={handleInputChange}
+                                required
+                                defaultValue=""
+                            >
+                                <option value="" disabled={true}>
+                                    Current Level of Study
+                                </option>
+                                <option value="High School">High School</option>
+                                <option value="Freshman">Freshman</option>
+                                <option value="Sophomore">Sophomore</option>
+                                <option value="Junior">Junior</option>
+                                <option value="Senior">Senior</option>
+                                <option value="Graduate">Graduate</option>
+                            </select>
+                        </div>
+                    </section>
+                    <section className="row">
+                        <div className="cell left-cell">
+                            <label htmlFor="gender">
+                                Gender <span className="required">*</span>
+                            </label>
+                            <select id="gender" name="gender" onChange={handleInputChange} required defaultValue="">
+                                <option value="" disabled={true}>
+                                    Gender
+                                </option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div className="cell right-cell">
+                            <label htmlFor="race">
+                                Race <span className="required">*</span>
+                            </label>
+                            <select id="race" name="race" onChange={handleInputChange} required defaultValue="">
+                                <option value="" disabled={true}>
+                                    Race
+                                </option>
+                                <option value="American Indian or Alaskan Native">
+                                    American Indian or Alaskan Native
+                                </option>
+                                <option value="Asian/Pacific Islander">Asian/Pacific Islander</option>
+                                <option value="Black or African American">Black or African American</option>
+                                <option value="Latino">Latino</option>
+                                <option value="White/Caucasian">White/Caucasian</option>
+                                <option value="Prefer not to answer">Prefer not to answer</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </section>
+                    <section className="row">
+                        <div className="cell left-cell ">
+                            <label htmlFor="firstName">
+                                Current Major <span className="required">*</span>
+                            </label>
+                            <input
+                                id="major"
+                                name="major"
+                                type="text"
+                                placeholder="Major"
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="cell right-cell">
+                            <label htmlFor="tShirtSize">
+                                T-Shirt Size <span className="required">*</span>
+                            </label>
+                            <input
+                                id="tShirtSize"
+                                name="tShirtSize"
+                                type="text"
+                                placeholder="Size"
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                    </section>
+                    <section className="long-questions">
+                        <label htmlFor="stateOrCountry">
+                            If you live in the US, what state do you currently live in? If you do not reside within the
+                            US, what country are you from? <span className="required">*</span>
+                        </label>
+                        <SelectSearch
+                            id="stateOrCountry"
+                            className="select-search"
+                            onChange={setLocation}
+                            options={[...states, ...countries]}
+                            value={location}
+                            search
+                            placeholder="Select your state or country"
+                        />
+                    </section>
+                    <section className="long-questions">
+                        <label htmlFor="howDidYourHearAboutUs">How did you hear about HackMerced?</label>
+                        <select
+                            id="howDidYourHearAboutUs"
+                            name="howDidYourHearAboutUs"
+                            placeholder="How did you hear about HackMerced?"
+                            onChange={handleInputChange}
+                            defaultValue=""
+                        >
+                            <option value="" disabled={true}>
+                                Select
+                            </option>
+                            <option value="Social Media">Social Media</option>
+                            <option value="Friends">Friends</option>
+                            <option value="Family">Family</option>
+                            <option value="University Postings">University Postings</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </section>
+                    <section className="long-questions">
+                        <label htmlFor="firstHackathon">
+                            Will HackMerced be your first Hackathon? <span className="required">*</span>
+                        </label>
+                        <select
+                            id="firstHackathon"
+                            name="firstHackathon"
+                            placeholder="Will HackMerced be your first Hackathon?"
+                            onChange={handleInputChange}
+                            required
+                            defaultValue=""
+                        >
+                            <option value="" disabled={true}>
+                                Select
+                            </option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </section>
+                    {
+                        <section className="row">
+                            <div className="cell left-cell">
+                                <label htmlFor="resume">
+                                    <span className="required"></span>
+                                </label>
+                                <FileUploader id="resume" className="file-submission" name="resume">
+                                    File Upload
+                                </FileUploader>
+                            </div>
+                        </section>
+                    }
+                    <button className="submit-application" type="submit" disabled={!canSubmit}>
+                        {isLoading ? (
+                            <PulseLoader css={override} size={15} color={"#B486CE"} loading={isLoading} />
+                        ) : canSubmit ? (
+                            "SUBMIT"
+                        ) : (
+                            "SUBMITTED"
+                        )}
+                    </button>
+                </form>
+            </main>
+            <ToastContainer />
         </>
     );
 };
