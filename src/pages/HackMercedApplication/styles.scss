@@ -19,7 +19,7 @@
 
     ::placeholder {
         color: grey;
-       font-weight: lighter;
+        font-weight: lighter;
     }
 
     h3 {
@@ -28,6 +28,7 @@
         margin-bottom: 1rem;
         text-align: center;
     }
+    
     ::placeholder {
         color: grey;
     }
@@ -143,7 +144,7 @@
             padding: 0% 2% 0% 0%;
 
             &:active {
-                background:#ffb181;
+                background: #ffb181;
                 color: white;
             }
         }

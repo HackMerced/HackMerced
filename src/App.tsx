@@ -32,22 +32,6 @@ const App: FC = (): JSX.Element => {
                 <Route path="/sponsors" component={SponsorUs} />
                 <Route path="/contact-us" component={ContactUs} />
                 <Route path="/past-hackathons" component={PastHackathons} />
-                <Route path="/application" component={Application} />
-                {/* <Route
-                    path="/login"
-                    render={({ match: { url } }): JSX.Element => (
-                        <Fragment>
-                            <Route exact path={`${url}/`}>
-                                <Login updateHacker={setHacker} updateToken={setToken} />
-                            </Route>
-                            <Route path={`${url}/reset-password`} component={ResetPassword} />
-                        </Fragment>
-                    )}
-                /> */}
-                {/* <Route
-                    path="/signup"
-                    render={(): JSX.Element => <SignUp updateHacker={setHacker} updateToken={setToken} />}
-                /> */}
                 <Route
                     path="/archive"
                     render={({ match: { url } }): JSX.Element => (
@@ -61,6 +45,22 @@ const App: FC = (): JSX.Element => {
                             <Route exact path={`${url}/live`}>
                                 <Dashboard />
                             </Route>
+                            <Route path="/application" component={Application} />
+                            {/* <Route
+                                path="/login"
+                                render={({ match: { url } }): JSX.Element => (
+                                    <Fragment>
+                                        <Route exact path={`${url}/`}>
+                                            <Login updateHacker={setHacker} updateToken={setToken} />
+                                        </Route>
+                                        <Route path={`${url}/reset-password`} component={ResetPassword} />
+                                    </Fragment>
+                                )}
+                            />
+                            <Route
+                                path="/signup"
+                                render={(): JSX.Element => <SignUp updateHacker={setHacker} updateToken={setToken} />}
+                            /> */}
                         </Fragment>
                     )}
                 />

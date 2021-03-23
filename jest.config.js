@@ -1,13 +1,13 @@
 module.exports = {
-    roots: ['<rootDir>/src'],
+    roots: ["<rootDir>/src"],
     transform: {
-        '^.+\\.tsx?$': 'ts-jest',
+        "^.+\\.tsx?$": "ts-jest",
     },
-    testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
-    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-    testEnvironment: 'node',
+    testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+    testEnvironment: "node",
     globals: {
-        'ts-jest': {
+        "ts-jest": {
             diagnostics: {
                 warnOnly: true,
             },
@@ -15,6 +15,6 @@ module.exports = {
     },
 
     // Setup Enzyme
-    snapshotSerializers: ['enzyme-to-json/serializer'],
-    setupTestFrameworkScriptFile: '<rootDir>/src/setupEnzyme.ts',
+    snapshotSerializers: ["enzyme-to-json/serializer"],
+    setupTestFrameworkScriptFile: "<rootDir>/src/setupEnzyme.ts",
 };
