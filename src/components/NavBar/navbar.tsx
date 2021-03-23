@@ -1,9 +1,9 @@
-import React, { FC, useState, useEffect, useRef } from 'react';
-import styled from 'styled-components';
-import { Link, useLocation } from 'react-router-dom';
+import React, { FC, useState, useEffect, useRef } from "react";
+import styled from "styled-components";
+import { Link, useLocation } from "react-router-dom";
 
-import MLHBANNER from '../../assets/images/mlh-badge.svg';
-import './navbar.scss';
+import MLHBANNER from "../../assets/images/mlh-badge.svg";
+import "./navbar.scss";
 
 const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string; showBanner?: boolean }> = ({
     backgroundColor,
@@ -24,8 +24,8 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
             toggleDrawer(false);
         };
 
-        document.addEventListener('mousedown', closeDrawer);
-        return () => document.removeEventListener('mousedown', closeDrawer);
+        document.addEventListener("mousedown", closeDrawer);
+        return () => document.removeEventListener("mousedown", closeDrawer);
     }, []);
 
     const NavbarItemsProps = {
@@ -54,7 +54,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                 <Menu.Items ref={drawerRef} {...NavbarItemsProps} style={{ backgroundColor }}>
                     <Menu.Item>
                         <Link to="/">Home</Link>
-                        {pathname === '/' ? BreakLine() : null}
+                        {pathname === "/" ? BreakLine() : null}
                     </Menu.Item>
                     {/* <Menu.Item>
                         <Link to="/designmerced">DesignMerced</Link>
@@ -71,11 +71,11 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                     </Menu.Item> */}
                     <Menu.Item>
                         <Link to="/sponsors">Sponsors</Link>
-                        {pathname === '/sponsors' ? BreakLine() : null}
+                        {pathname === "/sponsors" ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item>
                         <Link to="/contact-us">Contact Us</Link>
-                        {pathname === '/contact-us' ? BreakLine() : null}
+                        {pathname === "/contact-us" ? BreakLine() : null}
                     </Menu.Item>
                     {/* <Menu.Item>
                         <Link to="/login">Login</Link>
@@ -97,7 +97,7 @@ const Styles = {
         @media only screen and (max-width: 40em) {
             height: ${(): string => {
                 const { pathname } = useLocation();
-                return pathname !== '/' ? '13vw' : 'auto';
+                return pathname !== "/" ? "13vw" : "auto";
             }};
     `,
 };
@@ -156,7 +156,7 @@ const HamburgerButton = {
         cursor: pointer;
 
         &:after {
-            content: '';
+            content: "";
             display: block;
             position: absolute;
             height: 150%;
@@ -180,7 +180,7 @@ const HamburgerButton = {
             height: 2px;
             pointer-events: none;
             display: block;
-            content: '';
+            content: "";
             width: 100%;
             background-color: white;
             position: absolute;

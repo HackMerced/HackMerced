@@ -5,16 +5,15 @@
     "description": "HackMerced Hub",
     "homepage": "http://hackmerced.com",
     "scripts": {
-        "build": "yarn tailwind:css && react-scripts build",
+        "build": "react-scripts build",
         "predeploy": "yarn build",
         "deploy": "gh-pages -d build -b gh-pages",
         "gren": "gren release --override --tags=all --config=.grenrc.js",
         "lint": "eslint --ext .ts,.tsx .",
         "lint:fix": "yarn lint --fix",
         "prestart ": "yarn lint ",
-        "start": "yarn tailwind:css && react-scripts start",
+        "start": "react-scripts start",
         "storybook": "start-storybook -p 9001 -s ./src/assets -c .storybook",
-        "tailwind:css": "npx tailwindcss-cli@latest build src/tailwind.css -c tailwind.config.js -o src/tailwind.scss",
         "test": "react-scripts test"
     },
     "browserslist": {
@@ -93,7 +92,6 @@
         "react-docgen-typescript-loader": "3.6.0",
         "react-docgen-typescript-webpack-plugin": "1.1.0",
         "react-test-renderer": "16.13.0",
-        "tailwindcss": "1.2.0",
         "ts-jest": "25.2.1",
         "typescript": "3.8.3"
     },
