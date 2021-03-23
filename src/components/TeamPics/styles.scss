@@ -1,4 +1,5 @@
 /* HEXAGON DESIGN code taken from and edited: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
+/* Media Queries taken from and edited: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 
 .TEAMPICTURE {
     #grid {
@@ -46,7 +47,7 @@
         overflow: hidden;
     }
 
-    /* Makes all children of li visable */
+    /* Makes all children of li visible */
     #grid li * {
         visibility: visible;
     }
@@ -56,71 +57,42 @@
         margin: 0 1%;
     }
 
+    /* For hexagon structure: start working from here, downwards */
+
     /* Manually push first row to center */
     #grid li:nth-child(1) {
-        margin-left: 8.6%;
+        margin-left: 15.6%;
     }
 
     /* Translates each child in the second row to the right a little bit, and moves them down. */
+    #grid li:nth-child(5),
     #grid li:nth-child(6),
-    #grid li:nth-child(7),
+    #grid li:nth-child(7) {
+        margin-top: -3.35%;
+    }
+
+    /* 5th child (2nd row): Move into interlocking position, which moves the rest of the children in the row. */
+    #grid li:nth-child(5) {
+        margin-left: 23.46%;
+    }
+
+    /* Forces 8th child to go to the next row, by adding padding on the right of hexagon 7. */
+    #grid li:nth-child(7) {
+        margin-right: 25%;
+    }
+
+    /* Manually push second row to center */
+    #grid li:nth-child(8) {
+        margin-left: 15.46%;
+    }
+
+    /* Translates each child in the second row to the right a little bit, and moves them down. */
     #grid li:nth-child(8),
-    #grid li:nth-child(9) {
-        margin-top: -3.35%;
-        -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        transform: translateX(50%) rotate(-60deg) skewY(30deg);
-    }
-
-    /* 6th child (2nd row): Move into interlocking position, which moves the rest of the children in the row. */
-    #grid li:nth-child(6) {
-        margin-left: 9%;
-    }
-
-    /* Forces 10th child to go to the next row. */
-    #grid li:nth-child(9) {
-        margin-right: 20%;
-    }
-
-    /* Translates each child in the third row down */
+    #grid li:nth-child(9),
     #grid li:nth-child(10),
-    #grid li:nth-child(11),
-    #grid li:nth-child(12),
-    #grid li:nth-child(13),
-    #grid li:nth-child(14) {
+    #grid li:nth-child(11) {
         margin-top: -3.35%;
-        -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        transform: translateX(50%) rotate(-60deg) skewY(30deg);
     }
-
-    /* Forces 15th child to go to the next row. */
-    #grid li:nth-child(14) {
-        margin-right: 20%;
-    }
-
-    /* Manually push fouth row to center */
-    #grid li:nth-child(15) {
-        margin-left: 24.7%;
-    }
-
-    /* Translates each child in the fourth row down */
-    #grid li:nth-child(15),
-    #grid li:nth-child(16) {
-        margin-top: -3.35%;
-        -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        transform: translateX(50%) rotate(-60deg) skewY(30deg);
-    }
-
-
-
 
     /* Medium-Small devices (phones, portrait tablets, and large phones, 850px and lower) */
     @media only screen and (max-width: 850px) {
@@ -130,9 +102,14 @@
             margin: 0 auto;
             padding: 0 0 5% 0; /* Padding under Grid component (under last row of hexagons) */
         }
-
-        
     }
+
+    /* Procedure for hexagons:
+    First, decide the layout of the honeycomb design. This will tell you how many hexagons you want in each row.
+    In order to make a hexagon start a new row you need to 'margin-right' the (hexagon - 1) child so the hexagon you want to start a new row is forced
+    into the new row.
+    Lastly, you 'margin-left' the hexagon in order to move the entire row into the interlocking position.  */
+
 
     .Header {
         padding: 3% 0% 2% 0%;
@@ -143,28 +120,22 @@
             font-weight: bold;
         }
 
-        /* Media Queries taken from and edited: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
-
         /* Small devices (iphones, 350px and up) */
         @media only screen and (min-width: 350px) {
             font-size: 25px;
         }
-
         /* Small devices (phones, portrait tablets, and large phones, 600px and up) */
         @media only screen and (min-width: 600px) {
             font-size: 25px;
         }
-
         /* Medium devices (landscape tablets, 768px and up) */
         @media only screen and (min-width: 768px) {
             font-size: 25px;
         }
-
         /* Large devices (laptops/desktops, 992px and up) */
         @media only screen and (min-width: 992px) {
             font-size: 35px;
         }
-
         /* Extra large devices (large laptops and desktops, 1200px and up) */
         @media only screen and (min-width: 1200px) {
             font-size: 40px;
@@ -181,31 +152,25 @@
         border-width: .5rem;
         border-radius: 25px;
         margin: 0 auto;
-        // box-shadow: -6px -6px 16px #fff,
-        // 6px 6px 16px #696865;
 
         /* Smallest devices (iphones, 350px and lower) */
         @media only screen and (max-width: 350px) {
             width: 30%;
         }
-
         /* Small devices (iphones, 350px and up) */
         @media only screen and (min-width: 350px) {
             width: 30%;
         }
-
         /* Medium devices (landscape tablets, 768px and up) */
         @media only screen and (min-width: 768px) {
             width: 25%
         }
-
         /* Large devices (laptops/desktops, 992px and up) */
         @media only screen and (min-width: 992px) {
             width: 20%
         }
-
-         /* Extra large devices (large laptops and desktops, 1200px and up) */
-         @media only screen and (min-width: 1200px) {
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
             width: 20%;
         }
     }

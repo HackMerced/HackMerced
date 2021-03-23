@@ -1,23 +1,18 @@
 import React, { FC } from "react";
+import "./styles.scss";
 
 import TRUMAN from "../../assets/images/truman.png";
-import LORENZO from "../../assets/images/lorenzo.png";
 import MARY from "../../assets/images/mary.jpg";
-import SHIV from "../../assets/images/shivanshu.jpg";
 import ATHENA from "../../assets/images/athena.jpg";
-import ADRIAN from "../../assets/images/adrian.jpg";
-import BUSHER from "../../assets/images/busher.jpg";
-import TUZETTE from "../../assets/images/tuzette.jpg";
 import MANJOT from "../../assets/images/manjot.jpg";
 import INTISER from "../../assets/images/Intiser.png";
 import ALISSON from "../../assets/images/alisson.png";
 import MARTHEN from "../../assets/images/marty.jpg";
-import LAURENCE from "../../assets/images/laurence.png";
 import JET from "../../assets/images/jet.jpg";
 import JOSEPH from "../../assets/images/joseph.jpg";
-import JANELLE from "../../assets/images/janelle.jpg";
+//import SEAN from "../../assets/images/sean.jpg";
+//import GEHAD from "../../assets/images/gehad.jpg";
 
-import "./styles.scss";
 
 const TeamPics: FC = (): JSX.Element => {
     const team: Array<{ url: string; src: string }> = [
@@ -26,32 +21,12 @@ const TeamPics: FC = (): JSX.Element => {
             src: TRUMAN,
         },
         {
-            url: "https://www.linkedin.com/in/lorenzo-scaturchio-62203b160/",
-            src: LORENZO,
-        },
-        {
             url: "https://www.linkedin.com/in/maryfrancine/",
             src: MARY,
         },
         {
-            url: "https://www.linkedin.com/in/adriandarian/",
-            src: ADRIAN,
-        },
-        {
             url: "https://www.linkedin.com/in/athena-siaotong/",
             src: ATHENA,
-        },
-        {
-            url: "https://www.linkedin.com/in/shiv248/",
-            src: SHIV,
-        },
-        {
-            url: "https://www.linkedin.com/in/busher-bridi/",
-            src: BUSHER,
-        },
-        {
-            url: "https://www.linkedin.com/in/tuzette-vu-500550100/",
-            src: TUZETTE,
         },
         {
             url: "https://www.linkedin.com/in/manjot-singh-0a41a8195/",
@@ -70,10 +45,6 @@ const TeamPics: FC = (): JSX.Element => {
             src: MARTHEN,
         },
         {
-            url: "https://www.linkedin.com/in/laurenceamorganiii/",
-            src: LAURENCE,
-        },
-        {
             url: "https://www.linkedin.com/in/jatnael-montes/",
             src: JET,
         },
@@ -82,8 +53,12 @@ const TeamPics: FC = (): JSX.Element => {
             src: JOSEPH,
         },
         {
-            url: "https://www.linkedin.com/in/jpjanelleperez/",
-            src: JANELLE,
+            url: "https://www.linkedin.com/in/joseph-hoang-414836194/",
+            src: JOSEPH,
+        },
+        {
+            url: "https://www.linkedin.com/in/joseph-hoang-414836194/",
+            src: JOSEPH,
         },
     ];
 
