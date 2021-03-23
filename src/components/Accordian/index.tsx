@@ -10,6 +10,7 @@ type AccordianState = Array<{ title: string; content: string; open: boolean }>;
 const Accordian: FC<AccordianProps> = ({ data }) => {
     const [accordionItems, setAccodionItems] = useState<AccordianState>([]);
 
+    // parse the incoming data prior to rendering the component
     useEffect(() => {
         const parseData: () => void = (): void => {
             const accordion: AccordianState = [];
@@ -28,6 +29,7 @@ const Accordian: FC<AccordianProps> = ({ data }) => {
         parseData();
     }, []);
 
+    // Handles on click events
     const click: (i: AccordianItemState) => void = (i: AccordianItemState): void => {
         const newAccordion: AccordianState = accordionItems.slice();
         const index: number = newAccordion.indexOf(i);
@@ -36,6 +38,7 @@ const Accordian: FC<AccordianProps> = ({ data }) => {
         setAccodionItems(newAccordion);
     };
 
+    // Generates each section
     const sections: JSX.Element[] = accordionItems.map((i) => (
         <div className="accordion__item" key={accordionItems.indexOf(i)}>
             <div className="accordion__item__title" onClick={click.bind(null, i)}>

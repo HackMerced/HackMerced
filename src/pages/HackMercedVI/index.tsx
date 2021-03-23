@@ -24,6 +24,7 @@ const HackMercedVI: FC = (): JSX.Element => {
     return (
         <main className="hackmerced-vi">
             <Navbar backgroundColor="#B63F1A" textColor="#FFFFF" breakLineColor="#C4BDDC" showBanner={true} />
+            {/* Landing Header */}
             <section className="hackmerced-vi__landing" style={{ width: width, height: backgroundHeight }}>
                 <div className="hackmerced-vi__landing__container">
                     <button
@@ -38,6 +39,7 @@ const HackMercedVI: FC = (): JSX.Element => {
                     </button>
                 </div>
             </section>
+            {/* Themes Section */}
             <section className="hackmerced-vi__themes">
                 <h1 className="hackmerced-vi__themes__title">Themes</h1>
                 <div className="hackmerced-vi__themes__container">
@@ -82,10 +84,12 @@ const HackMercedVI: FC = (): JSX.Element => {
                     </div>
                 </div>
             </section>
+            {/* FAQ Section */}
             <section className="hackmerced-vi__faq">
                 <h2 className="hackmerced-vi__faq__title">Frequently Asked Questions</h2>
                 <Accordian data={FAQData} />
             </section>
+            {/* Sponsors Section */}
             <section className="hackmerced-vi__sponsors">
                 <div>
                     <h2 className="hackmerced-vi__sponsors__title">Sponsors</h2>

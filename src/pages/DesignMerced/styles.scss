@@ -1,4 +1,9 @@
 .design-merced {
+    /*
+    * ########################
+    * # DesignMerced Landing #
+    * ########################
+    */
     &__header {
         background: #eeebf5;
         height: 810px;
@@ -149,6 +154,11 @@
         }
     }
 
+    /*
+    * #########################
+    * # DesignMerced About Us #
+    * #########################
+    */
     &__about-us {
         padding: 3% 0% 2% 0%;
         background-color: #0d0721;
@@ -209,6 +219,11 @@
         }
     }
 
+    /*
+    * #######################
+    * # DesignMerced Prompt #
+    * #######################
+    */
     &__prompt {
         padding: 3% 0% 2% 0%;
         background-color: #0d0721;
@@ -270,6 +285,11 @@
         }
     }
 
+    /*
+    * ####################
+    * # DesignMerced FAQ #
+    * ####################
+    */
     &__faq {
         background-color: #0d0721;
         padding: 5% 0;
@@ -281,6 +301,11 @@
         }
     }
 
+    /*
+    * #########################
+    * # DesignMerced Schedule #
+    * #########################
+    */
     &__schedule {
         background-color: #0d0721;
 
@@ -501,6 +526,11 @@
         }
     }
 
+    /*
+    * #########################
+    * # DesignMerced Sponsors #
+    * #########################
+    */
     &__sponsors {
         background-color: #eeebf5;
         padding: 4% 3% 0% 0%;

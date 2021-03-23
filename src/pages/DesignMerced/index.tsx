@@ -21,6 +21,7 @@ const DesignMerced: FC = (): JSX.Element => {
     const { width } = useWindowDimensions();
     const [day, setDay] = useState<number>(21);
 
+    // Generate Schedule for the DesignMerced
     const generateSchedule = (): JSX.Element => {
         const scheduleElements: Array<JSX.Element> = [];
 
@@ -46,6 +47,7 @@ const DesignMerced: FC = (): JSX.Element => {
     return (
         <main className="design-merced">
             <Navbar backgroundColor="#EEEBF5" textColor="#B486CE" breakLineColor="#C4BDDC" showBanner={false} />
+            {/* Landing Header */}
             <section className="design-merced__header">
                 {width > 1200 ? (
                     <Fragment>
@@ -66,6 +68,7 @@ const DesignMerced: FC = (): JSX.Element => {
                     </Link>
                 </div>
             </section>
+            {/* About Us Section */}
             <section className="design-merced__about-us">
                 <div className="design-merced__about-us__title">About DesignMerced</div>
                 <section className="design-merced__about-us__content">
@@ -83,6 +86,7 @@ const DesignMerced: FC = (): JSX.Element => {
                     <img src={ABOUT_ICON} alt="About Icon" className="design-merced__about-us__content__logo" />
                 </section>
             </section>
+            {/* Prompt Section */}
             <section className="design-merced__prompt">
                 <div className="design-merced__prompt__title">The UI/UX Prompt</div>
                 <section className="design-merced__prompt__content">
@@ -98,10 +102,12 @@ const DesignMerced: FC = (): JSX.Element => {
                     <img className="design-merced__prompt__content__logo" src={PROMPT_ICON} alt="Lightbulb Icon" />
                 </section>
             </section>
+            {/* FAQ Section */}
             <section className="design-merced__faq">
                 <h2 className="design-merced__faq__title">Frequently Asked Questions</h2>
                 <Accordian data={FAQData} />
             </section>
+            {/* Schedule Section */}
             <section className="design-merced__schedule">
                 <article className="design-merced__schedule__article">
                     <div className="design-merced__schedule__article__container">
@@ -130,6 +136,7 @@ const DesignMerced: FC = (): JSX.Element => {
                     </div>
                 </article>
             </section>
+            {/* Sponsors Section */}
             <section className="design-merced__sponsors">
                 <img src={SPONSOR_DESIGN} width="100%" alt="Our Sponsors for DesignMerced" />
             </section>
