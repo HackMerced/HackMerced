@@ -1,0 +1,264 @@
+.hackmerced-vi {
+    overflow-x: hidden;
+
+    &__landing {
+        @media (width: 1024px) and (height: 1366px) {
+            height: 800px !important;
+        }
+
+        &__container {
+            background-image: url("../../assets/images/landing-page-hmvi.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            &__button {
+                margin: 0;
+                position: absolute;
+                font-size: 0.8rem;
+                top: 88%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-transform: uppercase;
+                border-radius: 20px;
+                transition: 0.2s all;
+                text-align: center;
+                padding: 2.8%;
+                color: white;
+                background-color: #ff785a;
+
+                @media (min-width: 1000px) {
+                    font-size: 1.2rem;
+                    padding: 1.5%;
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    right: 5%;
+                    width: 90%;
+                    height: 5%;
+                    opacity: 0;
+                    box-shadow: 0 12px 16px 0 black;
+                    transition: 0.2s all;
+                    transition-delay: 0.1;
+                    background: radial-gradient(ellipse at center, rgpa (0, 0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+                }
+
+                &:hover {
+                    color: black;
+                    box-shadow: 0px 0px 10px #f65331, 0px 0px 10px #ff785a;
+                }
+
+                &:hover:before {
+                    opacity: 1;
+                }
+
+                &:active {
+                    background: transparent;
+                    color: white;
+                    background-color: #272831;
+                }
+            }
+        }
+    }
+
+    &__themes {
+        background-color: #272831;
+        text-align: center;
+
+        &__title {
+            color: white;
+            font-size: 40px;
+            padding: 6%;
+            font-weight: bold;
+            text-align: center;
+
+            @media only screen and (max-width: 900px) {
+                font-size: 30px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                font-size: 25px;
+            }
+        }
+
+        &__container {
+            color: #c1c0cd;
+            display: inline-flex;
+            justify-content: center;
+            text-align: center;
+
+            h2 {
+                font-size: 32px;
+                font-weight: normal;
+                text-shadow: 0px 0px 10px #f65331, 0px 0px 10px #ff785a;
+            }
+
+            &__tracks {
+                width: 300px;
+                margin: auto;
+            }
+
+            p {
+                margin: auto;
+                max-width: 80%;
+                font-size: 18px;
+            }
+
+            .track-one,
+            .track-three {
+                padding: 0% 0% 0% 3%;
+            }
+
+            .track-two {
+                padding: 8% 0% 0% 3%;
+            }
+
+            /* Everything under 900px width - responsiveness */
+            @media only screen and (max-width: 900px) {
+                display: inline;
+
+                h2 {
+                    font-size: 25px;
+                }
+
+                &__tracks {
+                    width: 150px;
+                    margin: auto;
+                    padding: 3% 0;
+                }
+
+                p {
+                    margin: auto;
+                    max-width: 80%;
+                    padding: 3% 0;
+                    font-size: 14px;
+                }
+
+                .track-one {
+                    padding: 3% 1% 0% 1%;
+                }
+
+                .track-two,
+                .track-three {
+                    padding: 5% 1% 0% 1%;
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+                display: inline;
+
+                h2 {
+                    font-size: 18px;
+                }
+
+                &__tracks {
+                    width: 120px;
+                    margin: auto;
+                    padding: 3% 0;
+                }
+
+                p {
+                    margin: auto;
+                    max-width: 80%;
+                    padding: 3% 0;
+                    font-size: 12px;
+                }
+
+                .track-one {
+                    padding: 3% 1% 0% 1%;
+                }
+
+                .track-two,
+                .track-three {
+                    padding: 5% 1% 0% 1%;
+                }
+            }
+        }
+    }
+
+    &__faq {
+        background-color: #272831;
+        padding: 5% 0%;
+
+        &__title {
+            font-size: 40px;
+            text-align: center;
+            padding: 10% 0% 3% 0%;
+            background-color: #272831;
+
+            @media only screen and (max-width: 900px) {
+                font-size: 30px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                font-size: 25px;
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__sponsors {
+        background-color: #b63f1a;
+        max-width: 100%;
+        height: auto;
+
+        &__title {
+            font-size: 40px;
+            text-align: center;
+            padding: 3%;
+            background-color: #b63f1a;
+
+            @media only screen and (max-width: 900px) {
+                font-size: 30px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                font-size: 25px;
+            }
+        }
+
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            font-size: 18px;
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            font-size: 20px;
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            font-size: 30px;
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            font-size: 35px;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            font-size: 35px;
+        }
+    }
+}
+
+.sticker_mule {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 4rem;
+
+    &__img {
+        width: 200px;
+        height: 100%;
+    }
+}
