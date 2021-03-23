@@ -42,7 +42,7 @@ const App: FC = (): JSX.Element => {
                             <Route exact path={`${url}/hackmercedvi`}>
                                 <HackMercedVI />
                             </Route>
-                            <Route exact path={`${url}/live`}>
+                            <Route path={`${url}/live*`}>
                                 <Dashboard />
                             </Route>
                             <Route path="/application" component={Application} />

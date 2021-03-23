@@ -254,6 +254,8 @@ $borderColor: #eeebf5;
                     align-content: flex-start;
                     width: 100%;
                     color: $offBlack;
+                    list-style-type: none;
+                    padding: 0;
 
                     &__li {
                         border-radius: 25px;
@@ -754,7 +756,7 @@ $borderColor: #eeebf5;
             }
         }
     }
-    
+
     .orange-rectangle {
         background-color: $offOrange;
         height: 50px;
