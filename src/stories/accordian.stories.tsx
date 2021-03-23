@@ -1,7 +1,8 @@
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
 
-import { FAQData, mockData } from "./data";
+import { FAQData } from "../assets/faq";
+import { mockData } from "../assets/mockData";
 import Accordian from "../components/Accordian";
 
 storiesOf("Accordian", module)

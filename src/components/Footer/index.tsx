@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faCode } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faCode, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faGithub, faSlack } from "@fortawesome/free-brands-svg-icons";
 
 import "./styles.scss";
@@ -10,9 +10,10 @@ const Footer: FC<{ backgroundColor?: string; textColor?: string; fontColor?: str
     textColor,
     fontColor,
 }): JSX.Element => {
-    const footerIcons = (icon: any) => {
+    const footerIcons = (icon: IconDefinition) => {
         return <FontAwesomeIcon icon={icon} className="fa text-white" style={{ color: fontColor }} />;
     };
+
     return (
         <footer className="footer" style={{ backgroundColor, color: textColor }}>
             <section className="footer__container">

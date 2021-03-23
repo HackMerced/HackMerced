@@ -8,7 +8,7 @@ import Navbar from "../../components/NavBar";
 import HACKMERCED_LOGO from "../../assets/images/hackmerced-logo.png";
 import "./styles.scss";
 
-const ResetPassword: FC<{}> = (): JSX.Element => {
+const ResetPassword: FC = (): JSX.Element => {
     const [form, setForm] = useState<{ email: string }>({ email: "" });
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {

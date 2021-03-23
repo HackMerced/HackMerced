@@ -1,4 +1,4 @@
-.contact-body {
+.contact-us {
     flex-direction: row;
     justify-content: center;
     margin: 2% 0;
@@ -13,8 +13,8 @@
         width: 90%;
     }
 
-    .splash-content {
-        .Header {
+    &__content {
+        &__header {
             font-size: 54px;
             line-height: 1.5em;
             text-align: center;
@@ -22,13 +22,9 @@
             color: black;
             font-weight: bolder;
             overflow: hidden;
-
-            // @media (max-width: 500px) {
-            //   font-size: 46px
-            // }
         }
 
-        .splash-section {
+        &__description {
             display: block;
             display: flex;
             flex-direction: column;
@@ -37,23 +33,19 @@
             text-align: center;
             margin-bottom: 2rem;
 
-            h4 {
+            &__text {
                 font-size: 20px;
                 text-align: center;
                 margin: 1% auto auto auto;
-                font-weight: bold;
+
                 color: rgb(49, 49, 49);
                 text-align: center;
             }
 
-            p {
-                display: block;
-                margin-block-start: 1em;
-                margin-block-end: 1em;
-                margin-inline-start: 0px;
-                margin-inline-end: 0px;
-                color: rgb(49, 49, 49);
-                text-align: center;
+            &__icon {
+                color: #fdab78;
+                font-size: 35px !important;
+                margin: 10px;
             }
         }
 
@@ -61,14 +53,9 @@
             margin: 0;
             margin-bottom: 2rem;
 
-            h1 {
+            &__header {
                 margin-bottom: 2rem;
             }
         }
-    }
-    .fa {
-        color: #fdab78;
-        font-size: 35px !important;
-        margin: 10px;
     }
 }
