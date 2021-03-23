@@ -18,6 +18,8 @@
         // Scrolling clouds in the background of the heading
         &__wave {
             overflow: hidden;
+            position: absolute;
+            width: 100%;
 
             &__cloud {
                 background: rgb(248, 243, 243);
@@ -136,21 +138,21 @@
 
         &__title {
             &__img {
-                margin: -38% auto auto 57%;
+                margin: 5% auto auto 57%;
 
                 /* Medium devices (landscape tablets, 768px and up) */
                 @media only screen and (min-width: 768px) {
-                    margin: -38% auto auto 47%;
+                    margin-left: 47%;
                 }
 
                 /* Large devices (laptops/desktops, 992px and up) */
                 @media only screen and (min-width: 992px) {
-                    margin: -38% auto auto 57%;
+                    margin-left: 57%;
                 }
 
                 /* Large devices (laptops/desktops, 992px and up) */
                 @media only screen and (min-width: 1500px) {
-                    margin: -35% auto auto 58.5%;
+                    margin-left: 58.5%;
                 }
             }
 

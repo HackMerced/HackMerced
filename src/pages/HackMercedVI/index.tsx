@@ -27,7 +27,7 @@ const HackMercedVI: FC = (): JSX.Element => {
             <section className="hackmerced-vi__landing" style={{ width: width, height: backgroundHeight }}>
                 <div className="hackmerced-vi__landing__container">
                     <button
-                        className="hackmerced-vi__landing__container__button bg-white text-black font-bold"
+                        className="hackmerced-vi__landing__container__button"
                         onClick={() => {
                             window.location.href = "https://hackmercedvi.typeform.com/to/mY7E1Fug";
                         }}

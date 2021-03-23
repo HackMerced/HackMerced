@@ -1,13 +1,15 @@
 import React, { FC, Fragment } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import Footer from "../../components/Footer";
-import Navbar from "../../components/NavBar";
-import "./styles.scss";
-import HACKMERCED_LOGO from "../../assets/images/hackmercedvi-logo.png";
 import Live from "./live";
 import Schedule from "./schedule";
 import Prizes from "./prizes";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/NavBar";
+
+import HACKMERCED_LOGO from "../../assets/images/hackmercedvi-logo.png";
+
+import "./styles.scss";
 
 const Dashboard: FC = (): JSX.Element => {
     const { pathname } = useLocation();
@@ -18,11 +20,11 @@ const Dashboard: FC = (): JSX.Element => {
 
     const getDashboardContent = (): JSX.Element => {
         switch (pathname) {
-            case "/live/schedule":
+            case "/archive/live/schedule":
                 return <Schedule />;
-            case "/live/prizes":
+            case "/archive/live/prizes":
                 return <Prizes />;
-            case "/live":
+            case "/archive/live":
             default:
                 return <Live time="14 March 2021 11:00:00" />;
         }
@@ -36,22 +38,22 @@ const Dashboard: FC = (): JSX.Element => {
                     <nav className="dashboard__sub-navbar__nav">
                         <ul className="dashboard__sub-navbar__nav__ul">
                             <li className="dashboard__sub-navbar__nav__ul__li">
-                                <Link to="/live" className="dashboard__sub-navbar__nav__ul__li__title">
+                                <Link to="/archive/live" className="dashboard__sub-navbar__nav__ul__li__title">
                                     LIVE
                                 </Link>
-                                {pathname === "/live" ? BreakLine() : null}
+                                {pathname === "/archive/live" ? BreakLine() : null}
                             </li>
                             <li className="dashboard__sub-navbar__nav__ul__li">
-                                <Link to="/live/schedule" className="dashboard__sub-navbar__nav__ul__li__title">
+                                <Link to="/archive/live/schedule" className="dashboard__sub-navbar__nav__ul__li__title">
                                     SCHEDULE
                                 </Link>
-                                {pathname === "/live/schedule" ? BreakLine() : null}
+                                {pathname === "/archive/live/schedule" ? BreakLine() : null}
                             </li>
                             <li className="dashboard__sub-navbar__nav__ul__li">
-                                <Link to="/live/prizes" className="dashboard__sub-navbar__nav__ul__li__title">
+                                <Link to="/archive/live/prizes" className="dashboard__sub-navbar__nav__ul__li__title">
                                     PRIZES
                                 </Link>
-                                {pathname === "/live/prizes" ? BreakLine() : null}
+                                {pathname === "/archive/live/prizes" ? BreakLine() : null}
                             </li>
                         </ul>
                     </nav>

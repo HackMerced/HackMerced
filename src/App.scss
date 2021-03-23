@@ -3,6 +3,8 @@
 html,
 body {
     overflow: none;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -13,4 +15,12 @@ body {
 *:focus,
 button:focus {
     outline: none !important;
+}
+
+a {
+    text-decoration: none !important;
+
+    &, &:visited, &:hover, &:active {
+        color: inherit;
+      }
 }
