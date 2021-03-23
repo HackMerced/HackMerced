@@ -499,6 +499,7 @@
     }
 
     /* HEXAGON DESIGN code taken from and edited: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
+    /* Media Queries taken from and edited: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
     &__team-pictures {
         &__grid {
             position: relative;
@@ -560,65 +561,37 @@
 
                     /* Manually push first row to center */
                     &:nth-child(1) {
-                        margin-left: 8.6%;
+                        margin-left: 15.6%;
                     }
 
                     /* Translates each child in the second row to the right a little bit, and moves them down. */
+                    &:nth-child(5),
                     &:nth-child(6),
-                    &:nth-child(7),
+                    &:nth-child(7) {
+                        margin-top: -3.35%;
+                    }
+
+                    /* 5th child (2nd row): Move into interlocking position, which moves the rest of the children in the row. */
+                    &:nth-child(5) {
+                        margin-left: 23.46%;
+                    }
+
+                    /* Forces 8th child to go to the next row, by adding padding on the right of hexagon 7. */
+                    &:nth-child(7) {
+                        margin-right: 25%;
+                    }
+
+                    /* Manually push second row to center */
+                    &:nth-child(8) {
+                        margin-left: 15.46%;
+                    }
+
+                    /* Translates each child in the second row to the right a little bit, and moves them down. */
                     &:nth-child(8),
-                    &:nth-child(9) {
-                        margin-top: -3.35%;
-                        -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                        -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                        transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                    }
-
-                    /* 6th child (2nd row): Move into interlocking position, which moves the rest of the children in the row. */
-                    &:nth-child(6) {
-                        margin-left: 9%;
-                    }
-
-                    /* Forces 10th child to go to the next row. */
-                    &:nth-child(9) {
-                        margin-right: 20%;
-                    }
-
-                    /* Translates each child in the third row down */
+                    &:nth-child(9),
                     &:nth-child(10),
-                    &:nth-child(11),
-                    &:nth-child(12),
-                    &:nth-child(13),
-                    &:nth-child(14) {
+                    &:nth-child(11) {
                         margin-top: -3.35%;
-                        -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                        -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                        transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                    }
-
-                    /* Forces 15th child to go to the next row. */
-                    &:nth-child(14) {
-                        margin-right: 20%;
-                    }
-
-                    /* Manually push fourth row to center */
-                    &:nth-child(15) {
-                        margin-left: 24.7%;
-                    }
-
-                    /* Translates each child in the fourth row down */
-                    &:nth-child(15),
-                    &:nth-child(16) {
-                        margin-top: -3.35%;
-                        -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                        -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                        transform: translateX(50%) rotate(-60deg) skewY(30deg);
                     }
                 }
             }
