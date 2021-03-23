@@ -36,6 +36,7 @@ enum Numerals {
     M = "M",
 }
 
+// Converts a number into a roman numeral
 const romanize = (num: number) => {
     const lookup: Record<Numerals, number> = {
         M: 1000,
@@ -65,6 +66,7 @@ const romanize = (num: number) => {
     return roman;
 };
 
+// Generate a layout with the Successes and the Gallery attached and appends to an array then renders in reverse order
 const generateIterations = (data: Array<IterationProps> | any): JSX.Element => {
     const iterationArray: Array<JSX.Element> = data.map((element: IterationProps, index: number) => (
         <Fragment key={index}>

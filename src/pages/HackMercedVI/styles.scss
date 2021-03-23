@@ -1,6 +1,11 @@
 .hackmerced-vi {
     overflow-x: hidden;
 
+    /*
+    * #########################
+    * # HackMerced VI Landing #
+    * #########################
+    */
     &__landing {
         @media (width: 1024px) and (height: 1366px) {
             height: 800px !important;
@@ -68,6 +73,11 @@
         }
     }
 
+    /*
+    * ########################
+    * # HackMerced VI Themes #
+    * ########################
+    */
     &__themes {
         background-color: #272831;
         text-align: center;
@@ -184,6 +194,11 @@
         }
     }
 
+    /*
+    * #####################
+    * # HackMerced VI FAQ #
+    * #####################
+    */
     &__faq {
         background-color: #272831;
         padding: 5% 0%;
@@ -206,6 +221,11 @@
         }
     }
 
+    /*
+    * ##########################
+    * # HackMerced VI Sponsors #
+    * ##########################
+    */
     &__sponsors {
         background-color: #b63f1a;
         max-width: 100%;
@@ -254,6 +274,7 @@
     }
 }
 
+// This is  just here cause Sticker mule requires that their logo is different
 .sticker_mule {
     display: flex;
     flex-direction: row;
