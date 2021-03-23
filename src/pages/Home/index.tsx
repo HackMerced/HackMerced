@@ -27,6 +27,7 @@ type WinnersProps = {
     project: string;
 };
 
+// Generate a Hexagon layout for the Pictures of the Organizing Team
 const generateTeamPics = (team: Array<TeamProps>): JSX.Element => {
     const teamArray: Array<JSX.Element> = team.map((member: TeamProps, index: number) => (
         <li key={index} className="home__team-pictures__grid__items__item">
@@ -48,6 +49,7 @@ const generateTeamPics = (team: Array<TeamProps>): JSX.Element => {
     return <ul className="home__team-pictures__grid__items">{teamArray}</ul>;
 };
 
+// Generate a grid layout of the winners of the previous HackMerced
 const generateWinners = (winners: Array<WinnersProps>): JSX.Element => {
     const winnersArray: Array<JSX.Element> = winners.map((winner: WinnersProps, index: number) => (
         <li key={index} className="home__past-winners__list__past-winner">
@@ -62,6 +64,7 @@ const generateWinners = (winners: Array<WinnersProps>): JSX.Element => {
     return <ul className="home__past-winners__list">{winnersArray}</ul>;
 };
 
+// Generate a section heading that follows the same format for each section
 const generateSectionHeading = (title: string): JSX.Element => {
     return (
         <Fragment>
@@ -77,6 +80,7 @@ const Home: FC = (): JSX.Element => {
     return (
         <main className="home">
             <Navbar />
+            {/* Landing Section */}
             <section className="home__heading">
                 {width > 700 ? (
                     <section className="home__heading__wave">
@@ -118,6 +122,7 @@ const Home: FC = (): JSX.Element => {
                     />
                 ) : null}
             </section>
+            {/* About Us */}
             <section className="home__about-us">
                 {generateSectionHeading("About Us")}
                 <section className="home__about-us__content">
@@ -136,10 +141,12 @@ const Home: FC = (): JSX.Element => {
                     <img className="home__about-us__content__team-picture" src={TEAM_PICTURE} alt="HackMerced Team" />
                 </section>
             </section>
+            {/* Past Winners */}
             <section className="home__past-winners">
                 {generateSectionHeading("Past Winners")}
                 {generateWinners(winners)}
             </section>
+            {/* Team Pictures */}
             <section className="home__team-pictures">
                 {generateSectionHeading("Our Team")}
                 <div className="home__team-pictures__grid clear">{generateTeamPics(team)}</div>

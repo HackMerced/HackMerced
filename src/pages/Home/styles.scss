@@ -1,5 +1,9 @@
 .home {
-    // Home page heading
+    /*
+    * ################
+    * # Home Landing #
+    * ################
+    */
     &__heading {
         background-image: linear-gradient(#ffb181, #ffb26e);
         height: 810px;
@@ -287,6 +291,11 @@
         }
     }
 
+    /*
+    * ######################
+    * # Home Section Title #
+    * ######################
+    */
     &__section-title {
         font-weight: bold;
         color: black;
@@ -314,6 +323,11 @@
         }
     }
 
+    /*
+    * ###################
+    * # Home Break Line #
+    * ###################
+    */
     &__break-line {
         border: 0.5rem solid #ffb181;
         opacity: 50%;
@@ -348,6 +362,11 @@
         }
     }
 
+    /*
+    * #################
+    * # Home About Us #
+    * #################
+    */
     &__about-us {
         padding: 3% 0% 2% 0%;
 
@@ -437,6 +456,11 @@
         }
     }
 
+    /*
+    * #####################
+    * # Home Past Winners #
+    * #####################
+    */
     &__past-winners {
         &__list {
             display: flex;
@@ -498,9 +522,14 @@
         }
     }
 
-    /* HEXAGON DESIGN code taken from and edited: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
-    /* Media Queries taken from and edited: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+    /*
+    * ######################
+    * # Home Team Pictures #
+    * ######################
+    */
     &__team-pictures {
+        /* HEXAGON DESIGN code taken from and edited: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
+        /* Media Queries taken from and edited: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
         &__grid {
             position: relative;
             width: 80%; /* Scales original sizes */

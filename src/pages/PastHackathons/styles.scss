@@ -1,4 +1,9 @@
 .past-hackathon {
+    /*
+    * ########################
+    * # Past Hackathon Stats #
+    * ########################
+    */
     &__stats {
         overflow: hidden;
 
@@ -87,6 +92,11 @@
         }
     }
 
+    /*
+    * ##########################
+    * # Past Hackathon Gallery #
+    * ##########################
+    */
     &__gallery {
         &__title {
             font-weight: bold;

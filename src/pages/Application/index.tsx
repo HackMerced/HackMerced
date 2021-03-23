@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, Fragment, useState } from "react";
 import Axios from "axios";
 import SelectSearch from "react-select-search";
 import { ToastContainer, toast } from "react-toastify";
@@ -35,6 +35,7 @@ const Application: FC = (): JSX.Element => {
         firstHackathon: "",
     });
 
+    // Handles Change on the fields of the form
     const handleInputChange = (
         event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
     ): void => {
@@ -42,6 +43,7 @@ const Application: FC = (): JSX.Element => {
         setForm({ ...form, [name]: value });
     };
 
+    // Successful Submission popup in top right
     const success = () =>
         toast("Successful! 🎉 We have received your application.", {
             position: "top-right",
@@ -51,6 +53,7 @@ const Application: FC = (): JSX.Element => {
             draggable: true,
         });
 
+    // Error Popup in top right
     const error = () =>
         toast(
             "Sorry! You have already submitted your application. Think its an error? Contact us on our Contact Page.",
@@ -63,6 +66,7 @@ const Application: FC = (): JSX.Element => {
             },
         );
 
+    // Handles the submission action when the submit button is pressed
     const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
         event.preventDefault();
         setIsLoading(true);
@@ -104,7 +108,7 @@ const Application: FC = (): JSX.Element => {
     };
 
     return (
-        <>
+        <Fragment>
             <main className="dashboard-application">
                 <h3>Application</h3>
                 <form className="application-form" onSubmit={handleSubmit}>
@@ -337,7 +341,7 @@ const Application: FC = (): JSX.Element => {
                 </form>
             </main>
             <ToastContainer />
-        </>
+        </Fragment>
     );
 };
 
