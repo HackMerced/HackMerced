@@ -5,9 +5,11 @@
     justify-content: center;
     align-items: center;
     min-height: calc(90vh - 66px);
+
     @media only screen and (max-height: 1024px) {
         min-height: calc(90vh - 48px);
     }
+
     &__container {
         position: relative;
         display: inline-block;
@@ -17,48 +19,58 @@
         margin-bottom: 1%;
         background-image: linear-gradient(#ffb181, #ffb26e);
         border-radius: 65px;
-        // box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.212); // offset-x | offset-y | blur-radius | color
+
         @media only screen and (max-width: 1100px) {
             width: 60%;
         }
+
         @media only screen and (max-width: 740px) {
             width: 68%;
         }
+
         &__logo {
             display: block;
             margin: auto;
             padding-top: 2.5%;
             border-radius: 60px;
+
             @media only screen and (max-width: 740px) {
                 width: 25%;
             }
+
             /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
             @media only screen and (max-width: 350px) {
                 width: 20%;
             }
         }
+
         &__title {
             color: white;
             font-weight: bold;
             text-align: center;
             padding: 1% 0% 1% 0%;
+
             @media only screen and (min-width: 1100px) {
                 font-size: 35px;
             }
+
             @media only screen and (max-width: 1100px) {
                 font-size: 30px;
             }
+
             @media only screen and (max-width: 740px) {
                 font-size: 25px;
             }
         }
+
         &__form {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap; // makes 'Create an Account' go under 'Forgot Password?' at lower resolutions
             justify-content: space-around; //  puts even space on the left and right of contents
             padding: 0% 4% 3% 4%;
-             ::placeholder {
+
+            ::placeholder {
                 /* Chrome, Firefox, Opera, Safari 10.1+ */
                 opacity: 1;
                 /* Firefox */
@@ -67,15 +79,18 @@
                 position: fixed;
                 text-align: left;
                 color: rgba(0, 0, 0, 0.301);
-                 :-ms-input-placeholder {
+
+                :-ms-input-placeholder {
                     /* Internet Explorer 10-11 */
                     font-weight: lighter;
                 }
-                 ::-ms-input-placeholder {
+
+                ::-ms-input-placeholder {
                     /* Microsoft Edge */
                     font-weight: lighter;
                 }
             }
+
             &__first-name,
             &__last-name,
             &__email,
@@ -86,6 +101,7 @@
                 display: block;
                 /* offset-x | offset-y | blur-radius | color */
             }
+
             &__already-member {
                 color: white;
                 font-weight: normal;
@@ -93,17 +109,21 @@
                 text-align: center;
                 text-decoration: underline;
                 margin-bottom: 15px;
+
                 @media only screen and (max-width: 1100px) {
                     font-size: 18px;
                 }
+
                 @media only screen and (max-width: 740px) {
                     font-size: 15px;
                 }
+
                 /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
                 @media only screen and (max-width: 350px) {
                     font-size: 15px;
                 }
             }
+
             &__submit-button {
                 width: 45%;
                 height: 70px;
@@ -114,23 +134,28 @@
                 font-size: 25px;
                 margin: auto auto 5% auto;
                 display: block;
+
                 @media only screen and (max-width: 500px) {
                     width: 80%;
                 }
+
                 @media only screen and (min-width: 1100px) {
                     font-size: 25px;
                     width: 70%;
                 }
+
                 @media only screen and (max-width: 1100px) {
                     font-size: 20px;
                     width: 70%;
                 }
+
                 /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
                 @media only screen and (max-width: 500px) {
                     font-size: 18px;
                     width: 80%;
                 }
             }
+
             input[type="text"],
             input[type="email"],
             input[type="password"],
@@ -139,8 +164,9 @@
                 margin: 15px auto;
                 color: black;
                 text-align: left;
-                padding: 0% 0% 0% 4%; //moves location of select (input) to the right, which also moves the placeholder
+                padding: 0% 0% 0% 4%; // moves location of select (input) to the right, which also moves the placeholder
             }
+
             label {
                 padding: 0% 0% 0% 11%;
             }

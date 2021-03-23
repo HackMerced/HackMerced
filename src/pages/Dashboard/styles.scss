@@ -2,6 +2,7 @@ $offWhite: #f0f0f3;
 $offOrange: #ffb181;
 $offBlack: #313639;
 $borderColor: #eeebf5;
+
 .dashboard {
     display: grid;
     background: $offWhite;
@@ -9,12 +10,15 @@ $borderColor: #eeebf5;
     row-gap: 30px;
     column-gap: 50px;
     grid-template-areas: "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav" "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside" "main main main main main main main main aside aside";
+
     @media only screen and (max-width: 1000px) {
         grid-template-areas: "nav" "nav" "main" "main" "main" "main" "main" "main" "aside" "aside";
     }
+
     @media only screen and (max-width: 500px) {
         padding: 1rem;
     }
+
     /*
     * ########################
     * # Dashboard Sub NavBar #
@@ -30,15 +34,18 @@ $borderColor: #eeebf5;
         border-radius: 2em;
         padding: 3em 0;
         box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08); //box-shadow: none|h-offset v-offset blur spread color
+
         @media only screen and (max-width: 500px) {
             padding: 1rem 0;
         }
+
         &__nav {
             flex: 1;
             align-self: center;
             display: flex;
             justify-content: center;
             align-items: center;
+
             &__ul {
                 display: flex;
                 width: 95%;
@@ -47,21 +54,26 @@ $borderColor: #eeebf5;
                 text-transform: uppercase;
                 z-index: 30;
                 background-color: $offWhite;
+
                 &__li {
                     flex-grow: 1;
                     padding: 0 3rem;
                     cursor: pointer;
                     text-align: center;
                     font-size: 23px;
+
                     @media (max-width: 700px) {
                         padding: 0 1rem;
                     }
+
                     &__title {
                         text-decoration: none;
+
                         @media only screen and (max-width: 500px) {
                             font-size: 16px;
                         }
                     }
+
                     .break-line {
                         border: 5px solid $offOrange;
                         opacity: 0.5;
@@ -73,6 +85,7 @@ $borderColor: #eeebf5;
             }
         }
     }
+
     /*
     * ########################
     * # Dashboard Main Block #
@@ -81,6 +94,7 @@ $borderColor: #eeebf5;
     &__content {
         grid-area: main;
         border-radius: 2em;
+
         /*
         * ##################
         * # Dashboard Live #
@@ -89,10 +103,12 @@ $borderColor: #eeebf5;
         &__live {
             display: flex;
             flex-direction: column;
+
             &__countdown,
             &__resources {
                 border-radius: 2em;
                 box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08);
+
                 &__header {
                     background-color: $offWhite;
                     text-align: center;
@@ -100,19 +116,24 @@ $borderColor: #eeebf5;
                     font-size: 35px;
                     font-weight: bolder;
                     padding: 15px 0;
+
                     @media only screen and (max-width: 1100px) {
                         font-size: 32px;
                     }
+
                     @media only screen and (max-width: 740px) {
                         font-size: 30px;
                     }
+
                     @media only screen and (max-width: 500px) {
                         font-size: 26px;
                     }
                 }
             }
+
             &__countdown {
                 margin-bottom: 50px;
+
                 &__timer {
                     display: flex;
                     align-items: center;
@@ -120,10 +141,10 @@ $borderColor: #eeebf5;
                     text-align: center;
                     width: 100%;
                     margin: 0 auto;
+
                     &__digits {
                         display: block;
                         font-size: 35px;
-                        // text-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.5);
                         line-height: 1;
                         font-weight: bold;
                         color: $offWhite;
@@ -132,60 +153,73 @@ $borderColor: #eeebf5;
                         border-radius: 0.6em;
                         margin: 8px;
                         width: 5em;
-                        // box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.5);
+
                         & span {
                             display: block;
                             font-size: 28px;
                             line-height: 1.5;
                         }
+
                         &:last-child {
                             margin-right: 0;
                         }
+
                         @media (max-width: 1300px) {
                             width: 4em;
+
                             & span {
                                 font-size: 20px;
                             }
                         }
+
                         @media (max-width: 1100px) {
                             padding: 30px 15px;
                             width: 130px;
                             font-size: 26px;
+
                             & span {
                                 font-size: 18px;
                             }
                         }
+
                         @media (max-width: 767px) {
                             & span {
                                 font-size: 16px;
                             }
                         }
+
                         @media (max-width: 640px) {
                             padding: 15px;
                             width: 98px;
                         }
+
                         @media (max-width: 500px) {
                             width: 82px;
                             margin: 5px;
                             padding: 9px 4px;
+
                             &,
                             & span {
                                 font-size: 16px;
                             }
                         }
+
                         @media (max-width: 400px) {
                             width: 70px;
                             margin: 5px;
                             padding: 9px 4px;
+
                             &,
                             & span {
                                 font-size: 14px;
                             }
                         }
+
                         @media (max-width: 320px) {
                             width: 60px;
                             margin: 5px;
                             padding: 9px 4px;
+
                             &,
                             & span {
                                 font-size: 12px;
@@ -193,21 +227,26 @@ $borderColor: #eeebf5;
                         }
                     }
                 }
+
                 &__body {
                     color: $offBlack;
                     font-size: 23px;
                     padding: 40px;
+
                     @media only screen and (max-width: 1100px) {
                         font-size: 20px;
                     }
+
                     @media only screen and (max-width: 740px) {
                         font-size: 18px;
                     }
+
                     @media only screen and (max-width: 500px) {
                         font-size: 16px;
                     }
                 }
             }
+
             &__resources {
                 &__ul {
                     display: flex;
@@ -215,6 +254,7 @@ $borderColor: #eeebf5;
                     align-content: flex-start;
                     width: 100%;
                     color: $offBlack;
+
                     &__li {
                         border-radius: 25px;
                         margin: 15px;
@@ -223,15 +263,19 @@ $borderColor: #eeebf5;
                         text-align: center;
                         font-size: 28px;
                         transform: scale(0.95);
+
                         @media only screen and (max-width: 1100px) {
                             font-size: 25px;
                         }
+
                         @media only screen and (max-width: 740px) {
                             font-size: 23px;
                         }
+
                         @media only screen and (max-width: 350px) {
                             font-size: 20px;
                         }
+
                         &:hover {
                             cursor: pointer;
                             transform: scale(1);
@@ -240,6 +284,7 @@ $borderColor: #eeebf5;
                 }
             }
         }
+
         /*
         * ######################
         * # Dashboard Schedule #
@@ -248,27 +293,33 @@ $borderColor: #eeebf5;
         &__schedule {
             border-radius: 2em;
             box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08);
+
             &__header {
                 background-color: $offWhite;
                 text-align: center;
                 border-bottom-left-radius: 2em;
                 border-bottom-right-radius: 2em;
                 box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08);
+
                 &__title {
                     font-size: 35px;
                     color: $offBlack;
                     font-weight: bolder;
                     padding: 30px 0;
+
                     @media only screen and (max-width: 1100px) {
                         font-size: 32px;
                     }
+
                     @media only screen and (max-width: 740px) {
                         font-size: 30px;
                     }
+
                     @media only screen and (max-width: 350px) {
                         font-size: 25px;
                     }
                 }
+
                 &__sub-header {
                     display: flex;
                     flex-direction: row;
@@ -276,24 +327,30 @@ $borderColor: #eeebf5;
                     color: $offOrange;
                     font-size: 28px;
                     padding: 5px;
+
                     @media only screen and (max-width: 1100px) {
                         font-size: 25px;
                     }
+
                     @media only screen and (max-width: 740px) {
                         font-size: 20px;
                     }
+
                     @media only screen and (max-width: 350px) {
                         font-size: 20px;
                     }
+
                     &__li {
                         display: flex;
                         flex-direction: column;
                         flex: 1 1 auto;
                         text-align: center;
                         margin: 5px;
+
                         &:hover {
                             cursor: pointer;
                         }
+
                         .break-line {
                             border: 5px solid $offOrange;
                             opacity: 0.5;
@@ -305,6 +362,7 @@ $borderColor: #eeebf5;
                     }
                 }
             }
+
             &__timeline {
                 display: flex;
                 justify-content: space-between;
@@ -312,34 +370,43 @@ $borderColor: #eeebf5;
                 color: $offBlack;
                 font-size: 20px;
                 padding: 30px;
+
                 @media only screen and (max-width: 1100px) {
                     font-size: 20px;
                 }
+
                 @media only screen and (max-width: 740px) {
                     font-size: 18px;
                 }
+
                 @media only screen and (max-width: 350px) {
                     font-size: 15px;
                 }
+
                 @media only screen and (max-width: 1000px) {
                     padding-bottom: 8%;
                 }
+
                 &__item {
                     display: flex;
                     flex-direction: row;
                     width: 100%;
+
                     @media (max-width: 500px) {
                         flex-direction: column;
                     }
+
                     &__title {
                         padding: 20px;
                         font-weight: lighter;
                         width: 30%;
+
                         @media (max-width: 500px) {
                             text-align: center;
                             width: 100%;
                         }
                     }
+
                     &__body {
                         flex-grow: 1;
                         width: 50%;
@@ -350,12 +417,15 @@ $borderColor: #eeebf5;
                         line-height: 90px;
                         border-radius: 25px;
                         box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08);
+
                         @media (max-width: 500px) {
                             width: 100%;
                         }
                     }
+
                     & > div {
                         margin: 20px;
+
                         @media (max-width: 500px) {
                             margin: 0;
                         }
@@ -363,6 +433,7 @@ $borderColor: #eeebf5;
                 }
             }
         }
+
         /*
         * ####################
         * # Dashboard Prizes #
@@ -371,6 +442,7 @@ $borderColor: #eeebf5;
         &__prizes {
             border-radius: 2em;
             box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08);
+
             &__header {
                 background-color: $offWhite;
                 text-align: center;
@@ -378,25 +450,31 @@ $borderColor: #eeebf5;
                 font-size: 35px;
                 font-weight: bolder;
                 padding: 30px 0;
+
                 @media only screen and (max-width: 1100px) {
                     font-size: 32px;
                 }
+
                 @media only screen and (max-width: 740px) {
                     font-size: 30px;
                 }
+
                 @media only screen and (max-width: 350px) {
                     font-size: 25px;
                 }
             }
+
             &__ul {
                 display: flex;
                 flex-flow: row wrap;
                 align-content: flex-start;
                 width: 100%;
                 padding: 30px;
+
                 @media (max-width: 500px) {
                     flex-direction: column;
                 }
+
                 &__li {
                     display: flex;
                     flex-direction: column;
@@ -407,36 +485,46 @@ $borderColor: #eeebf5;
                     margin: 10px;
                     padding: 30px;
                     box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08);
+
                     @media only screen and (min-width: 500px) {
                         margin: 20px 30px;
                     }
+
                     @media (max-width: 500px) {
                         width: 100%;
                     }
+
                     &__title {
                         color: $offOrange;
                         font-size: 28px;
                         font-weight: bold;
+
                         @media only screen and (max-width: 1100px) {
                             font-size: 25px;
                         }
+
                         @media only screen and (max-width: 740px) {
                             font-size: 23px;
                         }
+
                         @media only screen and (max-width: 350px) {
                             font-size: 20px;
                         }
                     }
+
                     &__body {
                         color: $offBlack;
                         font-size: 15px;
                         padding: 15px 0 0 0;
+
                         @media only screen and (max-width: 1100px) {
                             font-size: 10px;
                         }
+
                         @media only screen and (max-width: 740px) {
                             font-size: 12px;
                         }
+
                         @media only screen and (max-width: 350px) {
                             font-size: 14px;
                         }
@@ -445,17 +533,21 @@ $borderColor: #eeebf5;
             }
         }
     }
+
     &__aside {
         grid-area: aside;
         display: flex;
         flex-direction: column;
+
         @media (max-width: 1000px) {
             flex-direction: row;
             justify-content: center;
         }
+
         @media (max-width: 600px) {
             flex-direction: column;
         }
+
         /*
         * ###################
         * # Dashboard Dates #
@@ -472,76 +564,92 @@ $borderColor: #eeebf5;
             padding-bottom: 40px;
             width: 350px;
             margin-bottom: 40px;
+
             &__logo {
                 width: 100px;
                 height: 105px;
                 margin: 5% auto;
                 border-radius: 50px;
-                // box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192);
+
                 @media only screen and (max-width: 600px) {
                     width: 70px;
                 }
+
                 @media only screen and (max-width: 740px) {
                     width: 25%;
                     height: 100px;
                 }
+
                 /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
                 @media only screen and (max-width: 350px) {
                     width: 20%;
                     height: 95px;
                 }
             }
+
             &__start-time,
             &__end-time,
             &__start-title,
             &__end-title {
                 padding: 2% 1%;
             }
+
             &__title,
             &__start-title,
             &__end-title {
                 color: $offBlack;
             }
+
             &__start-time,
             &__end-time {
                 color: $offOrange;
             }
+
             &__title {
                 font-size: 28px;
                 font-weight: bolder;
                 padding: 4% 1%;
             }
+
             &__start-title,
             &__end-title {
                 font-weight: normal;
                 font-size: 25px;
+
                 @media only screen and (max-width: 1100px) {
                     font-size: 23px;
                 }
+
                 @media only screen and (max-width: 740px) {
                     font-size: 20px;
                 }
+
                 /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
                 @media only screen and (max-width: 350px) {
                     font-size: 20px;
                 }
             }
+
             &__start-time,
             &__end-time {
                 font-weight: bold;
                 font-size: 25px;
+
                 @media only screen and (max-width: 1100px) {
                     font-size: 23px;
                 }
+
                 @media only screen and (max-width: 740px) {
                     font-size: 22px;
                 }
+
                 /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
                 @media only screen and (max-width: 350px) {
                     font-size: 20px;
                 }
             }
         }
+
         /*
         * ##################
         * # Dashboard Team #
@@ -556,38 +664,47 @@ $borderColor: #eeebf5;
             height: 400px;
             padding-top: 30px;
             width: 350px;
+
             @media only screen and (max-width: 1000px) {
                 height: 500px;
             }
+
             &__title,
             &__break,
             &__code-title {
                 color: $offBlack;
             }
+
             &__code {
                 color: $offOrange;
             }
+
             &__title {
                 font-weight: bolder;
                 font-size: 28px;
                 padding: 40px 1% 4% 1%;
+
                 @media only screen and (max-width: 1100px) {
                     font-size: 25px;
                 }
+
                 @media only screen and (max-width: 740px) {
                     font-size: 23px;
                 }
+
                 /* Small devices (phones, portrait tablets, and large phones, 600px and lower) */
                 @media only screen and (max-width: 350px) {
                     font-size: 23px;
                 }
             }
+
             &__code,
             &__code-title {
                 font-weight: bold;
                 font-size: 23px;
                 padding: 2% 1%;
             }
+
             &__code-container {
                 display: flex;
                 flex-direction: row;
@@ -598,38 +715,46 @@ $borderColor: #eeebf5;
                 height: 40px;
                 border-radius: 20px;
                 box-shadow: -3px -3px 10px 2px $offWhite, 3px 3px 10px 2px rgb(192, 192, 192); // offset-x | offset-y | blur-radius | color
+
                 @media (min-width: 500px) and (max-width: 700px) {
                     width: 85%;
                 }
+
                 &__input {
                     flex-grow: 2;
                     text-align: center;
                     border-radius: 20px;
                 }
+
                 &__submit {
                     width: 100%;
+
                     @media (max-width: 600px) {
                         width: 15%;
                     }
                 }
             }
+
             @media only screen and (max-width: 1000px) {
                 &__title {
                     padding-top: 30%;
                 }
             }
         }
+
         &__team,
         &__event {
             @media (max-width: 1000px) {
                 margin: 10px;
                 width: 100%;
             }
+
             @media (max-width: 500px) {
                 margin: 10px 0;
             }
         }
     }
+    
     .orange-rectangle {
         background-color: $offOrange;
         height: 50px;

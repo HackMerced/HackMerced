@@ -85,11 +85,11 @@ const Application: FC = (): JSX.Element => {
                 setIsLoading(false);
                 success();
 
-                Axios.post(`https://Hackmerced-myriagon.herokuapp.com/v1/zoho/applied`, {
+                Axios.post(`https://hackmerced-myriagon.herokuapp.com/v1/zoho/applied`, {
                     email: form.email,
                 });
 
-                Axios.post(`https://Hackmerced-myriagon.herokuap.com/v1/mailchimp/subscribe`, {
+                Axios.post(`https://hackmerced-myriagon.herokuap.com/v1/mailchimp/subscribe`, {
                     email_address: form.email,
                     merge_fields: {
                         FNAME: form.firstName,
