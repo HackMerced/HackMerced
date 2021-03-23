@@ -20,6 +20,7 @@ const Form: FC<{
         message: "",
     });
 
+    // Handle the submission of the form
     const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>): Promise<void> => {
         event.preventDefault();
 
@@ -39,6 +40,7 @@ const Form: FC<{
         if (status === "success") setSubmitText("Submitted! 🎉  ");
     };
 
+    // Handle the input fields state change
     const handleInputChange = (
         event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>,
     ): void => {

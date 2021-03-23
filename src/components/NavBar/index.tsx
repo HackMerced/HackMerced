@@ -15,6 +15,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
     const [openDrawer, toggleDrawer] = useState(false);
     const drawerRef = useRef(null);
 
+    // handles updates to the navbar UI prior to rendering to support mobile view
     useEffect(() => {
         const closeDrawer = (event: { target: any }) => {
             if (drawerRef.current && (drawerRef?.current as any).contains(event.target)) {
@@ -32,6 +33,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
         openDrawer: openDrawer,
     };
 
+    // create a break line
     const BreakLine = (): JSX.Element => {
         return <div className="break-line" style={{ borderColor: breakLineColor }}></div>;
     };

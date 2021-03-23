@@ -10,6 +10,7 @@ const Footer: FC<{ backgroundColor?: string; textColor?: string; fontColor?: str
     textColor,
     fontColor,
 }): JSX.Element => {
+    // Generate the footer Icons
     const footerIcons = (icon: IconDefinition) => {
         return <FontAwesomeIcon icon={icon} className="fa text-white" style={{ color: fontColor }} />;
     };

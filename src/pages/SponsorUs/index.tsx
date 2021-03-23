@@ -14,6 +14,7 @@ const SponsorUs: FC = (): JSX.Element => {
         <Fragment>
             <Navbar />
             <main className="sponsors-us">
+                {/* Information */}
                 <div className="sponsors-us__content">
                     <h3 className="sponsors-us__content__heading">
                         Become a sponsor to empower and help <br></br> grow the next generation of HackMerced.
@@ -46,7 +47,9 @@ const SponsorUs: FC = (): JSX.Element => {
                         </p>
                     </section>
                 </div>
+                {/* Form to Submit a Request */}
                 <Form formTitle="Sponsor Us" askCompany={true} formRequest="sponsor" />
+                {/* Past Sponsors Gallery */}
                 <section className="sponsors-us__past-sponsors">
                     <h1 className="sponsors-us__past-sponsors__title">Past Sponsors</h1>
                     <img
