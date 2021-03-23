@@ -99,6 +99,14 @@ const Home: FC = (): JSX.Element => {
                     <div className="home__heading__title__sub-text">
                         Stay updated with HackMerced and subscribe to our email list!
                     </div>
+                    <button
+                        className="subscribe-button"
+                        onClick={() => {
+                            window.location.href = "https://hackmercedvi.typeform.com/to/GLB4v3b3";
+                        }}
+                    >
+                        Register to be part of HackMerced Team
+                    </button>
                 </section>
                 {width > 700 ? (
                     <img
