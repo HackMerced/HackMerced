@@ -218,7 +218,7 @@
                 background-color: var(--background);
 
                 /* Small devices (landscape tablets, 300px and up) */
-                @media only screen and (min-width: 360px) {
+                @media only screen and (min-width: 360px) and (max-width: 768px) {
                     width: 65%;
                     padding: 4%;
                     margin: 0;
