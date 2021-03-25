@@ -130,7 +130,8 @@ const Menu = {
             top: 0;
             height: 100%;
             flex-direction: column;
-            padding: 1rem 2rem;
+            padding: 0 2rem 1rem 2rem;
+            margin-top: 0;
             transition: 0.2s ease-out;
             background-color: #ffb181;
             z-index: 101;
