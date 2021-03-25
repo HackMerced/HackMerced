@@ -2,6 +2,8 @@
     flex-direction: column;
     justify-content: center;
     margin: 2% 0;
+    padding-bottom: 2%;
+    background-color: var(--background);
 
     @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
         margin: 0 auto;
@@ -17,7 +19,7 @@
             line-height: 1.5em;
             text-align: center;
             margin: 2% auto auto auto;
-            color: black;
+            color: var(--text-color);
             font-weight: bolder;
             overflow: hidden;
 
@@ -35,7 +37,7 @@
             text-align: center;
 
             &__icon {
-                color: #fdab78;
+                color: var(--orange);
                 font-size: 35px !important;
                 margin: 10px;
             }
@@ -45,7 +47,7 @@
                 text-align: center;
                 margin: 2% auto auto auto;
                 font-weight: bold;
-                color: black;
+                color: var(--text-color);
                 text-align: center;
 
                 @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
@@ -59,14 +61,14 @@
                 margin-block-end: 1em;
                 margin-inline-start: 0px;
                 margin-inline-end: 0px;
-                color: black;
+                color: var(--text-color);
                 text-align: center;
             }
         }
 
         @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
             margin: 0;
-            margin-bottom: 2rem;
+            padding-top: 2rem;
         }
     }
 
@@ -77,6 +79,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        background-color: var(--background);
 
         &__title {
             font-size: 1.875rem;
@@ -84,7 +87,7 @@
             text-align: center;
             margin: 2% auto auto auto;
             font-weight: bold;
-            color: black;
+            color: var(--text-color);
             text-align: center;
 
             @media (min-width: 768px) {
