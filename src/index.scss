@@ -1,0 +1,10 @@
+:root {
+    --landing-bg: linear-gradient(#ffb181, #ffb26e);
+    --cloud-bg: rgb(248, 243, 243);
+    --background: white;
+}
+
+[data-theme="dark"] {
+    --landing-bg: #B63F1A;
+    --background: #272831;
+}
