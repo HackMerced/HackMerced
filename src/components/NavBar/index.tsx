@@ -13,17 +13,14 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
     showBanner = true,
 }): JSX.Element => {
     const [openDrawer, toggleDrawer] = useState<boolean>(false);
-    const [isDarkMode, setIsDarkMode] = useState(() => false);
-    const [theme, setTheme] = useState<boolean>(false);
+    const [isDarkMode, setIsDarkMode] = useState(() =>
+        localStorage.getItem("theme") ? localStorage.getItem("theme") === "dark" : false,
+    );
+    const [theme, setTheme] = useState<boolean>(
+        localStorage.getItem("theme") ? localStorage.getItem("theme") === "dark" : false,
+    );
     const drawerRef = useRef(null);
     const { pathname } = useLocation();
-
-    // TODO: working on keeping state across pages
-    // useEffect(() => {
-    //     const currentTheme = localStorage.getItem("theme") ? localStorage.getItem("theme") : null;
-    //     if (currentTheme == "dark") setIsDarkMode(() => true);
-    //     setTheme(currentTheme == "dark");
-    // }, []);
 
     document.documentElement.setAttribute("data-theme", theme ? "dark" : "light");
 
@@ -53,7 +50,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
     const themeSwitcher = () => {
         document.documentElement.setAttribute("data-theme", theme ? "dark" : "light");
         setTheme(!theme);
-        localStorage.setItem("theme", theme ? "dark" : "light");
+        localStorage.setItem("theme", !theme ? "dark" : "light");
         setIsDarkMode(() => !isDarkMode);
     };
 
