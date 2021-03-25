@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { css } from "@emotion/core";
 import { PulseLoader } from "react-spinners";
 
-import FileUploader from "../../components/FileUploader";
+import FileUploader from "../../../components/FileUploader";
 import { universities } from "./universities";
 import { states } from "./states";
 import { countries } from "./countries";

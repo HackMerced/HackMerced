@@ -2,12 +2,12 @@ import React, { FC, Fragment, useState } from "react";
 import Axios, { AxiosResponse } from "axios";
 import { Link, useHistory } from "react-router-dom";
 
-import Footer from "../../components/Footer";
-import Navbar from "../../components/NavBar";
+import Footer from "../../../components/Footer";
+import Navbar from "../../../components/NavBar";
 import HACKMERCED_LOGO from "../../assets/images/hackmercedvi-logo.png";
 import "./styles.scss";
-import { environment } from "../../environments";
-import { HackerState, TokenState } from "../../App.types";
+import { environment } from "../../../environments";
+import { HackerState, TokenState } from "../../../App.types";
 
 const SignUp: FC<{
     updateHacker: React.Dispatch<React.SetStateAction<HackerState | undefined>>;
