@@ -103,6 +103,7 @@ const Styles = {
       background-color: var(--orange);
       height: auto;
       color: white;
+      max-height: 80px;
 
       @media only screen and (max-width: 40em) {
           height: ${(): string => {
