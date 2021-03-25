@@ -32,10 +32,10 @@ const generateTeamPics = (team: Array<TeamProps>): JSX.Element => {
     const teamArray: Array<JSX.Element> = team.map((member: TeamProps, index: number) => (
         <li key={index} className="home__team-pictures__grid__items__item">
             <a
+                className="home__team-pictures__grid__items__item__hexagon"
                 href={member.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="home__team-pictures__grid__items__item__hexagon"
             >
                 <img
                     className="home__team-pictures__grid__items__item__hexagon__picture"
