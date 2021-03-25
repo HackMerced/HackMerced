@@ -1,11 +1,11 @@
 .contact-us {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     margin: 2% 0;
+    padding-bottom: 2%;
+    background-color: var(--background);
 
     @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
-        flex-direction: column;
-
         margin: 0 auto;
     }
 
@@ -19,7 +19,7 @@
             line-height: 1.5em;
             text-align: center;
             margin: 2% auto auto auto;
-            color: black;
+            color: var(--text-color);
             font-weight: bolder;
             overflow: hidden;
         }
@@ -37,13 +37,12 @@
                 font-size: 20px;
                 text-align: center;
                 margin: 1% auto auto auto;
-
-                color: rgb(49, 49, 49);
+                color: var(--text-color);
                 text-align: center;
             }
 
             &__icon {
-                color: #fdab78;
+                color: var(--orange);
                 font-size: 35px !important;
                 margin: 10px;
             }
@@ -51,7 +50,7 @@
 
         @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
             margin: 0;
-            margin-bottom: 2rem;
+            padding-top: 2rem;
 
             &__header {
                 margin-bottom: 2rem;

@@ -3,9 +3,9 @@
     flex-direction: column;
     width: 80%;
     padding: 3rem;
-    background-image: linear-gradient(#ffb181, #ffb26e);
+    background-image: var(--gradient);
     border-radius: 2rem;
-    margin: 2% 7%;
+    margin: 2% 7% 0 7%;
 
     @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
         margin-bottom: 2rem;
@@ -61,7 +61,7 @@
         margin: 1rem 0;
         height: 2.5rem;
         font-size: 16px;
-        color: orange;
+        color: var(--orange);
         background: white;
         border-radius: 0.75rem;
         border: none;
@@ -69,7 +69,7 @@
         transition: all 0.2s ease;
 
         &:active {
-            background: linear-gradient(#fdab78, #faa55a);
+            background: var(--gradient);
             color: white;
         }
     }
@@ -80,6 +80,7 @@
             transform: rotate(360deg);
         }
     }
+
     /* This is the class name given by the Font Awesome component when icon contains 'spinner' */
     .fa-spinner {
         /* Apply 'spinner' keyframes looping once every second (1s)  */
