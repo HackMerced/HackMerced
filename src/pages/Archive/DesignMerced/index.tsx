@@ -1,19 +1,19 @@
 import React, { FC, Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 
-import Navbar from "../../components/NavBar";
-import Footer from "../../components/Footer";
-import useWindowDimensions from "../../components/WindowDimensions";
-import Accordian from "../../components/Accordian";
+import Navbar from "../../../components/NavBar";
+import Footer from "../../../components/Footer";
+import useWindowDimensions from "../../../components/WindowDimensions";
+import Accordian from "../../../components/Accordian";
 
-import DESIGN_MERCED_TITLE from "../../assets/images/title-designmerced.png";
-import ABSTRACT_PAINTING from "../../assets/images/paint-purple.jpeg";
-import ABOUT_ICON from "../../assets/images/about-icon.png";
-import PROMPT_ICON from "../../assets/images/lightbulb-layers.png";
-import SPONSOR_DESIGN from "../../assets/images/sponsor-design.jpg";
+import DESIGN_MERCED_TITLE from "../../../assets/images/title-designmerced.png";
+import ABSTRACT_PAINTING from "../../../assets/images/paint-purple.jpeg";
+import ABOUT_ICON from "../../../assets/images/about-icon.png";
+import PROMPT_ICON from "../../../assets/images/lightbulb-layers.png";
+import SPONSOR_DESIGN from "../../../assets/images/sponsor-design.jpg";
 
-import { FAQData } from "../../assets/faq";
-import { schedule } from "../../assets/schedule";
+import { FAQData } from "../../../assets/faq";
+import { schedule } from "../../../assets/schedule";
 
 import "./styles.scss";
 
