@@ -3,7 +3,7 @@ import MARY from "./images/mary.jpg";
 import ATHENA from "./images/athena.jpg";
 import MANJOT from "./images/manjot.jpg";
 import INTISER from "./images/Intiser.png";
-import ALISSON from "./images/alisson.png";
+import ALISSON from "./images/alisson.jpg";
 import MARTHEN from "./images/marty.jpg";
 import JET from "./images/jet.jpg";
 import JOSEPH from "./images/joseph.jpg";
