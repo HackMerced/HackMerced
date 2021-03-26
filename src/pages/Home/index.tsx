@@ -18,6 +18,7 @@ type TeamProps = {
     lastName?: string | undefined;
     url: string;
     src: string;
+    desc: string;
 };
 
 type WinnersProps = {
@@ -42,6 +43,9 @@ const generateTeamPics = (team: Array<TeamProps>): JSX.Element => {
                     src={member.src}
                     alt={`${member.firstName} ${member.lastName}`}
                 />
+                <div className="home__team-pictures__grid__items__item__hexagon__text">
+                    {member.desc}
+                </div>
             </a>
         </li>
     ));
@@ -56,7 +60,7 @@ const generateWinners = (winners: Array<WinnersProps>): JSX.Element => {
             <a href={winner.project} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={winner.icon} className="fa home__past-winners__list__past-winner__icon" />
                 <h5 className="home__past-winners__list__past-winner__category">{winner.category}</h5>
-                <h6 className="home__past-winners__list__past-winner__group">{winner.group}</h6>
+                <div className="home__past-winners__list__past-winner__group">{winner.group}</div>
             </a>
         </li>
     ));

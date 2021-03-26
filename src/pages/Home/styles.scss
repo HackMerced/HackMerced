@@ -1,11 +1,13 @@
 .home {
+    background-color: var(--background);
+
     /*
     * ################
     * # Home Landing #
     * ################
     */
     &__heading {
-        background-image: linear-gradient(#ffb181, #ffb26e);
+        background-image: var(--gradient);
         height: 810px;
         background-repeat: no-repeat;
         background-size: cover;
@@ -26,7 +28,7 @@
             width: 100%;
 
             &__cloud {
-                background: rgb(248, 243, 243);
+                background: var(--cloud-bg);
                 width: 200px;
                 height: 60px;
                 border-radius: 200px;
@@ -39,7 +41,7 @@
                     position: absolute;
                     top: -15px;
                     left: 10px;
-                    background: rgb(248, 243, 243);
+                    background: var(--cloud-bg);
                     width: 100px;
                     height: 80px;
                     border-radius: 100px;
@@ -176,7 +178,7 @@
 
             &__text,
             &__sub-text {
-                color: rgba(243, 244, 246, var(1));
+                color: rgb(243, 244, 246);
             }
 
             @media (max-width: 700px) {
@@ -189,6 +191,8 @@
 
                 &__img {
                     margin: 0% 0 0 5% !important;
+                    width: 80%;
+                    height: auto;
                 }
 
                 &__img &__text,
@@ -207,16 +211,21 @@
                 text-transform: uppercase;
                 margin: 2% auto 0% 53%;
                 font-size: 16px;
-                color: black;
+                color: var(--text-color);
                 border-radius: 20px;
                 transition: 0.2s all;
                 text-align: center;
                 padding: 0.8%;
                 border: none;
+                background-color: var(--background);
+                cursor: pointer;
 
                 /* Small devices (landscape tablets, 300px and up) */
-                @media only screen and (min-width: 768px) {
+                @media only screen and (min-width: 360px) and (max-width: 768px) {
                     width: 65%;
+                    padding: 4%;
+                    margin: 0;
+                    text-align: center;
                 }
 
                 /* Medium devices (landscape tablets, 768px and up) */
@@ -298,7 +307,7 @@
     */
     &__section-title {
         font-weight: bold;
-        color: black;
+        color: var(--text-color);
         text-align: center;
         margin-top: 3%;
 
@@ -329,7 +338,7 @@
     * ###################
     */
     &__break-line {
-        border: 0.5rem solid #ffb181;
+        border: 0.5rem solid var(--orange);
         opacity: 50%;
         border-width: 0.5rem;
         border-radius: 10px;
@@ -369,10 +378,11 @@
     */
     &__about-us {
         padding: 3% 0% 2% 0%;
+        background-color: var(--background);
 
         &__content {
-            line-height: 38px;
-            color: #000;
+            line-height: 40px;
+            color: var(--text-color);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -407,14 +417,14 @@
                     }
 
                     @media (min-width: 850px) {
-                        width: 70%;
-                        margin-left: 14%;
+                        width: 85%;
+                        margin-left: 10%;
                         font-size: 85%;
                     }
 
                     @media (min-width: 1270px) {
                         width: 80%;
-                        margin-left: 16%;
+                        margin-left: 14%;
                         font-size: 135%;
                     }
 
@@ -462,6 +472,8 @@
     * #####################
     */
     &__past-winners {
+        background-color: var(--background);
+
         &__list {
             display: flex;
             flex-flow: row wrap;
@@ -476,7 +488,7 @@
                 margin: 1% 0% 3% 0%;
 
                 &__icon {
-                    color: #ffb26e;
+                    color: var(--orange);
                     font-size: 35px;
 
                     /* Medium devices (landscape tablets, 768px and up) */
@@ -498,15 +510,50 @@
                 &__category {
                     font-weight: bold;
                     padding: 5% 0% 0% 0%;
+                    font-size: 18px;
+
+                    /* Small devices (mobile, 300px and up) */
+                    @media only screen and (min-width: 300px) {
+                        font-size: 13px;
+                    }
+
+                    /* Medium devices (landscape tablets, 768px and up) */
+                    @media only screen and (min-width: 768px) {
+                        font-size: 15px;
+                    }
+
+                    /* Large devices (laptops/desktops, 992px and up) */
+                    @media only screen and (min-width: 992px) {
+                        font-size: 20px;
+                    }
+
                 }
 
                 &__group {
                     padding: 2% 0% 0% 0%;
+                    font-weight: thin;
+                    font-size: 14px;
+
+                     /* Small devices (mobile, 300px and up) */
+                     @media only screen and (min-width: 300px) {
+                        font-size: 8px;
+                    }
+
+                    /* Medium devices (landscape tablets, 768px and up) */
+                    @media only screen and (min-width: 768px) {
+                        font-size: 10px;
+                    }
+
+                    /* Large devices (laptops/desktops, 992px and up) */
+                    @media only screen and (min-width: 992px) {
+                        font-size: 16px;
+                    }
+                    
                 }
 
                 &__category,
                 &__group {
-                    color: black;
+                    color: var(--text-color);
                 }
 
                 /* Small devices (iphones, 350px and up) */
@@ -528,9 +575,10 @@
     * ######################
     */
     &__team-pictures {
+        background-color: var(--background);
+
         /* HEXAGON DESIGN code taken from and edited: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
         /* Media Queries taken from and edited: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
-
         &__grid {
             position: relative;
             width: 80%; /* Scales original sizes */
@@ -591,6 +639,36 @@
                         &__picture {
                             width: 100%;
                             height: 100%;
+                        }
+
+                        /* Below code is responsible for hexagon hover to reveal their position in HackMerced */
+                        &__text {
+                            display: none;
+                        }
+                        &__picture:hover + &__text, &__text:hover {
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            width: 100%;
+                            text-align: center;
+                            color: white;
+                            -webkit-text-stroke: 0.08px black;
+                            line-height: 1;
+                            font-size: 15px;
+                            -webkit-backdrop-filter: blur(8px);
+                            backdrop-filter: blur(8px);
+                            border-radius: 0px 0px 5px 5px;
+
+                            @media (hover:hover) and (pointer: fine) and (max-dth: 1200px) {
+                                top: 45%;
+                                font-size: 13.5px;
+                            }
+                            @media (hover:hover) and (pointer: fine) and (max-width: 1000px) {
+                                font-size: 12px;
+                            }
+                            @media (hover:hover) and (pointer: fine) and (max-width: 800px) {
+                                display: none;
+                            }
                         }
                     }
 
