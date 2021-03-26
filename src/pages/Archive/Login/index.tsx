@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faKey, faUser } from "@fortawesome/free-solid-svg-icons";
 
 import HACKMERCED_LOGO from "../../assets/images/hackmercedvi-logo.png";
-import Footer from "../../components/Footer";
-import Navbar from "../../components/NavBar";
-import { environment } from "../../environments";
+import Footer from "../../../components/Footer";
+import Navbar from "../../../components/NavBar";
+import { environment } from "../../../environments";
 import "./styles.scss";
-import { HackerState, TokenState } from "../../App.types";
+import { HackerState, TokenState } from "../../../App.types";
 
 const Login: FC<{
     updateHacker: React.Dispatch<React.SetStateAction<HackerState | undefined>>;

@@ -1,4 +1,6 @@
 .past-hackathon {
+    background-color: var(--background);
+
     /*
     * ########################
     * # Past Hackathon Stats #
@@ -11,7 +13,7 @@
             font-size: 1.875rem;
             line-height: 1em;
             text-align: center;
-            color: black;
+            color: var(--text-color);
             font-weight: bolder;
             overflow: hidden;
             margin: 3% auto 2% auto;
@@ -44,7 +46,7 @@
             }
 
             &__card {
-                background-image: linear-gradient(#ffb181, #ffb26e);
+                background-image: var(--gradient);
                 border-radius: 25px;
                 margin: 1%;
                 width: 33.33%;
@@ -100,7 +102,7 @@
     &__gallery {
         &__title {
             font-weight: bold;
-            color: black;
+            color: var(--text-color);
             padding: 5% 0% 3% 0%;
             text-align: center;
 

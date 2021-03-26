@@ -3,6 +3,7 @@
     z-index: 9999;
     top: 0;
     left: 1%;
+    height: auto;
 
     @media (min-width: 100px) {
         width: 60px;
@@ -31,4 +32,8 @@
 .hm-text {
     font-weight: bold;
     font-size: 18px;
+}
+
+.nav-toggle-switch {
+    margin-top: -10%;
 }
