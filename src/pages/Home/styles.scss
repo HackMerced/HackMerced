@@ -381,7 +381,7 @@
         background-color: var(--background);
 
         &__content {
-            line-height: 38px;
+            line-height: 40px;
             color: var(--text-color);
             display: flex;
             flex-direction: column;
@@ -417,14 +417,14 @@
                     }
 
                     @media (min-width: 850px) {
-                        width: 70%;
-                        margin-left: 14%;
+                        width: 85%;
+                        margin-left: 10%;
                         font-size: 85%;
                     }
 
                     @media (min-width: 1270px) {
                         width: 80%;
-                        margin-left: 16%;
+                        margin-left: 14%;
                         font-size: 135%;
                     }
 
@@ -536,12 +536,12 @@
 
                      /* Small devices (mobile, 300px and up) */
                      @media only screen and (min-width: 300px) {
-                        font-size: 10px;
+                        font-size: 8px;
                     }
 
                     /* Medium devices (landscape tablets, 768px and up) */
                     @media only screen and (min-width: 768px) {
-                        font-size: 12px;
+                        font-size: 10px;
                     }
 
                     /* Large devices (laptops/desktops, 992px and up) */

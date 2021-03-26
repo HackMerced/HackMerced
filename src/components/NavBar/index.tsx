@@ -88,7 +88,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                     </Menu.Item>
                     <Menu.Item>
                         <div className="nav-toggle-switch">
-                            <DarkModeToggle onChange={themeSwitcher} checked={isDarkMode} size={80} />
+                            <DarkModeToggle className = "dark-mode-toggle" onChange={themeSwitcher} checked={isDarkMode} size={80} />
                         </div>
                     </Menu.Item>
                 </Menu.Items>
