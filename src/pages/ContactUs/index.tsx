@@ -14,7 +14,7 @@ const ContactUs: FC = (): JSX.Element => {
             <Navbar />
             <main className="contact-us">
                 <div className="contact-us__content">
-                    <h1 className="contact-us__content__header">Ways to contact us</h1>
+                    <div className="contact-us__content__header">Ways to contact us</div>
                     <section className="contact-us__content__description">
                         <a href="mailto:general@hackmerced.com?subject=HackMerced Questions&amp;body=Dear HackMerced,">
                             <FontAwesomeIcon icon={faEnvelope} className="fa contact-us__content__description__icon" />

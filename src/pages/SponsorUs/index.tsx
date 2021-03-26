@@ -5,7 +5,7 @@ import { faHeart, faHandshake, faInfoCircle } from "@fortawesome/free-solid-svg-
 import Navbar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Form from "../../components/Form";
-import PAST_SPONSORS from "../../assets/images/past-sponsors.png";
+// import PAST_SPONSORS from "../../assets/images/past-sponsors.png";
 
 import "./styles.scss";
 
@@ -16,9 +16,9 @@ const SponsorUs: FC = (): JSX.Element => {
             <main className="sponsors-us">
                 {/* Information */}
                 <div className="sponsors-us__content">
-                    <h3 className="sponsors-us__content__heading">
+                    <div className="sponsors-us__content__heading">
                         Become a sponsor to empower and help <br></br> grow the next generation of HackMerced.
-                    </h3>
+                    </div>
                     <section className="sponsors-us__content__section">
                         <FontAwesomeIcon icon={faHeart} className="fa sponsors-us__content__section__icon" />
                         <h4 className="sponsors-us__content__section__title">
@@ -50,7 +50,7 @@ const SponsorUs: FC = (): JSX.Element => {
                 {/* Form to Submit a Request */}
                 <Form formTitle="Sponsor Us" askCompany={true} formRequest="sponsor" />
                 {/* Past Sponsors Gallery */}
-                <section className="sponsors-us__past-sponsors">
+                {/* <section className="sponsors-us__past-sponsors">
                     <h1 className="sponsors-us__past-sponsors__title">Past Sponsors</h1>
                     <img
                         src={PAST_SPONSORS}
@@ -58,7 +58,7 @@ const SponsorUs: FC = (): JSX.Element => {
                         alt="Past Hackathons Sponsors"
                         className="sponsors-us__past-sponsors__img"
                     />
-                </section>
+                </section> */}
             </main>
             <Footer />
         </Fragment>

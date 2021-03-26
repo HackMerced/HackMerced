@@ -1,6 +1,7 @@
 import React, { FC, useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
+import DarkModeToggle from "react-dark-mode-toggle";
 
 import MLH_BANNER from "../../assets/images/mlh-badge.svg";
 import "./styles.scss";
@@ -11,9 +12,18 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
     breakLineColor,
     showBanner = true,
 }): JSX.Element => {
-    const { pathname } = useLocation();
-    const [openDrawer, toggleDrawer] = useState(false);
+    const [openDrawer, toggleDrawer] = useState<boolean>(false);
+    const [isDarkMode, setIsDarkMode] = useState(() =>
+        localStorage.getItem("theme") ? localStorage.getItem("theme") === "dark" : false,
+    );
+    const [theme, setTheme] = useState<boolean>(
+        localStorage.getItem("theme") ? localStorage.getItem("theme") === "dark" : false,
+    );
     const drawerRef = useRef(null);
+    const { pathname } = useLocation();
+
+    document.documentElement.setAttribute("data-theme", theme ? "dark" : "light");
+    // document.getElementsByClassName('dark-mode-toggle')[0].children[0].children[0].children[0].children[1].children[1].children[0].children[0].style.fill = "orange";
 
     // handles updates to the navbar UI prior to rendering to support mobile view
     useEffect(() => {
@@ -36,6 +46,13 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
     // create a break line
     const BreakLine = (): JSX.Element => {
         return <div className="break-line" style={{ borderColor: breakLineColor }}></div>;
+    };
+
+    const themeSwitcher = () => {
+        document.documentElement.setAttribute("data-theme", theme ? "dark" : "light");
+        setTheme(!theme);
+        localStorage.setItem("theme", !theme ? "dark" : "light");
+        setIsDarkMode(() => !isDarkMode);
     };
 
     return (
@@ -70,6 +87,11 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                         <Link to="/contact-us">Contact Us</Link>
                         {pathname === "/contact-us" ? BreakLine() : null}
                     </Menu.Item>
+                    <Menu.Item>
+                        <div className="nav-toggle-switch">
+                            <DarkModeToggle className="dark-mode-toggle" onChange={themeSwitcher} checked={isDarkMode} size={80} />
+                        </div>
+                    </Menu.Item>
                 </Menu.Items>
             </Menu.Wrapper>
         </Styles.Wrapper>
@@ -79,9 +101,10 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
 const Styles = {
     Wrapper: styled.header`
       display: flex;
-      background-color: #ffb181;
+      background-color: var(--orange);
       height: auto;
       color: white;
+      max-height: 80px;
 
       @media only screen and (max-width: 40em) {
           height: ${(): string => {
@@ -130,7 +153,8 @@ const Menu = {
             top: 0;
             height: 100%;
             flex-direction: column;
-            padding: 1rem 2rem;
+            padding: 0 2rem 1rem 2rem;
+            margin-top: 0;
             transition: 0.2s ease-out;
             background-color: #ffb181;
             z-index: 101;
