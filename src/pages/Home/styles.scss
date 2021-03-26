@@ -218,6 +218,7 @@
                 padding: 0.8%;
                 border: none;
                 background-color: var(--background);
+                cursor: pointer;
 
                 /* Small devices (landscape tablets, 300px and up) */
                 @media only screen and (min-width: 360px) and (max-width: 768px) {
@@ -509,10 +510,45 @@
                 &__category {
                     font-weight: bold;
                     padding: 5% 0% 0% 0%;
+                    font-size: 18px;
+
+                    /* Small devices (mobile, 300px and up) */
+                    @media only screen and (min-width: 300px) {
+                        font-size: 13px;
+                    }
+
+                    /* Medium devices (landscape tablets, 768px and up) */
+                    @media only screen and (min-width: 768px) {
+                        font-size: 15px;
+                    }
+
+                    /* Large devices (laptops/desktops, 992px and up) */
+                    @media only screen and (min-width: 992px) {
+                        font-size: 20px;
+                    }
+
                 }
 
                 &__group {
                     padding: 2% 0% 0% 0%;
+                    font-weight: thin;
+                    font-size: 14px;
+
+                     /* Small devices (mobile, 300px and up) */
+                     @media only screen and (min-width: 300px) {
+                        font-size: 10px;
+                    }
+
+                    /* Medium devices (landscape tablets, 768px and up) */
+                    @media only screen and (min-width: 768px) {
+                        font-size: 12px;
+                    }
+
+                    /* Large devices (laptops/desktops, 992px and up) */
+                    @media only screen and (min-width: 992px) {
+                        font-size: 16px;
+                    }
+                    
                 }
 
                 &__category,
@@ -623,7 +659,7 @@
                             backdrop-filter: blur(8px);
                             border-radius: 0px 0px 5px 5px;
 
-                            @media (hover:hover) and (pointer: fine) and (max-width: 1200px) {
+                            @media (hover:hover) and (pointer: fine) and (max-dth: 1200px) {
                                 top: 45%;
                                 font-size: 13.5px;
                             }

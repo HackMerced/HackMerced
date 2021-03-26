@@ -60,7 +60,7 @@ const generateWinners = (winners: Array<WinnersProps>): JSX.Element => {
             <a href={winner.project} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={winner.icon} className="fa home__past-winners__list__past-winner__icon" />
                 <h5 className="home__past-winners__list__past-winner__category">{winner.category}</h5>
-                <h6 className="home__past-winners__list__past-winner__group">{winner.group}</h6>
+                <div className="home__past-winners__list__past-winner__group">{winner.group}</div>
             </a>
         </li>
     ));

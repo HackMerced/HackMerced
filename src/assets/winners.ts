@@ -38,7 +38,7 @@ const winners = [
     },
     {
         icon: faSchool,
-        category: "Best UC Merced-Related Hack",
+        category: "Best UC Merced Hack",
         group: "Snapcode",
         project: "https://devpost.com/software/snapcode-vabpfn",
     },
@@ -62,7 +62,7 @@ const winners = [
     },
     {
         icon: faDigitalOcean,
-        category: "Best Domain Using Domain.com",
+        category: "Best Domain",
         group: "StreetSpots.Online",
         project: "https://devpost.com/software/a-clear-space",
     },
