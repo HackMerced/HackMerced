@@ -23,6 +23,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
     const { pathname } = useLocation();
 
     document.documentElement.setAttribute("data-theme", theme ? "dark" : "light");
+    // document.getElementsByClassName('dark-mode-toggle')[0].children[0].children[0].children[0].children[1].children[1].children[0].children[0].style.fill = "orange";
 
     // handles updates to the navbar UI prior to rendering to support mobile view
     useEffect(() => {
@@ -88,7 +89,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                     </Menu.Item>
                     <Menu.Item>
                         <div className="nav-toggle-switch">
-                            <DarkModeToggle className = "dark-mode-toggle" onChange={themeSwitcher} checked={isDarkMode} size={80} />
+                            <DarkModeToggle onChange={themeSwitcher} checked={isDarkMode} size={80} />
                         </div>
                     </Menu.Item>
                 </Menu.Items>

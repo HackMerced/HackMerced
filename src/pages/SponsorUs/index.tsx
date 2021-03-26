@@ -16,9 +16,9 @@ const SponsorUs: FC = (): JSX.Element => {
             <main className="sponsors-us">
                 {/* Information */}
                 <div className="sponsors-us__content">
-                    <h3 className="sponsors-us__content__heading">
+                    <div className="sponsors-us__content__heading">
                         Become a sponsor to empower and help <br></br> grow the next generation of HackMerced.
-                    </h3>
+                    </div>
                     <section className="sponsors-us__content__section">
                         <FontAwesomeIcon icon={faHeart} className="fa sponsors-us__content__section__icon" />
                         <h4 className="sponsors-us__content__section__title">
