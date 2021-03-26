@@ -3,8 +3,8 @@ import Axios, { AxiosResponse } from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-import Footer from "../../components/Footer";
-import Navbar from "../../components/NavBar";
+import Footer from "../../../components/Footer";
+import Navbar from "../../../components/NavBar";
 import HACKMERCED_LOGO from "../../assets/images/hackmerced-logo.png";
 import "./styles.scss";
 

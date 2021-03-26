@@ -1,0 +1,17 @@
+:root {
+    --gradient: linear-gradient(#ffb181, #ffb26e);
+    --cloud-bg: rgb(248, 243, 243);
+    --break-line: rgb(255, 255, 255, 0.5);
+    --background: white;
+    --text-color: black;
+    --orange: #ffb181;
+}
+
+[data-theme="dark"] {
+    --gradient: linear-gradient(rgb(184, 61, 24), rgb(184, 63, 26));
+    --cloud-bg: #272831;
+    --break-line: rgb(182, 63, 26, 0.5);
+    --background: #272831;
+    --text-color: white;
+    --orange: rgb(184, 61, 24);
+}

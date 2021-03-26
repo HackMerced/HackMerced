@@ -1,11 +1,13 @@
 .home {
+    background-color: var(--background);
+
     /*
     * ################
     * # Home Landing #
     * ################
     */
     &__heading {
-        background-image: linear-gradient(#ffb181, #ffb26e);
+        background-image: var(--gradient);
         height: 810px;
         background-repeat: no-repeat;
         background-size: cover;
@@ -26,7 +28,7 @@
             width: 100%;
 
             &__cloud {
-                background: rgb(248, 243, 243);
+                background: var(--cloud-bg);
                 width: 200px;
                 height: 60px;
                 border-radius: 200px;
@@ -39,7 +41,7 @@
                     position: absolute;
                     top: -15px;
                     left: 10px;
-                    background: rgb(248, 243, 243);
+                    background: var(--cloud-bg);
                     width: 100px;
                     height: 80px;
                     border-radius: 100px;
@@ -176,7 +178,7 @@
 
             &__text,
             &__sub-text {
-                color: rgba(243, 244, 246, var(1));
+                color: rgb(243, 244, 246);
             }
 
             @media (max-width: 700px) {
@@ -189,6 +191,8 @@
 
                 &__img {
                     margin: 0% 0 0 5% !important;
+                    width: 80%;
+                    height: auto;
                 }
 
                 &__img &__text,
@@ -207,16 +211,20 @@
                 text-transform: uppercase;
                 margin: 2% auto 0% 53%;
                 font-size: 16px;
-                color: black;
+                color: var(--text-color);
                 border-radius: 20px;
                 transition: 0.2s all;
                 text-align: center;
                 padding: 0.8%;
                 border: none;
+                background-color: var(--background);
 
                 /* Small devices (landscape tablets, 300px and up) */
-                @media only screen and (min-width: 768px) {
+                @media only screen and (min-width: 360px) and (max-width: 768px) {
                     width: 65%;
+                    padding: 4%;
+                    margin: 0;
+                    text-align: center;
                 }
 
                 /* Medium devices (landscape tablets, 768px and up) */
@@ -298,7 +306,7 @@
     */
     &__section-title {
         font-weight: bold;
-        color: black;
+        color: var(--text-color);
         text-align: center;
         margin-top: 3%;
 
@@ -329,7 +337,7 @@
     * ###################
     */
     &__break-line {
-        border: 0.5rem solid #ffb181;
+        border: 0.5rem solid var(--orange);
         opacity: 50%;
         border-width: 0.5rem;
         border-radius: 10px;
@@ -369,10 +377,11 @@
     */
     &__about-us {
         padding: 3% 0% 2% 0%;
+        background-color: var(--background);
 
         &__content {
             line-height: 38px;
-            color: #000;
+            color: var(--text-color);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -462,6 +471,8 @@
     * #####################
     */
     &__past-winners {
+        background-color: var(--background);
+
         &__list {
             display: flex;
             flex-flow: row wrap;
@@ -476,7 +487,7 @@
                 margin: 1% 0% 3% 0%;
 
                 &__icon {
-                    color: #ffb26e;
+                    color: var(--orange);
                     font-size: 35px;
 
                     /* Medium devices (landscape tablets, 768px and up) */
@@ -506,7 +517,7 @@
 
                 &__category,
                 &__group {
-                    color: black;
+                    color: var(--text-color);
                 }
 
                 /* Small devices (iphones, 350px and up) */
@@ -528,9 +539,10 @@
     * ######################
     */
     &__team-pictures {
+        background-color: var(--background);
+
         /* HEXAGON DESIGN code taken from and edited: https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
         /* Media Queries taken from and edited: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
-
         &__grid {
             position: relative;
             width: 80%; /* Scales original sizes */

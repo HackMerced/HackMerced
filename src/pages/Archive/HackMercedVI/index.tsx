@@ -1,17 +1,17 @@
 import React, { FC } from "react";
 
-import Navbar from "../../components/NavBar";
-import Footer from "../../components/Footer";
-import useWindowDimensions from "../../components/WindowDimensions";
-import Accordian from "../../components/Accordian";
+import Navbar from "../../../components/NavBar";
+import Footer from "../../../components/Footer";
+import useWindowDimensions from "../../../components/WindowDimensions";
+import Accordian from "../../../components/Accordian";
 
-import SUSTAINABILITY from "../../assets/images/sustainability.png";
-import INCLUSIVITY from "../../assets/images/inclusivity.png";
-import CYBER_SECURITY from "../../assets/images/cybersecurity.png";
-import SPONSORS from "../../assets/images/sponsors-hackmercedvi.png";
-import STICKER_MULE from "../../assets/images/sticker-mule-logo-light.png";
+import SUSTAINABILITY from "../../../assets/images/sustainability.png";
+import INCLUSIVITY from "../../../assets/images/inclusivity.png";
+import CYBER_SECURITY from "../../../assets/images/cybersecurity.png";
+import SPONSORS from "../../../assets/images/sponsors-hackmercedvi.png";
+import STICKER_MULE from "../../../assets/images/sticker-mule-logo-light.png";
 
-import { FAQData } from "../../assets/faq";
+import { FAQData } from "../../../assets/faq";
 
 import "./styles.scss";
 
