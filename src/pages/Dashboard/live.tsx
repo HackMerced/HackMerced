@@ -26,7 +26,7 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
     };
 
     useEffect(() => {
-        setInterval(function() {
+        setInterval(function () {
             countDownTimer();
         }, 1000);
     }, []);
@@ -51,8 +51,8 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
                     </div>
                 </div>
                 <p className="dashboard__content__live__countdown__body">
-                    <b>HackMerced VI</b> occurs on March 12th through the 14th of 2021. Countdown till Hacking Ends! This year is the first time
-                    we are doing a Hub website. So please provide any feedback you may have!
+                    <b>HackMerced VI</b> occurs on March 12th through the 14th of 2021. Countdown till Hacking Ends!
+                    This year is the first time we are doing a Hub website. So please provide any feedback you may have!
                 </p>
             </div>
             <div className="dashboard__content__live__resources">
@@ -79,11 +79,19 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">GitHub Student Pack</li>
                     </a>
-                    <a href="https://startupstash.com/cybersecurity-resources/" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://startupstash.com/cybersecurity-resources/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">CyberSecurity Beginner</li>
                     </a>
-                    <a href="https://github.com/GoogleCloudPlatform/hackathon-toolkit" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://github.com/GoogleCloudPlatform/hackathon-toolkit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">Google Cloud Toolkit</li>
                     </a>
@@ -107,7 +115,11 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">Augmented Reality</li>
                     </a>
-                    <a href="https://www.notion.so/createdmary/How-to-Edit-and-Submit-Video-d36031b34f0748668a3492d846c61042" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://www.notion.so/createdmary/How-to-Edit-and-Submit-Video-d36031b34f0748668a3492d846c61042"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li">How to Edit and Submit Video</li>
                     </a>

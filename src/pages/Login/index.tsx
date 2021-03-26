@@ -18,6 +18,7 @@ const Login: FC<{
     const [form, setForm] = useState<{ email: string; password: string }>({ email: "", password: "" });
     const history = useHistory();
 
+    // Handles Change on the fields of the form
     const handleInputChange = (
         event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
     ): void => {
@@ -25,6 +26,7 @@ const Login: FC<{
         setForm({ ...form, [name]: value });
     };
 
+    // Handles the submission action when the submit button is pressed
     const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
         event.preventDefault();
         Axios.post(`${environment.HACKER_API}/v1/auth/login`, form, {

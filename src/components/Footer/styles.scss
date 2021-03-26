@@ -9,28 +9,32 @@
     font-size: 45px;
     padding-bottom: 5px;
     text-align: center;
+
     .fa {
         color: white;
         font-size: 35px !important;
         margin: 10px;
+
+        &:hover {
+            -webkit-filter: brightness(20%);
+            -moz-filter: brightness(20%);
+            -o-filter: brightness(20%);
+            -ms-filter: brightness(20%);
+            filter: brightness(20%);
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
     }
-    .fa:hover {
-        -webkit-filter: brightness(20%);
-        -moz-filter: brightness(20%);
-        -o-filter: brightness(20%);
-        -ms-filter: brightness(20%);
-        filter: brightness(20%);
-        -webkit-transition: all .5s ease;
-        -moz-transition: all .5s ease;
-        -o-transition: all .5s ease;
-        -ms-transition: all .5s ease;
-        transition: all .5s ease;
-    }
+
     &__credits {
         align-items: center;
         justify-content: center;
         display: flex;
         font-size: 16px;
+
         &__copyright {
             overflow: hidden;
         }
