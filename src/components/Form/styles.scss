@@ -1,115 +1,62 @@
-.splash-form {
+.form {
     display: flex;
     flex-direction: column;
     width: 80%;
     padding: 3rem;
     background-image: linear-gradient(#ffb181, #ffb26e);
     border-radius: 2rem;
-    margin: 0% 0% 2% 10%;
-    // box-shadow: -6px -6px 16px #fff,
-    //             6px 6px 16px #696865;
+    margin: 2% 7%;
 
     @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
         margin-bottom: 2rem;
     }
 
-    h3 {
+    &__title {
         font-weight: bolder;
         font-size: 20px;
         margin-bottom: 1rem;
         text-align: center;
     }
 
-    .input-wrapper {
-      display: flex;
-      flex-direction: column;
-        // position: relative;
-        // line-height: 14px;
-        // margin: 0 10px;
-        // display: inline-block;
+    &__input {
+        display: flex;
+        flex-direction: column;
 
-        //   label {
-        //     color: red;
-        //     font-size: 11px;
-        //     text-transform: uppercase;
-        //     position: absolute;
-        //     z-index: 2;
-        //     left: 20px;
-        //     top: 14px;
-        //     padding: 0 2px;
-        //     pointer-events: none;
-        //     background: #fff;
-        //     -webkit-transition: -webkit-transform 100ms ease;
-        //     -moz-transition: -moz-transform 100ms ease;
-        //     -o-transition: -o-transform 100ms ease;
-        //     -ms-transition: -ms-transform 100ms ease;
-        //     transition: transform 100ms ease;
-        //     -webkit-transform: translateY(-20px);
-        //     -moz-transform: translateY(-20px);
-        //     -o-transform: translateY(-20px);
-        //     -ms-transform: translateY(-20px);
-        //     transform: translateY(-20px);
-        // }
-
-        input,
-        textarea {
+        &__field,
+        &__text-area {
             padding: 0 1rem;
             margin: 1rem 0;
             height: calc(2.5rem - 8px);
-            // box-shadow: 8px 8px 10px #e9925b, -8px -8px 10px #faae7f;
             border-radius: 0.75rem;
             color: black;
             font-size: 18px;
-            // outline: none;
-            // border: 1px solid #bbb;
-            // position: relative;
+            border: none;
         }
 
-        textarea {
+        &__text-area {
             flex: 1;
             padding: 0.5rem 1rem;
         }
-
-        // input:invalid + label,
-        // textarea:invalid + label {
-        //     -webkit-transform: translateY(0);
-        //     -moz-transform: translateY(0);
-        //     -o-transform: translateY(0);
-        //     -ms-transform: translateY(0);
-        //     transform: translateY(0);
-        // }
-
-        // input:focus,
-        // textarea:focus {
-        //     border-color: #2b96f1;
-        // }
-
-        // input:focus + label,
-        // textarea:focus + label {
-        //     color: #2b96f1;
-        //     -webkit-transform: translateY(-20px);
-        //     -moz-transform: translateY(-20px);
-        //     -o-transform: translateY(-20px);
-        //     -ms-transform: translateY(-20px);
-        //     transform: translateY(-20px);
-        // }
     }
-    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        
+
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    ::placeholder {
         opacity: 1; /* Firefox */
         font-weight: lighter;
         font-size: 18px;
-      }
-      
-      :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        font-weight: lighter;
-      }
-      
-      ::-ms-input-placeholder { /* Microsoft Edge */
-        font-weight: lighter;
-      }
+    }
 
-    button {
+    /* Internet Explorer 10-11 */
+    :-ms-input-placeholder {
+        font-weight: lighter;
+    }
+
+    /* Microsoft Edge */
+    ::-ms-input-placeholder {
+        font-weight: lighter;
+    }
+
+    &__submit {
         padding: 0 1rem;
         margin: 1rem 0;
         height: 2.5rem;
@@ -118,19 +65,24 @@
         background: white;
         border-radius: 0.75rem;
         border: none;
-        // box-shadow: 0px 3px 0px orange;
         cursor: pointer;
         transition: all 0.2s ease;
-        // box-shadow: 8px 8px 10px #e9925b, -8px -8px 10px #faae7f;
+
+        &:active {
+            background: linear-gradient(#fdab78, #faa55a);
+            color: white;
+        }
     }
 
-    // button:hover {
-    //     background: linear-gradient(#fdab78, #faa55a);
-    //     color: white;
-    // }
-
-    button:active {
-        background: linear-gradient(#fdab78, #faa55a);
-        color: white;
+    /* Define an animation behavior */
+    @keyframes spinner {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    /* This is the class name given by the Font Awesome component when icon contains 'spinner' */
+    .fa-spinner {
+        /* Apply 'spinner' keyframes looping once every second (1s)  */
+        animation: spinner 1s linear infinite;
     }
 }

@@ -21,6 +21,7 @@ const SignUp: FC<{
     });
     const history = useHistory();
 
+    // Handles Change on the fields of the form
     const handleInputChange = (
         event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
     ): void => {
@@ -28,6 +29,7 @@ const SignUp: FC<{
         setForm({ ...form, [name]: value });
     };
 
+    // Handles the submission action when the submit button is pressed
     const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
         event.preventDefault();
         Axios.post(`${environment.HACKER_API}/v1/auth/register`, form, {
@@ -57,7 +59,7 @@ const SignUp: FC<{
                     />
                     <h1 className="signup__container__title uppercase">Sign Up</h1>
                     <form onSubmit={handleSubmit} className="signup__container__form">
-                    <label htmlFor="name">First Name</label>
+                        <label htmlFor="name">First Name</label>
                         <input
                             className="signup__container__form__first-name"
                             name="firstName"
@@ -66,7 +68,7 @@ const SignUp: FC<{
                             required
                             onChange={handleInputChange}
                         />
-                           <label htmlFor="name">Last Name</label>
+                        <label htmlFor="name">Last Name</label>
                         <input
                             className="signup__container__form__last-name"
                             name="lastName"
@@ -75,7 +77,7 @@ const SignUp: FC<{
                             required
                             onChange={handleInputChange}
                         />
-                           <label htmlFor="name">Email</label>
+                        <label htmlFor="name">Email</label>
                         <input
                             className="signup__container__form__email"
                             type="email"
@@ -84,7 +86,7 @@ const SignUp: FC<{
                             onChange={handleInputChange}
                             required
                         />
-                           <label htmlFor="name">Password</label>
+                        <label htmlFor="name">Password</label>
                         <input
                             className="signup__container__form__password"
                             type="password"
