@@ -86,7 +86,7 @@ const Home: FC = (): JSX.Element => {
             <Navbar />
             {/* Landing Section */}
             <section className="home__heading">
-                {width > 700 ? (
+                {width > 775 ? (
                     <section className="home__heading__wave">
                         <div className="home__heading__wave__cloud c1"></div>
                         <div className="home__heading__wave__cloud c2"></div>
@@ -116,7 +116,7 @@ const Home: FC = (): JSX.Element => {
                         Register to be part of HackMerced Team
                     </button>
                 </section>
-                {width > 700 ? (
+                {width > 775 ? (
                     <img
                         src={HACKMERCED_TOWER}
                         width="525"
