@@ -38,4 +38,20 @@
     margin-top: -10%;
 }
 
-
+.dark-mode-toggle {
+    div {
+        div {
+            svg {
+                g {
+                    g:nth-child(7) {
+                        g:nth-child(1), g:nth-child(2), g:nth-child(3) {
+                            path {
+                                fill: var(--orange);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
