@@ -10,16 +10,35 @@
         overflow: hidden;
 
         &__title {
-            font-size: 1.875rem;
+           
             line-height: 1em;
             text-align: center;
             color: var(--text-color);
-            font-weight: bolder;
+            font-weight: bold;
             overflow: hidden;
             margin: 3% auto 2% auto;
 
-            @media (min-width: 768px) {
-                font-size: 3rem;
+            @media only screen and (min-width: 350px) {
+                font-size: 25px;
+            }
+
+            @media only screen and (min-width: 600px) {
+                font-size: 25px;
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                font-size: 35px;
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                font-size: 40px;
+            }
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                font-size: 40px;
             }
         }
 
@@ -85,6 +104,7 @@
                 &__label {
                     font-size: x-large;
                     color: white;
+                    font-weight: normal;
 
                     @media (min-width: 350px) and (max-width: 370px) {
                         font-size: large;
