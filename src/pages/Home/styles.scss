@@ -604,6 +604,36 @@
                             width: 100%;
                             height: 100%;
                         }
+
+                        /* Below code is responsible for hexagon hover to reveal their position in HackMerced */
+                        &__text {
+                            display: none;
+                        }
+                        &__picture:hover + &__text, &__text:hover {
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            width: 100%;
+                            text-align: center;
+                            color: white;
+                            -webkit-text-stroke: 0.08px black;
+                            line-height: 1;
+                            font-size: 15px;
+                            -webkit-backdrop-filter: blur(8px);
+                            backdrop-filter: blur(8px);
+                            border-radius: 0px 0px 5px 5px;
+
+                            @media (hover:hover) and (pointer: fine) and (max-width: 1200px) {
+                                top: 45%;
+                                font-size: 13.5px;
+                            }
+                            @media (hover:hover) and (pointer: fine) and (max-width: 1000px) {
+                                font-size: 12px;
+                            }
+                            @media (hover:hover) and (pointer: fine) and (max-width: 800px) {
+                                display: none;
+                            }
+                        }
                     }
 
                     /* Makes all children of li visible */
