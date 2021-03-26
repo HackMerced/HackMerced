@@ -3780,17 +3780,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^2.10.0":
-  version "2.34.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.34.0.tgz#6f8ce8a46c7dea4a6f1d171d2bb8fbae6dac2be9"
-  integrity sha512-4zY3Z88rEE99+CNvTbXSyovv2z9PNOVffTWD2W8QF5s2prBQtwN2zadqERcrHpcR7O/+KMI3fcTAmUUhK/iQcQ==
-  dependencies:
-    "@typescript-eslint/experimental-utils" "2.34.0"
-    functional-red-black-tree "^1.0.1"
-    regexpp "^3.0.0"
-    tsutils "^3.17.1"
-
-"@typescript-eslint/eslint-plugin@^4.11.0":
+"@typescript-eslint/eslint-plugin@4.11.0":
   version "4.11.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.11.0.tgz#bc6c1e4175c0cf42083da4314f7931ad12f731cc"
   integrity sha512-x4arJMXBxyD6aBXLm3W7mSDZRiABzy+2PCLJbL7OPqlp53VXhaA1HKK7R2rTee5OlRhnUgnp8lZyVIqjnyPT6g==
@@ -3801,6 +3791,16 @@
     functional-red-black-tree "^1.0.1"
     regexpp "^3.0.0"
     semver "^7.3.2"
+    tsutils "^3.17.1"
+
+"@typescript-eslint/eslint-plugin@^2.10.0":
+  version "2.34.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.34.0.tgz#6f8ce8a46c7dea4a6f1d171d2bb8fbae6dac2be9"
+  integrity sha512-4zY3Z88rEE99+CNvTbXSyovv2z9PNOVffTWD2W8QF5s2prBQtwN2zadqERcrHpcR7O/+KMI3fcTAmUUhK/iQcQ==
+  dependencies:
+    "@typescript-eslint/experimental-utils" "2.34.0"
+    functional-red-black-tree "^1.0.1"
+    regexpp "^3.0.0"
     tsutils "^3.17.1"
 
 "@typescript-eslint/experimental-utils@2.34.0":
@@ -3825,6 +3825,16 @@
     eslint-scope "^5.0.0"
     eslint-utils "^2.0.0"
 
+"@typescript-eslint/parser@4.11.0":
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-4.11.0.tgz#1dd3d7e42708c10ce9f3aa64c63c0ab99868b4e2"
+  integrity sha512-NBTtKCC7ZtuxEV5CrHUO4Pg2s784pvavc3cnz6V+oJvVbK4tH9135f/RBP6eUA2KHiFKAollSrgSctQGmHbqJQ==
+  dependencies:
+    "@typescript-eslint/scope-manager" "4.11.0"
+    "@typescript-eslint/types" "4.11.0"
+    "@typescript-eslint/typescript-estree" "4.11.0"
+    debug "^4.1.1"
+
 "@typescript-eslint/parser@^2.10.0":
   version "2.34.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-2.34.0.tgz#50252630ca319685420e9a39ca05fe185a256bc8"
@@ -3834,16 +3844,6 @@
     "@typescript-eslint/experimental-utils" "2.34.0"
     "@typescript-eslint/typescript-estree" "2.34.0"
     eslint-visitor-keys "^1.1.0"
-
-"@typescript-eslint/parser@^4.11.0":
-  version "4.11.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-4.11.0.tgz#1dd3d7e42708c10ce9f3aa64c63c0ab99868b4e2"
-  integrity sha512-NBTtKCC7ZtuxEV5CrHUO4Pg2s784pvavc3cnz6V+oJvVbK4tH9135f/RBP6eUA2KHiFKAollSrgSctQGmHbqJQ==
-  dependencies:
-    "@typescript-eslint/scope-manager" "4.11.0"
-    "@typescript-eslint/types" "4.11.0"
-    "@typescript-eslint/typescript-estree" "4.11.0"
-    debug "^4.1.1"
 
 "@typescript-eslint/scope-manager@4.11.0":
   version "4.11.0"
@@ -7598,7 +7598,7 @@ escodegen@^1.11.0, escodegen@^1.12.0, escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^7.1.0:
+eslint-config-prettier@7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-7.1.0.tgz#5402eb559aa94b894effd6bddfa0b1ca051c858f"
   integrity sha512-9sm5/PxaFG7qNJvJzTROMM1Bk1ozXVTKI0buKOyb0Bsr1hrwi0H/TzxF/COtf1uxikIK8SwhX7K6zg78jAzbeA==
@@ -7677,7 +7677,7 @@ eslint-plugin-jsx-a11y@6.2.3:
     has "^1.0.3"
     jsx-ast-utils "^2.2.1"
 
-eslint-plugin-prettier@^3.3.0:
+eslint-plugin-prettier@3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.3.0.tgz#61e295349a65688ffac0b7808ef0a8244bdd8d40"
   integrity sha512-tMTwO8iUWlSRZIwS9k7/E4vrTsfvsrcM5p1eftyuqWH25nKsz/o6/54I7jwQ/3zobISyC7wMy9ZsFwgTxOcOpQ==
@@ -14060,7 +14060,7 @@ react-color@^2.17.0:
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
 
-react-dark-mode-toggle@^0.2.0:
+react-dark-mode-toggle@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/react-dark-mode-toggle/-/react-dark-mode-toggle-0.2.0.tgz#73172805b0ea6a5f2db89c1e05a4365ac93735d1"
   integrity sha512-YGN6EKU54TaEIQ2G5veB+XVRXSsbyrW9+rop/1Ap06A0z1j6QBVuMIZjhQpwYLKVhSPIxoe7zsWj0cZaEf7cQA==
