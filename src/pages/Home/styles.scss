@@ -527,7 +527,6 @@
                     @media only screen and (min-width: 992px) {
                         font-size: 20px;
                     }
-
                 }
 
                 &__group {
@@ -535,9 +534,8 @@
                     font-weight: thin;
                     font-size: 14px;
 
-
-                     /* Small devices (mobile, 300px and up) */
-                     @media only screen and (min-width: 300px) {
+                    /* Small devices (mobile, 300px and up) */
+                    @media only screen and (min-width: 300px) {
                         font-size: 8px;
                     }
 
@@ -550,7 +548,6 @@
                     @media only screen and (min-width: 992px) {
                         font-size: 16px;
                     }
-                    
                 }
 
                 &__category,
@@ -647,28 +644,43 @@
                         &__text {
                             display: none;
                         }
-                        &__picture:hover + &__text, &__text:hover {
+                        &__picture:hover + &__text,
+                        &__text:hover {
                             display: block;
                             position: absolute;
                             top: 50%;
                             width: 100%;
                             text-align: center;
                             color: white;
-                            -webkit-text-stroke: 0.08px black;
                             line-height: 1;
                             font-size: 15px;
-                            -webkit-backdrop-filter: blur(8px);
                             backdrop-filter: blur(8px);
                             border-radius: 0px 0px 5px 5px;
 
-                            @media (hover:hover) and (pointer: fine) and (max-dth: 1200px) {
+                            /* Need to make sure text for all hexagons are responsive (long words in titles) */
+                            @media (max-width: 1200px) {
                                 top: 45%;
                                 font-size: 13.5px;
                             }
-                            @media (hover:hover) and (pointer: fine) and (max-width: 1000px) {
+                            @media (max-width: 1000px) {
                                 font-size: 12px;
                             }
-                            @media (hover:hover) and (pointer: fine) and (max-width: 800px) {
+                            @media (max-width: 700px) {
+                                top: 40%;
+                            }
+                            @media (max-width: 550px) {
+                                top: 35%;
+                                font-size: 10px;
+                            }
+                            @media (max-width: 460px) {
+                                top: 30%;
+                                font-size: 9px;
+                            }
+                            @media (max-width: 400px) {
+                                top: 28%;
+                                font-size: 7px;
+                            }
+                            @media (max-width: 300px) {
                                 display: none;
                             }
                         }
