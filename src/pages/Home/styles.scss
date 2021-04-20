@@ -643,8 +643,7 @@
                         &__text {
                             display: none;
                         }
-                        &__picture:hover + &__text,
-                        &__text:hover {
+                        &__picture:hover + &__text, &__text:hover {
                             display: block;
                             position: absolute;
                             top: 50%;
@@ -697,36 +696,60 @@
 
                     /* Manually push first row to center */
                     &:nth-child(1) {
-                        margin-left: 15.6%;
+                        margin-left: 8%;
                     }
 
-                    /* Translates each child in the second row to the right a little bit, and moves them down. */
-                    &:nth-child(5),
+                    /* Translates the second row up, into interlocking position. */
                     &:nth-child(6),
-                    &:nth-child(7) {
+                    &:nth-child(7),
+                    &:nth-child(8),
+                    &:nth-child(9), {
                         margin-top: -3.35%;
                     }
 
-                    /* 5th child (2nd row): Move into interlocking position, which moves the rest of the children in the row. */
-                    &:nth-child(5) {
-                        margin-left: 23.46%;
+                    /* Moves second row children to the right, into interlocking position. */
+                    &:nth-child(6) {
+                        margin-left: 16%;
                     }
 
-                    /* Forces 8th child to go to the next row, by adding padding on the right of hexagon 7. */
-                    &:nth-child(7) {
-                        margin-right: 25%;
+                    /* Manually push third row to center. */
+                    &:nth-child(10) {
+                        margin-left: 8%;
                     }
 
-                    /* Manually push second row to center */
-                    &:nth-child(8) {
-                        margin-left: 15.46%;
-                    }
-
-                    /* Translates each child in the second row to the right a little bit, and moves them down. */
-                    &:nth-child(8),
-                    &:nth-child(9),
+                    /* Translates the third row up, into interlocking position. */
                     &:nth-child(10),
-                    &:nth-child(11) {
+                    &:nth-child(11),
+                    &:nth-child(12),
+                    &:nth-child(13),
+                    &:nth-child(14), {
+                        margin-top: -3.35%;
+                    }
+
+                    /* Moves fourth row children to the right, into interlocking position. */
+                    &:nth-child(15) {
+                        margin-left: 16%;
+                    }
+
+                    /* Translates the fourth row up, into interlocking position. */
+                    &:nth-child(15),
+                    &:nth-child(16),
+                    &:nth-child(17),
+                    &:nth-child(18), {
+                        margin-top: -3.35%;
+                    }
+
+                    /* Manually push fifth row to center. */
+                    &:nth-child(19) {
+                        margin-left: 8%;
+                    }
+
+                    /* Translates the fifth row up, into interlocking position. */
+                    &:nth-child(19),
+                    &:nth-child(20),
+                    &:nth-child(21),
+                    &:nth-child(22),
+                    &:nth-child(23), {
                         margin-top: -3.35%;
                     }
                 }
