@@ -277,12 +277,11 @@
             height: 900px;
             width: 550px;
             margin: -25% 0% 0% 5%;
-            position: relative;
-            z-index: 0;
 
-            /* Medium devices (landscape tablets, 800px and under) */
-            @media only screen and (max-width: 950px) {
+            /* Medium devices (landscape tablets, 950px and under) */
+            @media (max-width: 950px) {
                 height: 850px;
+                width: 500px;
                 margin-top: -30%;
             }
         }
