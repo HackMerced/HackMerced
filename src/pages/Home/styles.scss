@@ -176,11 +176,6 @@
                 font-weight: medium;
             }
 
-            &__text,
-            &__sub-text {
-                color: rgb(243, 244, 246);
-            }
-
             @media (max-width: 775px) {
                 display: flex;
                 flex-flow: column wrap;
@@ -221,16 +216,11 @@
                 cursor: pointer;
 
                 /* Small devices (landscape tablets, 300px and up) */
-                @media only screen and (min-width: 360px) and (max-width: 775px) {
+                @media only screen and (min-width: 200px) and (max-width: 775px) {
                     width: 65%;
                     padding: 4%;
                     margin: 0;
                     text-align: center;
-                }
-
-                /* Medium devices (landscape tablets, 768px and up) */
-                @media only screen and (min-width: 768px) {
-                    width: 45%;
                 }
 
                 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -272,30 +262,27 @@
                     color: white;
                 }
             }
+
+            //Changes z-index of image, texts, and subscribe button so they're on top of the HackMerced Tower
+            &__img, &__text, &__sub-text, .subscribe-button {
+                @media (max-width: 1030px) {
+                    position: relative;
+                    z-index: 1;
+                }
+            }
         }
 
         &__tower {
             display: block;
-            min-width: auto;
-            min-height: auto;
-            margin: -20% auto 0% 5%;
+            height: 900px;
+            width: 550px;
+            margin: -25% 0% 0% 5%;
 
-            /* Medium devices (landscape tablets, 768px and up) */
-            @media only screen and (min-width: 768px) {
-                margin: -20% auto 0% 5%;
-                width: 400px;
-            }
-
-            /* Large devices (large laptops and desktops, 1200px and up) */
-            @media only screen and (min-width: 1200px) {
-                margin: -20% auto 0% 5%;
-                width: 450px;
-            }
-
-            /* Extra large devices (extra large laptops and desktops, 1500px and up) */
-            @media only screen and (min-width: 1500px) {
-                margin: -15% auto 0% 5%;
-                width: 525px;
+            /* Medium devices (landscape tablets, 950px and under) */
+            @media (max-width: 950px) {
+                height: 850px;
+                width: 500px;
+                margin-top: -30%;
             }
         }
     }
