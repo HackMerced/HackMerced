@@ -10,10 +10,11 @@ import JOSEPH from "./images/joseph.jpg";
 import SEAN from "./images/sean.jpg";
 import GEHAD from "./images/gehad.jpg";
 import ABDUS from "./images/abdus.png";
-import BETSY from "./images/betsy.png";
+import BETSY from "./images/betsy.jpg";
 import SALVADOR from "./images/salvador.png";
 import VIRGINIA from "./images/virginia.png";
 import WINSTON from "./images/winston.png";
+import SHAWN from "./images/shawn.jpg";
 
 const team = [
     {
@@ -125,7 +126,7 @@ const team = [
         firstName: "Shawn",
         lastName: "Duong",
         url: "https://www.linkedin.com/in/shawndxyz/",
-        src: GEHAD,
+        src: SHAWN,
         desc: "Logistics",
     },
     {
