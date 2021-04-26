@@ -8,17 +8,22 @@
     */
     &__heading {
         background-image: var(--gradient);
-        height: 810px;
+        height: 750px;
         background-repeat: no-repeat;
         background-size: cover;
         overflow: hidden;
 
-        @media (max-width: 700px) {
+        @media (max-width: 650px) {  //Changes the height of the heading component
+            height: 700px;
+        }
+        @media (max-width: 550px) {
+            height: 650px;
+        }
+        @media (max-width: 450px) {
             height: 600px;
         }
-
-        @media (max-width: 450px) {
-            height: 400px;
+        @media (max-width: 380px) {
+            height: 540px;
         }
 
         // Scrolling clouds in the background of the heading
@@ -172,7 +177,7 @@
             &__sub-text {
                 font-size: 15px;
                 text-align: center;
-                margin: 1% auto auto 40%;
+                margin: 3% auto auto 40%;
                 font-weight: medium;
             }
 
@@ -197,14 +202,22 @@
 
                 &__text,
                 &__sub-text {
-                    margin: 3% 0 !important;
+                    margin: 3% 0 0 0;
+                }
+
+                &__text {
+                    margin-top: 8%;
+                }
+
+                &__sub-text {
+                    margin-top: 50px;
                 }
             }
 
             .subscribe-button {
                 position: relative;
                 text-transform: uppercase;
-                margin: 2% auto 0% 53%;
+                margin: 2% 15% 0% 52.4%;
                 font-size: 16px;
                 color: var(--text-color);
                 border-radius: 20px;
@@ -215,21 +228,16 @@
                 background-color: var(--background);
                 cursor: pointer;
 
-                /* Small devices (landscape tablets, 300px and up) */
+                /* Small devices (200px and up) */
                 @media only screen and (min-width: 200px) and (max-width: 775px) {
                     width: 65%;
                     padding: 4%;
-                    margin: 0;
+                    margin: 40px 0 0 0;
                     text-align: center;
                 }
 
-                /* Extra large devices (large laptops and desktops, 1200px and up) */
-                @media only screen and (min-width: 1200px) {
-                    width: 35%;
-                }
-
-                /* Extra large devices (large laptops and desktops, 1200px and up) */
-                @media only screen and (min-width: 1500px) {
+                /* Medium-large devices (laptops and desktops, 775px and up) */
+                @media only screen and (min-width: 775px) {
                     width: 35%;
                 }
 
@@ -274,7 +282,7 @@
 
         &__tower {
             display: block;
-            height: 900px;
+            height: 830px;
             width: 550px;
             margin: -25% 0% 0% 5%;
 
@@ -283,6 +291,9 @@
                 height: 850px;
                 width: 500px;
                 margin-top: -30%;
+            }
+            @media (max-width: 775px) {
+                display: none;
             }
         }
     }
