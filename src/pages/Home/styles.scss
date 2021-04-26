@@ -8,7 +8,7 @@
     */
     &__heading {
         background-image: var(--gradient);
-        height: 750px;
+        height: calc(100vh - 70px);
         background-repeat: no-repeat;
         background-size: cover;
         overflow: hidden;
