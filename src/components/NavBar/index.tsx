@@ -157,7 +157,7 @@ const Menu = {
             padding: 0 2rem 1rem 2rem;
             margin-top: 0;
             transition: 0.2s ease-out;
-            background-color: ${() => (document.documentElement.getAttribute("data-theme") === "dark" ? "#ffb26e" : "rgb(184, 61, 24)")};
+            background-color: ${() => (document.documentElement.getAttribute("data-theme") === "dark" ? "rgb(255, 177, 129)" : "rgb(184, 61, 24)")};
             z-index: 101;
             transform: ${({ openDrawer }: { openDrawer: any }) => (openDrawer ? `translateX(0)` : `translateX(100%)`)};
         }
