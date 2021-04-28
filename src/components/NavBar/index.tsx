@@ -165,9 +165,16 @@ const Menu = {
     Item: styled.li`
         padding: 0 1rem;
         cursor: pointer;
+        transform: scale(1);
+        transition: transform 0.25s;
+
+        &:hover {
+            transform: scale(1.15);
+        }
 
         @media only screen and (max-width: 910px) {
             padding: 1rem 0;
+            margin: 0 auto 0 0;  //Padding on inside-right of li, so breakline is the same width
         }
     `,
 };
