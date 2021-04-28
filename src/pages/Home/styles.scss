@@ -650,7 +650,8 @@
                             color: white;
                             line-height: 1;
                             font-size: 15px;
-                            backdrop-filter: blur(8px);
+                            backdrop-filter: blur(30px);
+                            -webkit-backdrop-filter: blur(30px);
                             border-radius: 0px 0px 5px 5px;
 
                             /* Need to make sure text for all hexagons are responsive (long words in titles) */
