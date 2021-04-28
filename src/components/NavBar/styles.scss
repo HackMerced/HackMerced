@@ -22,6 +22,10 @@
     }
 }
 
+styled.li {
+    height: 20px;
+}
+
 .break-line {
     border: 5px solid white;
     opacity: 0.5;
@@ -36,6 +40,7 @@
 
 .nav-toggle-switch {
     margin-top: -10%;
+    height: 40px;
 }
 
 .dark-mode-toggle {
