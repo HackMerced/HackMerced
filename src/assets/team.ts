@@ -18,6 +18,8 @@ import SHAWN from "./images/shawn.jpg";
 import ALYSSA from "./images/alyssa.png";
 import ROHIT from "./images/rohit.png";
 import ERICK from "./images/erick.png";
+import FRANCISCO from "./images/francisco.png";
+import KIANA from "./images/kiana.png";
 
 const team = [
     {
@@ -122,7 +124,7 @@ const team = [
         firstName: "Kiana",
         lastName: "Ha",
         url: "https://www.linkedin.com/in/kianaha/",
-        src: GEHAD,
+        src: KIANA,
         desc: "Design",
     },
     {
@@ -157,7 +159,7 @@ const team = [
         firstName: "Francisco",
         lastName: "Lira",
         url: "https://www.linkedin.com/in/lirafrancisco/",
-        src: GEHAD,
+        src: FRANCISCO,
         desc: "Design",
     },
     {
