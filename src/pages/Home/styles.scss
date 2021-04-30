@@ -8,17 +8,22 @@
     */
     &__heading {
         background-image: var(--gradient);
-        height: 810px;
+        height: calc(100vh - 70px);
         background-repeat: no-repeat;
         background-size: cover;
         overflow: hidden;
 
-        @media (max-width: 700px) {
+        @media (max-width: 650px) {  //Changes the height of the heading component
+            height: 700px;
+        }
+        @media (max-width: 550px) {
+            height: 650px;
+        }
+        @media (max-width: 450px) {
             height: 600px;
         }
-
-        @media (max-width: 450px) {
-            height: 400px;
+        @media (max-width: 380px) {
+            height: 540px;
         }
 
         // Scrolling clouds in the background of the heading
@@ -172,13 +177,8 @@
             &__sub-text {
                 font-size: 15px;
                 text-align: center;
-                margin: 1% auto auto 40%;
+                margin: 3% auto auto 40%;
                 font-weight: medium;
-            }
-
-            &__text,
-            &__sub-text {
-                color: rgb(243, 244, 246);
             }
 
             @media (max-width: 775px) {
@@ -202,14 +202,22 @@
 
                 &__text,
                 &__sub-text {
-                    margin: 3% 0 !important;
+                    margin: 3% 0 0 0;
+                }
+
+                &__text {
+                    margin-top: 8%;
+                }
+
+                &__sub-text {
+                    margin-top: 50px;
                 }
             }
 
             .subscribe-button {
                 position: relative;
                 text-transform: uppercase;
-                margin: 2% auto 0% 53%;
+                margin: 2% 15% 0% 52.4%;
                 font-size: 16px;
                 color: var(--text-color);
                 border-radius: 20px;
@@ -220,26 +228,16 @@
                 background-color: var(--background);
                 cursor: pointer;
 
-                /* Small devices (landscape tablets, 300px and up) */
-                @media only screen and (min-width: 360px) and (max-width: 775px) {
+                /* Small devices (200px and up) */
+                @media only screen and (min-width: 200px) and (max-width: 775px) {
                     width: 65%;
                     padding: 4%;
-                    margin: 0;
+                    margin: 40px 0 0 0;
                     text-align: center;
                 }
 
-                /* Medium devices (landscape tablets, 768px and up) */
-                @media only screen and (min-width: 768px) {
-                    width: 45%;
-                }
-
-                /* Extra large devices (large laptops and desktops, 1200px and up) */
-                @media only screen and (min-width: 1200px) {
-                    width: 35%;
-                }
-
-                /* Extra large devices (large laptops and desktops, 1200px and up) */
-                @media only screen and (min-width: 1500px) {
+                /* Medium-large devices (laptops and desktops, 775px and up) */
+                @media only screen and (min-width: 775px) {
                     width: 35%;
                 }
 
@@ -272,30 +270,30 @@
                     color: white;
                 }
             }
+
+            //Changes z-index of image, texts, and subscribe button so they're on top of the HackMerced Tower
+            &__img, &__text, &__sub-text, .subscribe-button {
+                @media (max-width: 1030px) {
+                    position: relative;
+                    z-index: 1;
+                }
+            }
         }
 
         &__tower {
             display: block;
-            min-width: auto;
-            min-height: auto;
-            margin: -20% auto 0% 5%;
+            height: 830px;
+            width: 550px;
+            margin: -25% 0% 0% 5%;
 
-            /* Medium devices (landscape tablets, 768px and up) */
-            @media only screen and (min-width: 768px) {
-                margin: -20% auto 0% 5%;
-                width: 400px;
+            /* Medium devices (landscape tablets, 950px and under) */
+            @media (max-width: 950px) {
+                height: 850px;
+                width: 500px;
+                margin-top: -30%;
             }
-
-            /* Large devices (large laptops and desktops, 1200px and up) */
-            @media only screen and (min-width: 1200px) {
-                margin: -20% auto 0% 5%;
-                width: 450px;
-            }
-
-            /* Extra large devices (extra large laptops and desktops, 1500px and up) */
-            @media only screen and (min-width: 1500px) {
-                margin: -15% auto 0% 5%;
-                width: 525px;
+            @media (max-width: 775px) {
+                display: none;
             }
         }
     }
@@ -339,7 +337,6 @@
     */
     &__break-line {
         border: 0.5rem solid var(--orange);
-        opacity: 50%;
         border-width: 0.5rem;
         border-radius: 10px;
         margin: 0 auto 1rem auto;
@@ -527,7 +524,6 @@
                     @media only screen and (min-width: 992px) {
                         font-size: 20px;
                     }
-
                 }
 
                 &__group {
@@ -535,9 +531,8 @@
                     font-weight: thin;
                     font-size: 14px;
 
-
-                     /* Small devices (mobile, 300px and up) */
-                     @media only screen and (min-width: 300px) {
+                    /* Small devices (mobile, 300px and up) */
+                    @media only screen and (min-width: 300px) {
                         font-size: 8px;
                     }
 
@@ -550,7 +545,6 @@
                     @media only screen and (min-width: 992px) {
                         font-size: 16px;
                     }
-                    
                 }
 
                 &__category,
@@ -654,21 +648,35 @@
                             width: 100%;
                             text-align: center;
                             color: white;
-                            -webkit-text-stroke: 0.08px black;
                             line-height: 1;
                             font-size: 15px;
-                            -webkit-backdrop-filter: blur(8px);
-                            backdrop-filter: blur(8px);
+                            background-color:rgba(0, 0, 0, 0.5);
                             border-radius: 0px 0px 5px 5px;
 
-                            @media (hover:hover) and (pointer: fine) and (max-dth: 1200px) {
+                            /* Need to make sure text for all hexagons are responsive (long words in titles) */
+                            @media (max-width: 1200px) {
                                 top: 45%;
                                 font-size: 13.5px;
                             }
-                            @media (hover:hover) and (pointer: fine) and (max-width: 1000px) {
+                            @media (max-width: 1000px) {
                                 font-size: 12px;
                             }
-                            @media (hover:hover) and (pointer: fine) and (max-width: 800px) {
+                            @media (max-width: 700px) {
+                                top: 40%;
+                            }
+                            @media (max-width: 550px) {
+                                top: 35%;
+                                font-size: 10px;
+                            }
+                            @media (max-width: 460px) {
+                                top: 30%;
+                                font-size: 9px;
+                            }
+                            @media (max-width: 400px) {
+                                top: 28%;
+                                font-size: 7px;
+                            }
+                            @media (max-width: 300px) {
                                 display: none;
                             }
                         }
@@ -686,36 +694,60 @@
 
                     /* Manually push first row to center */
                     &:nth-child(1) {
-                        margin-left: 15.6%;
+                        margin-left: 8%;
                     }
 
-                    /* Translates each child in the second row to the right a little bit, and moves them down. */
-                    &:nth-child(5),
+                    /* Translates the second row up, into interlocking position. */
                     &:nth-child(6),
-                    &:nth-child(7) {
+                    &:nth-child(7),
+                    &:nth-child(8),
+                    &:nth-child(9), {
                         margin-top: -3.35%;
                     }
 
-                    /* 5th child (2nd row): Move into interlocking position, which moves the rest of the children in the row. */
-                    &:nth-child(5) {
-                        margin-left: 23.46%;
+                    /* Moves second row children to the right, into interlocking position. */
+                    &:nth-child(6) {
+                        margin-left: 16%;
                     }
 
-                    /* Forces 8th child to go to the next row, by adding padding on the right of hexagon 7. */
-                    &:nth-child(7) {
-                        margin-right: 25%;
+                    /* Manually push third row to center. */
+                    &:nth-child(10) {
+                        margin-left: 8%;
                     }
 
-                    /* Manually push second row to center */
-                    &:nth-child(8) {
-                        margin-left: 15.46%;
-                    }
-
-                    /* Translates each child in the second row to the right a little bit, and moves them down. */
-                    &:nth-child(8),
-                    &:nth-child(9),
+                    /* Translates the third row up, into interlocking position. */
                     &:nth-child(10),
-                    &:nth-child(11) {
+                    &:nth-child(11),
+                    &:nth-child(12),
+                    &:nth-child(13),
+                    &:nth-child(14), {
+                        margin-top: -3.35%;
+                    }
+
+                    /* Moves fourth row children to the right, into interlocking position. */
+                    &:nth-child(15) {
+                        margin-left: 16%;
+                    }
+
+                    /* Translates the fourth row up, into interlocking position. */
+                    &:nth-child(15),
+                    &:nth-child(16),
+                    &:nth-child(17),
+                    &:nth-child(18), {
+                        margin-top: -3.35%;
+                    }
+
+                    /* Manually push fifth row to center. */
+                    &:nth-child(19) {
+                        margin-left: 8%;
+                    }
+
+                    /* Translates the fifth row up, into interlocking position. */
+                    &:nth-child(19),
+                    &:nth-child(20),
+                    &:nth-child(21),
+                    &:nth-child(22),
+                    &:nth-child(23), {
                         margin-top: -3.35%;
                     }
                 }

@@ -1,7 +1,7 @@
 import TRUMAN from "./images/truman.png";
 import MARY from "./images/mary.jpg";
 import ATHENA from "./images/athena.jpg";
-import MANJOT from "./images/manjot.jpg";
+import MANJOT from "./images/manjot.png";
 import INTISER from "./images/Intiser.png";
 import ALISSON from "./images/alisson.jpg";
 import MARTHEN from "./images/marty.jpg";
@@ -9,6 +9,18 @@ import JET from "./images/jet.jpg";
 import JOSEPH from "./images/joseph.jpg";
 import SEAN from "./images/sean.jpg";
 import GEHAD from "./images/gehad.jpg";
+import ABDUS from "./images/abdus.png";
+import BETSY from "./images/betsy.jpg";
+import SALVADOR from "./images/salvador.png";
+import VIRGINIA from "./images/virginia.png";
+import WINSTON from "./images/winston.png";
+import SHAWN from "./images/shawn.jpg";
+import ALYSSA from "./images/alyssa.png";
+import ROHIT from "./images/rohit.png";
+import ERICK from "./images/erick.png";
+import FRANCISCO from "./images/francisco.png";
+import KIANA from "./images/kiana.png";
+import SHAKTI from "./images/shakti.jpg";
 
 const team = [
     {
@@ -87,6 +99,90 @@ const team = [
         url: "https://www.linkedin.com/in/gehad-elhanafy-a72723191/",
         src: GEHAD,
         desc: "HackMerced Rep",
+    },
+    {
+        firstName: "Virginia",
+        lastName: "Manandeg",
+        url: "https://www.linkedin.com/in/virginia-manandeg/",
+        src: VIRGINIA,
+        desc: "Co-Director of Marketing",
+    },
+    {
+        firstName: "Alyssa",
+        lastName: "Estrella",
+        url: "https://www.linkedin.com/in/alyssa-estrella-25359119a/",
+        src: ALYSSA,
+        desc: "Director of Finance",
+    },
+    {
+        firstName: "Salvador",
+        lastName: "Rodriguez",
+        url: "https://www.linkedin.com/in/salvador-erodriguez/",
+        src: SALVADOR,
+        desc: "Co-Director of Marketing",
+    },
+    {
+        firstName: "Kiana",
+        lastName: "Ha",
+        url: "https://www.linkedin.com/in/kianaha/",
+        src: KIANA,
+        desc: "Design",
+    },
+    {
+        firstName: "Shawn",
+        lastName: "Duong",
+        url: "https://www.linkedin.com/in/shawndxyz/",
+        src: SHAWN,
+        desc: "Logistics",
+    },
+    {
+        firstName: "Winston",
+        lastName: "Lou",
+        url: "https://www.linkedin.com/in/winstonlou/",
+        src: WINSTON,
+        desc: "Engineering",
+    },
+    {
+        firstName: "Betsy",
+        lastName: "Avila",
+        url: "https://www.linkedin.com/in/betsyava/",
+        src: BETSY,
+        desc: "Engineering",
+    },
+    {
+        firstName: "Abdus",
+        lastName: "Samee",
+        url: "https://www.linkedin.com/in/abdus-samee-19990128/",
+        src: ABDUS,
+        desc: "Engineering",
+    },
+    {
+        firstName: "Francisco",
+        lastName: "Lira",
+        url: "https://www.linkedin.com/in/lirafrancisco/",
+        src: FRANCISCO,
+        desc: "Design",
+    },
+    {
+        firstName: "Rohit",
+        lastName: "Vemuri",
+        url: "https://www.linkedin.com/in/rohit-vemuri-31a2221b3/",
+        src: ROHIT,
+        desc: "Engineering",
+    },
+    {
+        firstName: "Shakti",
+        lastName: "Vishwakarma",
+        url: "https://www.linkedin.com/in/shaktipro/",
+        src: SHAKTI,
+        desc: "Engineering",
+    },
+    {
+        firstName: "Erick",
+        lastName: "Vargas",
+        url: "https://www.linkedin.com/in/erick-vargas-74a555190/",
+        src: ERICK,
+        desc: "Engineering",
     },
 ];
 
