@@ -13,10 +13,7 @@
         background-size: cover;
         overflow: hidden;
 
-        @media (min-width: 650px) {  //Changes the height of the heading component
-            height: 700px;
-        }
-        @media (max-width: 650px) {
+        @media (max-width: 650px) {  //Changes the height of the heading component
             height: 700px;
         }
         @media (max-width: 550px) {
@@ -288,6 +285,10 @@
             height: 830px;
             width: 550px;
             margin: -25% 0% 0% 5%;
+
+            @media (min-height: 800px) {  //Changes the height of the tower
+                height: calc(100vh + 30px);
+            }
 
             /* Medium devices (landscape tablets, 950px and under) */
             @media (max-width: 950px) {
