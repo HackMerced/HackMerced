@@ -1,7 +1,7 @@
 import TRUMAN from "./images/truman.png";
 import MARY from "./images/mary.jpg";
 import ATHENA from "./images/athena.jpg";
-import MANJOT from "./images/manjot.jpg";
+import MANJOT from "./images/manjot.png";
 import INTISER from "./images/Intiser.png";
 import ALISSON from "./images/alisson.jpg";
 import MARTHEN from "./images/marty.jpg";
@@ -15,6 +15,12 @@ import SALVADOR from "./images/salvador.png";
 import VIRGINIA from "./images/virginia.png";
 import WINSTON from "./images/winston.png";
 import SHAWN from "./images/shawn.jpg";
+import ALYSSA from "./images/alyssa.png";
+import ROHIT from "./images/rohit.png";
+import ERICK from "./images/erick.png";
+import FRANCISCO from "./images/francisco.png";
+import KIANA from "./images/kiana.png";
+import SHAKTI from "./images/shakti.jpg";
 
 const team = [
     {
@@ -105,7 +111,7 @@ const team = [
         firstName: "Alyssa",
         lastName: "Estrella",
         url: "https://www.linkedin.com/in/alyssa-estrella-25359119a/",
-        src: GEHAD,
+        src: ALYSSA,
         desc: "Director of Finance",
     },
     {
@@ -119,7 +125,7 @@ const team = [
         firstName: "Kiana",
         lastName: "Ha",
         url: "https://www.linkedin.com/in/kianaha/",
-        src: GEHAD,
+        src: KIANA,
         desc: "Design",
     },
     {
@@ -154,28 +160,28 @@ const team = [
         firstName: "Francisco",
         lastName: "Lira",
         url: "https://www.linkedin.com/in/lirafrancisco/",
-        src: GEHAD,
+        src: FRANCISCO,
         desc: "Design",
     },
     {
         firstName: "Rohit",
         lastName: "Vemuri",
         url: "https://www.linkedin.com/in/rohit-vemuri-31a2221b3/",
-        src: GEHAD,
+        src: ROHIT,
         desc: "Engineering",
     },
     {
         firstName: "Shakti",
         lastName: "Vishwakarma",
         url: "https://www.linkedin.com/in/shaktipro/",
-        src: GEHAD,
+        src: SHAKTI,
         desc: "Engineering",
     },
     {
         firstName: "Erick",
         lastName: "Vargas",
         url: "https://www.linkedin.com/in/erick-vargas-74a555190/",
-        src: GEHAD,
+        src: ERICK,
         desc: "Engineering",
     },
 ];
