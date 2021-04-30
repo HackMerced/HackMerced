@@ -13,7 +13,10 @@
         background-size: cover;
         overflow: hidden;
 
-        @media (max-width: 650px) {  //Changes the height of the heading component
+        @media (min-width: 650px) {  //Changes the height of the heading component
+            height: 700px;
+        }
+        @media (max-width: 650px) {
             height: 700px;
         }
         @media (max-width: 550px) {
