@@ -20,6 +20,7 @@ import ROHIT from "./images/rohit.png";
 import ERICK from "./images/erick.png";
 import FRANCISCO from "./images/francisco.png";
 import KIANA from "./images/kiana.png";
+import SHAKTI from "./images/shakti.jpg";
 
 const team = [
     {
@@ -173,7 +174,7 @@ const team = [
         firstName: "Shakti",
         lastName: "Vishwakarma",
         url: "https://www.linkedin.com/in/shaktipro/",
-        src: GEHAD,
+        src: SHAKTI,
         desc: "Engineering",
     },
     {
