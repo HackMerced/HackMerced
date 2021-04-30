@@ -41,6 +41,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
 
     const NavbarItemsProps = {
         openDrawer: openDrawer,
+        theme: theme,
     };
 
     // create a break line
@@ -156,7 +157,7 @@ const Menu = {
             padding: 0 2rem 1rem 2rem;
             margin-top: 0;
             transition: 0.2s ease-out;
-            background-color: #ffb181;
+            background-color: ${() => (document.documentElement.getAttribute("data-theme") === "dark" ? "rgb(255, 177, 129)" : "rgb(184, 61, 24)")};
             z-index: 101;
             transform: ${({ openDrawer }: { openDrawer: any }) => (openDrawer ? `translateX(0)` : `translateX(100%)`)};
         }
@@ -164,9 +165,16 @@ const Menu = {
     Item: styled.li`
         padding: 0 1rem;
         cursor: pointer;
+        transform: scale(1);
+        transition: transform 0.25s;
+
+        &:hover {
+            transform: scale(1.15);
+        }
 
         @media only screen and (max-width: 910px) {
             padding: 1rem 0;
+            margin: 0 auto 0 0;  //Padding on inside-right of li, so breakline is the same width
         }
     `,
 };
