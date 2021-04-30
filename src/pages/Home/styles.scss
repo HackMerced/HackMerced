@@ -286,6 +286,10 @@
             width: 550px;
             margin: -25% 0% 0% 5%;
 
+            @media (min-height: 800px) {  //Changes the height of the tower
+                height: calc(100vh + 30px);
+            }
+
             /* Medium devices (landscape tablets, 950px and under) */
             @media (max-width: 950px) {
                 height: 850px;
