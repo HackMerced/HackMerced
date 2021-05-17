@@ -13,8 +13,8 @@
         background-size: cover;
         overflow: hidden;
 
+        //Changes the height of the heading component
         @media (max-width: 650px) {
-            //Changes the height of the heading component
             height: 700px;
         }
         @media (max-width: 550px) {
@@ -289,8 +289,8 @@
             width: 550px;
             margin: -25% 0% 0% 5%;
 
+            //Changes the height of the tower
             @media (min-height: 800px) {
-                //Changes the height of the tower
                 height: calc(100vh + 30px);
             }
 
