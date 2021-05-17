@@ -13,7 +13,8 @@
         background-size: cover;
         overflow: hidden;
 
-        @media (max-width: 650px) {  //Changes the height of the heading component
+        //Changes the height of the heading component
+        @media (max-width: 650px) {
             height: 700px;
         }
         @media (max-width: 550px) {
@@ -257,7 +258,6 @@
 
                 &:hover {
                     transform: translateY(-5px);
-                    color: black;
                 }
 
                 &:hover:before {
@@ -272,7 +272,10 @@
             }
 
             //Changes z-index of image, texts, and subscribe button so they're on top of the HackMerced Tower
-            &__img, &__text, &__sub-text, .subscribe-button {
+            &__img,
+            &__text,
+            &__sub-text,
+            .subscribe-button {
                 @media (max-width: 1030px) {
                     position: relative;
                     z-index: 1;
@@ -286,7 +289,8 @@
             width: 550px;
             margin: -25% 0% 0% 5%;
 
-            @media (min-height: 800px) {  //Changes the height of the tower
+            //Changes the height of the tower
+            @media (min-height: 800px) {
                 height: calc(100vh + 30px);
             }
 
@@ -645,7 +649,8 @@
                         &__text {
                             display: none;
                         }
-                        &__picture:hover + &__text, &__text:hover {
+                        &__picture:hover + &__text,
+                        &__text:hover {
                             display: block;
                             position: absolute;
                             top: 50%;
@@ -654,7 +659,7 @@
                             color: white;
                             line-height: 1;
                             font-size: 15px;
-                            background-color:rgba(0, 0, 0, 0.5);
+                            background-color: rgba(0, 0, 0, 0.5);
                             border-radius: 0px 0px 5px 5px;
 
                             /* Need to make sure text for all hexagons are responsive (long words in titles) */
@@ -705,7 +710,7 @@
                     &:nth-child(6),
                     &:nth-child(7),
                     &:nth-child(8),
-                    &:nth-child(9), {
+                    &:nth-child(9) {
                         margin-top: -3.35%;
                     }
 
@@ -724,7 +729,7 @@
                     &:nth-child(11),
                     &:nth-child(12),
                     &:nth-child(13),
-                    &:nth-child(14), {
+                    &:nth-child(14) {
                         margin-top: -3.35%;
                     }
 
@@ -737,7 +742,7 @@
                     &:nth-child(15),
                     &:nth-child(16),
                     &:nth-child(17),
-                    &:nth-child(18), {
+                    &:nth-child(18) {
                         margin-top: -3.35%;
                     }
 
@@ -751,7 +756,7 @@
                     &:nth-child(20),
                     &:nth-child(21),
                     &:nth-child(22),
-                    &:nth-child(23), {
+                    &:nth-child(23) {
                         margin-top: -3.35%;
                     }
                 }
