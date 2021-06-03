@@ -240,7 +240,7 @@
                 transition: all 0.3s;
 
                 /*Small devices (smartphone, 200px to 775px)*/
-                @media only screen and (min-device-width: 200px) and (max-device-width: 775px) {
+                @media only screen and (min-width: 200px) and (max-width: 775px) {
                     width: 65%;
                     height:100%;
                     padding:4%;
@@ -249,7 +249,7 @@
                 }
 
                 /* Medium-large devices (laptops and desktops, 775px and up) */
-                @media only screen and (min-width: 776px) {
+                @media only screen and (min-width: 775px) {
                     width: 35%;
                     height:100%;
                 }
