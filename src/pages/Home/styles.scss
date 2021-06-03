@@ -155,11 +155,12 @@
                 /* Medium devices (landscape tablets, 768px and up) */
                 @media only screen and (min-width: 768px) {
                     margin-left: 47%;
+                    
                 }
 
                 /* Large devices (laptops/desktops, 992px and up) */
                 @media only screen and (min-width: 992px) {
-                    margin-left: 57%;
+                    margin-right: 57%;
                 }
 
                 /* Large devices (laptops/desktops, 992px and up) */
@@ -248,8 +249,9 @@
                 }
 
                 /* Medium-large devices (laptops and desktops, 775px and up) */
-                @media only screen and (min-width: 775px) {
-                    width: 35%;
+                @media only screen and (min-width: 776px) {
+                    width: 45%;
+                    height:100%;
                 }
                 & span{
                     transition: all 0.3s;
