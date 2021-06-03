@@ -113,7 +113,7 @@ const Home: FC = (): JSX.Element => {
                             window.location.href = "https://hackmercedvi.typeform.com/to/GLB4v3b3";
                         }}
                     >
-                        Register to be part of HackMerced Team
+                        <span> Register to be part of HackMerced Team</span>
                     </button>
                 </section>
                 {width > 775 ? (
