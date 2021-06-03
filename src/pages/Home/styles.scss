@@ -155,12 +155,11 @@
                 /* Medium devices (landscape tablets, 768px and up) */
                 @media only screen and (min-width: 768px) {
                     margin-left: 47%;
-                    
                 }
 
                 /* Large devices (laptops/desktops, 992px and up) */
                 @media only screen and (min-width: 992px) {
-                    margin-right: 57%;
+                    margin-left: 57%;
                 }
 
                 /* Large devices (laptops/desktops, 992px and up) */
@@ -242,15 +241,16 @@
 
                 /*Small devices (smartphone, 200px to 775px)*/
                 @media only screen and (min-device-width: 200px) and (max-device-width: 775px) {
-                    width: 100%;
+                    width: 65%;
                     height:100%;
+                    padding:4%;
                     margin: 40px 0 0 0;
                     text-align: center;
                 }
 
                 /* Medium-large devices (laptops and desktops, 775px and up) */
                 @media only screen and (min-width: 776px) {
-                    width: 45%;
+                    width: 35%;
                     height:100%;
                 }
                 & span{
