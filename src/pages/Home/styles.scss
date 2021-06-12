@@ -13,18 +13,16 @@
         background-size: cover;
         overflow: hidden;
 
-        //Changes the height of the heading component
-        @media (max-width: 650px) {
-            height: 700px;
-        }
-        @media (max-width: 550px) {
-            height: 650px;
-        }
-        @media (max-width: 450px) {
+        //If height of heading component is less than 600px, make the height 600px
+        @media (max-height: 600px) {
             height: 600px;
         }
-        @media (max-width: 380px) {
-            height: 540px;
+        //If width is less than 775px and height is less than 800px
+        @media (max-width: 775px) and (max-height: 800px) {
+            height: 700px;
+        }
+        @media (max-width: 450px) and (max-height: 800px) {
+            height: 650px;
         }
 
         // Scrolling clouds in the background of the heading
