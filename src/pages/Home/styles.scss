@@ -322,13 +322,7 @@
             @media (min-height: 800px) {
                 height: calc(100vh + 30px);
             }
-
-            /* Medium devices (landscape tablets, 950px and under) */
-            @media (max-width: 950px) {
-                height: 850px;
-                width: 500px;
-                margin-top: -30%;
-            }
+            
             @media (max-width: 775px) {
                 display: none;
             }
