@@ -219,6 +219,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                position: absolute;//prevents the tower from moving
                 background-color: var(--background);
             }
             .subscribe-button {
