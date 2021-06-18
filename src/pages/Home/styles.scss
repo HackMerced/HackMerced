@@ -222,12 +222,13 @@
                 background-color: var(--background);
             }
             .subscribe-button {
-                line-height: 50px;
+                line-height: normal;
                 height: 50px;
                 width: 100%;
+                padding: 20px 10px 20px 10px; 
                 margin: 2% 15% 0% 52.4%;
                 cursor: pointer;
-                border-radius:15px;
+                border-radius: 0px;
                 border: none;
                 position: relative;
                 text-align: center;
