@@ -228,10 +228,9 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                height: 100%; 
-                width: 100%;
-                text-align: center;
-                //position: absolute;
+                align-items: center;
+                position: absolute;//prevents the tower from moving
+                background-color: var(--background);
             }
             .subscribe-button {
                 line-height: normal;
