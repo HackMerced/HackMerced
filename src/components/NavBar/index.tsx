@@ -68,12 +68,14 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                     )}
                 </Menu.Logo>
 
-                <HamburgerButton.Wrapper onClick={() => toggleDrawer(true)}>
-                    <HamburgerButton.Lines breakLineColor={breakLineColor} />
+                <HamburgerButton.Wrapper style={{ marginRight: "1rem" }}>
+                    <HamburgerButton.Wrapper onClick={() => toggleDrawer(true)}>
+                        <HamburgerButton.Lines breakLineColor={breakLineColor} />
+                    </HamburgerButton.Wrapper>
                 </HamburgerButton.Wrapper>
 
                 <Menu.Items ref={drawerRef} {...NavbarItemsProps} style={{ backgroundColor }}>
-                    <Menu.Item style={{ marginLeft: "auto", marginRight: "-1em" }}>
+                    <Menu.Item style={{ marginLeft: "auto", marginRight: "-.5em" }}>
                         <HamburgerButton.Wrapper onClick={() => toggleDrawer(false)}>
                             <img src={CLOSE_ICON} height="40" width="40" />
                         </HamburgerButton.Wrapper>
@@ -205,8 +207,7 @@ const HamburgerButton = {
         }
 
         @media only screen and (max-width: 910px) {
-            display: block;
-            margin-right: 1rem;
+            display: block;   
         }
     `,
     Lines: styled.div`
