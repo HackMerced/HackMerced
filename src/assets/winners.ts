@@ -39,20 +39,20 @@ const winners = [
     {
         icon: faSchool,
         category: "Best UC Merced Related Hack",
-        group: "Snapcode",
-        project: "https://devpost.com/software/uc-merced-basketball-analysis",
+        group: "UC Merced Basketball Analysis",
+        project: "https://devpost.com/software/uc-merced-basketball-analysis?fbclid=IwAR2KGFI5N7IC8cUkkr5kAuXyevPk5m0KNpXS6jFz479vItI_p9OeHcG2qWU",
     },
     {
         icon: faSearch,
         category: "Tech for Social Good",
         group: "Vacchecker",
-        project: "https://devpost.com/software/esose",
+        project: "https://devpost.com/software/vacchecker-agkimf",
     },
     {
         icon: faMicrochip,
         category: "Best Hardware Hack",
         group: "EcoSafe",
-        project: "https://devpost.com/software/3d-for-education",
+        project: "https://devpost.com/software/ecosafe",
     },
     {
         icon: faMeteor,
