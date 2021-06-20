@@ -68,10 +68,8 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                     )}
                 </Menu.Logo>
 
-                <HamburgerButton.Wrapper style={{ marginRight: "1rem" }}>
-                    <HamburgerButton.Wrapper onClick={() => toggleDrawer(true)}>
-                        <HamburgerButton.Lines breakLineColor={breakLineColor} />
-                    </HamburgerButton.Wrapper>
+                <HamburgerButton.Wrapper onClick={() => toggleDrawer(true)} style={{ marginRight: "1rem" }}>
+                    <HamburgerButton.Lines breakLineColor={breakLineColor} />
                 </HamburgerButton.Wrapper>
 
                 <Menu.Items ref={drawerRef} {...NavbarItemsProps} style={{ backgroundColor }}>
