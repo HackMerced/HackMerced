@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import DarkModeToggle from "react-dark-mode-toggle";
 
 import MLH_BANNER from "../../assets/images/mlh-badge.svg";
+import CLOSE_ICON from "../../assets/images/close-icon.svg";
 import "./styles.scss";
 
 const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string; showBanner?: boolean }> = ({
@@ -74,7 +75,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                 <Menu.Items ref={drawerRef} {...NavbarItemsProps} style={{ backgroundColor }}>
                     <Menu.Item style={{ marginLeft: "auto", marginRight: "-1em" }}>
                         <HamburgerButton.Wrapper onClick={() => toggleDrawer(false)}>
-                            <HamburgerButton.Close breakLineColor={breakLineColor} />
+                            <img src={CLOSE_ICON} height="40" width="40" />
                         </HamburgerButton.Wrapper>
                     </Menu.Item>
                     <Menu.Item>
@@ -222,35 +223,6 @@ const HamburgerButton = {
             content: "";
             width: 100%;
             background-color: white;
-            position: absolute;
-            background-color: ${({ breakLineColor }: { breakLineColor: any }) => breakLineColor};
-        }
-
-        &:after {
-            /* Move bottom line below center line */
-            top: -0.8rem;
-        }
-
-        &:before {
-            /* Move top line on top of center line */
-            top: 0.8rem;
-        }
-    `,
-    Close: styled.div`
-        top: 50%;
-        margin-top: -0.125em;
-
-        &:before {
-            /* Create X */
-            content: "X";
-            margin-right: -1em;
-            font-size: 2em;
-            transform:scale(1.5,1);
-            height: 2px;
-            pointer-events: none;
-            display: block;
-            width: 100%;
-            color: white;
             position: absolute;
             background-color: ${({ breakLineColor }: { breakLineColor: any }) => breakLineColor};
         }
