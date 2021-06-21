@@ -38,9 +38,9 @@ const winners = [
     },
     {
         icon: faSchool,
-        category: "Best UC Merced Related Hack",
+        category: "Best UCM Related Hack",
         group: "UC Merced Basketball Analysis",
-        project: "https://devpost.com/software/uc-merced-basketball-analysis?fbclid=IwAR2KGFI5N7IC8cUkkr5kAuXyevPk5m0KNpXS6jFz479vItI_p9OeHcG2qWU",
+        project: "https://devpost.com/software/uc-merced-basketball-analysis",
     },
     {
         icon: faSearch,
