@@ -314,11 +314,11 @@
             display: block;
             height: 850px;
             width: 450px;
-            margin: -25% 0% 0% 5%;
-
+            margin: -25% 0% 0% 7%;
+            //margin-left: 7%;
             @media (min-height: 800px) {  //Changes the height of the tower
                 height: calc(100vh + 40px);
-                margin-left: 7%;
+                
             }
 
             
