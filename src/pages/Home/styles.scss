@@ -309,23 +309,30 @@
                 }
             }
         }
-
+        
         &__tower {
             display: block;
-            height: 830px;
-            width: 550px;
+            height: 850px;
+            width: 450px;
             margin: -25% 0% 0% 5%;
 
-            //Changes the height of the tower
-            @media (min-height: 800px) {
+            @media (min-height: 800px) {  //Changes the height of the tower
                 height: calc(100vh + 30px);
+                margin-left: 7%;
             }
-            
+
+            /* Medium devices (landscape tablets, 950px and under) */
+            @media (max-width: 1000px) {
+                height: 750px;
+                width: 400px;
+                margin-top: -30%;
+            }
             @media (max-width: 775px) {
                 display: none;
             }
         }
     }
+       
 
     /*
     * ######################
