@@ -25,3 +25,14 @@ a {
         color: inherit;
       }
 }
+
+// for firefox
+::-moz-selection {
+    color: black;
+    background: #FB9300;
+  }
+  
+::selection {
+color: black;
+background: #FB9300;
+}
