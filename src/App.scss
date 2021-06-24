@@ -5,11 +5,10 @@ body {
     overflow: none;
     margin: 0;
     padding: 0;
-    
 }
 
 body {
-    font-family: "Montserrat", sans-serif; 
+    font-family: "Montserrat", sans-serif;
     color: white;
 }
 
@@ -21,7 +20,21 @@ button:focus {
 a {
     text-decoration: none !important;
 
-    &, &:visited, &:hover, &:active {
+    &,
+    &:visited,
+    &:hover,
+    &:active {
         color: inherit;
-      }
+    }
+}
+
+// for firefox
+::-moz-selection {
+    color: white;
+    background: #f3c583;
+}
+
+::selection {
+    color: white;
+    background: #f3c583;
 }
