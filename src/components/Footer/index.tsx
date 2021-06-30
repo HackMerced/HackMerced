@@ -29,11 +29,11 @@ const Footer: FC<{ backgroundColor?: string; textColor?: string; fontColor?: str
                         {footerIcons(faInstagram)}
                     </a>
                     <a
-                        href="https://join.slack.com/t/hackmerced-v/shared_invite/enQtODUyNzkxMDY2NjkyLTZiODAyZjNiYTFjZTlkYTQ0NDVhOGQ5OTI3OTEzNjAxMDBiZTdjY2QyMTI0ZGE4MTlhMmNhMGYyNzQzOGNhZTI"
+                        href="https://www.youtube.com/channel/UC7Fx0ZXRo31YIj-XEg_XUeA"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        {footerIcons(faSlack)}
+                        {footerIcons(faYoutube)}
                     </a>
                     <a
                         href="https://github.com/HackMerced?q=&type=source&language="
@@ -53,7 +53,7 @@ const Footer: FC<{ backgroundColor?: string; textColor?: string; fontColor?: str
             </section>
             <section className="footer__credits">
                 <span className="footer__credits__copyright">
-                    © 2020 HackMerced. All Rights Reserved.
+                    © 2021 HackMerced. All Rights Reserved.
                     <br /> Made with ♡ by HackMerced.
                 </span>
             </section>
