@@ -58,9 +58,11 @@ const generateWinners = (winners: Array<WinnersProps>): JSX.Element => {
     const winnersArray: Array<JSX.Element> = winners.map((winner: WinnersProps, index: number) => (
         <li key={index} className="home__past-winners__list__past-winner">
             <a href={winner.project} target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={winner.icon} className="fa home__past-winners__list__past-winner__icon" />
-                <h5 className="home__past-winners__list__past-winner__category">{winner.category}</h5>
-                <div className="home__past-winners__list__past-winner__group">{winner.group}</div>
+                <div>
+                    < FontAwesomeIcon icon={winner.icon} className="fa home__past-winners__list__past-winner__icon" />
+                    <h5 className="home__past-winners__list__past-winner__category">{winner.category}</h5>
+                    <div className="home__past-winners__list__past-winner__group">{winner.group}</div>
+                </div>
             </a>
         </li>
     ));
