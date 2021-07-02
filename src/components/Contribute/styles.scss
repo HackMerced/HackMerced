@@ -1,0 +1,47 @@
+.grid-container {
+    display: grid;
+    color: var(--text-color);
+    padding: 0px 2px 90px 0px;
+    grid-template-columns: auto auto;
+    grid-gap: 0px 50px;
+    justify-content: center;
+
+    @media only screen and (max-width: 900px) {
+        grid-template-columns: auto;
+        grid-gap: 50px 0px;
+        padding-top: 20px;
+    }
+
+    .grid-item {
+        text-align: center;
+        width: 400px;
+        height: 40px;
+        padding-top: 6px;
+        font-size: 28px;
+        background-color: var(--orange);
+
+        @media only screen and (max-width: 700px) {
+            font-size: 25px;
+        }
+        @media only screen and (max-width: 450px) {
+            width: 200px;
+            height: 30px;
+            padding-top: 8px;
+            font-size: 20px;
+        }
+    }
+
+    /* Hover Effect: https://dev.to/webdeasy/top-20-css-buttons-animations-f41 */
+    .grid-item:hover {
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400%;
+        animation: glowing 20s linear infinite;
+        transition: opacity .3s ease-in-out;
+    }
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+}
+

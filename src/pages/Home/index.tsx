@@ -4,6 +4,7 @@ import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 import Navbar from "../../components/NavBar";
 import Footer from "../../components/Footer";
+import Contribute from "../../components/Contribute";
 import useWindowDimensions from "../../components/WindowDimensions";
 
 import HACKMERCED_TITLE from "../../assets/images/placeholder-title.png";
@@ -156,6 +157,11 @@ const Home: FC = (): JSX.Element => {
             <section className="home__team-pictures">
                 {generateSectionHeading("Our Team")}
                 <div className="home__team-pictures__grid clear">{generateTeamPics(team)}</div>
+            </section>
+            {/* Contribute */}
+            <section className="home__contribute">
+                {generateSectionHeading("Contribute!")}
+                <Contribute />
             </section>
             <Footer />
         </main>
