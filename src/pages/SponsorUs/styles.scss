@@ -111,7 +111,7 @@ img {
 
 .items {
     display: flex;
-    border: 2px solid white;
+    border: 2px solid transparent;
     animation-name: animateIn;
     animation-duration: 350ms;
     animation-delay: 300ms;
@@ -132,9 +132,9 @@ img {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
     img {
-        height: 100px;
-        width: 150px;
+        height: 125px;
+        width: 200px;
     }
 }
