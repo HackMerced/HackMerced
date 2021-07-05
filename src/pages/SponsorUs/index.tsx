@@ -75,18 +75,18 @@ const SponsorUs: FC = (): JSX.Element => {
                 <div id="past-sponsors">
                     Our Past Sponsors
                     <ul className="listt">
-                        <li className="items"><img src={A} /></li>
-                        <li className="items"><img src={B} /></li>
-                        <li className="items"><img src={C} /></li>
-                        <li className="items"><img src={D} /></li>
-                        <li className="items"><img src={E} /></li>
-                        <li className="items"><img src={F} /></li>
-                        <li className="items"><img src={G} /></li>
-                        <li className="items"><img src={H} /></li>
-                        <li className="items"><img src={I} /></li>
-                        <li className="items"><img src={J} /></li>
-                        <li className="items"><img src={K} /></li>
-                        <li className="items"><img src={L} /></li>
+                        <li className="items"><img src={A} alt="ASUCM-Logo" /></li>
+                        <li className="items"><img src={B} alt="MLH-Logo" /></li>
+                        <li className="items"><img src={C} alt="1PASSWORD-Logo" /></li>
+                        <li className="items"><img src={D} alt="HACKMERCED-Logo" /></li>
+                        <li className="items"><img src={E} alt="ADOBE-Logo" /></li>
+                        <li className="items"><img src={F} alt="SKETCH-Logo" /></li>
+                        <li className="items"><img src={G} alt="CITRIS-Logo" /></li>
+                        <li className="items"><img src={H} alt="REPL-Logo" /></li>
+                        <li className="items"><img src={I} alt="ACM-Logo" /></li>
+                        <li className="items"><img src={J} alt="" /></li>
+                        <li className="items"><img src={K} alt="JETBRAINS-Logo" /></li>
+                        <li className="items"><img src={L} alt="SNORKEL-Logo" /></li>
                     </ul>
                 </div>
             </main>
