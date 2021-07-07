@@ -6,6 +6,19 @@ import Navbar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Form from "../../components/Form";
 // import PAST_SPONSORS from "../../assets/images/past-sponsors.png";
+import A from "../../assets/images/sponsor-logos/1.png";
+import B from "../../assets/images/sponsor-logos/2.png";
+import C from "../../assets/images/sponsor-logos/3.png";
+import D from "../../assets/images/sponsor-logos/4.png";
+import E from "../../assets/images/sponsor-logos/5.png";
+import F from "../../assets/images/sponsor-logos/6.png";
+import G from "../../assets/images/sponsor-logos/7.png";
+import H from "../../assets/images/sponsor-logos/8.png";
+import I from "../../assets/images/sponsor-logos/9.png";
+import J from "../../assets/images/sponsor-logos/10.png";
+import K from "../../assets/images/sponsor-logos/11.png";
+import L from "../../assets/images/sponsor-logos/12.png";
+
 
 import "./styles.scss";
 
@@ -59,6 +72,23 @@ const SponsorUs: FC = (): JSX.Element => {
                         className="sponsors-us__past-sponsors__img"
                     />
                 </section> */}
+                <div id="past-sponsors">
+                    Our Past Sponsors
+                    <ul className="listt">
+                        <li className="items"><img src={A} alt="ASUCM-Logo" /></li>
+                        <li className="items"><img src={B} alt="MLH-Logo" /></li>
+                        <li className="items"><img src={C} alt="1PASSWORD-Logo" /></li>
+                        <li className="items"><img src={D} alt="HACKMERCED-Logo" /></li>
+                        <li className="items"><img src={E} alt="ADOBE-Logo" /></li>
+                        <li className="items"><img src={F} alt="SKETCH-Logo" /></li>
+                        <li className="items"><img src={G} alt="CITRIS-Logo" /></li>
+                        <li className="items"><img src={H} alt="REPL-Logo" /></li>
+                        <li className="items"><img src={I} alt="ACM-Logo" /></li>
+                        <li className="items"><img src={J} alt="" /></li>
+                        <li className="items"><img src={K} alt="JETBRAINS-Logo" /></li>
+                        <li className="items"><img src={L} alt="SNORKEL-Logo" /></li>
+                    </ul>
+                </div>
             </main>
             <Footer />
         </Fragment>
