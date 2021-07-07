@@ -3,15 +3,12 @@
     justify-content: center;
     padding-bottom: 2%;
     background-color: var(--background);
-
     @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
         margin: 0 auto;
     }
-
     @media (max-width: 500px) {
         width: 90%;
     }
-
     &__content {
         &__heading {
             font-size: 1.875rem;
@@ -21,12 +18,10 @@
             font-weight: bolder;
             overflow: hidden;
             padding: 1% 0% 2% 0%;
-
             @media (min-width: 768px) {
                 font-size: 2.5rem;
             }
         }
-
         &__section {
             display: block;
             display: flex;
@@ -34,13 +29,11 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-
             &__icon {
                 color: var(--orange);
                 font-size: 35px !important;
                 margin: 10px;
             }
-
             &__title {
                 font-size: 20px;
                 text-align: center;
@@ -48,12 +41,10 @@
                 font-weight: bold;
                 color: var(--text-color);
                 text-align: center;
-
                 @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
                     margin-bottom: 2rem;
                 }
             }
-
             &__text {
                 display: block;
                 margin-block-start: 1em;
@@ -65,13 +56,12 @@
                 line-height: 30px;
             }
         }
-
-        @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
+        @media only screen and (max-width: 900px),
+        only screen and (max-height: 640px) {
             margin: 0;
             padding-top: 2rem;
         }
     }
-
     &__past-sponsors {
         display: block;
         display: flex;
@@ -80,7 +70,6 @@
         justify-content: center;
         text-align: center;
         background-color: var(--background);
-
         &__title {
             font-size: 1.875rem;
             line-height: 1.5em;
@@ -89,10 +78,63 @@
             font-weight: bold;
             color: var(--text-color);
             text-align: center;
-
             @media (min-width: 768px) {
                 font-size: 3rem;
             }
         }
+    }
+}
+
+img {
+    height: 180px;
+    width: 310px;
+}
+
+#past-sponsors {
+    font-weight: 500;
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    margin: 2%;
+}
+
+.listt {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 20px 2% 0px 2%;
+}
+
+.items {
+    display: flex;
+    border: 2px solid transparent;
+    animation-name: animateIn;
+    animation-duration: 350ms;
+    animation-delay: 300ms;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out-in;
+    padding: 0px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes animateIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.6) translateY(8px) translateY(100px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    img {
+        height: 125px;
+        width: 200px;
     }
 }
