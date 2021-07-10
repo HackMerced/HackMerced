@@ -253,7 +253,7 @@
                     width: 65%;
                     height:100%;
                     //padding:4%;
-                   // margin: 40px 0 0 0;
+                    margin: 40px 0 0 0;
                    // text-align: center;
                 }
                  /* Medium-large devices (laptops and desktops, 775px and up) */
@@ -330,6 +330,20 @@
                     color:var(--text-color);
                     opacity: 0.3;
                 }
+                /*Small devices (smartphone, 200px to 775px)*/
+                @media only screen and (min-width: 200px) and (max-width: 775px) {
+                    width: 65%;
+                    height:100%;
+                    //padding:4%;
+                    margin: 40px 0 0 0;
+                   // text-align: center;
+                }
+                 /* Medium-large devices (laptops and desktops, 775px and up) */
+                 @media only screen and (min-width: 775px) {
+                    width: 15%; //reduce button size
+                    //padding: 10px 10px 10px 10px;
+                    height:100%;
+                 }
                 
             }
             .email .btn{
