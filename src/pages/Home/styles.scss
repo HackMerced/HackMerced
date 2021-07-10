@@ -213,93 +213,129 @@
                 }
             }
 
-            div[class*=box] {
-                height: 33.33%;
-                width: 100%; 
+            // div[class*=box] {
+            //     height: 33.33%;
+            //     width: 100%; 
+            //     display: flex;
+                
+            //     justify-content: center;
+            //     align-items: center;
+            //     position: absolute;//prevents the tower from moving
+            //     background-color: var(--background);
+            // }
+            // .box{ background-color: var(--background); }
+            .form{
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
-                align-items: center;
-                position: absolute;//prevents the tower from moving
-                background-color: var(--background);
-            }
-            .subscribe-button {
-                line-height: normal;
-                height: 50px;
+                height: 100%; 
                 width: 100%;
-                padding: 20px 10px 20px 10px; 
-                margin: 2% 15% 0% 52.4%;
-                cursor: pointer;
-                border-radius: 0px;
-                border: none;
-                position: relative;
                 text-align: center;
+                //position: absolute;
+            }
+            button{
+                text-align: center;
+                margin: 0% 15% 0% 52.4%;
+                padding: 23px 33px;
+                display: inline-block;
+                cursor: pointer;
+                border-radius: 3px;
+                border: 3px solid transparent;
+                position: relative;
                 text-transform: uppercase;
-                font-size: 16px;
-                color: var(--text-color);
-                background-color: var(--background);//adjust between two modes
-                transition: all 0.3s;
+                font-size: 14px;
+                transition: color 0.5s, transform 0.2s, var(--background) 0.2s;
+                outline: none;
+                
 
                 /*Small devices (smartphone, 200px to 775px)*/
                 @media only screen and (min-width: 200px) and (max-width: 775px) {
                     width: 65%;
                     height:100%;
-                    padding:4%;
-                    margin: 40px 0 0 0;
-                    text-align: center;
+                    //padding:4%;
+                   // margin: 40px 0 0 0;
+                   // text-align: center;
                 }
-
-                /* Medium-large devices (laptops and desktops, 775px and up) */
-                @media only screen and (min-width: 775px) {
-                    width: 35%;
+                 /* Medium-large devices (laptops and desktops, 775px and up) */
+                 @media only screen and (min-width: 775px) {
+                    width: 15%; //reduce button size
+                    //padding: 10px 10px 10px 10px;
                     height:100%;
+                 }
+            } 
+            .subscribe-button{
+                color: darken(rgb(184, 61, 24), 10%);
+                //color:var(--text-color);
+                background-color: transparent;//adjust between two modes
+                
+                &:hover{
+                    background-color: transparent;
+                    box-shadow: none;
+                    color:var(--text-color);
                 }
-                & span{
-                    transition: all 0.3s;
+                &::before{
+                    content:"";
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%;
+                    border: 3px solid darken(rgb(184, 61, 24), 10%);
+                    transition: opacity 0.3s, border 0.3s;
                 }
-                &:before {
+                &:hover::before{
+                    opacity:0;
+                }
+                &::after{
                     content: "";
                     position: absolute;
-                    bottom:0;
+                    top: 0;
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    z-index: 1;
+                    background-color: transparent;
+                    border: 3px solid white;
                     opacity: 0;
-                    transition: all 0.3s;
-                    border-top-width: 1px;
-                    border-bottom-width: 1px;
-                    border-top-style: solid;
-                    border-bottom-style: solid;
-                    border-top-color: rgba(255,255,255,0.5); /*white bar*/
-                    border-bottom-color: rgba(255,255,255,0.5); /*white bar*/
-                    transform: scale(0.1, 1);
+                    z-index: -1;
+                    transform: scaleX(1.1) scaleY(1.3);
+                    transition: transform 0.3s, opacity 0.3s;  
                 }
-                
-                &:hover span {
-                    letter-spacing: 2px;
+                &:hover::after{
+                    opacity:1;
+                    transform:scaleX(1) scaleY(1);
                 }
-                
-                &:hover::before {
-                    opacity: 1; 
-                    transform: scale(1, 1);
-                    
-                }
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    transition: all 0.3s;
-                    z-index: 1;
-                    background-color: var(--background);
-                }
-                &:hover::after {
-                    opacity: 0; 
-                    transform: scale(0.1, 1);
-                }
+                 &:active{
+                     transform: translateY(3px);
+                 }
+                 &::after, &::before{
+                     border-radius:3px;
+                 }
             }
-
+            input[type=email]{
+                line-height: normal;
+                height: 18px;
+                width: 250px; //changed
+                padding: 10px 10px 10px;
+                cursor: pointer;
+                border-radius: 3px;
+                border: none;
+                position: relative;
+                text-align: center;
+                font-size: 14px;
+                color: var(--text-color);
+                background-color: var(--background);//adjust between two modes
+                margin: 2% 15% 0% 52.4%;
+            
+                &::placeholder{
+                    color:var(--text-color);
+                    opacity: 0.3;
+                }
+                
+            }
+            .email .btn{
+                display:inline-block;
+            }
+           
             //Changes z-index of image, texts, and subscribe button so they're on top of the HackMerced Tower
             &__img,
             &__text,
