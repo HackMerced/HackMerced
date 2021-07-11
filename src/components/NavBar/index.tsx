@@ -62,7 +62,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
             <Menu.Wrapper>
                 <Menu.Logo>
                     {showBanner ? (
-                        <img className="MLH" src={MLH_BANNER} width="100" height="175" alt="MLH BANNER" />
+                        <a href="https://mlh.io/seasons/2021/events" target="_blank"><img className="MLH" src={MLH_BANNER} width="100" height="175" alt="MLH BANNER" /></a>
                     ) : (
                         <div className="hm-text">HackMerced</div>
                     )}
@@ -118,12 +118,14 @@ const Styles = {
             const { pathname } = useLocation();
             return pathname !== "/" ? "13vw" : "auto";
         }};
+      }
 
       @media only screen and (max-height: 400px) {
           height: ${(): string => {
             const { pathname } = useLocation();
             return pathname !== "/" ? "9vw" : "auto";
         }};
+      }
   `,
 };
 
