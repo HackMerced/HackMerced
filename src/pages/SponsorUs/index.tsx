@@ -27,7 +27,8 @@ const SponsorUs: FC = (): JSX.Element => {
         <Fragment>
             <Navbar />
             <main className="sponsors-us">
-                {/* Information */}
+                
+                {/* Sponsors Information */}
                 <div className="sponsors-us__content">
                     <div className="sponsors-us__content__heading">
                         Become a sponsor to empower and help <br></br> grow the next generation of HackMerced.
@@ -60,33 +61,26 @@ const SponsorUs: FC = (): JSX.Element => {
                         </p>
                     </section>
                 </div>
+
                 {/* Form to Submit a Request */}
                 <Form formTitle="Sponsor Us" askCompany={true} formRequest="sponsor" />
+
                 {/* Past Sponsors Gallery */}
-                {/* <section className="sponsors-us__past-sponsors">
-                    <h1 className="sponsors-us__past-sponsors__title">Past Sponsors</h1>
-                    <img
-                        src={PAST_SPONSORS}
-                        width="100%"
-                        alt="Past Hackathons Sponsors"
-                        className="sponsors-us__past-sponsors__img"
-                    />
-                </section> */}
-                <div id="past-sponsors">
-                    Our Past Sponsors
-                    <ul className="listt">
-                        <li className="items"><img src={A} alt="ASUCM-Logo" /></li>
-                        <li className="items"><img src={B} alt="MLH-Logo" /></li>
-                        <li className="items"><img src={C} alt="1PASSWORD-Logo" /></li>
-                        <li className="items"><img src={D} alt="HACKMERCED-Logo" /></li>
-                        <li className="items"><img src={E} alt="ADOBE-Logo" /></li>
-                        <li className="items"><img src={F} alt="SKETCH-Logo" /></li>
-                        <li className="items"><img src={G} alt="CITRIS-Logo" /></li>
-                        <li className="items"><img src={H} alt="REPL-Logo" /></li>
-                        <li className="items"><img src={I} alt="ACM-Logo" /></li>
-                        <li className="items"><img src={J} alt="" /></li>
-                        <li className="items"><img src={K} alt="JETBRAINS-Logo" /></li>
-                        <li className="items"><img src={L} alt="SNORKEL-Logo" /></li>
+                <div className="past-sponsors">
+                    <div>Our Past Sponsors</div>
+                    <ul className="list">
+                        <li className="items"><img className="logoimage" src={A} alt="ASUCM-Logo" /></li>
+                        <li className="items"><img className="logoimage" src={B} alt="MLH-Logo" /></li>
+                        <li className="items"><img className="logoimage" src={C} alt="1PASSWORD-Logo" /></li>
+                        <li className="items"><img className="logoimage" src={D} alt="HACKMERCED-Logo" /></li>
+                        <li className="items"><img className="logoimage" src={E} alt="ADOBE-Logo" /></li>
+                        <li className="items"><img className="logoimage" src={F} alt="SKETCH-Logo" /></li>
+                        <li className="items"><img className="logoimage" src={G} alt="CITRIS-Logo" /></li>
+                        <li className="items"><img className="logoimage" src={H} alt="REPL-Logo" /></li>
+                        <li className="items"><img className="logoimage" src={I} alt="ACM-Logo" /></li>
+                        <li className="items"><img className="logoimage" src={J} alt="" /></li>
+                        <li className="items"><img className="logoimage" src={K} alt="JETBRAINS-Logo" /></li>
+                        <li className="items"><img className="logoimage" src={L} alt="SNORKEL-Logo" /></li>
                     </ul>
                 </div>
             </main>
