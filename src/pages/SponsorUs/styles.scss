@@ -7,10 +7,7 @@
     @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
         margin: 0 auto;
     }
-    @media (max-width: 500px) {
-        width: 90%;
-    }
-
+    
     &__content {
         &__heading {
             font-size: 1.875rem;
