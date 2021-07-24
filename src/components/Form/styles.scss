@@ -8,6 +8,17 @@
     border-radius: 2rem;
     margin: 2% 7% 0 7%;
 
+    //form box is adjusted depending on its width
+    @media (max-width: 1000px) {
+    width: 75%;
+    }
+    @media (max-width: 750px) {
+        width: 70%;
+    }
+    @media (max-width: 450px) {
+       width: 61%;
+    }
+    
     @media only screen and (max-width: 900px), only screen and (max-height: 640px) {
         margin-bottom: 2rem;
     }
