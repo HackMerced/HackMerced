@@ -8,10 +8,6 @@
         margin: 0 auto;
     }
 
-    @media (max-width: 500px) {
-        width: 90%;
-    }
-
     &__content {
         &__header {
             font-size: 1.875rem;
@@ -50,6 +46,17 @@
                 color: var(--orange);
                 font-size: 35px !important;
                 margin: 10px;
+            }
+        }
+     
+        @media only screen and (max-width: 1024px), only screen and (max-height: 1366px) {
+            //sized to an ipad pro
+            padding-top: 2rem;
+
+            padding-bottom : 12rem;
+
+            &__header {
+               margin-bottom: 2rem;
             }
         }
 
