@@ -16,7 +16,7 @@
             color: var(--text-color);
             font-weight: bolder;
             overflow: hidden;
-            padding: 1% 0% 2% 0%;
+            padding: 2.5% 0% 2% 0%;
             @media (min-width: 768px) {
                 font-size: 2.5rem;
             }
@@ -66,11 +66,15 @@
 
 
 .past-sponsors {
-    font-weight: 500;
-    font-size: 50px;
-    text-align: center;
-    color: black;
-    margin: 2%;
+    padding: 4% 2% 0% 2%;
+
+    .logos-title {
+        font-weight: bold;
+        font-size: 50px;
+        text-align: center;
+        padding-bottom: 3%;
+        color: var(--text-color);
+    }
 
     .list {
         padding: 0;
@@ -86,11 +90,10 @@
             display: flex;
             border: 2px solid transparent;
             animation-name: animateIn;
-            animation-duration: 350ms;
+            animation-duration: 4s;
             animation-delay: 300ms;
             animation-fill-mode: both;
             animation-timing-function: ease-out-in;
-            padding: 0px;
             text-align: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
