@@ -9,6 +9,7 @@ import useWindowDimensions from "../../components/WindowDimensions";
 
 import HACKMERCED_TITLE from "../../assets/images/placeholder-title.png";
 import HACKMERCED_TOWER from "../../assets/images/tower.png";
+import HACKMERCED_TOWER_WEBP from "../../assets/images/tower.webp";
 import TEAM_PICTURE from "../../assets/images/hackmerced-v.jpg";
 import team from "../../assets/team";
 import winners from "../../assets/winners";
@@ -120,13 +121,13 @@ const Home: FC = (): JSX.Element => {
                     </button>
                 </section>
                 {width > 775 ? (
-                    <img
-                        src={HACKMERCED_TOWER}
-                        width="525"
-                        height="1005"
-                        alt="HackMerced Tower"
-                        className="home__heading__tower"
-                    />
+                    <picture>
+                        <img srcSet={HACKMERCED_TOWER_WEBP} src={HACKMERCED_TOWER}
+                            className="home__heading__tower"
+                            alt="HackMerced Tower"
+                            width="525"
+                            height="1005" />
+                    </picture>
                 ) : null}
             </section>
             {/* About Us */}
