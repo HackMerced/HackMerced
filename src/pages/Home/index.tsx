@@ -19,6 +19,7 @@ type TeamProps = {
     firstName?: string | undefined;
     lastName?: string | undefined;
     url: string;
+    srcSet: string;
     src: string;
     desc: string;
 };
@@ -40,11 +41,14 @@ const generateTeamPics = (team: Array<TeamProps>): JSX.Element => {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <img
-                    className="home__team-pictures__grid__items__item__hexagon__picture"
-                    src={member.src}
-                    alt={`${member.firstName} ${member.lastName}`}
-                />
+                <picture>
+                    <img
+                        className="home__team-pictures__grid__items__item__hexagon__picture"
+                        srcSet={member.srcSet}
+                        src={member.src}
+                        alt={`${member.firstName} ${member.lastName}`}
+                    />
+                </picture>
                 <div className="home__team-pictures__grid__items__item__hexagon__text">
                     {member.desc}
                 </div>
