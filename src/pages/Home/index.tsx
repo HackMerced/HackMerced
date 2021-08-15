@@ -110,18 +110,18 @@ const Home: FC = (): JSX.Element => {
                     <div className="home__heading__title__sub-text">
                         Stay updated with HackMerced and subscribe to our email list!
                     </div>
-                    <form className = "form">
-                       <div className = "email"> 
-                           <input type="email" required placeholder="Enter your email" />
-                        </div>   
-                        <div className = "btn">
+                    <form className="form">
+                        <div className="email">
+                            <input type="email" required placeholder="Enter your email" />
+                        </div>
+                        <div className="btn" draggable="false">
                             <button
                                 className="subscribe-button"
                                 onClick={() => {
                                     window.location.href = "https://hackmercedvi.typeform.com/to/GLB4v3b3";
                                 }}
                             >
-                                Submit
+                                Subscribe
                             </button>
                         </div>
 
