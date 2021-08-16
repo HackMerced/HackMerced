@@ -50,10 +50,11 @@ const generateTeamPics = (team: Array<TeamProps>): JSX.Element => {
                         src={member.src}
                         alt={`${member.firstName} ${member.lastName}`}
                     />
+
+                    <div className="home__team-pictures__grid__items__item__hexagon__text">
+                        {member.desc}
+                    </div>
                 </picture>
-                <div className="home__team-pictures__grid__items__item__hexagon__text">
-                    {member.desc}
-                </div>
             </a>
         </li>
     ));
