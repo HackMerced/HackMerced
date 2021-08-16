@@ -8,9 +8,11 @@ import Contribute from "../../components/Contribute";
 import useWindowDimensions from "../../components/WindowDimensions";
 
 import HACKMERCED_TITLE from "../../assets/images/placeholder-title.png";
+import HACKMERCED_TITLE_WEBP from "../../assets/images/placeholder-title.webp";
 import HACKMERCED_TOWER from "../../assets/images/tower.png";
 import HACKMERCED_TOWER_WEBP from "../../assets/images/tower.webp";
 import TEAM_PICTURE from "../../assets/images/hackmerced-v.jpg";
+import TEAM_PICTURE_WEBP from "../../assets/images/hackmerced-v.webp";
 import team from "../../assets/team";
 import winners from "../../assets/winners";
 import "./styles.scss";
@@ -48,10 +50,11 @@ const generateTeamPics = (team: Array<TeamProps>): JSX.Element => {
                         src={member.src}
                         alt={`${member.firstName} ${member.lastName}`}
                     />
+
+                    <div className="home__team-pictures__grid__items__item__hexagon__text">
+                        {member.desc}
+                    </div>
                 </picture>
-                <div className="home__team-pictures__grid__items__item__hexagon__text">
-                    {member.desc}
-                </div>
             </a>
         </li>
     ));
@@ -104,13 +107,15 @@ const Home: FC = (): JSX.Element => {
                     </section>
                 ) : null}
                 <section className="home__heading__title">
-                    <img
-                        src={HACKMERCED_TITLE}
-                        width="400"
-                        height="175"
-                        alt="HackMerced Title"
-                        className="home__heading__title__img"
-                    />
+                    <picture>
+                        <img srcSet={HACKMERCED_TITLE_WEBP}
+                            src={HACKMERCED_TITLE}
+                            width="400"
+                            height="175"
+                            alt="HackMerced Title"
+                            className="home__heading__title__img"
+                        />
+                    </picture>
                     <div className="home__heading__title__text">The biggest San Joaquin Valley hackathon.</div>
                     <div className="home__heading__title__sub-text">
                         Stay updated with HackMerced and subscribe to our email list!
@@ -150,7 +155,7 @@ const Home: FC = (): JSX.Element => {
                             within the San Joaquin Valley.
                         </p>
                     </article>
-                    <img className="home__about-us__content__team-picture" src={TEAM_PICTURE} alt="HackMerced Team" />
+                    <img className="home__about-us__content__team-picture" srcSet={TEAM_PICTURE_WEBP} src={TEAM_PICTURE} alt="HackMerced Team" />
                 </section>
             </section>
             {/* Past Winners */}
