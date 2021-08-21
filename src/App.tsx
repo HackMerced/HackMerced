@@ -1,4 +1,4 @@
-import React, { FC, Fragment } from "react";
+import React, { FC, Fragment, useEffect } from "react";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { createHashHistory } from "history";
 
@@ -16,10 +16,15 @@ import HackMercedVI from "./pages/Archive/HackMercedVI";
 // import SignUp from "./pages/SignUp";
 import Maintenance from "./pages/Maintenance";
 import Dashboard from "./pages/Dashboard";
+import {animate} from "./utils/mousetrail";
 
 import "./App.scss";
 
 const App: FC = (): JSX.Element => {
+    useEffect(() => {
+        animate();
+    }, []);
+    
     return (
         <Router
             history={createHashHistory({
