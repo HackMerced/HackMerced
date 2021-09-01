@@ -407,86 +407,45 @@
         background-color: var(--background);
 
         &__content {
-            line-height: 40px;
-            color: var(--text-color);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            padding: 0% 5% 0% 5%;
+            display: grid;
+            grid-template-columns: auto auto;
             align-items: center;
 
-            @media (min-width: 1000px) {
-                flex-direction: row;
+            @media only screen and (max-width: 1250px) {
+                grid-template-columns: auto;
+                justify-items: center;
             }
 
-            &__description {
-                text-decoration: bold;
-                flex-direction: column;
+            p {
+                padding-right: 5%;
+                line-height: 40px;
+                color: var(--text-color);
 
-                p {
-                    text-align: left;
-
-                    @media (max-width: 350px) {
-                        width: 80%;
-                        margin-left: 10%;
-                        font-size: 105%;
-                    }
-
-                    @media (min-width: 350px) {
-                        width: 80%;
-                        margin-left: 10%;
-                        font-size: 105%;
-                    }
-
-                    @media (min-width: 600px) and (max-width: 850px) {
-                        margin-left: 15%;
-                        width: 70%;
-                    }
-
-                    @media (min-width: 850px) {
-                        width: 85%;
-                        margin-left: 10%;
-                        font-size: 85%;
-                    }
-
-                    @media (min-width: 1270px) {
-                        width: 80%;
-                        margin-left: 14%;
-                        font-size: 135%;
-                    }
-
-                    @media (min-width: 1800px) {
-                        width: 80%;
-                        margin-left: 4%;
-                        font-size: 25px;
-                    }
+                @media only screen and (min-width: 0px) {
+                    padding: 0% 5% 0% 5%;
+                    font-size: 20px;
                 }
-
-                @media (min-width: 850px) {
-                    width: 100%;
-                }
-
-                @media (min-width: 1270px) {
-                    width: 50%;
+                @media only screen and (min-width: 700px) {
+                    padding: 0% 10% 0% 10%;
+                    font-size: 23px;
                 }
             }
 
-            &__team-picture {
-                width: 80%;
+            &__teampic {
                 border-radius: 25px;
 
-                @media (min-width: 600px) {
-                    width: 70%;
-                    margin-right: 2%;
+                @media only screen and (min-width: 0px) {
+                    max-width: 300px;
                 }
-
-                @media (min-width: 1000px) {
-                    margin-top: 2%;
-                    width: 50%;
+                @media only screen and (min-width: 700px) {
+                    max-width: 500px;
                 }
-
-                @media (min-width: 1270px) {
-                    width: 50%;
-                    max-width: 650px;
+                @media only screen and (min-width: 1251px) {
+                    max-width: 600px;
+                }
+                @media only screen and (min-width: 1700px) {
+                    max-width: 700px;
                 }
             }
         }

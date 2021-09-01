@@ -143,19 +143,21 @@ const Home: FC = (): JSX.Element => {
             <section className="home__about-us">
                 {generateSectionHeading("About Us")}
                 <section className="home__about-us__content">
-                    <article className="home__about-us__content__description">
-                        <p>
-                            HackMerced is a 36 hour annual programming competition that occurs at the University of
-                            California, Merced and is open to students from all over the world. During the event,
-                            participants will collaborate in teams and attend workshops to learn about new technologies.
-                            <br />
-                            <br />
-                            We aim to create a collaborative, interdisciplinary event that brings together students from
-                            all universities and prospective sponsors to see the innovation and creativity culminating
-                            within the San Joaquin Valley.
-                        </p>
-                    </article>
-                    <img className="home__about-us__content__team-picture" srcSet={TEAM_PICTURE_WEBP} src={TEAM_PICTURE} alt="HackMerced Team" />
+                    <p>
+                        HackMerced is a 36 hour annual programming competition that occurs at the University of
+                        California, Merced and is open to students from all over the world. During the event,
+                        participants will collaborate in teams and attend workshops to learn about new technologies.
+                        <br />
+                        <br />
+                        We aim to create a collaborative, interdisciplinary event that brings together students from
+                        all universities and prospective sponsors to see the innovation and creativity culminating
+                        within the San Joaquin Valley.
+                    </p>
+                    <picture>
+                        <img className="home__about-us__content__teampic"
+                        srcSet={TEAM_PICTURE_WEBP} src={TEAM_PICTURE} 
+                        alt="HackMerced Team" />
+                    </picture>
                 </section>
             </section>
             {/* Past Winners */}
