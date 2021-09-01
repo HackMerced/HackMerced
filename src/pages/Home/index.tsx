@@ -8,8 +8,11 @@ import Contribute from "../../components/Contribute";
 import useWindowDimensions from "../../components/WindowDimensions";
 
 import HACKMERCED_TITLE from "../../assets/images/placeholder-title.png";
+import HACKMERCED_TITLE_WEBP from "../../assets/images/placeholder-title.webp";
 import HACKMERCED_TOWER from "../../assets/images/tower.png";
+import HACKMERCED_TOWER_WEBP from "../../assets/images/tower.webp";
 import TEAM_PICTURE from "../../assets/images/hackmerced-v.jpg";
+import TEAM_PICTURE_WEBP from "../../assets/images/hackmerced-v.webp";
 import team from "../../assets/team";
 import winners from "../../assets/winners";
 import "./styles.scss";
@@ -18,6 +21,7 @@ type TeamProps = {
     firstName?: string | undefined;
     lastName?: string | undefined;
     url: string;
+    srcSet: string;
     src: string;
     desc: string;
 };
@@ -39,14 +43,18 @@ const generateTeamPics = (team: Array<TeamProps>): JSX.Element => {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <img
-                    className="home__team-pictures__grid__items__item__hexagon__picture"
-                    src={member.src}
-                    alt={`${member.firstName} ${member.lastName}`}
-                />
-                <div className="home__team-pictures__grid__items__item__hexagon__text">
-                    {member.desc}
-                </div>
+                <picture>
+                    <img
+                        className="home__team-pictures__grid__items__item__hexagon__picture"
+                        srcSet={member.srcSet}
+                        src={member.src}
+                        alt={`${member.firstName} ${member.lastName}`}
+                    />
+
+                    <div className="home__team-pictures__grid__items__item__hexagon__text">
+                        {member.desc}
+                    </div>
+                </picture>
             </a>
         </li>
     ));
@@ -99,13 +107,15 @@ const Home: FC = (): JSX.Element => {
                     </section>
                 ) : null}
                 <section className="home__heading__title">
-                    <img
-                        src={HACKMERCED_TITLE}
-                        width="400"
-                        height="175"
-                        alt="HackMerced Title"
-                        className="home__heading__title__img"
-                    />
+                    <picture>
+                        <img srcSet={HACKMERCED_TITLE_WEBP}
+                            src={HACKMERCED_TITLE}
+                            width="400"
+                            height="175"
+                            alt="HackMerced Title"
+                            className="home__heading__title__img"
+                        />
+                    </picture>
                     <div className="home__heading__title__text">The biggest San Joaquin Valley hackathon.</div>
                     <div className="home__heading__title__sub-text">
                         Stay updated with HackMerced and subscribe to our email list!
@@ -120,32 +130,34 @@ const Home: FC = (): JSX.Element => {
                     </button>
                 </section>
                 {width > 775 ? (
-                    <img
-                        src={HACKMERCED_TOWER}
-                        width="525"
-                        height="1005"
-                        alt="HackMerced Tower"
-                        className="home__heading__tower"
-                    />
+                    <picture>
+                        <img srcSet={HACKMERCED_TOWER_WEBP} src={HACKMERCED_TOWER}
+                            className="home__heading__tower"
+                            alt="HackMerced Tower"
+                            width="525"
+                            height="1005" />
+                    </picture>
                 ) : null}
             </section>
             {/* About Us */}
             <section className="home__about-us">
                 {generateSectionHeading("About Us")}
                 <section className="home__about-us__content">
-                    <article className="home__about-us__content__description">
-                        <p>
-                            HackMerced is a 36 hour annual programming competition that occurs at the University of
-                            California, Merced and is open to students from all over the world. During the event,
-                            participants will collaborate in teams and attend workshops to learn about new technologies.
-                            <br />
-                            <br />
-                            We aim to create a collaborative, interdisciplinary event that brings together students from
-                            all universities and prospective sponsors to see the innovation and creativity culminating
-                            within the San Joaquin Valley.
-                        </p>
-                    </article>
-                    <img className="home__about-us__content__team-picture" src={TEAM_PICTURE} alt="HackMerced Team" />
+                    <p>
+                        HackMerced is a 36 hour annual programming competition that occurs at the University of
+                        California, Merced and is open to students from all over the world. During the event,
+                        participants will collaborate in teams and attend workshops to learn about new technologies.
+                        <br />
+                        <br />
+                        We aim to create a collaborative, interdisciplinary event that brings together students from
+                        all universities and prospective sponsors to see the innovation and creativity culminating
+                        within the San Joaquin Valley.
+                    </p>
+                    <picture>
+                        <img className="home__about-us__content__teampic"
+                        srcSet={TEAM_PICTURE_WEBP} src={TEAM_PICTURE} 
+                        alt="HackMerced Team" />
+                    </picture>
                 </section>
             </section>
             {/* Past Winners */}
