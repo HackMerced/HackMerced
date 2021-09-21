@@ -2,6 +2,7 @@ import React, { FC, Fragment } from "react";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { createHashHistory } from "history";
 
+import LearnDay from "./pages/LearnDay";
 import Home from "./pages/Home";
 import PastHackathons from "./pages/PastHackathons";
 import SponsorUs from "./pages/SponsorUs";
@@ -28,6 +29,7 @@ const App: FC = (): JSX.Element => {
             })}
         >
             <Switch>
+                <Route path="/learn-day" component={LearnDay} />
                 <Route exact path="/" component={Home} />
                 <Route path="/sponsors" component={SponsorUs} />
                 <Route path="/contact-us" component={ContactUs} />
