@@ -1,4 +1,5 @@
-import React, { FC, Fragment } from "react";
+import React, { FC, Fragment, useState } from "react";
+import Axios, { AxiosResponse } from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
@@ -91,11 +92,28 @@ const generateSectionHeading = (title: string): JSX.Element => {
 
 const Home: FC = (): JSX.Element => {
     const { width } = useWindowDimensions();
+    const [form, setForm] = useState<{ email: string }>({ email: "" });
+
+    // Handles Change on the fields of the form
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        const { name, value } = event.target;
+        setForm({ ...form, [name]: value });
+    };
+
+    // Handles the submission action when the submit button is pressed
+    const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
+        event.preventDefault();
+        Axios.post(
+            `https://hackmerced-tomoe.herokuapp.com/v1/auth/login-resetpassword`,
+            form,
+        ).then((response: AxiosResponse) => console.log(response));
+    };
 
     return (
         <main className="home">
             <Navbar />
             {/* Landing Section */}
+            <section className="home__heading">
                 {width > 499 ? (
                     <section className="home__heading__wave">
                         <div className="home__heading__wave__cloud c1"></div>
@@ -105,8 +123,6 @@ const Home: FC = (): JSX.Element => {
                         <div className="home__heading__wave__cloud c5"></div>
                     </section>
                 ) : null}
-
-            <section className="home__heading">
                 <section className="home__heading__content">
 
                     <div className="home__heading__content__tower">
@@ -126,14 +142,18 @@ const Home: FC = (): JSX.Element => {
                         </picture>
                         <div className="home__heading__content__title__text">The biggest San Joaquin Valley hackathon.</div>
                         <div className="home__heading__content__title__sub-text">Stay updated with HackMerced and subscribe to our email list!</div>
-                        <button
-                            className="subscribe-button"
-                            onClick={() => {
-                                window.location.href = "https://hackmercedvi.typeform.com/to/GLB4v3b3";
-                            }}
-                        >
-                        <span> Register to be part of HackMerced Team</span>
-                        </button>
+
+                        <form className="home__heading__content__title__form" onSubmit={handleSubmit}>
+                            <input
+                                className="home__heading__content__title__form_input"
+                                type="email"
+                                placeholder="Email"
+                                name="email"
+                                onChange={handleInputChange}
+                                required
+                            />
+                            <button type="submit">Submit</button>
+                        </form>
                     </div>
 
                 </section>
