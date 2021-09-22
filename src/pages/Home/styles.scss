@@ -8,20 +8,15 @@
     */
     &__heading {
         background-image: var(--gradient);
-        height: calc(100vh - 70px);
-        background-repeat: no-repeat;
-        background-size: cover;
+        height: calc(100vh - 80px);
         overflow: hidden;
 
-        //If height of heading component is less than 600px, make the height 600px
-        @media (max-height: 600px) {
-            height: 600px;
+        //After tower disappears, allocate some px to the height of heading component
+        @media only screen and (max-width: 910px) {
+            height: calc(100vh - 55px);
         }
-        //If width is less than 775px and height is less than 800px
-        @media (max-width: 775px) and (max-height: 800px) {
-            height: 700px;
-        }
-        @media (max-width: 450px) and (max-height: 800px) {
+        //If height of heading component is less than 650px, make the height 650px
+        @media only screen and (max-height: 650px) {
             height: 650px;
         }
 
@@ -64,10 +59,10 @@
             }
 
             .c1 {
-                animation: cloudMoving 18s linear infinite;
-                -webkit-animation: cloudMoving 18s linear infinite;
-                -moz-animation: cloudMoving 18s linear infinite;
-                -o-animation: cloudMoving 18s linear infinite;
+                animation: cloudMoving 15s linear infinite;
+                -webkit-animation: cloudMoving 15s linear infinite;
+                -moz-animation: cloudMoving 15s linear infinite;
+                -o-animation: cloudMoving 15s linear infinite;
                 left: 230px;
             }
 
@@ -81,7 +76,7 @@
                 -moz-transform: scale(0.5);
                 -o-transform: scale(0.5);
                 opacity: 0.5;
-                left: 400px;
+                left: 280px;
                 top: -50px;
             }
 
@@ -95,21 +90,21 @@
                 -moz-transform: scale(0.75);
                 -o-transform: scale(0.75);
                 opacity: 0.75;
-                left: 380px;
+                left: 200px;
                 top: -150px;
             }
 
             .c4 {
-                animation: cloudMoving 18s linear infinite;
-                -webkit-animation: cloudMoving 18s linear infinite;
-                -moz-animation: cloudMoving 18s linear infinite;
-                -o-animation: cloudMoving 18s linear infinite;
+                animation: cloudMoving 28s linear infinite;
+                -webkit-animation: cloudMoving 28s linear infinite;
+                -moz-animation: cloudMoving 28s linear infinite;
+                -o-animation: cloudMoving 28s linear infinite;
                 transform: scale(0.8);
                 -webkit-transform: scale(0.8);
                 -moz-transform: scale(0.8);
                 -o-transform: scale(0.8);
                 opacity: 0.8;
-                left: 650px;
+                left: 170px;
                 top: -120px;
             }
 
@@ -123,7 +118,7 @@
                 -moz-transform: scale(0.7);
                 -o-transform: scale(0.7);
                 opacity: 0.7;
-                left: 760px;
+                left: 320px;
                 top: -150px;
             }
 
@@ -146,182 +141,142 @@
             }
         }
 
-        &__title {
-            &__img {
-                margin: 5% auto auto 57%;
+        &__content {
+            padding: 0% 5% 0% 5%;
+            display: grid;
+            grid-template-columns: 35% 65%;
+            height: calc(100vh - 70px);
 
-                /* Medium devices (landscape tablets, 768px and up) */
-                @media only screen and (min-width: 768px) {
-                    margin-left: 47%;
+            @media only screen and (max-width: 910px) {
+                grid-template-columns: 100%;
+            }
+
+            &__tower {
+                @media only screen and (max-width: 910px) {
+                    display: none;
                 }
 
-                /* Large devices (laptops/desktops, 992px and up) */
-                @media only screen and (min-width: 992px) {
-                    margin-left: 57%;
-                }
+                &__image {
+                    height: calc(100vh + 70px);
+                    width: calc(28vw);
 
-                /* Large devices (laptops/desktops, 992px and up) */
-                @media only screen and (min-width: 1500px) {
-                    margin-left: 58.5%;
+                    @media only screen and (max-height: 650px) {
+                        height: 720px;
+                    }
                 }
             }
 
-            &__text {
-                font-size: 20px;
+            &__title {
+                margin: auto auto auto auto;
+                padding-bottom: 8%;
                 text-align: center;
-                margin: 2% auto auto 40%;
-                font-weight: bold;
-            }
-
-            &__sub-text {
-                font-size: 15px;
-                text-align: center;
-                margin: 3% auto auto 40%;
-                font-weight: medium;
-            }
-
-            @media (max-width: 775px) {
-                display: flex;
-                flex-flow: column wrap;
-                justify-content: center;
-                align-items: center;
-                margin-top: 10%;
-                padding: 2%;
 
                 &__img {
-                    margin: 0% 0 0 5% !important;
-                    width: 80%;
-                    height: auto;
-                }
+                    width: calc(35vw);
+                    padding-bottom: 1.5%;
 
-                &__img &__text,
-                &__sub-text {
-                    width: 80%;
+                    @media only screen and (max-width: 910px) {
+                        width: calc(60vw);
+                    }
                 }
-
-                &__text,
-                &__sub-text {
-                    margin: 3% 0 0 0;
-                }
-
+    
                 &__text {
-                    margin-top: 8%;
-                }
-
-                &__sub-text {
-                    margin-top: 50px;
-                }
-            }
-
-            div[class*=box] {
-                height: 33.33%;
-                width: 100%; 
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: var(--background);
-            }
-            .subscribe-button {
-                line-height: 50px;
-                height: 50px;
-                width: 100%;
-                margin: 2% 15% 0% 52.4%;
-                cursor: pointer;
-                border-radius:15px;
-                border: none;
-                position: relative;
-                text-align: center;
-                text-transform: uppercase;
-                font-size: 16px;
-                color: var(--text-color);
-                background-color: var(--background);//adjust between two modes
-                transition: all 0.3s;
-
-                /*Small devices (smartphone, 200px to 775px)*/
-                @media only screen and (min-width: 200px) and (max-width: 775px) {
-                    width: 65%;
-                    height:100%;
-                    padding:4%;
-                    margin: 40px 0 0 0;
+                    font-size: 20px;
                     text-align: center;
+                    font-weight: bold;
+                    padding-bottom: 5%;
                 }
-
-                /* Medium-large devices (laptops and desktops, 775px and up) */
-                @media only screen and (min-width: 775px) {
-                    width: 35%;
-                    height:100%;
+    
+                &__sub-text {
+                    font-size: 18px;
+                    text-align: center;
+                    font-weight: medium;
+                    padding-bottom: 1.5%;
                 }
-                & span{
-                    transition: all 0.3s;
-                }
-                &:before {
-                    content: "";
-                    position: absolute;
-                    bottom:0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: 1;
-                    opacity: 0;
-                    transition: all 0.3s;
-                    border-top-width: 1px;
-                    border-bottom-width: 1px;
-                    border-top-style: solid;
-                    border-bottom-style: solid;
-                    border-top-color: rgba(255,255,255,0.5); /*white bar*/
-                    border-bottom-color: rgba(255,255,255,0.5); /*white bar*/
-                    transform: scale(0.1, 1);
-                }
-                
-                &:hover span {
-                    letter-spacing: 2px;
-                }
-                
-                &:hover::before {
-                    opacity: 1; 
-                    transform: scale(1, 1);
-                    
-                }
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    transition: all 0.3s;
-                    z-index: 1;
+    
+                div[class*=box] {
+                    height: 33.33%;
+                    width: 100%; 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     background-color: var(--background);
                 }
-                &:hover::after {
-                    opacity: 0; 
-                    transform: scale(0.1, 1);
-                }
-            }
-
-            //Changes z-index of image, texts, and subscribe button so they're on top of the HackMerced Tower
-            &__img,
-            &__text,
-            &__sub-text,
-            .subscribe-button {
-                @media (max-width: 1030px) {
+                .subscribe-button {
+                    line-height: 50px;
+                    height: 50px;
+                    width: 100%;
+                    cursor: pointer;
+                    border-radius:15px;
+                    border: none;
                     position: relative;
-                    z-index: 1;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    color: var(--text-color);
+                    background-color: var(--background);//adjust between two modes
+                    transition: all 0.3s;
+    
+                    /*Small devices (smartphone, 200px to 775px)*/
+                    @media only screen and (min-width: 200px) and (max-width: 775px) {
+                        width: 65%;
+                        height:100%;
+                        padding:4%;
+                        margin: 40px 0 0 0;
+                        text-align: center;
+                    }
+    
+                    /* Medium-large devices (laptops and desktops, 775px and up) */
+                    @media only screen and (min-width: 775px) {
+                        width: 35%;
+                        height:100%;
+                    }
+                    & span{
+                        transition: all 0.3s;
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        bottom:0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                        opacity: 0;
+                        transition: all 0.3s;
+                        border-top-width: 1px;
+                        border-bottom-width: 1px;
+                        border-top-style: solid;
+                        border-bottom-style: solid;
+                        border-top-color: rgba(255,255,255,0.5); /*white bar*/
+                        border-bottom-color: rgba(255,255,255,0.5); /*white bar*/
+                        transform: scale(0.1, 1);
+                    }
+                    
+                    &:hover span {
+                        letter-spacing: 2px;
+                    }
+                    
+                    &:hover::before {
+                        opacity: 1; 
+                        transform: scale(1, 1);
+                        
+                    }
+    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        transition: all 0.3s;
+                        z-index: 1;
+                        background-color: var(--background);
+                    }
+                    &:hover::after {
+                        opacity: 0; 
+                        transform: scale(0.1, 1);
+                    }
                 }
-            }
-        }
-        
-        &__tower {
-            display: block;
-            height: 850px;
-            width: 450px;
-            margin: -25% 0% 0% 7%;
-
-            @media (min-height: 800px) {  //Changes the height of the tower
-                height: calc(100vh + 40px);
-            }
-            
-            @media (max-width: 775px) {
-                display: none;
             }
         }
     }

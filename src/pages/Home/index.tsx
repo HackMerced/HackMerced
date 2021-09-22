@@ -96,8 +96,7 @@ const Home: FC = (): JSX.Element => {
         <main className="home">
             <Navbar />
             {/* Landing Section */}
-            <section className="home__heading">
-                {width > 775 ? (
+                {width > 499 ? (
                     <section className="home__heading__wave">
                         <div className="home__heading__wave__cloud c1"></div>
                         <div className="home__heading__wave__cloud c2"></div>
@@ -106,39 +105,40 @@ const Home: FC = (): JSX.Element => {
                         <div className="home__heading__wave__cloud c5"></div>
                     </section>
                 ) : null}
-                <section className="home__heading__title">
-                    <picture>
-                        <img srcSet={HACKMERCED_TITLE_WEBP}
-                            src={HACKMERCED_TITLE}
-                            width="400"
-                            height="175"
-                            alt="HackMerced Title"
-                            className="home__heading__title__img"
-                        />
-                    </picture>
-                    <div className="home__heading__title__text">The biggest San Joaquin Valley hackathon.</div>
-                    <div className="home__heading__title__sub-text">
-                        Stay updated with HackMerced and subscribe to our email list!
+
+            <section className="home__heading">
+                <section className="home__heading__content">
+
+                    <div className="home__heading__content__tower">
+                        <picture>
+                            <img srcSet={HACKMERCED_TOWER_WEBP} src={HACKMERCED_TOWER}
+                                className="home__heading__content__tower__image"
+                                alt="HackMerced Tower"
+                            /> 
+                        </picture>
                     </div>
-                    <button
-                        className="subscribe-button"
-                        onClick={() => {
-                            window.location.href = "https://hackmercedvi.typeform.com/to/GLB4v3b3";
-                        }}
-                    >
+                    <div className="home__heading__content__title">
+                        <picture>
+                            <img srcSet={HACKMERCED_TITLE_WEBP} src={HACKMERCED_TITLE}
+                                className="home__heading__content__title__img"
+                                alt="HackMerced Title"
+                            />
+                        </picture>
+                        <div className="home__heading__content__title__text">The biggest San Joaquin Valley hackathon.</div>
+                        <div className="home__heading__content__title__sub-text">Stay updated with HackMerced and subscribe to our email list!</div>
+                        <button
+                            className="subscribe-button"
+                            onClick={() => {
+                                window.location.href = "https://hackmercedvi.typeform.com/to/GLB4v3b3";
+                            }}
+                        >
                         <span> Register to be part of HackMerced Team</span>
-                    </button>
+                        </button>
+                    </div>
+
                 </section>
-                {width > 775 ? (
-                    <picture>
-                        <img srcSet={HACKMERCED_TOWER_WEBP} src={HACKMERCED_TOWER}
-                            className="home__heading__tower"
-                            alt="HackMerced Tower"
-                            width="525"
-                            height="1005" />
-                    </picture>
-                ) : null}
             </section>
+
             {/* About Us */}
             <section className="home__about-us">
                 {generateSectionHeading("About Us")}
