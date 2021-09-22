@@ -25,6 +25,8 @@
             overflow: hidden;
             position: absolute;
             width: 100%;
+            pointer-events: none;
+
 
             &__cloud {
                 background: var(--cloud-bg);
@@ -168,12 +170,16 @@
 
             &__title {
                 margin: auto auto auto auto;
-                padding-bottom: 8%;
+                padding-bottom: 40%;
                 text-align: center;
 
+                @media only screen and (max-width: 910px) {
+                    padding-bottom: 20%;
+                }
+
                 &__img {
-                    width: calc(35vw);
-                    padding-bottom: 1.5%;
+                    width: calc(30vw);
+                    padding-bottom: 5%;
 
                     @media only screen and (max-width: 910px) {
                         width: calc(60vw);
@@ -184,99 +190,43 @@
                     font-size: 20px;
                     text-align: center;
                     font-weight: bold;
-                    padding-bottom: 5%;
+                    padding-bottom: 6%;
                 }
     
                 &__sub-text {
                     font-size: 18px;
                     text-align: center;
                     font-weight: medium;
-                    padding-bottom: 1.5%;
+                    padding-bottom: 3%;
                 }
-    
-                div[class*=box] {
-                    height: 33.33%;
-                    width: 100%; 
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: var(--background);
-                }
-                .subscribe-button {
-                    line-height: 50px;
-                    height: 50px;
-                    width: 100%;
-                    cursor: pointer;
-                    border-radius:15px;
-                    border: none;
-                    position: relative;
-                    text-align: center;
-                    text-transform: uppercase;
-                    font-size: 16px;
-                    color: var(--text-color);
-                    background-color: var(--background);//adjust between two modes
-                    transition: all 0.3s;
-    
-                    /*Small devices (smartphone, 200px to 775px)*/
-                    @media only screen and (min-width: 200px) and (max-width: 775px) {
-                        width: 65%;
-                        height:100%;
-                        padding:4%;
-                        margin: 40px 0 0 0;
-                        text-align: center;
+
+                //How the form container looks
+                &__form {
+                    margin: 0 auto;
+
+                    input[type="email"],
+                    select {
+                        display: inline-block;
+                        font-family: "Papyrus";
+                        font-size: 15px;
+                        padding: 0.78% 1% 0.7% 1%;
+                        margin-right: 2%;
+                        color: black;
+                        text-align: left;
+                        cursor: pointer;
                     }
-    
-                    /* Medium-large devices (laptops and desktops, 775px and up) */
-                    @media only screen and (min-width: 775px) {
-                        width: 35%;
-                        height:100%;
+                    button[type="submit"] {
+                        display: inline-block;
+                        font-family: "Papyrus";
+                        font-size: 15px;
+                        padding: 1% 2% 1% 2%;
+                        background-color: #4CAF50;
+                        color: white;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
                     }
-                    & span{
-                        transition: all 0.3s;
-                    }
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        bottom:0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        z-index: 1;
-                        opacity: 0;
-                        transition: all 0.3s;
-                        border-top-width: 1px;
-                        border-bottom-width: 1px;
-                        border-top-style: solid;
-                        border-bottom-style: solid;
-                        border-top-color: rgba(255,255,255,0.5); /*white bar*/
-                        border-bottom-color: rgba(255,255,255,0.5); /*white bar*/
-                        transform: scale(0.1, 1);
-                    }
-                    
-                    &:hover span {
-                        letter-spacing: 2px;
-                    }
-                    
-                    &:hover::before {
-                        opacity: 1; 
-                        transform: scale(1, 1);
-                        
-                    }
-    
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        transition: all 0.3s;
-                        z-index: 1;
-                        background-color: var(--background);
-                    }
-                    &:hover::after {
-                        opacity: 0; 
-                        transform: scale(0.1, 1);
-                    }
-                }
+                } 
             }
         }
     }
