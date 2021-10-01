@@ -5,11 +5,10 @@ body {
     overflow: none;
     margin: 0;
     padding: 0;
-    
 }
 
 body {
-    font-family: "Montserrat", sans-serif; 
+    font-family: "Montserrat", sans-serif;
     color: white;
 }
 
@@ -21,7 +20,34 @@ button:focus {
 a {
     text-decoration: none !important;
 
-    &, &:visited, &:hover, &:active {
+    &,
+    &:visited,
+    &:hover,
+    &:active {
         color: inherit;
-      }
+    }
+}
+
+// for firefox
+::-moz-selection {
+    color: white;
+    background: #f3c583;
+}
+
+::selection {
+    color: white;
+    background: #f3c583;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px orangered;
+}
+
+::-webkit-scrollbar-thumb {
+    background: orange;
+    border-radius: 10px;
 }
