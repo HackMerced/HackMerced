@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import DarkModeToggle from "react-dark-mode-toggle";
 
 import MLH_BANNER from "../../assets/images/mlh-badge.svg";
+import CLOSE_ICON from "../../assets/images/close-icon.svg";
 import "./styles.scss";
 
 const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string; showBanner?: boolean }> = ({
@@ -61,17 +62,26 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
             <Menu.Wrapper>
                 <Menu.Logo>
                     {showBanner ? (
-                        <img className="MLH" src={MLH_BANNER} width="100" height="175" alt="MLH BANNER" />
+                        <a href="https://mlh.io/seasons/2021/events" target="_blank"><img className="MLH" src={MLH_BANNER} width="100" height="175" alt="MLH BANNER" /></a>
                     ) : (
                         <div className="hm-text">HackMerced</div>
                     )}
                 </Menu.Logo>
 
-                <HamburgerButton.Wrapper onClick={() => toggleDrawer(true)}>
+                <HamburgerButton.Wrapper onClick={() => toggleDrawer(true)} style={{ marginRight: "1rem" }}>
                     <HamburgerButton.Lines breakLineColor={breakLineColor} />
                 </HamburgerButton.Wrapper>
 
                 <Menu.Items ref={drawerRef} {...NavbarItemsProps} style={{ backgroundColor }}>
+                    <Menu.Item style={{ marginLeft: "auto", marginRight: "-.5em" }}>
+                        <HamburgerButton.Wrapper onClick={() => toggleDrawer(false)}>
+                            <img src={CLOSE_ICON} height="40" width="40" />
+                        </HamburgerButton.Wrapper>
+                    </Menu.Item>
+                    <Menu.Item>
+                        <Link to="/learn-day">Learn Day</Link>
+                        {pathname === "/learn-day" ? BreakLine() : null}
+                    </Menu.Item>
                     <Menu.Item>
                         <Link to="/">Home</Link>
                         {pathname === "/" ? BreakLine() : null}
@@ -109,15 +119,17 @@ const Styles = {
 
       @media only screen and (max-width: 40em) {
           height: ${(): string => {
-              const { pathname } = useLocation();
-              return pathname !== "/" ? "13vw" : "auto";
-          }};
+            const { pathname } = useLocation();
+            return pathname !== "/" ? "13vw" : "auto";
+        }};
+      }
 
       @media only screen and (max-height: 400px) {
           height: ${(): string => {
-              const { pathname } = useLocation();
-              return pathname !== "/" ? "9vw" : "auto";
-          }};
+            const { pathname } = useLocation();
+            return pathname !== "/" ? "9vw" : "auto";
+        }};
+      }
   `,
 };
 
@@ -199,8 +211,7 @@ const HamburgerButton = {
         }
 
         @media only screen and (max-width: 910px) {
-            display: block;
-            margin-right: 1rem;
+            display: block;   
         }
     `,
     Lines: styled.div`
