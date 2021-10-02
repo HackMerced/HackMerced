@@ -62,7 +62,9 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
             <Menu.Wrapper>
                 <Menu.Logo>
                     {showBanner ? (
-                        <a href="https://mlh.io/seasons/2021/events" target="_blank"><img className="MLH" src={MLH_BANNER} width="100" height="175" alt="MLH BANNER" /></a>
+                        <a href="https://mlh.io/seasons/2021/events" rel="noopener noreferrer" target="_blank">
+                            <img className="MLH" src={MLH_BANNER} width="100" height="175" alt="MLH BANNER" />
+                        </a>
                     ) : (
                         <div className="hm-text">HackMerced</div>
                     )}
@@ -79,13 +81,13 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                         </HamburgerButton.Wrapper>
                     </Menu.Item>
                     <Menu.Item>
-                        <Link to="/learn-day">Learn Day</Link>
-                        {pathname === "/learn-day" ? BreakLine() : null}
-                    </Menu.Item>
-                    <Menu.Item>
                         <Link to="/">Home</Link>
                         {pathname === "/" ? BreakLine() : null}
                     </Menu.Item>
+                    {/* <Menu.Item>
+                        <Link to="/learn-day">Learn Day</Link>
+                        {pathname === "/learn-day" ? BreakLine() : null}
+                    </Menu.Item> */}
                     <Menu.Item>
                         <Link to="/past-hackathons">Past Hackathons</Link>
                         {pathname === "/past-hackathons" ? BreakLine() : null}
@@ -100,7 +102,12 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                     </Menu.Item>
                     <Menu.Item>
                         <div className="nav-toggle-switch">
-                            <DarkModeToggle className="dark-mode-toggle" onChange={themeSwitcher} checked={isDarkMode} size={80} />
+                            <DarkModeToggle
+                                className="dark-mode-toggle"
+                                onChange={themeSwitcher}
+                                checked={isDarkMode}
+                                size={80}
+                            />
                         </div>
                     </Menu.Item>
                 </Menu.Items>
@@ -111,26 +118,26 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
 
 const Styles = {
     Wrapper: styled.header`
-      display: flex;
-      background-color: var(--orange);
-      height: auto;
-      color: white;
-      max-height: 80px;
+        display: flex;
+        background-color: var(--orange);
+        height: auto;
+        color: white;
+        max-height: 80px;
 
-      @media only screen and (max-width: 40em) {
-          height: ${(): string => {
-            const { pathname } = useLocation();
-            return pathname !== "/" ? "13vw" : "auto";
-        }};
-      }
+        @media only screen and (max-width: 40em) {
+            height: ${(): string => {
+                const { pathname } = useLocation();
+                return pathname !== "/" ? "13vw" : "auto";
+            }};
+        }
 
-      @media only screen and (max-height: 400px) {
-          height: ${(): string => {
-            const { pathname } = useLocation();
-            return pathname !== "/" ? "9vw" : "auto";
-        }};
-      }
-  `,
+        @media only screen and (max-height: 400px) {
+            height: ${(): string => {
+                const { pathname } = useLocation();
+                return pathname !== "/" ? "9vw" : "auto";
+            }};
+        }
+    `,
 };
 
 const Menu = {
@@ -169,7 +176,10 @@ const Menu = {
             padding: 0 2rem 1rem 2rem;
             margin-top: 0;
             transition: 0.2s ease-out;
-            background-color: ${() => (document.documentElement.getAttribute("data-theme") === "dark" ? "rgb(255, 177, 129)" : "rgb(184, 61, 24)")};
+            background-color: ${() =>
+                document.documentElement.getAttribute("data-theme") === "dark"
+                    ? "rgb(255, 177, 129)"
+                    : "rgb(184, 61, 24)"};
             z-index: 101;
             transform: ${({ openDrawer }: { openDrawer: any }) => (openDrawer ? `translateX(0)` : `translateX(100%)`)};
         }
@@ -186,7 +196,7 @@ const Menu = {
 
         @media only screen and (max-width: 910px) {
             padding: 1rem 0;
-            margin: 0 auto 0 0;  //Padding on inside-right of li, so breakline is the same width
+            margin: 0 auto 0 0; //Padding on inside-right of li, so breakline is the same width
         }
     `,
 };
@@ -211,7 +221,7 @@ const HamburgerButton = {
         }
 
         @media only screen and (max-width: 910px) {
-            display: block;   
+            display: block;
         }
     `,
     Lines: styled.div`
