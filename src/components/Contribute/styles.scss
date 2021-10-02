@@ -32,13 +32,12 @@
         }
     }
 
-    /* Hover Effect: https://dev.to/webdeasy/top-20-css-buttons-animations-f41 */
+   
     .grid-item:hover {
-        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-        background-size: 400%;
-        animation: glowing 20s linear infinite;
-        transition: opacity .3s ease-in-out;
+        // use this animation https://codepen.io/joshuahathaway/pen/LEWgoE
     }
+
+
     @keyframes glowing {
         0% { background-position: 0 0; }
         50% { background-position: 400% 0; }
