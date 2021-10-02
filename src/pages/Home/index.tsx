@@ -1,5 +1,5 @@
-import React, { FC, Fragment, useState } from "react";
-import Axios, { AxiosResponse } from "axios";
+import React, { FC, Fragment } from "react";
+// import Axios, { AxiosResponse } from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
@@ -52,9 +52,7 @@ const generateTeamPics = (team: Array<TeamProps>): JSX.Element => {
                         alt={`${member.firstName} ${member.lastName}`}
                     />
 
-                    <div className="home__team-pictures__grid__items__item__hexagon__text">
-                        {member.desc}
-                    </div>
+                    <div className="home__team-pictures__grid__items__item__hexagon__text">{member.desc}</div>
                 </picture>
             </a>
         </li>
@@ -69,7 +67,7 @@ const generateWinners = (winners: Array<WinnersProps>): JSX.Element => {
         <li key={index} className="home__past-winners__list__past-winner">
             <a href={winner.project} target="_blank" rel="noopener noreferrer">
                 <div>
-                    < FontAwesomeIcon icon={winner.icon} className="fa home__past-winners__list__past-winner__icon" />
+                    <FontAwesomeIcon icon={winner.icon} className="fa home__past-winners__list__past-winner__icon" />
                     <h5 className="home__past-winners__list__past-winner__category">{winner.category}</h5>
                     <div className="home__past-winners__list__past-winner__group">{winner.group}</div>
                 </div>
@@ -92,22 +90,22 @@ const generateSectionHeading = (title: string): JSX.Element => {
 
 const Home: FC = (): JSX.Element => {
     const { width } = useWindowDimensions();
-    const [form, setForm] = useState<{ email: string }>({ email: "" });
+    // const [form, setForm] = useState<{ email: string }>({ email: "" });
 
-    // Handles Change on the fields of the form
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        const { name, value } = event.target;
-        setForm({ ...form, [name]: value });
-    };
+    // // Handles Change on the fields of the form
+    // const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    //     const { name, value } = event.target;
+    //     setForm({ ...form, [name]: value });
+    // };
 
-    // Handles the submission action when the submit button is pressed
-    const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
-        event.preventDefault();
-        Axios.post(
-            `https://hackmerced-tomoe.herokuapp.com/v1/auth/login-resetpassword`,
-            form,
-        ).then((response: AxiosResponse) => console.log(response));
-    };
+    // // Handles the submission action when the submit button is pressed
+    // const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
+    //     event.preventDefault();
+    //     Axios.post(
+    //         `https://hackmerced-tomoe.herokuapp.com/v1/auth/login-resetpassword`,
+    //         form,
+    //     ).then((response: AxiosResponse) => console.log(response));
+    // };
 
     return (
         <main className="home">
@@ -124,26 +122,33 @@ const Home: FC = (): JSX.Element => {
                     </section>
                 ) : null}
                 <section className="home__heading__content">
-
                     <div className="home__heading__content__tower">
                         <picture>
-                            <img srcSet={HACKMERCED_TOWER_WEBP} src={HACKMERCED_TOWER}
+                            <img
+                                srcSet={HACKMERCED_TOWER_WEBP}
+                                src={HACKMERCED_TOWER}
                                 className="home__heading__content__tower__image"
                                 alt="HackMerced Tower"
-                            /> 
+                            />
                         </picture>
                     </div>
                     <div className="home__heading__content__title">
                         <picture>
-                            <img srcSet={HACKMERCED_TITLE_WEBP} src={HACKMERCED_TITLE}
+                            <img
+                                srcSet={HACKMERCED_TITLE_WEBP}
+                                src={HACKMERCED_TITLE}
                                 className="home__heading__content__title__img"
                                 alt="HackMerced Title"
                             />
                         </picture>
-                        <div className="home__heading__content__title__text">The biggest San Joaquin Valley hackathon.</div>
-                        <div className="home__heading__content__title__sub-text">Stay updated with HackMerced and subscribe to our email list!</div>
+                        <div className="home__heading__content__title__text">
+                            The biggest San Joaquin Valley hackathon.
+                        </div>
+                        <div className="home__heading__content__title__sub-text">
+                            Stay updated with HackMerced and subscribe to our email list!
+                        </div>
 
-                        <form className="home__heading__content__title__form" onSubmit={handleSubmit}>
+                        {/* <form className="home__heading__content__title__form" onSubmit={handleSubmit}>
                             <input
                                 className="home__heading__content__title__form_input"
                                 type="email"
@@ -153,9 +158,8 @@ const Home: FC = (): JSX.Element => {
                                 required
                             />
                             <button type="submit">Submit</button>
-                        </form>
+                        </form> */}
                     </div>
-
                 </section>
             </section>
 
@@ -169,14 +173,17 @@ const Home: FC = (): JSX.Element => {
                         participants will collaborate in teams and attend workshops to learn about new technologies.
                         <br />
                         <br />
-                        We aim to create a collaborative, interdisciplinary event that brings together students from
-                        all universities and prospective sponsors to see the innovation and creativity culminating
-                        within the San Joaquin Valley.
+                        We aim to create a collaborative, interdisciplinary event that brings together students from all
+                        universities and prospective sponsors to see the innovation and creativity culminating within
+                        the San Joaquin Valley.
                     </p>
                     <picture>
-                        <img className="home__about-us__content__teampic"
-                        srcSet={TEAM_PICTURE_WEBP} src={TEAM_PICTURE} 
-                        alt="HackMerced Team" />
+                        <img
+                            className="home__about-us__content__teampic"
+                            srcSet={TEAM_PICTURE_WEBP}
+                            src={TEAM_PICTURE}
+                            alt="HackMerced Team"
+                        />
                     </picture>
                 </section>
             </section>
