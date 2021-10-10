@@ -44,10 +44,10 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px orangered;
+    box-shadow: inset 0 0 5px black;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: orange;
+    background: var(--orange);
     border-radius: 10px;
 }
