@@ -1,4 +1,3 @@
-
 //WEBP IMAGES
 import TRUMAN_WEBP from "./images/truman.webp";
 import MARY_WEBP from "./images/mary.webp";
@@ -47,7 +46,6 @@ import ERICK from "./images/erick.png";
 import FRANCISCO from "./images/francisco.png";
 import KIANA from "./images/kiana.png";
 import SHAKTI from "./images/shakti.jpg";
-
 
 const team = [
     {
