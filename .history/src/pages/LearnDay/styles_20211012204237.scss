@@ -1,0 +1,21 @@
+.grid-container {
+
+    .texts {
+    }
+    .images {
+    }
+    .title {
+        margin: auto auto auto auto;
+    }
+}
+<form className="form" /*onSubmit={handleSubmit}*/>
+                        <input
+                            className="form_input"
+                            type="email"
+                            placeholder="Email"
+                            name="email"
+                            /* nChange={handleInputChange}*/
+                            required
+                        />
+                        <button type="submit">Submit</button>
+                    </form>

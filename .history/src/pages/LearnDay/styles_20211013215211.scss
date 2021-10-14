@@ -1,0 +1,58 @@
+.grid-container {
+    background-color: var(--background);
+    .texts {
+        //margin: auto auto auto auto;
+        margin: 15% 5% 5%;
+        .title {
+            font-size: 24pt;
+        }
+        .h2 {
+            font-size: 14pt;
+        }
+        .h3 {
+            width: 45%;
+            border: 1px;
+            word-wrap: break-word;
+            font-size: 12pt;
+        }
+        .ld_button {
+            position: relative;
+            margin:
+            line-height: normal;
+            max-width: 250px;
+            text-transform: uppercase;
+            font-size: 16px;
+            color: var(--text-color);
+            border-radius: 8px;
+            transition: 0.4s ease 0s;
+            text-align: center;
+            display: inline-block;
+            padding: 20px;
+            border: 4px solid var(--background);
+            background-color: var(--background);
+            cursor: pointer;
+
+            &:hover {
+                color: var(--text-color);
+                border-radius: 50px;
+                border: 4px solid #d8dbda;
+                background-color: var(--background);
+                transition: all 0.4s ease 0s;
+            }
+            /* Small devices (200px and up) */
+            @media only screen and (min-width: 200px) and (max-width: 775px) {
+                width: 60%;
+                padding: 4%;
+                margin: 10% 40% 40% 10%;
+                text-align: center;
+            }
+
+            /* Medium-large devices (laptops and desktops, 775px and up) */
+            @media only screen and (min-width: 775px) {
+                width: 20%;
+            }
+        }
+    }
+    .images {
+    }
+}
