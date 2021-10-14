@@ -11,7 +11,7 @@
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -22,7 +22,7 @@
     width: 6px;
     background-color: black;
     top: 15px;
-    bottom: 133px;
+    bottom: 100px;
     left: 50%;
     margin-left: -3px;
 }
@@ -41,7 +41,7 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    right: 65px;
+    right: 100px;
     background-color: black;
     border: 4px solid black;
     top: 15px;
@@ -51,7 +51,7 @@
 
 /* Place the container to the left */
 .left {
-    left: -5px;
+    right: -30px;
 }
 
 /* Place the container to the right */
@@ -61,7 +61,7 @@
 
 /* Fix the circle for containers on the right side */
 .right::after {
-    left: 12px;
+    left: 7px;
 }
 
 /* The actual content */
@@ -84,6 +84,98 @@ span {
     color: black;
 }
 
+/*Popups for left containers*/
+.lightChallenge::before,
+.lightChallenge::after,
+.design::before,
+.design::after,
+.charades::before,
+.charades::after,
+.marble::before,
+.marble::after,
+.acm::before,
+.acm::after,
+.interview::before,
+.interview::after,
+.chalk::before,
+.chalk::after,
+.typing::before,
+.typing::after {
+    --scale: 0;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    transform: translateX(-100%) scale(var(--scale));
+    transition: 50ms transform;
+}
+
+.lightChallenge::before,
+.design::before,
+.charades::before,
+.marble::before,
+.acm::before,
+.interview::before,
+.chalk::before,
+.typing::before {
+    content: attr(data-tip);
+    background-color: orange;
+    padding: 0.5rem;
+    border-style: solid;
+    width: max-content;
+    max-width: 45%;
+}
+
+.lightChallenge:hover::before,
+.design:hover::before,
+.charades:hover::before,
+.marble:hover::before,
+.acm:hover::before,
+.interview:hover::before,
+.chalk:hover::before,
+.typing:hover::before {
+    --scale: 1;
+}
+
+/*Popups for right containers*/
+.opening::before,
+.opening::after,
+.github::before,
+.github::after,
+.games::before,
+.games::after,
+.notion::before,
+.notion::after,
+.gartic::before,
+.gartic::after {
+    --scale: 0;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: scale(var(--scale));
+    transition: 50ms transform;
+}
+
+.opening::after,
+.github::after,
+.games::after,
+.notion::after,
+.gartic::after {
+    content: attr(data-tip);
+    background-color: orange;
+    padding: 0.5rem;
+    border-style: solid;
+    width: max-content;
+    max-width: 45%;
+}
+
+.opening:hover::after,
+.github:hover::after,
+.games:hover::after,
+.notion:hover::after,
+.gartic:hover::after {
+    --scale: 1;
+}
+
 @media screen and (max-width: 1024px) {
     /*Fix the position of left containers*/
     .left {
@@ -97,12 +189,12 @@ span {
 
     /*Fix the circles for right containers*/
     .right::after {
-        left: 8px;
+        left: 5px;
     }
 
     /*Fix the length of the vertical ruler*/
     .timeline::after {
-        bottom: 150px;
+        bottom: 110px;
     }
 }
 
@@ -113,7 +205,45 @@ span {
     }
 
     .timeline::after {
-        bottom: 190px;
+        bottom: 110px;
+    }
+
+    /*Fixing popups for left containers*/
+    .lightChallenge::before,
+    .lightChallenge::after,
+    .design::before,
+    .design::after,
+    .charades::before,
+    .charades::after,
+    .marble::before,
+    .marble::after,
+    .acm::before,
+    .acm::after,
+    .interview::before,
+    .interview::after,
+    .chalk::before,
+    .chalk::after,
+    .typing::before,
+    .typing::after {
+        --scale: 0;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        transform: translateX(100%) scale(var(--scale));
+        transition: 50ms transform;
+    }
+
+    .opening:hover::after {
+        left: 33%;
+    }
+
+    .games:hover::after {
+        left: 33%;
+    }
+
+    .gartic:hover::after {
+        left: 33%;
+        max-width: 59%;
     }
 }
 
@@ -150,7 +280,7 @@ span {
     /* Fix the length of the vertical ruler */
     .timeline::after {
         left: 31px;
-        bottom: 150px;
+        bottom: 110px;
     }
 
     /*Fix the space for the left conatiners*/
@@ -168,7 +298,7 @@ span {
     /* Fix the length of the vertical ruler */
     .timeline::after {
         left: 31px;
-        bottom: 190px;
+        bottom: 110px;
     }
 
     /*Fix the space for the left conatiners*/
@@ -179,6 +309,40 @@ span {
     /*Fix the position of the circles for left containers*/
     .left::after {
         left: 20px;
+    }
+
+    /*Fix popups and align the right and left ones on same side(right)*/
+    .lightChallenge::before,
+    .lightChallenge::after,
+    .design::before,
+    .design::after,
+    .charades::before,
+    .charades::after,
+    .marble::before,
+    .marble::after,
+    .acm::before,
+    .acm::after,
+    .interview::before,
+    .interview::after,
+    .chalk::before,
+    .chalk::after,
+    .typing::before,
+    .typing::after {
+        left: 10%;
+    }
+
+    .opening::before,
+    .opening::after,
+    .github::before,
+    .github::after,
+    .games::before,
+    .games::after,
+    .notion::before,
+    .notion::after,
+    .gartic::before,
+    .gartic::after {
+        top: -30px;
+        left: 42%;
     }
 }
 
@@ -186,7 +350,7 @@ span {
     /* Fix the length of the vertical ruler */
     .timeline::after {
         left: 31px;
-        bottom: 210px;
+        bottom: 110px;
     }
 
     /*Fix the space for the left conatiners*/
@@ -198,12 +362,93 @@ span {
     .left::after {
         left: 20px;
     }
+
+    /*Fix popups and align the right and left ones on same side(right)*/
+    .lightChallenge::before,
+    .lightChallenge::after,
+    .design::before,
+    .design::after,
+    .charades::before,
+    .charades::after,
+    .marble::before,
+    .marble::after,
+    .acm::before,
+    .acm::after,
+    .interview::before,
+    .interview::after,
+    .chalk::before,
+    .chalk::after,
+    .typing::before,
+    .typing::after {
+        left: 10%;
+    }
+
+    .opening::before,
+    .opening::after,
+    .github::before,
+    .github::after,
+    .games::before,
+    .games::after,
+    .notion::before,
+    .notion::after,
+    .gartic::before,
+    .gartic::after {
+        top: -30px;
+        left: 40%;
+    }
+
+    .opening::after,
+    .github::after,
+    .games::after,
+    .notion::after,
+    .gartic::after {
+        content: attr(data-tip);
+        background-color: orange;
+        border-style: solid;
+        width: max-content;
+        min-width: 20%;
+    }
+
+    .gartic:hover::after {
+        left: 33%;
+        max-width: 59%;
+    }
 }
 
 @media screen and (max-width: 280px) {
     /* Fix the length of the vertical ruler */
     .timeline::after {
         left: 31px;
-        bottom: 250px;
+        bottom: 110px;
+    }
+
+    /*Fixing popups for left containers*/
+    .lightChallenge::before,
+    .lightChallenge::after,
+    .design::before,
+    .design::after,
+    .charades::before,
+    .charades::after,
+    .marble::before,
+    .marble::after,
+    .acm::before,
+    .acm::after,
+    .interview::before,
+    .interview::after,
+    .chalk::before,
+    .chalk::after,
+    .typing::before,
+    .typing::after {
+        --scale: 0;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        transform: translateX(50%) scale(var(--scale));
+        transition: 50ms transform;
+    }
+
+    .gartic:hover::after {
+        left: 20%;
+        max-width: 70%;
     }
 }
