@@ -1,11 +1,8 @@
 .grid-container {
     background-color: var(--background);
-    grid-template-columns: 60% 40%;
-    grid-template-rows: auto;
-    margin: 0 auto;
-    height: calc(100vh);
-    display: grid;
     .texts {
+        //margin: auto auto auto auto;
+        //margin: 15% 5% 5%;
         .title {
             font-size: 24pt;
             /* Small devices (200px and up) */
@@ -19,6 +16,7 @@
             /* Medium-large devices (laptops and desktops, 775px and up) */
             @media only screen and (min-width: 775px) {
                 width: 20%;
+                //margin: 15% 25% 15% 15%;
                 margin: 15% 5% 5% 8%;
             }
         }
@@ -69,14 +67,14 @@
             text-align: center;
             display: inline-block;
             padding: 20px;
-            border: 4px solid var(--text-color);
+            border: 4px solid var(--text-color); //contrast from background
             background-color: var(--background);
             cursor: pointer;
 
             &:hover {
                 color: var(--text-color);
                 border-radius: 50px;
-                border: 4px solid var(--text-color);
+                border: 4px solid var(--text-color); //contrast from background
                 background-color: var(--background);
                 transition: all 0.4s ease 0s;
             }
@@ -84,22 +82,19 @@
             @media only screen and (min-width: 200px) and (max-width: 775px) {
                 width: 60%;
                 padding: 4%;
-                margin: 5% 30% 0% 20%;
+                //margin: 5% 50% 0% 32%;
+                margin: 5% 40% 0% 10%;
                 text-align: center;
             }
 
             /* Medium-large devices (laptops and desktops, 775px and up) */
             @media only screen and (min-width: 775px) {
                 width: 20%;
+                //margin: 15% 25% 15% 15%;
                 margin: 0% 25%;
             }
         }
     }
     .images {
-    }
-    @media only screen and (max-width: 775px) {
-        //merge grid-container into one column with two rows
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
     }
 }
