@@ -1,11 +1,8 @@
-.heading {
-    color: orangered;
-    position: relative;
-}
-
 .heading-text {
-    position: relative;
-    padding-left: 10vw;
+    font-family: Inter;
+    font-weight: 500;
+    color: #ff6b6c;
+    padding-left: 15vw;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -73,10 +70,17 @@
 }
 
 .title {
-    border-radius: 15px;
-    padding: 5px;
-    font-weight: bold;
-    background-color: orange;
+    border-radius: 20px;
+    padding: 6px;
+    font-family: Inter;
+    font-weight: 700;
+    background-color: #ffc145;
+}
+
+p {
+    font-family: Quicksand;
+    font-size: 18px;
+    line-height: 22.5px;
 }
 
 p,
@@ -177,6 +181,11 @@ span {
 }
 
 @media screen and (max-width: 1024px) {
+    /*Fix padding of heading*/
+    .heading-text {
+        padding-left: 10vw;
+    }
+
     /*Fix the position of left containers*/
     .left {
         left: -15px;
