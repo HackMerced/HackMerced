@@ -2,6 +2,7 @@ import React, { FC } from "react";
 
 import Accordian from "../../components/Accordian";
 import { FAQData } from "../../assets/faq";
+import "./styles.scss";
 
 const LearnDay: FC = (): JSX.Element => {
     return (

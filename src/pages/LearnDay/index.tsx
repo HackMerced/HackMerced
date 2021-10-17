@@ -9,8 +9,6 @@ const LearnDay: FC = (): JSX.Element => {
     return (
         <main className="LearnDay">
             <Navbar />
-            // Title component
-            // FAQ component
             <FAQ />
             // Schedule component
         // render Footer component
