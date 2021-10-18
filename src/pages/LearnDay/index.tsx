@@ -20,8 +20,13 @@ const LearnDay: FC = (): JSX.Element => {
                         projects in a workshop event hosted by HackMerced on <strong>November 13, 2021.</strong>
                     </div>
                     <button className="ld_button">Sign Up</button>
-                    <div className="h3">Learn to tackle new skills, explore different realms of technology, and champion exciting projects in a workshop event hosted by HackMerced on <strong>November 13, 2021.</strong></div>
-                    <a target="_blank" href="linkaddress"><button className="ld_button">Sign Up</button></a>
+                    <div className="h3">
+                        Learn to tackle new skills, explore different realms of technology, and champion exciting
+                        projects in a workshop event hosted by HackMerced on <strong>November 13, 2021.</strong>
+                    </div>
+                    <a target="_blank" href="linkaddress">
+                        <button className="ld_button">Sign Up</button>
+                    </a>
                 </div>
                 <div className="images"></div>
             </section>
