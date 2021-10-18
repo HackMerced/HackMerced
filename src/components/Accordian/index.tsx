@@ -40,8 +40,8 @@ const Accordian: FC<AccordianProps> = ({ data }) => {
 
     // Generates each section
     const sections: JSX.Element[] = accordionItems.map((i) => (
-        <div className="accordion__item" key={accordionItems.indexOf(i)}>
-            <div className="accordion__item__title" onClick={click.bind(null, i)}>
+        <div className="accordion__item" onClick={click.bind(null, i)} key={accordionItems.indexOf(i)}>
+            <div className="accordion__item__title">
                 <div className="accordion__item__title__arrow-wrapper">
                     <i className={i.open ? "CLOSE_ARROW" : "OPEN_ARROW"}></i>
                 </div>

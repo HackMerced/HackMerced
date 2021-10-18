@@ -8,7 +8,7 @@ const LearnDay: FC = (): JSX.Element => {
     return (
         <main className="LHDFAQ">
             <section className="LHD__faq">
-                <h2 className="LHD__faq__title">Frequently Asked Questions</h2>
+                <h2 className="heading-text">Frequently Asked Questions</h2>
                 <Accordian data={FAQData} />
             </section>
         </main>
