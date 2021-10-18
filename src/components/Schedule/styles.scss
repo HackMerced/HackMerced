@@ -1,9 +1,34 @@
 .heading-text {
-    font-size: 36px;
     font-family: Inter;
     font-weight: 500;
     color: #ff6b6c;
     padding-left: 15vw;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 25px;
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        font-size: 30px;
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        font-size: 32px;
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        font-size: 36px;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        font-size: 36px;
+    }
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -79,7 +104,6 @@
 }
 
 p {
-    font-family: Quicksand;
     font-size: 18px;
     line-height: 22.5px;
 }
@@ -90,6 +114,7 @@ span {
 }
 
 /*Popups for left containers*/
+.checkin::before,
 .lightChallenge::before,
 .lightChallenge::after,
 .design::before,
@@ -109,11 +134,12 @@ span {
     --scale: 0;
     position: absolute;
     top: -10px;
-    left: 0;
+    left: 0%;
     transform: translateX(-100%) scale(var(--scale));
     transition: 50ms transform;
 }
 
+.checkin::before,
 .lightChallenge::before,
 .design::before,
 .charades::before,
@@ -123,13 +149,16 @@ span {
 .chalk::before,
 .typing::before {
     content: attr(data-tip);
-    background-color: orange;
+    background-color: rgb(250, 211, 137);
     padding: 0.5rem;
     border-style: solid;
     width: max-content;
-    max-width: 45%;
+    max-width: 80%;
+    border-radius: 10px;
+    font-size: 16px;
 }
 
+.checkin:hover::before,
 .lightChallenge:hover::before,
 .design:hover::before,
 .charades:hover::before,
@@ -166,11 +195,13 @@ span {
 .notion::after,
 .gartic::after {
     content: attr(data-tip);
-    background-color: orange;
+    background-color: rgb(250, 211, 137);
     padding: 0.5rem;
-    border-style: solid;
     width: max-content;
-    max-width: 45%;
+    border-style: solid;
+    max-width: 70%;
+    border-radius: 10px;
+    font-size: 16px;
 }
 
 .opening:hover::after,

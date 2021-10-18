@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import DarkModeToggle from "react-dark-mode-toggle";
 
-import MLH_BANNER from "../../assets/images/mlh-badge.svg";
+import MLH_BANNER from "../../assets/images/mlh-trust-badge-2022-white.svg";
 import CLOSE_ICON from "../../assets/images/close-icon.svg";
 import "./styles.scss";
 
