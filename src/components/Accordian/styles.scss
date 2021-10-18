@@ -5,19 +5,22 @@
 
     flex-wrap: wrap;
     justify-content: center;
-    padding-left: 13%;
+    padding-left: 15vw;
     padding-bottom: 15%;
 
+    @media only screen and (max-width: 500px) {
+        padding-left: 0%;
+    }
+
     &__item {
-        margin: 0 20px 30px 20px; //margin around each accordion_item
-        max-width: 64em;
+        max-width: 67vw; 
 
         @media only screen and (max-width: 500px) {
-            min-width: 90%;
+            padding-left: 10vw;
         }
 
         &__title {
-            width: 42.7em;
+            width: 67vw;
             color: #000000;
             text-align: left;
             line-height: 2;
@@ -28,10 +31,12 @@
             z-index: 100;
             transition: all 0.2s ease-in;
             font-size: 24px;
+            padding-bottom:1vw;
 
             @media only screen and (max-width: 500px) {
                 width: 100%;
                 height: 80px;
+                padding-bottom: 5vw;
             }
 
             &:hover {
@@ -56,6 +61,12 @@
                 .OPEN_ARROW {
                     font-size: 24px;
                     content: url("../../assets/images/open-arrow.svg");
+                }
+                @media only screen and (max-width: 500px) {
+                    margin-left: 80vw;
+                }
+                @media only screen and (min-width:600px) and (max-width: 1024px) {
+                    margin-left: 65vw;
                 }
             }
 
@@ -105,8 +116,8 @@
             transition: all 0.2s ease-in;
         }
         .blue-line{
-
             border: 2px solid #5B5F97;
+            
         }
     }
 }
