@@ -47,12 +47,17 @@ const Accordian: FC<AccordianProps> = ({ data }) => {
                 </div>
                 <span className="accordion__item__title__title-text">{i.title}</span>
             </div>
-            <div className={i.open ? "accordion__item__content accordion__item__content-open" : "accordion__item__content"}>
-                <div className={
-                    i.open
-                        ? "accordion__item__content__content-text accordion__item__content__content-text-open"
-                        : "accordion__item__content__content-text"
+            <div
+                className={
+                    i.open ? "accordion__item__content accordion__item__content-open" : "accordion__item__content"
                 }
+            >
+                <div
+                    className={
+                        i.open
+                            ? "accordion__item__content__content-text accordion__item__content__content-text-open"
+                            : "accordion__item__content__content-text"
+                    }
                 >
                     {ReactHtmlParser(i.content)}
                 </div>
