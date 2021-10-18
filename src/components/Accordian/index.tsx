@@ -43,25 +43,21 @@ const Accordian: FC<AccordianProps> = ({ data }) => {
         <div className="accordion__item" key={accordionItems.indexOf(i)}>
             <div className="accordion__item__title" onClick={click.bind(null, i)}>
                 <div className="accordion__item__title__arrow-wrapper">
-                    <i className={i.open ? "fa fa-angle-down fa-rotate-180" : "fa fa-angle-down"}></i>
+                    <i className={i.open ? "CLOSE_ARROW" : "OPEN_ARROW"}></i>
                 </div>
                 <span className="accordion__item__title__title-text">{i.title}</span>
             </div>
-            <div
-                className={
-                    i.open ? "accordion__item__content accordion__item__content-open" : "accordion__item__content"
+            <div className={i.open ? "accordion__item__content accordion__item__content-open" : "accordion__item__content"}>
+                <div className={
+                    i.open
+                        ? "accordion__item__content__content-text accordion__item__content__content-text-open"
+                        : "accordion__item__content__content-text"
                 }
-            >
-                <div
-                    className={
-                        i.open
-                            ? "accordion__item__content__content-text accordion__item__content__content-text-open"
-                            : "accordion__item__content__content-text"
-                    }
                 >
                     {ReactHtmlParser(i.content)}
                 </div>
             </div>
+            <hr className="blue-line"></hr>
         </div>
     ));
 
