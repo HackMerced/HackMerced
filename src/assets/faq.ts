@@ -1,6 +1,6 @@
 export const FAQData = [
     {
-        title: "What is a Learn Day?",
+        title: "What is Learn Day?",
         content:
             "Learn Day is a 6-hour day hybrid event hosted by HackMerced. Students can pick up new skills by participating in workshops and talks with a community around the world. Over the course of 6 hours, attendees will experience a series of workshops where they’ll learn skills such as publishing their first website, creating their own design using Figma, and more. This is an event for all skill levels, from beginners to the most veteran developers. It includes networking, workshops, and mini activities for both online and in-person. Workshop attendees will learn skills that they can apply in their projects, schoolwork, job, and beyond. ",
     },

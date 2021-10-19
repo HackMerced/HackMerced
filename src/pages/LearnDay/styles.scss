@@ -12,13 +12,13 @@
 
         &__texts {
             &__main-text {
-                font-size: 96px;
+                font-size: 70px;
                 color: #5b5f97;
                 font-weight: normal;
                 margin-top: 25vh;
 
                 @media only screen and (max-width: 800px) {
-                    font-size: 70px;
+                    font-size: 60px;
                 }
 
                 @media only screen and (max-width: 600px) {
@@ -27,7 +27,7 @@
             }
 
             &__sub-text {
-                font-size: 36pt;
+                font-size: 30pt;
                 color: #ff6b6c;
 
                 @media only screen and (max-width: 800px) {
@@ -35,7 +35,7 @@
                 }
 
                 @media only screen and (max-width: 600px) {
-                    font-size: 16pt;
+                    font-size: 18pt;
                 }
             }
 
