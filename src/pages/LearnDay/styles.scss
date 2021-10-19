@@ -1,85 +1,86 @@
 .LearnDay {
     font-family: "Inter", sans-serif;
-}
 
-.grid-container {
-    background-color: #fffffb;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: auto;
-    margin: 0 auto;
-    height: calc(100vh);
-    display: grid;
+    &__title {
+        background-color: #fffffb;
+        // background: rgba(50,50,50,1);
+        grid-template-columns: 60% 40%;
+        grid-template-rows: auto;
+        margin: 0 auto;
+        height: calc(100vh);
+        display: grid;
 
-    .texts {
-        .hacktually-title {
-            font-size: 96px;
-            color: #5b5f97;
-            font-weight: regular;
-            margin-top: 25vh;
-        }
+        &__texts {
+            &__main-text {
+                font-size: 96px;
+                color: #5b5f97;
+                font-weight: normal;
+                margin-top: 25vh;
+            }
 
-        .h2 {
-            font-size: 36pt;
-            color: #ff6b6c;
-        }
+            &__sub-text {
+                font-size: 36pt;
+                color: #ff6b6c;
+            }
 
-        .h3 {
-            font-size: 20px;
-            color: black;
-            font-weight: 300;
-            line-height: 30px;
-            margin-bottom: 4%;
-        }
+            &__paragraph {
+                font-size: 20px;
+                color: black;
+                font-weight: 300;
+                line-height: 30px;
+                margin-bottom: 4%;
+            }
 
-        .hacktually-title, .h2, .h3 {
-            padding: 0 0 0 15vw;
-            width: 40%;
-        }
+            &__main-text,
+            &__sub-text,
+            &__paragraph {
+                padding: 0 0 0 15vw;
+                width: 50%;
+            }
 
-        .ld_button {
-            position: absolute;
-            max-width: 155px;
-            line-height: normal;
-            font-size: 18px;
-            color: black;
-            text-transform: uppercase;
-            border-radius: 25px;
-            transition: 0.4s ease 0s;
-            text-align: center;
-            display: inline-block;
-            padding: 20px;
-            border: 4px solid #ffc145;
-            background-color: #ffc145;
-            cursor: pointer;
-
-            // &:hover {//animation
-            //     color: black;
-            //     border-radius: 25px;
-            //     border: 4px solid #ffc145;
-            //     background-color: #ffc145;
-            //     transition: all 0.4s ease 0s;
-            // }
-            /* Small devices (200px and up) */
-            @media only screen and (min-width: 200px) and (max-width: 775px) {
-                width: 60%;
-                padding-top: 4%;
-                // margin: 5% 30% 0% 20%;
-                margin: 0% 30% 0% 30%;
+            .LHD__button {
+                position: absolute;
+                max-width: 155px;
+                line-height: normal;
+                font-size: 18px;
+                color: black;
+                text-transform: uppercase;
+                border-radius: 25px;
+                transition: 0.4s ease 0s;
                 text-align: center;
-            }
+                display: inline-block;
+                padding: 20px;
+                border: 4px solid #ffc145;
+                background-color: #ffc145;
+                cursor: pointer;
 
-            /* Medium-large devices (laptops and desktops, 775px and up) */
-            @media only screen and (min-width: 775px) {
-                width: 20%;
-                margin: 0% 40%;
+                /* Small devices (200px and up) */
+                @media only screen and (min-width: 200px) and (max-width: 775px) {
+                    width: 60%;
+                    padding-top: 4%;
+                    // margin: 5% 30% 0% 20%;
+                    margin: 0% 30% 0% 30%;
+                    text-align: center;
+                }
+
+                /* Medium-large devices (laptops and desktops, 775px and up) */
+                @media only screen and (min-width: 775px) {
+                    width: 20%;
+                    margin: 0% 40%;
+                }
             }
         }
-    }
-    .images {
-    }
-    @media only screen and (max-width: 775px) {
-        //merge grid-container into one column with two rows
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
+
+        @media only screen and (max-width: 775px) {
+            //merge grid-container into one column with two rows
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+        }
+
+        &__honeycomb {
+            background: rgba(255, 255, 251, 0.05);
+            width: 100%;
+            height: 100%;
+        }
     }
 }

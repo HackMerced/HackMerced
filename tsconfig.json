@@ -19,7 +19,8 @@
         "experimentalDecorators": true,
         "noFallthroughCasesInSwitch": true,
         "isolatedModules": true,
-        "noEmit": true
+        "noEmit": true,
+        "noImplicitAny": false
     },
     "include": ["src/**/*"],
     "exclude": ["node_modules", "build"]
