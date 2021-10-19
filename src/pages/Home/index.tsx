@@ -145,9 +145,13 @@ const Home: FC = (): JSX.Element => {
                             The biggest San Joaquin Valley hackathon.
                         </div>
                         <div className="home__heading__content__title__sub-text">
-                            Stay updated with HackMerced and subscribe to our email list!
+                            Join us on our second iteration of Local Learn Day: Hacktually II
                         </div>
-
+                        <a href="https://hackmerced2021.typeform.com/locallearnday">
+                            <button className="home__heading__content__title__event-button">
+                                Sign up to Hacktually II
+                            </button>
+                        </a>
                         {/* <form className="home__heading__content__title__form" onSubmit={handleSubmit}>
                             <input
                                 className="home__heading__content__title__form_input"
