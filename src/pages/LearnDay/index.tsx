@@ -147,7 +147,7 @@ const LearnDay: FC = (): JSX.Element => {
                         target="_blank"
                         href="https://hackmerced2021.typeform.com/locallearnday"
                     >
-                        <button className="LHD__button">Apply Now</button>
+                        <button className="LHD__button">Register</button>
                     </a>
                 </div>
                 {width > 1200 ? <canvas className="LearnDay__title__honeycomb"></canvas> : null}
