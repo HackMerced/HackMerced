@@ -3,11 +3,10 @@
 
     &__title {
         background-color: #fffffb;
-        // background: rgba(50,50,50,1);
         grid-template-columns: 60% 40%;
         grid-template-rows: auto;
         margin: 0 auto;
-        height: calc(100vh);
+        height: calc(85vh);
         display: grid;
 
         &__texts {
@@ -16,6 +15,10 @@
                 color: #5b5f97;
                 font-weight: normal;
                 margin-top: 25vh;
+
+                @media only screen and (max-width: 1700px) {
+                    font-size: 80px;
+                }
 
                 @media only screen and (max-width: 800px) {
                     font-size: 60px;
