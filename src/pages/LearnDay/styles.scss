@@ -1,5 +1,5 @@
-.LearnDay{
-    font-family: 'Inter', sans-serif;
+.LearnDay {
+    font-family: "Inter", sans-serif;
 }
 
 .grid-container {
@@ -9,70 +9,33 @@
     margin: 0 auto;
     height: calc(100vh);
     display: grid;
+
     .texts {
         .hacktually-title {
             font-size: 96px;
             color: #5b5f97;
             font-weight: regular;
-
-            /* Small devices (200px and up) */
-            @media only screen and (min-width: 200px) and (max-width: 775px) {
-                width: 60%;
-                padding-top: 4%;
-                margin: 10% 40% 0% 10%;
-                word-wrap: break-word;
-            }
-
-            /* Medium-large devices (laptops and desktops, 775px and up) */
-            @media only screen and (min-width: 775px) {
-                width: 20%;
-                padding-top: 15%;
-                //padding-bottom: 5%;
-                margin: 0% 5% 0% 10%;
-                white-space: nowrap;
-            }
+            margin-top: 25vh;
         }
+
         .h2 {
             font-size: 36pt;
             color: #ff6b6c;
-            /* Small devices (200px and up) */
-            @media only screen and (min-width: 200px) and (max-width: 775px) {
-                width: 60%;
-                padding: 4%;
-                margin: 5% 40% 0% 10%;
-                text-align: center;
-            }
-
-            /* Medium-large devices (laptops and desktops, 775px and up) */
-            @media only screen and (min-width: 775px) {
-                width: 20%;
-                margin: 0% 5% 0% 10%;
-                white-space: nowrap;
-            }
         }
+
         .h3 {
             font-size: 20px;
             color: black;
             font-weight: 300;
             line-height: 30px;
-
-            /* Small devices (200px and up) */
-            @media only screen and (min-width: 200px) and (max-width: 775px) {
-                width: 60%;
-                padding: 4%;
-                margin: 5% 40% 0% 10%;
-                text-align: center;
-            }
-
-            /* Medium-large devices (laptops and desktops, 775px and up) */
-            @media only screen and (min-width: 775px) {
-                width: 40%;
-                padding-top: 2%;
-                margin: 0% 5% 2% 10%;
-                border: 1px;
-                word-wrap: break-word;
-            }
+            margin-bottom: 4%;
         }
+
+        .hacktually-title, .h2, .h3 {
+            padding: 0 0 0 15vw;
+            width: 40%;
+        }
+
         .ld_button {
             position: absolute;
             max-width: 155px;
