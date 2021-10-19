@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Inter:300,400,700");
 
 .accordion {
-
     flex-wrap: wrap;
     justify-content: center;
     padding-left: 15vw;
@@ -13,7 +12,7 @@
     }
 
     &__item {
-        max-width: 67vw; 
+        max-width: 67vw;
 
         @media only screen and (max-width: 500px) {
             padding-left: 10vw;
@@ -31,7 +30,10 @@
             z-index: 100;
             transition: all 0.2s ease-in;
             font-size: 24px;
-            padding-bottom:1vw;
+            padding-bottom: 1vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
 
             @media only screen and (max-width: 500px) {
                 width: 100%;
@@ -40,18 +42,7 @@
                 font-size: 20px;
             }
 
-            // &:hover {
-            //     cursor: pointer;
-            //     background-color: rgba(0, 0, 0, 0.5);
-            // }
-
-            // &:active {
-            //     background-color: orange;
-            // }
-
             &__arrow-wrapper {
-                position: absolute;
-                margin-left: 42em;
 
                 .CLOSE_ARROW {
                     content: url("../../assets/images/close-arrow.svg");
@@ -62,12 +53,6 @@
                 .OPEN_ARROW {
                     font-size: 24px;
                     content: url("../../assets/images/open-arrow.svg");
-                }
-                @media only screen and (max-width: 500px) {
-                    margin-left: 80vw;
-                }
-                @media only screen and (min-width:600px) and (max-width: 1024px) {
-                    margin-left: 65vw;
                 }
             }
 
@@ -116,10 +101,8 @@
             /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e8684c+68,e04040+100 */
             transition: all 0.2s ease-in;
         }
-        .blue-line{
-            border: 2px solid #5B5F97;
-            
+        .blue-line {
+            border: 2px solid #5b5f97;
         }
     }
 }
-

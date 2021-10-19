@@ -44,10 +44,10 @@ const Accordian: FC<AccordianProps> = ({ data }) => {
     const sections: JSX.Element[] = accordionItems.map((i) => (
         <div className="accordion__item" onClick={click.bind(null, i)} key={accordionItems.indexOf(i)}>
             <div className="accordion__item__title">
+                <span className="accordion__item__title__title-text">{i.title}</span>
                 <div className="accordion__item__title__arrow-wrapper">
                     <i className={i.open ? "CLOSE_ARROW" : "OPEN_ARROW"}></i>
                 </div>
-                <span className="accordion__item__title__title-text">{i.title}</span>
             </div>
             <div
                 className={
