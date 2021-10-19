@@ -16,11 +16,27 @@
                 color: #5b5f97;
                 font-weight: normal;
                 margin-top: 25vh;
+
+                @media only screen and (max-width: 800px) {
+                    font-size: 70px;
+                }
+
+                @media only screen and (max-width: 600px) {
+                    font-size: 50px;
+                }
             }
 
             &__sub-text {
                 font-size: 36pt;
                 color: #ff6b6c;
+
+                @media only screen and (max-width: 800px) {
+                    font-size: 24pt;
+                }
+
+                @media only screen and (max-width: 600px) {
+                    font-size: 16pt;
+                }
             }
 
             &__paragraph {
@@ -29,6 +45,15 @@
                 font-weight: 300;
                 line-height: 30px;
                 margin-bottom: 4%;
+
+                @media only screen and (max-width: 800px) {
+                    font-size: 18px;
+                }
+
+                @media only screen and (max-width: 600px) {
+                    font-size: 16px;
+                    margin-bottom: 16%;
+                }
             }
 
             &__main-text,
@@ -36,6 +61,10 @@
             &__paragraph {
                 padding: 0 0 0 15vw;
                 width: 50%;
+
+                @media only screen and (max-width: 1200px) {
+                    width: 70%;
+                }
             }
 
             .LHD__button {
@@ -71,7 +100,7 @@
             }
         }
 
-        @media only screen and (max-width: 775px) {
+        @media only screen and (max-width: 1200px) {
             //merge grid-container into one column with two rows
             grid-template-columns: auto;
             grid-template-rows: auto auto;

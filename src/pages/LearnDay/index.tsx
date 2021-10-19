@@ -4,10 +4,13 @@ import Navbar from "../../components/NavBar";
 import FAQ from "../../components/LHDFAQ";
 import Schedule from "../../components/Schedule";
 import Footer from "../../components/Footer";
+import useWindowDimensions from "../../components/WindowDimensions"
 
 import "./styles.scss";
 
 const LearnDay: FC = (): JSX.Element => {
+    const { width } = useWindowDimensions();
+
     useEffect(() => {
         const cnv: any = document.querySelector(`canvas`);
         const ctx: any = cnv?.getContext(`2d`);
@@ -57,7 +60,7 @@ const LearnDay: FC = (): JSX.Element => {
             }
 
             redrawDot() {
-                let color = "#0e1341";
+                let color = "#f9c74f";
                 let size = cfg.dotSize;
                 let blur = 0;
                 let x = this.pos.x - size / 2;
@@ -147,7 +150,7 @@ const LearnDay: FC = (): JSX.Element => {
                         <button className="LHD__button">Apply Now</button>
                     </a>
                 </div>
-                <canvas className="LearnDay__title__honeycomb"></canvas>
+                {width > 1200 ? <canvas className="LearnDay__title__honeycomb"></canvas> : null}
             </section>
             <Schedule />
             <FAQ />
