@@ -27,6 +27,8 @@ const Accordian: FC<AccordianProps> = ({ data }) => {
         };
 
         parseData();
+        // !The below eslint rule may show as not a rule but it is a rule
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     // Handles on click events

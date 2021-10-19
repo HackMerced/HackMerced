@@ -77,7 +77,7 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                 <Menu.Items ref={drawerRef} {...NavbarItemsProps} style={{ backgroundColor }}>
                     <Menu.Item style={{ marginLeft: "auto", marginRight: "-.5em" }}>
                         <HamburgerButton.Wrapper onClick={() => toggleDrawer(false)}>
-                            <img src={CLOSE_ICON} height="40" width="40" />
+                            <img src={CLOSE_ICON} height="40" width="40" alt="close icon" />
                         </HamburgerButton.Wrapper>
                     </Menu.Item>
                     <Menu.Item>

@@ -95,7 +95,7 @@ const HackMercedVI: FC = (): JSX.Element => {
                     <h2 className="hackmerced-vi__sponsors__title">Sponsors</h2>
                     <img src={SPONSORS} width="100%" alt="Our Sponsors for HackMerced VI" />
                     <a className="sticker_mule" href="http://hackp.ac/mlh-stickermule-hackathons">
-                        <img className="sticker_mule__img" src={STICKER_MULE} />
+                        <img className="sticker_mule__img" src={STICKER_MULE} alt="sticker mule logo" />
                     </a>
                 </div>
             </section>
