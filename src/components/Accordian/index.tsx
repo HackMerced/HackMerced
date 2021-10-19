@@ -27,6 +27,8 @@ const Accordian: FC<AccordianProps> = ({ data }) => {
         };
 
         parseData();
+        // !The below eslint rule may show as not a rule but it is a rule
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     // Handles on click events
@@ -40,12 +42,12 @@ const Accordian: FC<AccordianProps> = ({ data }) => {
 
     // Generates each section
     const sections: JSX.Element[] = accordionItems.map((i) => (
-        <div className="accordion__item" key={accordionItems.indexOf(i)}>
-            <div className="accordion__item__title" onClick={click.bind(null, i)}>
-                <div className="accordion__item__title__arrow-wrapper">
-                    <i className={i.open ? "fa fa-angle-down fa-rotate-180" : "fa fa-angle-down"}></i>
-                </div>
+        <div className="accordion__item" onClick={click.bind(null, i)} key={accordionItems.indexOf(i)}>
+            <div className="accordion__item__title">
                 <span className="accordion__item__title__title-text">{i.title}</span>
+                <div className="accordion__item__title__arrow-wrapper">
+                    <i className={i.open ? "CLOSE_ARROW" : "OPEN_ARROW"}></i>
+                </div>
             </div>
             <div
                 className={
@@ -62,6 +64,7 @@ const Accordian: FC<AccordianProps> = ({ data }) => {
                     {ReactHtmlParser(i.content)}
                 </div>
             </div>
+            <hr className="blue-line"></hr>
         </div>
     ));
 

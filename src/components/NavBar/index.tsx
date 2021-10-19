@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import DarkModeToggle from "react-dark-mode-toggle";
 
-import MLH_BANNER from "../../assets/images/mlh-badge.svg";
+import MLH_BANNER from "../../assets/images/mlh-trust-badge-2022-white.svg";
 import CLOSE_ICON from "../../assets/images/close-icon.svg";
 import "./styles.scss";
 
@@ -77,17 +77,17 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                 <Menu.Items ref={drawerRef} {...NavbarItemsProps} style={{ backgroundColor }}>
                     <Menu.Item style={{ marginLeft: "auto", marginRight: "-.5em" }}>
                         <HamburgerButton.Wrapper onClick={() => toggleDrawer(false)}>
-                            <img src={CLOSE_ICON} height="40" width="40" />
+                            <img src={CLOSE_ICON} height="40" width="40" alt="close icon" />
                         </HamburgerButton.Wrapper>
                     </Menu.Item>
                     <Menu.Item>
                         <Link to="/">Home</Link>
                         {pathname === "/" ? BreakLine() : null}
                     </Menu.Item>
-                    {/* <Menu.Item>
+                    <Menu.Item>
                         <Link to="/learn-day">Learn Day</Link>
                         {pathname === "/learn-day" ? BreakLine() : null}
-                    </Menu.Item> */}
+                    </Menu.Item>
                     <Menu.Item>
                         <Link to="/past-hackathons">Past Hackathons</Link>
                         {pathname === "/past-hackathons" ? BreakLine() : null}

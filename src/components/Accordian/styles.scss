@@ -1,73 +1,64 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300, 400, 700");
+@import url("https://fonts.googleapis.com/css?family=Inter:300,400,700");
 
 .accordion {
-    background-color: #272831;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 4%;
+    padding-left: 15vw;
+    padding-bottom: 15%;
+
+    @media only screen and (max-width: 500px) {
+        padding-left: 0%;
+    }
 
     &__item {
-        margin: 0 20px 30px 20px; //margin around each accordion_item
-        max-width: 500px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        max-width: 67vw;
 
         @media only screen and (max-width: 500px) {
-            min-width: 90%;
+            padding-left: 10vw;
         }
 
         &__title {
-            height: 55px;
-            width: 500px;
-            background-color: #b63f1a;
-            color: #eeebf5;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            width: 67vw;
+            color: #000000;
             text-align: left;
             line-height: 2;
-            font-weight: lighter;
+            font-weight: normal;
+            font-family: Inter;
+            font-style: normal;
             position: relative;
-            padding: 10px;
             z-index: 100;
-            border-radius: 20px;
             transition: all 0.2s ease-in;
+            font-size: 24px;
+            padding-bottom: 1vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
 
             @media only screen and (max-width: 500px) {
                 width: 100%;
                 height: 80px;
-            }
-
-            &:hover {
-                cursor: pointer;
-                background-color: rgba(0, 0, 0, 0.5);
-            }
-
-            &:active {
-                background-color: rgba(0, 0, 0, 0.55);
+                padding-bottom: 5vw;
+                font-size: 20px;
             }
 
             &__arrow-wrapper {
-                position: absolute;
-                margin-left: 375px;
 
-                .fa-angle-down {
-                    font-size: 20px;
-                    color: rgba(255, 255, 255, 0.5);
-                    transition: all 0.6s cubic-bezier(0.08, 1.09, 0.32, 1.275);
+                .CLOSE_ARROW {
+                    content: url("../../assets/images/close-arrow.svg");
+                    font-size: 24px;
+                    transition: all 0.2s ease-in;
                 }
 
-                .fa-rotate-180 {
-                    color: rgba(255, 255, 255, 1);
+                .OPEN_ARROW {
+                    font-size: 24px;
+                    content: url("../../assets/images/open-arrow.svg");
                 }
             }
 
             &__title-text {
-                display: flex;
-                justify-content: center;
-                text-align: center;
+                justify-content: left;
+                text-align: left;
             }
         }
 
@@ -75,18 +66,18 @@
             height: 30px;
             width: 100%;
             background-color: transparent;
-            border-radius: 4px;
-            color: white;
-            font-size: 18px;
-            text-align: center;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
             position: relative;
             z-index: 1000;
-            margin-top: -20px;
+            margin-top: -55px;
             text-align: left;
-            transition: all 200ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+            transition: all 0.2s ease-in;
+            padding-bottom: 2%;
+            cursor: pointer;
 
             &__content-text {
-                padding: 15px;
+                line-height: 20px;
                 visibility: hidden;
                 opacity: 0;
                 overflow: auto;
@@ -107,19 +98,11 @@
         &__content-open {
             margin-top: 0px;
             height: auto;
-            border-radius: 30px;
             /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e8684c+68,e04040+100 */
-            background: #e8684c; /* Old browsers */
-            background: -moz-linear-gradient(top, #e8684c 68%, #e04040 100%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(top, #e8684c 68%, #e04040 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(
-                to bottom,
-                #e8684c 68%,
-                #e04040 100%
-            ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8684c', endColorstr='#e04040',GradientType=0 ); /* IE6-9 */
-
-            transition: all 350ms cubic-bezier(0.08, 1.09, 0.32, 1.275);
+            transition: all 0.2s ease-in;
+        }
+        .blue-line {
+            border: 2px solid #5b5f97;
         }
     }
 }

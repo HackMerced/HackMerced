@@ -1,0 +1,495 @@
+.heading-text {
+    font-family: Inter;
+    font-weight: 500;
+    color: #ff6b6c;
+    padding-left: 15vw;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 25px;
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        font-size: 30px;
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        font-size: 32px;
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        font-size: 36px;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        font-size: 36px;
+    }
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: black;
+    top: 15px;
+    bottom: 100px;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 100px;
+    background-color: black;
+    border: 4px solid black;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    right: -30px;
+}
+
+/* Place the container to the right */
+.right {
+    left: 48%;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: 7px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+.title {
+    border-radius: 20px;
+    padding: 6px;
+    font-family: Inter;
+    font-weight: 700;
+    background-color: #ffc145;
+}
+
+p {
+    font-size: 18px;
+    line-height: 22.5px;
+}
+
+p,
+span {
+    color: black;
+}
+
+/*Popups for left containers*/
+.checkin::before,
+.lightChallenge::before,
+.lightChallenge::after,
+.design::before,
+.design::after,
+.charades::before,
+.charades::after,
+.marble::before,
+.marble::after,
+.acm::before,
+.acm::after,
+.interview::before,
+.interview::after,
+.chalk::before,
+.chalk::after,
+.typing::before,
+.typing::after {
+    --scale: 0;
+    position: absolute;
+    top: -10px;
+    left: 0%;
+    transform: translateX(-100%) scale(var(--scale));
+    transition: 50ms transform;
+}
+
+.checkin::before,
+.lightChallenge::before,
+.design::before,
+.charades::before,
+.marble::before,
+.acm::before,
+.interview::before,
+.chalk::before,
+.typing::before {
+    content: attr(data-tip);
+    background-color: rgb(250, 211, 137);
+    padding: 0.5rem;
+    border-style: solid;
+    width: max-content;
+    max-width: 80%;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.checkin:hover::before,
+.lightChallenge:hover::before,
+.design:hover::before,
+.charades:hover::before,
+.marble:hover::before,
+.acm:hover::before,
+.interview:hover::before,
+.chalk:hover::before,
+.typing:hover::before {
+    --scale: 1;
+}
+
+/*Popups for right containers*/
+.opening::before,
+.opening::after,
+.github::before,
+.github::after,
+.games::before,
+.games::after,
+.notion::before,
+.notion::after,
+.gartic::before,
+.gartic::after {
+    --scale: 0;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: scale(var(--scale));
+    transition: 50ms transform;
+}
+
+.opening::after,
+.github::after,
+.games::after,
+.notion::after,
+.gartic::after {
+    content: attr(data-tip);
+    background-color: rgb(250, 211, 137);
+    padding: 0.5rem;
+    width: max-content;
+    border-style: solid;
+    max-width: 70%;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.opening:hover::after,
+.github:hover::after,
+.games:hover::after,
+.notion:hover::after,
+.gartic:hover::after {
+    --scale: 1;
+}
+
+@media screen and (max-width: 1024px) {
+    /*Fix padding of heading*/
+    .heading-text {
+        padding-left: 10vw;
+    }
+
+    /*Fix the position of left containers*/
+    .left {
+        left: -15px;
+    }
+
+    /*Fix the circles for left containers*/
+    .left::after {
+        right: 55px;
+    }
+
+    /*Fix the circles for right containers*/
+    .right::after {
+        left: 5px;
+    }
+
+    /*Fix the length of the vertical ruler*/
+    .timeline::after {
+        bottom: 110px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Fix the circle for containers on the right side */
+    .right::after {
+        left: 3px;
+    }
+
+    .timeline::after {
+        bottom: 110px;
+    }
+
+    /*Fixing popups for left containers*/
+    .lightChallenge::before,
+    .lightChallenge::after,
+    .design::before,
+    .design::after,
+    .charades::before,
+    .charades::after,
+    .marble::before,
+    .marble::after,
+    .acm::before,
+    .acm::after,
+    .interview::before,
+    .interview::after,
+    .chalk::before,
+    .chalk::after,
+    .typing::before,
+    .typing::after {
+        --scale: 0;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        transform: translateX(100%) scale(var(--scale));
+        transition: 50ms transform;
+    }
+
+    .opening:hover::after {
+        left: 33%;
+    }
+
+    .games:hover::after {
+        left: 33%;
+    }
+
+    .gartic:hover::after {
+        left: 33%;
+        max-width: 59%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+        bottom: 190px;
+    }
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 25px;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .right::after {
+        left: 20px;
+    }
+
+    .left::after {
+        left: 25px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    /* Fix the length of the vertical ruler */
+    .timeline::after {
+        left: 31px;
+        bottom: 110px;
+    }
+
+    /*Fix the space for the left conatiners*/
+    .left {
+        left: 0%;
+    }
+
+    /*Fix the position of the circles for left containers*/
+    .left::after {
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    /* Fix the length of the vertical ruler */
+    .timeline::after {
+        left: 31px;
+        bottom: 110px;
+    }
+
+    /*Fix the space for the left conatiners*/
+    .left {
+        left: 0%;
+    }
+
+    /*Fix the position of the circles for left containers*/
+    .left::after {
+        left: 20px;
+    }
+
+    /*Fix popups and align the right and left ones on same side(right)*/
+    .lightChallenge::before,
+    .lightChallenge::after,
+    .design::before,
+    .design::after,
+    .charades::before,
+    .charades::after,
+    .marble::before,
+    .marble::after,
+    .acm::before,
+    .acm::after,
+    .interview::before,
+    .interview::after,
+    .chalk::before,
+    .chalk::after,
+    .typing::before,
+    .typing::after {
+        left: 10%;
+    }
+
+    .opening::before,
+    .opening::after,
+    .github::before,
+    .github::after,
+    .games::before,
+    .games::after,
+    .notion::before,
+    .notion::after,
+    .gartic::before,
+    .gartic::after {
+        top: -30px;
+        left: 42%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* Fix the length of the vertical ruler */
+    .timeline::after {
+        left: 31px;
+        bottom: 110px;
+    }
+
+    /*Fix the space for the left conatiners*/
+    .left {
+        left: 0%;
+    }
+
+    /*Fix the position of the circles for left containers*/
+    .left::after {
+        left: 20px;
+    }
+
+    /*Fix popups and align the right and left ones on same side(right)*/
+    .lightChallenge::before,
+    .lightChallenge::after,
+    .design::before,
+    .design::after,
+    .charades::before,
+    .charades::after,
+    .marble::before,
+    .marble::after,
+    .acm::before,
+    .acm::after,
+    .interview::before,
+    .interview::after,
+    .chalk::before,
+    .chalk::after,
+    .typing::before,
+    .typing::after {
+        left: 10%;
+    }
+
+    .opening::before,
+    .opening::after,
+    .github::before,
+    .github::after,
+    .games::before,
+    .games::after,
+    .notion::before,
+    .notion::after,
+    .gartic::before,
+    .gartic::after {
+        top: -30px;
+        left: 40%;
+    }
+
+    .opening::after,
+    .github::after,
+    .games::after,
+    .notion::after,
+    .gartic::after {
+        content: attr(data-tip);
+        background-color: orange;
+        border-style: solid;
+        width: max-content;
+        min-width: 20%;
+    }
+
+    .gartic:hover::after {
+        left: 33%;
+        max-width: 59%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    /* Fix the length of the vertical ruler */
+    .timeline::after {
+        left: 31px;
+        bottom: 110px;
+    }
+
+    /*Fixing popups for left containers*/
+    .lightChallenge::before,
+    .lightChallenge::after,
+    .design::before,
+    .design::after,
+    .charades::before,
+    .charades::after,
+    .marble::before,
+    .marble::after,
+    .acm::before,
+    .acm::after,
+    .interview::before,
+    .interview::after,
+    .chalk::before,
+    .chalk::after,
+    .typing::before,
+    .typing::after {
+        --scale: 0;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        transform: translateX(50%) scale(var(--scale));
+        transition: 50ms transform;
+    }
+
+    .gartic:hover::after {
+        left: 20%;
+        max-width: 70%;
+    }
+}

@@ -8,27 +8,29 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
     const [minute, setMinute] = useState<string>("00");
     const [second, setSecond] = useState<string>("00");
 
-    const countDownTimer = () => {
-        const end = new Date(time);
-        const endTime = Date.parse(String(end)) / 1000;
-        const current = new Date();
-        const currentTime = Date.parse(String(current)) / 1000;
-        const timer = endTime - currentTime;
-        const dd = Math.floor(timer / 86400);
-        const hh = Math.floor((timer - dd * 86400) / 3600);
-        const mm = Math.floor((timer - dd * 86400 - hh * 3600) / 60);
-        const ss = Math.floor(timer - dd * 86400 - hh * 3600 - mm * 60);
-
-        setDay(String(dd));
-        setHour(hh < 10 ? "0" + String(hh) : String(hh));
-        setMinute(mm < 10 ? "0" + String(mm) : String(mm));
-        setSecond(ss < 10 ? "0" + String(ss) : String(ss));
-    };
-
     useEffect(() => {
+        const countDownTimer = () => {
+            const end = new Date(time);
+            const endTime = Date.parse(String(end)) / 1000;
+            const current = new Date();
+            const currentTime = Date.parse(String(current)) / 1000;
+            const timer = endTime - currentTime;
+            const dd = Math.floor(timer / 86400);
+            const hh = Math.floor((timer - dd * 86400) / 3600);
+            const mm = Math.floor((timer - dd * 86400 - hh * 3600) / 60);
+            const ss = Math.floor(timer - dd * 86400 - hh * 3600 - mm * 60);
+
+            setDay(String(dd));
+            setHour(hh < 10 ? "0" + String(hh) : String(hh));
+            setMinute(mm < 10 ? "0" + String(mm) : String(mm));
+            setSecond(ss < 10 ? "0" + String(ss) : String(ss));
+        };
+
         setInterval(function () {
             countDownTimer();
         }, 1000);
+        // !The below eslint rule may show as not a rule but it is a rule
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

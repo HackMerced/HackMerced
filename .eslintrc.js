@@ -19,6 +19,7 @@ module.exports = {
         // e.g. "@typescript-eslint/explicit-function-return-type": "off",
         "react/prop-types": 0,
         "no-console": 1,
+        "line-ending": "LF"
     },
     settings: {
         react: {
