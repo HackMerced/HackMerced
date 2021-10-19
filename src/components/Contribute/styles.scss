@@ -32,18 +32,29 @@
         }
     }
 
-   
-    // .grid-item:hover {
-    //     // use this animation https://codepen.io/joshuahathaway/pen/LEWgoE
-    // }
+    .grid-item:hover {
+        opacity: 0.8;
 
-    
+        // use this animation https://codepen.io/joshuahathaway/pen/LEWgoE
+    }
 
+    .grid-item:active {
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -o-transform: scale(0.8);
+        transform: scale(0.8);
+    }
 
     @keyframes glowing {
-        0% { background-position: 0 0; }
-        50% { background-position: 400% 0; }
-        100% { background-position: 0 0; }
+        0% {
+            background-position: 0 0;
+        }
+        50% {
+            background-position: 400% 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
     }
 }
-
