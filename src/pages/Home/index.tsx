@@ -148,9 +148,9 @@ const Home: FC = (): JSX.Element => {
                             Join us on our second iteration of Local Learn Day: Hacktually II
                         </div>
                         <a href="https://hackmerced2021.typeform.com/locallearnday">
-                        <button className="home__heading__content__title__event-button">
-                            Sign up to Hacktually II
-                        </button>
+                            <button className="home__heading__content__title__event-button">
+                                Sign up to Hacktually II
+                            </button>
                         </a>
                         {/* <form className="home__heading__content__title__form" onSubmit={handleSubmit}>
                             <input

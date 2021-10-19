@@ -39,11 +39,11 @@
     }
 
     .grid-item:active {
-        -webkit-transform: scale(0.80);
-        -moz-transform: scale(0.80);
-        -ms-transform: scale(0.80);
-        -o-transform: scale(0.80);
-        transform: scale(0.80);
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -o-transform: scale(0.8);
+        transform: scale(0.8);
     }
 
     @keyframes glowing {
