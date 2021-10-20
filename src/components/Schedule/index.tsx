@@ -85,7 +85,7 @@ const Table: FC<any> = (): JSX.Element => {
                             Online: Discord"
                             style={{ position: "relative" }}
                         >
-                            Hack the Power with SEA and ACM
+                            Hack the Power with SEA & ACM
                         </p>
                     </div>
                 </div>
