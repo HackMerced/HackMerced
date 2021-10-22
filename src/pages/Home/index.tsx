@@ -1,5 +1,5 @@
-import React, { FC, Fragment } from "react";
-// import Axios, { AxiosResponse } from "axios";
+import React, { FC, Fragment, useState } from "react";
+//import Axios, { AxiosResponse } from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
@@ -17,6 +17,7 @@ import TEAM_PICTURE_WEBP from "../../assets/images/hackmerced-v.webp";
 import team from "../../assets/team";
 import winners from "../../assets/winners";
 import "./styles.scss";
+
 
 type TeamProps = {
     firstName?: string | undefined;
@@ -88,24 +89,64 @@ const generateSectionHeading = (title: string): JSX.Element => {
     );
 };
 
+const mailchimp = require("@mailchimp/mailchimp_marketing");
+const mcKey = process.env.REACT_APP_MAILCHIMP_API_KEY;
+mailchimp.setConfig({
+    apiKey: mcKey,
+    server: "us4",
+    dataType: 'jsonp'
+  });
+  
+
 const Home: FC = (): JSX.Element => {
     const { width } = useWindowDimensions();
     // const [form, setForm] = useState<{ email: string }>({ email: "" });
 
-    // // Handles Change on the fields of the form
-    // const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    //     const { name, value } = event.target;
-    //     setForm({ ...form, [name]: value });
-    // };
+    // Handles Change on the fields of the form
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        const { name, value } = event.target;
+        setForm({ ...form, [name]: value });
+        console.log(form);
+    };
 
-    // // Handles the submission action when the submit button is pressed
-    // const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
-    //     event.preventDefault();
-    //     Axios.post(
-    //         `https://hackmerced-tomoe.herokuapp.com/v1/auth/login-resetpassword`,
-    //         form,
-    //     ).then((response: AxiosResponse) => console.log(response));
-    // };
+    // Handles the submission action when the submit button is pressed
+    const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>): Promise<void> => {
+        event.preventDefault();
+        console.log("ran request");
+        //res.header("Access-Control-Allow-Origin", "*");
+        
+
+        
+        console.log(JSON.stringify(form.email));
+        
+        fetch('https://us4.api.mailchimp.com/3.0/lists/', 
+        {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'no-cors', // no-cors, *cors, same-origin
+            headers: {
+              'X-API-KEY': '',
+              'Content-Type': 'application/json',
+              "Access-Control-Allow-Origin": "*"
+              // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: JSON.stringify({'email':form.email, "status": "subscribed"}) // body data type must match "Content-Type" header
+          })
+          .then(()=> alert("Thank you for subscribing!"));
+          
+          /*
+        const response = await mailchimp.lists.addListMember("a837167e30&c=?", {
+            email_address: form.email,
+            status: "subscribed",
+          });
+          console.log(response);
+          */
+        /*
+        Axios.post(
+            `https://us4.api.mailchimp.com/3.0/lists/a837167e30/members/`,
+            form,
+        ).then((response: AxiosResponse) => console.log(response));
+        */
+    };
 
     return (
         <main className="home">
