@@ -29,7 +29,7 @@ const Table: FC<any> = (): JSX.Element => {
                             className="opening"
                             data-tip="
                             Location: Room 130 (in-person)
-                            Online: Discord"
+                            Meeting ID: 839 5299 5909"
                             style={{ position: "relative" }}
                         >
                             Opening Ceremony
@@ -42,7 +42,7 @@ const Table: FC<any> = (): JSX.Element => {
                         <p
                             className="lightChallenge"
                             data-tip="Location: Room 140 (in-person)
-                            Online: Discord"
+                            Meeting ID: 856 9306 9593"
                             style={{ position: "relative" }}
                         >
                             Light Challenge
@@ -50,7 +50,7 @@ const Table: FC<any> = (): JSX.Element => {
                         <p
                             className="design"
                             data-tip="Location: Room 130 (in-person)
-                            Online: Discord"
+                            Meeting ID: 839 5299 5909"
                             style={{ position: "relative" }}
                         >
                             Design Workshop
@@ -66,7 +66,7 @@ const Table: FC<any> = (): JSX.Element => {
                         <p
                             className="github"
                             data-tip="Location: Room 130 (in-person)
-                            Online: Discord"
+                            Meeting ID: 839 5299 5909"
                             style={{ position: "relative" }}
                         >
                             Code Collab w/ GitHub
@@ -82,7 +82,7 @@ const Table: FC<any> = (): JSX.Element => {
                         <p
                             className="acm"
                             data-tip="Location: Room 140 (in-person)
-                            Online: Discord"
+                            Meeting ID: 856 9306 9593"
                             style={{ position: "relative" }}
                         >
                             Hack the Power with SEA & ACM
@@ -95,7 +95,7 @@ const Table: FC<any> = (): JSX.Element => {
                         <p
                             className="notion"
                             data-tip="Location: Room 130 (in-person)
-                            Online: Discord"
+                            Meeting ID: 839 5299 5909"
                             style={{ position: "relative" }}
                         >
                             Project Management w/ Notion
@@ -111,7 +111,7 @@ const Table: FC<any> = (): JSX.Element => {
                         <p
                             className="interview"
                             data-tip="Location: Room 130 (in-person)
-                            Online: Discord"
+                            Meeting ID: 839 5299 5909"
                             style={{ position: "relative" }}
                         >
                             Hack the Technical Interview
@@ -145,7 +145,7 @@ const Table: FC<any> = (): JSX.Element => {
                         <p
                             className="opening"
                             data-tip="Location: Room 130 (in-person)
-                            Online: Discord"
+                            Meeting ID: 839 5299 5909"
                             style={{ position: "relative" }}
                         >
                             Closing Ceremony
