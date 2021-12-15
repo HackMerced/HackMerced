@@ -2,7 +2,6 @@ import React, { FC, Fragment, useEffect } from "react";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { createHashHistory } from "history";
 
-import LearnDay from "./pages/LearnDay";
 import Home from "./pages/Home";
 import PastHackathons from "./pages/PastHackathons";
 import SponsorUs from "./pages/SponsorUs";
@@ -13,6 +12,7 @@ import Application from "./pages/Archive/Application";
 import Error from "./pages/404";
 import DesignMerced from "./pages/Archive/DesignMerced";
 import HackMercedVI from "./pages/Archive/HackMercedVI";
+import Hacktually2 from "./pages/Archive/LearnDay";
 // import SignUp from "./pages/SignUp";
 import Maintenance from "./pages/Maintenance";
 import Dashboard from "./pages/Dashboard";
@@ -34,7 +34,6 @@ const App: FC = (): JSX.Element => {
             })}
         >
             <Switch>
-                <Route path="/learn-day" component={LearnDay} />
                 <Route exact path="/" component={Home} />
                 <Route path="/sponsors" component={SponsorUs} />
                 <Route path="/contact-us" component={ContactUs} />
@@ -52,7 +51,12 @@ const App: FC = (): JSX.Element => {
                             <Route path={`${url}/live*`}>
                                 <Dashboard />
                             </Route>
-                            <Route path="/application" component={Application} />
+                            <Route exact path={`${url}/application`}>
+                                <Application />
+                            </Route>
+                            <Route exact path={`${url}/hacktually2`}>
+                                <Hacktually2 />
+                            </Route>
                             {/* <Route
                                 path="/login"
                                 render={({ match: { url } }): JSX.Element => (

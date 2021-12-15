@@ -21,12 +21,6 @@ import jsonp from "jsonp";
 import queryString from 'querystring';
 
 
-//import Mailchimp from  "react-mailchimp-subscribe";
-
-
-
-
-
 type TeamProps = {
     firstName?: string | undefined;
     lastName?: string | undefined;
@@ -97,15 +91,6 @@ const generateSectionHeading = (title: string): JSX.Element => {
     );
 };
 
-//const mailchimp = require("@mailchimp/mailchimp_marketing");
-/*
-mailchimp.setConfig({
-    apiKey: mcKey,
-    server: "us4",
-    dataType: 'jsonp'
-  });
-*/
-
 const Home: FC = (): JSX.Element => {
     const { width } = useWindowDimensions();
     
@@ -119,62 +104,21 @@ const Home: FC = (): JSX.Element => {
    };
  
     // Handles the submission action when the submit button is pressed
-   const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>): Promise<void> => {
-    const formData = {
-        EMAIL: form.email,
-      };
+    const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>): Promise<void> => {
+        const formData = {
+            EMAIL: form.email,
+        };
        
         const baseURL = process.env.REACT_APP_MAILCHIMP_API_KEY;
         const finalURL = baseURL + "&" + queryString.stringify(formData);
       
-
         event.preventDefault();
-          jsonp(finalURL, { param: 'c' },  
-           
-          
+        jsonp(finalURL, { param: 'c' },  
 
-          );
-          alert("Subscribed to HackMerced Newsletter!");
-        //  console.log(process.env.REACT_APP_MAILCHIMP_API_KEY);
-
-       // console.log("ran request");
-        //res.header("Access-Control-Allow-Origin", "*");
-        
-
-        
-      //  console.log(JSON.stringify(form.email));
-
-        /*
-        
-        fetch('https://us4.api.mailchimp.com/3.0/lists/', 
-        {
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            mode: 'no-cors', // no-cors, *cors, same-origin
-            headers: {
-              'X-API-KEY': '',
-              'Content-Type': 'application/json',
-              "Access-Control-Allow-Origin": "*"
-              // 'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: JSON.stringify({'email':form.email, "status": "subscribed"}) // body data type must match "Content-Type" header
-          })
-          .then(()=> alert("Thank you for subscribing!"));
-          
-          /*
-        const response = await mailchimp.lists.addListMember("priv&c=?", {
-            email_address: form.email,
-            status: "subscribed",
-          });
-          console.log(response);
-          */
-        /*
-        Axios.post(
-            `https://us4.api.mailchimp.com/3.0/lists/priv/members/`,
-            form,
-        ).then((response: AxiosResponse) => console.log(response));
-        */
-        }
-    
+        );
+        alert("Subscribed to HackMerced Newsletter!");
+        // console.log(process.env.REACT_APP_MAILCHIMP_API_KEY);
+    }
 
     return (
         <main className="home">
@@ -212,24 +156,6 @@ const Home: FC = (): JSX.Element => {
                         </picture>
                         <div className="home__heading__content__title__text">The biggest San Joaquin Valley hackathon.</div>
                         <div className="home__heading__content__title__sub-text">Stay updated with HackMerced and subscribe to our email list!</div>
-                        {/*
-
-
-
-                        
-                        <div id="mc_embed_signup">
-                        <form action="https://hackmerced.us4.list-manage.com/subscribe/post?u=0f91e275ee2aafcee8f0fa7f9&amp;id=a837167e30" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
-                            <div id="mc_embed_signup_scroll">
-                            <label>Subscribe</label>
-                            <input type="email" value="" name="EMAIL"  id="mce-EMAIL" placeholder="email address" required/>
-                            <div><input type="text" name="b_0f91e275ee2aafcee8f0fa7f9_a837167e30" value=""/></div>
-                            <div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"/></div>
-                            </div>
-                        </form>
-                        </div>
-                        */}
-                        
-                        
                         <form className="home__heading__content__title__form" onSubmit={handleSubmit}>
                             <input
                                 className="home__heading__content__title__form_input"

@@ -31,11 +31,6 @@
             text-align: center;
             margin-bottom: 2rem;
 
-            .hoverchange:hover {
-                color: var(--text-color);
-                background-color: #8FBC8F;
-            }
-
             &__icon {
                 color: var(--orange);
                 font-size: 35px !important;
@@ -51,10 +46,7 @@
         }
      
         @media only screen and (max-width: 1024px), only screen and (max-height: 1366px) {
-            //sized to an ipad pro
-            padding-top: 2rem;
-
-            padding-bottom: 10rem;
+            padding: 2% 0% 5% 0%;
 
             &__header {
                margin-bottom: 2rem;

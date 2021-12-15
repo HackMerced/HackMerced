@@ -16,12 +16,10 @@ const ContactUs: FC = (): JSX.Element => {
                 <div className="contact-us__content">
                     <div className="contact-us__content__header">Ways to contact us</div>
                     <section className="contact-us__content__description">
-                        <a className="hoverchange" href="mailto:general@hackmerced.com?subject=HackMerced Questions&amp;body=Dear HackMerced,">
-                            <FontAwesomeIcon icon={faEnvelope} className="fa contact-us__content__description__icon" />
-                            <h4 className="contact-us__content__description__text">  
-                                Email us at general@hackmerced.com
-                            </h4>
-                        </a>
+                        <FontAwesomeIcon icon={faEnvelope} className="fa contact-us__content__description__icon" />
+                        <h4 className="contact-us__content__description__text">  
+                            <a href="mailto:general@hackmerced.com?subject=HackMerced Questions&amp;body=Dear HackMerced,">Email us at general@hackmerced.com</a>
+                        </h4>
                         <FontAwesomeIcon icon={faUsers} className="fa contact-us__content__description__icon" />
                         <h4 className="contact-us__content__description__text">
                             Connect with our social medias: @hackmerced
