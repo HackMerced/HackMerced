@@ -242,6 +242,11 @@ const Home: FC = (): JSX.Element => {
                             <button type="submit">Submit</button>
                         </form>
                         
+<<<<<<< HEAD
+=======
+
+                    </div>
+>>>>>>> addUserEmails
 
                     </div>
                 </section>
