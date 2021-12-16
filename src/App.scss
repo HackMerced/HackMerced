@@ -40,7 +40,8 @@ a {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    height: 0px;  // Height of horizontal scrollbar
+    width: 10px;  // Width of vertical scrollbar
 }
 
 ::-webkit-scrollbar-track {
@@ -50,4 +51,12 @@ a {
 ::-webkit-scrollbar-thumb {
     background: var(--orange);
     border-radius: 10px;
+}
+
+.trail { /* className for the trail elements (utils/mousetrail.js) */
+    position: absolute;
+    height: 10px; width: 10px;
+    border-radius: 6px;
+    background: rgb(255, 123, 0);
+    pointer-events:none; //Allows user to click through the mouse trail: https://stackoverflow.com/questions/64930959/how-to-make-a-mouse-trail-with-css-js-so-that-elements-are-still-clickable
 }
