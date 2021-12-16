@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.199e5b87.chunk.css",
-    "main.js": "/static/js/main.bdb25725.chunk.js",
-    "main.js.map": "/static/js/main.bdb25725.chunk.js.map",
+    "main.css": "/static/css/main.bae0f514.chunk.css",
+    "main.js": "/static/js/main.f46e3849.chunk.js",
+    "main.js.map": "/static/js/main.f46e3849.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a6aa62cc.js",
     "runtime-main.js.map": "/static/js/runtime-main.a6aa62cc.js.map",
     "static/css/2.14f3cd7d.chunk.css": "/static/css/2.14f3cd7d.chunk.css",
-    "static/js/2.7ea20479.chunk.js": "/static/js/2.7ea20479.chunk.js",
-    "static/js/2.7ea20479.chunk.js.map": "/static/js/2.7ea20479.chunk.js.map",
+    "static/js/2.08b6259f.chunk.js": "/static/js/2.08b6259f.chunk.js",
+    "static/js/2.08b6259f.chunk.js.map": "/static/js/2.08b6259f.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8273f151afb73a324d98d342b64e5dda.js": "/precache-manifest.8273f151afb73a324d98d342b64e5dda.js",
+    "precache-manifest.eab1b5e76fe6aef50c258fa1d8e8f1b4.js": "/precache-manifest.eab1b5e76fe6aef50c258fa1d8e8f1b4.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.14f3cd7d.chunk.css.map": "/static/css/2.14f3cd7d.chunk.css.map",
-    "static/css/main.199e5b87.chunk.css.map": "/static/css/main.199e5b87.chunk.css.map",
-    "static/js/2.7ea20479.chunk.js.LICENSE.txt": "/static/js/2.7ea20479.chunk.js.LICENSE.txt",
+    "static/css/main.bae0f514.chunk.css.map": "/static/css/main.bae0f514.chunk.css.map",
+    "static/js/2.08b6259f.chunk.js.LICENSE.txt": "/static/js/2.08b6259f.chunk.js.LICENSE.txt",
     "static/media/ACM.png": "/static/media/ACM.8256e6ce.png",
     "static/media/ASUCM.png": "/static/media/ASUCM.85fec3b9.png",
     "static/media/Alumni.png": "/static/media/Alumni.aa682e2f.png",
     "static/media/Citrus.png": "/static/media/Citrus.740a9b4c.png",
     "static/media/CoolerMaster.png": "/static/media/CoolerMaster.1f3c7e68.png",
-    "static/media/styles.scss": "/static/media/open-arrow.4d2097e9.svg",
+    "static/media/styles.scss": "/static/media/open-arrow.793a80e7.svg",
     "static/media/GoodDayChocolate.png": "/static/media/GoodDayChocolate.c3cb113a.png",
     "static/media/GuayakiYerbaMate.png": "/static/media/GuayakiYerbaMate.c8739890.png",
     "static/media/IT.png": "/static/media/IT.1192236f.png",
@@ -144,8 +144,8 @@
   "entrypoints": [
     "static/js/runtime-main.a6aa62cc.js",
     "static/css/2.14f3cd7d.chunk.css",
-    "static/js/2.7ea20479.chunk.js",
-    "static/css/main.199e5b87.chunk.css",
-    "static/js/main.bdb25725.chunk.js"
+    "static/js/2.08b6259f.chunk.js",
+    "static/css/main.bae0f514.chunk.css",
+    "static/js/main.f46e3849.chunk.js"
   ]
 }
