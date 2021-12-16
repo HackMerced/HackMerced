@@ -23,12 +23,12 @@ var Dot = function () {
 // The Dot.prototype.draw() method sets the position of
 // the object's <div> node
 Dot.prototype.draw = function () {
-    this.node.style.left = this.x + "px";
-    this.node.style.top = this.y + "px";
+    this.node.style.left = (this.x - 6.3) + "px";
+    this.node.style.top = (this.y - 5) + "px";
 };
 
 // Creates the Dot objects, populates the dots array
-for (var i = 0; i < 10; i++) {
+for (var i = 0; i < 20; i++) {
     var d = new Dot();
     dots.push(d);
 }
@@ -47,8 +47,8 @@ function draw() {
         dot.x = x;
         dot.y = y;
         dot.draw();
-        x += (nextDot.x - dot.x) * 0.6;
-        y += (nextDot.y - dot.y) * 0.6;
+        x += (nextDot.x - dot.x) * 0.1;
+        y += (nextDot.y - dot.y) * 0.1;
     });
 }
 
