@@ -1,19 +1,43 @@
-import React, { FC } from "react";
+import React, { FC, Fragment, Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+// import { TextureLoader } from "three";
 
 import Navbar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import useWindowDimensions from "../../components/WindowDimensions";
-import Accordian from "../../components/Accordian";
+// import Accordian from "../../components/Accordian";
 
-import SUSTAINABILITY from "../../assets/images/sustainability.png";
-import INCLUSIVITY from "../../assets/images/inclusivity.png";
-import CYBER_SECURITY from "../../assets/images/cybersecurity.png";
-import SPONSORS from "../../assets/images/sponsors-hackmercedvi.png";
-import STICKER_MULE from "../../assets/images/sticker-mule-logo-light.png";
+// import SUSTAINABILITY from "../../assets/images/sustainability.png";
+// import INCLUSIVITY from "../../assets/images/inclusivity.png";
+// import CYBER_SECURITY from "../../assets/images/cybersecurity.png";
+// import SPONSORS from "../../assets/images/sponsors-hackmercedvi.png";
+// import STICKER_MULE from "../../assets/images/sticker-mule-logo-light.png";
 
-import { FAQData } from "../../assets/faq";
+// import { FAQData } from "../../assets/faq";
 
 import "./styles.scss";
+
+const Scene: FC = (): JSX.Element => {
+    // const colorMap = useLoader(TextureLoader, "./PavingStones092_1K_Color.jpg");
+    let listOfMeshes: Array<JSX.Element> = [];
+
+    for (let i = 0; i < 45; i++) {
+        listOfMeshes.push(
+            <mesh>
+                <icosahedronGeometry args={[1, 32, 32]} />
+                <meshPhongMaterial />
+            </mesh>,
+        );
+    }
+
+    return (
+        <Fragment>
+            <ambientLight color="#FF002E" intensity={0.6} />
+            <directionalLight color="#00A3FF" intensity={0.6} position={[10, 0, 25]} />
+            {listOfMeshes}
+        </Fragment>
+    );
+};
 
 const HackMercedVII: FC = (): JSX.Element => {
     const { width, height } = useWindowDimensions();
@@ -25,33 +49,26 @@ const HackMercedVII: FC = (): JSX.Element => {
         <main className="hackmerced-vii">
             <Navbar backgroundColor="#0C2136" textColor="#FFFFF" breakLineColor="#C4BDDC" showBanner={true} />
             {/* Landing Header */}
-            <section className="hackmerced-vi__landing" style={{ width: width, height: backgroundHeight }}>
-                <div className="hackmerced-vi__landing__container">
-                <div className="hackmerced-vi__landing__container__title">
-                <div className="hackmerced-vi__landing__container__main__title">
-                            HackMerced VII
-                        </div>
-                        <div className="hackmerced-vi__landing__container__sub__title">
-                            March 4-6, 2022
-                        </div>
-                        </div>
-                    <button
-                        className="hackmerced-vi__landing__container__button"
-                        onClick={() => {
-                            window.location.href = "https://hackmercedvi.typeform.com/to/mY7E1Fug";
-                        }}
-                        
-                    >
-                        <h2 className="hackmerced-vi__landing__container__button__title">
-                            Apply Now
-                        </h2>
-                        
-                    </button>
-
-                </div>
+            <section className="hackmerced-vii__landing" style={{ width: width, height: backgroundHeight }}>
+                <h1 className="hackmerced-vii__landing__title">HackMerced VII</h1>
+                <h2 className="hackmerced-vii__landing__date">March 4 - 6, 2022</h2>
+                <h3 className="hackmerced-vii__landing__location">University of California, Merced</h3>
+                <button
+                    className="hackmerced-vii__landing__registration"
+                    onClick={() => {
+                        window.location.href = "https://hackmercedvi.typeform.com/to/mY7E1Fug";
+                    }}
+                >
+                    Register Now!
+                </button>
             </section>
+            <Canvas>
+                <Suspense fallback={null}>
+                    <Scene />
+                </Suspense>
+            </Canvas>
             {/* Themes Section */}
-            <section className="hackmerced-vi__themes">
+            {/* <section className="hackmerced-vi__themes">
                 <h1 className="hackmerced-vi__themes__title">Themes</h1>
                 <div className="hackmerced-vi__themes__container">
                     <div className="track-one">
@@ -94,14 +111,14 @@ const HackMercedVII: FC = (): JSX.Element => {
                         </p>
                     </div>
                 </div>
-            </section>
+            </section> */}
             {/* FAQ Section */}
-            <section className="hackmerced-vi__faq">
+            {/* <section className="hackmerced-vi__faq">
                 <h2 className="hackmerced-vi__faq__title">Frequently Asked Questions</h2>
                 <Accordian data={FAQData} />
-            </section>
+            </section> */}
             {/* Sponsors Section */}
-            <section className="hackmerced-vi__sponsors">
+            {/* <section className="hackmerced-vi__sponsors">
                 <div>
                     <h2 className="hackmerced-vi__sponsors__title">Sponsors</h2>
                     <img src={SPONSORS} width="100%" alt="Our Sponsors for HackMerced VI" />
@@ -109,7 +126,7 @@ const HackMercedVII: FC = (): JSX.Element => {
                         <img className="sticker_mule__img" src={STICKER_MULE} alt="sticker mule logo" />
                     </a>
                 </div>
-            </section>
+            </section> */}
             <Footer backgroundColor="#B63F1A" textColor="#FFFFF" fontColor="#EEEBF5" />
         </main>
     );

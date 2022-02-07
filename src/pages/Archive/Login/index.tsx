@@ -1,6 +1,6 @@
 import React, { FC, Fragment, useState } from "react";
 import Axios, { AxiosResponse } from "axios";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faKey, faUser } from "@fortawesome/free-solid-svg-icons";
 
@@ -16,7 +16,7 @@ const Login: FC<{
     updateToken: React.Dispatch<React.SetStateAction<TokenState | undefined>>;
 }> = ({ updateHacker, updateToken }): JSX.Element => {
     const [form, setForm] = useState<{ email: string; password: string }>({ email: "", password: "" });
-    const history = useHistory();
+    let history = useNavigate();
 
     // Handles Change on the fields of the form
     const handleInputChange = (
@@ -37,7 +37,7 @@ const Login: FC<{
             if (response.status === 200 && response.statusText === "OK") {
                 updateHacker(response.data.user);
                 updateToken(response.data.token);
-                history.push("/dashboard");
+                history("/dashboard");
             }
         });
     };

@@ -1,6 +1,5 @@
 import React, { FC, Fragment, useEffect } from "react";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
-import { createHashHistory } from "history";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 import Home from "./pages/Home";
 import HackMercedVII from "./pages/HackMercedVII";
@@ -8,16 +7,13 @@ import PastHackathons from "./pages/PastHackathons";
 import SponsorUs from "./pages/SponsorUs";
 import ContactUs from "./pages/ContactUs";
 import Application from "./pages/Archive/Application";
-// import Login from "./pages/Login";
-// import ResetPassword from "./pages/ResetPassword";
 import Error from "./pages/404";
 import DesignMerced from "./pages/Archive/DesignMerced";
 import HackMercedVI from "./pages/Archive/HackMercedVI";
 import Hacktually2 from "./pages/Archive/LearnDay";
-// import SignUp from "./pages/SignUp";
 import Maintenance from "./pages/Maintenance";
 import Dashboard from "./pages/Dashboard";
-import {animate} from "./utils/mousetrail";
+import { animate } from "./utils/mousetrail";
 
 import "./App.scss";
 
@@ -25,63 +21,55 @@ const App: FC = (): JSX.Element => {
     useEffect(() => {
         animate();
     }, []);
-    
+
     return (
-        <Router
-            history={createHashHistory({
-                basename: "",
-                hashType: "slash",
-                getUserConfirmation: (message, callback) => callback(window.confirm(message)),
-            })}
-        >
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/hackmercedvii" component={HackMercedVII} />
-                <Route path="/sponsors" component={SponsorUs} />
-                <Route path="/contact-us" component={ContactUs} />
-                <Route path="/past-hackathons" component={PastHackathons} />
+        <BrowserRouter>
+            <Routes>
+                <Route path="/">
+                    <Home />
+                </Route>
+                <Route path="/hackmercedvii">
+                    <HackMercedVII />
+                </Route>
+                <Route path="/sponsors">
+                    <SponsorUs />
+                </Route>
+                <Route path="/contact-us">
+                    <ContactUs />
+                </Route>
+                <Route path="/past-hackathons">
+                    <PastHackathons />
+                </Route>
                 <Route
                     path="/archive"
-                    render={({ match: { url } }): JSX.Element => (
+                    children={({ match: { url } }): JSX.Element => (
                         <Fragment>
-                            <Route exact path={`${url}/designmerced`}>
+                            <Route path={`${url}/designmerced`}>
                                 <DesignMerced />
                             </Route>
-                            <Route exact path={`${url}/hackmercedvi`}>
+                            <Route path={`${url}/hackmercedvi`}>
                                 <HackMercedVI />
                             </Route>
                             <Route path={`${url}/live*`}>
                                 <Dashboard />
                             </Route>
-                            <Route exact path={`${url}/application`}>
+                            <Route path={`${url}/application`}>
                                 <Application />
                             </Route>
-                            <Route exact path={`${url}/hacktually2`}>
+                            <Route path={`${url}/hacktually2`}>
                                 <Hacktually2 />
                             </Route>
-                            {/* <Route
-                                path="/login"
-                                render={({ match: { url } }): JSX.Element => (
-                                    <Fragment>
-                                        <Route exact path={`${url}/`}>
-                                            <Login updateHacker={setHacker} updateToken={setToken} />
-                                        </Route>
-                                        <Route path={`${url}/reset-password`} component={ResetPassword} />
-                                    </Fragment>
-                                )}
-                            />
-                            <Route
-                                path="/signup"
-                                render={(): JSX.Element => <SignUp updateHacker={setHacker} updateToken={setToken} />}
-                            /> */}
                         </Fragment>
                     )}
                 />
-                <Route path="/maintenance" component={Maintenance} />
-                <Route path="*" component={Error} />
-                <Redirect from="/HackMerced" to="/" />
-            </Switch>
-        </Router>
+                <Route path="/maintenance">
+                    <Maintenance />
+                </Route>
+                <Route path="*">
+                    <Error />
+                </Route>
+            </Routes>
+        </BrowserRouter>
     );
 };
 

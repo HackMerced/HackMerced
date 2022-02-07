@@ -1,6 +1,6 @@
 import React, { FC, Fragment, useState } from "react";
 import Axios, { AxiosResponse } from "axios";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Footer from "../../../components/Footer";
 import Navbar from "../../../components/NavBar";
@@ -19,7 +19,7 @@ const SignUp: FC<{
         email: "",
         password: "",
     });
-    const history = useHistory();
+    let history = useNavigate();
 
     // Handles Change on the fields of the form
     const handleInputChange = (
@@ -40,7 +40,7 @@ const SignUp: FC<{
             if (response.status === 201 && response.statusText === "Created") {
                 updateHacker(response.data.user);
                 updateToken(response.data.token);
-                history.push("/dashboard");
+                history("/dashboard");
             }
         });
     };
