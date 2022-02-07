@@ -3,6 +3,7 @@ import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { createHashHistory } from "history";
 
 import Home from "./pages/Home";
+import HackMercedVII from "./pages/HackMercedVII";
 import PastHackathons from "./pages/PastHackathons";
 import SponsorUs from "./pages/SponsorUs";
 import ContactUs from "./pages/ContactUs";
@@ -35,6 +36,7 @@ const App: FC = (): JSX.Element => {
         >
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route exact path="/hackmercedvii" component={HackMercedVII} />
                 <Route path="/sponsors" component={SponsorUs} />
                 <Route path="/contact-us" component={ContactUs} />
                 <Route path="/past-hackathons" component={PastHackathons} />
