@@ -1,5 +1,5 @@
 .hackmerced-vii {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     font-family: "Rubik", sans-serif;
 
     /*
@@ -184,7 +184,7 @@
     * #####################
     */
     &__faq {
-        background-image: linear-gradient(-180deg, #601D20, #893739);
+        background-image: linear-gradient(-180deg, #601d20, #893739);
         padding: 3% 0%;
 
         &__title {
@@ -215,8 +215,12 @@
                 width: 48%;
                 padding: 5px;
 
+                @media only screen and (max-width: 1000px) {
+                    width: 100%;
+                }
+
                 &__title {
-                    background-image: linear-gradient(45deg, #FEC58B, #F29A73);
+                    background-image: linear-gradient(45deg, #fec58b, #f29a73);
                     border-radius: 15px;
                     color: #230404;
                     cursor: pointer;
@@ -241,7 +245,7 @@
                     margin: 5px;
                     max-height: 0;
                     overflow: hidden;
-                    transition: max-height 0.2s ease-out;
+                    transition: max-height 0.2s cubic-bezier(0.51, 0.93, 0.54, 1.04);
                     border-style: none none none solid;
                     border-width: 5px;
                     border-color: #0a0509;
@@ -250,7 +254,7 @@
                 }
 
                 .display-question {
-                    max-height: 200px; // if this is not in terms of px then the transition of change is too fast
+                    max-height: 200px;
                 }
             }
         }
