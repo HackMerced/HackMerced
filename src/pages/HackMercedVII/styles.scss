@@ -8,104 +8,72 @@
     * #########################
     */
     &__landing {
+        background-image: url("../../assets/images/HM_tower.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        position: relative;
+
         @media (width: 1024px) and (height: 1366px) {
             height: 800px !important;
         }
 
         &__container {
-            background-image: url("../../assets/images/landing-page-hmvi.png");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            height: 100%;
-            width: 100%;
-            position: relative;
+            float: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            margin: 0;
+            padding: 0;
 
             &__title {
-                float: center;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
                 margin: 0;
                 padding: 0;
-            }
-
-            &__main {
-                margin: 0;
-                padding: 0;
-
                 font-size: 50px;
-                /*font-style: italic;*/
                 font-weight: 600;
                 letter-spacing: 10px;
-
                 text-shadow: 0px 0px 15px #e9be91, 0px 0px 25px #0a0509;
+                color: #fffaee;
+                text-transform: uppercase;
+            }
+
+            &__date {
+                margin: 0;
+                padding: 0;
+                font-weight: 400;
+                letter-spacing: 2px;
+                text-shadow: 0px 0px 12px #e9be91, 0px 0px 25px #0a0509;
                 color: #fffaee;
             }
 
-            &__sub {
+            &__location {
                 margin: 0;
-                padding: 0;
-
-                font-size: 50px;
-                /*font-style: italic;*/
-                font-weight: 600;
-                letter-spacing: 10px;
-
-                text-shadow: 0px 0px 15px #e9be91, 0px 0px 25px #0a0509;
+                padding: 5px;
+                font-weight: 400;
+                letter-spacing: 2px;
+                text-shadow: 0px 0px 12px #e9be91, 0px 0px 25px #0a0509;
                 color: #fffaee;
             }
 
             &__button {
-                margin: 0;
-                position: absolute;
-                font-size: 0.8rem;
-                top: 88%;
-                left: 50%;
-                -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-                text-transform: uppercase;
-                border-radius: 20px;
-                transition: 0.2s all;
-                text-align: center;
-                padding: 2.8%;
-                color: white;
-                background-color: #ff785a;
-                border: none;
-
-                @media (min-width: 1000px) {
-                    font-size: 1.2rem;
-                    padding: 1.5%;
-                }
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                    top: 100%;
-                    right: 5%;
-                    width: 90%;
-                    height: 5%;
-                    opacity: 0;
-                    box-shadow: 0 12px 16px 0 black;
-                    transition: 0.2s all;
-                    transition-delay: 0.1;
-                    background: radial-gradient(ellipse at center, rgpa (0, 0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
-                }
+                font-family: inherit;
+                font-size: 80%;
+                font-weight: 500;
+                letter-spacing: 1px;
+                box-sizing: border-box;
+                margin: 10px;
+                padding: 0px 30px;
+                border-radius: 15px;
+                border-style: none;
+                color: #230404;
+                background-image: linear-gradient(to right, #fec58b, #f29a73);
 
                 &:hover {
-                    color: black;
-                    box-shadow: 0px 0px 10px #f65331, 0px 0px 10px #ff785a;
-                }
-
-                &:hover:before {
-                    opacity: 1;
-                }
-
-                &:active {
-                    background: transparent;
-                    color: white;
-                    background-color: #272831;
+                    color: #b15226;
+                    background-image: linear-gradient(to right, #ffebd6, #fde0d4);
                 }
             }
         }
@@ -117,16 +85,18 @@
     * ########################
     */
     &__themes {
-        background-color: #272831;
+        background-image: linear-gradient(180deg, #521c1a, #383030);
         text-align: center;
+        padding: 3% 10% 10% 10%;
 
         &__title {
-            color: white;
-            font-size: 40px;
-            padding: 6%;
-            font-weight: bold;
             text-align: center;
-            margin-top: 0;
+            padding: 0 0 3% 0;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-shadow: 0px 0px 15px #e9be91;
+            color: #fffaee;
+            text-transform: uppercase;
 
             @media only screen and (max-width: 900px) {
                 font-size: 30px;
@@ -144,29 +114,35 @@
             text-align: center;
 
             h2 {
-                font-size: 32px;
-                font-weight: normal;
-                text-shadow: 0px 0px 10px #f65331, 0px 0px 10px #ff785a;
-            }
-
-            &__tracks {
-                width: 300px;
-                margin: auto;
+                display: block;
+                width: auto;
+                padding: 40px 40px 0px 40px;
+                letter-spacing: 2px;
+                text-align: center;
+                text-shadow: none;
+                color: #230404;
             }
 
             p {
-                margin: auto;
-                max-width: 80%;
-                font-size: 18px;
+                display: block;
+                width: auto;
+                padding: 0px 40px 40px 40px;
+                text-align: center;
+                text-shadow: none;
+                color: #230404;
             }
 
-            .track-one,
-            .track-three {
-                padding: 0% 0% 0% 3%;
-            }
+            .track {
+                background-color: white;
+                border-radius: 15px;
+                margin: 10px;
+                transition: transform 0.4s;
+                box-shadow: 0px 0px 30px #e06f4b;
+                background-image: linear-gradient(45deg, #fec58b, #f29a73);
 
-            .track-two {
-                padding: 8% 0% 0% 3%;
+                &:hover {
+                    transform: translateY(-5px);
+                }
             }
 
             /* Everything under 900px width - responsiveness */
@@ -177,26 +153,11 @@
                     font-size: 25px;
                 }
 
-                &__tracks {
-                    width: 150px;
-                    margin: auto;
-                    padding: 3% 0;
-                }
-
                 p {
                     margin: auto;
                     max-width: 80%;
                     padding: 3% 0;
                     font-size: 14px;
-                }
-
-                .track-one {
-                    padding: 3% 1% 0% 1%;
-                }
-
-                .track-two,
-                .track-three {
-                    padding: 5% 1% 0% 1%;
                 }
             }
 
@@ -207,26 +168,11 @@
                     font-size: 18px;
                 }
 
-                &__tracks {
-                    width: 120px;
-                    margin: auto;
-                    padding: 3% 0;
-                }
-
                 p {
                     margin: auto;
                     max-width: 80%;
                     padding: 3% 0;
                     font-size: 12px;
-                }
-
-                .track-one {
-                    padding: 3% 1% 0% 1%;
-                }
-
-                .track-two,
-                .track-three {
-                    padding: 5% 1% 0% 1%;
                 }
             }
         }
@@ -238,14 +184,17 @@
     * #####################
     */
     &__faq {
-        background-color: #272831;
-        padding: 5% 0%;
+        background-image: linear-gradient(-180deg, #601D20, #893739);
+        padding: 3% 0%;
 
         &__title {
-            font-size: 40px;
             text-align: center;
-            padding: 10% 0% 3% 0%;
-            background-color: #272831;
+            padding: 0;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-shadow: 0px 0px 15px #e9be91;
+            color: #fffaee;
+            text-transform: uppercase;
 
             @media only screen and (max-width: 900px) {
                 font-size: 30px;
@@ -257,6 +206,48 @@
                 margin: 0 auto;
             }
         }
+
+        &__content {
+            .question {
+                display: inline-block;
+                width: 48%;
+                padding: 5px;
+                
+                &__title {
+                    background-image: linear-gradient(45deg, #FEC58B, #F29A73);
+                    border-radius: 15px;
+                    color: #230404;
+                    cursor: pointer;
+                    padding: 18px;
+                    width: 100%;
+                    border: none;
+
+                    letter-spacing: 1px;
+                    text-align: left;
+                    text-transform: uppercase;
+                    font-family: inherit;
+                    font-weight: 600;
+
+                    outline: none;
+                    font-size: 14px;
+                }
+
+                &__answer {
+                    width: 95%;
+                    float: right;
+                    padding: 0 18px;
+                    margin: 5px;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+                    border-style: none none none solid;
+                    border-width: 5px;
+
+                    text-align: left;
+                    font-weight: 500;
+                }
+            }
+        }
     }
 
     /*
@@ -265,16 +256,19 @@
     * ##########################
     */
     &__sponsors {
-        background-color: #b63f1a;
+        background-image: linear-gradient(-180deg, #521c1a, #383030);
         max-width: 100%;
         height: auto;
+        padding-top: 3%;
 
         &__title {
-            font-size: 40px;
             text-align: center;
-            padding: 3%;
-            background-color: #b63f1a;
-            margin-top: 0;
+            padding: 0;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-shadow: 0px 0px 15px #e9be91;
+            color: #fffaee;
+            text-transform: uppercase;
 
             @media only screen and (max-width: 900px) {
                 font-size: 30px;
@@ -309,18 +303,5 @@
         @media only screen and (min-width: 1200px) {
             font-size: 35px;
         }
-    }
-}
-
-// This is  just here cause Sticker mule requires that their logo is different
-.sticker_mule {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-bottom: 4rem;
-
-    &__img {
-        width: 200px;
-        height: 100%;
     }
 }
