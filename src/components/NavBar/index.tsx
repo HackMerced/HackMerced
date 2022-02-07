@@ -7,12 +7,13 @@ import MLH_BANNER from "../../assets/images/mlh-trust-badge-2022-white.svg";
 import CLOSE_ICON from "../../assets/images/close-icon.svg";
 import "./styles.scss";
 
-const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?: string; showBanner?: boolean }> = ({
-    backgroundColor,
-    textColor,
-    breakLineColor,
-    showBanner = true,
-}): JSX.Element => {
+const Navbar: FC<{
+    backgroundColor?: string;
+    textColor?: string;
+    breakLineColor?: string;
+    showBanner?: boolean;
+    showDLToggle?: boolean;
+}> = ({ backgroundColor, textColor, breakLineColor, showBanner = true, showDLToggle = true }): JSX.Element => {
     const [openDrawer, toggleDrawer] = useState<boolean>(false);
     const [isDarkMode, setIsDarkMode] = useState(() =>
         localStorage.getItem("theme") ? localStorage.getItem("theme") === "dark" : false,
@@ -100,16 +101,18 @@ const Navbar: FC<{ backgroundColor?: string; textColor?: string; breakLineColor?
                         <Link to="/contact-us">Contact Us</Link>
                         {pathname === "/contact-us" ? BreakLine() : null}
                     </Menu.Item>
-                    <Menu.Item>
-                        <div className="nav-toggle-switch">
-                            <DarkModeToggle
-                                className="dark-mode-toggle"
-                                onChange={themeSwitcher}
-                                checked={isDarkMode}
-                                size={80}
-                            />
-                        </div>
-                    </Menu.Item>
+                    {showDLToggle ? (
+                        <Menu.Item>
+                            <div className="nav-toggle-switch">
+                                <DarkModeToggle
+                                    className="dark-mode-toggle"
+                                    onChange={themeSwitcher}
+                                    checked={isDarkMode}
+                                    size={80}
+                                />
+                            </div>
+                        </Menu.Item>
+                    ) : null}
                 </Menu.Items>
             </Menu.Wrapper>
         </Styles.Wrapper>

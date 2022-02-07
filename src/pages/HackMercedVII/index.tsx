@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 
 import Navbar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -10,38 +10,60 @@ import { FAQData } from "../../assets/faq";
 
 import "./styles.scss";
 
+type AccordianItemState = { title: string; content: string; open: boolean };
+type AccordianState = Array<{ title: string; content: string; open: boolean }>;
+
 const HackMercedVII: FC = (): JSX.Element => {
     const { width, height } = useWindowDimensions();
+    const [accordionItems, setAccordionItems] = useState<AccordianState>([]);
 
     let backgroundHeight = height > 600 ? height / 2 : 400;
     backgroundHeight = width > 800 ? height + height / 3 - 50 : backgroundHeight;
 
-    const dropdown = () => {};
+    // parse the incoming data prior to rendering the component
+    useEffect(() => {
+        const parseData: () => void = (): void => {
+            const accordion: AccordianState = [];
 
-    const generateFAQ = (): JSX.Element => {
-        let list: Array<JSX.Element> = [];
+            FAQData.forEach((i: { title: string; content: string }) => {
+                accordion.push({
+                    title: i.title,
+                    content: i.content,
+                    open: false,
+                });
+            });
 
-        FAQData.map((faq) => {
-            let question = (
-                <div className="question" onClick={dropdown}>
-                    <button type="button" className="question__title">
-                        {faq.title}
-                    </button>
-                    <div className="question__answer">
-                        <p>{faq.content}</p>
-                    </div>
-                </div>
-            );
+            setAccordionItems(accordion);
+        };
 
-            list.push(question);
-        });
+        parseData();
+        // !The below eslint rule may show as not a rule but it is a rule
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-        return <div className="hackmerced-vii__faq__content">{list}</div>;
+    // Handles on click events
+    const click: (i: AccordianItemState) => void = (i: AccordianItemState): void => {
+        const newAccordion: AccordianState = accordionItems.slice();
+        const index: number = newAccordion.indexOf(i);
+
+        newAccordion[index].open = !newAccordion[index].open;
+        setAccordionItems(newAccordion);
     };
+
+    const generateFAQ: JSX.Element[] = accordionItems.map((faq, idx) => (
+        <div className="question" key={idx}>
+            <button type="button" className="question__title" onClick={click.bind(null, faq)}>
+                {faq.title}
+            </button>
+            <div className={faq.open ? "question__answer display-question" : "question__answer"}>
+                <p>{faq.content}</p>
+            </div>
+        </div>
+    ));
 
     return (
         <main className="hackmerced-vii">
-            <Navbar backgroundColor="#0C2136" textColor="#FFFFF" breakLineColor="#C4BDDC" showBanner={true} />
+            <Navbar backgroundColor="#0C2136" textColor="#FFFFF" breakLineColor="#C4BDDC" showBanner={true} showDLToggle={false} />
             {/* Landing Header */}
             <section className="hackmerced-vii__landing" style={{ width: width, height: backgroundHeight }}>
                 <div className="hackmerced-vii__landing__container">
@@ -91,7 +113,7 @@ const HackMercedVII: FC = (): JSX.Element => {
             {/* FAQ Section */}
             <section className="hackmerced-vii__faq">
                 <h2 className="hackmerced-vii__faq__title">Frequently Asked Questions</h2>
-                {generateFAQ()}
+                <div className="hackmerced-vii__faq__content">{generateFAQ}</div>
             </section>
             {/* Sponsors Section */}
             <section className="hackmerced-vii__sponsors">

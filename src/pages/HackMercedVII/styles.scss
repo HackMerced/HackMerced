@@ -208,11 +208,13 @@
         }
 
         &__content {
+            padding: 0 10%;
+
             .question {
                 display: inline-block;
                 width: 48%;
                 padding: 5px;
-                
+
                 &__title {
                     background-image: linear-gradient(45deg, #FEC58B, #F29A73);
                     border-radius: 15px;
@@ -233,7 +235,7 @@
                 }
 
                 &__answer {
-                    width: 95%;
+                    width: 90%;
                     float: right;
                     padding: 0 18px;
                     margin: 5px;
@@ -242,9 +244,13 @@
                     transition: max-height 0.2s ease-out;
                     border-style: none none none solid;
                     border-width: 5px;
-
+                    border-color: #0a0509;
                     text-align: left;
                     font-weight: 500;
+                }
+
+                .display-question {
+                    max-height: 200px; // if this is not in terms of px then the transition of change is too fast
                 }
             }
         }
