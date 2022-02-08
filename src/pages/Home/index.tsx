@@ -1,4 +1,4 @@
-import React, { FC, Fragment, useState } from "react";
+import React, { FC, Fragment} from "react";
 //import Axios, { AxiosResponse } from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
@@ -17,8 +17,8 @@ import TEAM_PICTURE_WEBP from "../../assets/images/hackmerced-v.webp";
 import team from "../../assets/team";
 import winners from "../../assets/winners";
 import "./styles.scss";
-import jsonp from "jsonp";
-import queryString from 'querystring';
+// import jsonp from "jsonp";
+// import queryString from 'querystring';
 
 
 type TeamProps = {
@@ -94,31 +94,31 @@ const generateSectionHeading = (title: string): JSX.Element => {
 const Home: FC = (): JSX.Element => {
     const { width } = useWindowDimensions();
     
-    const [form, setForm] = useState<{ email: string }>({ email: "" });
+//     const [form, setForm] = useState<{ email: string }>({ email: "" });
 
-    // Handles Change on the fields of the form
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        const { name, value } = event.target;
-        setForm({ ...form, [name]: value });
-       // console.log(form);
-   };
+//     // Handles Change on the fields of the form
+//     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+//         const { name, value } = event.target;
+//         setForm({ ...form, [name]: value });
+//        // console.log(form);
+//    };
  
-    // Handles the submission action when the submit button is pressed
-    const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>): Promise<void> => {
-        const formData = {
-            EMAIL: form.email,
-        };
+//     // Handles the submission action when the submit button is pressed
+//     const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>): Promise<void> => {
+//         const formData = {
+//             EMAIL: form.email,
+//         };
        
-        const baseURL = process.env.REACT_APP_MAILCHIMP_API_KEY;
-        const finalURL = baseURL + "&" + queryString.stringify(formData);
+//         const baseURL = process.env.REACT_APP_MAILCHIMP_API_KEY;
+//         const finalURL = baseURL + "&" + queryString.stringify(formData);
       
-        event.preventDefault();
-        jsonp(finalURL, { param: 'c' },  
+//         event.preventDefault();
+//         jsonp(finalURL, { param: 'c' },  
 
-        );
-        alert("Subscribed to HackMerced Newsletter!");
-        // console.log(process.env.REACT_APP_MAILCHIMP_API_KEY);
-    }
+//         );
+//         alert("Subscribed to HackMerced Newsletter!");
+//         // console.log(process.env.REACT_APP_MAILCHIMP_API_KEY);
+//     }
 
     return (
         <main className="home">
@@ -156,7 +156,8 @@ const Home: FC = (): JSX.Element => {
                         </picture>
                         <div className="home__heading__content__title__text">The biggest San Joaquin Valley hackathon.</div>
                         <div className="home__heading__content__title__sub-text">Stay updated with HackMerced and subscribe to our email list!</div>
-                        <form className="home__heading__content__title__form" onSubmit={handleSubmit}>
+                        <button className="home__heading__content__title__event-button">HackMerced VII</button>
+                        {/* <form className="home__heading__content__title__form" onSubmit={handleSubmit}>
                             <input
                                 className="home__heading__content__title__form_input"
                                 type="email"
@@ -166,7 +167,8 @@ const Home: FC = (): JSX.Element => {
                                 required
                             />
                             <button type="submit">Submit</button>
-                        </form>
+                        </form> */}
+                        {/* PLEASE DONT UNCOMMENT THIS UNLESS YOU HAVE CHANGE THIS FEATURE TO A MAIL FORM AND FIT THE DESIGN OF THE WEBSITE */}
                     </div>
                 </section>
             </section>

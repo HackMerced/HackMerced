@@ -47,6 +47,7 @@
                 letter-spacing: 2px;
                 text-shadow: 0px 0px 12px #e9be91, 0px 0px 25px #0a0509;
                 color: #fffaee;
+                font-size: 30px;
             }
 
             &__location {
@@ -56,6 +57,7 @@
                 letter-spacing: 2px;
                 text-shadow: 0px 0px 12px #e9be91, 0px 0px 25px #0a0509;
                 color: #fffaee;
+                font-size: 20px;
             }
 
             &__button {
@@ -266,7 +268,7 @@
     * ##########################
     */
     &__sponsors {
-        background-image: linear-gradient(-180deg, #521c1a, #383030);
+        background-image: linear-gradient(-180deg, #521c1a, #383030); //#0C2136 old color
         max-width: 100%;
         height: auto;
         padding-top: 3%;

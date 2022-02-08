@@ -63,7 +63,13 @@ const HackMercedVII: FC = (): JSX.Element => {
 
     return (
         <main className="hackmerced-vii">
-            <Navbar backgroundColor="#0C2136" textColor="#FFFFF" breakLineColor="#C4BDDC" showBanner={true} showDLToggle={false} />
+            <Navbar
+                backgroundColor="#1A0F21"
+                textColor="#FFFFF"
+                breakLineColor="#C4BDDC"
+                showBanner={true}
+                showDLToggle={false}
+            />
             {/* Landing Header */}
             <section className="hackmerced-vii__landing" style={{ width: width, height: backgroundHeight }}>
                 <div className="hackmerced-vii__landing__container">
@@ -81,35 +87,40 @@ const HackMercedVII: FC = (): JSX.Element => {
                 </div>
             </section>
             {/* Themes Section */}
-            <section className="hackmerced-vii__themes">
+            {/* <section className="hackmerced-vii__themes">
                 <h1 className="hackmerced-vii__themes__title">Tracks</h1>
                 <div className="hackmerced-vii__themes__container">
                     <div className="track-one track">
-                        <h2>Social Good</h2>
+                        <h2>Education</h2>
                         <p>
-                            Social Good also known as common good, focuses on societal problems and potential to offer
-                            meaningful solutions. Create a project to bring the world to a more equitable and
-                            sustainable path.
+                            Online school learning has become more active now than ever before. Game-based learning is
+                            one teaching strategy that’s growing increasingly popular to help students achieve their
+                            learning objectives. Light the future and create an engaging game that helps students
+                            support and increase their understanding of course content and active participation in
+                            class.
                         </p>
                     </div>
                     <div className="track-two track">
-                        <h2>Inclusivity</h2>
+                        <h2>Health</h2>
                         <p>
-                            Diversity is an integral part of our history, culture, and identity. Inclusion is the way we
-                            treat and perceive all differences. Create a project to accelerate the approach to diversity
-                            and inclusion.
+                            Due to COVID and its variants, mental and physical health has been in continuous decline
+                            since quarantine started for the past years. Light the future and create a mobile
+                            application to help others communicate with professionals at ease, track their health, or
+                            monitor their nutrition.
                         </p>
                     </div>
                     <div className="track-three track">
-                        <h2>Cybersecurity</h2>
+                        <h2>Privacy Awareness</h2>
                         <p>
-                            The substantial use of technology has made it vital to safeguard ourselves from unapproved
-                            access. Private information and data are more exposed than before to such unpleasantries.
-                            Create a project to enrich a safe digital world.
+                            Getting online can make our lives a lot easier, but also comes with many risks such as scams
+                            and fraud. Online scams have become so intricate that viruses have been hidden in pop-up
+                            advertisements or other forms of click bait. Light the future and help create an application
+                            or extension to help others detect and block unidentified scams to keep them and their loved
+                            ones safe virtually.
                         </p>
                     </div>
                 </div>
-            </section>
+            </section> */}
             {/* FAQ Section */}
             <section className="hackmerced-vii__faq">
                 <h2 className="hackmerced-vii__faq__title">Frequently Asked Questions</h2>
@@ -122,7 +133,7 @@ const HackMercedVII: FC = (): JSX.Element => {
                     <img src={SPONSORS} width="100%" alt="Our Sponsors for HackMerced VI" />
                 </div>
             </section>
-            <Footer backgroundColor="#0C2136" textColor="#FFFFF" fontColor="#EEEBF5" />
+            <Footer backgroundColor="#383030" textColor="#FFFFF" fontColor="#EEEBF5" />
         </main>
     );
 };
