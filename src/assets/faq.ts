@@ -20,7 +20,7 @@ export const FAQData = [
     {
         title: "What should I create?",
         content:
-            "You will be building a project based on our themes this year! Our themes will go live days before our event.",
+            "You will be building a project based on our themes this year! Our themes will go live the day before our event.",
     },
     {
         title: "What if I have no coding background?",
