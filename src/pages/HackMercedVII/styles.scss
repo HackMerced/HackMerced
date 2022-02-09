@@ -152,7 +152,6 @@
                     color: #b15226;
                     background-image: linear-gradient(to right, #ffebd6, #fde0d4);
                 }
-
             }
         }
     }
@@ -176,29 +175,29 @@
             color: #fffaee;
             text-transform: uppercase;
 
-             /* Extra small devices (phones, 600px and down) */
-             @media only screen and (max-width: 600px) {
-                font-size: 20px;
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px) {
+                font-size: 32px;
             }
 
             /* Small devices (portrait tablets and large phones, 600px and up) */
             @media only screen and (min-width: 600px) {
-                font-size: 22px;
+                font-size: 30px;
             }
 
             /* Medium devices (landscape tablets, 768px and up) */
             @media only screen and (min-width: 768px) {
-                font-size: 25px;
+                font-size: 35px;
             }
 
             /* Large devices (laptops/desktops, 992px and up) */
             @media only screen and (min-width: 992px) {
-                font-size: 30px;
+                font-size: 45px;
             }
 
             /* Extra large devices (large laptops and desktops, 1200px and up) */
             @media only screen and (min-width: 1200px) {
-                font-size: 35px;
+                font-size: 50px;
             }
         }
 
@@ -234,7 +233,7 @@
                 transition: transform 0.4s;
                 box-shadow: 0px 0px 30px #e06f4b;
                 background-image: linear-gradient(45deg, #fec58b, #f29a73);
-
+                width: 80%;
                 &:hover {
                     transform: translateY(-5px);
                 }

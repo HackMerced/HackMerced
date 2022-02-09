@@ -87,40 +87,32 @@ const HackMercedVII: FC = (): JSX.Element => {
                 </div>
             </section>
             {/* Themes Section */}
-            {/* <section className="hackmerced-vii__themes">
+            <section className="hackmerced-vii__themes">
                 <h1 className="hackmerced-vii__themes__title">Tracks</h1>
                 <div className="hackmerced-vii__themes__container">
                     <div className="track-one track">
                         <h2>Education</h2>
                         <p>
-                            Online school learning has become more active now than ever before. Game-based learning is
-                            one teaching strategy that’s growing increasingly popular to help students achieve their
-                            learning objectives. Light the future and create an engaging game that helps students
-                            support and increase their understanding of course content and active participation in
-                            class.
+                            Online school learning and student engagement is now needed than ever. Light the future and build an innovative solution that helps students
+                            support online education and connect students together.
                         </p>
                     </div>
+                    
                     <div className="track-two track">
-                        <h2>Health</h2>
+                        <h2>Open Innovation</h2>
                         <p>
-                            Due to COVID and its variants, mental and physical health has been in continuous decline
-                            since quarantine started for the past years. Light the future and create a mobile
-                            application to help others communicate with professionals at ease, track their health, or
-                            monitor their nutrition.
+                            Light the Future and develop an innovative track where hackers can come up with their own ideas, and make awesome innovative projects based on a problem they can think of :D Sky is the limit!
                         </p>
                     </div>
                     <div className="track-three track">
-                        <h2>Privacy Awareness</h2>
+                        <h2>Cybersecurity</h2>
                         <p>
-                            Getting online can make our lives a lot easier, but also comes with many risks such as scams
-                            and fraud. Online scams have become so intricate that viruses have been hidden in pop-up
-                            advertisements or other forms of click bait. Light the future and help create an application
-                            or extension to help others detect and block unidentified scams to keep them and their loved
+                            Getting online can make our lives a lot easier, but also comes with many risks. Light the future and build an innovation solution to help others detect and block unidentified security risks to keep them and their loved
                             ones safe virtually.
                         </p>
                     </div>
                 </div>
-            </section> */}
+            </section>
             {/* FAQ Section */}
             <section className="hackmerced-vii__faq">
                 <h2 className="hackmerced-vii__faq__title">Frequently Asked Questions</h2>

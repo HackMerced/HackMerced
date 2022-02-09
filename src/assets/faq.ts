@@ -30,20 +30,29 @@ export const FAQData = [
     {
         title: "What will I need?",
         content:
-            "Since HackMerced VII is online this year due to rise of COVID-19 and variants, we will provide resources, mentorship, and workshops during the event. Bring your passion to solve our tech-related themes this year and a functional computer/laptop ofcourse.",
+            "Since HackMerced VII is online this year due to rise of COVID-19 and variants, we will provide resources, mentorship, and workshops during the event. Bring your passion to solve our tech-related themes this year and a functional computer/laptop.",
+    },
+    {
+        title: "Can I start my project before?",
+        content: "No, you cannot work the project before or copy past projects. All work on a project should be done at the hackathon.",
     },
     {
         title: "Is HackMerced free?",
         content: "Admission to HackMerced is completely free. Workshops and mentorship are free for the entire event!",
     },
     {
+        title: "How do I get meal reimbursement?",
+        content: "Details coming soon.",
+    },
+    {
         title: "What are the rules for this event?",
         content:
              "We follow the MLH Code of Conduct.",
     },
+    
     {
         title: "404: Question Not Found",
         content:
-            "Feel free to message us at <a href='mailto:general@hackmerced.com'>general@hackmerced.com</a>, contact us on our <a href='https://hackmerced.com/#/contact-us' rel='noopener noreferrer' target='_blank'>contact page</a>, or hop on our discord during the event and talk to one of our organizers!",
+            "Feel free to message us general@hackmerced.com, contact us on our form https://hackmerced.com/#/contact-us, or hop on our discord during the event and talk to one of our organizers!",
     },
 ];
