@@ -4,7 +4,7 @@ import Navbar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import useWindowDimensions from "../../components/WindowDimensions";
 
-import SPONSORS from "../../assets/images/sponsors-hackmercedvi.png";
+import SPONSORS from "../../assets/images/sponsors-hackmercedvii.png";
 
 import { FAQData } from "../../assets/faq";
 
