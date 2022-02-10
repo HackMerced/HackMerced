@@ -8,7 +8,7 @@ type AccordianItemState = { title: string; content: string; open: boolean };
 type AccordianState = Array<{ title: string; content: string; open: boolean }>;
 
 const Accordian: FC<AccordianProps> = ({ data }) => {
-    const [accordionItems, setAccodionItems] = useState<AccordianState>([]);
+    const [accordionItems, setAccordionItems] = useState<AccordianState>([]);
 
     // parse the incoming data prior to rendering the component
     useEffect(() => {
@@ -23,7 +23,7 @@ const Accordian: FC<AccordianProps> = ({ data }) => {
                 });
             });
 
-            setAccodionItems(accordion);
+            setAccordionItems(accordion);
         };
 
         parseData();
@@ -37,7 +37,7 @@ const Accordian: FC<AccordianProps> = ({ data }) => {
         const index: number = newAccordion.indexOf(i);
 
         newAccordion[index].open = !newAccordion[index].open;
-        setAccodionItems(newAccordion);
+        setAccordionItems(newAccordion);
     };
 
     // Generates each section

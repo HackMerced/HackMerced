@@ -53,7 +53,7 @@ const Footer: FC<{ backgroundColor?: string; textColor?: string; fontColor?: str
             </section>
             <section className="footer__credits">
                 <span className="footer__credits__copyright">
-                    © 2021 HackMerced. All Rights Reserved.
+                    © 2022 HackMerced. All Rights Reserved.
                     <br /> Made with ♡ by HackMerced.
                 </span>
             </section>
