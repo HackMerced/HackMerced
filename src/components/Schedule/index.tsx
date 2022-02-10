@@ -14,7 +14,7 @@ const Table: FC<any> = (): JSX.Element => {
                         <span className="title">12:30 PM PST</span>
                         <p
                             className="checkin"
-                            data-tip="Location: Room 130 (in-person only)
+                            data-tip="Location: COB2 Room 130 (in-person only)
                             Online: Discord"
                             style={{ position: "relative" }}
                         >
@@ -28,8 +28,8 @@ const Table: FC<any> = (): JSX.Element => {
                         <p
                             className="opening"
                             data-tip="
-                            Location: Room 130 (in-person)
-                            Online: Discord"
+                            Location: COB2 Room 130 (in-person)
+                            Meeting ID: 839 5299 5909"
                             style={{ position: "relative" }}
                         >
                             Opening Ceremony
@@ -41,16 +41,16 @@ const Table: FC<any> = (): JSX.Element => {
                         <span className="title">1:30-2:30 PM PST</span>
                         <p
                             className="lightChallenge"
-                            data-tip="Location: Room 140 (in-person)
-                            Online: Discord"
+                            data-tip="Location: COB2 Room 140 (in-person)
+                            Meeting ID: 856 9306 9593"
                             style={{ position: "relative" }}
                         >
                             Light Challenge
                         </p>
                         <p
                             className="design"
-                            data-tip="Location: Room 130 (in-person)
-                            Online: Discord"
+                            data-tip="Location: COB2 Room 130 (in-person)
+                            Meeting ID: 839 5299 5909"
                             style={{ position: "relative" }}
                         >
                             Design Workshop
@@ -65,8 +65,8 @@ const Table: FC<any> = (): JSX.Element => {
                         <span className="title">2:30-3:30 PM PST</span>
                         <p
                             className="github"
-                            data-tip="Location: Room 130 (in-person)
-                            Online: Discord"
+                            data-tip="Location: COB2 Room 130 (in-person)
+                            Meeting ID: 839 5299 5909"
                             style={{ position: "relative" }}
                         >
                             Code Collab w/ GitHub
@@ -81,11 +81,11 @@ const Table: FC<any> = (): JSX.Element => {
                         <span className="title">2:30-4:30 PM PST</span>
                         <p
                             className="acm"
-                            data-tip="Location: Room 140 (in-person)
-                            Online: Discord"
+                            data-tip="Location: COB2 Room 140 (in-person)
+                            Meeting ID: 856 9306 9593"
                             style={{ position: "relative" }}
                         >
-                            Hack the Power with SEA and ACM
+                            Hack the Power with SEA & ACM
                         </p>
                     </div>
                 </div>
@@ -94,8 +94,8 @@ const Table: FC<any> = (): JSX.Element => {
                         <span className="title">3:30-4:30 PM PST</span>
                         <p
                             className="notion"
-                            data-tip="Location: Room 130 (in-person)
-                            Online: Discord"
+                            data-tip="Location: COB2 Room 130 (in-person)
+                            Meeting ID: 839 5299 5909"
                             style={{ position: "relative" }}
                         >
                             Project Management w/ Notion
@@ -110,8 +110,8 @@ const Table: FC<any> = (): JSX.Element => {
                         <span className="title">4:30-5:30 PM PST</span>
                         <p
                             className="interview"
-                            data-tip="Location: Room 130 (in-person)
-                            Online: Discord"
+                            data-tip="Location: COB2 Room 130 (in-person)
+                            Meeting ID: 839 5299 5909"
                             style={{ position: "relative" }}
                         >
                             Hack the Technical Interview
@@ -126,7 +126,7 @@ const Table: FC<any> = (): JSX.Element => {
                         <span className="title">5:30-6:30 PM PST</span>
                         <p
                             className="opening"
-                            data-tip="Location: Room 130 (in-person only)"
+                            data-tip="Location: COB2 Room 130 (in-person only)"
                             style={{ position: "relative" }}
                         >
                             Dinner
@@ -144,8 +144,8 @@ const Table: FC<any> = (): JSX.Element => {
                         <span className="title">7:00 PM PST</span>
                         <p
                             className="opening"
-                            data-tip="Location: Room 130 (in-person)
-                            Online: Discord"
+                            data-tip="Location: COB2 Room 130 (in-person)
+                            Meeting ID: 839 5299 5909"
                             style={{ position: "relative" }}
                         >
                             Closing Ceremony
