@@ -79,7 +79,7 @@ const HackMercedVII: FC = (): JSX.Element => {
                     <button
                         className="hackmerced-vii__landing__container__button"
                         onClick={() => {
-                            window.location.href = "https://hackmercedvi.typeform.com/to/mY7E1Fug";
+                            window.location.href = "https://hackmerced2022.typeform.com/hackmercedvii";
                         }}
                     >
                         <h2 className="hackmerced-vii__landing__container__button__title">Register Now!</h2>
