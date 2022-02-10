@@ -1,5 +1,4 @@
-import React, { FC, Fragment } from "react";
-// import React, { FC, Fragment, useState } from "react";
+import React, { FC, Fragment} from "react";
 //import Axios, { AxiosResponse } from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +7,7 @@ import Navbar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Contribute from "../../components/Contribute";
 import useWindowDimensions from "../../components/WindowDimensions";
+import { Link } from "react-router-dom";
 
 import HACKMERCED_TITLE from "../../assets/images/placeholder-title.png";
 import HACKMERCED_TITLE_WEBP from "../../assets/images/placeholder-title.webp";
@@ -157,6 +157,7 @@ const Home: FC = (): JSX.Element => {
                         </picture>
                         <div className="home__heading__content__title__text">The biggest San Joaquin Valley hackathon.</div>
                         <div className="home__heading__content__title__sub-text">Stay updated with HackMerced and subscribe to our email list!</div>
+                        <Link to="/hackmercedvii"><button className="home__heading__content__title__event-button">HackMerced VII</button></Link>
                         {/* <form className="home__heading__content__title__form" onSubmit={handleSubmit}>
                             <input
                                 className="home__heading__content__title__form_input"
@@ -168,6 +169,7 @@ const Home: FC = (): JSX.Element => {
                             />
                             <button type="submit">Submit</button>
                         </form> */}
+                        {/* PLEASE DONT UNCOMMENT THIS UNLESS YOU HAVE CHANGE THIS FEATURE TO A MAIL FORM AND FIT THE DESIGN OF THE WEBSITE */}
                     </div>
                 </section>
             </section>
