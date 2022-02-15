@@ -48,7 +48,7 @@ export const FAQData = [
     {
         title: "What are the rules for this event?",
         content:
-            `We follow <strong> <a href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf' rel='noopener noreferrer' target='_blank'>MLH's Code of Conduct.</a></strong>`,
+            `We follow <strong> <u><a href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf' rel='noopener noreferrer' target='_blank'>MLH's Code of Conduct.</a></u></strong>`,
     },
 
     {

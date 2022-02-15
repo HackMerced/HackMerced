@@ -76,7 +76,7 @@ const HackMercedVII: FC = (): JSX.Element => {
                 <div className="hackmerced-vii__landing__container">
                     <div className="hackmerced-vii__landing__container__title">HackMerced VII</div>
                     <div className="hackmerced-vii__landing__container__date">March 4-6, 2022</div>
-                    <div className="hackmerced-vii__landing__container__location">University of California, Merced</div>
+                    <div className="hackmerced-vii__landing__container__location">Virtual Event</div>
                     <button
                         className="hackmerced-vii__landing__container__button"
                         onClick={() => {
