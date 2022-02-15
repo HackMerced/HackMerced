@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
+import ReactHtmlParser from "react-html-parser";
 
 import Navbar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -56,7 +57,7 @@ const HackMercedVII: FC = (): JSX.Element => {
                 {faq.title}
             </button>
             <div className={faq.open ? "question__answer display-question" : "question__answer"}>
-                <p>{faq.content}</p>
+            <p>{ReactHtmlParser(faq.content)}</p>
             </div>
         </div>
     ));
