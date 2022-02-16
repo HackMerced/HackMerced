@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 import useWindowDimensions from "../../components/WindowDimensions";
 
 import SPONSORS from "../../assets/images/sponsors-hackmercedvii.png";
+import { LanternAnimation } from "../../assets/lanterns";
 
 import { FAQData } from "../../assets/faq";
 
@@ -97,7 +98,7 @@ const HackMercedVII: FC = (): JSX.Element => {
                             support online education and connect students together.
                         </p>
                     </div>
-                    
+
                     <div className="track-two track">
                         <h2>Open Innovation</h2>
                         <p>
