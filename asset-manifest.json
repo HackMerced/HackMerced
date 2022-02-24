@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.dfba7e54.chunk.css",
-    "main.js": "/static/js/main.426c258c.chunk.js",
-    "main.js.map": "/static/js/main.426c258c.chunk.js.map",
+    "main.js": "/static/js/main.15afa4bf.chunk.js",
+    "main.js.map": "/static/js/main.15afa4bf.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a6aa62cc.js",
     "runtime-main.js.map": "/static/js/runtime-main.a6aa62cc.js.map",
     "static/css/2.14f3cd7d.chunk.css": "/static/css/2.14f3cd7d.chunk.css",
-    "static/js/2.37d072ff.chunk.js": "/static/js/2.37d072ff.chunk.js",
-    "static/js/2.37d072ff.chunk.js.map": "/static/js/2.37d072ff.chunk.js.map",
+    "static/js/2.ed0179ed.chunk.js": "/static/js/2.ed0179ed.chunk.js",
+    "static/js/2.ed0179ed.chunk.js.map": "/static/js/2.ed0179ed.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.18dac1e56a3fe44e84a5a7bf90fe9985.js": "/precache-manifest.18dac1e56a3fe44e84a5a7bf90fe9985.js",
+    "precache-manifest.dd53b4a0a06a67c18162640381a74360.js": "/precache-manifest.dd53b4a0a06a67c18162640381a74360.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.14f3cd7d.chunk.css.map": "/static/css/2.14f3cd7d.chunk.css.map",
     "static/css/main.dfba7e54.chunk.css.map": "/static/css/main.dfba7e54.chunk.css.map",
-    "static/js/2.37d072ff.chunk.js.LICENSE.txt": "/static/js/2.37d072ff.chunk.js.LICENSE.txt",
+    "static/js/2.ed0179ed.chunk.js.LICENSE.txt": "/static/js/2.ed0179ed.chunk.js.LICENSE.txt",
     "static/media/ACM.png": "/static/media/ACM.8256e6ce.png",
     "static/media/ASUCM.png": "/static/media/ASUCM.85fec3b9.png",
     "static/media/Alumni.png": "/static/media/Alumni.aa682e2f.png",
@@ -120,10 +120,11 @@
     "static/media/shub-award.jpg": "/static/media/shub-award.d82e83a0.jpg",
     "static/media/speaker-ii.jpg": "/static/media/speaker-ii.adc97fc7.jpg",
     "static/media/sponsor-design.jpg": "/static/media/sponsor-design.ebea0b6a.jpg",
+    "static/media/sponsor-hackmercedvii.png": "/static/media/sponsor-hackmercedvii.64c56a14.png",
     "static/media/sponsors-hackmercedvi.png": "/static/media/sponsors-hackmercedvi.7e3fde95.png",
-    "static/media/sponsors-hackmercedvii.png": "/static/media/sponsors-hackmercedvii.2cf5ef1c.png",
     "static/media/sponsors-ii.jpg": "/static/media/sponsors-ii.e760c691.jpg",
     "static/media/sponsors-v.jpg": "/static/media/sponsors-v.91cce107.jpg",
+    "static/media/sticker-mule-logo-dark.png": "/static/media/sticker-mule-logo-dark.4117dc0f.png",
     "static/media/sticker-mule-logo-light.png": "/static/media/sticker-mule-logo-light.1ee4e901.png",
     "static/media/sustainability.png": "/static/media/sustainability.527c0062.png",
     "static/media/teaching.jpg": "/static/media/teaching.8b401ffe.jpg",
@@ -145,8 +146,8 @@
   "entrypoints": [
     "static/js/runtime-main.a6aa62cc.js",
     "static/css/2.14f3cd7d.chunk.css",
-    "static/js/2.37d072ff.chunk.js",
+    "static/js/2.ed0179ed.chunk.js",
     "static/css/main.dfba7e54.chunk.css",
-    "static/js/main.426c258c.chunk.js"
+    "static/js/main.15afa4bf.chunk.js"
   ]
 }
