@@ -5,7 +5,8 @@ import Navbar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import useWindowDimensions from "../../components/WindowDimensions";
 
-import SPONSORS from "../../assets/images/sponsors-hackmercedvii.png";
+import SPONSORS from "../../assets/images/sponsor-hackmercedvii.png";
+import STICKER_MULE from "../../assets/images/sticker-mule-logo-dark.png";
 
 import { FAQData } from "../../assets/faq";
 
@@ -124,6 +125,9 @@ const HackMercedVII: FC = (): JSX.Element => {
                 <div>
                     <h2 className="hackmerced-vii__sponsors__title">Sponsors</h2>
                     <img src={SPONSORS} width="100%" alt="Our Sponsors for HackMerced VI" />
+                    <a className="sticker_mule" href="http://hackp.ac/mlh-stickermule-hackathons">
+                        <img className="sticker_mule__img" src={STICKER_MULE} alt="sticker mule logo" />
+                    </a>
                 </div>
             </section>
             <Footer backgroundColor="#383030" textColor="#FFFFF" fontColor="#EEEBF5" />
