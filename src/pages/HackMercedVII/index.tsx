@@ -7,6 +7,7 @@ import useWindowDimensions from "../../components/WindowDimensions";
 import SPONSORS from "../../assets/images/sponsors-hackmercedvii.png";
 
 import { FAQData } from "../../assets/faq";
+import Prizes from "../Dashboard/prizes";
 
 import "./styles.scss";
 
@@ -117,6 +118,14 @@ const HackMercedVII: FC = (): JSX.Element => {
             <section className="hackmerced-vii__faq">
                 <h2 className="hackmerced-vii__faq__title">Frequently Asked Questions</h2>
                 <div className="hackmerced-vii__faq__content">{generateFAQ}</div>
+            </section>
+            {/* Testing Component */}
+            {/* Prizes Section */}
+            <section className="hackmerced-vii__prizes">
+                <h2 className="hackmerced-vii__prizes__title">Prizes</h2>
+                <div className="hackmerced-vii__prizes__content">
+                    <Prizes />
+                </div>
             </section>
             {/* Sponsors Section */}
             <section className="hackmerced-vii__sponsors">
