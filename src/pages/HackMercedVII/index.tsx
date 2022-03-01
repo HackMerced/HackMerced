@@ -73,6 +73,7 @@ const HackMercedVII: FC = (): JSX.Element => {
             />
             {/* Landing Header */}
             <section className="hackmerced-vii__landing" style={{ width: width, height: backgroundHeight }}>
+                <canvas>{LanternAnimation}</canvas>
                 <div className="hackmerced-vii__landing__container">
                     <div className="hackmerced-vii__landing__container__title">HackMerced VII</div>
                     <div className="hackmerced-vii__landing__container__date">March 4-6, 2022</div>

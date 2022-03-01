@@ -1,7 +1,12 @@
-import { THREE } from "https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js";
+//var THREE = document.createElement('script');
+//THREE.src = ".https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js";
+
+import BackgroundTower from "../assets/images/HM_tower.png";
+
+import * as THREE from 'three';
 export module LanternAnimation {
     // Import background texture
-    const bgtexture = new THREE.TextureLoader().load("HM_tower.png");
+    const bgtexture = new THREE.TextureLoader().load(BackgroundTower);
 
     // Setup scene
     var scene = new THREE.Scene();
@@ -109,3 +114,4 @@ export module LanternAnimation {
     window.addEventListener('mousemove', onMouseMove);
 
 };
+

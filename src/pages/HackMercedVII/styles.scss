@@ -8,17 +8,20 @@
     * #########################
     */
     &__landing {
-        background-image: url("../../assets/images/HM_tower.png");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+        //background-image: url("../../assets/images/HM_tower.png");
         height: 100%;
         width: 100%;
         position: relative;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
 
         @media (width: 1024px) and (height: 1366px) {
             height: 800px !important;
         }
-
+        canvas {
+            position: absolute; 
+            z-index: -1;
+        }
         &__container {
             float: center;
             position: absolute;
