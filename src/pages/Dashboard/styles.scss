@@ -464,6 +464,10 @@ $borderColor: #eeebf5;
                 @media only screen and (max-width: 350px) {
                     font-size: 25px;
                 }
+
+                @media only screen and (max-width: 280px) {
+                    width: 90%;
+                }
             }
 
             &__ul {
@@ -494,6 +498,14 @@ $borderColor: #eeebf5;
 
                     @media (max-width: 500px) {
                         width: 100%;
+                    }
+
+                    @media (max-width: 500px) {
+                        width: 70%;
+                    }
+
+                    @media (max-width: 280px) {
+                        width: 50%;
                     }
 
                     &__title {
@@ -762,5 +774,9 @@ $borderColor: #eeebf5;
         height: 50px;
         border-top-left-radius: 2em;
         border-top-right-radius: 2em;
+
+        @media only screen and (max-width: 350px) {
+            width: 80%;
+        }
     }
 }
