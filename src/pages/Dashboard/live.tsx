@@ -53,7 +53,7 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
                     </div>
                 </div>
                 <p className="dashboard__content__live__countdown__body">
-                    <b>HackMerced VI</b> occurs on March 12th through the 14th of 2021. Countdown till Hacking Ends!
+                    <b>HackMerced VII</b> occurs on March 4th through the 6th of 2022. Countdown till Hacking Ends!
                     This year is the first time we are doing a Hub website. So please provide any feedback you may have!
                 </p>
             </div>
@@ -61,7 +61,7 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
                 <div className="orange-rectangle"></div>
                 <h1 className="dashboard__content__live__resources__header">Resources</h1>
                 <ul className="dashboard__content__live__resources__ul">
-                    <a href="https://hackmerced-vi.devpost.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://hackmerced-vii.devpost.com/" target="_blank" rel="noopener noreferrer">
                         {" "}
                         <li className="dashboard__content__live__resources__ul__li"> Devpost</li>
                     </a>
