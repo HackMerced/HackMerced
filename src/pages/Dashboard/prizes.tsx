@@ -6,7 +6,7 @@ const Prizes: FC = (): JSX.Element => {
     return (
         <div className="dashboard__content__prizes">
             <div className="orange-rectangle"></div>
-            {/*<h1 className="dashboard__content__prizes__header">Prizes</h1>*/}
+            <h1 className="dashboard__content__prizes__header">Prizes</h1>
             <ul className="dashboard__content__prizes__ul">
                 <li className="dashboard__content__prizes__ul__li">
                     <h3 className="dashboard__content__prizes__ul__li__title">Open Innovation</h3>

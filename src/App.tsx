@@ -17,7 +17,7 @@ import Hacktually2 from "./pages/Archive/LearnDay";
 // import SignUp from "./pages/SignUp";
 import Maintenance from "./pages/Maintenance";
 import Dashboard from "./pages/Dashboard";
-import {animate} from "./utils/mousetrail";
+import { animate } from "./utils/mousetrail";
 
 import "./App.scss";
 
@@ -25,7 +25,7 @@ const App: FC = (): JSX.Element => {
     useEffect(() => {
         animate();
     }, []);
-    
+
     return (
         <Router
             history={createHashHistory({
@@ -40,6 +40,7 @@ const App: FC = (): JSX.Element => {
                 <Route path="/sponsors" component={SponsorUs} />
                 <Route path="/contact-us" component={ContactUs} />
                 <Route path="/past-hackathons" component={PastHackathons} />
+                <Route path="/live" component={Dashboard} />
                 <Route
                     path="/archive"
                     render={({ match: { url } }): JSX.Element => (

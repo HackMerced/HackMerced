@@ -464,6 +464,10 @@ $borderColor: #eeebf5;
                 @media only screen and (max-width: 350px) {
                     font-size: 25px;
                 }
+
+                @media only screen and (max-width: 280px) {
+                    width: 90%;
+                }
             }
 
             &__ul {
@@ -496,6 +500,14 @@ $borderColor: #eeebf5;
                         width: 100%;
                     }
 
+                    @media (max-width: 500px) {
+                        width: 70%;
+                    }
+
+                    @media (max-width: 280px) {
+                        width: 50%;
+                    }
+
                     &__title {
                         color: $offOrange;
                         font-size: 28px;
@@ -515,7 +527,7 @@ $borderColor: #eeebf5;
                     }
 
                     &__body {
-                        color: $offWhite;
+                        color: $offBlack;
                         font-size: 15px;
                         padding: 15px 0 0 0;
 
@@ -762,5 +774,9 @@ $borderColor: #eeebf5;
         height: 50px;
         border-top-left-radius: 2em;
         border-top-right-radius: 2em;
+
+        @media only screen and (max-width: 350px) {
+            width: 80%;
+        }
     }
 }
