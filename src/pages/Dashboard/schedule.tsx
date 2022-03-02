@@ -27,131 +27,121 @@ const data: Array<{ day: number; title: string; body: string }> = [
     {
         day: 5,
         title: "11:00 PM - 12:00 PM PST",
-        body: "Notion Workshop",
-    },
-    {
-        day: 5,
-        title: "11:00 PM - 12:00 PM PST",
-        body: "GitKraken Workshop",
-    },
-    {
-        day: 6,
-        title: "12:00 AM - 1:00 AM PST",
-        body: "GoDot Beginner Workshop",
+        body: "Networking and Coffee Chats - Discord",
     },
     {
         day: 6,
         title: "1:00 AM - 2:00 AM PST",
-        body: "Machine Learning Workshop",
+        body: "UI/UX Design Workshop",
     },
     {
         day: 6,
-        title: "3:00 AM - 4:00 AM PST",
-        body: "Marble Racing",
-    },
-    {
-        day: 6,
-        title: "5:00 AM - 6:00 AM PST",
+        title: "2:00 AM - 3:00 AM PST",
         body: "Among Us",
     },
     {
         day: 6,
+        title: "4:00 AM - 5:00 AM PST",
+        body: "Jackbox",
+    },
+    {
+        day: 6,
+        title: "5:00 AM - 6:00 AM PST",
+        body: "Valorant",
+    },
+    {
+        day: 6,
         title: "8:00 AM - 9:00 AM PST",
-        body: "Build Your Own Website Workshop",
+        body: "Beginners' Guide to Hackathons",
     },
     {
         day: 6,
         title: "9:00 AM - 10:00 AM PST",
-        body: "Project Management Panel",
-    },
-    {
-        day: 6,
-        title: "10:00 AM - 11:00 AM PST",
-        body: "UI/UX Panel",
+        body: "Project Management Workshop",
     },
     {
         day: 6,
         title: "11:00 AM - 12:00 PM PST",
-        body: "Cloud Database Panel",
+        body: "Cloud Database Workshop",
     },
     {
         day: 6,
-        title: "12:00 PM - 1:00 PM PST",
-        body: "CyberSecurity Panel",
+        title: "1:00 PM - 2:00 PM PST",
+        body: "Company Sponsor Career Fair",
     },
     {
         day: 6,
         title: "3:00 PM - 4:00 PM PST",
-        body: "CyberSecurity Activity",
+        body: "Creating an ML Model with no code!",
     },
     {
         day: 6,
-        title: "4:00 PM - 5:00 PM PST",
-        body: "React Native Workshop",
-    },
-    {
-        day: 6,
-        title: "4:00 PM - 6:00 PM PST",
-        body: "Minecraft Activity",
+        title: "5:00 PM - 6:00 PM PST",
+        body: "Bob Ross Activity",
     },
     {
         day: 6,
         title: "6:00 PM - 7:00 PM PST",
-        body: "Flask Workshop",
+        body: "Professional Development",
     },
     {
         day: 6,
-        title: "7:00 PM - 8:00 PM PST",
-        body: "Bob Ross Painting Activity",
-    },
-    {
-        day: 6,
-        title: "8:00 PM - 9:00 PM PST",
-        body: "Figma Workshop",
-    },
-    {
-        day: 6,
-        title: "10:00 PM - 11:00 PM PST",
-        body: "Arduino Workshop",
+        title: "7:00 PM - 10:00 PM PST",
+        body: "Brain Breaks / Movie Night",
     },
     {
         day: 6,
         title: "11:00 PM - 12:00 AM PST",
-        body: "Maching Learning Workshop ft. QuickDraw Program",
+        body: "Roblox",
     },
     {
-        day: 7,
-        title: "12:00 AM - 1:00 AM PST",
-        body: "Scribble.io",
+        day: 6,
+        title: "2:00 AM - 3:00 PM PST",
+        body: "Skribbl.io",
     },
     {
-        day: 7,
+        day: 6,
+        title: "3:00 AM - 4:00 AM PST",
+        body: "Gartic Phone",
+    },
+    {
+        day: 6,
         title: "5:00 AM - 6:00 AM PST",
-        body: "How to Make a Compelling Demo",
+        body: "How to Pitch and Download your Projects?",
     },
     {
         day: 7,
-        title: "10:00 AM PST",
+        title: "7:00 AM - 8:00 AM PST",
+        body: "DevPost Submissions",
+    },
+    {
+        day: 7,
+        title: "8:00 AM - 9:00 AM PST",
+        body: "Giveaway: $20 Doordash Gift Cards",
+    },
+    {
+        day: 7,
+        title: "9:00 AM PST",
         body: "Hacking Ends",
     },
     {
         day: 7,
         title: "10:00 AM - 11:00 AM PST",
-        body: "Create your submission video",
+        body: "Demos/Judging",
     },
     {
         day: 7,
-        title: "11:00 AM PST",
-        body: "Submit Devpost and Video presentation",
+        title: "10:00 AM - 11:00 AM PST",
+        body: "Hacker Hours",
     },
     {
         day: 7,
-        title: "11:00 AM - 2:00 PM PST",
+        title: "11:00 AM - 12:00 PM PST",
         body: "Judging",
     },
     {
         day: 7,
-        title: "2:00 PM PST",
+        title: "1:00 PM PST",
         body: "Closing Ceremony",
     },
 ];
@@ -193,10 +183,10 @@ const Schedule: FC = (): JSX.Element => {
                             onClick={(): void => setDay(5)}
                         >
                             {width > 800 ? (
-                                <span>Friday, March 12</span>
+                                <span>Friday, March 4</span>
                             ) : (
                                 <span>
-                                    Friday, <br /> March 12
+                                    Friday, <br /> March 4
                                 </span>
                             )}
                         </div>
@@ -208,10 +198,10 @@ const Schedule: FC = (): JSX.Element => {
                             onClick={(): void => setDay(6)}
                         >
                             {width > 800 ? (
-                                <span>Saturday, March 13</span>
+                                <span>Saturday, March 5</span>
                             ) : (
                                 <span>
-                                    Saturday, <br /> March 13
+                                    Saturday, <br /> March 5
                                 </span>
                             )}
                         </div>
@@ -223,10 +213,10 @@ const Schedule: FC = (): JSX.Element => {
                             onClick={(): void => setDay(7)}
                         >
                             {width > 800 ? (
-                                <span>Sunday, March 14</span>
+                                <span>Sunday, March 6</span>
                             ) : (
                                 <span>
-                                    Sunday, <br /> March 14
+                                    Sunday, <br /> March 6
                                 </span>
                             )}
                         </div>
