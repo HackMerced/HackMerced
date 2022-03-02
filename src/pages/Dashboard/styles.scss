@@ -445,6 +445,14 @@ $borderColor: #eeebf5;
         &__prizes {
             border-radius: 2em;
             box-shadow: 0px 10px 15px rgba(112, 144, 176, 0.08);
+            overflow: auto;
+            height: auto;
+            min-height: 200vh;
+            padding-bottom: 10%;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
 
             &__header {
                 background-color: $offWhite;
