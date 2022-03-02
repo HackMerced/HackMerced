@@ -26,7 +26,7 @@ const Dashboard: FC = (): JSX.Element => {
                 return <Prizes />;
             case "/live":
             default:
-                return <Live time="4 March 2022 11:00:00" />;
+                return <Live time="6 March 2022 9:00:00" />;
         }
     };
 
