@@ -66,12 +66,6 @@ const Prizes: FC = (): JSX.Element => {
                         <b>1st Place </b> - Bose speaker for each member
                     </h4>
                 </li>
-                <li className="dashboard__content__prizes__ul__li">
-                    <h3 className="dashboard__content__prizes__ul__li__title">Random picks and activities</h3>
-                    <h4 className="dashboard__content__prizes__ul__li__body">
-                        Raffle prizes
-                    </h4>
-                </li>
             </ul>
         </div>
     );
