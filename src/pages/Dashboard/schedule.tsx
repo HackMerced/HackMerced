@@ -6,6 +6,11 @@ import useWindowDimensions from "../../components/WindowDimensions";
 const data: Array<{ day: number; title: string; body: string }> = [
     {
         day: 5,
+        title: "6:00 PM - 8:00 PM PST",
+        body: "Check In via Discord",
+    },
+    {
+        day: 5,
         title: "8:00 PM - 9:00 PM PST",
         body: "Opening Ceremony",
     },
