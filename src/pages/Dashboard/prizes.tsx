@@ -66,6 +66,54 @@ const Prizes: FC = (): JSX.Element => {
                         <b>1st Place </b> - Bose speaker for each member
                     </h4>
                 </li>
+                <li className="dashboard__content__prizes__ul__li">
+                    <h3 className="dashboard__content__prizes__ul__li__title">Best Domain Name from Domain.com</h3>
+                    <h4 className="dashboard__content__prizes__ul__li__body">
+                        <b>1st Place </b> - PowerSquare Qi Wireless Phone Charger
+                    </h4>
+                </li>
+                <li className="dashboard__content__prizes__ul__li">
+                    <h3 className="dashboard__content__prizes__ul__li__title">Best Use of Auth0</h3>
+                    <h4 className="dashboard__content__prizes__ul__li__body">
+                        <b>1st Place </b> - Exclusive Auth0 Swag made for MLH Winners (Branded Tumbler, Rubik's Cube and Sticker) 
+                    </h4>
+                </li>
+                <li className="dashboard__content__prizes__ul__li">
+                    <h3 className="dashboard__content__prizes__ul__li__title">Most Creative Use of GitHub </h3>
+                    <h4 className="dashboard__content__prizes__ul__li__body">
+                        <b>1st Place </b> - GitHub Octocat Statue, Plushy and Sticker bundle
+                    </h4>
+                </li>
+                <li className="dashboard__content__prizes__ul__li">
+                    <h3 className="dashboard__content__prizes__ul__li__title">Best Hardware Hack Sponsored by Digi-Key</h3>
+                    <h4 className="dashboard__content__prizes__ul__li__body">
+                        <b>1st Place </b> - Grove Beginner Kit
+                    </h4>
+                </li>
+                <li className="dashboard__content__prizes__ul__li">
+                    <h3 className="dashboard__content__prizes__ul__li__title">Most Creative Use of Twilio</h3>
+                    <h4 className="dashboard__content__prizes__ul__li__body">
+                        <b>1st Place </b> - Twilio Swag Box GameGo Console
+                    </h4>
+                </li>
+                <li className="dashboard__content__prizes__ul__li">
+                    <h3 className="dashboard__content__prizes__ul__li__title">Best Use of MATLAB</h3>
+                    <h4 className="dashboard__content__prizes__ul__li__body">
+                        <b>1st Place </b> - MathWorks Swag Bag
+                    </h4>
+                </li>
+                <li className="dashboard__content__prizes__ul__li">
+                    <h3 className="dashboard__content__prizes__ul__li__title">Best Use of DeSo</h3>
+                    <h4 className="dashboard__content__prizes__ul__li__body">
+                        <b>1st Place </b> - $100 worth of $DESO coin and an exclusive DeSo Tumbler
+                    </h4>
+                </li>
+                {/* <li className="dashboard__content__prizes__ul__li">
+                    <h3 className="dashboard__content__prizes__ul__li__title">CapitalOne</h3>
+                    <h4 className="dashboard__content__prizes__ul__li__body">
+                        <b>1st Place </b> - Soon to be announced.
+                    </h4>
+                </li> */}
             </ul>
         </div>
     );
