@@ -43,7 +43,7 @@ export const FAQData = [
     },
     {
         title: "How do I get meal reimbursement?",
-        content: "Details coming soon.",
+        content: "You have to demo your project and submit it through Devpost to receive a food delivery gift card.",
     },
     {
         title: "What are the rules for this event?",
