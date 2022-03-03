@@ -89,10 +89,10 @@ const Navbar: FC<{
                         <Link to="/hackmercedvii">HackMerced VII</Link>
                         {pathname === "/hackmercedvii" ? BreakLine() : null}
                     </Menu.Item>
-                    <Menu.Item>
+                    {/* <Menu.Item>
                         <Link to="/past-hackathons">Past Hackathons</Link>
                         {pathname === "/past-hackathons" ? BreakLine() : null}
-                    </Menu.Item>
+                    </Menu.Item> */}
                     <Menu.Item>
                         <Link to="/sponsors">Sponsors</Link>
                         {pathname === "/sponsors" ? BreakLine() : null}

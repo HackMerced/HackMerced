@@ -17,7 +17,7 @@ const data: Array<{ day: number; title: string; body: string }> = [
     {
         day: 5,
         title: "9:00 PM - 10:00 PM PST",
-        body: "Team Formation",
+        body: "Team Formation Activity",
     },
     {
         day: 5,
@@ -27,7 +27,7 @@ const data: Array<{ day: number; title: string; body: string }> = [
     {
         day: 5,
         title: "11:00 PM - 12:00 PM PST",
-        body: "Networking and Coffee Chats - Discord",
+        body: "Networking and Coffee Chat - Discord",
     },
     {
         day: 6,
@@ -66,27 +66,37 @@ const data: Array<{ day: number; title: string; body: string }> = [
     },
     {
         day: 6,
-        title: "1:00 PM - 2:00 PM PST",
+        title: "12:00 AM - 1:00 PM PST",
+        body: "Next.js Workshop",
+    },
+    {
+        day: 6,
+        title: "1:00 PM - 3:00 PM PST",
         body: "Company Sponsor Career Fair",
     },
     {
         day: 6,
         title: "3:00 PM - 4:00 PM PST",
-        body: "Creating an ML Model with no code!",
+        body: "Intro to AI and ML Workshop",
     },
+    // {
+    //     day: 6,
+    //     title: "4:00 PM - 5:00 PM PST",
+    //     body: "Intro to AI and ML Workshop",
+    // },
     {
         day: 6,
         title: "5:00 PM - 6:00 PM PST",
-        body: "Bob Ross Activity",
+        body: "Bob Ross Activity with MLH",
     },
     {
         day: 6,
         title: "6:00 PM - 7:00 PM PST",
-        body: "Professional Development",
+        body: "Professional Development Workshop",
     },
     {
         day: 6,
-        title: "7:00 PM - 10:00 PM PST",
+        title: "7:00 PM - 11:00 PM PST",
         body: "Brain Breaks / Movie Night",
     },
     {
@@ -106,18 +116,8 @@ const data: Array<{ day: number; title: string; body: string }> = [
     },
     {
         day: 6,
-        title: "5:00 AM - 6:00 AM PST",
+        title: "6:00 AM - 7:00 AM PST",
         body: "How to Pitch and Download your Projects?",
-    },
-    {
-        day: 7,
-        title: "7:00 AM - 8:00 AM PST",
-        body: "DevPost Submissions",
-    },
-    {
-        day: 7,
-        title: "8:00 AM - 9:00 AM PST",
-        body: "Giveaway: $20 Doordash Gift Cards",
     },
     {
         day: 7,
@@ -126,18 +126,18 @@ const data: Array<{ day: number; title: string; body: string }> = [
     },
     {
         day: 7,
-        title: "10:00 AM - 11:00 AM PST",
-        body: "Demos/Judging",
+        title: "10:00 AM PST",
+        body: "Hard Deadline for Project Submissions",
     },
     {
         day: 7,
-        title: "10:00 AM - 11:00 AM PST",
-        body: "Hacker Hours",
-    },
-    {
-        day: 7,
-        title: "11:00 AM - 12:00 PM PST",
+        title: "10:00 AM - 1:00 PM PST",
         body: "Judging",
+    },
+    {
+        day: 7,
+        title: "10:00 AM - 1:00 PM PST",
+        body: "Hacker Hour",
     },
     {
         day: 7,
