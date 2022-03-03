@@ -27,6 +27,11 @@ const data: Array<{ day: number; title: string; body: string }> = [
     {
         day: 5,
         title: "11:00 PM - 12:00 PM PST",
+        body: "Deep Learning Workshop with LLNL",
+    },
+    {
+        day: 5,
+        title: "12:00 PM - 1:00 AM PST",
         body: "Networking and Coffee Chat - Discord",
     },
     {
