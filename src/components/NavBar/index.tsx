@@ -89,10 +89,10 @@ const Navbar: FC<{
                         <Link to="/hackmercedvii">HackMerced VII</Link>
                         {pathname === "/hackmercedvii" ? BreakLine() : null}
                     </Menu.Item>
-                    <Menu.Item>
+                    {/* <Menu.Item>
                         <Link to="/past-hackathons">Past Hackathons</Link>
                         {pathname === "/past-hackathons" ? BreakLine() : null}
-                    </Menu.Item>
+                    </Menu.Item> */}
                     <Menu.Item>
                         <Link to="/sponsors">Sponsors</Link>
                         {pathname === "/sponsors" ? BreakLine() : null}
@@ -100,6 +100,10 @@ const Navbar: FC<{
                     <Menu.Item>
                         <Link to="/contact-us">Contact Us</Link>
                         {pathname === "/contact-us" ? BreakLine() : null}
+                    </Menu.Item>
+                    <Menu.Item>
+                        <Link to="/live">Live</Link>
+                        {pathname === "/live" ? BreakLine() : null}
                     </Menu.Item>
                     {showDLToggle ? (
                         <Menu.Item>
@@ -129,16 +133,16 @@ const Styles = {
 
         @media only screen and (max-width: 40em) {
             height: ${(): string => {
-                const { pathname } = useLocation();
-                return pathname !== "/" ? "13vw" : "auto";
-            }};
+            const { pathname } = useLocation();
+            return pathname !== "/" ? "13vw" : "auto";
+        }};
         }
 
         @media only screen and (max-height: 400px) {
             height: ${(): string => {
-                const { pathname } = useLocation();
-                return pathname !== "/" ? "9vw" : "auto";
-            }};
+            const { pathname } = useLocation();
+            return pathname !== "/" ? "9vw" : "auto";
+        }};
         }
     `,
 };
@@ -180,9 +184,9 @@ const Menu = {
             margin-top: 0;
             transition: 0.2s ease-out;
             background-color: ${() =>
-                document.documentElement.getAttribute("data-theme") === "dark"
-                    ? "rgb(255, 177, 129)"
-                    : "rgb(184, 61, 24)"};
+            document.documentElement.getAttribute("data-theme") === "dark"
+                ? "rgb(255, 177, 129)"
+                : "rgb(184, 61, 24)"};
             z-index: 101;
             transform: ${({ openDrawer }: { openDrawer: any }) => (openDrawer ? `translateX(0)` : `translateX(100%)`)};
         }
