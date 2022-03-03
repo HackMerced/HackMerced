@@ -67,6 +67,12 @@ const Prizes: FC = (): JSX.Element => {
                     </h4>
                 </li>
                 <li className="dashboard__content__prizes__ul__li">
+                    <h3 className="dashboard__content__prizes__ul__li__title">Best in Sustainability</h3>
+                    <h4 className="dashboard__content__prizes__ul__li__body">
+                        <b>1st Place </b> - 1x Raspberry pi for each team member
+                    </h4>
+                </li>
+                <li className="dashboard__content__prizes__ul__li">
                     <h3 className="dashboard__content__prizes__ul__li__title">Best Domain Name from Domain.com</h3>
                     <h4 className="dashboard__content__prizes__ul__li__body">
                         <b>1st Place </b> - PowerSquare Qi Wireless Phone Charger
