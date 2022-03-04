@@ -34,7 +34,8 @@ export const FAQData = [
     },
     {
         title: "Can I start my project before?",
-        content: "No, you cannot work the project before or copy past projects. All work on a project should be done at the hackathon.",
+        content:
+            "No, you cannot work the project before or copy past projects. All work on a project should be done at the hackathon.",
     },
     {
         title: "Is HackMerced free?",
@@ -42,17 +43,17 @@ export const FAQData = [
     },
     {
         title: "How do I get meal reimbursement?",
-        content: "Details coming soon.",
+        content: "You have to demo your project and submit it through Devpost to receive a food delivery gift card.",
     },
     {
         title: "What are the rules for this event?",
         content:
-             "We follow the MLH Code of Conduct.",
+            `We follow <strong> <u><a href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf' rel='noopener noreferrer' target='_blank'>MLH's Code of Conduct.</a></u></strong>`,
     },
-    
+
     {
         title: "404: Question Not Found",
         content:
-            "Feel free to message us general@hackmerced.com, contact us on our form https://hackmerced.com/#/contact-us, or hop on our discord during the event and talk to one of our organizers!",
+            "Feel free to message us at <strong><u><a href='mailto:general@hackmerced.com'>general@hackmerced.com</a></u></strong>, contact us on our <a href='https://hackmerced.com/#/contact-us' rel='noopener noreferrer' target='_blank'>contact page</a>, or hop on our discord during the event and talk to one of our organizers!",
     },
 ];

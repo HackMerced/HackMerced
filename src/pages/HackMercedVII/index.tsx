@@ -1,13 +1,14 @@
 import React, { FC, useEffect, useState } from "react";
+import ReactHtmlParser from "react-html-parser";
 
 import Navbar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import useWindowDimensions from "../../components/WindowDimensions";
 
-import SPONSORS from "../../assets/images/sponsors-hackmercedvii.png";
+import SPONSORS from "../../assets/images/sponsor-hackmercedvii.png";
+import STICKER_MULE from "../../assets/images/sticker-mule-logo-dark.png";
 
 import { FAQData } from "../../assets/faq";
-import Prizes from "../Dashboard/prizes";
 
 import "./styles.scss";
 
@@ -57,7 +58,7 @@ const HackMercedVII: FC = (): JSX.Element => {
                 {faq.title}
             </button>
             <div className={faq.open ? "question__answer display-question" : "question__answer"}>
-                <p>{faq.content}</p>
+            <p>{ReactHtmlParser(faq.content)}</p>
             </div>
         </div>
     ));
@@ -76,7 +77,7 @@ const HackMercedVII: FC = (): JSX.Element => {
                 <div className="hackmerced-vii__landing__container">
                     <div className="hackmerced-vii__landing__container__title">HackMerced VII</div>
                     <div className="hackmerced-vii__landing__container__date">March 4-6, 2022</div>
-                    <div className="hackmerced-vii__landing__container__location">University of California, Merced</div>
+                    <div className="hackmerced-vii__landing__container__location">Virtual Event</div>
                     <button
                         className="hackmerced-vii__landing__container__button"
                         onClick={() => {
@@ -121,17 +122,20 @@ const HackMercedVII: FC = (): JSX.Element => {
             </section>
             {/* Testing Component */}
             {/* Prizes Section */}
-            <section className="hackmerced-vii__prizes">
+            {/* <section className="hackmerced-vii__prizes">
                 <h2 className="hackmerced-vii__prizes__title">Prizes</h2>
                 <div className="hackmerced-vii__prizes__content">
                     <Prizes />
                 </div>
-            </section>
+            </section> */}
             {/* Sponsors Section */}
             <section className="hackmerced-vii__sponsors">
                 <div>
                     <h2 className="hackmerced-vii__sponsors__title">Sponsors</h2>
                     <img src={SPONSORS} width="100%" alt="Our Sponsors for HackMerced VI" />
+                    <a className="sticker_mule" href="http://hackp.ac/mlh-stickermule-hackathons">
+                        <img className="sticker_mule__img" src={STICKER_MULE} alt="sticker mule logo" />
+                    </a>
                 </div>
             </section>
             <Footer backgroundColor="#383030" textColor="#FFFFF" fontColor="#EEEBF5" />

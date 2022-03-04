@@ -484,10 +484,11 @@ $borderColor: #eeebf5;
                 width: 95%;
                 padding: 0;
                 grid-template-columns: 1fr 1fr;
-                grid-gap: 6%;
+                grid-gap: 0 4%;
 
                 @media (max-width: 700px) {
                     grid-template-columns: 1fr;
+                    grid-gap: 0;
                 }
 
                 &__li {
@@ -501,18 +502,6 @@ $borderColor: #eeebf5;
 
                     @media only screen and (min-width: 500px) {
                         margin: 20px 30px;
-                    }
-
-                    @media (max-width: 500px) {
-                        width: 100%;
-                    }
-
-                    @media (max-width: 500px) {
-                        width: 70%;
-                    }
-
-                    @media (max-width: 280px) {
-                        width: 50%;
                     }
 
                     &__title {

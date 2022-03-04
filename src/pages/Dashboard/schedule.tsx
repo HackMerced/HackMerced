@@ -6,6 +6,11 @@ import useWindowDimensions from "../../components/WindowDimensions";
 const data: Array<{ day: number; title: string; body: string }> = [
     {
         day: 5,
+        title: "6:00 PM - 8:00 PM PST",
+        body: "Check In via Discord",
+    },
+    {
+        day: 5,
         title: "8:00 PM - 9:00 PM PST",
         body: "Opening Ceremony",
     },
@@ -26,7 +31,12 @@ const data: Array<{ day: number; title: string; body: string }> = [
     },
     {
         day: 5,
-        title: "11:00 PM - 12:00 PM PST",
+        title: "11:00 PM - 12:00 AM PST",
+        body: "Deep Learning Workshop with LLNL",
+    },
+    {
+        day: 5,
+        title: "12:00 AM - 1:00 AM PST",
         body: "Networking and Coffee Chat - Discord",
     },
     {
@@ -52,7 +62,7 @@ const data: Array<{ day: number; title: string; body: string }> = [
     {
         day: 6,
         title: "8:00 AM - 9:00 AM PST",
-        body: "Beginners' Guide to Hackathons",
+        body: "Beginner's Guide to Hackathons",
     },
     {
         day: 6,
@@ -66,7 +76,7 @@ const data: Array<{ day: number; title: string; body: string }> = [
     },
     {
         day: 6,
-        title: "12:00 AM - 1:00 PM PST",
+        title: "12:00 PM - 1:00 PM PST",
         body: "Next.js Workshop",
     },
     {
@@ -105,17 +115,22 @@ const data: Array<{ day: number; title: string; body: string }> = [
         body: "Roblox",
     },
     {
-        day: 6,
-        title: "2:00 AM - 3:00 PM PST",
+        day: 7,
+        title: "12:00 AM - 2:00 AM PST",
+        body: "Marble Game",
+    },
+    {
+        day: 7,
+        title: "2:00 AM - 3:00 AM PST",
         body: "Skribbl.io",
     },
     {
-        day: 6,
+        day: 7,
         title: "3:00 AM - 4:00 AM PST",
         body: "Gartic Phone",
     },
     {
-        day: 6,
+        day: 7,
         title: "6:00 AM - 7:00 AM PST",
         body: "How to Pitch and Download your Projects?",
     },
