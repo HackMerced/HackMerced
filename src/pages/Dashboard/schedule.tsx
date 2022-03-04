@@ -89,11 +89,11 @@ const data: Array<{ day: number; title: string; body: string }> = [
         title: "3:00 PM - 4:00 PM PST",
         body: "Intro to AI and ML Workshop",
     },
-    // {
-    //     day: 6,
-    //     title: "4:00 PM - 5:00 PM PST",
-    //     body: "Intro to AI and ML Workshop",
-    // },
+    {
+        day: 6,
+        title: "4:00 PM - 5:00 PM PST",
+        body: "Create a React.js todo list app Workshop with App Dev League",
+    },
     {
         day: 6,
         title: "5:00 PM - 6:00 PM PST",
