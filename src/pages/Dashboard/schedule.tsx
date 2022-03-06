@@ -131,7 +131,7 @@ const data: Array<{ day: number; title: string; body: string }> = [
     },
     {
         day: 7,
-        title: "6:00 AM - 7:00 AM PST",
+        title: "7:00 AM - 7:30 AM PST",
         body: "How to Pitch and Download your Projects?",
     },
     {
