@@ -15,15 +15,23 @@ const Live: FC<{ time: string }> = ({ time }): JSX.Element => {
             const current = new Date();
             const currentTime = Date.parse(String(current)) / 1000;
             const timer = endTime - currentTime;
-            const dd = Math.floor(timer / 86400);
-            const hh = Math.floor((timer - dd * 86400) / 3600);
-            const mm = Math.floor((timer - dd * 86400 - hh * 3600) / 60);
-            const ss = Math.floor(timer - dd * 86400 - hh * 3600 - mm * 60);
 
-            setDay(String(dd));
-            setHour(hh < 10 ? "0" + String(hh) : String(hh));
-            setMinute(mm < 10 ? "0" + String(mm) : String(mm));
-            setSecond(ss < 10 ? "0" + String(ss) : String(ss));
+            if (timer < 0) {
+                setDay("00");
+                setHour("00");
+                setMinute("00");
+                setSecond("00");
+            } else {
+                const dd = Math.floor(timer / 86400);
+                const hh = Math.floor((timer - dd * 86400) / 3600);
+                const mm = Math.floor((timer - dd * 86400 - hh * 3600) / 60);
+                const ss = Math.floor(timer - dd * 86400 - hh * 3600 - mm * 60);
+
+                setDay(String(dd));
+                setHour(hh < 10 ? "0" + String(hh) : String(hh));
+                setMinute(mm < 10 ? "0" + String(mm) : String(mm));
+                setSecond(ss < 10 ? "0" + String(ss) : String(ss));
+            }
         };
 
         setInterval(function () {
