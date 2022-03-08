@@ -46,6 +46,14 @@ import HACKMERCED_VI_BOB_ROSS from "./images/bob-ross-painting.jpg";
 import HACKMERCED_VI_REACT_NATIVE_WORKSHOP from "./images/react-native-workshop.png";
 import HACKMERCED_VI_VIRTUAL_STICKERS from "./images/virtual-stickers.jpg";
 
+// HackMerced VII
+import HACKMERCED_VII_CLOSING_CEREMONY from "./images/hackmercedvii-dennys.png";
+import HACKMERCED_VII_OPENING_CEREMONY from "./images/hackmercedvii-tower.png";
+import HACKMERCED_VII_VIRTUAL_TEAM from "./images/hackmercedviibanner.jpg";
+import HACKMERCED_VII_BOB_ROSS from "./images/bobby-ross.jpg";
+import HACKMERCED_VII_REACT_NATIVE_WORKSHOP from "./images/hackmercedvii-opening-ceremony.png";
+import HACKMERCED_VII_VIRTUAL_STICKERS from "./images/hackmercedvii-tabling.jpg";
+
 const pastHackathonData = [
     {
         iteration: 1,
@@ -159,6 +167,25 @@ const pastHackathonData = [
             HACKMERCED_VI_VIRTUAL_STICKERS,
             HACKMERCED_VI_REACT_NATIVE_WORKSHOP,
             HACKMERCED_VI_CLOSING_CEREMONY,
+        ],
+    },
+    {
+        iteration: 7,
+        stats: {
+            hoursOfHacking: 36,
+            numberOfAttendees: 500,
+            projectsSubmitted: 70,
+            amountOfPrizes: 16, // in thousand of dollars
+            numberOfWorkshops: 11,
+            numberOfSponsors: 10,
+        },
+        gallery: [
+            HACKMERCED_VII_OPENING_CEREMONY,
+            HACKMERCED_VII_VIRTUAL_TEAM,
+            HACKMERCED_VII_BOB_ROSS,
+            HACKMERCED_VII_VIRTUAL_STICKERS,
+            HACKMERCED_VII_REACT_NATIVE_WORKSHOP,
+            HACKMERCED_VII_CLOSING_CEREMONY,
         ],
     },
 ];

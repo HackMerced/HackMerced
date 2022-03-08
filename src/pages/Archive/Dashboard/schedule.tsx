@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 
 import "./styles.scss";
-import useWindowDimensions from "../../components/WindowDimensions";
+import useWindowDimensions from "../../../components/WindowDimensions";
 
 const data: Array<{ day: number; title: string; body: string }> = [
     {

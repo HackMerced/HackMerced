@@ -1,14 +1,14 @@
 import React, { FC, useEffect, useState } from "react";
 import ReactHtmlParser from "react-html-parser";
 
-import Navbar from "../../components/NavBar";
-import Footer from "../../components/Footer";
-import useWindowDimensions from "../../components/WindowDimensions";
+import Navbar from "../../../components/NavBar";
+import Footer from "../../../components/Footer";
+import useWindowDimensions from "../../../components/WindowDimensions";
 
-import SPONSORS from "../../assets/images/sponsor-hackmercedvii.png";
-import STICKER_MULE from "../../assets/images/sticker-mule-logo-dark.png";
+import SPONSORS from "../../../assets/images/sponsor-hackmercedvii.png";
+import STICKER_MULE from "../../../assets/images/sticker-mule-logo-dark.png";
 
-import { FAQData } from "../../assets/faq";
+import { FAQData } from "../../../assets/faq";
 
 import "./styles.scss";
 

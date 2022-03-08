@@ -86,13 +86,9 @@ const Navbar: FC<{
                         {pathname === "/" ? BreakLine() : null}
                     </Menu.Item>
                     <Menu.Item>
-                        <Link to="/hackmercedvii">HackMerced VII</Link>
-                        {pathname === "/hackmercedvii" ? BreakLine() : null}
-                    </Menu.Item>
-                    {/* <Menu.Item>
                         <Link to="/past-hackathons">Past Hackathons</Link>
                         {pathname === "/past-hackathons" ? BreakLine() : null}
-                    </Menu.Item> */}
+                    </Menu.Item>
                     <Menu.Item>
                         <Link to="/sponsors">Sponsors</Link>
                         {pathname === "/sponsors" ? BreakLine() : null}
@@ -100,10 +96,6 @@ const Navbar: FC<{
                     <Menu.Item>
                         <Link to="/contact-us">Contact Us</Link>
                         {pathname === "/contact-us" ? BreakLine() : null}
-                    </Menu.Item>
-                    <Menu.Item>
-                        <Link to="/live">Live</Link>
-                        {pathname === "/live" ? BreakLine() : null}
                     </Menu.Item>
                     {showDLToggle ? (
                         <Menu.Item>
