@@ -3,7 +3,7 @@ import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { createHashHistory } from "history";
 
 import Home from "./pages/Home";
-import HackMercedVII from "./pages/Archive/HackMercedVII";
+
 import PastHackathons from "./pages/PastHackathons";
 import SponsorUs from "./pages/SponsorUs";
 import ContactUs from "./pages/ContactUs";
@@ -14,6 +14,7 @@ import Error from "./pages/404";
 import DesignMerced from "./pages/Archive/DesignMerced";
 import HackMercedVI from "./pages/Archive/HackMercedVI";
 import Hacktually2 from "./pages/Archive/LearnDay";
+import HackMercedVII from "./pages/Archive/HackMercedVII";
 // import SignUp from "./pages/SignUp";
 import Maintenance from "./pages/Maintenance";
 import Dashboard from "./pages/Archive/Dashboard";
@@ -44,12 +45,14 @@ const App: FC = (): JSX.Element => {
                     path="/archive"
                     render={({ match: { url } }): JSX.Element => (
                         <Fragment>
-                            <Route exact path="/hackmercedvii" component={HackMercedVII} />
                             <Route exact path={`${url}/designmerced`}>
                                 <DesignMerced />
                             </Route>
                             <Route exact path={`${url}/hackmercedvi`}>
                                 <HackMercedVI />
+                            </Route>
+                            <Route exact path={`${url}/hackmercedvii`}>
+                                <HackMercedVII />
                             </Route>
                             <Route path={`${url}/live*`}>
                                 <Dashboard />
