@@ -15,6 +15,7 @@
         @media only screen and (max-width: 910px) {
             height: calc(100vh - 55px);
         }
+
         //If height of heading component is less than 550px, make the height 495px
         @media only screen and (max-height: 550px) {
             height: 495px;
@@ -127,6 +128,7 @@
                 0% {
                     margin-left: 100%;
                 }
+
                 100% {
                     margin-left: -100%;
                 }
@@ -136,6 +138,7 @@
                 0% {
                     margin-left: 100%;
                 }
+
                 100% {
                     margin-left: -100%;
                 }
@@ -168,6 +171,7 @@
             }
 
             &__title {
+                padding-top: 10%;
                 margin: auto auto auto auto;
                 padding-bottom: 40%;
                 text-align: center;
@@ -253,6 +257,7 @@
                         text-align: left;
                         cursor: pointer;
                     }
+
                     button[type="submit"] {
                         display: inline-block;
                         font-family: "Papyrus";
@@ -368,6 +373,7 @@
                     padding: 0% 5% 0% 5%;
                     font-size: 20px;
                 }
+
                 @media only screen and (min-width: 700px) {
                     padding: 0% 10% 0% 10%;
                     font-size: 23px;
@@ -380,12 +386,15 @@
                 @media only screen and (min-width: 0px) {
                     max-width: 300px;
                 }
+
                 @media only screen and (min-width: 700px) {
                     max-width: 500px;
                 }
+
                 @media only screen and (min-width: 1251px) {
                     max-width: 600px;
                 }
+
                 @media only screen and (min-width: 1700px) {
                     max-width: 700px;
                 }
@@ -507,16 +516,20 @@
         /* Media Queries taken from and edited: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
         &__grid {
             position: relative;
-            width: 80%; /* Scales original sizes */
+            width: 80%;
+            /* Scales original sizes */
             margin: 0 auto;
-            padding: 0 0 5% 0; /* Padding under Grid component (under last row of hexagons) */
+            padding: 0 0 5% 0;
+            /* Padding under Grid component (under last row of hexagons) */
 
             /* Medium-Small devices (phones, portrait tablets, and large phones, 850px and lower) */
             @media only screen and (max-width: 850px) {
                 position: relative;
-                width: 100%; /* Scales original sizes */
+                width: 100%;
+                /* Scales original sizes */
                 margin: 0 auto;
-                padding: 0 0 5% 0; /* Padding under Grid component (under last row of hexagons) */
+                padding: 0 0 5% 0;
+                /* Padding under Grid component (under last row of hexagons) */
             }
 
             /* Parallelogram */
@@ -526,9 +539,11 @@
                 @media only screen and (max-width: 700px) {
                     margin-left: -1%;
                 }
+
                 @media only screen and (max-width: 500px) {
                     margin-left: -2.5%;
                 }
+
                 @media only screen and (max-width: 400px) {
                     margin-left: -4%;
                 }
@@ -537,8 +552,10 @@
                     list-style-type: none;
                     position: relative;
                     float: left;
-                    width: 14.85714285714286%; /* Directly related to original hexagon size */
-                    padding: 0% 0% 17% 0%; /* Directly related to original hexagon size */
+                    width: 14.85714285714286%;
+                    /* Directly related to original hexagon size */
+                    padding: 0% 0% 17% 0%;
+                    /* Directly related to original hexagon size */
                     -o-transform: rotate(-60deg) skewY(30deg);
                     -moz-transform: rotate(-60deg) skewY(30deg);
                     -webkit-transform: rotate(-60deg) skewY(30deg);
@@ -571,7 +588,8 @@
                         &__text {
                             display: none;
                         }
-                        &__picture:hover + &__text,
+
+                        &__picture:hover+&__text,
                         &__text:hover {
                             display: block;
                             position: absolute;
@@ -589,24 +607,30 @@
                                 top: 45%;
                                 font-size: 13.5px;
                             }
+
                             @media (max-width: 1000px) {
                                 font-size: 12px;
                             }
+
                             @media (max-width: 700px) {
                                 top: 40%;
                             }
+
                             @media (max-width: 550px) {
                                 top: 35%;
                                 font-size: 10px;
                             }
+
                             @media (max-width: 460px) {
                                 top: 30%;
                                 font-size: 9px;
                             }
+
                             @media (max-width: 400px) {
                                 top: 28%;
                                 font-size: 7px;
                             }
+
                             @media (max-width: 300px) {
                                 display: none;
                             }
