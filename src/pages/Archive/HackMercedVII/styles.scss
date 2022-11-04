@@ -1,0 +1,462 @@
+.hackmerced-vii {
+    overflow-x: hidden !important;
+    font-family: "Rubik", sans-serif;
+
+    /*
+    * #########################
+    * # HackMerced VII Landing #
+    * #########################
+    */
+    &__landing {
+        background-image: url("../../../assets/images/HM_tower.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        @media (width: 1024px) and (height: 1366px) {
+            height: 800px !important;
+        }
+
+        &__container {
+            float: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+
+            &__title {
+                margin: 0;
+                padding: 0;
+                font-weight: 600;
+                letter-spacing: 10px;
+                text-shadow: 0px 0px 15px #e9be91, 0px 0px 25px #0a0509;
+                color: #fffaee;
+                text-transform: uppercase;
+            }
+
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px) {
+                font-size: 32px;
+            }
+
+            /* Small devices (portrait tablets and large phones, 600px and up) */
+            @media only screen and (min-width: 600px) {
+                font-size: 30px;
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                font-size: 35px;
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                font-size: 45px;
+            }
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                font-size: 50px;
+            }
+
+            &__date {
+                margin: 0;
+                padding: 0;
+                font-weight: 400;
+                letter-spacing: 2px;
+                text-shadow: 0px 0px 12px #e9be91, 0px 0px 25px #0a0509;
+                color: #fffaee;
+                font-size: 30px;
+
+                /* Extra small devices (phones, 600px and down) */
+                @media only screen and (max-width: 600px) {
+                    font-size: 16px;
+                }
+
+                /* Small devices (portrait tablets and large phones, 600px and up) */
+                @media only screen and (min-width: 600px) {
+                    font-size: 16px;
+                }
+
+                /* Medium devices (landscape tablets, 768px and up) */
+                @media only screen and (min-width: 768px) {
+                    font-size: 18px;
+                }
+
+                /* Large devices (laptops/desktops, 992px and up) */
+                @media only screen and (min-width: 992px) {
+                    font-size: 20px;
+                }
+
+                /* Extra large devices (large laptops and desktops, 1200px and up) */
+                @media only screen and (min-width: 1200px) {
+                    font-size: 25px;
+                }
+            }
+
+            &__location {
+                margin: 0;
+                padding: 5px;
+                font-weight: 400;
+                letter-spacing: 2px;
+                text-shadow: 0px 0px 12px #e9be91, 0px 0px 25px #0a0509;
+                color: #fffaee;
+                font-size: 20px;
+
+                /* Extra small devices (phones, 600px and down) */
+                @media only screen and (max-width: 600px) {
+                    font-size: 14px;
+                }
+
+                /* Small devices (portrait tablets and large phones, 600px and up) */
+                @media only screen and (min-width: 600px) {
+                    font-size: 16px;
+                }
+
+                /* Medium devices (landscape tablets, 768px and up) */
+                @media only screen and (min-width: 768px) {
+                    font-size: 16px;
+                }
+
+                /* Large devices (laptops/desktops, 992px and up) */
+                @media only screen and (min-width: 992px) {
+                    font-size: 18px;
+                }
+
+                /* Extra large devices (large laptops and desktops, 1200px and up) */
+                @media only screen and (min-width: 1200px) {
+                    font-size: 20px;
+                }
+            }
+
+            &__button {
+                font-family: inherit;
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                box-sizing: border-box;
+                margin: 10px;
+                cursor: pointer;
+                padding: 0px 30px;
+                border-radius: 15px;
+                border-style: none;
+                color: #230404;
+                background-image: linear-gradient(to right, #fec58b, #f29a73);
+
+                &:hover {
+                    color: #b15226;
+                    background-image: linear-gradient(to right, #ffebd6, #fde0d4);
+                }
+            }
+        }
+    }
+
+    /*
+    * ########################
+    * # HackMerced VI Themes #
+    * ########################
+    */
+    &__themes {
+        background-image: linear-gradient(180deg, #521c1a, #383030);
+        text-align: center;
+        padding: 3% 10% 10% 10%;
+
+        &__title {
+            text-align: center;
+            padding: 0 0 3% 0;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-shadow: 0px 0px 15px #e9be91;
+            color: #fffaee;
+            text-transform: uppercase;
+
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px) {
+                font-size: 32px;
+            }
+
+            /* Small devices (portrait tablets and large phones, 600px and up) */
+            @media only screen and (min-width: 600px) {
+                font-size: 30px;
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                font-size: 35px;
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                font-size: 45px;
+            }
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                font-size: 50px;
+            }
+        }
+
+        &__container {
+            color: #c1c0cd;
+            display: inline-flex;
+            justify-content: center;
+            text-align: center;
+
+            h2 {
+                display: block;
+                width: auto;
+                padding: 40px 40px 0px 40px;
+                letter-spacing: 2px;
+                text-align: center;
+                text-shadow: none;
+                color: #230404;
+            }
+
+            p {
+                display: block;
+                width: auto;
+                padding: 0px 40px 40px 40px;
+                text-align: center;
+                text-shadow: none;
+                color: #230404;
+            }
+
+            .track {
+                background-color: white;
+                border-radius: 15px;
+                margin: 10px;
+                transition: transform 0.4s;
+                box-shadow: 0px 0px 30px #e06f4b;
+                background-image: linear-gradient(45deg, #fec58b, #f29a73);
+                width: 80%;
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
+
+            /* Everything under 900px width - responsiveness */
+            @media only screen and (max-width: 900px) {
+                display: inline;
+
+                h2 {
+                    font-size: 25px;
+                }
+
+                p {
+                    margin: auto;
+                    max-width: 80%;
+                    padding: 3% 0;
+                    font-size: 14px;
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+                display: inline;
+
+                h2 {
+                    font-size: 18px;
+                }
+
+                p {
+                    margin: auto;
+                    max-width: 80%;
+                    padding: 3% 0;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    /*
+    * #####################
+    * # HackMerced VI FAQ #
+    * #####################
+    */
+    &__faq {
+        background-image: linear-gradient(-180deg, #601d20, #893739);
+        padding: 3% 0%;
+
+        &__title {
+            text-align: center;
+            padding: 0;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-shadow: 0px 0px 15px #e9be91;
+            color: #fffaee;
+            text-transform: uppercase;
+        }
+
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            font-size: 20px;
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            font-size: 22px;
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            font-size: 25px;
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            font-size: 30px;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            font-size: 35px;
+        }
+
+        &__content {
+            padding: 0 10%;
+
+            .question {
+                display: inline-block;
+                width: 48%;
+                padding: 5px;
+
+                @media only screen and (max-width: 1000px) {
+                    width: 100%;
+                }
+
+                &__title {
+                    background-image: linear-gradient(45deg, #fec58b, #f29a73);
+                    border-radius: 15px;
+                    color: #230404;
+                    cursor: pointer;
+                    padding: 18px;
+                    width: 100%;
+                    border: none;
+
+                    letter-spacing: 1px;
+                    text-align: left;
+                    text-transform: uppercase;
+                    font-family: inherit;
+                    font-weight: 600;
+
+                    outline: none;
+                    font-size: 14px;
+                }
+
+                &__answer {
+                    width: 90%;
+                    float: right;
+                    padding: 0 18px;
+                    margin: 5px;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s cubic-bezier(0.51, 0.93, 0.54, 1.04);
+                    border-style: none none none solid;
+                    border-width: 5px;
+                    border-color: #0a0509;
+                    text-align: left;
+                    font-weight: 500;
+                }
+
+                .display-question {
+                    max-height: 200px;
+                }
+            }
+        }
+    }
+
+    &__prizes {
+        background-image: linear-gradient(-180deg, #601d20, #893739);
+        padding: 3% 0%;
+
+        &__title {
+            text-align: center;
+            padding: 0;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-shadow: 0px 0px 15px #e9be91;
+            color: #fffaee;
+            text-transform: uppercase;
+        }
+
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            font-size: 20px;
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            font-size: 22px;
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            font-size: 25px;
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            font-size: 30px;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            font-size: 35px;
+        }
+
+        &__content {
+            padding: 0 10%;
+        }
+    }
+
+    /*
+    * ##########################
+    * # HackMerced VI Sponsors #
+    * ##########################
+    */
+    &__sponsors {
+        background-image: linear-gradient(-180deg, #521c1a, #383030); //#0C2136 old color
+        max-width: 100%;
+        height: auto;
+        padding-top: 3%;
+
+        &__title {
+            text-align: center;
+            padding: 0;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-shadow: 0px 0px 15px #e9be91;
+            color: #fffaee;
+            text-transform: uppercase;
+        }
+
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            font-size: 20px;
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            font-size: 22px;
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            font-size: 25px;
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            font-size: 30px;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            font-size: 35px;
+        }
+    }
+}

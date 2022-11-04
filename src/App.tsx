@@ -3,7 +3,7 @@ import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { createHashHistory } from "history";
 
 import Home from "./pages/Home";
-import HackMercedVII from "./pages/HackMercedVII";
+
 import PastHackathons from "./pages/PastHackathons";
 import SponsorUs from "./pages/SponsorUs";
 import ContactUs from "./pages/ContactUs";
@@ -14,9 +14,10 @@ import Error from "./pages/404";
 import DesignMerced from "./pages/Archive/DesignMerced";
 import HackMercedVI from "./pages/Archive/HackMercedVI";
 import Hacktually2 from "./pages/Archive/LearnDay";
+import HackMercedVII from "./pages/Archive/HackMercedVII";
 // import SignUp from "./pages/SignUp";
 import Maintenance from "./pages/Maintenance";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/Archive/Dashboard";
 import { animate } from "./utils/mousetrail";
 
 import "./App.scss";
@@ -36,11 +37,10 @@ const App: FC = (): JSX.Element => {
         >
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/hackmercedvii" component={HackMercedVII} />
+                
                 <Route path="/sponsors" component={SponsorUs} />
                 <Route path="/contact-us" component={ContactUs} />
                 <Route path="/past-hackathons" component={PastHackathons} />
-                <Route path="/live" component={Dashboard} />
                 <Route
                     path="/archive"
                     render={({ match: { url } }): JSX.Element => (
@@ -50,6 +50,9 @@ const App: FC = (): JSX.Element => {
                             </Route>
                             <Route exact path={`${url}/hackmercedvi`}>
                                 <HackMercedVI />
+                            </Route>
+                            <Route exact path={`${url}/hackmercedvii`}>
+                                <HackMercedVII />
                             </Route>
                             <Route path={`${url}/live*`}>
                                 <Dashboard />
